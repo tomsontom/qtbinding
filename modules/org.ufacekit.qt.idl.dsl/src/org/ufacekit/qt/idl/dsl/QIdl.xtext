@@ -1,0 +1,9 @@
+grammar org.ufacekit.qt.idl.dsl.QIdl with org.eclipse.xtext.common.Terminals
+
+generate qIdl "http://www.ufacekit.org/qt/idl/dsl/QIdl"
+
+Model:
+	greetings+=Greeting*;
+	
+Greeting:
+	'Hello' name=ID '!';
