@@ -1204,6 +1204,28 @@ ruleQtValue returns [EObject current=null]
 	    }
 
 )
+)	otherlv_4='=' 
+    {
+    	newLeafNode(otherlv_4, grammarAccess.getQtValueAccess().getEqualsSignKeyword_4());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getQtValueAccess().getDefaultLiteralValueParserRuleCall_5_0()); 
+	    }
+		lv_default_5_0=ruleLiteralValue		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getQtValueRule());
+	        }
+       		set(
+       			$current, 
+       			"default",
+        		lv_default_5_0, 
+        		"LiteralValue");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
 ))
 ;
 

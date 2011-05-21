@@ -67,7 +67,7 @@ QtFunction:
 	visibility=Visibility const='const'? virtual=Virtuality? owner=Owner 'function' name=ID '(' (params+=QtValue (',' params+=QtValue)*)? ')' ':' returnValue=QtReturnValue ';';
 
 QtValue:
-	const='const'? valueType=Type? type=[QtType] name=ID;
+	const='const'? valueType=Type? type=[QtType] name=ID '=' default=LiteralValue;
 
 QtReturnValue:
 	const='const'? valueType=Type? type=[QtType];

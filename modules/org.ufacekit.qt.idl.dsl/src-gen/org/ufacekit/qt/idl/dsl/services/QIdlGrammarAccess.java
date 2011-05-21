@@ -691,12 +691,15 @@ public class QIdlGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cTypeQtTypeIDTerminalRuleCall_2_0_1 = (RuleCall)cTypeQtTypeCrossReference_2_0.eContents().get(1);
 		private final Assignment cNameAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cNameIDTerminalRuleCall_3_0 = (RuleCall)cNameAssignment_3.eContents().get(0);
+		private final Keyword cEqualsSignKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cDefaultAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cDefaultLiteralValueParserRuleCall_5_0 = (RuleCall)cDefaultAssignment_5.eContents().get(0);
 		
 		//QtValue:
-		//	const="const"? valueType=Type? type=[QtType] name=ID;
+		//	const="const"? valueType=Type? type=[QtType] name=ID "=" default=LiteralValue;
 		public ParserRule getRule() { return rule; }
 
-		//const="const"? valueType=Type? type=[QtType] name=ID
+		//const="const"? valueType=Type? type=[QtType] name=ID "=" default=LiteralValue
 		public Group getGroup() { return cGroup; }
 
 		//const="const"?
@@ -725,6 +728,15 @@ public class QIdlGrammarAccess extends AbstractGrammarElementFinder {
 
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_3_0() { return cNameIDTerminalRuleCall_3_0; }
+
+		//"="
+		public Keyword getEqualsSignKeyword_4() { return cEqualsSignKeyword_4; }
+
+		//default=LiteralValue
+		public Assignment getDefaultAssignment_5() { return cDefaultAssignment_5; }
+
+		//LiteralValue
+		public RuleCall getDefaultLiteralValueParserRuleCall_5_0() { return cDefaultLiteralValueParserRuleCall_5_0; }
 	}
 
 	public class QtReturnValueElements extends AbstractParserRuleElementFinder {
@@ -1216,7 +1228,7 @@ public class QIdlGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//QtValue:
-	//	const="const"? valueType=Type? type=[QtType] name=ID;
+	//	const="const"? valueType=Type? type=[QtType] name=ID "=" default=LiteralValue;
 	public QtValueElements getQtValueAccess() {
 		return (pQtValue != null) ? pQtValue : (pQtValue = new QtValueElements());
 	}

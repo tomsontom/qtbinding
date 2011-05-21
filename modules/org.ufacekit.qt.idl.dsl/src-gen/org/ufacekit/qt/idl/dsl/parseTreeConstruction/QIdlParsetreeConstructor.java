@@ -3218,11 +3218,11 @@ protected class QtFunction_SemicolonKeyword_11 extends KeywordToken  {
 /************ begin Rule QtValue ****************
  *
  * QtValue:
- * 	const="const"? valueType=Type? type=[QtType] name=ID;
+ * 	const="const"? valueType=Type? type=[QtType] name=ID "=" default=LiteralValue;
  *
  **/
 
-// const="const"? valueType=Type? type=[QtType] name=ID
+// const="const"? valueType=Type? type=[QtType] name=ID "=" default=LiteralValue
 protected class QtValue_Group extends GroupToken {
 	
 	public QtValue_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -3237,7 +3237,7 @@ protected class QtValue_Group extends GroupToken {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new QtValue_NameAssignment_3(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new QtValue_DefaultAssignment_5(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -3388,6 +3388,74 @@ protected class QtValue_NameAssignment_3 extends AssignmentToken  {
 		return null;
 	}
 
+}
+
+// "="
+protected class QtValue_EqualsSignKeyword_4 extends KeywordToken  {
+	
+	public QtValue_EqualsSignKeyword_4(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Keyword getGrammarElement() {
+		return grammarAccess.getQtValueAccess().getEqualsSignKeyword_4();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new QtValue_NameAssignment_3(lastRuleCallOrigin, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+}
+
+// default=LiteralValue
+protected class QtValue_DefaultAssignment_5 extends AssignmentToken  {
+	
+	public QtValue_DefaultAssignment_5(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Assignment getGrammarElement() {
+		return grammarAccess.getQtValueAccess().getDefaultAssignment_5();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new LiteralValue_Alternatives(this, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+    @Override	
+	public IEObjectConsumer tryConsume() {
+		if((value = eObjectConsumer.getConsumable("default",true)) == null) return null;
+		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("default");
+		if(value instanceof EObject) { // org::eclipse::xtext::impl::RuleCallImpl
+			IEObjectConsumer param = createEObjectConsumer((EObject)value);
+			if(param.isInstanceOf(grammarAccess.getLiteralValueRule().getType().getClassifier())) {
+				type = AssignmentType.PARSER_RULE_CALL;
+				element = grammarAccess.getQtValueAccess().getDefaultLiteralValueParserRuleCall_5_0(); 
+				consumed = obj;
+				return param;
+			}
+		}
+		return null;
+	}
+
+    @Override
+	public AbstractToken createFollowerAfterReturn(AbstractToken next,	int actIndex, int index, IEObjectConsumer inst) {
+		if(value == inst.getEObject() && !inst.isConsumed()) return null;
+		switch(index) {
+			case 0: return new QtValue_EqualsSignKeyword_4(lastRuleCallOrigin, next, actIndex, consumed);
+			default: return null;
+		}	
+	}	
 }
 
 

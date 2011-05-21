@@ -678,13 +678,22 @@ public interface QIdlPackage extends EPackage
   int QT_VALUE__NAME = 3;
 
   /**
+   * The feature id for the '<em><b>Default</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QT_VALUE__DEFAULT = 4;
+
+  /**
    * The number of structural features of the '<em>Qt Value</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int QT_VALUE_FEATURE_COUNT = 4;
+  int QT_VALUE_FEATURE_COUNT = 5;
 
   /**
    * The meta object id for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtReturnValueImpl <em>Qt Return Value</em>}' class.
@@ -1380,6 +1389,17 @@ public interface QIdlPackage extends EPackage
   EAttribute getQtValue_Name();
 
   /**
+   * Returns the meta object for the containment reference '{@link org.ufacekit.qt.idl.dsl.qIdl.QtValue#getDefault <em>Default</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Default</em>'.
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QtValue#getDefault()
+   * @see #getQtValue()
+   * @generated
+   */
+  EReference getQtValue_Default();
+
+  /**
    * Returns the meta object for class '{@link org.ufacekit.qt.idl.dsl.qIdl.QtReturnValue <em>Qt Return Value</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1916,6 +1936,14 @@ public interface QIdlPackage extends EPackage
      * @generated
      */
     EAttribute QT_VALUE__NAME = eINSTANCE.getQtValue_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Default</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference QT_VALUE__DEFAULT = eINSTANCE.getQtValue_Default();
 
     /**
      * The meta object literal for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtReturnValueImpl <em>Qt Return Value</em>}' class.

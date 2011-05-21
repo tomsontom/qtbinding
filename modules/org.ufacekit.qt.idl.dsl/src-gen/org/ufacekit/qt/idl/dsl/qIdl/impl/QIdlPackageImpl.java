@@ -750,6 +750,16 @@ public class QIdlPackageImpl extends EPackageImpl implements QIdlPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getQtValue_Default()
+  {
+    return (EReference)qtValueEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getQtReturnValue()
   {
     return qtReturnValueEClass;
@@ -936,6 +946,7 @@ public class QIdlPackageImpl extends EPackageImpl implements QIdlPackage
     createEAttribute(qtValueEClass, QT_VALUE__VALUE_TYPE);
     createEReference(qtValueEClass, QT_VALUE__TYPE);
     createEAttribute(qtValueEClass, QT_VALUE__NAME);
+    createEReference(qtValueEClass, QT_VALUE__DEFAULT);
 
     qtReturnValueEClass = createEClass(QT_RETURN_VALUE);
     createEAttribute(qtReturnValueEClass, QT_RETURN_VALUE__CONST);
@@ -1054,6 +1065,7 @@ public class QIdlPackageImpl extends EPackageImpl implements QIdlPackage
     initEAttribute(getQtValue_ValueType(), this.getType(), "valueType", null, 0, 1, QtValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getQtValue_Type(), this.getQtType(), null, "type", null, 0, 1, QtValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getQtValue_Name(), ecorePackage.getEString(), "name", null, 0, 1, QtValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getQtValue_Default(), this.getLiteralValue(), null, "default", null, 0, 1, QtValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(qtReturnValueEClass, QtReturnValue.class, "QtReturnValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getQtReturnValue_Const(), ecorePackage.getEString(), "const", null, 0, 1, QtReturnValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

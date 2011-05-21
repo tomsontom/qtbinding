@@ -253,6 +253,7 @@ public class QIdlParser extends AbstractContentAssistParser {
 					put(grammarAccess.getQtValueAccess().getValueTypeAssignment_1(), "rule__QtValue__ValueTypeAssignment_1");
 					put(grammarAccess.getQtValueAccess().getTypeAssignment_2(), "rule__QtValue__TypeAssignment_2");
 					put(grammarAccess.getQtValueAccess().getNameAssignment_3(), "rule__QtValue__NameAssignment_3");
+					put(grammarAccess.getQtValueAccess().getDefaultAssignment_5(), "rule__QtValue__DefaultAssignment_5");
 					put(grammarAccess.getQtReturnValueAccess().getConstAssignment_0(), "rule__QtReturnValue__ConstAssignment_0");
 					put(grammarAccess.getQtReturnValueAccess().getValueTypeAssignment_1(), "rule__QtReturnValue__ValueTypeAssignment_1");
 					put(grammarAccess.getQtReturnValueAccess().getTypeAssignment_2(), "rule__QtReturnValue__TypeAssignment_2");
