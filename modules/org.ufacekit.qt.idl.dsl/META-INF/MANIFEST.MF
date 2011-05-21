@@ -12,7 +12,25 @@ Require-Bundle: org.eclipse.xtext;bundle-version="2.0.0";visibility:=reexport,
  org.eclipse.emf.codegen.ecore;resolution:=optional,
  org.eclipse.emf.mwe.utils;resolution:=optional,
  org.eclipse.emf.mwe2.launch;resolution:=optional,
- org.eclipse.xtext.ui.codetemplates;resolution:=optional
+ org.eclipse.xtext.ui.codetemplates;resolution:=optional,
+ org.eclipse.xtext.xbase;bundle-version="2.0.0",
+ org.eclipse.xtext.util,
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.common,
+ org.antlr.runtime,
+ org.eclipse.xtext.common.types,
+ org.eclipse.xtext.xtend2.lib
 Import-Package: org.apache.log4j,
- org.apache.commons.logging
+ org.apache.commons.logging,
+ org.eclipse.xtext.xbase.lib,
+ org.eclipse.xtext.xtend2.lib
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: org.ufacekit.qt.idl.dsl,
+ org.ufacekit.qt.idl.dsl.services,
+ org.ufacekit.qt.idl.dsl.qIdl,
+ org.ufacekit.qt.idl.dsl.qIdl.impl,
+ org.ufacekit.qt.idl.dsl.qIdl.util,
+ org.ufacekit.qt.idl.dsl.parseTreeConstruction,
+ org.ufacekit.qt.idl.dsl.parser.antlr,
+ org.ufacekit.qt.idl.dsl.parser.antlr.internal,
+ org.ufacekit.qt.idl.dsl.validation
