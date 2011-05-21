@@ -14,9 +14,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.ufacekit.qt.idl.dsl.qIdl.LiteralValue;
 import org.ufacekit.qt.idl.dsl.qIdl.QIdlPackage;
 import org.ufacekit.qt.idl.dsl.qIdl.QtEnumValue;
+import org.ufacekit.qt.idl.dsl.qIdl.QtLiteralValue;
 
 /**
  * <!-- begin-user-doc -->
@@ -62,7 +62,7 @@ public class QtEnumValueImpl extends MinimalEObjectImpl.Container implements QtE
    * @generated
    * @ordered
    */
-  protected LiteralValue value;
+  protected QtLiteralValue value;
 
   /**
    * <!-- begin-user-doc -->
@@ -113,7 +113,7 @@ public class QtEnumValueImpl extends MinimalEObjectImpl.Container implements QtE
    * <!-- end-user-doc -->
    * @generated
    */
-  public LiteralValue getValue()
+  public QtLiteralValue getValue()
   {
     return value;
   }
@@ -123,9 +123,9 @@ public class QtEnumValueImpl extends MinimalEObjectImpl.Container implements QtE
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetValue(LiteralValue newValue, NotificationChain msgs)
+  public NotificationChain basicSetValue(QtLiteralValue newValue, NotificationChain msgs)
   {
-    LiteralValue oldValue = value;
+    QtLiteralValue oldValue = value;
     value = newValue;
     if (eNotificationRequired())
     {
@@ -140,7 +140,7 @@ public class QtEnumValueImpl extends MinimalEObjectImpl.Container implements QtE
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setValue(LiteralValue newValue)
+  public void setValue(QtLiteralValue newValue)
   {
     if (newValue != value)
     {
@@ -204,7 +204,7 @@ public class QtEnumValueImpl extends MinimalEObjectImpl.Container implements QtE
         setName((String)newValue);
         return;
       case QIdlPackage.QT_ENUM_VALUE__VALUE:
-        setValue((LiteralValue)newValue);
+        setValue((QtLiteralValue)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -224,7 +224,7 @@ public class QtEnumValueImpl extends MinimalEObjectImpl.Container implements QtE
         setName(NAME_EDEFAULT);
         return;
       case QIdlPackage.QT_ENUM_VALUE__VALUE:
-        setValue((LiteralValue)null);
+        setValue((QtLiteralValue)null);
         return;
     }
     super.eUnset(featureID);

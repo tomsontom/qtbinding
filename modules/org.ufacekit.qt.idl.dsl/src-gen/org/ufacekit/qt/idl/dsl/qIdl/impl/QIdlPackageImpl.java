@@ -19,7 +19,6 @@ import org.eclipse.xtext.xbase.XbasePackage;
 
 import org.eclipse.xtext.xtype.XtypePackage;
 
-import org.ufacekit.qt.idl.dsl.qIdl.LiteralValue;
 import org.ufacekit.qt.idl.dsl.qIdl.Owner;
 import org.ufacekit.qt.idl.dsl.qIdl.QIdlFactory;
 import org.ufacekit.qt.idl.dsl.qIdl.QIdlPackage;
@@ -31,6 +30,7 @@ import org.ufacekit.qt.idl.dsl.qIdl.QtEnumValue;
 import org.ufacekit.qt.idl.dsl.qIdl.QtFlags;
 import org.ufacekit.qt.idl.dsl.qIdl.QtFunction;
 import org.ufacekit.qt.idl.dsl.qIdl.QtIdlTyp;
+import org.ufacekit.qt.idl.dsl.qIdl.QtLiteralValue;
 import org.ufacekit.qt.idl.dsl.qIdl.QtNamespace;
 import org.ufacekit.qt.idl.dsl.qIdl.QtOperations;
 import org.ufacekit.qt.idl.dsl.qIdl.QtProperty;
@@ -126,7 +126,7 @@ public class QIdlPackageImpl extends EPackageImpl implements QIdlPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass literalValueEClass = null;
+  private EClass qtLiteralValueEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -610,9 +610,9 @@ public class QIdlPackageImpl extends EPackageImpl implements QIdlPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getLiteralValue()
+  public EClass getQtLiteralValue()
   {
-    return literalValueEClass;
+    return qtLiteralValueEClass;
   }
 
   /**
@@ -620,9 +620,9 @@ public class QIdlPackageImpl extends EPackageImpl implements QIdlPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getLiteralValue_Value()
+  public EReference getQtLiteralValue_Value()
   {
-    return (EReference)literalValueEClass.getEStructuralFeatures().get(0);
+    return (EReference)qtLiteralValueEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -929,8 +929,8 @@ public class QIdlPackageImpl extends EPackageImpl implements QIdlPackage
     createEAttribute(qtEnumValueEClass, QT_ENUM_VALUE__NAME);
     createEReference(qtEnumValueEClass, QT_ENUM_VALUE__VALUE);
 
-    literalValueEClass = createEClass(LITERAL_VALUE);
-    createEReference(literalValueEClass, LITERAL_VALUE__VALUE);
+    qtLiteralValueEClass = createEClass(QT_LITERAL_VALUE);
+    createEReference(qtLiteralValueEClass, QT_LITERAL_VALUE__VALUE);
 
     qtBuitinTypeEClass = createEClass(QT_BUITIN_TYPE);
     createEReference(qtBuitinTypeEClass, QT_BUITIN_TYPE__VALUE);
@@ -1046,10 +1046,10 @@ public class QIdlPackageImpl extends EPackageImpl implements QIdlPackage
 
     initEClass(qtEnumValueEClass, QtEnumValue.class, "QtEnumValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getQtEnumValue_Name(), ecorePackage.getEString(), "name", null, 0, 1, QtEnumValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getQtEnumValue_Value(), this.getLiteralValue(), null, "value", null, 0, 1, QtEnumValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getQtEnumValue_Value(), this.getQtLiteralValue(), null, "value", null, 0, 1, QtEnumValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(literalValueEClass, LiteralValue.class, "LiteralValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getLiteralValue_Value(), this.getQtEnumValue(), null, "value", null, 0, -1, LiteralValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(qtLiteralValueEClass, QtLiteralValue.class, "QtLiteralValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getQtLiteralValue_Value(), this.getQtEnumValue(), null, "value", null, 0, -1, QtLiteralValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(qtBuitinTypeEClass, QtBuitinType.class, "QtBuitinType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getQtBuitinType_Value(), theTypesPackage.getJvmTypeReference(), null, "value", null, 0, 1, QtBuitinType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1065,7 +1065,7 @@ public class QIdlPackageImpl extends EPackageImpl implements QIdlPackage
     initEAttribute(getQtValue_ValueType(), this.getType(), "valueType", null, 0, 1, QtValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getQtValue_Type(), this.getQtType(), null, "type", null, 0, 1, QtValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getQtValue_Name(), ecorePackage.getEString(), "name", null, 0, 1, QtValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getQtValue_Default(), this.getLiteralValue(), null, "default", null, 0, 1, QtValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getQtValue_Default(), this.getQtLiteralValue(), null, "default", null, 0, 1, QtValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(qtReturnValueEClass, QtReturnValue.class, "QtReturnValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getQtReturnValue_Const(), ecorePackage.getEString(), "const", null, 0, 1, QtReturnValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -61,12 +61,12 @@ public interface QtEnumValue extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Value</em>' containment reference.
-   * @see #setValue(LiteralValue)
+   * @see #setValue(QtLiteralValue)
    * @see org.ufacekit.qt.idl.dsl.qIdl.QIdlPackage#getQtEnumValue_Value()
    * @model containment="true"
    * @generated
    */
-  LiteralValue getValue();
+  QtLiteralValue getValue();
 
   /**
    * Sets the value of the '{@link org.ufacekit.qt.idl.dsl.qIdl.QtEnumValue#getValue <em>Value</em>}' containment reference.
@@ -76,6 +76,6 @@ public interface QtEnumValue extends EObject
    * @see #getValue()
    * @generated
    */
-  void setValue(LiteralValue value);
+  void setValue(QtLiteralValue value);
 
 } // QtEnumValue

@@ -128,9 +128,9 @@ public class QIdlAdapterFactory extends AdapterFactoryImpl
         return createQtEnumValueAdapter();
       }
       @Override
-      public Adapter caseLiteralValue(LiteralValue object)
+      public Adapter caseQtLiteralValue(QtLiteralValue object)
       {
-        return createLiteralValueAdapter();
+        return createQtLiteralValueAdapter();
       }
       @Override
       public Adapter caseQtBuitinType(QtBuitinType object)
@@ -335,16 +335,16 @@ public class QIdlAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.ufacekit.qt.idl.dsl.qIdl.LiteralValue <em>Literal Value</em>}'.
+   * Creates a new adapter for an object of class '{@link org.ufacekit.qt.idl.dsl.qIdl.QtLiteralValue <em>Qt Literal Value</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.ufacekit.qt.idl.dsl.qIdl.LiteralValue
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QtLiteralValue
    * @generated
    */
-  public Adapter createLiteralValueAdapter()
+  public Adapter createQtLiteralValueAdapter()
   {
     return null;
   }

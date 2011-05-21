@@ -14,8 +14,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.ufacekit.qt.idl.dsl.qIdl.LiteralValue;
 import org.ufacekit.qt.idl.dsl.qIdl.QIdlPackage;
+import org.ufacekit.qt.idl.dsl.qIdl.QtLiteralValue;
 import org.ufacekit.qt.idl.dsl.qIdl.QtType;
 import org.ufacekit.qt.idl.dsl.qIdl.QtValue;
 import org.ufacekit.qt.idl.dsl.qIdl.Type;
@@ -117,7 +117,7 @@ public class QtValueImpl extends MinimalEObjectImpl.Container implements QtValue
    * @generated
    * @ordered
    */
-  protected LiteralValue default_;
+  protected QtLiteralValue default_;
 
   /**
    * <!-- begin-user-doc -->
@@ -257,7 +257,7 @@ public class QtValueImpl extends MinimalEObjectImpl.Container implements QtValue
    * <!-- end-user-doc -->
    * @generated
    */
-  public LiteralValue getDefault()
+  public QtLiteralValue getDefault()
   {
     return default_;
   }
@@ -267,9 +267,9 @@ public class QtValueImpl extends MinimalEObjectImpl.Container implements QtValue
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetDefault(LiteralValue newDefault, NotificationChain msgs)
+  public NotificationChain basicSetDefault(QtLiteralValue newDefault, NotificationChain msgs)
   {
-    LiteralValue oldDefault = default_;
+    QtLiteralValue oldDefault = default_;
     default_ = newDefault;
     if (eNotificationRequired())
     {
@@ -284,7 +284,7 @@ public class QtValueImpl extends MinimalEObjectImpl.Container implements QtValue
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setDefault(LiteralValue newDefault)
+  public void setDefault(QtLiteralValue newDefault)
   {
     if (newDefault != default_)
     {
@@ -364,7 +364,7 @@ public class QtValueImpl extends MinimalEObjectImpl.Container implements QtValue
         setName((String)newValue);
         return;
       case QIdlPackage.QT_VALUE__DEFAULT:
-        setDefault((LiteralValue)newValue);
+        setDefault((QtLiteralValue)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -393,7 +393,7 @@ public class QtValueImpl extends MinimalEObjectImpl.Container implements QtValue
         setName(NAME_EDEFAULT);
         return;
       case QIdlPackage.QT_VALUE__DEFAULT:
-        setDefault((LiteralValue)null);
+        setDefault((QtLiteralValue)null);
         return;
     }
     super.eUnset(featureID);

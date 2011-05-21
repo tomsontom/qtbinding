@@ -485,14 +485,14 @@ public interface QIdlPackage extends EPackage
   int QT_ENUM_VALUE_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.LiteralValueImpl <em>Literal Value</em>}' class.
+   * The meta object id for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtLiteralValueImpl <em>Qt Literal Value</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.ufacekit.qt.idl.dsl.qIdl.impl.LiteralValueImpl
-   * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QIdlPackageImpl#getLiteralValue()
+   * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QtLiteralValueImpl
+   * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QIdlPackageImpl#getQtLiteralValue()
    * @generated
    */
-  int LITERAL_VALUE = 10;
+  int QT_LITERAL_VALUE = 10;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' reference list.
@@ -501,16 +501,16 @@ public interface QIdlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LITERAL_VALUE__VALUE = 0;
+  int QT_LITERAL_VALUE__VALUE = 0;
 
   /**
-   * The number of structural features of the '<em>Literal Value</em>' class.
+   * The number of structural features of the '<em>Qt Literal Value</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int LITERAL_VALUE_FEATURE_COUNT = 1;
+  int QT_LITERAL_VALUE_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtBuitinTypeImpl <em>Qt Buitin Type</em>}' class.
@@ -1239,25 +1239,25 @@ public interface QIdlPackage extends EPackage
   EReference getQtEnumValue_Value();
 
   /**
-   * Returns the meta object for class '{@link org.ufacekit.qt.idl.dsl.qIdl.LiteralValue <em>Literal Value</em>}'.
+   * Returns the meta object for class '{@link org.ufacekit.qt.idl.dsl.qIdl.QtLiteralValue <em>Qt Literal Value</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Literal Value</em>'.
-   * @see org.ufacekit.qt.idl.dsl.qIdl.LiteralValue
+   * @return the meta object for class '<em>Qt Literal Value</em>'.
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QtLiteralValue
    * @generated
    */
-  EClass getLiteralValue();
+  EClass getQtLiteralValue();
 
   /**
-   * Returns the meta object for the reference list '{@link org.ufacekit.qt.idl.dsl.qIdl.LiteralValue#getValue <em>Value</em>}'.
+   * Returns the meta object for the reference list '{@link org.ufacekit.qt.idl.dsl.qIdl.QtLiteralValue#getValue <em>Value</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the reference list '<em>Value</em>'.
-   * @see org.ufacekit.qt.idl.dsl.qIdl.LiteralValue#getValue()
-   * @see #getLiteralValue()
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QtLiteralValue#getValue()
+   * @see #getQtLiteralValue()
    * @generated
    */
-  EReference getLiteralValue_Value();
+  EReference getQtLiteralValue_Value();
 
   /**
    * Returns the meta object for class '{@link org.ufacekit.qt.idl.dsl.qIdl.QtBuitinType <em>Qt Buitin Type</em>}'.
@@ -1818,14 +1818,14 @@ public interface QIdlPackage extends EPackage
     EReference QT_ENUM_VALUE__VALUE = eINSTANCE.getQtEnumValue_Value();
 
     /**
-     * The meta object literal for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.LiteralValueImpl <em>Literal Value</em>}' class.
+     * The meta object literal for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtLiteralValueImpl <em>Qt Literal Value</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.ufacekit.qt.idl.dsl.qIdl.impl.LiteralValueImpl
-     * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QIdlPackageImpl#getLiteralValue()
+     * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QtLiteralValueImpl
+     * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QIdlPackageImpl#getQtLiteralValue()
      * @generated
      */
-    EClass LITERAL_VALUE = eINSTANCE.getLiteralValue();
+    EClass QT_LITERAL_VALUE = eINSTANCE.getQtLiteralValue();
 
     /**
      * The meta object literal for the '<em><b>Value</b></em>' reference list feature.
@@ -1833,7 +1833,7 @@ public interface QIdlPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference LITERAL_VALUE__VALUE = eINSTANCE.getLiteralValue_Value();
+    EReference QT_LITERAL_VALUE__VALUE = eINSTANCE.getQtLiteralValue_Value();
 
     /**
      * The meta object literal for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtBuitinTypeImpl <em>Qt Buitin Type</em>}' class.

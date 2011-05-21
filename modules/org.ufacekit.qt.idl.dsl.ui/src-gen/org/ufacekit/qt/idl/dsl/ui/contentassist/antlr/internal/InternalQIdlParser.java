@@ -916,25 +916,25 @@ public class InternalQIdlParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "ruleQtEnumValue"
 
 
-    // $ANTLR start "entryRuleLiteralValue"
-    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:316:1: entryRuleLiteralValue : ruleLiteralValue EOF ;
-    public final void entryRuleLiteralValue() throws RecognitionException {
+    // $ANTLR start "entryRuleQtLiteralValue"
+    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:316:1: entryRuleQtLiteralValue : ruleQtLiteralValue EOF ;
+    public final void entryRuleQtLiteralValue() throws RecognitionException {
         try {
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:317:1: ( ruleLiteralValue EOF )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:318:1: ruleLiteralValue EOF
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:317:1: ( ruleQtLiteralValue EOF )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:318:1: ruleQtLiteralValue EOF
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getLiteralValueRule()); 
+               before(grammarAccess.getQtLiteralValueRule()); 
             }
-            pushFollow(FOLLOW_ruleLiteralValue_in_entryRuleLiteralValue609);
-            ruleLiteralValue();
+            pushFollow(FOLLOW_ruleQtLiteralValue_in_entryRuleQtLiteralValue609);
+            ruleQtLiteralValue();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getLiteralValueRule()); 
+               after(grammarAccess.getQtLiteralValueRule()); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleLiteralValue616); if (state.failed) return ;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleQtLiteralValue616); if (state.failed) return ;
 
             }
 
@@ -947,30 +947,30 @@ public class InternalQIdlParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "entryRuleLiteralValue"
+    // $ANTLR end "entryRuleQtLiteralValue"
 
 
-    // $ANTLR start "ruleLiteralValue"
-    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:325:1: ruleLiteralValue : ( ( rule__LiteralValue__Alternatives ) ) ;
-    public final void ruleLiteralValue() throws RecognitionException {
+    // $ANTLR start "ruleQtLiteralValue"
+    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:325:1: ruleQtLiteralValue : ( ( rule__QtLiteralValue__Alternatives ) ) ;
+    public final void ruleQtLiteralValue() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:329:2: ( ( ( rule__LiteralValue__Alternatives ) ) )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:330:1: ( ( rule__LiteralValue__Alternatives ) )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:329:2: ( ( ( rule__QtLiteralValue__Alternatives ) ) )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:330:1: ( ( rule__QtLiteralValue__Alternatives ) )
             {
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:330:1: ( ( rule__LiteralValue__Alternatives ) )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:331:1: ( rule__LiteralValue__Alternatives )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:330:1: ( ( rule__QtLiteralValue__Alternatives ) )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:331:1: ( rule__QtLiteralValue__Alternatives )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getLiteralValueAccess().getAlternatives()); 
+               before(grammarAccess.getQtLiteralValueAccess().getAlternatives()); 
             }
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:332:1: ( rule__LiteralValue__Alternatives )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:332:2: rule__LiteralValue__Alternatives
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:332:1: ( rule__QtLiteralValue__Alternatives )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:332:2: rule__QtLiteralValue__Alternatives
             {
-            pushFollow(FOLLOW_rule__LiteralValue__Alternatives_in_ruleLiteralValue642);
-            rule__LiteralValue__Alternatives();
+            pushFollow(FOLLOW_rule__QtLiteralValue__Alternatives_in_ruleQtLiteralValue642);
+            rule__QtLiteralValue__Alternatives();
 
             state._fsp--;
             if (state.failed) return ;
@@ -978,7 +978,7 @@ public class InternalQIdlParser extends AbstractInternalContentAssistParser {
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getLiteralValueAccess().getAlternatives()); 
+               after(grammarAccess.getQtLiteralValueAccess().getAlternatives()); 
             }
 
             }
@@ -998,7 +998,7 @@ public class InternalQIdlParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "ruleLiteralValue"
+    // $ANTLR end "ruleQtLiteralValue"
 
 
     // $ANTLR start "entryRuleQtBuitinType"
@@ -6978,14 +6978,14 @@ public class InternalQIdlParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__QtOperations__Alternatives"
 
 
-    // $ANTLR start "rule__LiteralValue__Alternatives"
-    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:2314:1: rule__LiteralValue__Alternatives : ( ( ( rule__LiteralValue__Group_0__0 ) ) | ( RULE_INT ) | ( RULE_STRING ) );
-    public final void rule__LiteralValue__Alternatives() throws RecognitionException {
+    // $ANTLR start "rule__QtLiteralValue__Alternatives"
+    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:2314:1: rule__QtLiteralValue__Alternatives : ( ( ( rule__QtLiteralValue__Group_0__0 ) ) | ( RULE_INT ) | ( RULE_STRING ) );
+    public final void rule__QtLiteralValue__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:2318:1: ( ( ( rule__LiteralValue__Group_0__0 ) ) | ( RULE_INT ) | ( RULE_STRING ) )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:2318:1: ( ( ( rule__QtLiteralValue__Group_0__0 ) ) | ( RULE_INT ) | ( RULE_STRING ) )
             int alt4=3;
             switch ( input.LA(1) ) {
             case RULE_ID:
@@ -7013,19 +7013,19 @@ public class InternalQIdlParser extends AbstractInternalContentAssistParser {
 
             switch (alt4) {
                 case 1 :
-                    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:2319:1: ( ( rule__LiteralValue__Group_0__0 ) )
+                    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:2319:1: ( ( rule__QtLiteralValue__Group_0__0 ) )
                     {
-                    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:2319:1: ( ( rule__LiteralValue__Group_0__0 ) )
-                    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:2320:1: ( rule__LiteralValue__Group_0__0 )
+                    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:2319:1: ( ( rule__QtLiteralValue__Group_0__0 ) )
+                    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:2320:1: ( rule__QtLiteralValue__Group_0__0 )
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getLiteralValueAccess().getGroup_0()); 
+                       before(grammarAccess.getQtLiteralValueAccess().getGroup_0()); 
                     }
-                    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:2321:1: ( rule__LiteralValue__Group_0__0 )
-                    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:2321:2: rule__LiteralValue__Group_0__0
+                    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:2321:1: ( rule__QtLiteralValue__Group_0__0 )
+                    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:2321:2: rule__QtLiteralValue__Group_0__0
                     {
-                    pushFollow(FOLLOW_rule__LiteralValue__Group_0__0_in_rule__LiteralValue__Alternatives4881);
-                    rule__LiteralValue__Group_0__0();
+                    pushFollow(FOLLOW_rule__QtLiteralValue__Group_0__0_in_rule__QtLiteralValue__Alternatives4881);
+                    rule__QtLiteralValue__Group_0__0();
 
                     state._fsp--;
                     if (state.failed) return ;
@@ -7033,7 +7033,7 @@ public class InternalQIdlParser extends AbstractInternalContentAssistParser {
                     }
 
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getLiteralValueAccess().getGroup_0()); 
+                       after(grammarAccess.getQtLiteralValueAccess().getGroup_0()); 
                     }
 
                     }
@@ -7048,11 +7048,11 @@ public class InternalQIdlParser extends AbstractInternalContentAssistParser {
                     // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:2326:1: RULE_INT
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getLiteralValueAccess().getINTTerminalRuleCall_1()); 
+                       before(grammarAccess.getQtLiteralValueAccess().getINTTerminalRuleCall_1()); 
                     }
-                    match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__LiteralValue__Alternatives4899); if (state.failed) return ;
+                    match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__QtLiteralValue__Alternatives4899); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getLiteralValueAccess().getINTTerminalRuleCall_1()); 
+                       after(grammarAccess.getQtLiteralValueAccess().getINTTerminalRuleCall_1()); 
                     }
 
                     }
@@ -7067,11 +7067,11 @@ public class InternalQIdlParser extends AbstractInternalContentAssistParser {
                     // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:2332:1: RULE_STRING
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getLiteralValueAccess().getSTRINGTerminalRuleCall_2()); 
+                       before(grammarAccess.getQtLiteralValueAccess().getSTRINGTerminalRuleCall_2()); 
                     }
-                    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__LiteralValue__Alternatives4916); if (state.failed) return ;
+                    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__QtLiteralValue__Alternatives4916); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getLiteralValueAccess().getSTRINGTerminalRuleCall_2()); 
+                       after(grammarAccess.getQtLiteralValueAccess().getSTRINGTerminalRuleCall_2()); 
                     }
 
                     }
@@ -7093,7 +7093,7 @@ public class InternalQIdlParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__LiteralValue__Alternatives"
+    // $ANTLR end "rule__QtLiteralValue__Alternatives"
 
 
     // $ANTLR start "rule__XAssignment__Alternatives"
@@ -14533,107 +14533,23 @@ public class InternalQIdlParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__QtEnumValue__Group__2__Impl"
 
 
-    // $ANTLR start "rule__LiteralValue__Group_0__0"
-    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4645:1: rule__LiteralValue__Group_0__0 : rule__LiteralValue__Group_0__0__Impl rule__LiteralValue__Group_0__1 ;
-    public final void rule__LiteralValue__Group_0__0() throws RecognitionException {
+    // $ANTLR start "rule__QtLiteralValue__Group_0__0"
+    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4645:1: rule__QtLiteralValue__Group_0__0 : rule__QtLiteralValue__Group_0__0__Impl rule__QtLiteralValue__Group_0__1 ;
+    public final void rule__QtLiteralValue__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4649:1: ( rule__LiteralValue__Group_0__0__Impl rule__LiteralValue__Group_0__1 )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4650:2: rule__LiteralValue__Group_0__0__Impl rule__LiteralValue__Group_0__1
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4649:1: ( rule__QtLiteralValue__Group_0__0__Impl rule__QtLiteralValue__Group_0__1 )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4650:2: rule__QtLiteralValue__Group_0__0__Impl rule__QtLiteralValue__Group_0__1
             {
-            pushFollow(FOLLOW_rule__LiteralValue__Group_0__0__Impl_in_rule__LiteralValue__Group_0__09779);
-            rule__LiteralValue__Group_0__0__Impl();
+            pushFollow(FOLLOW_rule__QtLiteralValue__Group_0__0__Impl_in_rule__QtLiteralValue__Group_0__09779);
+            rule__QtLiteralValue__Group_0__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__LiteralValue__Group_0__1_in_rule__LiteralValue__Group_0__09782);
-            rule__LiteralValue__Group_0__1();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__LiteralValue__Group_0__0"
-
-
-    // $ANTLR start "rule__LiteralValue__Group_0__0__Impl"
-    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4657:1: rule__LiteralValue__Group_0__0__Impl : ( ( rule__LiteralValue__ValueAssignment_0_0 ) ) ;
-    public final void rule__LiteralValue__Group_0__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4661:1: ( ( ( rule__LiteralValue__ValueAssignment_0_0 ) ) )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4662:1: ( ( rule__LiteralValue__ValueAssignment_0_0 ) )
-            {
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4662:1: ( ( rule__LiteralValue__ValueAssignment_0_0 ) )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4663:1: ( rule__LiteralValue__ValueAssignment_0_0 )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getLiteralValueAccess().getValueAssignment_0_0()); 
-            }
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4664:1: ( rule__LiteralValue__ValueAssignment_0_0 )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4664:2: rule__LiteralValue__ValueAssignment_0_0
-            {
-            pushFollow(FOLLOW_rule__LiteralValue__ValueAssignment_0_0_in_rule__LiteralValue__Group_0__0__Impl9809);
-            rule__LiteralValue__ValueAssignment_0_0();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getLiteralValueAccess().getValueAssignment_0_0()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__LiteralValue__Group_0__0__Impl"
-
-
-    // $ANTLR start "rule__LiteralValue__Group_0__1"
-    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4674:1: rule__LiteralValue__Group_0__1 : rule__LiteralValue__Group_0__1__Impl ;
-    public final void rule__LiteralValue__Group_0__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4678:1: ( rule__LiteralValue__Group_0__1__Impl )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4679:2: rule__LiteralValue__Group_0__1__Impl
-            {
-            pushFollow(FOLLOW_rule__LiteralValue__Group_0__1__Impl_in_rule__LiteralValue__Group_0__19839);
-            rule__LiteralValue__Group_0__1__Impl();
+            pushFollow(FOLLOW_rule__QtLiteralValue__Group_0__1_in_rule__QtLiteralValue__Group_0__09782);
+            rule__QtLiteralValue__Group_0__1();
 
             state._fsp--;
             if (state.failed) return ;
@@ -14652,26 +14568,110 @@ public class InternalQIdlParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__LiteralValue__Group_0__1"
+    // $ANTLR end "rule__QtLiteralValue__Group_0__0"
 
 
-    // $ANTLR start "rule__LiteralValue__Group_0__1__Impl"
-    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4685:1: rule__LiteralValue__Group_0__1__Impl : ( ( rule__LiteralValue__Group_0_1__0 )* ) ;
-    public final void rule__LiteralValue__Group_0__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__QtLiteralValue__Group_0__0__Impl"
+    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4657:1: rule__QtLiteralValue__Group_0__0__Impl : ( ( rule__QtLiteralValue__ValueAssignment_0_0 ) ) ;
+    public final void rule__QtLiteralValue__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4689:1: ( ( ( rule__LiteralValue__Group_0_1__0 )* ) )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4690:1: ( ( rule__LiteralValue__Group_0_1__0 )* )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4661:1: ( ( ( rule__QtLiteralValue__ValueAssignment_0_0 ) ) )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4662:1: ( ( rule__QtLiteralValue__ValueAssignment_0_0 ) )
             {
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4690:1: ( ( rule__LiteralValue__Group_0_1__0 )* )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4691:1: ( rule__LiteralValue__Group_0_1__0 )*
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4662:1: ( ( rule__QtLiteralValue__ValueAssignment_0_0 ) )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4663:1: ( rule__QtLiteralValue__ValueAssignment_0_0 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getLiteralValueAccess().getGroup_0_1()); 
+               before(grammarAccess.getQtLiteralValueAccess().getValueAssignment_0_0()); 
             }
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4692:1: ( rule__LiteralValue__Group_0_1__0 )*
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4664:1: ( rule__QtLiteralValue__ValueAssignment_0_0 )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4664:2: rule__QtLiteralValue__ValueAssignment_0_0
+            {
+            pushFollow(FOLLOW_rule__QtLiteralValue__ValueAssignment_0_0_in_rule__QtLiteralValue__Group_0__0__Impl9809);
+            rule__QtLiteralValue__ValueAssignment_0_0();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getQtLiteralValueAccess().getValueAssignment_0_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__QtLiteralValue__Group_0__0__Impl"
+
+
+    // $ANTLR start "rule__QtLiteralValue__Group_0__1"
+    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4674:1: rule__QtLiteralValue__Group_0__1 : rule__QtLiteralValue__Group_0__1__Impl ;
+    public final void rule__QtLiteralValue__Group_0__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4678:1: ( rule__QtLiteralValue__Group_0__1__Impl )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4679:2: rule__QtLiteralValue__Group_0__1__Impl
+            {
+            pushFollow(FOLLOW_rule__QtLiteralValue__Group_0__1__Impl_in_rule__QtLiteralValue__Group_0__19839);
+            rule__QtLiteralValue__Group_0__1__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__QtLiteralValue__Group_0__1"
+
+
+    // $ANTLR start "rule__QtLiteralValue__Group_0__1__Impl"
+    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4685:1: rule__QtLiteralValue__Group_0__1__Impl : ( ( rule__QtLiteralValue__Group_0_1__0 )* ) ;
+    public final void rule__QtLiteralValue__Group_0__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4689:1: ( ( ( rule__QtLiteralValue__Group_0_1__0 )* ) )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4690:1: ( ( rule__QtLiteralValue__Group_0_1__0 )* )
+            {
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4690:1: ( ( rule__QtLiteralValue__Group_0_1__0 )* )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4691:1: ( rule__QtLiteralValue__Group_0_1__0 )*
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getQtLiteralValueAccess().getGroup_0_1()); 
+            }
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4692:1: ( rule__QtLiteralValue__Group_0_1__0 )*
             loop49:
             do {
                 int alt49=2;
@@ -14684,10 +14684,10 @@ public class InternalQIdlParser extends AbstractInternalContentAssistParser {
 
                 switch (alt49) {
             	case 1 :
-            	    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4692:2: rule__LiteralValue__Group_0_1__0
+            	    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4692:2: rule__QtLiteralValue__Group_0_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__LiteralValue__Group_0_1__0_in_rule__LiteralValue__Group_0__1__Impl9866);
-            	    rule__LiteralValue__Group_0_1__0();
+            	    pushFollow(FOLLOW_rule__QtLiteralValue__Group_0_1__0_in_rule__QtLiteralValue__Group_0__1__Impl9866);
+            	    rule__QtLiteralValue__Group_0_1__0();
 
             	    state._fsp--;
             	    if (state.failed) return ;
@@ -14701,7 +14701,7 @@ public class InternalQIdlParser extends AbstractInternalContentAssistParser {
             } while (true);
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getLiteralValueAccess().getGroup_0_1()); 
+               after(grammarAccess.getQtLiteralValueAccess().getGroup_0_1()); 
             }
 
             }
@@ -14721,26 +14721,26 @@ public class InternalQIdlParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__LiteralValue__Group_0__1__Impl"
+    // $ANTLR end "rule__QtLiteralValue__Group_0__1__Impl"
 
 
-    // $ANTLR start "rule__LiteralValue__Group_0_1__0"
-    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4706:1: rule__LiteralValue__Group_0_1__0 : rule__LiteralValue__Group_0_1__0__Impl rule__LiteralValue__Group_0_1__1 ;
-    public final void rule__LiteralValue__Group_0_1__0() throws RecognitionException {
+    // $ANTLR start "rule__QtLiteralValue__Group_0_1__0"
+    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4706:1: rule__QtLiteralValue__Group_0_1__0 : rule__QtLiteralValue__Group_0_1__0__Impl rule__QtLiteralValue__Group_0_1__1 ;
+    public final void rule__QtLiteralValue__Group_0_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4710:1: ( rule__LiteralValue__Group_0_1__0__Impl rule__LiteralValue__Group_0_1__1 )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4711:2: rule__LiteralValue__Group_0_1__0__Impl rule__LiteralValue__Group_0_1__1
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4710:1: ( rule__QtLiteralValue__Group_0_1__0__Impl rule__QtLiteralValue__Group_0_1__1 )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4711:2: rule__QtLiteralValue__Group_0_1__0__Impl rule__QtLiteralValue__Group_0_1__1
             {
-            pushFollow(FOLLOW_rule__LiteralValue__Group_0_1__0__Impl_in_rule__LiteralValue__Group_0_1__09901);
-            rule__LiteralValue__Group_0_1__0__Impl();
+            pushFollow(FOLLOW_rule__QtLiteralValue__Group_0_1__0__Impl_in_rule__QtLiteralValue__Group_0_1__09901);
+            rule__QtLiteralValue__Group_0_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__LiteralValue__Group_0_1__1_in_rule__LiteralValue__Group_0_1__09904);
-            rule__LiteralValue__Group_0_1__1();
+            pushFollow(FOLLOW_rule__QtLiteralValue__Group_0_1__1_in_rule__QtLiteralValue__Group_0_1__09904);
+            rule__QtLiteralValue__Group_0_1__1();
 
             state._fsp--;
             if (state.failed) return ;
@@ -14759,12 +14759,12 @@ public class InternalQIdlParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__LiteralValue__Group_0_1__0"
+    // $ANTLR end "rule__QtLiteralValue__Group_0_1__0"
 
 
-    // $ANTLR start "rule__LiteralValue__Group_0_1__0__Impl"
-    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4718:1: rule__LiteralValue__Group_0_1__0__Impl : ( '|' ) ;
-    public final void rule__LiteralValue__Group_0_1__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__QtLiteralValue__Group_0_1__0__Impl"
+    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4718:1: rule__QtLiteralValue__Group_0_1__0__Impl : ( '|' ) ;
+    public final void rule__QtLiteralValue__Group_0_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -14776,11 +14776,11 @@ public class InternalQIdlParser extends AbstractInternalContentAssistParser {
             // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4724:1: '|'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getLiteralValueAccess().getVerticalLineKeyword_0_1_0()); 
+               before(grammarAccess.getQtLiteralValueAccess().getVerticalLineKeyword_0_1_0()); 
             }
-            match(input,55,FOLLOW_55_in_rule__LiteralValue__Group_0_1__0__Impl9932); if (state.failed) return ;
+            match(input,55,FOLLOW_55_in_rule__QtLiteralValue__Group_0_1__0__Impl9932); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getLiteralValueAccess().getVerticalLineKeyword_0_1_0()); 
+               after(grammarAccess.getQtLiteralValueAccess().getVerticalLineKeyword_0_1_0()); 
             }
 
             }
@@ -14800,21 +14800,21 @@ public class InternalQIdlParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__LiteralValue__Group_0_1__0__Impl"
+    // $ANTLR end "rule__QtLiteralValue__Group_0_1__0__Impl"
 
 
-    // $ANTLR start "rule__LiteralValue__Group_0_1__1"
-    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4737:1: rule__LiteralValue__Group_0_1__1 : rule__LiteralValue__Group_0_1__1__Impl ;
-    public final void rule__LiteralValue__Group_0_1__1() throws RecognitionException {
+    // $ANTLR start "rule__QtLiteralValue__Group_0_1__1"
+    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4737:1: rule__QtLiteralValue__Group_0_1__1 : rule__QtLiteralValue__Group_0_1__1__Impl ;
+    public final void rule__QtLiteralValue__Group_0_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4741:1: ( rule__LiteralValue__Group_0_1__1__Impl )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4742:2: rule__LiteralValue__Group_0_1__1__Impl
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4741:1: ( rule__QtLiteralValue__Group_0_1__1__Impl )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4742:2: rule__QtLiteralValue__Group_0_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__LiteralValue__Group_0_1__1__Impl_in_rule__LiteralValue__Group_0_1__19963);
-            rule__LiteralValue__Group_0_1__1__Impl();
+            pushFollow(FOLLOW_rule__QtLiteralValue__Group_0_1__1__Impl_in_rule__QtLiteralValue__Group_0_1__19963);
+            rule__QtLiteralValue__Group_0_1__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
@@ -14833,30 +14833,30 @@ public class InternalQIdlParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__LiteralValue__Group_0_1__1"
+    // $ANTLR end "rule__QtLiteralValue__Group_0_1__1"
 
 
-    // $ANTLR start "rule__LiteralValue__Group_0_1__1__Impl"
-    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4748:1: rule__LiteralValue__Group_0_1__1__Impl : ( ( rule__LiteralValue__ValueAssignment_0_1_1 ) ) ;
-    public final void rule__LiteralValue__Group_0_1__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__QtLiteralValue__Group_0_1__1__Impl"
+    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4748:1: rule__QtLiteralValue__Group_0_1__1__Impl : ( ( rule__QtLiteralValue__ValueAssignment_0_1_1 ) ) ;
+    public final void rule__QtLiteralValue__Group_0_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4752:1: ( ( ( rule__LiteralValue__ValueAssignment_0_1_1 ) ) )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4753:1: ( ( rule__LiteralValue__ValueAssignment_0_1_1 ) )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4752:1: ( ( ( rule__QtLiteralValue__ValueAssignment_0_1_1 ) ) )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4753:1: ( ( rule__QtLiteralValue__ValueAssignment_0_1_1 ) )
             {
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4753:1: ( ( rule__LiteralValue__ValueAssignment_0_1_1 ) )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4754:1: ( rule__LiteralValue__ValueAssignment_0_1_1 )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4753:1: ( ( rule__QtLiteralValue__ValueAssignment_0_1_1 ) )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4754:1: ( rule__QtLiteralValue__ValueAssignment_0_1_1 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getLiteralValueAccess().getValueAssignment_0_1_1()); 
+               before(grammarAccess.getQtLiteralValueAccess().getValueAssignment_0_1_1()); 
             }
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4755:1: ( rule__LiteralValue__ValueAssignment_0_1_1 )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4755:2: rule__LiteralValue__ValueAssignment_0_1_1
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4755:1: ( rule__QtLiteralValue__ValueAssignment_0_1_1 )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:4755:2: rule__QtLiteralValue__ValueAssignment_0_1_1
             {
-            pushFollow(FOLLOW_rule__LiteralValue__ValueAssignment_0_1_1_in_rule__LiteralValue__Group_0_1__1__Impl9990);
-            rule__LiteralValue__ValueAssignment_0_1_1();
+            pushFollow(FOLLOW_rule__QtLiteralValue__ValueAssignment_0_1_1_in_rule__QtLiteralValue__Group_0_1__1__Impl9990);
+            rule__QtLiteralValue__ValueAssignment_0_1_1();
 
             state._fsp--;
             if (state.failed) return ;
@@ -14864,7 +14864,7 @@ public class InternalQIdlParser extends AbstractInternalContentAssistParser {
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getLiteralValueAccess().getValueAssignment_0_1_1()); 
+               after(grammarAccess.getQtLiteralValueAccess().getValueAssignment_0_1_1()); 
             }
 
             }
@@ -14884,7 +14884,7 @@ public class InternalQIdlParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__LiteralValue__Group_0_1__1__Impl"
+    // $ANTLR end "rule__QtLiteralValue__Group_0_1__1__Impl"
 
 
     // $ANTLR start "rule__QtBuitinType__Group__0"
@@ -45874,28 +45874,28 @@ public class InternalQIdlParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__QtEnumValue__ValueAssignment_2"
-    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:16044:1: rule__QtEnumValue__ValueAssignment_2 : ( ruleLiteralValue ) ;
+    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:16044:1: rule__QtEnumValue__ValueAssignment_2 : ( ruleQtLiteralValue ) ;
     public final void rule__QtEnumValue__ValueAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:16048:1: ( ( ruleLiteralValue ) )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:16049:1: ( ruleLiteralValue )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:16048:1: ( ( ruleQtLiteralValue ) )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:16049:1: ( ruleQtLiteralValue )
             {
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:16049:1: ( ruleLiteralValue )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:16050:1: ruleLiteralValue
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:16049:1: ( ruleQtLiteralValue )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:16050:1: ruleQtLiteralValue
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getQtEnumValueAccess().getValueLiteralValueParserRuleCall_2_0()); 
+               before(grammarAccess.getQtEnumValueAccess().getValueQtLiteralValueParserRuleCall_2_0()); 
             }
-            pushFollow(FOLLOW_ruleLiteralValue_in_rule__QtEnumValue__ValueAssignment_232227);
-            ruleLiteralValue();
+            pushFollow(FOLLOW_ruleQtLiteralValue_in_rule__QtEnumValue__ValueAssignment_232227);
+            ruleQtLiteralValue();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getQtEnumValueAccess().getValueLiteralValueParserRuleCall_2_0()); 
+               after(grammarAccess.getQtEnumValueAccess().getValueQtLiteralValueParserRuleCall_2_0()); 
             }
 
             }
@@ -45918,9 +45918,9 @@ public class InternalQIdlParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__QtEnumValue__ValueAssignment_2"
 
 
-    // $ANTLR start "rule__LiteralValue__ValueAssignment_0_0"
-    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:16059:1: rule__LiteralValue__ValueAssignment_0_0 : ( ( RULE_ID ) ) ;
-    public final void rule__LiteralValue__ValueAssignment_0_0() throws RecognitionException {
+    // $ANTLR start "rule__QtLiteralValue__ValueAssignment_0_0"
+    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:16059:1: rule__QtLiteralValue__ValueAssignment_0_0 : ( ( RULE_ID ) ) ;
+    public final void rule__QtLiteralValue__ValueAssignment_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -45932,23 +45932,23 @@ public class InternalQIdlParser extends AbstractInternalContentAssistParser {
             // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:16065:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getLiteralValueAccess().getValueQtEnumValueCrossReference_0_0_0()); 
+               before(grammarAccess.getQtLiteralValueAccess().getValueQtEnumValueCrossReference_0_0_0()); 
             }
             // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:16066:1: ( RULE_ID )
             // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:16067:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getLiteralValueAccess().getValueQtEnumValueIDTerminalRuleCall_0_0_0_1()); 
+               before(grammarAccess.getQtLiteralValueAccess().getValueQtEnumValueIDTerminalRuleCall_0_0_0_1()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__LiteralValue__ValueAssignment_0_032262); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__QtLiteralValue__ValueAssignment_0_032262); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getLiteralValueAccess().getValueQtEnumValueIDTerminalRuleCall_0_0_0_1()); 
+               after(grammarAccess.getQtLiteralValueAccess().getValueQtEnumValueIDTerminalRuleCall_0_0_0_1()); 
             }
 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getLiteralValueAccess().getValueQtEnumValueCrossReference_0_0_0()); 
+               after(grammarAccess.getQtLiteralValueAccess().getValueQtEnumValueCrossReference_0_0_0()); 
             }
 
             }
@@ -45968,12 +45968,12 @@ public class InternalQIdlParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__LiteralValue__ValueAssignment_0_0"
+    // $ANTLR end "rule__QtLiteralValue__ValueAssignment_0_0"
 
 
-    // $ANTLR start "rule__LiteralValue__ValueAssignment_0_1_1"
-    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:16078:1: rule__LiteralValue__ValueAssignment_0_1_1 : ( ( RULE_ID ) ) ;
-    public final void rule__LiteralValue__ValueAssignment_0_1_1() throws RecognitionException {
+    // $ANTLR start "rule__QtLiteralValue__ValueAssignment_0_1_1"
+    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:16078:1: rule__QtLiteralValue__ValueAssignment_0_1_1 : ( ( RULE_ID ) ) ;
+    public final void rule__QtLiteralValue__ValueAssignment_0_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -45985,23 +45985,23 @@ public class InternalQIdlParser extends AbstractInternalContentAssistParser {
             // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:16084:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getLiteralValueAccess().getValueQtEnumValueCrossReference_0_1_1_0()); 
+               before(grammarAccess.getQtLiteralValueAccess().getValueQtEnumValueCrossReference_0_1_1_0()); 
             }
             // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:16085:1: ( RULE_ID )
             // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:16086:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getLiteralValueAccess().getValueQtEnumValueIDTerminalRuleCall_0_1_1_0_1()); 
+               before(grammarAccess.getQtLiteralValueAccess().getValueQtEnumValueIDTerminalRuleCall_0_1_1_0_1()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__LiteralValue__ValueAssignment_0_1_132301); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__QtLiteralValue__ValueAssignment_0_1_132301); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getLiteralValueAccess().getValueQtEnumValueIDTerminalRuleCall_0_1_1_0_1()); 
+               after(grammarAccess.getQtLiteralValueAccess().getValueQtEnumValueIDTerminalRuleCall_0_1_1_0_1()); 
             }
 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getLiteralValueAccess().getValueQtEnumValueCrossReference_0_1_1_0()); 
+               after(grammarAccess.getQtLiteralValueAccess().getValueQtEnumValueCrossReference_0_1_1_0()); 
             }
 
             }
@@ -46021,7 +46021,7 @@ public class InternalQIdlParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__LiteralValue__ValueAssignment_0_1_1"
+    // $ANTLR end "rule__QtLiteralValue__ValueAssignment_0_1_1"
 
 
     // $ANTLR start "rule__QtBuitinType__NameAssignment_1"
@@ -46667,28 +46667,28 @@ public class InternalQIdlParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__QtValue__DefaultAssignment_5"
-    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:16327:1: rule__QtValue__DefaultAssignment_5 : ( ruleLiteralValue ) ;
+    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:16327:1: rule__QtValue__DefaultAssignment_5 : ( ruleQtLiteralValue ) ;
     public final void rule__QtValue__DefaultAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:16331:1: ( ( ruleLiteralValue ) )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:16332:1: ( ruleLiteralValue )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:16331:1: ( ( ruleQtLiteralValue ) )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:16332:1: ( ruleQtLiteralValue )
             {
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:16332:1: ( ruleLiteralValue )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:16333:1: ruleLiteralValue
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:16332:1: ( ruleQtLiteralValue )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:16333:1: ruleQtLiteralValue
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getQtValueAccess().getDefaultLiteralValueParserRuleCall_5_0()); 
+               before(grammarAccess.getQtValueAccess().getDefaultQtLiteralValueParserRuleCall_5_0()); 
             }
-            pushFollow(FOLLOW_ruleLiteralValue_in_rule__QtValue__DefaultAssignment_532804);
-            ruleLiteralValue();
+            pushFollow(FOLLOW_ruleQtLiteralValue_in_rule__QtValue__DefaultAssignment_532804);
+            ruleQtLiteralValue();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getQtValueAccess().getDefaultLiteralValueParserRuleCall_5_0()); 
+               after(grammarAccess.getQtValueAccess().getDefaultQtLiteralValueParserRuleCall_5_0()); 
             }
 
             }
@@ -53970,9 +53970,9 @@ public class InternalQIdlParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_ruleQtEnumValue_in_entryRuleQtEnumValue549 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleQtEnumValue556 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__QtEnumValue__Group__0_in_ruleQtEnumValue582 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLiteralValue_in_entryRuleLiteralValue609 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleLiteralValue616 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LiteralValue__Alternatives_in_ruleLiteralValue642 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQtLiteralValue_in_entryRuleQtLiteralValue609 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleQtLiteralValue616 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__QtLiteralValue__Alternatives_in_ruleQtLiteralValue642 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleQtBuitinType_in_entryRuleQtBuitinType669 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleQtBuitinType676 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__QtBuitinType__Group__0_in_ruleQtBuitinType702 = new BitSet(new long[]{0x0000000000000002L});
@@ -54179,9 +54179,9 @@ public class InternalQIdlParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_ruleQtFunction_in_rule__QtOperations__Alternatives4815 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleQtSignal_in_rule__QtOperations__Alternatives4832 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleQtSlot_in_rule__QtOperations__Alternatives4849 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LiteralValue__Group_0__0_in_rule__LiteralValue__Alternatives4881 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__LiteralValue__Alternatives4899 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__LiteralValue__Alternatives4916 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__QtLiteralValue__Group_0__0_in_rule__QtLiteralValue__Alternatives4881 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__QtLiteralValue__Alternatives4899 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__QtLiteralValue__Alternatives4916 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__XAssignment__Group_0__0_in_rule__XAssignment__Alternatives4948 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__XAssignment__Group_1__0_in_rule__XAssignment__Alternatives4966 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_15_in_rule__OpEquality__Alternatives5000 = new BitSet(new long[]{0x0000000000000002L});
@@ -54391,16 +54391,16 @@ public class InternalQIdlParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_11_in_rule__QtEnumValue__Group__1__Impl9685 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__QtEnumValue__Group__2__Impl_in_rule__QtEnumValue__Group__29716 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__QtEnumValue__ValueAssignment_2_in_rule__QtEnumValue__Group__2__Impl9743 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LiteralValue__Group_0__0__Impl_in_rule__LiteralValue__Group_0__09779 = new BitSet(new long[]{0x0080000000000000L});
-    public static final BitSet FOLLOW_rule__LiteralValue__Group_0__1_in_rule__LiteralValue__Group_0__09782 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LiteralValue__ValueAssignment_0_0_in_rule__LiteralValue__Group_0__0__Impl9809 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LiteralValue__Group_0__1__Impl_in_rule__LiteralValue__Group_0__19839 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LiteralValue__Group_0_1__0_in_rule__LiteralValue__Group_0__1__Impl9866 = new BitSet(new long[]{0x0080000000000002L});
-    public static final BitSet FOLLOW_rule__LiteralValue__Group_0_1__0__Impl_in_rule__LiteralValue__Group_0_1__09901 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_rule__LiteralValue__Group_0_1__1_in_rule__LiteralValue__Group_0_1__09904 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_55_in_rule__LiteralValue__Group_0_1__0__Impl9932 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LiteralValue__Group_0_1__1__Impl_in_rule__LiteralValue__Group_0_1__19963 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LiteralValue__ValueAssignment_0_1_1_in_rule__LiteralValue__Group_0_1__1__Impl9990 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__QtLiteralValue__Group_0__0__Impl_in_rule__QtLiteralValue__Group_0__09779 = new BitSet(new long[]{0x0080000000000000L});
+    public static final BitSet FOLLOW_rule__QtLiteralValue__Group_0__1_in_rule__QtLiteralValue__Group_0__09782 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__QtLiteralValue__ValueAssignment_0_0_in_rule__QtLiteralValue__Group_0__0__Impl9809 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__QtLiteralValue__Group_0__1__Impl_in_rule__QtLiteralValue__Group_0__19839 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__QtLiteralValue__Group_0_1__0_in_rule__QtLiteralValue__Group_0__1__Impl9866 = new BitSet(new long[]{0x0080000000000002L});
+    public static final BitSet FOLLOW_rule__QtLiteralValue__Group_0_1__0__Impl_in_rule__QtLiteralValue__Group_0_1__09901 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rule__QtLiteralValue__Group_0_1__1_in_rule__QtLiteralValue__Group_0_1__09904 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_55_in_rule__QtLiteralValue__Group_0_1__0__Impl9932 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__QtLiteralValue__Group_0_1__1__Impl_in_rule__QtLiteralValue__Group_0_1__19963 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__QtLiteralValue__ValueAssignment_0_1_1_in_rule__QtLiteralValue__Group_0_1__1__Impl9990 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__QtBuitinType__Group__0__Impl_in_rule__QtBuitinType__Group__010024 = new BitSet(new long[]{0x0000000000000040L});
     public static final BitSet FOLLOW_rule__QtBuitinType__Group__1_in_rule__QtBuitinType__Group__010027 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_56_in_rule__QtBuitinType__Group__0__Impl10055 = new BitSet(new long[]{0x0000000000000002L});
@@ -55306,9 +55306,9 @@ public class InternalQIdlParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_RULE_ID_in_rule__QtFlags__NameAssignment_132126 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ID_in_rule__QtFlags__EnumerationAssignment_332161 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ID_in_rule__QtEnumValue__NameAssignment_032196 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLiteralValue_in_rule__QtEnumValue__ValueAssignment_232227 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__LiteralValue__ValueAssignment_0_032262 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__LiteralValue__ValueAssignment_0_1_132301 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQtLiteralValue_in_rule__QtEnumValue__ValueAssignment_232227 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__QtLiteralValue__ValueAssignment_0_032262 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__QtLiteralValue__ValueAssignment_0_1_132301 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ID_in_rule__QtBuitinType__NameAssignment_132336 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleJvmArgumentTypeReference_in_rule__QtBuitinType__ValueAssignment_332367 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleVisibility_in_rule__QtFunction__VisibilityAssignment_032398 = new BitSet(new long[]{0x0000000000000002L});
@@ -55323,7 +55323,7 @@ public class InternalQIdlParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_ruleType_in_rule__QtValue__ValueTypeAssignment_132703 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ID_in_rule__QtValue__TypeAssignment_232738 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ID_in_rule__QtValue__NameAssignment_332773 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLiteralValue_in_rule__QtValue__DefaultAssignment_532804 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQtLiteralValue_in_rule__QtValue__DefaultAssignment_532804 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_85_in_rule__QtReturnValue__ConstAssignment_032840 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleType_in_rule__QtReturnValue__ValueTypeAssignment_132879 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ID_in_rule__QtReturnValue__TypeAssignment_232914 = new BitSet(new long[]{0x0000000000000002L});

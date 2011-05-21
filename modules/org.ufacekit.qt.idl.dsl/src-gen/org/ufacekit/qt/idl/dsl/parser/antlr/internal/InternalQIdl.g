@@ -792,9 +792,9 @@ ruleQtEnumValue returns [EObject current=null]
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getQtEnumValueAccess().getValueLiteralValueParserRuleCall_2_0()); 
+	        newCompositeNode(grammarAccess.getQtEnumValueAccess().getValueQtLiteralValueParserRuleCall_2_0()); 
 	    }
-		lv_value_2_0=ruleLiteralValue		{
+		lv_value_2_0=ruleQtLiteralValue		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getQtEnumValueRule());
 	        }
@@ -802,7 +802,7 @@ ruleQtEnumValue returns [EObject current=null]
        			$current, 
        			"value",
         		lv_value_2_0, 
-        		"LiteralValue");
+        		"QtLiteralValue");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -814,17 +814,17 @@ ruleQtEnumValue returns [EObject current=null]
 
 
 
-// Entry rule entryRuleLiteralValue
-entryRuleLiteralValue returns [EObject current=null] 
+// Entry rule entryRuleQtLiteralValue
+entryRuleQtLiteralValue returns [EObject current=null] 
 	:
-	{ newCompositeNode(grammarAccess.getLiteralValueRule()); }
-	 iv_ruleLiteralValue=ruleLiteralValue 
-	 { $current=$iv_ruleLiteralValue.current; } 
+	{ newCompositeNode(grammarAccess.getQtLiteralValueRule()); }
+	 iv_ruleQtLiteralValue=ruleQtLiteralValue 
+	 { $current=$iv_ruleQtLiteralValue.current; } 
 	 EOF 
 ;
 
-// Rule LiteralValue
-ruleLiteralValue returns [EObject current=null] 
+// Rule QtLiteralValue
+ruleQtLiteralValue returns [EObject current=null] 
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
@@ -832,41 +832,41 @@ ruleLiteralValue returns [EObject current=null]
 (
 		{
 			if ($current==null) {
-	            $current = createModelElement(grammarAccess.getLiteralValueRule());
+	            $current = createModelElement(grammarAccess.getQtLiteralValueRule());
 	        }
         }
 	otherlv_0=RULE_ID
 	{
-		newLeafNode(otherlv_0, grammarAccess.getLiteralValueAccess().getValueQtEnumValueCrossReference_0_0_0()); 
+		newLeafNode(otherlv_0, grammarAccess.getQtLiteralValueAccess().getValueQtEnumValueCrossReference_0_0_0()); 
 	}
 
 )
 )(	otherlv_1='|' 
     {
-    	newLeafNode(otherlv_1, grammarAccess.getLiteralValueAccess().getVerticalLineKeyword_0_1_0());
+    	newLeafNode(otherlv_1, grammarAccess.getQtLiteralValueAccess().getVerticalLineKeyword_0_1_0());
     }
 (
 (
 		{
 			if ($current==null) {
-	            $current = createModelElement(grammarAccess.getLiteralValueRule());
+	            $current = createModelElement(grammarAccess.getQtLiteralValueRule());
 	        }
         }
 	otherlv_2=RULE_ID
 	{
-		newLeafNode(otherlv_2, grammarAccess.getLiteralValueAccess().getValueQtEnumValueCrossReference_0_1_1_0()); 
+		newLeafNode(otherlv_2, grammarAccess.getQtLiteralValueAccess().getValueQtEnumValueCrossReference_0_1_1_0()); 
 	}
 
 )
 ))*)
     |this_INT_3=RULE_INT
     { 
-    newLeafNode(this_INT_3, grammarAccess.getLiteralValueAccess().getINTTerminalRuleCall_1()); 
+    newLeafNode(this_INT_3, grammarAccess.getQtLiteralValueAccess().getINTTerminalRuleCall_1()); 
     }
 
     |this_STRING_4=RULE_STRING
     { 
-    newLeafNode(this_STRING_4, grammarAccess.getLiteralValueAccess().getSTRINGTerminalRuleCall_2()); 
+    newLeafNode(this_STRING_4, grammarAccess.getQtLiteralValueAccess().getSTRINGTerminalRuleCall_2()); 
     }
 )
 ;
@@ -1211,9 +1211,9 @@ ruleQtValue returns [EObject current=null]
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getQtValueAccess().getDefaultLiteralValueParserRuleCall_5_0()); 
+	        newCompositeNode(grammarAccess.getQtValueAccess().getDefaultQtLiteralValueParserRuleCall_5_0()); 
 	    }
-		lv_default_5_0=ruleLiteralValue		{
+		lv_default_5_0=ruleQtLiteralValue		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getQtValueRule());
 	        }
@@ -1221,7 +1221,7 @@ ruleQtValue returns [EObject current=null]
        			$current, 
        			"default",
         		lv_default_5_0, 
-        		"LiteralValue");
+        		"QtLiteralValue");
 	        afterParserOrEnumRuleCall();
 	    }
 

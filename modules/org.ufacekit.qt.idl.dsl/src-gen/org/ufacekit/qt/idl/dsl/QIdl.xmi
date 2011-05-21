@@ -200,9 +200,9 @@
         </elements>
       </alternatives>
     </rules>
-    <rules xsi:type="xtext:ParserRule" name="LiteralValue">
+    <rules xsi:type="xtext:ParserRule" name="QtLiteralValue">
       <type metamodel="/0/@metamodelDeclarations.0">
-        <classifier xsi:type="ecore:EClass" href="http://www.ufacekit.org/qt/idl/dsl/QIdl#//LiteralValue"/>
+        <classifier xsi:type="ecore:EClass" href="http://www.ufacekit.org/qt/idl/dsl/QIdl#//QtLiteralValue"/>
       </type>
       <alternatives xsi:type="xtext:Alternatives">
         <elements xsi:type="xtext:Group">

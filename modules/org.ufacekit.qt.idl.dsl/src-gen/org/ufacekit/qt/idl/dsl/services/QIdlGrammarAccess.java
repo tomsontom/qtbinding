@@ -452,13 +452,13 @@ public class QIdlGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cNameIDTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
 		private final Keyword cEqualsSignKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cValueAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cValueLiteralValueParserRuleCall_2_0 = (RuleCall)cValueAssignment_2.eContents().get(0);
+		private final RuleCall cValueQtLiteralValueParserRuleCall_2_0 = (RuleCall)cValueAssignment_2.eContents().get(0);
 		
 		//QtEnumValue:
-		//	name=ID "=" value=LiteralValue;
+		//	name=ID "=" value=QtLiteralValue;
 		public ParserRule getRule() { return rule; }
 
-		//name=ID "=" value=LiteralValue
+		//name=ID "=" value=QtLiteralValue
 		public Group getGroup() { return cGroup; }
 
 		//name=ID
@@ -470,15 +470,15 @@ public class QIdlGrammarAccess extends AbstractGrammarElementFinder {
 		//"="
 		public Keyword getEqualsSignKeyword_1() { return cEqualsSignKeyword_1; }
 
-		//value=LiteralValue
+		//value=QtLiteralValue
 		public Assignment getValueAssignment_2() { return cValueAssignment_2; }
 
-		//LiteralValue
-		public RuleCall getValueLiteralValueParserRuleCall_2_0() { return cValueLiteralValueParserRuleCall_2_0; }
+		//QtLiteralValue
+		public RuleCall getValueQtLiteralValueParserRuleCall_2_0() { return cValueQtLiteralValueParserRuleCall_2_0; }
 	}
 
-	public class LiteralValueElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "LiteralValue");
+	public class QtLiteralValueElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "QtLiteralValue");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
 		private final Assignment cValueAssignment_0_0 = (Assignment)cGroup_0.eContents().get(0);
@@ -492,7 +492,7 @@ public class QIdlGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cINTTerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		private final RuleCall cSTRINGTerminalRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		
-		//LiteralValue:
+		//QtLiteralValue:
 		//	value+=[QtEnumValue] ("|" value+=[QtEnumValue])* | INT | STRING;
 		public ParserRule getRule() { return rule; }
 
@@ -693,13 +693,13 @@ public class QIdlGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cNameIDTerminalRuleCall_3_0 = (RuleCall)cNameAssignment_3.eContents().get(0);
 		private final Keyword cEqualsSignKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		private final Assignment cDefaultAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cDefaultLiteralValueParserRuleCall_5_0 = (RuleCall)cDefaultAssignment_5.eContents().get(0);
+		private final RuleCall cDefaultQtLiteralValueParserRuleCall_5_0 = (RuleCall)cDefaultAssignment_5.eContents().get(0);
 		
 		//QtValue:
-		//	const="const"? valueType=Type? type=[QtType] name=ID "=" default=LiteralValue;
+		//	const="const"? valueType=Type? type=[QtType] name=ID "=" default=QtLiteralValue;
 		public ParserRule getRule() { return rule; }
 
-		//const="const"? valueType=Type? type=[QtType] name=ID "=" default=LiteralValue
+		//const="const"? valueType=Type? type=[QtType] name=ID "=" default=QtLiteralValue
 		public Group getGroup() { return cGroup; }
 
 		//const="const"?
@@ -732,11 +732,11 @@ public class QIdlGrammarAccess extends AbstractGrammarElementFinder {
 		//"="
 		public Keyword getEqualsSignKeyword_4() { return cEqualsSignKeyword_4; }
 
-		//default=LiteralValue
+		//default=QtLiteralValue
 		public Assignment getDefaultAssignment_5() { return cDefaultAssignment_5; }
 
-		//LiteralValue
-		public RuleCall getDefaultLiteralValueParserRuleCall_5_0() { return cDefaultLiteralValueParserRuleCall_5_0; }
+		//QtLiteralValue
+		public RuleCall getDefaultQtLiteralValueParserRuleCall_5_0() { return cDefaultQtLiteralValueParserRuleCall_5_0; }
 	}
 
 	public class QtReturnValueElements extends AbstractParserRuleElementFinder {
@@ -1057,7 +1057,7 @@ public class QIdlGrammarAccess extends AbstractGrammarElementFinder {
 	private QtEnumElements pQtEnum;
 	private QtFlagsElements pQtFlags;
 	private QtEnumValueElements pQtEnumValue;
-	private LiteralValueElements pLiteralValue;
+	private QtLiteralValueElements pQtLiteralValue;
 	private QtBuitinTypeElements pQtBuitinType;
 	private QtFunctionElements pQtFunction;
 	private QtValueElements pQtValue;
@@ -1187,7 +1187,7 @@ public class QIdlGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//QtEnumValue:
-	//	name=ID "=" value=LiteralValue;
+	//	name=ID "=" value=QtLiteralValue;
 	public QtEnumValueElements getQtEnumValueAccess() {
 		return (pQtEnumValue != null) ? pQtEnumValue : (pQtEnumValue = new QtEnumValueElements());
 	}
@@ -1196,14 +1196,14 @@ public class QIdlGrammarAccess extends AbstractGrammarElementFinder {
 		return getQtEnumValueAccess().getRule();
 	}
 
-	//LiteralValue:
+	//QtLiteralValue:
 	//	value+=[QtEnumValue] ("|" value+=[QtEnumValue])* | INT | STRING;
-	public LiteralValueElements getLiteralValueAccess() {
-		return (pLiteralValue != null) ? pLiteralValue : (pLiteralValue = new LiteralValueElements());
+	public QtLiteralValueElements getQtLiteralValueAccess() {
+		return (pQtLiteralValue != null) ? pQtLiteralValue : (pQtLiteralValue = new QtLiteralValueElements());
 	}
 	
-	public ParserRule getLiteralValueRule() {
-		return getLiteralValueAccess().getRule();
+	public ParserRule getQtLiteralValueRule() {
+		return getQtLiteralValueAccess().getRule();
 	}
 
 	//QtBuitinType:
@@ -1228,7 +1228,7 @@ public class QIdlGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//QtValue:
-	//	const="const"? valueType=Type? type=[QtType] name=ID "=" default=LiteralValue;
+	//	const="const"? valueType=Type? type=[QtType] name=ID "=" default=QtLiteralValue;
 	public QtValueElements getQtValueAccess() {
 		return (pQtValue != null) ? pQtValue : (pQtValue = new QtValueElements());
 	}

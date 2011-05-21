@@ -2167,7 +2167,7 @@ public class InternalQIdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleQtEnumValue"
-    // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:766:1: ruleQtEnumValue returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '=' ( (lv_value_2_0= ruleLiteralValue ) ) ) ;
+    // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:766:1: ruleQtEnumValue returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '=' ( (lv_value_2_0= ruleQtLiteralValue ) ) ) ;
     public final EObject ruleQtEnumValue() throws RecognitionException {
         EObject current = null;
 
@@ -2179,11 +2179,11 @@ public class InternalQIdlParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:769:28: ( ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '=' ( (lv_value_2_0= ruleLiteralValue ) ) ) )
-            // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:770:1: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '=' ( (lv_value_2_0= ruleLiteralValue ) ) )
+            // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:769:28: ( ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '=' ( (lv_value_2_0= ruleQtLiteralValue ) ) ) )
+            // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:770:1: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '=' ( (lv_value_2_0= ruleQtLiteralValue ) ) )
             {
-            // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:770:1: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '=' ( (lv_value_2_0= ruleLiteralValue ) ) )
-            // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:770:2: ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '=' ( (lv_value_2_0= ruleLiteralValue ) )
+            // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:770:1: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '=' ( (lv_value_2_0= ruleQtLiteralValue ) ) )
+            // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:770:2: ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '=' ( (lv_value_2_0= ruleQtLiteralValue ) )
             {
             // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:770:2: ( (lv_name_0_0= RULE_ID ) )
             // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:771:1: (lv_name_0_0= RULE_ID )
@@ -2221,19 +2221,19 @@ public class InternalQIdlParser extends AbstractInternalAntlrParser {
                   	newLeafNode(otherlv_1, grammarAccess.getQtEnumValueAccess().getEqualsSignKeyword_1());
                   
             }
-            // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:792:1: ( (lv_value_2_0= ruleLiteralValue ) )
-            // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:793:1: (lv_value_2_0= ruleLiteralValue )
+            // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:792:1: ( (lv_value_2_0= ruleQtLiteralValue ) )
+            // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:793:1: (lv_value_2_0= ruleQtLiteralValue )
             {
-            // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:793:1: (lv_value_2_0= ruleLiteralValue )
-            // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:794:3: lv_value_2_0= ruleLiteralValue
+            // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:793:1: (lv_value_2_0= ruleQtLiteralValue )
+            // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:794:3: lv_value_2_0= ruleQtLiteralValue
             {
             if ( state.backtracking==0 ) {
                
-              	        newCompositeNode(grammarAccess.getQtEnumValueAccess().getValueLiteralValueParserRuleCall_2_0()); 
+              	        newCompositeNode(grammarAccess.getQtEnumValueAccess().getValueQtLiteralValueParserRuleCall_2_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleLiteralValue_in_ruleQtEnumValue1565);
-            lv_value_2_0=ruleLiteralValue();
+            pushFollow(FOLLOW_ruleQtLiteralValue_in_ruleQtEnumValue1565);
+            lv_value_2_0=ruleQtLiteralValue();
 
             state._fsp--;
             if (state.failed) return current;
@@ -2246,7 +2246,7 @@ public class InternalQIdlParser extends AbstractInternalAntlrParser {
                      			current, 
                      			"value",
                       		lv_value_2_0, 
-                      		"LiteralValue");
+                      		"QtLiteralValue");
               	        afterParserOrEnumRuleCall();
               	    
             }
@@ -2278,30 +2278,30 @@ public class InternalQIdlParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleQtEnumValue"
 
 
-    // $ANTLR start "entryRuleLiteralValue"
-    // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:818:1: entryRuleLiteralValue returns [EObject current=null] : iv_ruleLiteralValue= ruleLiteralValue EOF ;
-    public final EObject entryRuleLiteralValue() throws RecognitionException {
+    // $ANTLR start "entryRuleQtLiteralValue"
+    // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:818:1: entryRuleQtLiteralValue returns [EObject current=null] : iv_ruleQtLiteralValue= ruleQtLiteralValue EOF ;
+    public final EObject entryRuleQtLiteralValue() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleLiteralValue = null;
+        EObject iv_ruleQtLiteralValue = null;
 
 
         try {
-            // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:819:2: (iv_ruleLiteralValue= ruleLiteralValue EOF )
-            // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:820:2: iv_ruleLiteralValue= ruleLiteralValue EOF
+            // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:819:2: (iv_ruleQtLiteralValue= ruleQtLiteralValue EOF )
+            // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:820:2: iv_ruleQtLiteralValue= ruleQtLiteralValue EOF
             {
             if ( state.backtracking==0 ) {
-               newCompositeNode(grammarAccess.getLiteralValueRule()); 
+               newCompositeNode(grammarAccess.getQtLiteralValueRule()); 
             }
-            pushFollow(FOLLOW_ruleLiteralValue_in_entryRuleLiteralValue1601);
-            iv_ruleLiteralValue=ruleLiteralValue();
+            pushFollow(FOLLOW_ruleQtLiteralValue_in_entryRuleQtLiteralValue1601);
+            iv_ruleQtLiteralValue=ruleQtLiteralValue();
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
-               current =iv_ruleLiteralValue; 
+               current =iv_ruleQtLiteralValue; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleLiteralValue1611); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleQtLiteralValue1611); if (state.failed) return current;
 
             }
 
@@ -2315,12 +2315,12 @@ public class InternalQIdlParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleLiteralValue"
+    // $ANTLR end "entryRuleQtLiteralValue"
 
 
-    // $ANTLR start "ruleLiteralValue"
-    // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:827:1: ruleLiteralValue returns [EObject current=null] : ( ( ( (otherlv_0= RULE_ID ) ) (otherlv_1= '|' ( (otherlv_2= RULE_ID ) ) )* ) | this_INT_3= RULE_INT | this_STRING_4= RULE_STRING ) ;
-    public final EObject ruleLiteralValue() throws RecognitionException {
+    // $ANTLR start "ruleQtLiteralValue"
+    // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:827:1: ruleQtLiteralValue returns [EObject current=null] : ( ( ( (otherlv_0= RULE_ID ) ) (otherlv_1= '|' ( (otherlv_2= RULE_ID ) ) )* ) | this_INT_3= RULE_INT | this_STRING_4= RULE_STRING ) ;
+    public final EObject ruleQtLiteralValue() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
@@ -2377,14 +2377,14 @@ public class InternalQIdlParser extends AbstractInternalAntlrParser {
                     if ( state.backtracking==0 ) {
 
                       			if (current==null) {
-                      	            current = createModelElement(grammarAccess.getLiteralValueRule());
+                      	            current = createModelElement(grammarAccess.getQtLiteralValueRule());
                       	        }
                               
                     }
-                    otherlv_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleLiteralValue1657); if (state.failed) return current;
+                    otherlv_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleQtLiteralValue1657); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		newLeafNode(otherlv_0, grammarAccess.getLiteralValueAccess().getValueQtEnumValueCrossReference_0_0_0()); 
+                      		newLeafNode(otherlv_0, grammarAccess.getQtLiteralValueAccess().getValueQtEnumValueCrossReference_0_0_0()); 
                       	
                     }
 
@@ -2408,10 +2408,10 @@ public class InternalQIdlParser extends AbstractInternalAntlrParser {
                     	case 1 :
                     	    // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:844:4: otherlv_1= '|' ( (otherlv_2= RULE_ID ) )
                     	    {
-                    	    otherlv_1=(Token)match(input,26,FOLLOW_26_in_ruleLiteralValue1670); if (state.failed) return current;
+                    	    otherlv_1=(Token)match(input,26,FOLLOW_26_in_ruleQtLiteralValue1670); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
-                    	          	newLeafNode(otherlv_1, grammarAccess.getLiteralValueAccess().getVerticalLineKeyword_0_1_0());
+                    	          	newLeafNode(otherlv_1, grammarAccess.getQtLiteralValueAccess().getVerticalLineKeyword_0_1_0());
                     	          
                     	    }
                     	    // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:848:1: ( (otherlv_2= RULE_ID ) )
@@ -2423,14 +2423,14 @@ public class InternalQIdlParser extends AbstractInternalAntlrParser {
                     	    if ( state.backtracking==0 ) {
 
                     	      			if (current==null) {
-                    	      	            current = createModelElement(grammarAccess.getLiteralValueRule());
+                    	      	            current = createModelElement(grammarAccess.getQtLiteralValueRule());
                     	      	        }
                     	              
                     	    }
-                    	    otherlv_2=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleLiteralValue1690); if (state.failed) return current;
+                    	    otherlv_2=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleQtLiteralValue1690); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
-                    	      		newLeafNode(otherlv_2, grammarAccess.getLiteralValueAccess().getValueQtEnumValueCrossReference_0_1_1_0()); 
+                    	      		newLeafNode(otherlv_2, grammarAccess.getQtLiteralValueAccess().getValueQtEnumValueCrossReference_0_1_1_0()); 
                     	      	
                     	    }
 
@@ -2457,10 +2457,10 @@ public class InternalQIdlParser extends AbstractInternalAntlrParser {
                 case 2 :
                     // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:862:6: this_INT_3= RULE_INT
                     {
-                    this_INT_3=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleLiteralValue1710); if (state.failed) return current;
+                    this_INT_3=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleQtLiteralValue1710); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
                        
-                          newLeafNode(this_INT_3, grammarAccess.getLiteralValueAccess().getINTTerminalRuleCall_1()); 
+                          newLeafNode(this_INT_3, grammarAccess.getQtLiteralValueAccess().getINTTerminalRuleCall_1()); 
                           
                     }
 
@@ -2469,10 +2469,10 @@ public class InternalQIdlParser extends AbstractInternalAntlrParser {
                 case 3 :
                     // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:867:6: this_STRING_4= RULE_STRING
                     {
-                    this_STRING_4=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleLiteralValue1726); if (state.failed) return current;
+                    this_STRING_4=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleQtLiteralValue1726); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
                        
-                          newLeafNode(this_STRING_4, grammarAccess.getLiteralValueAccess().getSTRINGTerminalRuleCall_2()); 
+                          newLeafNode(this_STRING_4, grammarAccess.getQtLiteralValueAccess().getSTRINGTerminalRuleCall_2()); 
                           
                     }
 
@@ -2497,7 +2497,7 @@ public class InternalQIdlParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleLiteralValue"
+    // $ANTLR end "ruleQtLiteralValue"
 
 
     // $ANTLR start "entryRuleQtBuitinType"
@@ -3162,7 +3162,7 @@ public class InternalQIdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleQtValue"
-    // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:1139:1: ruleQtValue returns [EObject current=null] : ( ( (lv_const_0_0= 'const' ) )? ( (lv_valueType_1_0= ruleType ) )? ( (otherlv_2= RULE_ID ) ) ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '=' ( (lv_default_5_0= ruleLiteralValue ) ) ) ;
+    // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:1139:1: ruleQtValue returns [EObject current=null] : ( ( (lv_const_0_0= 'const' ) )? ( (lv_valueType_1_0= ruleType ) )? ( (otherlv_2= RULE_ID ) ) ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '=' ( (lv_default_5_0= ruleQtLiteralValue ) ) ) ;
     public final EObject ruleQtValue() throws RecognitionException {
         EObject current = null;
 
@@ -3178,11 +3178,11 @@ public class InternalQIdlParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:1142:28: ( ( ( (lv_const_0_0= 'const' ) )? ( (lv_valueType_1_0= ruleType ) )? ( (otherlv_2= RULE_ID ) ) ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '=' ( (lv_default_5_0= ruleLiteralValue ) ) ) )
-            // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:1143:1: ( ( (lv_const_0_0= 'const' ) )? ( (lv_valueType_1_0= ruleType ) )? ( (otherlv_2= RULE_ID ) ) ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '=' ( (lv_default_5_0= ruleLiteralValue ) ) )
+            // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:1142:28: ( ( ( (lv_const_0_0= 'const' ) )? ( (lv_valueType_1_0= ruleType ) )? ( (otherlv_2= RULE_ID ) ) ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '=' ( (lv_default_5_0= ruleQtLiteralValue ) ) ) )
+            // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:1143:1: ( ( (lv_const_0_0= 'const' ) )? ( (lv_valueType_1_0= ruleType ) )? ( (otherlv_2= RULE_ID ) ) ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '=' ( (lv_default_5_0= ruleQtLiteralValue ) ) )
             {
-            // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:1143:1: ( ( (lv_const_0_0= 'const' ) )? ( (lv_valueType_1_0= ruleType ) )? ( (otherlv_2= RULE_ID ) ) ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '=' ( (lv_default_5_0= ruleLiteralValue ) ) )
-            // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:1143:2: ( (lv_const_0_0= 'const' ) )? ( (lv_valueType_1_0= ruleType ) )? ( (otherlv_2= RULE_ID ) ) ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '=' ( (lv_default_5_0= ruleLiteralValue ) )
+            // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:1143:1: ( ( (lv_const_0_0= 'const' ) )? ( (lv_valueType_1_0= ruleType ) )? ( (otherlv_2= RULE_ID ) ) ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '=' ( (lv_default_5_0= ruleQtLiteralValue ) ) )
+            // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:1143:2: ( (lv_const_0_0= 'const' ) )? ( (lv_valueType_1_0= ruleType ) )? ( (otherlv_2= RULE_ID ) ) ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '=' ( (lv_default_5_0= ruleQtLiteralValue ) )
             {
             // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:1143:2: ( (lv_const_0_0= 'const' ) )?
             int alt24=2;
@@ -3328,19 +3328,19 @@ public class InternalQIdlParser extends AbstractInternalAntlrParser {
                   	newLeafNode(otherlv_4, grammarAccess.getQtValueAccess().getEqualsSignKeyword_4());
                   
             }
-            // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:1211:1: ( (lv_default_5_0= ruleLiteralValue ) )
-            // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:1212:1: (lv_default_5_0= ruleLiteralValue )
+            // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:1211:1: ( (lv_default_5_0= ruleQtLiteralValue ) )
+            // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:1212:1: (lv_default_5_0= ruleQtLiteralValue )
             {
-            // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:1212:1: (lv_default_5_0= ruleLiteralValue )
-            // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:1213:3: lv_default_5_0= ruleLiteralValue
+            // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:1212:1: (lv_default_5_0= ruleQtLiteralValue )
+            // ../org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/parser/antlr/internal/InternalQIdl.g:1213:3: lv_default_5_0= ruleQtLiteralValue
             {
             if ( state.backtracking==0 ) {
                
-              	        newCompositeNode(grammarAccess.getQtValueAccess().getDefaultLiteralValueParserRuleCall_5_0()); 
+              	        newCompositeNode(grammarAccess.getQtValueAccess().getDefaultQtLiteralValueParserRuleCall_5_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleLiteralValue_in_ruleQtValue2393);
-            lv_default_5_0=ruleLiteralValue();
+            pushFollow(FOLLOW_ruleQtLiteralValue_in_ruleQtValue2393);
+            lv_default_5_0=ruleQtLiteralValue();
 
             state._fsp--;
             if (state.failed) return current;
@@ -3353,7 +3353,7 @@ public class InternalQIdlParser extends AbstractInternalAntlrParser {
                      			current, 
                      			"default",
                       		lv_default_5_0, 
-                      		"LiteralValue");
+                      		"QtLiteralValue");
               	        afterParserOrEnumRuleCall();
               	    
             }
@@ -19569,14 +19569,14 @@ public class InternalQIdlParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_EOF_in_entryRuleQtEnumValue1485 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleQtEnumValue1527 = new BitSet(new long[]{0x0000000002000000L});
     public static final BitSet FOLLOW_25_in_ruleQtEnumValue1544 = new BitSet(new long[]{0x0000000000000070L});
-    public static final BitSet FOLLOW_ruleLiteralValue_in_ruleQtEnumValue1565 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLiteralValue_in_entryRuleLiteralValue1601 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleLiteralValue1611 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleLiteralValue1657 = new BitSet(new long[]{0x0000000004000002L});
-    public static final BitSet FOLLOW_26_in_ruleLiteralValue1670 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleLiteralValue1690 = new BitSet(new long[]{0x0000000004000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleLiteralValue1710 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleLiteralValue1726 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQtLiteralValue_in_ruleQtEnumValue1565 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQtLiteralValue_in_entryRuleQtLiteralValue1601 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleQtLiteralValue1611 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleQtLiteralValue1657 = new BitSet(new long[]{0x0000000004000002L});
+    public static final BitSet FOLLOW_26_in_ruleQtLiteralValue1670 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleQtLiteralValue1690 = new BitSet(new long[]{0x0000000004000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleQtLiteralValue1710 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleQtLiteralValue1726 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleQtBuitinType_in_entryRuleQtBuitinType1761 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleQtBuitinType1771 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_27_in_ruleQtBuitinType1808 = new BitSet(new long[]{0x0000000000000010L});
@@ -19606,7 +19606,7 @@ public class InternalQIdlParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_RULE_ID_in_ruleQtValue2338 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleQtValue2355 = new BitSet(new long[]{0x0000000002000000L});
     public static final BitSet FOLLOW_25_in_ruleQtValue2372 = new BitSet(new long[]{0x0000000000000070L});
-    public static final BitSet FOLLOW_ruleLiteralValue_in_ruleQtValue2393 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQtLiteralValue_in_ruleQtValue2393 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleQtReturnValue_in_entryRuleQtReturnValue2429 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleQtReturnValue2439 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_28_in_ruleQtReturnValue2482 = new BitSet(new long[]{0x0000000000000010L,0x0000000003000000L});

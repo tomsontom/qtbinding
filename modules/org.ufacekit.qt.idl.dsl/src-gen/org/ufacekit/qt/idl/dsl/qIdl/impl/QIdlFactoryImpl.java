@@ -78,7 +78,7 @@ public class QIdlFactoryImpl extends EFactoryImpl implements QIdlFactory
       case QIdlPackage.QT_ENUM: return createQtEnum();
       case QIdlPackage.QT_FLAGS: return createQtFlags();
       case QIdlPackage.QT_ENUM_VALUE: return createQtEnumValue();
-      case QIdlPackage.LITERAL_VALUE: return createLiteralValue();
+      case QIdlPackage.QT_LITERAL_VALUE: return createQtLiteralValue();
       case QIdlPackage.QT_BUITIN_TYPE: return createQtBuitinType();
       case QIdlPackage.QT_FUNCTION: return createQtFunction();
       case QIdlPackage.QT_VALUE: return createQtValue();
@@ -251,10 +251,10 @@ public class QIdlFactoryImpl extends EFactoryImpl implements QIdlFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public LiteralValue createLiteralValue()
+  public QtLiteralValue createQtLiteralValue()
   {
-    LiteralValueImpl literalValue = new LiteralValueImpl();
-    return literalValue;
+    QtLiteralValueImpl qtLiteralValue = new QtLiteralValueImpl();
+    return qtLiteralValue;
   }
 
   /**

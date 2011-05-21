@@ -147,10 +147,10 @@ public class QIdlSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case QIdlPackage.LITERAL_VALUE:
+      case QIdlPackage.QT_LITERAL_VALUE:
       {
-        LiteralValue literalValue = (LiteralValue)theEObject;
-        T result = caseLiteralValue(literalValue);
+        QtLiteralValue qtLiteralValue = (QtLiteralValue)theEObject;
+        T result = caseQtLiteralValue(qtLiteralValue);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -365,17 +365,17 @@ public class QIdlSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Literal Value</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Qt Literal Value</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Literal Value</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Qt Literal Value</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseLiteralValue(LiteralValue object)
+  public T caseQtLiteralValue(QtLiteralValue object)
   {
     return null;
   }

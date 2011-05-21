@@ -41,7 +41,7 @@ protected class ThisRootNode extends RootToken {
 			case 7: return new QtEnum_Group(this, this, 7, inst);
 			case 8: return new QtFlags_Group(this, this, 8, inst);
 			case 9: return new QtEnumValue_Group(this, this, 9, inst);
-			case 10: return new LiteralValue_Alternatives(this, this, 10, inst);
+			case 10: return new QtLiteralValue_Alternatives(this, this, 10, inst);
 			case 11: return new QtBuitinType_Group(this, this, 11, inst);
 			case 12: return new QtFunction_Group(this, this, 12, inst);
 			case 13: return new QtValue_Group(this, this, 13, inst);
@@ -2176,11 +2176,11 @@ protected class QtFlags_EnumerationAssignment_3 extends AssignmentToken  {
 /************ begin Rule QtEnumValue ****************
  *
  * QtEnumValue:
- * 	name=ID "=" value=LiteralValue;
+ * 	name=ID "=" value=QtLiteralValue;
  *
  **/
 
-// name=ID "=" value=LiteralValue
+// name=ID "=" value=QtLiteralValue
 protected class QtEnumValue_Group extends GroupToken {
 	
 	public QtEnumValue_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -2264,7 +2264,7 @@ protected class QtEnumValue_EqualsSignKeyword_1 extends KeywordToken  {
 
 }
 
-// value=LiteralValue
+// value=QtLiteralValue
 protected class QtEnumValue_ValueAssignment_2 extends AssignmentToken  {
 	
 	public QtEnumValue_ValueAssignment_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -2279,7 +2279,7 @@ protected class QtEnumValue_ValueAssignment_2 extends AssignmentToken  {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new LiteralValue_Alternatives(this, this, 0, inst);
+			case 0: return new QtLiteralValue_Alternatives(this, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -2290,9 +2290,9 @@ protected class QtEnumValue_ValueAssignment_2 extends AssignmentToken  {
 		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("value");
 		if(value instanceof EObject) { // org::eclipse::xtext::impl::RuleCallImpl
 			IEObjectConsumer param = createEObjectConsumer((EObject)value);
-			if(param.isInstanceOf(grammarAccess.getLiteralValueRule().getType().getClassifier())) {
+			if(param.isInstanceOf(grammarAccess.getQtLiteralValueRule().getType().getClassifier())) {
 				type = AssignmentType.PARSER_RULE_CALL;
-				element = grammarAccess.getQtEnumValueAccess().getValueLiteralValueParserRuleCall_2_0(); 
+				element = grammarAccess.getQtEnumValueAccess().getValueQtLiteralValueParserRuleCall_2_0(); 
 				consumed = obj;
 				return param;
 			}
@@ -2314,37 +2314,37 @@ protected class QtEnumValue_ValueAssignment_2 extends AssignmentToken  {
 /************ end Rule QtEnumValue ****************/
 
 
-/************ begin Rule LiteralValue ****************
+/************ begin Rule QtLiteralValue ****************
  *
- * LiteralValue:
+ * QtLiteralValue:
  * 	value+=[QtEnumValue] ("|" value+=[QtEnumValue])* | INT | STRING;
  *
  **/
 
 // value+=[QtEnumValue] ("|" value+=[QtEnumValue])* | INT | STRING
-protected class LiteralValue_Alternatives extends AlternativesToken {
+protected class QtLiteralValue_Alternatives extends AlternativesToken {
 
-	public LiteralValue_Alternatives(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public QtLiteralValue_Alternatives(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Alternatives getGrammarElement() {
-		return grammarAccess.getLiteralValueAccess().getAlternatives();
+		return grammarAccess.getQtLiteralValueAccess().getAlternatives();
 	}
 
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new LiteralValue_Group_0(lastRuleCallOrigin, this, 0, inst);
-			case 1: return new LiteralValue_INTTerminalRuleCall_1(lastRuleCallOrigin, this, 1, inst);
+			case 0: return new QtLiteralValue_Group_0(lastRuleCallOrigin, this, 0, inst);
+			case 1: return new QtLiteralValue_INTTerminalRuleCall_1(lastRuleCallOrigin, this, 1, inst);
 			default: return null;
 		}	
 	}
 
     @Override
 	public IEObjectConsumer tryConsume() {
-		if(getEObject().eClass() != grammarAccess.getLiteralValueRule().getType().getClassifier())
+		if(getEObject().eClass() != grammarAccess.getQtLiteralValueRule().getType().getClassifier())
 			return null;
 		return eObjectConsumer;
 	}
@@ -2352,22 +2352,22 @@ protected class LiteralValue_Alternatives extends AlternativesToken {
 }
 
 // value+=[QtEnumValue] ("|" value+=[QtEnumValue])*
-protected class LiteralValue_Group_0 extends GroupToken {
+protected class QtLiteralValue_Group_0 extends GroupToken {
 	
-	public LiteralValue_Group_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public QtLiteralValue_Group_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Group getGrammarElement() {
-		return grammarAccess.getLiteralValueAccess().getGroup_0();
+		return grammarAccess.getQtLiteralValueAccess().getGroup_0();
 	}
 
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new LiteralValue_Group_0_1(lastRuleCallOrigin, this, 0, inst);
-			case 1: return new LiteralValue_ValueAssignment_0_0(lastRuleCallOrigin, this, 1, inst);
+			case 0: return new QtLiteralValue_Group_0_1(lastRuleCallOrigin, this, 0, inst);
+			case 1: return new QtLiteralValue_ValueAssignment_0_0(lastRuleCallOrigin, this, 1, inst);
 			default: return null;
 		}	
 	}
@@ -2375,15 +2375,15 @@ protected class LiteralValue_Group_0 extends GroupToken {
 }
 
 // value+=[QtEnumValue]
-protected class LiteralValue_ValueAssignment_0_0 extends AssignmentToken  {
+protected class QtLiteralValue_ValueAssignment_0_0 extends AssignmentToken  {
 	
-	public LiteralValue_ValueAssignment_0_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public QtLiteralValue_ValueAssignment_0_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Assignment getGrammarElement() {
-		return grammarAccess.getLiteralValueAccess().getValueAssignment_0_0();
+		return grammarAccess.getQtLiteralValueAccess().getValueAssignment_0_0();
 	}
 
     @Override
@@ -2399,9 +2399,9 @@ protected class LiteralValue_ValueAssignment_0_0 extends AssignmentToken  {
 		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("value");
 		if(value instanceof EObject) { // org::eclipse::xtext::impl::CrossReferenceImpl
 			IEObjectConsumer param = createEObjectConsumer((EObject)value);
-			if(param.isInstanceOf(grammarAccess.getLiteralValueAccess().getValueQtEnumValueCrossReference_0_0_0().getType().getClassifier())) {
+			if(param.isInstanceOf(grammarAccess.getQtLiteralValueAccess().getValueQtEnumValueCrossReference_0_0_0().getType().getClassifier())) {
 				type = AssignmentType.CROSS_REFERENCE;
-				element = grammarAccess.getLiteralValueAccess().getValueQtEnumValueCrossReference_0_0_0(); 
+				element = grammarAccess.getQtLiteralValueAccess().getValueQtEnumValueCrossReference_0_0_0(); 
 				return obj;
 			}
 		}
@@ -2411,21 +2411,21 @@ protected class LiteralValue_ValueAssignment_0_0 extends AssignmentToken  {
 }
 
 // ("|" value+=[QtEnumValue])*
-protected class LiteralValue_Group_0_1 extends GroupToken {
+protected class QtLiteralValue_Group_0_1 extends GroupToken {
 	
-	public LiteralValue_Group_0_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public QtLiteralValue_Group_0_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Group getGrammarElement() {
-		return grammarAccess.getLiteralValueAccess().getGroup_0_1();
+		return grammarAccess.getQtLiteralValueAccess().getGroup_0_1();
 	}
 
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new LiteralValue_ValueAssignment_0_1_1(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new QtLiteralValue_ValueAssignment_0_1_1(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -2433,22 +2433,22 @@ protected class LiteralValue_Group_0_1 extends GroupToken {
 }
 
 // "|"
-protected class LiteralValue_VerticalLineKeyword_0_1_0 extends KeywordToken  {
+protected class QtLiteralValue_VerticalLineKeyword_0_1_0 extends KeywordToken  {
 	
-	public LiteralValue_VerticalLineKeyword_0_1_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public QtLiteralValue_VerticalLineKeyword_0_1_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Keyword getGrammarElement() {
-		return grammarAccess.getLiteralValueAccess().getVerticalLineKeyword_0_1_0();
+		return grammarAccess.getQtLiteralValueAccess().getVerticalLineKeyword_0_1_0();
 	}
 
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new LiteralValue_Group_0_1(lastRuleCallOrigin, this, 0, inst);
-			case 1: return new LiteralValue_ValueAssignment_0_0(lastRuleCallOrigin, this, 1, inst);
+			case 0: return new QtLiteralValue_Group_0_1(lastRuleCallOrigin, this, 0, inst);
+			case 1: return new QtLiteralValue_ValueAssignment_0_0(lastRuleCallOrigin, this, 1, inst);
 			default: return null;
 		}	
 	}
@@ -2456,21 +2456,21 @@ protected class LiteralValue_VerticalLineKeyword_0_1_0 extends KeywordToken  {
 }
 
 // value+=[QtEnumValue]
-protected class LiteralValue_ValueAssignment_0_1_1 extends AssignmentToken  {
+protected class QtLiteralValue_ValueAssignment_0_1_1 extends AssignmentToken  {
 	
-	public LiteralValue_ValueAssignment_0_1_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public QtLiteralValue_ValueAssignment_0_1_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Assignment getGrammarElement() {
-		return grammarAccess.getLiteralValueAccess().getValueAssignment_0_1_1();
+		return grammarAccess.getQtLiteralValueAccess().getValueAssignment_0_1_1();
 	}
 
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new LiteralValue_VerticalLineKeyword_0_1_0(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new QtLiteralValue_VerticalLineKeyword_0_1_0(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -2481,9 +2481,9 @@ protected class LiteralValue_ValueAssignment_0_1_1 extends AssignmentToken  {
 		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("value");
 		if(value instanceof EObject) { // org::eclipse::xtext::impl::CrossReferenceImpl
 			IEObjectConsumer param = createEObjectConsumer((EObject)value);
-			if(param.isInstanceOf(grammarAccess.getLiteralValueAccess().getValueQtEnumValueCrossReference_0_1_1_0().getType().getClassifier())) {
+			if(param.isInstanceOf(grammarAccess.getQtLiteralValueAccess().getValueQtEnumValueCrossReference_0_1_1_0().getType().getClassifier())) {
 				type = AssignmentType.CROSS_REFERENCE;
-				element = grammarAccess.getLiteralValueAccess().getValueQtEnumValueCrossReference_0_1_1_0(); 
+				element = grammarAccess.getQtLiteralValueAccess().getValueQtEnumValueCrossReference_0_1_1_0(); 
 				return obj;
 			}
 		}
@@ -2495,15 +2495,15 @@ protected class LiteralValue_ValueAssignment_0_1_1 extends AssignmentToken  {
 
 
 // INT
-protected class LiteralValue_INTTerminalRuleCall_1 extends UnassignedTextToken {
+protected class QtLiteralValue_INTTerminalRuleCall_1 extends UnassignedTextToken {
 
-	public LiteralValue_INTTerminalRuleCall_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public QtLiteralValue_INTTerminalRuleCall_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public RuleCall getGrammarElement() {
-		return grammarAccess.getLiteralValueAccess().getINTTerminalRuleCall_1();
+		return grammarAccess.getQtLiteralValueAccess().getINTTerminalRuleCall_1();
 	}
 
     @Override
@@ -2516,7 +2516,7 @@ protected class LiteralValue_INTTerminalRuleCall_1 extends UnassignedTextToken {
 }
 
 
-/************ end Rule LiteralValue ****************/
+/************ end Rule QtLiteralValue ****************/
 
 
 /************ begin Rule QtBuitinType ****************
@@ -3218,11 +3218,11 @@ protected class QtFunction_SemicolonKeyword_11 extends KeywordToken  {
 /************ begin Rule QtValue ****************
  *
  * QtValue:
- * 	const="const"? valueType=Type? type=[QtType] name=ID "=" default=LiteralValue;
+ * 	const="const"? valueType=Type? type=[QtType] name=ID "=" default=QtLiteralValue;
  *
  **/
 
-// const="const"? valueType=Type? type=[QtType] name=ID "=" default=LiteralValue
+// const="const"? valueType=Type? type=[QtType] name=ID "=" default=QtLiteralValue
 protected class QtValue_Group extends GroupToken {
 	
 	public QtValue_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -3412,7 +3412,7 @@ protected class QtValue_EqualsSignKeyword_4 extends KeywordToken  {
 
 }
 
-// default=LiteralValue
+// default=QtLiteralValue
 protected class QtValue_DefaultAssignment_5 extends AssignmentToken  {
 	
 	public QtValue_DefaultAssignment_5(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -3427,7 +3427,7 @@ protected class QtValue_DefaultAssignment_5 extends AssignmentToken  {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new LiteralValue_Alternatives(this, this, 0, inst);
+			case 0: return new QtLiteralValue_Alternatives(this, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -3438,9 +3438,9 @@ protected class QtValue_DefaultAssignment_5 extends AssignmentToken  {
 		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("default");
 		if(value instanceof EObject) { // org::eclipse::xtext::impl::RuleCallImpl
 			IEObjectConsumer param = createEObjectConsumer((EObject)value);
-			if(param.isInstanceOf(grammarAccess.getLiteralValueRule().getType().getClassifier())) {
+			if(param.isInstanceOf(grammarAccess.getQtLiteralValueRule().getType().getClassifier())) {
 				type = AssignmentType.PARSER_RULE_CALL;
-				element = grammarAccess.getQtValueAccess().getDefaultLiteralValueParserRuleCall_5_0(); 
+				element = grammarAccess.getQtValueAccess().getDefaultQtLiteralValueParserRuleCall_5_0(); 
 				consumed = obj;
 				return param;
 			}

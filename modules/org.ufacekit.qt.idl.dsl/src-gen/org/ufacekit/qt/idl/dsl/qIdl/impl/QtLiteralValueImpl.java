@@ -15,24 +15,24 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
-import org.ufacekit.qt.idl.dsl.qIdl.LiteralValue;
 import org.ufacekit.qt.idl.dsl.qIdl.QIdlPackage;
 import org.ufacekit.qt.idl.dsl.qIdl.QtEnumValue;
+import org.ufacekit.qt.idl.dsl.qIdl.QtLiteralValue;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Literal Value</b></em>'.
+ * An implementation of the model object '<em><b>Qt Literal Value</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.impl.LiteralValueImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtLiteralValueImpl#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class LiteralValueImpl extends MinimalEObjectImpl.Container implements LiteralValue
+public class QtLiteralValueImpl extends MinimalEObjectImpl.Container implements QtLiteralValue
 {
   /**
    * The cached value of the '{@link #getValue() <em>Value</em>}' reference list.
@@ -49,7 +49,7 @@ public class LiteralValueImpl extends MinimalEObjectImpl.Container implements Li
    * <!-- end-user-doc -->
    * @generated
    */
-  protected LiteralValueImpl()
+  protected QtLiteralValueImpl()
   {
     super();
   }
@@ -62,7 +62,7 @@ public class LiteralValueImpl extends MinimalEObjectImpl.Container implements Li
   @Override
   protected EClass eStaticClass()
   {
-    return QIdlPackage.Literals.LITERAL_VALUE;
+    return QIdlPackage.Literals.QT_LITERAL_VALUE;
   }
 
   /**
@@ -74,7 +74,7 @@ public class LiteralValueImpl extends MinimalEObjectImpl.Container implements Li
   {
     if (value == null)
     {
-      value = new EObjectResolvingEList<QtEnumValue>(QtEnumValue.class, this, QIdlPackage.LITERAL_VALUE__VALUE);
+      value = new EObjectResolvingEList<QtEnumValue>(QtEnumValue.class, this, QIdlPackage.QT_LITERAL_VALUE__VALUE);
     }
     return value;
   }
@@ -89,7 +89,7 @@ public class LiteralValueImpl extends MinimalEObjectImpl.Container implements Li
   {
     switch (featureID)
     {
-      case QIdlPackage.LITERAL_VALUE__VALUE:
+      case QIdlPackage.QT_LITERAL_VALUE__VALUE:
         return getValue();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -106,7 +106,7 @@ public class LiteralValueImpl extends MinimalEObjectImpl.Container implements Li
   {
     switch (featureID)
     {
-      case QIdlPackage.LITERAL_VALUE__VALUE:
+      case QIdlPackage.QT_LITERAL_VALUE__VALUE:
         getValue().clear();
         getValue().addAll((Collection<? extends QtEnumValue>)newValue);
         return;
@@ -124,7 +124,7 @@ public class LiteralValueImpl extends MinimalEObjectImpl.Container implements Li
   {
     switch (featureID)
     {
-      case QIdlPackage.LITERAL_VALUE__VALUE:
+      case QIdlPackage.QT_LITERAL_VALUE__VALUE:
         getValue().clear();
         return;
     }
@@ -141,10 +141,10 @@ public class LiteralValueImpl extends MinimalEObjectImpl.Container implements Li
   {
     switch (featureID)
     {
-      case QIdlPackage.LITERAL_VALUE__VALUE:
+      case QIdlPackage.QT_LITERAL_VALUE__VALUE:
         return value != null && !value.isEmpty();
     }
     return super.eIsSet(featureID);
   }
 
-} //LiteralValueImpl
+} //QtLiteralValueImpl

@@ -145,12 +145,12 @@ public interface QtValue extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Default</em>' containment reference.
-   * @see #setDefault(LiteralValue)
+   * @see #setDefault(QtLiteralValue)
    * @see org.ufacekit.qt.idl.dsl.qIdl.QIdlPackage#getQtValue_Default()
    * @model containment="true"
    * @generated
    */
-  LiteralValue getDefault();
+  QtLiteralValue getDefault();
 
   /**
    * Sets the value of the '{@link org.ufacekit.qt.idl.dsl.qIdl.QtValue#getDefault <em>Default</em>}' containment reference.
@@ -160,6 +160,6 @@ public interface QtValue extends EObject
    * @see #getDefault()
    * @generated
    */
-  void setDefault(LiteralValue value);
+  void setDefault(QtLiteralValue value);
 
 } // QtValue

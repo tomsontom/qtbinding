@@ -116,13 +116,13 @@ public interface QIdlFactory extends EFactory
   QtEnumValue createQtEnumValue();
 
   /**
-   * Returns a new object of class '<em>Literal Value</em>'.
+   * Returns a new object of class '<em>Qt Literal Value</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Literal Value</em>'.
+   * @return a new object of class '<em>Qt Literal Value</em>'.
    * @generated
    */
-  LiteralValue createLiteralValue();
+  QtLiteralValue createQtLiteralValue();
 
   /**
    * Returns a new object of class '<em>Qt Buitin Type</em>'.

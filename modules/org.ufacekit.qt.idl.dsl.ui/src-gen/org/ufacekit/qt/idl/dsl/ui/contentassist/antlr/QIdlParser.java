@@ -40,7 +40,7 @@ public class QIdlParser extends AbstractContentAssistParser {
 					put(grammarAccess.getQtIdlTypAccess().getElementAlternatives_0(), "rule__QtIdlTyp__ElementAlternatives_0");
 					put(grammarAccess.getQtTypeAccess().getAlternatives(), "rule__QtType__Alternatives");
 					put(grammarAccess.getQtOperationsAccess().getAlternatives(), "rule__QtOperations__Alternatives");
-					put(grammarAccess.getLiteralValueAccess().getAlternatives(), "rule__LiteralValue__Alternatives");
+					put(grammarAccess.getQtLiteralValueAccess().getAlternatives(), "rule__QtLiteralValue__Alternatives");
 					put(grammarAccess.getXAssignmentAccess().getAlternatives(), "rule__XAssignment__Alternatives");
 					put(grammarAccess.getOpEqualityAccess().getAlternatives(), "rule__OpEquality__Alternatives");
 					put(grammarAccess.getXRelationalExpressionAccess().getAlternatives_1(), "rule__XRelationalExpression__Alternatives_1");
@@ -82,8 +82,8 @@ public class QIdlParser extends AbstractContentAssistParser {
 					put(grammarAccess.getQtEnumAccess().getGroup(), "rule__QtEnum__Group__0");
 					put(grammarAccess.getQtFlagsAccess().getGroup(), "rule__QtFlags__Group__0");
 					put(grammarAccess.getQtEnumValueAccess().getGroup(), "rule__QtEnumValue__Group__0");
-					put(grammarAccess.getLiteralValueAccess().getGroup_0(), "rule__LiteralValue__Group_0__0");
-					put(grammarAccess.getLiteralValueAccess().getGroup_0_1(), "rule__LiteralValue__Group_0_1__0");
+					put(grammarAccess.getQtLiteralValueAccess().getGroup_0(), "rule__QtLiteralValue__Group_0__0");
+					put(grammarAccess.getQtLiteralValueAccess().getGroup_0_1(), "rule__QtLiteralValue__Group_0_1__0");
 					put(grammarAccess.getQtBuitinTypeAccess().getGroup(), "rule__QtBuitinType__Group__0");
 					put(grammarAccess.getQtFunctionAccess().getGroup(), "rule__QtFunction__Group__0");
 					put(grammarAccess.getQtFunctionAccess().getGroup_7(), "rule__QtFunction__Group_7__0");
@@ -237,8 +237,8 @@ public class QIdlParser extends AbstractContentAssistParser {
 					put(grammarAccess.getQtFlagsAccess().getEnumerationAssignment_3(), "rule__QtFlags__EnumerationAssignment_3");
 					put(grammarAccess.getQtEnumValueAccess().getNameAssignment_0(), "rule__QtEnumValue__NameAssignment_0");
 					put(grammarAccess.getQtEnumValueAccess().getValueAssignment_2(), "rule__QtEnumValue__ValueAssignment_2");
-					put(grammarAccess.getLiteralValueAccess().getValueAssignment_0_0(), "rule__LiteralValue__ValueAssignment_0_0");
-					put(grammarAccess.getLiteralValueAccess().getValueAssignment_0_1_1(), "rule__LiteralValue__ValueAssignment_0_1_1");
+					put(grammarAccess.getQtLiteralValueAccess().getValueAssignment_0_0(), "rule__QtLiteralValue__ValueAssignment_0_0");
+					put(grammarAccess.getQtLiteralValueAccess().getValueAssignment_0_1_1(), "rule__QtLiteralValue__ValueAssignment_0_1_1");
 					put(grammarAccess.getQtBuitinTypeAccess().getNameAssignment_1(), "rule__QtBuitinType__NameAssignment_1");
 					put(grammarAccess.getQtBuitinTypeAccess().getValueAssignment_3(), "rule__QtBuitinType__ValueAssignment_3");
 					put(grammarAccess.getQtFunctionAccess().getVisibilityAssignment_0(), "rule__QtFunction__VisibilityAssignment_0");
