@@ -57,7 +57,7 @@ public:
 private:
     void generateNode(const Node *node, CodeMarker *marker);
     void generateNodeContent(const Node *node, CodeMarker *marker, QTextStream & stream, int indent = 0);
-    int enumValueToInt(const EnumItem &item, const EnumNode *enume);
+    const QString enumValueDslValue(const EnumItem &item, const EnumNode *enume);
 
     QTextStream out;
 };

@@ -42,32 +42,39 @@ void QtDslGenerator::generateTree(const Tree *tree, CodeMarker *marker)
     //out.flush();
 }
 
-int QtDslGenerator::enumValueToInt(const EnumItem &item, const EnumNode *enume) {
+const QString QtDslGenerator::enumValueDslValue(const EnumItem &item, const EnumNode *enume) {
     if( item.value().startsWith("0x") ) {
-        return QString(item.value()).remove(0,2).toInt(0,16);
+        return QString::number(QString(item.value()).remove(0,2).toLong(0,16));
     } else if( item.value().size() > 0 && item.value().at(0).isDigit() ) {
-        return item.value().toInt();
+        return item.value();
     } else if( item.value().size() > 0 ) {
         QStringList l = item.value().split("|");
-        int value = 0;
+        QString rv;
 
         foreach ( const QString &n, l ) {
-            if( n.contains("::") ) {
-                //TODO Fixme
-                return -1;
-            } else {
-                foreach (const EnumItem &subitem, enume->items()) {
-                    if( subitem.name() == n.trimmed() ) {
-                        value += enumValueToInt(subitem,enume);
-                    }
+            if(n.trimmed().startsWith('0x')) {
+                if( rv.size() > 0 ) {
+                    rv.append(" | ");
                 }
+                rv.append(QString::number(QString(n.trimmed()).remove(0,2).toLong(0,16)));
+            } else if( n.contains("::") ) {
+                //TODO Fixme
+            } else {
+                if( rv.size() > 0 ) {
+                    rv.append(" | ");
+                }
+                rv.append(n);
             }
         }
 
-        return value;
+        if( rv.size() > 0 ) {
+            return rv;
+        }
+
+        return NULL;
     }
 
-    return -1;
+    return NULL;
 }
 
 void QtDslGenerator::generateNodeContent(const Node *node, CodeMarker *marker, QTextStream & stream, int indent) {
@@ -92,8 +99,8 @@ void QtDslGenerator::generateNodeContent(const Node *node, CodeMarker *marker, Q
             stream << indentStr(indent) << "enumeration " << node->name() << " {" << "\n";
 
             foreach (const EnumItem &item, enume->items()) {
-                int value = enumValueToInt(item,enume);
-                stream << (value == -1 ? "//" : "") << indentStr(indent + 1) << item.name() << " = " << value << "\n";
+                QString value = enumValueDslValue(item,enume);
+                stream << (value == NULL ? "//" : "") << indentStr(indent + 1) << item.name() << " = " << value << "\n";
             }
 
             stream << indentStr(indent) << "}\n\n";
@@ -131,7 +138,7 @@ void QtDslGenerator::generateNodeContent(const Node *node, CodeMarker *marker, Q
                         }
                     }
 
-                    if( func->isStatic() ) {
+                    if( func->isStatic() || func->parent()->type() == Node::Namespace ) {
                         stream << "class ";
                     } else {
                         stream << "member ";

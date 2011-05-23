@@ -56,7 +56,7 @@ QtFlags:
 	'flags' name=ID ':' enumeration=[QtEnum];
 
 QtEnumValue:
-	name=ID '=' (enumMask=QtEnumValueMask | numericValue=INT);
+	name=ID '=' (enumMask=QtEnumValueMask | numericValue=INT );
 
 QtEnumValueMask:
 	(value+=[QtEnumValue] ('|' value+=[QtEnumValue])*);
