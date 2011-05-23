@@ -16,6 +16,6 @@ package org.ufacekit.qt.idl.dsl.qIdl;
  * @model
  * @generated
  */
-public interface QtSlot extends QtOperations
+public interface QtSlot extends QtOperation
 {
 } // QtSlot

@@ -23,7 +23,7 @@ import org.ufacekit.qt.idl.dsl.qIdl.QtClass;
 import org.ufacekit.qt.idl.dsl.qIdl.QtConstructor;
 import org.ufacekit.qt.idl.dsl.qIdl.QtEnum;
 import org.ufacekit.qt.idl.dsl.qIdl.QtFlags;
-import org.ufacekit.qt.idl.dsl.qIdl.QtOperations;
+import org.ufacekit.qt.idl.dsl.qIdl.QtOperation;
 import org.ufacekit.qt.idl.dsl.qIdl.QtProperty;
 
 /**
@@ -115,7 +115,7 @@ public class QtClassImpl extends QtTypeImpl implements QtClass
    * @generated
    * @ordered
    */
-  protected EList<QtOperations> operations;
+  protected EList<QtOperation> operations;
 
   /**
    * <!-- begin-user-doc -->
@@ -227,11 +227,11 @@ public class QtClassImpl extends QtTypeImpl implements QtClass
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<QtOperations> getOperations()
+  public EList<QtOperation> getOperations()
   {
     if (operations == null)
     {
-      operations = new EObjectContainmentEList<QtOperations>(QtOperations.class, this, QIdlPackage.QT_CLASS__OPERATIONS);
+      operations = new EObjectContainmentEList<QtOperation>(QtOperation.class, this, QIdlPackage.QT_CLASS__OPERATIONS);
     }
     return operations;
   }
@@ -327,7 +327,7 @@ public class QtClassImpl extends QtTypeImpl implements QtClass
         return;
       case QIdlPackage.QT_CLASS__OPERATIONS:
         getOperations().clear();
-        getOperations().addAll((Collection<? extends QtOperations>)newValue);
+        getOperations().addAll((Collection<? extends QtOperation>)newValue);
         return;
     }
     super.eSet(featureID, newValue);

@@ -16,6 +16,6 @@ package org.ufacekit.qt.idl.dsl.qIdl;
  * @model
  * @generated
  */
-public interface QtSignal extends QtOperations
+public interface QtSignal extends QtOperation
 {
 } // QtSignal

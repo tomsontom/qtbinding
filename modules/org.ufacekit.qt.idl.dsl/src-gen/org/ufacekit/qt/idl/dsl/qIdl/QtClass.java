@@ -129,7 +129,7 @@ public interface QtClass extends QtType
 
   /**
    * Returns the value of the '<em><b>Operations</b></em>' containment reference list.
-   * The list contents are of type {@link org.ufacekit.qt.idl.dsl.qIdl.QtOperations}.
+   * The list contents are of type {@link org.ufacekit.qt.idl.dsl.qIdl.QtOperation}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Operations</em>' containment reference list isn't clear,
@@ -141,6 +141,6 @@ public interface QtClass extends QtType
    * @model containment="true"
    * @generated
    */
-  EList<QtOperations> getOperations();
+  EList<QtOperation> getOperations();
 
 } // QtClass

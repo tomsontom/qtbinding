@@ -53,13 +53,13 @@ public interface QIdlFactory extends EFactory
   QtType createQtType();
 
   /**
-   * Returns a new object of class '<em>Qt Operations</em>'.
+   * Returns a new object of class '<em>Qt Operation</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Qt Operations</em>'.
+   * @return a new object of class '<em>Qt Operation</em>'.
    * @generated
    */
-  QtOperations createQtOperations();
+  QtOperation createQtOperation();
 
   /**
    * Returns a new object of class '<em>Qt Class</em>'.
@@ -116,13 +116,13 @@ public interface QIdlFactory extends EFactory
   QtEnumValue createQtEnumValue();
 
   /**
-   * Returns a new object of class '<em>Qt Literal Value</em>'.
+   * Returns a new object of class '<em>Qt Enum Value Mask</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Qt Literal Value</em>'.
+   * @return a new object of class '<em>Qt Enum Value Mask</em>'.
    * @generated
    */
-  QtLiteralValue createQtLiteralValue();
+  QtEnumValueMask createQtEnumValueMask();
 
   /**
    * Returns a new object of class '<em>Qt Buitin Type</em>'.
@@ -150,6 +150,15 @@ public interface QIdlFactory extends EFactory
    * @generated
    */
   QtValue createQtValue();
+
+  /**
+   * Returns a new object of class '<em>Qt Parameter</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Qt Parameter</em>'.
+   * @generated
+   */
+  QtParameter createQtParameter();
 
   /**
    * Returns a new object of class '<em>Qt Return Value</em>'.

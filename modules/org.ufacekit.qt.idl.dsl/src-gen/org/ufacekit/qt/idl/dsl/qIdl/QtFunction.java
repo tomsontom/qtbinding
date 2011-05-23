@@ -25,7 +25,7 @@ package org.ufacekit.qt.idl.dsl.qIdl;
  * @model
  * @generated
  */
-public interface QtFunction extends QtOperations
+public interface QtFunction extends QtOperation
 {
   /**
    * Returns the value of the '<em><b>Visibility</b></em>' attribute.

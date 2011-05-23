@@ -93,9 +93,9 @@ public class QIdlAdapterFactory extends AdapterFactoryImpl
         return createQtTypeAdapter();
       }
       @Override
-      public Adapter caseQtOperations(QtOperations object)
+      public Adapter caseQtOperation(QtOperation object)
       {
-        return createQtOperationsAdapter();
+        return createQtOperationAdapter();
       }
       @Override
       public Adapter caseQtClass(QtClass object)
@@ -128,9 +128,9 @@ public class QIdlAdapterFactory extends AdapterFactoryImpl
         return createQtEnumValueAdapter();
       }
       @Override
-      public Adapter caseQtLiteralValue(QtLiteralValue object)
+      public Adapter caseQtEnumValueMask(QtEnumValueMask object)
       {
-        return createQtLiteralValueAdapter();
+        return createQtEnumValueMaskAdapter();
       }
       @Override
       public Adapter caseQtBuitinType(QtBuitinType object)
@@ -146,6 +146,11 @@ public class QIdlAdapterFactory extends AdapterFactoryImpl
       public Adapter caseQtValue(QtValue object)
       {
         return createQtValueAdapter();
+      }
+      @Override
+      public Adapter caseQtParameter(QtParameter object)
+      {
+        return createQtParameterAdapter();
       }
       @Override
       public Adapter caseQtReturnValue(QtReturnValue object)
@@ -230,16 +235,16 @@ public class QIdlAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.ufacekit.qt.idl.dsl.qIdl.QtOperations <em>Qt Operations</em>}'.
+   * Creates a new adapter for an object of class '{@link org.ufacekit.qt.idl.dsl.qIdl.QtOperation <em>Qt Operation</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.ufacekit.qt.idl.dsl.qIdl.QtOperations
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QtOperation
    * @generated
    */
-  public Adapter createQtOperationsAdapter()
+  public Adapter createQtOperationAdapter()
   {
     return null;
   }
@@ -335,16 +340,16 @@ public class QIdlAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.ufacekit.qt.idl.dsl.qIdl.QtLiteralValue <em>Qt Literal Value</em>}'.
+   * Creates a new adapter for an object of class '{@link org.ufacekit.qt.idl.dsl.qIdl.QtEnumValueMask <em>Qt Enum Value Mask</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.ufacekit.qt.idl.dsl.qIdl.QtLiteralValue
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QtEnumValueMask
    * @generated
    */
-  public Adapter createQtLiteralValueAdapter()
+  public Adapter createQtEnumValueMaskAdapter()
   {
     return null;
   }
@@ -390,6 +395,21 @@ public class QIdlAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createQtValueAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.ufacekit.qt.idl.dsl.qIdl.QtParameter <em>Qt Parameter</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QtParameter
+   * @generated
+   */
+  public Adapter createQtParameterAdapter()
   {
     return null;
   }

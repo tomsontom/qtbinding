@@ -33,7 +33,7 @@ import org.ufacekit.qt.idl.dsl.qIdl.Visibility;
  *
  * @generated
  */
-public class QtFunctionImpl extends QtOperationsImpl implements QtFunction
+public class QtFunctionImpl extends QtOperationImpl implements QtFunction
 {
   /**
    * The default value of the '{@link #getVisibility() <em>Visibility</em>}' attribute.

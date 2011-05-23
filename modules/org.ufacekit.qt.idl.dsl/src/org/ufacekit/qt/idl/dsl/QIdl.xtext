@@ -20,13 +20,14 @@ QtNamespace:
 		enums+=QtEnum*
 		flags+=QtFlags*
 		classes+=QtClass*
+		operations+=QtOperation*
 	'}'
 ;
 
 QtType:
 	QtEnum | QtClass | QtBuitinType;
 
-QtOperations:
+QtOperation:
 	QtFunction | QtSignal | QtSlot;
 
 QtClass:
@@ -36,12 +37,12 @@ QtClass:
 		classes+=QtClass*
 		properties+=QtProperty*
 		constructors+=QtConstructor*
-		operations+=QtOperations*
+		operations+=QtOperation*
 	'}';
 
 
 QtConstructor:
-	'constructor' '(' (params+=QtValue (',' params+=QtValue)*)? ');';
+	'constructor' '(' (params+=QtParameter (',' params+=QtParameter)*)? ');';
 
 QtProperty:
 	'property' type=QtValue ';';
@@ -55,28 +56,31 @@ QtFlags:
 	'flags' name=ID ':' enumeration=[QtEnum];
 
 QtEnumValue:
-	name=ID '=' value=QtLiteralValue;
+	name=ID '=' (enumMask=QtEnumValueMask | numericValue=INT);
 
-QtLiteralValue:
-	(value+=[QtEnumValue] ('|' value+=[QtEnumValue])*) | INT | STRING;
+QtEnumValueMask:
+	(value+=[QtEnumValue] ('|' value+=[QtEnumValue])*);
 
 QtBuitinType:
 	'builtin' name=ID ':' value=JvmArgumentTypeReference;
 
 QtFunction:
-	visibility=Visibility const='const'? virtual=Virtuality? owner=Owner 'function' name=ID '(' (params+=QtValue (',' params+=QtValue)*)? ')' ':' returnValue=QtReturnValue ';';
+	visibility=Visibility const='const'? virtual=Virtuality? owner=Owner 'function' name=ID '(' (params+=QtParameter (',' params+=QtParameter)*)? ')' ':' returnValue=QtReturnValue ';';
 
 QtValue:
-	const='const'? valueType=Type? type=[QtType] name=ID '=' default=QtLiteralValue;
+	const='const'? valueType=Type? type=[QtType] name=ID;
+
+QtParameter:
+	value=QtValue ('=' (defaultInt=INT | defaultEnum=[QtEnumValue]) )?;
 
 QtReturnValue:
 	const='const'? valueType=Type? type=[QtType];
 
 QtSignal:
-	'signal' name=ID '(' (params+=QtValue (',' params+=QtValue)*)? ')' ':' returnValue=QtReturnValue ';'; 
+	'signal' name=ID '(' (params+=QtParameter (',' params+=QtParameter)*)? ')' ':' returnValue=QtReturnValue ';'; 
 
 QtSlot:
-	'slot' name=ID '(' (params+=QtValue (',' params+=QtValue)*)? ')' ':' returnValue=QtReturnValue ';';
+	'slot' name=ID '(' (params+=QtParameter (',' params+=QtParameter)*)? ')' ':' returnValue=QtReturnValue ';';
 
 enum Virtuality:
 	virtual | purevirtual;
@@ -91,3 +95,4 @@ enum Type:
 	pointer | reference;
 
 //terminal HEX returns ecore::EInt: '0x' ('0'..'9' | 'A' .. 'F')+;
+//terminal LONG returns ecore::ELong: ('0'..'9')+;

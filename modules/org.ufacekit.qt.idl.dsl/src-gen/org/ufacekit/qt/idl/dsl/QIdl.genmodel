@@ -34,14 +34,15 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtNamespace/enums"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtNamespace/flags"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtNamespace/classes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtNamespace/operations"/>
     </genClasses>
     <genClasses ecoreClass="platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtType">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtType/name"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtOperations">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtOperations/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtOperations/params"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtOperations/returnValue"/>
+    <genClasses ecoreClass="platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtOperation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtOperation/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtOperation/params"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtOperation/returnValue"/>
     </genClasses>
     <genClasses ecoreClass="platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtClass">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtClass/superTypes"/>
@@ -67,10 +68,11 @@
     </genClasses>
     <genClasses ecoreClass="platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtEnumValue">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtEnumValue/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtEnumValue/value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtEnumValue/enumMask"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtEnumValue/numericValue"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtLiteralValue">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtLiteralValue/value"/>
+    <genClasses ecoreClass="platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtEnumValueMask">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtEnumValueMask/value"/>
     </genClasses>
     <genClasses ecoreClass="platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtBuitinType">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtBuitinType/value"/>
@@ -86,7 +88,11 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtValue/valueType"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtValue/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtValue/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtValue/default"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtParameter">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtParameter/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtParameter/defaultInt"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtParameter/defaultEnum"/>
     </genClasses>
     <genClasses ecoreClass="platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtReturnValue">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtReturnValue/const"/>

@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.QtNamespace#getEnums <em>Enums</em>}</li>
  *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.QtNamespace#getFlags <em>Flags</em>}</li>
  *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.QtNamespace#getClasses <em>Classes</em>}</li>
+ *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.QtNamespace#getOperations <em>Operations</em>}</li>
  * </ul>
  * </p>
  *
@@ -120,5 +121,21 @@ public interface QtNamespace extends EObject
    * @generated
    */
   EList<QtClass> getClasses();
+
+  /**
+   * Returns the value of the '<em><b>Operations</b></em>' containment reference list.
+   * The list contents are of type {@link org.ufacekit.qt.idl.dsl.qIdl.QtOperation}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Operations</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Operations</em>' containment reference list.
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QIdlPackage#getQtNamespace_Operations()
+   * @model containment="true"
+   * @generated
+   */
+  EList<QtOperation> getOperations();
 
 } // QtNamespace

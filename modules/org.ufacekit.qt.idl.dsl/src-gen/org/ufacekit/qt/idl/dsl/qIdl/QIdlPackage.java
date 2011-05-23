@@ -144,13 +144,22 @@ public interface QIdlPackage extends EPackage
   int QT_NAMESPACE__CLASSES = 4;
 
   /**
+   * The feature id for the '<em><b>Operations</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QT_NAMESPACE__OPERATIONS = 5;
+
+  /**
    * The number of structural features of the '<em>Qt Namespace</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int QT_NAMESPACE_FEATURE_COUNT = 5;
+  int QT_NAMESPACE_FEATURE_COUNT = 6;
 
   /**
    * The meta object id for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtTypeImpl <em>Qt Type</em>}' class.
@@ -181,14 +190,14 @@ public interface QIdlPackage extends EPackage
   int QT_TYPE_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtOperationsImpl <em>Qt Operations</em>}' class.
+   * The meta object id for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtOperationImpl <em>Qt Operation</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QtOperationsImpl
-   * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QIdlPackageImpl#getQtOperations()
+   * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QtOperationImpl
+   * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QIdlPackageImpl#getQtOperation()
    * @generated
    */
-  int QT_OPERATIONS = 3;
+  int QT_OPERATION = 3;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -197,7 +206,7 @@ public interface QIdlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int QT_OPERATIONS__NAME = 0;
+  int QT_OPERATION__NAME = 0;
 
   /**
    * The feature id for the '<em><b>Params</b></em>' containment reference list.
@@ -206,7 +215,7 @@ public interface QIdlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int QT_OPERATIONS__PARAMS = 1;
+  int QT_OPERATION__PARAMS = 1;
 
   /**
    * The feature id for the '<em><b>Return Value</b></em>' containment reference.
@@ -215,16 +224,16 @@ public interface QIdlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int QT_OPERATIONS__RETURN_VALUE = 2;
+  int QT_OPERATION__RETURN_VALUE = 2;
 
   /**
-   * The number of structural features of the '<em>Qt Operations</em>' class.
+   * The number of structural features of the '<em>Qt Operation</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int QT_OPERATIONS_FEATURE_COUNT = 3;
+  int QT_OPERATION_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtClassImpl <em>Qt Class</em>}' class.
@@ -467,13 +476,22 @@ public interface QIdlPackage extends EPackage
   int QT_ENUM_VALUE__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Value</b></em>' containment reference.
+   * The feature id for the '<em><b>Enum Mask</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int QT_ENUM_VALUE__VALUE = 1;
+  int QT_ENUM_VALUE__ENUM_MASK = 1;
+
+  /**
+   * The feature id for the '<em><b>Numeric Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QT_ENUM_VALUE__NUMERIC_VALUE = 2;
 
   /**
    * The number of structural features of the '<em>Qt Enum Value</em>' class.
@@ -482,17 +500,17 @@ public interface QIdlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int QT_ENUM_VALUE_FEATURE_COUNT = 2;
+  int QT_ENUM_VALUE_FEATURE_COUNT = 3;
 
   /**
-   * The meta object id for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtLiteralValueImpl <em>Qt Literal Value</em>}' class.
+   * The meta object id for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtEnumValueMaskImpl <em>Qt Enum Value Mask</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QtLiteralValueImpl
-   * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QIdlPackageImpl#getQtLiteralValue()
+   * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QtEnumValueMaskImpl
+   * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QIdlPackageImpl#getQtEnumValueMask()
    * @generated
    */
-  int QT_LITERAL_VALUE = 10;
+  int QT_ENUM_VALUE_MASK = 10;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' reference list.
@@ -501,16 +519,16 @@ public interface QIdlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int QT_LITERAL_VALUE__VALUE = 0;
+  int QT_ENUM_VALUE_MASK__VALUE = 0;
 
   /**
-   * The number of structural features of the '<em>Qt Literal Value</em>' class.
+   * The number of structural features of the '<em>Qt Enum Value Mask</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int QT_LITERAL_VALUE_FEATURE_COUNT = 1;
+  int QT_ENUM_VALUE_MASK_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtBuitinTypeImpl <em>Qt Buitin Type</em>}' class.
@@ -566,7 +584,7 @@ public interface QIdlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int QT_FUNCTION__NAME = QT_OPERATIONS__NAME;
+  int QT_FUNCTION__NAME = QT_OPERATION__NAME;
 
   /**
    * The feature id for the '<em><b>Params</b></em>' containment reference list.
@@ -575,7 +593,7 @@ public interface QIdlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int QT_FUNCTION__PARAMS = QT_OPERATIONS__PARAMS;
+  int QT_FUNCTION__PARAMS = QT_OPERATION__PARAMS;
 
   /**
    * The feature id for the '<em><b>Return Value</b></em>' containment reference.
@@ -584,7 +602,7 @@ public interface QIdlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int QT_FUNCTION__RETURN_VALUE = QT_OPERATIONS__RETURN_VALUE;
+  int QT_FUNCTION__RETURN_VALUE = QT_OPERATION__RETURN_VALUE;
 
   /**
    * The feature id for the '<em><b>Visibility</b></em>' attribute.
@@ -593,7 +611,7 @@ public interface QIdlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int QT_FUNCTION__VISIBILITY = QT_OPERATIONS_FEATURE_COUNT + 0;
+  int QT_FUNCTION__VISIBILITY = QT_OPERATION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Const</b></em>' attribute.
@@ -602,7 +620,7 @@ public interface QIdlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int QT_FUNCTION__CONST = QT_OPERATIONS_FEATURE_COUNT + 1;
+  int QT_FUNCTION__CONST = QT_OPERATION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Virtual</b></em>' attribute.
@@ -611,7 +629,7 @@ public interface QIdlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int QT_FUNCTION__VIRTUAL = QT_OPERATIONS_FEATURE_COUNT + 2;
+  int QT_FUNCTION__VIRTUAL = QT_OPERATION_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Owner</b></em>' attribute.
@@ -620,7 +638,7 @@ public interface QIdlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int QT_FUNCTION__OWNER = QT_OPERATIONS_FEATURE_COUNT + 3;
+  int QT_FUNCTION__OWNER = QT_OPERATION_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Qt Function</em>' class.
@@ -629,7 +647,7 @@ public interface QIdlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int QT_FUNCTION_FEATURE_COUNT = QT_OPERATIONS_FEATURE_COUNT + 4;
+  int QT_FUNCTION_FEATURE_COUNT = QT_OPERATION_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtValueImpl <em>Qt Value</em>}' class.
@@ -678,22 +696,59 @@ public interface QIdlPackage extends EPackage
   int QT_VALUE__NAME = 3;
 
   /**
-   * The feature id for the '<em><b>Default</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int QT_VALUE__DEFAULT = 4;
-
-  /**
    * The number of structural features of the '<em>Qt Value</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int QT_VALUE_FEATURE_COUNT = 5;
+  int QT_VALUE_FEATURE_COUNT = 4;
+
+  /**
+   * The meta object id for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtParameterImpl <em>Qt Parameter</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QtParameterImpl
+   * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QIdlPackageImpl#getQtParameter()
+   * @generated
+   */
+  int QT_PARAMETER = 14;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QT_PARAMETER__VALUE = 0;
+
+  /**
+   * The feature id for the '<em><b>Default Int</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QT_PARAMETER__DEFAULT_INT = 1;
+
+  /**
+   * The feature id for the '<em><b>Default Enum</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QT_PARAMETER__DEFAULT_ENUM = 2;
+
+  /**
+   * The number of structural features of the '<em>Qt Parameter</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QT_PARAMETER_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtReturnValueImpl <em>Qt Return Value</em>}' class.
@@ -703,7 +758,7 @@ public interface QIdlPackage extends EPackage
    * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QIdlPackageImpl#getQtReturnValue()
    * @generated
    */
-  int QT_RETURN_VALUE = 14;
+  int QT_RETURN_VALUE = 15;
 
   /**
    * The feature id for the '<em><b>Const</b></em>' attribute.
@@ -749,7 +804,7 @@ public interface QIdlPackage extends EPackage
    * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QIdlPackageImpl#getQtSignal()
    * @generated
    */
-  int QT_SIGNAL = 15;
+  int QT_SIGNAL = 16;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -758,7 +813,7 @@ public interface QIdlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int QT_SIGNAL__NAME = QT_OPERATIONS__NAME;
+  int QT_SIGNAL__NAME = QT_OPERATION__NAME;
 
   /**
    * The feature id for the '<em><b>Params</b></em>' containment reference list.
@@ -767,7 +822,7 @@ public interface QIdlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int QT_SIGNAL__PARAMS = QT_OPERATIONS__PARAMS;
+  int QT_SIGNAL__PARAMS = QT_OPERATION__PARAMS;
 
   /**
    * The feature id for the '<em><b>Return Value</b></em>' containment reference.
@@ -776,7 +831,7 @@ public interface QIdlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int QT_SIGNAL__RETURN_VALUE = QT_OPERATIONS__RETURN_VALUE;
+  int QT_SIGNAL__RETURN_VALUE = QT_OPERATION__RETURN_VALUE;
 
   /**
    * The number of structural features of the '<em>Qt Signal</em>' class.
@@ -785,7 +840,7 @@ public interface QIdlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int QT_SIGNAL_FEATURE_COUNT = QT_OPERATIONS_FEATURE_COUNT + 0;
+  int QT_SIGNAL_FEATURE_COUNT = QT_OPERATION_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtSlotImpl <em>Qt Slot</em>}' class.
@@ -795,7 +850,7 @@ public interface QIdlPackage extends EPackage
    * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QIdlPackageImpl#getQtSlot()
    * @generated
    */
-  int QT_SLOT = 16;
+  int QT_SLOT = 17;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -804,7 +859,7 @@ public interface QIdlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int QT_SLOT__NAME = QT_OPERATIONS__NAME;
+  int QT_SLOT__NAME = QT_OPERATION__NAME;
 
   /**
    * The feature id for the '<em><b>Params</b></em>' containment reference list.
@@ -813,7 +868,7 @@ public interface QIdlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int QT_SLOT__PARAMS = QT_OPERATIONS__PARAMS;
+  int QT_SLOT__PARAMS = QT_OPERATION__PARAMS;
 
   /**
    * The feature id for the '<em><b>Return Value</b></em>' containment reference.
@@ -822,7 +877,7 @@ public interface QIdlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int QT_SLOT__RETURN_VALUE = QT_OPERATIONS__RETURN_VALUE;
+  int QT_SLOT__RETURN_VALUE = QT_OPERATION__RETURN_VALUE;
 
   /**
    * The number of structural features of the '<em>Qt Slot</em>' class.
@@ -831,7 +886,7 @@ public interface QIdlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int QT_SLOT_FEATURE_COUNT = QT_OPERATIONS_FEATURE_COUNT + 0;
+  int QT_SLOT_FEATURE_COUNT = QT_OPERATION_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link org.ufacekit.qt.idl.dsl.qIdl.Virtuality <em>Virtuality</em>}' enum.
@@ -841,7 +896,7 @@ public interface QIdlPackage extends EPackage
    * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QIdlPackageImpl#getVirtuality()
    * @generated
    */
-  int VIRTUALITY = 17;
+  int VIRTUALITY = 18;
 
   /**
    * The meta object id for the '{@link org.ufacekit.qt.idl.dsl.qIdl.Visibility <em>Visibility</em>}' enum.
@@ -851,7 +906,7 @@ public interface QIdlPackage extends EPackage
    * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QIdlPackageImpl#getVisibility()
    * @generated
    */
-  int VISIBILITY = 18;
+  int VISIBILITY = 19;
 
   /**
    * The meta object id for the '{@link org.ufacekit.qt.idl.dsl.qIdl.Owner <em>Owner</em>}' enum.
@@ -861,7 +916,7 @@ public interface QIdlPackage extends EPackage
    * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QIdlPackageImpl#getOwner()
    * @generated
    */
-  int OWNER = 19;
+  int OWNER = 20;
 
   /**
    * The meta object id for the '{@link org.ufacekit.qt.idl.dsl.qIdl.Type <em>Type</em>}' enum.
@@ -871,7 +926,7 @@ public interface QIdlPackage extends EPackage
    * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QIdlPackageImpl#getType()
    * @generated
    */
-  int TYPE = 20;
+  int TYPE = 21;
 
 
   /**
@@ -961,6 +1016,17 @@ public interface QIdlPackage extends EPackage
   EReference getQtNamespace_Classes();
 
   /**
+   * Returns the meta object for the containment reference list '{@link org.ufacekit.qt.idl.dsl.qIdl.QtNamespace#getOperations <em>Operations</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Operations</em>'.
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QtNamespace#getOperations()
+   * @see #getQtNamespace()
+   * @generated
+   */
+  EReference getQtNamespace_Operations();
+
+  /**
    * Returns the meta object for class '{@link org.ufacekit.qt.idl.dsl.qIdl.QtType <em>Qt Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -982,47 +1048,47 @@ public interface QIdlPackage extends EPackage
   EAttribute getQtType_Name();
 
   /**
-   * Returns the meta object for class '{@link org.ufacekit.qt.idl.dsl.qIdl.QtOperations <em>Qt Operations</em>}'.
+   * Returns the meta object for class '{@link org.ufacekit.qt.idl.dsl.qIdl.QtOperation <em>Qt Operation</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Qt Operations</em>'.
-   * @see org.ufacekit.qt.idl.dsl.qIdl.QtOperations
+   * @return the meta object for class '<em>Qt Operation</em>'.
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QtOperation
    * @generated
    */
-  EClass getQtOperations();
+  EClass getQtOperation();
 
   /**
-   * Returns the meta object for the attribute '{@link org.ufacekit.qt.idl.dsl.qIdl.QtOperations#getName <em>Name</em>}'.
+   * Returns the meta object for the attribute '{@link org.ufacekit.qt.idl.dsl.qIdl.QtOperation#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.ufacekit.qt.idl.dsl.qIdl.QtOperations#getName()
-   * @see #getQtOperations()
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QtOperation#getName()
+   * @see #getQtOperation()
    * @generated
    */
-  EAttribute getQtOperations_Name();
+  EAttribute getQtOperation_Name();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.ufacekit.qt.idl.dsl.qIdl.QtOperations#getParams <em>Params</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.ufacekit.qt.idl.dsl.qIdl.QtOperation#getParams <em>Params</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Params</em>'.
-   * @see org.ufacekit.qt.idl.dsl.qIdl.QtOperations#getParams()
-   * @see #getQtOperations()
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QtOperation#getParams()
+   * @see #getQtOperation()
    * @generated
    */
-  EReference getQtOperations_Params();
+  EReference getQtOperation_Params();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.ufacekit.qt.idl.dsl.qIdl.QtOperations#getReturnValue <em>Return Value</em>}'.
+   * Returns the meta object for the containment reference '{@link org.ufacekit.qt.idl.dsl.qIdl.QtOperation#getReturnValue <em>Return Value</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Return Value</em>'.
-   * @see org.ufacekit.qt.idl.dsl.qIdl.QtOperations#getReturnValue()
-   * @see #getQtOperations()
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QtOperation#getReturnValue()
+   * @see #getQtOperation()
    * @generated
    */
-  EReference getQtOperations_ReturnValue();
+  EReference getQtOperation_ReturnValue();
 
   /**
    * Returns the meta object for class '{@link org.ufacekit.qt.idl.dsl.qIdl.QtClass <em>Qt Class</em>}'.
@@ -1228,36 +1294,47 @@ public interface QIdlPackage extends EPackage
   EAttribute getQtEnumValue_Name();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.ufacekit.qt.idl.dsl.qIdl.QtEnumValue#getValue <em>Value</em>}'.
+   * Returns the meta object for the containment reference '{@link org.ufacekit.qt.idl.dsl.qIdl.QtEnumValue#getEnumMask <em>Enum Mask</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Value</em>'.
-   * @see org.ufacekit.qt.idl.dsl.qIdl.QtEnumValue#getValue()
+   * @return the meta object for the containment reference '<em>Enum Mask</em>'.
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QtEnumValue#getEnumMask()
    * @see #getQtEnumValue()
    * @generated
    */
-  EReference getQtEnumValue_Value();
+  EReference getQtEnumValue_EnumMask();
 
   /**
-   * Returns the meta object for class '{@link org.ufacekit.qt.idl.dsl.qIdl.QtLiteralValue <em>Qt Literal Value</em>}'.
+   * Returns the meta object for the attribute '{@link org.ufacekit.qt.idl.dsl.qIdl.QtEnumValue#getNumericValue <em>Numeric Value</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Qt Literal Value</em>'.
-   * @see org.ufacekit.qt.idl.dsl.qIdl.QtLiteralValue
+   * @return the meta object for the attribute '<em>Numeric Value</em>'.
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QtEnumValue#getNumericValue()
+   * @see #getQtEnumValue()
    * @generated
    */
-  EClass getQtLiteralValue();
+  EAttribute getQtEnumValue_NumericValue();
 
   /**
-   * Returns the meta object for the reference list '{@link org.ufacekit.qt.idl.dsl.qIdl.QtLiteralValue#getValue <em>Value</em>}'.
+   * Returns the meta object for class '{@link org.ufacekit.qt.idl.dsl.qIdl.QtEnumValueMask <em>Qt Enum Value Mask</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Qt Enum Value Mask</em>'.
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QtEnumValueMask
+   * @generated
+   */
+  EClass getQtEnumValueMask();
+
+  /**
+   * Returns the meta object for the reference list '{@link org.ufacekit.qt.idl.dsl.qIdl.QtEnumValueMask#getValue <em>Value</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the reference list '<em>Value</em>'.
-   * @see org.ufacekit.qt.idl.dsl.qIdl.QtLiteralValue#getValue()
-   * @see #getQtLiteralValue()
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QtEnumValueMask#getValue()
+   * @see #getQtEnumValueMask()
    * @generated
    */
-  EReference getQtLiteralValue_Value();
+  EReference getQtEnumValueMask_Value();
 
   /**
    * Returns the meta object for class '{@link org.ufacekit.qt.idl.dsl.qIdl.QtBuitinType <em>Qt Buitin Type</em>}'.
@@ -1389,15 +1466,47 @@ public interface QIdlPackage extends EPackage
   EAttribute getQtValue_Name();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.ufacekit.qt.idl.dsl.qIdl.QtValue#getDefault <em>Default</em>}'.
+   * Returns the meta object for class '{@link org.ufacekit.qt.idl.dsl.qIdl.QtParameter <em>Qt Parameter</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Default</em>'.
-   * @see org.ufacekit.qt.idl.dsl.qIdl.QtValue#getDefault()
-   * @see #getQtValue()
+   * @return the meta object for class '<em>Qt Parameter</em>'.
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QtParameter
    * @generated
    */
-  EReference getQtValue_Default();
+  EClass getQtParameter();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.ufacekit.qt.idl.dsl.qIdl.QtParameter#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Value</em>'.
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QtParameter#getValue()
+   * @see #getQtParameter()
+   * @generated
+   */
+  EReference getQtParameter_Value();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.ufacekit.qt.idl.dsl.qIdl.QtParameter#getDefaultInt <em>Default Int</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Default Int</em>'.
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QtParameter#getDefaultInt()
+   * @see #getQtParameter()
+   * @generated
+   */
+  EAttribute getQtParameter_DefaultInt();
+
+  /**
+   * Returns the meta object for the reference '{@link org.ufacekit.qt.idl.dsl.qIdl.QtParameter#getDefaultEnum <em>Default Enum</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Default Enum</em>'.
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QtParameter#getDefaultEnum()
+   * @see #getQtParameter()
+   * @generated
+   */
+  EReference getQtParameter_DefaultEnum();
 
   /**
    * Returns the meta object for class '{@link org.ufacekit.qt.idl.dsl.qIdl.QtReturnValue <em>Qt Return Value</em>}'.
@@ -1594,6 +1703,14 @@ public interface QIdlPackage extends EPackage
     EReference QT_NAMESPACE__CLASSES = eINSTANCE.getQtNamespace_Classes();
 
     /**
+     * The meta object literal for the '<em><b>Operations</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference QT_NAMESPACE__OPERATIONS = eINSTANCE.getQtNamespace_Operations();
+
+    /**
      * The meta object literal for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtTypeImpl <em>Qt Type</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1612,14 +1729,14 @@ public interface QIdlPackage extends EPackage
     EAttribute QT_TYPE__NAME = eINSTANCE.getQtType_Name();
 
     /**
-     * The meta object literal for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtOperationsImpl <em>Qt Operations</em>}' class.
+     * The meta object literal for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtOperationImpl <em>Qt Operation</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QtOperationsImpl
-     * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QIdlPackageImpl#getQtOperations()
+     * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QtOperationImpl
+     * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QIdlPackageImpl#getQtOperation()
      * @generated
      */
-    EClass QT_OPERATIONS = eINSTANCE.getQtOperations();
+    EClass QT_OPERATION = eINSTANCE.getQtOperation();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -1627,7 +1744,7 @@ public interface QIdlPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute QT_OPERATIONS__NAME = eINSTANCE.getQtOperations_Name();
+    EAttribute QT_OPERATION__NAME = eINSTANCE.getQtOperation_Name();
 
     /**
      * The meta object literal for the '<em><b>Params</b></em>' containment reference list feature.
@@ -1635,7 +1752,7 @@ public interface QIdlPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference QT_OPERATIONS__PARAMS = eINSTANCE.getQtOperations_Params();
+    EReference QT_OPERATION__PARAMS = eINSTANCE.getQtOperation_Params();
 
     /**
      * The meta object literal for the '<em><b>Return Value</b></em>' containment reference feature.
@@ -1643,7 +1760,7 @@ public interface QIdlPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference QT_OPERATIONS__RETURN_VALUE = eINSTANCE.getQtOperations_ReturnValue();
+    EReference QT_OPERATION__RETURN_VALUE = eINSTANCE.getQtOperation_ReturnValue();
 
     /**
      * The meta object literal for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtClassImpl <em>Qt Class</em>}' class.
@@ -1810,22 +1927,30 @@ public interface QIdlPackage extends EPackage
     EAttribute QT_ENUM_VALUE__NAME = eINSTANCE.getQtEnumValue_Name();
 
     /**
-     * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Enum Mask</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference QT_ENUM_VALUE__VALUE = eINSTANCE.getQtEnumValue_Value();
+    EReference QT_ENUM_VALUE__ENUM_MASK = eINSTANCE.getQtEnumValue_EnumMask();
 
     /**
-     * The meta object literal for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtLiteralValueImpl <em>Qt Literal Value</em>}' class.
+     * The meta object literal for the '<em><b>Numeric Value</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QtLiteralValueImpl
-     * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QIdlPackageImpl#getQtLiteralValue()
      * @generated
      */
-    EClass QT_LITERAL_VALUE = eINSTANCE.getQtLiteralValue();
+    EAttribute QT_ENUM_VALUE__NUMERIC_VALUE = eINSTANCE.getQtEnumValue_NumericValue();
+
+    /**
+     * The meta object literal for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtEnumValueMaskImpl <em>Qt Enum Value Mask</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QtEnumValueMaskImpl
+     * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QIdlPackageImpl#getQtEnumValueMask()
+     * @generated
+     */
+    EClass QT_ENUM_VALUE_MASK = eINSTANCE.getQtEnumValueMask();
 
     /**
      * The meta object literal for the '<em><b>Value</b></em>' reference list feature.
@@ -1833,7 +1958,7 @@ public interface QIdlPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference QT_LITERAL_VALUE__VALUE = eINSTANCE.getQtLiteralValue_Value();
+    EReference QT_ENUM_VALUE_MASK__VALUE = eINSTANCE.getQtEnumValueMask_Value();
 
     /**
      * The meta object literal for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtBuitinTypeImpl <em>Qt Buitin Type</em>}' class.
@@ -1938,12 +2063,38 @@ public interface QIdlPackage extends EPackage
     EAttribute QT_VALUE__NAME = eINSTANCE.getQtValue_Name();
 
     /**
-     * The meta object literal for the '<em><b>Default</b></em>' containment reference feature.
+     * The meta object literal for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtParameterImpl <em>Qt Parameter</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QtParameterImpl
+     * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QIdlPackageImpl#getQtParameter()
+     * @generated
+     */
+    EClass QT_PARAMETER = eINSTANCE.getQtParameter();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference QT_VALUE__DEFAULT = eINSTANCE.getQtValue_Default();
+    EReference QT_PARAMETER__VALUE = eINSTANCE.getQtParameter_Value();
+
+    /**
+     * The meta object literal for the '<em><b>Default Int</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute QT_PARAMETER__DEFAULT_INT = eINSTANCE.getQtParameter_DefaultInt();
+
+    /**
+     * The meta object literal for the '<em><b>Default Enum</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference QT_PARAMETER__DEFAULT_ENUM = eINSTANCE.getQtParameter_DefaultEnum();
 
     /**
      * The meta object literal for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtReturnValueImpl <em>Qt Return Value</em>}' class.

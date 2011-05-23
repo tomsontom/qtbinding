@@ -22,26 +22,26 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.ufacekit.qt.idl.dsl.qIdl.QIdlPackage;
-import org.ufacekit.qt.idl.dsl.qIdl.QtOperations;
+import org.ufacekit.qt.idl.dsl.qIdl.QtOperation;
+import org.ufacekit.qt.idl.dsl.qIdl.QtParameter;
 import org.ufacekit.qt.idl.dsl.qIdl.QtReturnValue;
-import org.ufacekit.qt.idl.dsl.qIdl.QtValue;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Qt Operations</b></em>'.
+ * An implementation of the model object '<em><b>Qt Operation</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtOperationsImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtOperationsImpl#getParams <em>Params</em>}</li>
- *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtOperationsImpl#getReturnValue <em>Return Value</em>}</li>
+ *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtOperationImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtOperationImpl#getParams <em>Params</em>}</li>
+ *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtOperationImpl#getReturnValue <em>Return Value</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class QtOperationsImpl extends MinimalEObjectImpl.Container implements QtOperations
+public class QtOperationImpl extends MinimalEObjectImpl.Container implements QtOperation
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -71,7 +71,7 @@ public class QtOperationsImpl extends MinimalEObjectImpl.Container implements Qt
    * @generated
    * @ordered
    */
-  protected EList<QtValue> params;
+  protected EList<QtParameter> params;
 
   /**
    * The cached value of the '{@link #getReturnValue() <em>Return Value</em>}' containment reference.
@@ -88,7 +88,7 @@ public class QtOperationsImpl extends MinimalEObjectImpl.Container implements Qt
    * <!-- end-user-doc -->
    * @generated
    */
-  protected QtOperationsImpl()
+  protected QtOperationImpl()
   {
     super();
   }
@@ -101,7 +101,7 @@ public class QtOperationsImpl extends MinimalEObjectImpl.Container implements Qt
   @Override
   protected EClass eStaticClass()
   {
-    return QIdlPackage.Literals.QT_OPERATIONS;
+    return QIdlPackage.Literals.QT_OPERATION;
   }
 
   /**
@@ -124,7 +124,7 @@ public class QtOperationsImpl extends MinimalEObjectImpl.Container implements Qt
     String oldName = name;
     name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, QIdlPackage.QT_OPERATIONS__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, QIdlPackage.QT_OPERATION__NAME, oldName, name));
   }
 
   /**
@@ -132,11 +132,11 @@ public class QtOperationsImpl extends MinimalEObjectImpl.Container implements Qt
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<QtValue> getParams()
+  public EList<QtParameter> getParams()
   {
     if (params == null)
     {
-      params = new EObjectContainmentEList<QtValue>(QtValue.class, this, QIdlPackage.QT_OPERATIONS__PARAMS);
+      params = new EObjectContainmentEList<QtParameter>(QtParameter.class, this, QIdlPackage.QT_OPERATION__PARAMS);
     }
     return params;
   }
@@ -162,7 +162,7 @@ public class QtOperationsImpl extends MinimalEObjectImpl.Container implements Qt
     returnValue = newReturnValue;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, QIdlPackage.QT_OPERATIONS__RETURN_VALUE, oldReturnValue, newReturnValue);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, QIdlPackage.QT_OPERATION__RETURN_VALUE, oldReturnValue, newReturnValue);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -179,14 +179,14 @@ public class QtOperationsImpl extends MinimalEObjectImpl.Container implements Qt
     {
       NotificationChain msgs = null;
       if (returnValue != null)
-        msgs = ((InternalEObject)returnValue).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - QIdlPackage.QT_OPERATIONS__RETURN_VALUE, null, msgs);
+        msgs = ((InternalEObject)returnValue).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - QIdlPackage.QT_OPERATION__RETURN_VALUE, null, msgs);
       if (newReturnValue != null)
-        msgs = ((InternalEObject)newReturnValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - QIdlPackage.QT_OPERATIONS__RETURN_VALUE, null, msgs);
+        msgs = ((InternalEObject)newReturnValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - QIdlPackage.QT_OPERATION__RETURN_VALUE, null, msgs);
       msgs = basicSetReturnValue(newReturnValue, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, QIdlPackage.QT_OPERATIONS__RETURN_VALUE, newReturnValue, newReturnValue));
+      eNotify(new ENotificationImpl(this, Notification.SET, QIdlPackage.QT_OPERATION__RETURN_VALUE, newReturnValue, newReturnValue));
   }
 
   /**
@@ -199,9 +199,9 @@ public class QtOperationsImpl extends MinimalEObjectImpl.Container implements Qt
   {
     switch (featureID)
     {
-      case QIdlPackage.QT_OPERATIONS__PARAMS:
+      case QIdlPackage.QT_OPERATION__PARAMS:
         return ((InternalEList<?>)getParams()).basicRemove(otherEnd, msgs);
-      case QIdlPackage.QT_OPERATIONS__RETURN_VALUE:
+      case QIdlPackage.QT_OPERATION__RETURN_VALUE:
         return basicSetReturnValue(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -217,11 +217,11 @@ public class QtOperationsImpl extends MinimalEObjectImpl.Container implements Qt
   {
     switch (featureID)
     {
-      case QIdlPackage.QT_OPERATIONS__NAME:
+      case QIdlPackage.QT_OPERATION__NAME:
         return getName();
-      case QIdlPackage.QT_OPERATIONS__PARAMS:
+      case QIdlPackage.QT_OPERATION__PARAMS:
         return getParams();
-      case QIdlPackage.QT_OPERATIONS__RETURN_VALUE:
+      case QIdlPackage.QT_OPERATION__RETURN_VALUE:
         return getReturnValue();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -238,14 +238,14 @@ public class QtOperationsImpl extends MinimalEObjectImpl.Container implements Qt
   {
     switch (featureID)
     {
-      case QIdlPackage.QT_OPERATIONS__NAME:
+      case QIdlPackage.QT_OPERATION__NAME:
         setName((String)newValue);
         return;
-      case QIdlPackage.QT_OPERATIONS__PARAMS:
+      case QIdlPackage.QT_OPERATION__PARAMS:
         getParams().clear();
-        getParams().addAll((Collection<? extends QtValue>)newValue);
+        getParams().addAll((Collection<? extends QtParameter>)newValue);
         return;
-      case QIdlPackage.QT_OPERATIONS__RETURN_VALUE:
+      case QIdlPackage.QT_OPERATION__RETURN_VALUE:
         setReturnValue((QtReturnValue)newValue);
         return;
     }
@@ -262,13 +262,13 @@ public class QtOperationsImpl extends MinimalEObjectImpl.Container implements Qt
   {
     switch (featureID)
     {
-      case QIdlPackage.QT_OPERATIONS__NAME:
+      case QIdlPackage.QT_OPERATION__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case QIdlPackage.QT_OPERATIONS__PARAMS:
+      case QIdlPackage.QT_OPERATION__PARAMS:
         getParams().clear();
         return;
-      case QIdlPackage.QT_OPERATIONS__RETURN_VALUE:
+      case QIdlPackage.QT_OPERATION__RETURN_VALUE:
         setReturnValue((QtReturnValue)null);
         return;
     }
@@ -285,11 +285,11 @@ public class QtOperationsImpl extends MinimalEObjectImpl.Container implements Qt
   {
     switch (featureID)
     {
-      case QIdlPackage.QT_OPERATIONS__NAME:
+      case QIdlPackage.QT_OPERATION__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case QIdlPackage.QT_OPERATIONS__PARAMS:
+      case QIdlPackage.QT_OPERATION__PARAMS:
         return params != null && !params.isEmpty();
-      case QIdlPackage.QT_OPERATIONS__RETURN_VALUE:
+      case QIdlPackage.QT_OPERATION__RETURN_VALUE:
         return returnValue != null;
     }
     return super.eIsSet(featureID);
@@ -312,4 +312,4 @@ public class QtOperationsImpl extends MinimalEObjectImpl.Container implements Qt
     return result.toString();
   }
 
-} //QtOperationsImpl
+} //QtOperationImpl

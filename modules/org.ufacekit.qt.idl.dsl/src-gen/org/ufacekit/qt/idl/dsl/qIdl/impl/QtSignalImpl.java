@@ -19,7 +19,7 @@ import org.ufacekit.qt.idl.dsl.qIdl.QtSignal;
  *
  * @generated
  */
-public class QtSignalImpl extends QtOperationsImpl implements QtSignal
+public class QtSignalImpl extends QtOperationImpl implements QtSignal
 {
   /**
    * <!-- begin-user-doc -->

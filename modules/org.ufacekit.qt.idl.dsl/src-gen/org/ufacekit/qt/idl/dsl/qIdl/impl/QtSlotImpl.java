@@ -19,7 +19,7 @@ import org.ufacekit.qt.idl.dsl.qIdl.QtSlot;
  *
  * @generated
  */
-public class QtSlotImpl extends QtOperationsImpl implements QtSlot
+public class QtSlotImpl extends QtOperationImpl implements QtSlot
 {
   /**
    * <!-- begin-user-doc -->

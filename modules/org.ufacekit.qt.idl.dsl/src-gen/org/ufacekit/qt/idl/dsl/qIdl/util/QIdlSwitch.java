@@ -96,10 +96,10 @@ public class QIdlSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case QIdlPackage.QT_OPERATIONS:
+      case QIdlPackage.QT_OPERATION:
       {
-        QtOperations qtOperations = (QtOperations)theEObject;
-        T result = caseQtOperations(qtOperations);
+        QtOperation qtOperation = (QtOperation)theEObject;
+        T result = caseQtOperation(qtOperation);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -147,10 +147,10 @@ public class QIdlSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case QIdlPackage.QT_LITERAL_VALUE:
+      case QIdlPackage.QT_ENUM_VALUE_MASK:
       {
-        QtLiteralValue qtLiteralValue = (QtLiteralValue)theEObject;
-        T result = caseQtLiteralValue(qtLiteralValue);
+        QtEnumValueMask qtEnumValueMask = (QtEnumValueMask)theEObject;
+        T result = caseQtEnumValueMask(qtEnumValueMask);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -166,7 +166,7 @@ public class QIdlSwitch<T> extends Switch<T>
       {
         QtFunction qtFunction = (QtFunction)theEObject;
         T result = caseQtFunction(qtFunction);
-        if (result == null) result = caseQtOperations(qtFunction);
+        if (result == null) result = caseQtOperation(qtFunction);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -174,6 +174,13 @@ public class QIdlSwitch<T> extends Switch<T>
       {
         QtValue qtValue = (QtValue)theEObject;
         T result = caseQtValue(qtValue);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case QIdlPackage.QT_PARAMETER:
+      {
+        QtParameter qtParameter = (QtParameter)theEObject;
+        T result = caseQtParameter(qtParameter);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -188,7 +195,7 @@ public class QIdlSwitch<T> extends Switch<T>
       {
         QtSignal qtSignal = (QtSignal)theEObject;
         T result = caseQtSignal(qtSignal);
-        if (result == null) result = caseQtOperations(qtSignal);
+        if (result == null) result = caseQtOperation(qtSignal);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -196,7 +203,7 @@ public class QIdlSwitch<T> extends Switch<T>
       {
         QtSlot qtSlot = (QtSlot)theEObject;
         T result = caseQtSlot(qtSlot);
-        if (result == null) result = caseQtOperations(qtSlot);
+        if (result == null) result = caseQtOperation(qtSlot);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -253,17 +260,17 @@ public class QIdlSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Qt Operations</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Qt Operation</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Qt Operations</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Qt Operation</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseQtOperations(QtOperations object)
+  public T caseQtOperation(QtOperation object)
   {
     return null;
   }
@@ -365,17 +372,17 @@ public class QIdlSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Qt Literal Value</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Qt Enum Value Mask</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Qt Literal Value</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Qt Enum Value Mask</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseQtLiteralValue(QtLiteralValue object)
+  public T caseQtEnumValueMask(QtEnumValueMask object)
   {
     return null;
   }
@@ -424,6 +431,22 @@ public class QIdlSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseQtValue(QtValue object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Qt Parameter</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Qt Parameter</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseQtParameter(QtParameter object)
   {
     return null;
   }

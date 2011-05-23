@@ -17,22 +17,22 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import org.ufacekit.qt.idl.dsl.qIdl.QIdlPackage;
 import org.ufacekit.qt.idl.dsl.qIdl.QtEnumValue;
-import org.ufacekit.qt.idl.dsl.qIdl.QtLiteralValue;
+import org.ufacekit.qt.idl.dsl.qIdl.QtEnumValueMask;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Qt Literal Value</b></em>'.
+ * An implementation of the model object '<em><b>Qt Enum Value Mask</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtLiteralValueImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtEnumValueMaskImpl#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class QtLiteralValueImpl extends MinimalEObjectImpl.Container implements QtLiteralValue
+public class QtEnumValueMaskImpl extends MinimalEObjectImpl.Container implements QtEnumValueMask
 {
   /**
    * The cached value of the '{@link #getValue() <em>Value</em>}' reference list.
@@ -49,7 +49,7 @@ public class QtLiteralValueImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  protected QtLiteralValueImpl()
+  protected QtEnumValueMaskImpl()
   {
     super();
   }
@@ -62,7 +62,7 @@ public class QtLiteralValueImpl extends MinimalEObjectImpl.Container implements 
   @Override
   protected EClass eStaticClass()
   {
-    return QIdlPackage.Literals.QT_LITERAL_VALUE;
+    return QIdlPackage.Literals.QT_ENUM_VALUE_MASK;
   }
 
   /**
@@ -74,7 +74,7 @@ public class QtLiteralValueImpl extends MinimalEObjectImpl.Container implements 
   {
     if (value == null)
     {
-      value = new EObjectResolvingEList<QtEnumValue>(QtEnumValue.class, this, QIdlPackage.QT_LITERAL_VALUE__VALUE);
+      value = new EObjectResolvingEList<QtEnumValue>(QtEnumValue.class, this, QIdlPackage.QT_ENUM_VALUE_MASK__VALUE);
     }
     return value;
   }
@@ -89,7 +89,7 @@ public class QtLiteralValueImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case QIdlPackage.QT_LITERAL_VALUE__VALUE:
+      case QIdlPackage.QT_ENUM_VALUE_MASK__VALUE:
         return getValue();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -106,7 +106,7 @@ public class QtLiteralValueImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case QIdlPackage.QT_LITERAL_VALUE__VALUE:
+      case QIdlPackage.QT_ENUM_VALUE_MASK__VALUE:
         getValue().clear();
         getValue().addAll((Collection<? extends QtEnumValue>)newValue);
         return;
@@ -124,7 +124,7 @@ public class QtLiteralValueImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case QIdlPackage.QT_LITERAL_VALUE__VALUE:
+      case QIdlPackage.QT_ENUM_VALUE_MASK__VALUE:
         getValue().clear();
         return;
     }
@@ -141,10 +141,10 @@ public class QtLiteralValueImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case QIdlPackage.QT_LITERAL_VALUE__VALUE:
+      case QIdlPackage.QT_ENUM_VALUE_MASK__VALUE:
         return value != null && !value.isEmpty();
     }
     return super.eIsSet(featureID);
   }
 
-} //QtLiteralValueImpl
+} //QtEnumValueMaskImpl

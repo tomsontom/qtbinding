@@ -21,14 +21,17 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="classes" upperBound="-1"
         eType="ecore:EClass platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtClass"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operations" upperBound="-1"
+        eType="ecore:EClass platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtOperation"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="QtType">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="QtOperations">
+  <eClassifiers xsi:type="ecore:EClass" name="QtOperation">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="params" upperBound="-1"
-        eType="ecore:EClass platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtValue"
+        eType="ecore:EClass platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtParameter"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="returnValue" eType="ecore:EClass platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtReturnValue"
         containment="true"/>
@@ -52,12 +55,12 @@
         eType="ecore:EClass platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtConstructor"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="operations" upperBound="-1"
-        eType="ecore:EClass platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtOperations"
+        eType="ecore:EClass platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtOperation"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="QtConstructor">
     <eStructuralFeatures xsi:type="ecore:EReference" name="params" upperBound="-1"
-        eType="ecore:EClass platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtValue"
+        eType="ecore:EClass platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtParameter"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="QtProperty">
@@ -75,10 +78,11 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="QtEnumValue">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="ecore:EClass platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtLiteralValue"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="enumMask" eType="ecore:EClass platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtEnumValueMask"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numericValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="QtLiteralValue">
+  <eClassifiers xsi:type="ecore:EClass" name="QtEnumValueMask">
     <eStructuralFeatures xsi:type="ecore:EReference" name="value" unique="false" upperBound="-1"
         eType="ecore:EClass platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtEnumValue"/>
   </eClassifiers>
@@ -86,7 +90,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="ecore:EClass platform:/resource/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmTypeReference"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="QtFunction" eSuperTypes="platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtOperations">
+  <eClassifiers xsi:type="ecore:EClass" name="QtFunction" eSuperTypes="platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtOperation">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="visibility" eType="ecore:EEnum platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//Visibility"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="const" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="virtual" eType="ecore:EEnum platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//Virtuality"/>
@@ -97,16 +101,20 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="valueType" eType="ecore:EEnum platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//Type"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="ecore:EClass platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="default" eType="ecore:EClass platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtLiteralValue"
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="QtParameter">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="ecore:EClass platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtValue"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultInt" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="defaultEnum" eType="ecore:EClass platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtEnumValue"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="QtReturnValue">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="const" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="valueType" eType="ecore:EEnum platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//Type"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="ecore:EClass platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtType"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="QtSignal" eSuperTypes="platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtOperations"/>
-  <eClassifiers xsi:type="ecore:EClass" name="QtSlot" eSuperTypes="platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtOperations"/>
+  <eClassifiers xsi:type="ecore:EClass" name="QtSignal" eSuperTypes="platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtOperation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="QtSlot" eSuperTypes="platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtOperation"/>
   <eClassifiers xsi:type="ecore:EEnum" name="Virtuality">
     <eLiterals name="virtual" literal="virtual"/>
     <eLiterals name="purevirtual" value="1" literal="purevirtual"/>

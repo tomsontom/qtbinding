@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.ufacekit.qt.idl.dsl.qIdl.QIdlPackage;
 import org.ufacekit.qt.idl.dsl.qIdl.QtConstructor;
-import org.ufacekit.qt.idl.dsl.qIdl.QtValue;
+import org.ufacekit.qt.idl.dsl.qIdl.QtParameter;
 
 /**
  * <!-- begin-user-doc -->
@@ -46,7 +46,7 @@ public class QtConstructorImpl extends MinimalEObjectImpl.Container implements Q
    * @generated
    * @ordered
    */
-  protected EList<QtValue> params;
+  protected EList<QtParameter> params;
 
   /**
    * <!-- begin-user-doc -->
@@ -74,11 +74,11 @@ public class QtConstructorImpl extends MinimalEObjectImpl.Container implements Q
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<QtValue> getParams()
+  public EList<QtParameter> getParams()
   {
     if (params == null)
     {
-      params = new EObjectContainmentEList<QtValue>(QtValue.class, this, QIdlPackage.QT_CONSTRUCTOR__PARAMS);
+      params = new EObjectContainmentEList<QtParameter>(QtParameter.class, this, QIdlPackage.QT_CONSTRUCTOR__PARAMS);
     }
     return params;
   }
@@ -128,7 +128,7 @@ public class QtConstructorImpl extends MinimalEObjectImpl.Container implements Q
     {
       case QIdlPackage.QT_CONSTRUCTOR__PARAMS:
         getParams().clear();
-        getParams().addAll((Collection<? extends QtValue>)newValue);
+        getParams().addAll((Collection<? extends QtParameter>)newValue);
         return;
     }
     super.eSet(featureID, newValue);

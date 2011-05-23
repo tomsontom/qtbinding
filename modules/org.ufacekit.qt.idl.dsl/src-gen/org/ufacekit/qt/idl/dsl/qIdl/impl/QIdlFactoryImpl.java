@@ -71,17 +71,18 @@ public class QIdlFactoryImpl extends EFactoryImpl implements QIdlFactory
       case QIdlPackage.QT_IDL_TYP: return createQtIdlTyp();
       case QIdlPackage.QT_NAMESPACE: return createQtNamespace();
       case QIdlPackage.QT_TYPE: return createQtType();
-      case QIdlPackage.QT_OPERATIONS: return createQtOperations();
+      case QIdlPackage.QT_OPERATION: return createQtOperation();
       case QIdlPackage.QT_CLASS: return createQtClass();
       case QIdlPackage.QT_CONSTRUCTOR: return createQtConstructor();
       case QIdlPackage.QT_PROPERTY: return createQtProperty();
       case QIdlPackage.QT_ENUM: return createQtEnum();
       case QIdlPackage.QT_FLAGS: return createQtFlags();
       case QIdlPackage.QT_ENUM_VALUE: return createQtEnumValue();
-      case QIdlPackage.QT_LITERAL_VALUE: return createQtLiteralValue();
+      case QIdlPackage.QT_ENUM_VALUE_MASK: return createQtEnumValueMask();
       case QIdlPackage.QT_BUITIN_TYPE: return createQtBuitinType();
       case QIdlPackage.QT_FUNCTION: return createQtFunction();
       case QIdlPackage.QT_VALUE: return createQtValue();
+      case QIdlPackage.QT_PARAMETER: return createQtParameter();
       case QIdlPackage.QT_RETURN_VALUE: return createQtReturnValue();
       case QIdlPackage.QT_SIGNAL: return createQtSignal();
       case QIdlPackage.QT_SLOT: return createQtSlot();
@@ -174,10 +175,10 @@ public class QIdlFactoryImpl extends EFactoryImpl implements QIdlFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public QtOperations createQtOperations()
+  public QtOperation createQtOperation()
   {
-    QtOperationsImpl qtOperations = new QtOperationsImpl();
-    return qtOperations;
+    QtOperationImpl qtOperation = new QtOperationImpl();
+    return qtOperation;
   }
 
   /**
@@ -251,10 +252,10 @@ public class QIdlFactoryImpl extends EFactoryImpl implements QIdlFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public QtLiteralValue createQtLiteralValue()
+  public QtEnumValueMask createQtEnumValueMask()
   {
-    QtLiteralValueImpl qtLiteralValue = new QtLiteralValueImpl();
-    return qtLiteralValue;
+    QtEnumValueMaskImpl qtEnumValueMask = new QtEnumValueMaskImpl();
+    return qtEnumValueMask;
   }
 
   /**
@@ -288,6 +289,17 @@ public class QIdlFactoryImpl extends EFactoryImpl implements QIdlFactory
   {
     QtValueImpl qtValue = new QtValueImpl();
     return qtValue;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public QtParameter createQtParameter()
+  {
+    QtParameterImpl qtParameter = new QtParameterImpl();
+    return qtParameter;
   }
 
   /**

@@ -16,7 +16,8 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.QtEnumValue#getName <em>Name</em>}</li>
- *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.QtEnumValue#getValue <em>Value</em>}</li>
+ *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.QtEnumValue#getEnumMask <em>Enum Mask</em>}</li>
+ *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.QtEnumValue#getNumericValue <em>Numeric Value</em>}</li>
  * </ul>
  * </p>
  *
@@ -53,29 +54,55 @@ public interface QtEnumValue extends EObject
   void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>Value</b></em>' containment reference.
+   * Returns the value of the '<em><b>Enum Mask</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Value</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Enum Mask</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Value</em>' containment reference.
-   * @see #setValue(QtLiteralValue)
-   * @see org.ufacekit.qt.idl.dsl.qIdl.QIdlPackage#getQtEnumValue_Value()
+   * @return the value of the '<em>Enum Mask</em>' containment reference.
+   * @see #setEnumMask(QtEnumValueMask)
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QIdlPackage#getQtEnumValue_EnumMask()
    * @model containment="true"
    * @generated
    */
-  QtLiteralValue getValue();
+  QtEnumValueMask getEnumMask();
 
   /**
-   * Sets the value of the '{@link org.ufacekit.qt.idl.dsl.qIdl.QtEnumValue#getValue <em>Value</em>}' containment reference.
+   * Sets the value of the '{@link org.ufacekit.qt.idl.dsl.qIdl.QtEnumValue#getEnumMask <em>Enum Mask</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Value</em>' containment reference.
-   * @see #getValue()
+   * @param value the new value of the '<em>Enum Mask</em>' containment reference.
+   * @see #getEnumMask()
    * @generated
    */
-  void setValue(QtLiteralValue value);
+  void setEnumMask(QtEnumValueMask value);
+
+  /**
+   * Returns the value of the '<em><b>Numeric Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Numeric Value</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Numeric Value</em>' attribute.
+   * @see #setNumericValue(int)
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QIdlPackage#getQtEnumValue_NumericValue()
+   * @model
+   * @generated
+   */
+  int getNumericValue();
+
+  /**
+   * Sets the value of the '{@link org.ufacekit.qt.idl.dsl.qIdl.QtEnumValue#getNumericValue <em>Numeric Value</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Numeric Value</em>' attribute.
+   * @see #getNumericValue()
+   * @generated
+   */
+  void setNumericValue(int value);
 
 } // QtEnumValue

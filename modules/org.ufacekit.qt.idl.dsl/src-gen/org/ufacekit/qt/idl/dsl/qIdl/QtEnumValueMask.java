@@ -11,21 +11,21 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Qt Literal Value</b></em>'.
+ * A representation of the model object '<em><b>Qt Enum Value Mask</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.QtLiteralValue#getValue <em>Value</em>}</li>
+ *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.QtEnumValueMask#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.ufacekit.qt.idl.dsl.qIdl.QIdlPackage#getQtLiteralValue()
+ * @see org.ufacekit.qt.idl.dsl.qIdl.QIdlPackage#getQtEnumValueMask()
  * @model
  * @generated
  */
-public interface QtLiteralValue extends EObject
+public interface QtEnumValueMask extends EObject
 {
   /**
    * Returns the value of the '<em><b>Value</b></em>' reference list.
@@ -37,10 +37,10 @@ public interface QtLiteralValue extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Value</em>' reference list.
-   * @see org.ufacekit.qt.idl.dsl.qIdl.QIdlPackage#getQtLiteralValue_Value()
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QIdlPackage#getQtEnumValueMask_Value()
    * @model
    * @generated
    */
   EList<QtEnumValue> getValue();
 
-} // QtLiteralValue
+} // QtEnumValueMask
