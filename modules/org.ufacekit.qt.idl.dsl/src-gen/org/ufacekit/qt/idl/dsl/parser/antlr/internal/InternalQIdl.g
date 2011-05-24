@@ -540,53 +540,59 @@ ruleQtConstructor returns [EObject current=null]
     {
     	newLeafNode(otherlv_0, grammarAccess.getQtConstructorAccess().getConstructorKeyword_0());
     }
-	otherlv_1='(' 
+(
     {
-    	newLeafNode(otherlv_1, grammarAccess.getQtConstructorAccess().getLeftParenthesisKeyword_1());
+        $current = forceCreateModelElement(
+            grammarAccess.getQtConstructorAccess().getQtConstructorAction_1(),
+            $current);
+    }
+)	otherlv_2='(' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getQtConstructorAccess().getLeftParenthesisKeyword_2());
     }
 ((
 (
 		{ 
-	        newCompositeNode(grammarAccess.getQtConstructorAccess().getParamsQtParameterParserRuleCall_2_0_0()); 
+	        newCompositeNode(grammarAccess.getQtConstructorAccess().getParamsQtParameterParserRuleCall_3_0_0()); 
 	    }
-		lv_params_2_0=ruleQtParameter		{
+		lv_params_3_0=ruleQtParameter		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getQtConstructorRule());
 	        }
        		add(
        			$current, 
        			"params",
-        		lv_params_2_0, 
+        		lv_params_3_0, 
         		"QtParameter");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)(	otherlv_3=',' 
+)(	otherlv_4=',' 
     {
-    	newLeafNode(otherlv_3, grammarAccess.getQtConstructorAccess().getCommaKeyword_2_1_0());
+    	newLeafNode(otherlv_4, grammarAccess.getQtConstructorAccess().getCommaKeyword_3_1_0());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getQtConstructorAccess().getParamsQtParameterParserRuleCall_2_1_1_0()); 
+	        newCompositeNode(grammarAccess.getQtConstructorAccess().getParamsQtParameterParserRuleCall_3_1_1_0()); 
 	    }
-		lv_params_4_0=ruleQtParameter		{
+		lv_params_5_0=ruleQtParameter		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getQtConstructorRule());
 	        }
        		add(
        			$current, 
        			"params",
-        		lv_params_4_0, 
+        		lv_params_5_0, 
         		"QtParameter");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-))*)?	otherlv_5=');' 
+))*)?	otherlv_6=');' 
     {
-    	newLeafNode(otherlv_5, grammarAccess.getQtConstructorAccess().getRightParenthesisSemicolonKeyword_3());
+    	newLeafNode(otherlv_6, grammarAccess.getQtConstructorAccess().getRightParenthesisSemicolonKeyword_4());
     }
 )
 ;
@@ -872,10 +878,12 @@ ruleQtEnumValueMask returns [EObject current=null]
 	            $current = createModelElement(grammarAccess.getQtEnumValueMaskRule());
 	        }
         }
-	otherlv_0=RULE_ID
-	{
-		newLeafNode(otherlv_0, grammarAccess.getQtEnumValueMaskAccess().getValueQtEnumValueCrossReference_0_0()); 
-	}
+		{ 
+	        newCompositeNode(grammarAccess.getQtEnumValueMaskAccess().getValueQtEnumValueCrossReference_0_0()); 
+	    }
+		ruleQualifiedName		{ 
+	        afterParserOrEnumRuleCall();
+	    }
 
 )
 )(	otherlv_1='|' 
@@ -889,10 +897,12 @@ ruleQtEnumValueMask returns [EObject current=null]
 	            $current = createModelElement(grammarAccess.getQtEnumValueMaskRule());
 	        }
         }
-	otherlv_2=RULE_ID
-	{
-		newLeafNode(otherlv_2, grammarAccess.getQtEnumValueMaskAccess().getValueQtEnumValueCrossReference_1_1_0()); 
-	}
+		{ 
+	        newCompositeNode(grammarAccess.getQtEnumValueMaskAccess().getValueQtEnumValueCrossReference_1_1_0()); 
+	    }
+		ruleQualifiedName		{ 
+	        afterParserOrEnumRuleCall();
+	    }
 
 )
 ))*)

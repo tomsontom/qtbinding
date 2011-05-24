@@ -42,7 +42,7 @@ QtClass:
 
 
 QtConstructor:
-	'constructor' '(' (params+=QtParameter (',' params+=QtParameter)*)? ');';
+	'constructor' {QtConstructor} '(' (params+=QtParameter (',' params+=QtParameter)*)? ');';
 
 QtProperty:
 	'property' type=QtValue ';';
@@ -59,7 +59,7 @@ QtEnumValue:
 	name=ID '=' (enumMask=QtEnumValueMask | numericValue=INT );
 
 QtEnumValueMask:
-	(value+=[QtEnumValue] ('|' value+=[QtEnumValue])*);
+	(value+=[QtEnumValue|QualifiedName] ('|' value+=[QtEnumValue|QualifiedName])*);
 
 QtBuitinType:
 	'builtin' name=ID ':' value=JvmArgumentTypeReference;

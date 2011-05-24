@@ -126,6 +126,11 @@
       </type>
       <alternatives xsi:type="xtext:Group">
         <elements xsi:type="xtext:Keyword" value="constructor"/>
+        <elements xsi:type="xtext:Action">
+          <type metamodel="/0/@metamodelDeclarations.0">
+            <classifier xsi:type="ecore:EClass" href="http://www.ufacekit.org/qt/idl/dsl/QIdl#//QtConstructor"/>
+          </type>
+        </elements>
         <elements xsi:type="xtext:Keyword" value="("/>
         <elements xsi:type="xtext:Group" cardinality="?">
           <elements xsi:type="xtext:Assignment" feature="params" operator="+=">
@@ -218,7 +223,7 @@
             <type metamodel="/0/@metamodelDeclarations.0">
               <classifier xsi:type="ecore:EClass" href="http://www.ufacekit.org/qt/idl/dsl/QIdl#//QtEnumValue"/>
             </type>
-            <terminal xsi:type="xtext:RuleCall" rule="/2/@rules.10"/>
+            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.50"/>
           </terminal>
         </elements>
         <elements xsi:type="xtext:Group" cardinality="*">
@@ -228,7 +233,7 @@
               <type metamodel="/0/@metamodelDeclarations.0">
                 <classifier xsi:type="ecore:EClass" href="http://www.ufacekit.org/qt/idl/dsl/QIdl#//QtEnumValue"/>
               </type>
-              <terminal xsi:type="xtext:RuleCall" rule="/2/@rules.10"/>
+              <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.50"/>
             </terminal>
           </elements>
         </elements>

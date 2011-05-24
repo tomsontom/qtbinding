@@ -77,8 +77,8 @@ public class QIdlParser extends AbstractContentAssistParser {
 					put(grammarAccess.getQtClassAccess().getGroup_2(), "rule__QtClass__Group_2__0");
 					put(grammarAccess.getQtClassAccess().getGroup_2_2(), "rule__QtClass__Group_2_2__0");
 					put(grammarAccess.getQtConstructorAccess().getGroup(), "rule__QtConstructor__Group__0");
-					put(grammarAccess.getQtConstructorAccess().getGroup_2(), "rule__QtConstructor__Group_2__0");
-					put(grammarAccess.getQtConstructorAccess().getGroup_2_1(), "rule__QtConstructor__Group_2_1__0");
+					put(grammarAccess.getQtConstructorAccess().getGroup_3(), "rule__QtConstructor__Group_3__0");
+					put(grammarAccess.getQtConstructorAccess().getGroup_3_1(), "rule__QtConstructor__Group_3_1__0");
 					put(grammarAccess.getQtPropertyAccess().getGroup(), "rule__QtProperty__Group__0");
 					put(grammarAccess.getQtEnumAccess().getGroup(), "rule__QtEnum__Group__0");
 					put(grammarAccess.getQtFlagsAccess().getGroup(), "rule__QtFlags__Group__0");
@@ -232,8 +232,8 @@ public class QIdlParser extends AbstractContentAssistParser {
 					put(grammarAccess.getQtClassAccess().getPropertiesAssignment_7(), "rule__QtClass__PropertiesAssignment_7");
 					put(grammarAccess.getQtClassAccess().getConstructorsAssignment_8(), "rule__QtClass__ConstructorsAssignment_8");
 					put(grammarAccess.getQtClassAccess().getOperationsAssignment_9(), "rule__QtClass__OperationsAssignment_9");
-					put(grammarAccess.getQtConstructorAccess().getParamsAssignment_2_0(), "rule__QtConstructor__ParamsAssignment_2_0");
-					put(grammarAccess.getQtConstructorAccess().getParamsAssignment_2_1_1(), "rule__QtConstructor__ParamsAssignment_2_1_1");
+					put(grammarAccess.getQtConstructorAccess().getParamsAssignment_3_0(), "rule__QtConstructor__ParamsAssignment_3_0");
+					put(grammarAccess.getQtConstructorAccess().getParamsAssignment_3_1_1(), "rule__QtConstructor__ParamsAssignment_3_1_1");
 					put(grammarAccess.getQtPropertyAccess().getTypeAssignment_1(), "rule__QtProperty__TypeAssignment_1");
 					put(grammarAccess.getQtEnumAccess().getNameAssignment_1(), "rule__QtEnum__NameAssignment_1");
 					put(grammarAccess.getQtEnumAccess().getValuesAssignment_3(), "rule__QtEnum__ValuesAssignment_3");
