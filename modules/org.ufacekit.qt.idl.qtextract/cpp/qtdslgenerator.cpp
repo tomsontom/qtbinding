@@ -37,14 +37,14 @@ void QtDslGenerator::generateTree(const Tree *tree, CodeMarker *marker)
         NodeList nodes = inner->childNodes();
         qSort(nodes.begin(), nodes.end(), lessThanName);
         foreach (const Node *child, nodes)
-            generateNode(child, marker);
+            generateNode(tree, child, marker);
     }
     //out.flush();
 }
 
-const QString QtDslGenerator::enumValueDslValue(const EnumItem &item, const EnumNode *enume) {
-    if( item.value().startsWith("0x") ) {
-        return QString::number(QString(item.value()).remove(0,2).toLong(0,16));
+const QString QtDslGenerator::enumValueDslValue(const Tree *tree, const EnumItem &item, const EnumNode *enume) {
+    if( item.value().trimmed().startsWith("0x") ) {
+        return QString::number(QString(item.value().trimmed()).remove(0,2).toLong(0,16));
     } else if( item.value().size() > 0 && item.value().at(0).isDigit() ) {
         return item.value();
     } else if( item.value().size() > 0 ) {
@@ -52,7 +52,7 @@ const QString QtDslGenerator::enumValueDslValue(const EnumItem &item, const Enum
         QString rv;
 
         foreach ( const QString &n, l ) {
-            if(n.trimmed().startsWith('0x')) {
+            if( n.trimmed().startsWith("0x") ) {
                 if( rv.size() > 0 ) {
                     rv.append(" | ");
                 }
@@ -77,7 +77,11 @@ const QString QtDslGenerator::enumValueDslValue(const EnumItem &item, const Enum
     return NULL;
 }
 
-void QtDslGenerator::generateNodeContent(const Node *node, CodeMarker *marker, QTextStream & stream, int indent) {
+QString QtDslGenerator::qualifiedEnumValuePath(const Tree *tree, const QString cppValuePath) {
+
+}
+
+void QtDslGenerator::generateNodeContent(const Tree *tree, const Node *node, CodeMarker *marker, QTextStream & stream, int indent) {
     bool close;
     const EnumNode *enume;
     const PropertyNode * property;
@@ -96,14 +100,19 @@ void QtDslGenerator::generateNodeContent(const Node *node, CodeMarker *marker, Q
             break;
         case Node::Enum:
             enume = static_cast<const EnumNode *>(node);
+
             stream << indentStr(indent) << "enumeration " << node->name() << " {" << "\n";
 
             foreach (const EnumItem &item, enume->items()) {
-                QString value = enumValueDslValue(item,enume);
+                QString value = enumValueDslValue(tree,item,enume);
                 stream << (value == NULL ? "//" : "") << indentStr(indent + 1) << item.name() << " = " << value << "\n";
             }
 
             stream << indentStr(indent) << "}\n\n";
+
+            if( enume->flagsType() ) {
+                stream << indentStr(indent) << "flags " << enume->flagsType()->name() << " : " << node->name() << ";\n\n";
+            }
 
             ++indent;
 
@@ -150,7 +159,7 @@ void QtDslGenerator::generateNodeContent(const Node *node, CodeMarker *marker, Q
                     stream << "(";
                     stream << ") : ";
 
-                    if( func->returnType().endsWith('*') ) {
+                    if( func->returnType().contains('*') ) {
                         stream << "pointer " << QString(func->returnType()).remove("*") << ";\n";
                     } else {
                         stream << func->returnType() << ";\n";
@@ -173,7 +182,13 @@ void QtDslGenerator::generateNodeContent(const Node *node, CodeMarker *marker, Q
                 stream << "const ";
             }
 
-            stream << property->qualifiedDataType() << " " << node->name() << ";\n";
+            if( property->qualifiedDataType().contains('*') ) {
+                stream << "pointer " << QString(property->qualifiedDataType()).remove("*");
+            } else {
+                stream << property->qualifiedDataType();
+            }
+
+            stream << " " << node->name() << ";\n";
 
             break;
      }
@@ -226,7 +241,7 @@ void QtDslGenerator::generateNodeContent(const Node *node, CodeMarker *marker, Q
         }
 
         foreach( const Node *child, namespaceNodes ) {
-            generateNodeContent(child, marker,stream, indent);
+            generateNodeContent(tree, child, marker,stream, indent);
         }
 
         if( ! namespaceNodes.isEmpty() ) {
@@ -234,7 +249,7 @@ void QtDslGenerator::generateNodeContent(const Node *node, CodeMarker *marker, Q
         }
 
         foreach( const Node *child, enumNodes ) {
-            generateNodeContent(child, marker,stream, indent);
+            generateNodeContent(tree, child, marker,stream, indent);
         }
 
         if( ! enumNodes.isEmpty() ) {
@@ -242,7 +257,7 @@ void QtDslGenerator::generateNodeContent(const Node *node, CodeMarker *marker, Q
         }
 
         foreach( const Node *child, classNodes ) {
-            generateNodeContent(child, marker,stream, indent);
+            generateNodeContent(tree, child, marker,stream, indent);
         }
 
         if( ! classNodes.isEmpty() ) {
@@ -250,7 +265,7 @@ void QtDslGenerator::generateNodeContent(const Node *node, CodeMarker *marker, Q
         }
 
         foreach( const Node *child, properties ) {
-            generateNodeContent(child, marker,stream, indent);
+            generateNodeContent(tree, child, marker,stream, indent);
         }
 
         if( ! properties.isEmpty() ) {
@@ -258,7 +273,7 @@ void QtDslGenerator::generateNodeContent(const Node *node, CodeMarker *marker, Q
         }
 
         foreach( const Node *child, publicMethods ) {
-            generateNodeContent(child, marker,stream, indent);
+            generateNodeContent(tree, child, marker,stream, indent);
         }
 
         if( ! publicMethods.isEmpty() ) {
@@ -266,7 +281,7 @@ void QtDslGenerator::generateNodeContent(const Node *node, CodeMarker *marker, Q
         }
 
         foreach( const Node *child, protectedMethods ) {
-            generateNodeContent(child, marker,stream, indent);
+            generateNodeContent(tree, child, marker,stream, indent);
         }
 
         if( ! protectedMethods.isEmpty() ) {
@@ -274,7 +289,7 @@ void QtDslGenerator::generateNodeContent(const Node *node, CodeMarker *marker, Q
         }
 
         foreach( const Node *child, slotMethods ) {
-            generateNodeContent(child, marker,stream, indent);
+            generateNodeContent(tree, child, marker,stream, indent);
         }
 
         if( ! slotMethods.isEmpty() ) {
@@ -282,7 +297,7 @@ void QtDslGenerator::generateNodeContent(const Node *node, CodeMarker *marker, Q
         }
 
         foreach( const Node *child, signalMethods ) {
-            generateNodeContent(child, marker,stream, indent);
+            generateNodeContent(tree, child, marker,stream, indent);
         }
 
         if( ! signalMethods.isEmpty() ) {
@@ -294,12 +309,12 @@ void QtDslGenerator::generateNodeContent(const Node *node, CodeMarker *marker, Q
         stream << "\n" << indentStr(indent - 1) << "}\n\n";
 }
 
-void QtDslGenerator::generateNode(const Node *node, CodeMarker *marker)
+void QtDslGenerator::generateNode(const Tree *tree, const Node *node, CodeMarker *marker)
 {
     if (node->access() == Node::Private)
         return;
 
-    std::cout << "Generating: " << node->name().toStdString() << std::endl;
+    // std::cout << "Generating: " << node->name().toStdString() << std::endl;
 
     if( node->type() == Node::Namespace ) {
         QTextStream stream;
@@ -307,7 +322,7 @@ void QtDslGenerator::generateNode(const Node *node, CodeMarker *marker)
         outfile.open(QIODevice::WriteOnly);
         stream.setDevice(&outfile);
 
-        generateNodeContent(node,marker,stream);
+        generateNodeContent(tree, node,marker,stream);
         outfile.flush();
     } else if( node->type() == Node::Class )  {
         QTextStream stream;
@@ -315,7 +330,7 @@ void QtDslGenerator::generateNode(const Node *node, CodeMarker *marker)
         outfile.open(QIODevice::WriteOnly);
         stream.setDevice(&outfile);
 
-        generateNodeContent(node,marker,stream);
+        generateNodeContent(tree, node,marker,stream);
         outfile.flush();
     }
 

@@ -11,7 +11,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.ufacekit.qt.idl.dsl.qIdl.QIdlPackage;
 import org.ufacekit.qt.idl.dsl.qIdl.QtEnum;
@@ -24,35 +23,14 @@ import org.ufacekit.qt.idl.dsl.qIdl.QtFlags;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtFlagsImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtFlagsImpl#getEnumeration <em>Enumeration</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class QtFlagsImpl extends MinimalEObjectImpl.Container implements QtFlags
+public class QtFlagsImpl extends QtTypeImpl implements QtFlags
 {
-  /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected static final String NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
-
   /**
    * The cached value of the '{@link #getEnumeration() <em>Enumeration</em>}' reference.
    * <!-- begin-user-doc -->
@@ -82,29 +60,6 @@ public class QtFlagsImpl extends MinimalEObjectImpl.Container implements QtFlags
   protected EClass eStaticClass()
   {
     return QIdlPackage.Literals.QT_FLAGS;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getName()
-  {
-    return name;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setName(String newName)
-  {
-    String oldName = name;
-    name = newName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, QIdlPackage.QT_FLAGS__NAME, oldName, name));
   }
 
   /**
@@ -160,8 +115,6 @@ public class QtFlagsImpl extends MinimalEObjectImpl.Container implements QtFlags
   {
     switch (featureID)
     {
-      case QIdlPackage.QT_FLAGS__NAME:
-        return getName();
       case QIdlPackage.QT_FLAGS__ENUMERATION:
         if (resolve) return getEnumeration();
         return basicGetEnumeration();
@@ -179,9 +132,6 @@ public class QtFlagsImpl extends MinimalEObjectImpl.Container implements QtFlags
   {
     switch (featureID)
     {
-      case QIdlPackage.QT_FLAGS__NAME:
-        setName((String)newValue);
-        return;
       case QIdlPackage.QT_FLAGS__ENUMERATION:
         setEnumeration((QtEnum)newValue);
         return;
@@ -199,9 +149,6 @@ public class QtFlagsImpl extends MinimalEObjectImpl.Container implements QtFlags
   {
     switch (featureID)
     {
-      case QIdlPackage.QT_FLAGS__NAME:
-        setName(NAME_EDEFAULT);
-        return;
       case QIdlPackage.QT_FLAGS__ENUMERATION:
         setEnumeration((QtEnum)null);
         return;
@@ -219,29 +166,10 @@ public class QtFlagsImpl extends MinimalEObjectImpl.Container implements QtFlags
   {
     switch (featureID)
     {
-      case QIdlPackage.QT_FLAGS__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case QIdlPackage.QT_FLAGS__ENUMERATION:
         return enumeration != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(')');
-    return result.toString();
   }
 
 } //QtFlagsImpl

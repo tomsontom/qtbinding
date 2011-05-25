@@ -27,7 +27,6 @@ import org.ufacekit.qt.idl.dsl.qIdl.QtEnumValueMask;
  * <ul>
  *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtEnumValueImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtEnumValueImpl#getEnumMask <em>Enum Mask</em>}</li>
- *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtEnumValueImpl#getNumericValue <em>Numeric Value</em>}</li>
  * </ul>
  * </p>
  *
@@ -64,26 +63,6 @@ public class QtEnumValueImpl extends MinimalEObjectImpl.Container implements QtE
    * @ordered
    */
   protected QtEnumValueMask enumMask;
-
-  /**
-   * The default value of the '{@link #getNumericValue() <em>Numeric Value</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getNumericValue()
-   * @generated
-   * @ordered
-   */
-  protected static final int NUMERIC_VALUE_EDEFAULT = 0;
-
-  /**
-   * The cached value of the '{@link #getNumericValue() <em>Numeric Value</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getNumericValue()
-   * @generated
-   * @ordered
-   */
-  protected int numericValue = NUMERIC_VALUE_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -182,29 +161,6 @@ public class QtEnumValueImpl extends MinimalEObjectImpl.Container implements QtE
    * <!-- end-user-doc -->
    * @generated
    */
-  public int getNumericValue()
-  {
-    return numericValue;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setNumericValue(int newNumericValue)
-  {
-    int oldNumericValue = numericValue;
-    numericValue = newNumericValue;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, QIdlPackage.QT_ENUM_VALUE__NUMERIC_VALUE, oldNumericValue, numericValue));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -230,8 +186,6 @@ public class QtEnumValueImpl extends MinimalEObjectImpl.Container implements QtE
         return getName();
       case QIdlPackage.QT_ENUM_VALUE__ENUM_MASK:
         return getEnumMask();
-      case QIdlPackage.QT_ENUM_VALUE__NUMERIC_VALUE:
-        return getNumericValue();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -251,9 +205,6 @@ public class QtEnumValueImpl extends MinimalEObjectImpl.Container implements QtE
         return;
       case QIdlPackage.QT_ENUM_VALUE__ENUM_MASK:
         setEnumMask((QtEnumValueMask)newValue);
-        return;
-      case QIdlPackage.QT_ENUM_VALUE__NUMERIC_VALUE:
-        setNumericValue((Integer)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -275,9 +226,6 @@ public class QtEnumValueImpl extends MinimalEObjectImpl.Container implements QtE
       case QIdlPackage.QT_ENUM_VALUE__ENUM_MASK:
         setEnumMask((QtEnumValueMask)null);
         return;
-      case QIdlPackage.QT_ENUM_VALUE__NUMERIC_VALUE:
-        setNumericValue(NUMERIC_VALUE_EDEFAULT);
-        return;
     }
     super.eUnset(featureID);
   }
@@ -296,8 +244,6 @@ public class QtEnumValueImpl extends MinimalEObjectImpl.Container implements QtE
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case QIdlPackage.QT_ENUM_VALUE__ENUM_MASK:
         return enumMask != null;
-      case QIdlPackage.QT_ENUM_VALUE__NUMERIC_VALUE:
-        return numericValue != NUMERIC_VALUE_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }
@@ -315,8 +261,6 @@ public class QtEnumValueImpl extends MinimalEObjectImpl.Container implements QtE
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (name: ");
     result.append(name);
-    result.append(", numericValue: ");
-    result.append(numericValue);
     result.append(')');
     return result.toString();
   }

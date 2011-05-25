@@ -176,10 +176,10 @@ ruleQtNamespace returns [EObject current=null]
     {
     	newLeafNode(otherlv_2, grammarAccess.getQtNamespaceAccess().getLeftCurlyBracketKeyword_2());
     }
-(
+((
 (
 		{ 
-	        newCompositeNode(grammarAccess.getQtNamespaceAccess().getNamespacesQtNamespaceParserRuleCall_3_0()); 
+	        newCompositeNode(grammarAccess.getQtNamespaceAccess().getNamespacesQtNamespaceParserRuleCall_3_0_0()); 
 	    }
 		lv_namespaces_3_0=ruleQtNamespace		{
 	        if ($current==null) {
@@ -194,10 +194,11 @@ ruleQtNamespace returns [EObject current=null]
 	    }
 
 )
-)*(
+)
+    |(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getQtNamespaceAccess().getEnumsQtEnumParserRuleCall_4_0()); 
+	        newCompositeNode(grammarAccess.getQtNamespaceAccess().getEnumsQtEnumParserRuleCall_3_1_0()); 
 	    }
 		lv_enums_4_0=ruleQtEnum		{
 	        if ($current==null) {
@@ -212,10 +213,11 @@ ruleQtNamespace returns [EObject current=null]
 	    }
 
 )
-)*(
+)
+    |(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getQtNamespaceAccess().getFlagsQtFlagsParserRuleCall_5_0()); 
+	        newCompositeNode(grammarAccess.getQtNamespaceAccess().getFlagsQtFlagsParserRuleCall_3_2_0()); 
 	    }
 		lv_flags_5_0=ruleQtFlags		{
 	        if ($current==null) {
@@ -230,10 +232,11 @@ ruleQtNamespace returns [EObject current=null]
 	    }
 
 )
-)*(
+)
+    |(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getQtNamespaceAccess().getClassesQtClassParserRuleCall_6_0()); 
+	        newCompositeNode(grammarAccess.getQtNamespaceAccess().getClassesQtClassParserRuleCall_3_3_0()); 
 	    }
 		lv_classes_6_0=ruleQtClass		{
 	        if ($current==null) {
@@ -248,10 +251,11 @@ ruleQtNamespace returns [EObject current=null]
 	    }
 
 )
-)*(
+)
+    |(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getQtNamespaceAccess().getOperationsQtOperationParserRuleCall_7_0()); 
+	        newCompositeNode(grammarAccess.getQtNamespaceAccess().getOperationsQtOperationParserRuleCall_3_4_0()); 
 	    }
 		lv_operations_7_0=ruleQtOperation		{
 	        if ($current==null) {
@@ -266,9 +270,9 @@ ruleQtNamespace returns [EObject current=null]
 	    }
 
 )
-)*	otherlv_8='}' 
+))*	otherlv_8='}' 
     {
-    	newLeafNode(otherlv_8, grammarAccess.getQtNamespaceAccess().getRightCurlyBracketKeyword_8());
+    	newLeafNode(otherlv_8, grammarAccess.getQtNamespaceAccess().getRightCurlyBracketKeyword_4());
     }
 )
 ;
@@ -403,10 +407,10 @@ ruleQtClass returns [EObject current=null]
     {
     	newLeafNode(otherlv_6, grammarAccess.getQtClassAccess().getLeftCurlyBracketKeyword_3());
     }
-(
+((
 (
 		{ 
-	        newCompositeNode(grammarAccess.getQtClassAccess().getEnumsQtEnumParserRuleCall_4_0()); 
+	        newCompositeNode(grammarAccess.getQtClassAccess().getEnumsQtEnumParserRuleCall_4_0_0()); 
 	    }
 		lv_enums_7_0=ruleQtEnum		{
 	        if ($current==null) {
@@ -421,10 +425,11 @@ ruleQtClass returns [EObject current=null]
 	    }
 
 )
-)*(
+)
+    |(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getQtClassAccess().getFlagsQtFlagsParserRuleCall_5_0()); 
+	        newCompositeNode(grammarAccess.getQtClassAccess().getFlagsQtFlagsParserRuleCall_4_1_0()); 
 	    }
 		lv_flags_8_0=ruleQtFlags		{
 	        if ($current==null) {
@@ -439,10 +444,11 @@ ruleQtClass returns [EObject current=null]
 	    }
 
 )
-)*(
+)
+    |(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getQtClassAccess().getClassesQtClassParserRuleCall_6_0()); 
+	        newCompositeNode(grammarAccess.getQtClassAccess().getClassesQtClassParserRuleCall_4_2_0()); 
 	    }
 		lv_classes_9_0=ruleQtClass		{
 	        if ($current==null) {
@@ -457,10 +463,11 @@ ruleQtClass returns [EObject current=null]
 	    }
 
 )
-)*(
+)
+    |(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getQtClassAccess().getPropertiesQtPropertyParserRuleCall_7_0()); 
+	        newCompositeNode(grammarAccess.getQtClassAccess().getPropertiesQtPropertyParserRuleCall_4_3_0()); 
 	    }
 		lv_properties_10_0=ruleQtProperty		{
 	        if ($current==null) {
@@ -475,10 +482,11 @@ ruleQtClass returns [EObject current=null]
 	    }
 
 )
-)*(
+)
+    |(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getQtClassAccess().getConstructorsQtConstructorParserRuleCall_8_0()); 
+	        newCompositeNode(grammarAccess.getQtClassAccess().getConstructorsQtConstructorParserRuleCall_4_4_0()); 
 	    }
 		lv_constructors_11_0=ruleQtConstructor		{
 	        if ($current==null) {
@@ -493,10 +501,11 @@ ruleQtClass returns [EObject current=null]
 	    }
 
 )
-)*(
+)
+    |(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getQtClassAccess().getOperationsQtOperationParserRuleCall_9_0()); 
+	        newCompositeNode(grammarAccess.getQtClassAccess().getOperationsQtOperationParserRuleCall_4_5_0()); 
 	    }
 		lv_operations_12_0=ruleQtOperation		{
 	        if ($current==null) {
@@ -511,9 +520,9 @@ ruleQtClass returns [EObject current=null]
 	    }
 
 )
-)*	otherlv_13='}' 
+))*	otherlv_13='}' 
     {
-    	newLeafNode(otherlv_13, grammarAccess.getQtClassAccess().getRightCurlyBracketKeyword_10());
+    	newLeafNode(otherlv_13, grammarAccess.getQtClassAccess().getRightCurlyBracketKeyword_5());
     }
 )
 ;
@@ -770,7 +779,11 @@ ruleQtFlags returns [EObject current=null]
 	}
 
 )
-))
+)	otherlv_4=';' 
+    {
+    	newLeafNode(otherlv_4, grammarAccess.getQtFlagsAccess().getSemicolonKeyword_4());
+    }
+)
 ;
 
 
@@ -813,10 +826,10 @@ ruleQtEnumValue returns [EObject current=null]
     {
     	newLeafNode(otherlv_1, grammarAccess.getQtEnumValueAccess().getEqualsSignKeyword_1());
     }
-((
+(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getQtEnumValueAccess().getEnumMaskQtEnumValueMaskParserRuleCall_2_0_0()); 
+	        newCompositeNode(grammarAccess.getQtEnumValueAccess().getEnumMaskQtEnumValueMaskParserRuleCall_2_0()); 
 	    }
 		lv_enumMask_2_0=ruleQtEnumValueMask		{
 	        if ($current==null) {
@@ -831,26 +844,7 @@ ruleQtEnumValue returns [EObject current=null]
 	    }
 
 )
-)
-    |(
-(
-		lv_numericValue_3_0=RULE_INT
-		{
-			newLeafNode(lv_numericValue_3_0, grammarAccess.getQtEnumValueAccess().getNumericValueINTTerminalRuleCall_2_1_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getQtEnumValueRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"numericValue",
-        		lv_numericValue_3_0, 
-        		"INT");
-	    }
-
-)
-)))
+))
 ;
 
 
@@ -871,6 +865,44 @@ ruleQtEnumValueMask returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
+(((
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getQtEnumValueMaskRule());
+	        }
+        }
+		{ 
+	        newCompositeNode(grammarAccess.getQtEnumValueMaskAccess().getValueQtEnumValueCrossReference_0_0_0()); 
+	    }
+		ruleQualifiedName		{ 
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)
+    |(
+(
+		lv_numericValue_1_0=RULE_LONG
+		{
+			newLeafNode(lv_numericValue_1_0, grammarAccess.getQtEnumValueMaskAccess().getNumericValueLONGTerminalRuleCall_0_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getQtEnumValueMaskRule());
+	        }
+       		addWithLastConsumed(
+       			$current, 
+       			"numericValue",
+        		lv_numericValue_1_0, 
+        		"LONG");
+	    }
+
+)
+))(	otherlv_2='|' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getQtEnumValueMaskAccess().getVerticalLineKeyword_1_0());
+    }
 ((
 (
 		{
@@ -879,33 +911,33 @@ ruleQtEnumValueMask returns [EObject current=null]
 	        }
         }
 		{ 
-	        newCompositeNode(grammarAccess.getQtEnumValueMaskAccess().getValueQtEnumValueCrossReference_0_0()); 
+	        newCompositeNode(grammarAccess.getQtEnumValueMaskAccess().getValueQtEnumValueCrossReference_1_1_0_0()); 
 	    }
 		ruleQualifiedName		{ 
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)(	otherlv_1='|' 
-    {
-    	newLeafNode(otherlv_1, grammarAccess.getQtEnumValueMaskAccess().getVerticalLineKeyword_1_0());
-    }
+)
+    |(
 (
-(
+		lv_numericValue_4_0=RULE_LONG
 		{
-			if ($current==null) {
+			newLeafNode(lv_numericValue_4_0, grammarAccess.getQtEnumValueMaskAccess().getNumericValueLONGTerminalRuleCall_1_1_1_0()); 
+		}
+		{
+	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getQtEnumValueMaskRule());
 	        }
-        }
-		{ 
-	        newCompositeNode(grammarAccess.getQtEnumValueMaskAccess().getValueQtEnumValueCrossReference_1_1_0()); 
-	    }
-		ruleQualifiedName		{ 
-	        afterParserOrEnumRuleCall();
+       		addWithLastConsumed(
+       			$current, 
+       			"numericValue",
+        		lv_numericValue_4_0, 
+        		"LONG");
 	    }
 
 )
-))*)
+)))*)
 ;
 
 
@@ -1217,10 +1249,12 @@ ruleQtValue returns [EObject current=null]
 	            $current = createModelElement(grammarAccess.getQtValueRule());
 	        }
         }
-	otherlv_2=RULE_ID
-	{
-		newLeafNode(otherlv_2, grammarAccess.getQtValueAccess().getTypeQtTypeCrossReference_2_0()); 
-	}
+		{ 
+	        newCompositeNode(grammarAccess.getQtValueAccess().getTypeQtTypeCrossReference_2_0()); 
+	    }
+		ruleQualifiedName		{ 
+	        afterParserOrEnumRuleCall();
+	    }
 
 )
 )(
@@ -1377,10 +1411,12 @@ ruleQtReturnValue returns [EObject current=null]
 	            $current = createModelElement(grammarAccess.getQtReturnValueRule());
 	        }
         }
-	otherlv_2=RULE_ID
-	{
-		newLeafNode(otherlv_2, grammarAccess.getQtReturnValueAccess().getTypeQtTypeCrossReference_2_0()); 
-	}
+		{ 
+	        newCompositeNode(grammarAccess.getQtReturnValueAccess().getTypeQtTypeCrossReference_2_0()); 
+	    }
+		ruleQualifiedName		{ 
+	        afterParserOrEnumRuleCall();
+	    }
 
 )
 ))
@@ -5927,6 +5963,8 @@ ruleType returns [Enumerator current=null]
 ));
 
 
+
+RULE_LONG : '-'? ('0'..'9')+;
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'$'|'_') ('a'..'z'|'A'..'Z'|'$'|'_'|'0'..'9')*;
 

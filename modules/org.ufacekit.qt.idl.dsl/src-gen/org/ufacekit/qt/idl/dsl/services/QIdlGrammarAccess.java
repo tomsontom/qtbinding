@@ -53,17 +53,18 @@ public class QIdlGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cNamespacesAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cNamespacesQtNamespaceParserRuleCall_3_0 = (RuleCall)cNamespacesAssignment_3.eContents().get(0);
-		private final Assignment cEnumsAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cEnumsQtEnumParserRuleCall_4_0 = (RuleCall)cEnumsAssignment_4.eContents().get(0);
-		private final Assignment cFlagsAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cFlagsQtFlagsParserRuleCall_5_0 = (RuleCall)cFlagsAssignment_5.eContents().get(0);
-		private final Assignment cClassesAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cClassesQtClassParserRuleCall_6_0 = (RuleCall)cClassesAssignment_6.eContents().get(0);
-		private final Assignment cOperationsAssignment_7 = (Assignment)cGroup.eContents().get(7);
-		private final RuleCall cOperationsQtOperationParserRuleCall_7_0 = (RuleCall)cOperationsAssignment_7.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final Alternatives cAlternatives_3 = (Alternatives)cGroup.eContents().get(3);
+		private final Assignment cNamespacesAssignment_3_0 = (Assignment)cAlternatives_3.eContents().get(0);
+		private final RuleCall cNamespacesQtNamespaceParserRuleCall_3_0_0 = (RuleCall)cNamespacesAssignment_3_0.eContents().get(0);
+		private final Assignment cEnumsAssignment_3_1 = (Assignment)cAlternatives_3.eContents().get(1);
+		private final RuleCall cEnumsQtEnumParserRuleCall_3_1_0 = (RuleCall)cEnumsAssignment_3_1.eContents().get(0);
+		private final Assignment cFlagsAssignment_3_2 = (Assignment)cAlternatives_3.eContents().get(2);
+		private final RuleCall cFlagsQtFlagsParserRuleCall_3_2_0 = (RuleCall)cFlagsAssignment_3_2.eContents().get(0);
+		private final Assignment cClassesAssignment_3_3 = (Assignment)cAlternatives_3.eContents().get(3);
+		private final RuleCall cClassesQtClassParserRuleCall_3_3_0 = (RuleCall)cClassesAssignment_3_3.eContents().get(0);
+		private final Assignment cOperationsAssignment_3_4 = (Assignment)cAlternatives_3.eContents().get(4);
+		private final RuleCall cOperationsQtOperationParserRuleCall_3_4_0 = (RuleCall)cOperationsAssignment_3_4.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		////QtModule:
 		////	'module' name=ID '{'
@@ -71,12 +72,12 @@ public class QIdlGrammarAccess extends AbstractGrammarElementFinder {
 		////		classes+=[QtClass]* 
 		////	'}';
 		//QtNamespace:
-		//	"namespace" name=ID "{" namespaces+=QtNamespace* enums+=QtEnum* flags+=QtFlags* classes+=QtClass*
-		//	operations+=QtOperation* "}";
+		//	"namespace" name=ID "{" (namespaces+=QtNamespace | enums+=QtEnum | flags+=QtFlags | classes+=QtClass |
+		//	operations+=QtOperation)* "}";
 		public ParserRule getRule() { return rule; }
 
-		//"namespace" name=ID "{" namespaces+=QtNamespace* enums+=QtEnum* flags+=QtFlags* classes+=QtClass*
-		//operations+=QtOperation* "}"
+		//"namespace" name=ID "{" (namespaces+=QtNamespace | enums+=QtEnum | flags+=QtFlags | classes+=QtClass |
+		//operations+=QtOperation)* "}"
 		public Group getGroup() { return cGroup; }
 
 		//"namespace"
@@ -91,62 +92,69 @@ public class QIdlGrammarAccess extends AbstractGrammarElementFinder {
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//namespaces+=QtNamespace*
-		public Assignment getNamespacesAssignment_3() { return cNamespacesAssignment_3; }
+		//(namespaces+=QtNamespace | enums+=QtEnum | flags+=QtFlags | classes+=QtClass | operations+=QtOperation)*
+		public Alternatives getAlternatives_3() { return cAlternatives_3; }
+
+		//namespaces+=QtNamespace
+		public Assignment getNamespacesAssignment_3_0() { return cNamespacesAssignment_3_0; }
 
 		//QtNamespace
-		public RuleCall getNamespacesQtNamespaceParserRuleCall_3_0() { return cNamespacesQtNamespaceParserRuleCall_3_0; }
+		public RuleCall getNamespacesQtNamespaceParserRuleCall_3_0_0() { return cNamespacesQtNamespaceParserRuleCall_3_0_0; }
 
-		//enums+=QtEnum*
-		public Assignment getEnumsAssignment_4() { return cEnumsAssignment_4; }
+		//enums+=QtEnum
+		public Assignment getEnumsAssignment_3_1() { return cEnumsAssignment_3_1; }
 
 		//QtEnum
-		public RuleCall getEnumsQtEnumParserRuleCall_4_0() { return cEnumsQtEnumParserRuleCall_4_0; }
+		public RuleCall getEnumsQtEnumParserRuleCall_3_1_0() { return cEnumsQtEnumParserRuleCall_3_1_0; }
 
-		//flags+=QtFlags*
-		public Assignment getFlagsAssignment_5() { return cFlagsAssignment_5; }
+		//flags+=QtFlags
+		public Assignment getFlagsAssignment_3_2() { return cFlagsAssignment_3_2; }
 
 		//QtFlags
-		public RuleCall getFlagsQtFlagsParserRuleCall_5_0() { return cFlagsQtFlagsParserRuleCall_5_0; }
+		public RuleCall getFlagsQtFlagsParserRuleCall_3_2_0() { return cFlagsQtFlagsParserRuleCall_3_2_0; }
 
-		//classes+=QtClass*
-		public Assignment getClassesAssignment_6() { return cClassesAssignment_6; }
+		//classes+=QtClass
+		public Assignment getClassesAssignment_3_3() { return cClassesAssignment_3_3; }
 
 		//QtClass
-		public RuleCall getClassesQtClassParserRuleCall_6_0() { return cClassesQtClassParserRuleCall_6_0; }
+		public RuleCall getClassesQtClassParserRuleCall_3_3_0() { return cClassesQtClassParserRuleCall_3_3_0; }
 
-		//operations+=QtOperation*
-		public Assignment getOperationsAssignment_7() { return cOperationsAssignment_7; }
+		//operations+=QtOperation
+		public Assignment getOperationsAssignment_3_4() { return cOperationsAssignment_3_4; }
 
 		//QtOperation
-		public RuleCall getOperationsQtOperationParserRuleCall_7_0() { return cOperationsQtOperationParserRuleCall_7_0; }
+		public RuleCall getOperationsQtOperationParserRuleCall_3_4_0() { return cOperationsQtOperationParserRuleCall_3_4_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
+		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
 	}
 
 	public class QtTypeElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "QtType");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cQtEnumParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cQtClassParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cQtBuitinTypeParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cQtFlagsParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cQtClassParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cQtBuitinTypeParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		
 		//QtType:
-		//	QtEnum | QtClass | QtBuitinType;
+		//	QtEnum | QtFlags | QtClass | QtBuitinType;
 		public ParserRule getRule() { return rule; }
 
-		//QtEnum | QtClass | QtBuitinType
+		//QtEnum | QtFlags | QtClass | QtBuitinType
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//QtEnum
 		public RuleCall getQtEnumParserRuleCall_0() { return cQtEnumParserRuleCall_0; }
 
+		//QtFlags
+		public RuleCall getQtFlagsParserRuleCall_1() { return cQtFlagsParserRuleCall_1; }
+
 		//QtClass
-		public RuleCall getQtClassParserRuleCall_1() { return cQtClassParserRuleCall_1; }
+		public RuleCall getQtClassParserRuleCall_2() { return cQtClassParserRuleCall_2; }
 
 		//QtBuitinType
-		public RuleCall getQtBuitinTypeParserRuleCall_2() { return cQtBuitinTypeParserRuleCall_2; }
+		public RuleCall getQtBuitinTypeParserRuleCall_3() { return cQtBuitinTypeParserRuleCall_3; }
 	}
 
 	public class QtOperationElements extends AbstractParserRuleElementFinder {
@@ -190,27 +198,28 @@ public class QIdlGrammarAccess extends AbstractGrammarElementFinder {
 		private final CrossReference cSuperTypesQtClassCrossReference_2_2_1_0 = (CrossReference)cSuperTypesAssignment_2_2_1.eContents().get(0);
 		private final RuleCall cSuperTypesQtClassIDTerminalRuleCall_2_2_1_0_1 = (RuleCall)cSuperTypesQtClassCrossReference_2_2_1_0.eContents().get(1);
 		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cEnumsAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cEnumsQtEnumParserRuleCall_4_0 = (RuleCall)cEnumsAssignment_4.eContents().get(0);
-		private final Assignment cFlagsAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cFlagsQtFlagsParserRuleCall_5_0 = (RuleCall)cFlagsAssignment_5.eContents().get(0);
-		private final Assignment cClassesAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cClassesQtClassParserRuleCall_6_0 = (RuleCall)cClassesAssignment_6.eContents().get(0);
-		private final Assignment cPropertiesAssignment_7 = (Assignment)cGroup.eContents().get(7);
-		private final RuleCall cPropertiesQtPropertyParserRuleCall_7_0 = (RuleCall)cPropertiesAssignment_7.eContents().get(0);
-		private final Assignment cConstructorsAssignment_8 = (Assignment)cGroup.eContents().get(8);
-		private final RuleCall cConstructorsQtConstructorParserRuleCall_8_0 = (RuleCall)cConstructorsAssignment_8.eContents().get(0);
-		private final Assignment cOperationsAssignment_9 = (Assignment)cGroup.eContents().get(9);
-		private final RuleCall cOperationsQtOperationParserRuleCall_9_0 = (RuleCall)cOperationsAssignment_9.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
+		private final Alternatives cAlternatives_4 = (Alternatives)cGroup.eContents().get(4);
+		private final Assignment cEnumsAssignment_4_0 = (Assignment)cAlternatives_4.eContents().get(0);
+		private final RuleCall cEnumsQtEnumParserRuleCall_4_0_0 = (RuleCall)cEnumsAssignment_4_0.eContents().get(0);
+		private final Assignment cFlagsAssignment_4_1 = (Assignment)cAlternatives_4.eContents().get(1);
+		private final RuleCall cFlagsQtFlagsParserRuleCall_4_1_0 = (RuleCall)cFlagsAssignment_4_1.eContents().get(0);
+		private final Assignment cClassesAssignment_4_2 = (Assignment)cAlternatives_4.eContents().get(2);
+		private final RuleCall cClassesQtClassParserRuleCall_4_2_0 = (RuleCall)cClassesAssignment_4_2.eContents().get(0);
+		private final Assignment cPropertiesAssignment_4_3 = (Assignment)cAlternatives_4.eContents().get(3);
+		private final RuleCall cPropertiesQtPropertyParserRuleCall_4_3_0 = (RuleCall)cPropertiesAssignment_4_3.eContents().get(0);
+		private final Assignment cConstructorsAssignment_4_4 = (Assignment)cAlternatives_4.eContents().get(4);
+		private final RuleCall cConstructorsQtConstructorParserRuleCall_4_4_0 = (RuleCall)cConstructorsAssignment_4_4.eContents().get(0);
+		private final Assignment cOperationsAssignment_4_5 = (Assignment)cAlternatives_4.eContents().get(5);
+		private final RuleCall cOperationsQtOperationParserRuleCall_4_5_0 = (RuleCall)cOperationsAssignment_4_5.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//QtClass:
-		//	"class" name=ID ("extends" superTypes+=[QtClass] ("," superTypes+=[QtClass])*)? "{" enums+=QtEnum* flags+=QtFlags*
-		//	classes+=QtClass* properties+=QtProperty* constructors+=QtConstructor* operations+=QtOperation* "}";
+		//	"class" name=ID ("extends" superTypes+=[QtClass] ("," superTypes+=[QtClass])*)? "{" (enums+=QtEnum | flags+=QtFlags |
+		//	classes+=QtClass | properties+=QtProperty | constructors+=QtConstructor | operations+=QtOperation)* "}";
 		public ParserRule getRule() { return rule; }
 
-		//"class" name=ID ("extends" superTypes+=[QtClass] ("," superTypes+=[QtClass])*)? "{" enums+=QtEnum* flags+=QtFlags*
-		//classes+=QtClass* properties+=QtProperty* constructors+=QtConstructor* operations+=QtOperation* "}"
+		//"class" name=ID ("extends" superTypes+=[QtClass] ("," superTypes+=[QtClass])*)? "{" (enums+=QtEnum | flags+=QtFlags |
+		//classes+=QtClass | properties+=QtProperty | constructors+=QtConstructor | operations+=QtOperation)* "}"
 		public Group getGroup() { return cGroup; }
 
 		//"class"
@@ -255,44 +264,48 @@ public class QIdlGrammarAccess extends AbstractGrammarElementFinder {
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 
-		//enums+=QtEnum*
-		public Assignment getEnumsAssignment_4() { return cEnumsAssignment_4; }
+		//(enums+=QtEnum | flags+=QtFlags | classes+=QtClass | properties+=QtProperty | constructors+=QtConstructor |
+		//operations+=QtOperation)*
+		public Alternatives getAlternatives_4() { return cAlternatives_4; }
+
+		//enums+=QtEnum
+		public Assignment getEnumsAssignment_4_0() { return cEnumsAssignment_4_0; }
 
 		//QtEnum
-		public RuleCall getEnumsQtEnumParserRuleCall_4_0() { return cEnumsQtEnumParserRuleCall_4_0; }
+		public RuleCall getEnumsQtEnumParserRuleCall_4_0_0() { return cEnumsQtEnumParserRuleCall_4_0_0; }
 
-		//flags+=QtFlags*
-		public Assignment getFlagsAssignment_5() { return cFlagsAssignment_5; }
+		//flags+=QtFlags
+		public Assignment getFlagsAssignment_4_1() { return cFlagsAssignment_4_1; }
 
 		//QtFlags
-		public RuleCall getFlagsQtFlagsParserRuleCall_5_0() { return cFlagsQtFlagsParserRuleCall_5_0; }
+		public RuleCall getFlagsQtFlagsParserRuleCall_4_1_0() { return cFlagsQtFlagsParserRuleCall_4_1_0; }
 
-		//classes+=QtClass*
-		public Assignment getClassesAssignment_6() { return cClassesAssignment_6; }
+		//classes+=QtClass
+		public Assignment getClassesAssignment_4_2() { return cClassesAssignment_4_2; }
 
 		//QtClass
-		public RuleCall getClassesQtClassParserRuleCall_6_0() { return cClassesQtClassParserRuleCall_6_0; }
+		public RuleCall getClassesQtClassParserRuleCall_4_2_0() { return cClassesQtClassParserRuleCall_4_2_0; }
 
-		//properties+=QtProperty*
-		public Assignment getPropertiesAssignment_7() { return cPropertiesAssignment_7; }
+		//properties+=QtProperty
+		public Assignment getPropertiesAssignment_4_3() { return cPropertiesAssignment_4_3; }
 
 		//QtProperty
-		public RuleCall getPropertiesQtPropertyParserRuleCall_7_0() { return cPropertiesQtPropertyParserRuleCall_7_0; }
+		public RuleCall getPropertiesQtPropertyParserRuleCall_4_3_0() { return cPropertiesQtPropertyParserRuleCall_4_3_0; }
 
-		//constructors+=QtConstructor*
-		public Assignment getConstructorsAssignment_8() { return cConstructorsAssignment_8; }
+		//constructors+=QtConstructor
+		public Assignment getConstructorsAssignment_4_4() { return cConstructorsAssignment_4_4; }
 
 		//QtConstructor
-		public RuleCall getConstructorsQtConstructorParserRuleCall_8_0() { return cConstructorsQtConstructorParserRuleCall_8_0; }
+		public RuleCall getConstructorsQtConstructorParserRuleCall_4_4_0() { return cConstructorsQtConstructorParserRuleCall_4_4_0; }
 
-		//operations+=QtOperation*
-		public Assignment getOperationsAssignment_9() { return cOperationsAssignment_9; }
+		//operations+=QtOperation
+		public Assignment getOperationsAssignment_4_5() { return cOperationsAssignment_4_5; }
 
 		//QtOperation
-		public RuleCall getOperationsQtOperationParserRuleCall_9_0() { return cOperationsQtOperationParserRuleCall_9_0; }
+		public RuleCall getOperationsQtOperationParserRuleCall_4_5_0() { return cOperationsQtOperationParserRuleCall_4_5_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_10() { return cRightCurlyBracketKeyword_10; }
+		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 
 	public class QtConstructorElements extends AbstractParserRuleElementFinder {
@@ -429,12 +442,13 @@ public class QIdlGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cEnumerationAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final CrossReference cEnumerationQtEnumCrossReference_3_0 = (CrossReference)cEnumerationAssignment_3.eContents().get(0);
 		private final RuleCall cEnumerationQtEnumIDTerminalRuleCall_3_0_1 = (RuleCall)cEnumerationQtEnumCrossReference_3_0.eContents().get(1);
+		private final Keyword cSemicolonKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//QtFlags:
-		//	"flags" name=ID ":" enumeration=[QtEnum];
+		//	"flags" name=ID ":" enumeration=[QtEnum] ";";
 		public ParserRule getRule() { return rule; }
 
-		//"flags" name=ID ":" enumeration=[QtEnum]
+		//"flags" name=ID ":" enumeration=[QtEnum] ";"
 		public Group getGroup() { return cGroup; }
 
 		//"flags"
@@ -457,6 +471,9 @@ public class QIdlGrammarAccess extends AbstractGrammarElementFinder {
 
 		//ID
 		public RuleCall getEnumerationQtEnumIDTerminalRuleCall_3_0_1() { return cEnumerationQtEnumIDTerminalRuleCall_3_0_1; }
+
+		//";"
+		public Keyword getSemicolonKeyword_4() { return cSemicolonKeyword_4; }
 	}
 
 	public class QtEnumValueElements extends AbstractParserRuleElementFinder {
@@ -465,17 +482,14 @@ public class QIdlGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cNameIDTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
 		private final Keyword cEqualsSignKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Alternatives cAlternatives_2 = (Alternatives)cGroup.eContents().get(2);
-		private final Assignment cEnumMaskAssignment_2_0 = (Assignment)cAlternatives_2.eContents().get(0);
-		private final RuleCall cEnumMaskQtEnumValueMaskParserRuleCall_2_0_0 = (RuleCall)cEnumMaskAssignment_2_0.eContents().get(0);
-		private final Assignment cNumericValueAssignment_2_1 = (Assignment)cAlternatives_2.eContents().get(1);
-		private final RuleCall cNumericValueINTTerminalRuleCall_2_1_0 = (RuleCall)cNumericValueAssignment_2_1.eContents().get(0);
+		private final Assignment cEnumMaskAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cEnumMaskQtEnumValueMaskParserRuleCall_2_0 = (RuleCall)cEnumMaskAssignment_2.eContents().get(0);
 		
 		//QtEnumValue:
-		//	name=ID "=" (enumMask=QtEnumValueMask | numericValue=INT);
+		//	name=ID "=" enumMask=QtEnumValueMask;
 		public ParserRule getRule() { return rule; }
 
-		//name=ID "=" (enumMask=QtEnumValueMask | numericValue=INT)
+		//name=ID "=" enumMask=QtEnumValueMask
 		public Group getGroup() { return cGroup; }
 
 		//name=ID
@@ -487,64 +501,81 @@ public class QIdlGrammarAccess extends AbstractGrammarElementFinder {
 		//"="
 		public Keyword getEqualsSignKeyword_1() { return cEqualsSignKeyword_1; }
 
-		//enumMask=QtEnumValueMask | numericValue=INT
-		public Alternatives getAlternatives_2() { return cAlternatives_2; }
-
 		//enumMask=QtEnumValueMask
-		public Assignment getEnumMaskAssignment_2_0() { return cEnumMaskAssignment_2_0; }
+		public Assignment getEnumMaskAssignment_2() { return cEnumMaskAssignment_2; }
 
 		//QtEnumValueMask
-		public RuleCall getEnumMaskQtEnumValueMaskParserRuleCall_2_0_0() { return cEnumMaskQtEnumValueMaskParserRuleCall_2_0_0; }
-
-		//numericValue=INT
-		public Assignment getNumericValueAssignment_2_1() { return cNumericValueAssignment_2_1; }
-
-		//INT
-		public RuleCall getNumericValueINTTerminalRuleCall_2_1_0() { return cNumericValueINTTerminalRuleCall_2_1_0; }
+		public RuleCall getEnumMaskQtEnumValueMaskParserRuleCall_2_0() { return cEnumMaskQtEnumValueMaskParserRuleCall_2_0; }
 	}
 
 	public class QtEnumValueMaskElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "QtEnumValueMask");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cValueAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final CrossReference cValueQtEnumValueCrossReference_0_0 = (CrossReference)cValueAssignment_0.eContents().get(0);
-		private final RuleCall cValueQtEnumValueQualifiedNameParserRuleCall_0_0_1 = (RuleCall)cValueQtEnumValueCrossReference_0_0.eContents().get(1);
+		private final Alternatives cAlternatives_0 = (Alternatives)cGroup.eContents().get(0);
+		private final Assignment cValueAssignment_0_0 = (Assignment)cAlternatives_0.eContents().get(0);
+		private final CrossReference cValueQtEnumValueCrossReference_0_0_0 = (CrossReference)cValueAssignment_0_0.eContents().get(0);
+		private final RuleCall cValueQtEnumValueQualifiedNameParserRuleCall_0_0_0_1 = (RuleCall)cValueQtEnumValueCrossReference_0_0_0.eContents().get(1);
+		private final Assignment cNumericValueAssignment_0_1 = (Assignment)cAlternatives_0.eContents().get(1);
+		private final RuleCall cNumericValueLONGTerminalRuleCall_0_1_0 = (RuleCall)cNumericValueAssignment_0_1.eContents().get(0);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
 		private final Keyword cVerticalLineKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final Assignment cValueAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final CrossReference cValueQtEnumValueCrossReference_1_1_0 = (CrossReference)cValueAssignment_1_1.eContents().get(0);
-		private final RuleCall cValueQtEnumValueQualifiedNameParserRuleCall_1_1_0_1 = (RuleCall)cValueQtEnumValueCrossReference_1_1_0.eContents().get(1);
+		private final Alternatives cAlternatives_1_1 = (Alternatives)cGroup_1.eContents().get(1);
+		private final Assignment cValueAssignment_1_1_0 = (Assignment)cAlternatives_1_1.eContents().get(0);
+		private final CrossReference cValueQtEnumValueCrossReference_1_1_0_0 = (CrossReference)cValueAssignment_1_1_0.eContents().get(0);
+		private final RuleCall cValueQtEnumValueQualifiedNameParserRuleCall_1_1_0_0_1 = (RuleCall)cValueQtEnumValueCrossReference_1_1_0_0.eContents().get(1);
+		private final Assignment cNumericValueAssignment_1_1_1 = (Assignment)cAlternatives_1_1.eContents().get(1);
+		private final RuleCall cNumericValueLONGTerminalRuleCall_1_1_1_0 = (RuleCall)cNumericValueAssignment_1_1_1.eContents().get(0);
 		
 		//QtEnumValueMask:
-		//	value+=[QtEnumValue|QualifiedName] ("|" value+=[QtEnumValue|QualifiedName])*;
+		//	(value+=[QtEnumValue|QualifiedName] | numericValue+=LONG) ("|" (value+=[QtEnumValue|QualifiedName] |
+		//	numericValue+=LONG))*;
 		public ParserRule getRule() { return rule; }
 
-		//value+=[QtEnumValue|QualifiedName] ("|" value+=[QtEnumValue|QualifiedName])*
+		//(value+=[QtEnumValue|QualifiedName] | numericValue+=LONG) ("|" (value+=[QtEnumValue|QualifiedName] |
+		//numericValue+=LONG))*
 		public Group getGroup() { return cGroup; }
 
+		//value+=[QtEnumValue|QualifiedName] | numericValue+=LONG
+		public Alternatives getAlternatives_0() { return cAlternatives_0; }
+
 		//value+=[QtEnumValue|QualifiedName]
-		public Assignment getValueAssignment_0() { return cValueAssignment_0; }
+		public Assignment getValueAssignment_0_0() { return cValueAssignment_0_0; }
 
 		//[QtEnumValue|QualifiedName]
-		public CrossReference getValueQtEnumValueCrossReference_0_0() { return cValueQtEnumValueCrossReference_0_0; }
+		public CrossReference getValueQtEnumValueCrossReference_0_0_0() { return cValueQtEnumValueCrossReference_0_0_0; }
 
 		//QualifiedName
-		public RuleCall getValueQtEnumValueQualifiedNameParserRuleCall_0_0_1() { return cValueQtEnumValueQualifiedNameParserRuleCall_0_0_1; }
+		public RuleCall getValueQtEnumValueQualifiedNameParserRuleCall_0_0_0_1() { return cValueQtEnumValueQualifiedNameParserRuleCall_0_0_0_1; }
 
-		//("|" value+=[QtEnumValue|QualifiedName])*
+		//numericValue+=LONG
+		public Assignment getNumericValueAssignment_0_1() { return cNumericValueAssignment_0_1; }
+
+		//LONG
+		public RuleCall getNumericValueLONGTerminalRuleCall_0_1_0() { return cNumericValueLONGTerminalRuleCall_0_1_0; }
+
+		//("|" (value+=[QtEnumValue|QualifiedName] | numericValue+=LONG))*
 		public Group getGroup_1() { return cGroup_1; }
 
 		//"|"
 		public Keyword getVerticalLineKeyword_1_0() { return cVerticalLineKeyword_1_0; }
 
+		//value+=[QtEnumValue|QualifiedName] | numericValue+=LONG
+		public Alternatives getAlternatives_1_1() { return cAlternatives_1_1; }
+
 		//value+=[QtEnumValue|QualifiedName]
-		public Assignment getValueAssignment_1_1() { return cValueAssignment_1_1; }
+		public Assignment getValueAssignment_1_1_0() { return cValueAssignment_1_1_0; }
 
 		//[QtEnumValue|QualifiedName]
-		public CrossReference getValueQtEnumValueCrossReference_1_1_0() { return cValueQtEnumValueCrossReference_1_1_0; }
+		public CrossReference getValueQtEnumValueCrossReference_1_1_0_0() { return cValueQtEnumValueCrossReference_1_1_0_0; }
 
 		//QualifiedName
-		public RuleCall getValueQtEnumValueQualifiedNameParserRuleCall_1_1_0_1() { return cValueQtEnumValueQualifiedNameParserRuleCall_1_1_0_1; }
+		public RuleCall getValueQtEnumValueQualifiedNameParserRuleCall_1_1_0_0_1() { return cValueQtEnumValueQualifiedNameParserRuleCall_1_1_0_0_1; }
+
+		//numericValue+=LONG
+		public Assignment getNumericValueAssignment_1_1_1() { return cNumericValueAssignment_1_1_1; }
+
+		//LONG
+		public RuleCall getNumericValueLONGTerminalRuleCall_1_1_1_0() { return cNumericValueLONGTerminalRuleCall_1_1_1_0; }
 	}
 
 	public class QtBuitinTypeElements extends AbstractParserRuleElementFinder {
@@ -557,6 +588,8 @@ public class QIdlGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cValueAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cValueJvmArgumentTypeReferenceParserRuleCall_3_0 = (RuleCall)cValueAssignment_3.eContents().get(0);
 		
+		////QtEnumValueMask:
+		////	numericValue+=INT ('|' numericValue+=INT )*;
 		//QtBuitinType:
 		//	"builtin" name=ID ":" value=JvmArgumentTypeReference;
 		public ParserRule getRule() { return rule; }
@@ -702,15 +735,15 @@ public class QIdlGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cValueTypeTypeEnumRuleCall_1_0 = (RuleCall)cValueTypeAssignment_1.eContents().get(0);
 		private final Assignment cTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final CrossReference cTypeQtTypeCrossReference_2_0 = (CrossReference)cTypeAssignment_2.eContents().get(0);
-		private final RuleCall cTypeQtTypeIDTerminalRuleCall_2_0_1 = (RuleCall)cTypeQtTypeCrossReference_2_0.eContents().get(1);
+		private final RuleCall cTypeQtTypeQualifiedNameParserRuleCall_2_0_1 = (RuleCall)cTypeQtTypeCrossReference_2_0.eContents().get(1);
 		private final Assignment cNameAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cNameIDTerminalRuleCall_3_0 = (RuleCall)cNameAssignment_3.eContents().get(0);
 		
 		//QtValue:
-		//	const="const"? valueType=Type? type=[QtType] name=ID;
+		//	const="const"? valueType=Type? type=[QtType|QualifiedName] name=ID;
 		public ParserRule getRule() { return rule; }
 
-		//const="const"? valueType=Type? type=[QtType] name=ID
+		//const="const"? valueType=Type? type=[QtType|QualifiedName] name=ID
 		public Group getGroup() { return cGroup; }
 
 		//const="const"?
@@ -725,14 +758,14 @@ public class QIdlGrammarAccess extends AbstractGrammarElementFinder {
 		//Type
 		public RuleCall getValueTypeTypeEnumRuleCall_1_0() { return cValueTypeTypeEnumRuleCall_1_0; }
 
-		//type=[QtType]
+		//type=[QtType|QualifiedName]
 		public Assignment getTypeAssignment_2() { return cTypeAssignment_2; }
 
-		//[QtType]
+		//[QtType|QualifiedName]
 		public CrossReference getTypeQtTypeCrossReference_2_0() { return cTypeQtTypeCrossReference_2_0; }
 
-		//ID
-		public RuleCall getTypeQtTypeIDTerminalRuleCall_2_0_1() { return cTypeQtTypeIDTerminalRuleCall_2_0_1; }
+		//QualifiedName
+		public RuleCall getTypeQtTypeQualifiedNameParserRuleCall_2_0_1() { return cTypeQtTypeQualifiedNameParserRuleCall_2_0_1; }
 
 		//name=ID
 		public Assignment getNameAssignment_3() { return cNameAssignment_3; }
@@ -802,13 +835,13 @@ public class QIdlGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cValueTypeTypeEnumRuleCall_1_0 = (RuleCall)cValueTypeAssignment_1.eContents().get(0);
 		private final Assignment cTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final CrossReference cTypeQtTypeCrossReference_2_0 = (CrossReference)cTypeAssignment_2.eContents().get(0);
-		private final RuleCall cTypeQtTypeIDTerminalRuleCall_2_0_1 = (RuleCall)cTypeQtTypeCrossReference_2_0.eContents().get(1);
+		private final RuleCall cTypeQtTypeQualifiedNameParserRuleCall_2_0_1 = (RuleCall)cTypeQtTypeCrossReference_2_0.eContents().get(1);
 		
 		//QtReturnValue:
-		//	const="const"? valueType=Type? type=[QtType];
+		//	const="const"? valueType=Type? type=[QtType|QualifiedName];
 		public ParserRule getRule() { return rule; }
 
-		//const="const"? valueType=Type? type=[QtType]
+		//const="const"? valueType=Type? type=[QtType|QualifiedName]
 		public Group getGroup() { return cGroup; }
 
 		//const="const"?
@@ -823,14 +856,14 @@ public class QIdlGrammarAccess extends AbstractGrammarElementFinder {
 		//Type
 		public RuleCall getValueTypeTypeEnumRuleCall_1_0() { return cValueTypeTypeEnumRuleCall_1_0; }
 
-		//type=[QtType]
+		//type=[QtType|QualifiedName]
 		public Assignment getTypeAssignment_2() { return cTypeAssignment_2; }
 
-		//[QtType]
+		//[QtType|QualifiedName]
 		public CrossReference getTypeQtTypeCrossReference_2_0() { return cTypeQtTypeCrossReference_2_0; }
 
-		//ID
-		public RuleCall getTypeQtTypeIDTerminalRuleCall_2_0_1() { return cTypeQtTypeIDTerminalRuleCall_2_0_1; }
+		//QualifiedName
+		public RuleCall getTypeQtTypeQualifiedNameParserRuleCall_2_0_1() { return cTypeQtTypeQualifiedNameParserRuleCall_2_0_1; }
 	}
 
 	public class QtSignalElements extends AbstractParserRuleElementFinder {
@@ -1078,17 +1111,11 @@ public class QIdlGrammarAccess extends AbstractGrammarElementFinder {
 		private final EnumLiteralDeclaration cReferenceEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
 		private final Keyword cReferenceReferenceKeyword_1_0 = (Keyword)cReferenceEnumLiteralDeclaration_1.eContents().get(0);
 		
-		////QualifiedName:
-		////	ID ('.' ID)*;
-		////terminal HEX returns ecore::EInt: '0x' ('0'..'9' | 'A' .. 'F')+;
-		////terminal LONG returns ecore::EInt: ('0'..'9')+; enum Type:
+		//enum Type:
 		//	pointer | reference;
 		public EnumRule getRule() { return rule; }
 
-		//pointer //QualifiedName:
-		////	ID ('.' ID)*;
-		////terminal HEX returns ecore::EInt: '0x' ('0'..'9' | 'A' .. 'F')+;
-		////terminal LONG returns ecore::EInt: ('0'..'9')+; | reference
+		//pointer | reference
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//pointer
@@ -1097,10 +1124,7 @@ public class QIdlGrammarAccess extends AbstractGrammarElementFinder {
 		//"pointer"
 		public Keyword getPointerPointerKeyword_0_0() { return cPointerPointerKeyword_0_0; }
 
-		////QualifiedName:
-		////	ID ('.' ID)*;
-		////terminal HEX returns ecore::EInt: '0x' ('0'..'9' | 'A' .. 'F')+;
-		////terminal LONG returns ecore::EInt: ('0'..'9')+; reference
+		//reference
 		public EnumLiteralDeclaration getReferenceEnumLiteralDeclaration_1() { return cReferenceEnumLiteralDeclaration_1; }
 
 		//"reference"
@@ -1129,6 +1153,7 @@ public class QIdlGrammarAccess extends AbstractGrammarElementFinder {
 	private VisibilityElements unknownRuleVisibility;
 	private OwnerElements unknownRuleOwner;
 	private TypeElements unknownRuleType;
+	private TerminalRule tLONG;
 	
 	private final GrammarProvider grammarProvider;
 
@@ -1167,8 +1192,8 @@ public class QIdlGrammarAccess extends AbstractGrammarElementFinder {
 	////		classes+=[QtClass]* 
 	////	'}';
 	//QtNamespace:
-	//	"namespace" name=ID "{" namespaces+=QtNamespace* enums+=QtEnum* flags+=QtFlags* classes+=QtClass*
-	//	operations+=QtOperation* "}";
+	//	"namespace" name=ID "{" (namespaces+=QtNamespace | enums+=QtEnum | flags+=QtFlags | classes+=QtClass |
+	//	operations+=QtOperation)* "}";
 	public QtNamespaceElements getQtNamespaceAccess() {
 		return (pQtNamespace != null) ? pQtNamespace : (pQtNamespace = new QtNamespaceElements());
 	}
@@ -1178,7 +1203,7 @@ public class QIdlGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//QtType:
-	//	QtEnum | QtClass | QtBuitinType;
+	//	QtEnum | QtFlags | QtClass | QtBuitinType;
 	public QtTypeElements getQtTypeAccess() {
 		return (pQtType != null) ? pQtType : (pQtType = new QtTypeElements());
 	}
@@ -1198,8 +1223,8 @@ public class QIdlGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//QtClass:
-	//	"class" name=ID ("extends" superTypes+=[QtClass] ("," superTypes+=[QtClass])*)? "{" enums+=QtEnum* flags+=QtFlags*
-	//	classes+=QtClass* properties+=QtProperty* constructors+=QtConstructor* operations+=QtOperation* "}";
+	//	"class" name=ID ("extends" superTypes+=[QtClass] ("," superTypes+=[QtClass])*)? "{" (enums+=QtEnum | flags+=QtFlags |
+	//	classes+=QtClass | properties+=QtProperty | constructors+=QtConstructor | operations+=QtOperation)* "}";
 	public QtClassElements getQtClassAccess() {
 		return (pQtClass != null) ? pQtClass : (pQtClass = new QtClassElements());
 	}
@@ -1239,7 +1264,7 @@ public class QIdlGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//QtFlags:
-	//	"flags" name=ID ":" enumeration=[QtEnum];
+	//	"flags" name=ID ":" enumeration=[QtEnum] ";";
 	public QtFlagsElements getQtFlagsAccess() {
 		return (pQtFlags != null) ? pQtFlags : (pQtFlags = new QtFlagsElements());
 	}
@@ -1249,7 +1274,7 @@ public class QIdlGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//QtEnumValue:
-	//	name=ID "=" (enumMask=QtEnumValueMask | numericValue=INT);
+	//	name=ID "=" enumMask=QtEnumValueMask;
 	public QtEnumValueElements getQtEnumValueAccess() {
 		return (pQtEnumValue != null) ? pQtEnumValue : (pQtEnumValue = new QtEnumValueElements());
 	}
@@ -1259,7 +1284,8 @@ public class QIdlGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//QtEnumValueMask:
-	//	value+=[QtEnumValue|QualifiedName] ("|" value+=[QtEnumValue|QualifiedName])*;
+	//	(value+=[QtEnumValue|QualifiedName] | numericValue+=LONG) ("|" (value+=[QtEnumValue|QualifiedName] |
+	//	numericValue+=LONG))*;
 	public QtEnumValueMaskElements getQtEnumValueMaskAccess() {
 		return (pQtEnumValueMask != null) ? pQtEnumValueMask : (pQtEnumValueMask = new QtEnumValueMaskElements());
 	}
@@ -1268,6 +1294,8 @@ public class QIdlGrammarAccess extends AbstractGrammarElementFinder {
 		return getQtEnumValueMaskAccess().getRule();
 	}
 
+	////QtEnumValueMask:
+	////	numericValue+=INT ('|' numericValue+=INT )*;
 	//QtBuitinType:
 	//	"builtin" name=ID ":" value=JvmArgumentTypeReference;
 	public QtBuitinTypeElements getQtBuitinTypeAccess() {
@@ -1290,7 +1318,7 @@ public class QIdlGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//QtValue:
-	//	const="const"? valueType=Type? type=[QtType] name=ID;
+	//	const="const"? valueType=Type? type=[QtType|QualifiedName] name=ID;
 	public QtValueElements getQtValueAccess() {
 		return (pQtValue != null) ? pQtValue : (pQtValue = new QtValueElements());
 	}
@@ -1310,7 +1338,7 @@ public class QIdlGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//QtReturnValue:
-	//	const="const"? valueType=Type? type=[QtType];
+	//	const="const"? valueType=Type? type=[QtType|QualifiedName];
 	public QtReturnValueElements getQtReturnValueAccess() {
 		return (pQtReturnValue != null) ? pQtReturnValue : (pQtReturnValue = new QtReturnValueElements());
 	}
@@ -1369,10 +1397,7 @@ public class QIdlGrammarAccess extends AbstractGrammarElementFinder {
 		return getOwnerAccess().getRule();
 	}
 
-	////QualifiedName:
-	////	ID ('.' ID)*;
-	////terminal HEX returns ecore::EInt: '0x' ('0'..'9' | 'A' .. 'F')+;
-	////terminal LONG returns ecore::EInt: ('0'..'9')+; enum Type:
+	//enum Type:
 	//	pointer | reference;
 	public TypeElements getTypeAccess() {
 		return (unknownRuleType != null) ? unknownRuleType : (unknownRuleType = new TypeElements());
@@ -1381,6 +1406,12 @@ public class QIdlGrammarAccess extends AbstractGrammarElementFinder {
 	public EnumRule getTypeRule() {
 		return getTypeAccess().getRule();
 	}
+
+	//terminal LONG returns ecore::ELong:
+	//	"-"? "0".."9"+;
+	public TerminalRule getLONGRule() {
+		return (tLONG != null) ? tLONG : (tLONG = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "LONG"));
+	} 
 
 	//XExpression:
 	//	XAssignment;

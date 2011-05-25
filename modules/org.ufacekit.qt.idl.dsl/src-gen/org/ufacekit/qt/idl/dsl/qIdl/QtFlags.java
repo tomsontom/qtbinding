@@ -5,7 +5,6 @@
  */
 package org.ufacekit.qt.idl.dsl.qIdl;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,7 +14,6 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.QtFlags#getName <em>Name</em>}</li>
  *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.QtFlags#getEnumeration <em>Enumeration</em>}</li>
  * </ul>
  * </p>
@@ -24,34 +22,8 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface QtFlags extends EObject
+public interface QtFlags extends QtType
 {
-  /**
-   * Returns the value of the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Name</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Name</em>' attribute.
-   * @see #setName(String)
-   * @see org.ufacekit.qt.idl.dsl.qIdl.QIdlPackage#getQtFlags_Name()
-   * @model
-   * @generated
-   */
-  String getName();
-
-  /**
-   * Sets the value of the '{@link org.ufacekit.qt.idl.dsl.qIdl.QtFlags#getName <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' attribute.
-   * @see #getName()
-   * @generated
-   */
-  void setName(String value);
-
   /**
    * Returns the value of the '<em><b>Enumeration</b></em>' reference.
    * <!-- begin-user-doc -->

@@ -578,19 +578,9 @@ public class QIdlPackageImpl extends EPackageImpl implements QIdlPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getQtFlags_Name()
-  {
-    return (EAttribute)qtFlagsEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getQtFlags_Enumeration()
   {
-    return (EReference)qtFlagsEClass.getEStructuralFeatures().get(1);
+    return (EReference)qtFlagsEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -628,16 +618,6 @@ public class QIdlPackageImpl extends EPackageImpl implements QIdlPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getQtEnumValue_NumericValue()
-  {
-    return (EAttribute)qtEnumValueEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getQtEnumValueMask()
   {
     return qtEnumValueMaskEClass;
@@ -651,6 +631,16 @@ public class QIdlPackageImpl extends EPackageImpl implements QIdlPackage
   public EReference getQtEnumValueMask_Value()
   {
     return (EReference)qtEnumValueMaskEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getQtEnumValueMask_NumericValue()
+  {
+    return (EAttribute)qtEnumValueMaskEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -981,16 +971,15 @@ public class QIdlPackageImpl extends EPackageImpl implements QIdlPackage
     createEReference(qtEnumEClass, QT_ENUM__VALUES);
 
     qtFlagsEClass = createEClass(QT_FLAGS);
-    createEAttribute(qtFlagsEClass, QT_FLAGS__NAME);
     createEReference(qtFlagsEClass, QT_FLAGS__ENUMERATION);
 
     qtEnumValueEClass = createEClass(QT_ENUM_VALUE);
     createEAttribute(qtEnumValueEClass, QT_ENUM_VALUE__NAME);
     createEReference(qtEnumValueEClass, QT_ENUM_VALUE__ENUM_MASK);
-    createEAttribute(qtEnumValueEClass, QT_ENUM_VALUE__NUMERIC_VALUE);
 
     qtEnumValueMaskEClass = createEClass(QT_ENUM_VALUE_MASK);
     createEReference(qtEnumValueMaskEClass, QT_ENUM_VALUE_MASK__VALUE);
+    createEAttribute(qtEnumValueMaskEClass, QT_ENUM_VALUE_MASK__NUMERIC_VALUE);
 
     qtBuitinTypeEClass = createEClass(QT_BUITIN_TYPE);
     createEReference(qtBuitinTypeEClass, QT_BUITIN_TYPE__VALUE);
@@ -1062,6 +1051,7 @@ public class QIdlPackageImpl extends EPackageImpl implements QIdlPackage
     // Add supertypes to classes
     qtClassEClass.getESuperTypes().add(this.getQtType());
     qtEnumEClass.getESuperTypes().add(this.getQtType());
+    qtFlagsEClass.getESuperTypes().add(this.getQtType());
     qtBuitinTypeEClass.getESuperTypes().add(this.getQtType());
     qtFunctionEClass.getESuperTypes().add(this.getQtOperation());
     qtSignalEClass.getESuperTypes().add(this.getQtOperation());
@@ -1106,16 +1096,15 @@ public class QIdlPackageImpl extends EPackageImpl implements QIdlPackage
     initEReference(getQtEnum_Values(), this.getQtEnumValue(), null, "values", null, 0, -1, QtEnum.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(qtFlagsEClass, QtFlags.class, "QtFlags", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getQtFlags_Name(), ecorePackage.getEString(), "name", null, 0, 1, QtFlags.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getQtFlags_Enumeration(), this.getQtEnum(), null, "enumeration", null, 0, 1, QtFlags.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(qtEnumValueEClass, QtEnumValue.class, "QtEnumValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getQtEnumValue_Name(), ecorePackage.getEString(), "name", null, 0, 1, QtEnumValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getQtEnumValue_EnumMask(), this.getQtEnumValueMask(), null, "enumMask", null, 0, 1, QtEnumValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getQtEnumValue_NumericValue(), ecorePackage.getEInt(), "numericValue", null, 0, 1, QtEnumValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(qtEnumValueMaskEClass, QtEnumValueMask.class, "QtEnumValueMask", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getQtEnumValueMask_Value(), this.getQtEnumValue(), null, "value", null, 0, -1, QtEnumValueMask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getQtEnumValueMask_NumericValue(), ecorePackage.getELong(), "numericValue", null, 0, -1, QtEnumValueMask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(qtBuitinTypeEClass, QtBuitinType.class, "QtBuitinType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getQtBuitinType_Value(), theTypesPackage.getJvmTypeReference(), null, "value", null, 0, 1, QtBuitinType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

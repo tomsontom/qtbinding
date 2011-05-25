@@ -55,9 +55,10 @@ public:
     void generateTree(const Tree *tree, CodeMarker *marker);
 
 private:
-    void generateNode(const Node *node, CodeMarker *marker);
-    void generateNodeContent(const Node *node, CodeMarker *marker, QTextStream & stream, int indent = 0);
-    const QString enumValueDslValue(const EnumItem &item, const EnumNode *enume);
+    void generateNode(const Tree *tree, const Node *node, CodeMarker *marker);
+    void generateNodeContent(const Tree *tree, const Node *node, CodeMarker *marker, QTextStream & stream, int indent = 0);
+    const QString enumValueDslValue(const Tree *tree, const EnumItem &item, const EnumNode *enume);
+    QString qualifiedEnumValuePath(const Tree *tree, const QString cppValuePath);
 
     QTextStream out;
 };

@@ -137,6 +137,7 @@ public class QIdlSwitch<T> extends Switch<T>
       {
         QtFlags qtFlags = (QtFlags)theEObject;
         T result = caseQtFlags(qtFlags);
+        if (result == null) result = caseQtType(qtFlags);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }

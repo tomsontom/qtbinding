@@ -72,19 +72,19 @@
         eType="ecore:EClass platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtEnumValue"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="QtFlags">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="QtFlags" eSuperTypes="platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtType">
     <eStructuralFeatures xsi:type="ecore:EReference" name="enumeration" eType="ecore:EClass platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtEnum"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="QtEnumValue">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="enumMask" eType="ecore:EClass platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtEnumValueMask"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numericValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="QtEnumValueMask">
     <eStructuralFeatures xsi:type="ecore:EReference" name="value" unique="false" upperBound="-1"
         eType="ecore:EClass platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtEnumValue"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numericValue" unique="false"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="QtBuitinType" eSuperTypes="platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtType">
     <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="ecore:EClass platform:/resource/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmTypeReference"

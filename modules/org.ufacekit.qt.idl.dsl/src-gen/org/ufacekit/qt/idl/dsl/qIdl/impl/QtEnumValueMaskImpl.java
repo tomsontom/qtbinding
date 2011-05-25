@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EDataTypeEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import org.ufacekit.qt.idl.dsl.qIdl.QIdlPackage;
@@ -27,6 +28,7 @@ import org.ufacekit.qt.idl.dsl.qIdl.QtEnumValueMask;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtEnumValueMaskImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtEnumValueMaskImpl#getNumericValue <em>Numeric Value</em>}</li>
  * </ul>
  * </p>
  *
@@ -43,6 +45,16 @@ public class QtEnumValueMaskImpl extends MinimalEObjectImpl.Container implements
    * @ordered
    */
   protected EList<QtEnumValue> value;
+
+  /**
+   * The cached value of the '{@link #getNumericValue() <em>Numeric Value</em>}' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getNumericValue()
+   * @generated
+   * @ordered
+   */
+  protected EList<Long> numericValue;
 
   /**
    * <!-- begin-user-doc -->
@@ -84,6 +96,20 @@ public class QtEnumValueMaskImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<Long> getNumericValue()
+  {
+    if (numericValue == null)
+    {
+      numericValue = new EDataTypeEList<Long>(Long.class, this, QIdlPackage.QT_ENUM_VALUE_MASK__NUMERIC_VALUE);
+    }
+    return numericValue;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -91,6 +117,8 @@ public class QtEnumValueMaskImpl extends MinimalEObjectImpl.Container implements
     {
       case QIdlPackage.QT_ENUM_VALUE_MASK__VALUE:
         return getValue();
+      case QIdlPackage.QT_ENUM_VALUE_MASK__NUMERIC_VALUE:
+        return getNumericValue();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -110,6 +138,10 @@ public class QtEnumValueMaskImpl extends MinimalEObjectImpl.Container implements
         getValue().clear();
         getValue().addAll((Collection<? extends QtEnumValue>)newValue);
         return;
+      case QIdlPackage.QT_ENUM_VALUE_MASK__NUMERIC_VALUE:
+        getNumericValue().clear();
+        getNumericValue().addAll((Collection<? extends Long>)newValue);
+        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -127,6 +159,9 @@ public class QtEnumValueMaskImpl extends MinimalEObjectImpl.Container implements
       case QIdlPackage.QT_ENUM_VALUE_MASK__VALUE:
         getValue().clear();
         return;
+      case QIdlPackage.QT_ENUM_VALUE_MASK__NUMERIC_VALUE:
+        getNumericValue().clear();
+        return;
     }
     super.eUnset(featureID);
   }
@@ -143,8 +178,27 @@ public class QtEnumValueMaskImpl extends MinimalEObjectImpl.Container implements
     {
       case QIdlPackage.QT_ENUM_VALUE_MASK__VALUE:
         return value != null && !value.isEmpty();
+      case QIdlPackage.QT_ENUM_VALUE_MASK__NUMERIC_VALUE:
+        return numericValue != null && !numericValue.isEmpty();
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (numericValue: ");
+    result.append(numericValue);
+    result.append(')');
+    return result.toString();
   }
 
 } //QtEnumValueMaskImpl

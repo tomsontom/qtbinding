@@ -2310,6 +2310,46 @@ finally {
 	restoreStackSize(stackSize);
 }
 
+rule__QtNamespace__Alternatives_3
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getQtNamespaceAccess().getNamespacesAssignment_3_0()); }
+(rule__QtNamespace__NamespacesAssignment_3_0)
+{ after(grammarAccess.getQtNamespaceAccess().getNamespacesAssignment_3_0()); }
+)
+
+    |(
+{ before(grammarAccess.getQtNamespaceAccess().getEnumsAssignment_3_1()); }
+(rule__QtNamespace__EnumsAssignment_3_1)
+{ after(grammarAccess.getQtNamespaceAccess().getEnumsAssignment_3_1()); }
+)
+
+    |(
+{ before(grammarAccess.getQtNamespaceAccess().getFlagsAssignment_3_2()); }
+(rule__QtNamespace__FlagsAssignment_3_2)
+{ after(grammarAccess.getQtNamespaceAccess().getFlagsAssignment_3_2()); }
+)
+
+    |(
+{ before(grammarAccess.getQtNamespaceAccess().getClassesAssignment_3_3()); }
+(rule__QtNamespace__ClassesAssignment_3_3)
+{ after(grammarAccess.getQtNamespaceAccess().getClassesAssignment_3_3()); }
+)
+
+    |(
+{ before(grammarAccess.getQtNamespaceAccess().getOperationsAssignment_3_4()); }
+(rule__QtNamespace__OperationsAssignment_3_4)
+{ after(grammarAccess.getQtNamespaceAccess().getOperationsAssignment_3_4()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
 
 rule__QtOperation__Alternatives
     @init {
@@ -2339,21 +2379,89 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__QtEnumValue__Alternatives_2
+rule__QtClass__Alternatives_4
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getQtEnumValueAccess().getEnumMaskAssignment_2_0()); }
-(rule__QtEnumValue__EnumMaskAssignment_2_0)
-{ after(grammarAccess.getQtEnumValueAccess().getEnumMaskAssignment_2_0()); }
+{ before(grammarAccess.getQtClassAccess().getEnumsAssignment_4_0()); }
+(rule__QtClass__EnumsAssignment_4_0)
+{ after(grammarAccess.getQtClassAccess().getEnumsAssignment_4_0()); }
 )
 
     |(
-{ before(grammarAccess.getQtEnumValueAccess().getNumericValueAssignment_2_1()); }
-(rule__QtEnumValue__NumericValueAssignment_2_1)
-{ after(grammarAccess.getQtEnumValueAccess().getNumericValueAssignment_2_1()); }
+{ before(grammarAccess.getQtClassAccess().getFlagsAssignment_4_1()); }
+(rule__QtClass__FlagsAssignment_4_1)
+{ after(grammarAccess.getQtClassAccess().getFlagsAssignment_4_1()); }
+)
+
+    |(
+{ before(grammarAccess.getQtClassAccess().getClassesAssignment_4_2()); }
+(rule__QtClass__ClassesAssignment_4_2)
+{ after(grammarAccess.getQtClassAccess().getClassesAssignment_4_2()); }
+)
+
+    |(
+{ before(grammarAccess.getQtClassAccess().getPropertiesAssignment_4_3()); }
+(rule__QtClass__PropertiesAssignment_4_3)
+{ after(grammarAccess.getQtClassAccess().getPropertiesAssignment_4_3()); }
+)
+
+    |(
+{ before(grammarAccess.getQtClassAccess().getConstructorsAssignment_4_4()); }
+(rule__QtClass__ConstructorsAssignment_4_4)
+{ after(grammarAccess.getQtClassAccess().getConstructorsAssignment_4_4()); }
+)
+
+    |(
+{ before(grammarAccess.getQtClassAccess().getOperationsAssignment_4_5()); }
+(rule__QtClass__OperationsAssignment_4_5)
+{ after(grammarAccess.getQtClassAccess().getOperationsAssignment_4_5()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__QtEnumValueMask__Alternatives_0
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getQtEnumValueMaskAccess().getValueAssignment_0_0()); }
+(rule__QtEnumValueMask__ValueAssignment_0_0)
+{ after(grammarAccess.getQtEnumValueMaskAccess().getValueAssignment_0_0()); }
+)
+
+    |(
+{ before(grammarAccess.getQtEnumValueMaskAccess().getNumericValueAssignment_0_1()); }
+(rule__QtEnumValueMask__NumericValueAssignment_0_1)
+{ after(grammarAccess.getQtEnumValueMaskAccess().getNumericValueAssignment_0_1()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__QtEnumValueMask__Alternatives_1_1
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getQtEnumValueMaskAccess().getValueAssignment_1_1_0()); }
+(rule__QtEnumValueMask__ValueAssignment_1_1_0)
+{ after(grammarAccess.getQtEnumValueMaskAccess().getValueAssignment_1_1_0()); }
+)
+
+    |(
+{ before(grammarAccess.getQtEnumValueMaskAccess().getNumericValueAssignment_1_1_1()); }
+(rule__QtEnumValueMask__NumericValueAssignment_1_1_1)
+{ after(grammarAccess.getQtEnumValueMaskAccess().getNumericValueAssignment_1_1_1()); }
 )
 
 ;
@@ -3309,9 +3417,9 @@ rule__QtNamespace__Group__3__Impl
     }
 :
 (
-{ before(grammarAccess.getQtNamespaceAccess().getNamespacesAssignment_3()); }
-(rule__QtNamespace__NamespacesAssignment_3)*
-{ after(grammarAccess.getQtNamespaceAccess().getNamespacesAssignment_3()); }
+{ before(grammarAccess.getQtNamespaceAccess().getAlternatives_3()); }
+(rule__QtNamespace__Alternatives_3)*
+{ after(grammarAccess.getQtNamespaceAccess().getAlternatives_3()); }
 )
 
 ;
@@ -3326,7 +3434,6 @@ rule__QtNamespace__Group__4
     }
 :
 	rule__QtNamespace__Group__4__Impl
-	rule__QtNamespace__Group__5
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -3338,140 +3445,17 @@ rule__QtNamespace__Group__4__Impl
     }
 :
 (
-{ before(grammarAccess.getQtNamespaceAccess().getEnumsAssignment_4()); }
-(rule__QtNamespace__EnumsAssignment_4)*
-{ after(grammarAccess.getQtNamespaceAccess().getEnumsAssignment_4()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-rule__QtNamespace__Group__5
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__QtNamespace__Group__5__Impl
-	rule__QtNamespace__Group__6
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__QtNamespace__Group__5__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getQtNamespaceAccess().getFlagsAssignment_5()); }
-(rule__QtNamespace__FlagsAssignment_5)*
-{ after(grammarAccess.getQtNamespaceAccess().getFlagsAssignment_5()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-rule__QtNamespace__Group__6
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__QtNamespace__Group__6__Impl
-	rule__QtNamespace__Group__7
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__QtNamespace__Group__6__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getQtNamespaceAccess().getClassesAssignment_6()); }
-(rule__QtNamespace__ClassesAssignment_6)*
-{ after(grammarAccess.getQtNamespaceAccess().getClassesAssignment_6()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-rule__QtNamespace__Group__7
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__QtNamespace__Group__7__Impl
-	rule__QtNamespace__Group__8
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__QtNamespace__Group__7__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getQtNamespaceAccess().getOperationsAssignment_7()); }
-(rule__QtNamespace__OperationsAssignment_7)*
-{ after(grammarAccess.getQtNamespaceAccess().getOperationsAssignment_7()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-rule__QtNamespace__Group__8
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__QtNamespace__Group__8__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__QtNamespace__Group__8__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getQtNamespaceAccess().getRightCurlyBracketKeyword_8()); }
+{ before(grammarAccess.getQtNamespaceAccess().getRightCurlyBracketKeyword_4()); }
 
 	'}' 
 
-{ after(grammarAccess.getQtNamespaceAccess().getRightCurlyBracketKeyword_8()); }
+{ after(grammarAccess.getQtNamespaceAccess().getRightCurlyBracketKeyword_4()); }
 )
 
 ;
 finally {
 	restoreStackSize(stackSize);
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -3622,9 +3606,9 @@ rule__QtClass__Group__4__Impl
     }
 :
 (
-{ before(grammarAccess.getQtClassAccess().getEnumsAssignment_4()); }
-(rule__QtClass__EnumsAssignment_4)*
-{ after(grammarAccess.getQtClassAccess().getEnumsAssignment_4()); }
+{ before(grammarAccess.getQtClassAccess().getAlternatives_4()); }
+(rule__QtClass__Alternatives_4)*
+{ after(grammarAccess.getQtClassAccess().getAlternatives_4()); }
 )
 
 ;
@@ -3639,7 +3623,6 @@ rule__QtClass__Group__5
     }
 :
 	rule__QtClass__Group__5__Impl
-	rule__QtClass__Group__6
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -3651,171 +3634,17 @@ rule__QtClass__Group__5__Impl
     }
 :
 (
-{ before(grammarAccess.getQtClassAccess().getFlagsAssignment_5()); }
-(rule__QtClass__FlagsAssignment_5)*
-{ after(grammarAccess.getQtClassAccess().getFlagsAssignment_5()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-rule__QtClass__Group__6
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__QtClass__Group__6__Impl
-	rule__QtClass__Group__7
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__QtClass__Group__6__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getQtClassAccess().getClassesAssignment_6()); }
-(rule__QtClass__ClassesAssignment_6)*
-{ after(grammarAccess.getQtClassAccess().getClassesAssignment_6()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-rule__QtClass__Group__7
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__QtClass__Group__7__Impl
-	rule__QtClass__Group__8
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__QtClass__Group__7__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getQtClassAccess().getPropertiesAssignment_7()); }
-(rule__QtClass__PropertiesAssignment_7)*
-{ after(grammarAccess.getQtClassAccess().getPropertiesAssignment_7()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-rule__QtClass__Group__8
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__QtClass__Group__8__Impl
-	rule__QtClass__Group__9
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__QtClass__Group__8__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getQtClassAccess().getConstructorsAssignment_8()); }
-(rule__QtClass__ConstructorsAssignment_8)*
-{ after(grammarAccess.getQtClassAccess().getConstructorsAssignment_8()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-rule__QtClass__Group__9
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__QtClass__Group__9__Impl
-	rule__QtClass__Group__10
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__QtClass__Group__9__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getQtClassAccess().getOperationsAssignment_9()); }
-(rule__QtClass__OperationsAssignment_9)*
-{ after(grammarAccess.getQtClassAccess().getOperationsAssignment_9()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-rule__QtClass__Group__10
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__QtClass__Group__10__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__QtClass__Group__10__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getQtClassAccess().getRightCurlyBracketKeyword_10()); }
+{ before(grammarAccess.getQtClassAccess().getRightCurlyBracketKeyword_5()); }
 
 	'}' 
 
-{ after(grammarAccess.getQtClassAccess().getRightCurlyBracketKeyword_10()); }
+{ after(grammarAccess.getQtClassAccess().getRightCurlyBracketKeyword_5()); }
 )
 
 ;
 finally {
 	restoreStackSize(stackSize);
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4626,6 +4455,7 @@ rule__QtFlags__Group__3
     }
 :
 	rule__QtFlags__Group__3__Impl
+	rule__QtFlags__Group__4
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -4646,6 +4476,38 @@ rule__QtFlags__Group__3__Impl
 finally {
 	restoreStackSize(stackSize);
 }
+
+
+rule__QtFlags__Group__4
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__QtFlags__Group__4__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__QtFlags__Group__4__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getQtFlagsAccess().getSemicolonKeyword_4()); }
+
+	';' 
+
+{ after(grammarAccess.getQtFlagsAccess().getSemicolonKeyword_4()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
 
 
 
@@ -4733,9 +4595,9 @@ rule__QtEnumValue__Group__2__Impl
     }
 :
 (
-{ before(grammarAccess.getQtEnumValueAccess().getAlternatives_2()); }
-(rule__QtEnumValue__Alternatives_2)
-{ after(grammarAccess.getQtEnumValueAccess().getAlternatives_2()); }
+{ before(grammarAccess.getQtEnumValueAccess().getEnumMaskAssignment_2()); }
+(rule__QtEnumValue__EnumMaskAssignment_2)
+{ after(grammarAccess.getQtEnumValueAccess().getEnumMaskAssignment_2()); }
 )
 
 ;
@@ -4768,9 +4630,9 @@ rule__QtEnumValueMask__Group__0__Impl
     }
 :
 (
-{ before(grammarAccess.getQtEnumValueMaskAccess().getValueAssignment_0()); }
-(rule__QtEnumValueMask__ValueAssignment_0)
-{ after(grammarAccess.getQtEnumValueMaskAccess().getValueAssignment_0()); }
+{ before(grammarAccess.getQtEnumValueMaskAccess().getAlternatives_0()); }
+(rule__QtEnumValueMask__Alternatives_0)
+{ after(grammarAccess.getQtEnumValueMaskAccess().getAlternatives_0()); }
 )
 
 ;
@@ -4859,9 +4721,9 @@ rule__QtEnumValueMask__Group_1__1__Impl
     }
 :
 (
-{ before(grammarAccess.getQtEnumValueMaskAccess().getValueAssignment_1_1()); }
-(rule__QtEnumValueMask__ValueAssignment_1_1)
-{ after(grammarAccess.getQtEnumValueMaskAccess().getValueAssignment_1_1()); }
+{ before(grammarAccess.getQtEnumValueMaskAccess().getAlternatives_1_1()); }
+(rule__QtEnumValueMask__Alternatives_1_1)
+{ after(grammarAccess.getQtEnumValueMaskAccess().getAlternatives_1_1()); }
 )
 
 ;
@@ -15882,14 +15744,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__QtNamespace__NamespacesAssignment_3
+rule__QtNamespace__NamespacesAssignment_3_0
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getQtNamespaceAccess().getNamespacesQtNamespaceParserRuleCall_3_0()); }
-	ruleQtNamespace{ after(grammarAccess.getQtNamespaceAccess().getNamespacesQtNamespaceParserRuleCall_3_0()); }
+{ before(grammarAccess.getQtNamespaceAccess().getNamespacesQtNamespaceParserRuleCall_3_0_0()); }
+	ruleQtNamespace{ after(grammarAccess.getQtNamespaceAccess().getNamespacesQtNamespaceParserRuleCall_3_0_0()); }
 )
 
 ;
@@ -15897,14 +15759,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__QtNamespace__EnumsAssignment_4
+rule__QtNamespace__EnumsAssignment_3_1
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getQtNamespaceAccess().getEnumsQtEnumParserRuleCall_4_0()); }
-	ruleQtEnum{ after(grammarAccess.getQtNamespaceAccess().getEnumsQtEnumParserRuleCall_4_0()); }
+{ before(grammarAccess.getQtNamespaceAccess().getEnumsQtEnumParserRuleCall_3_1_0()); }
+	ruleQtEnum{ after(grammarAccess.getQtNamespaceAccess().getEnumsQtEnumParserRuleCall_3_1_0()); }
 )
 
 ;
@@ -15912,14 +15774,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__QtNamespace__FlagsAssignment_5
+rule__QtNamespace__FlagsAssignment_3_2
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getQtNamespaceAccess().getFlagsQtFlagsParserRuleCall_5_0()); }
-	ruleQtFlags{ after(grammarAccess.getQtNamespaceAccess().getFlagsQtFlagsParserRuleCall_5_0()); }
+{ before(grammarAccess.getQtNamespaceAccess().getFlagsQtFlagsParserRuleCall_3_2_0()); }
+	ruleQtFlags{ after(grammarAccess.getQtNamespaceAccess().getFlagsQtFlagsParserRuleCall_3_2_0()); }
 )
 
 ;
@@ -15927,14 +15789,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__QtNamespace__ClassesAssignment_6
+rule__QtNamespace__ClassesAssignment_3_3
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getQtNamespaceAccess().getClassesQtClassParserRuleCall_6_0()); }
-	ruleQtClass{ after(grammarAccess.getQtNamespaceAccess().getClassesQtClassParserRuleCall_6_0()); }
+{ before(grammarAccess.getQtNamespaceAccess().getClassesQtClassParserRuleCall_3_3_0()); }
+	ruleQtClass{ after(grammarAccess.getQtNamespaceAccess().getClassesQtClassParserRuleCall_3_3_0()); }
 )
 
 ;
@@ -15942,14 +15804,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__QtNamespace__OperationsAssignment_7
+rule__QtNamespace__OperationsAssignment_3_4
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getQtNamespaceAccess().getOperationsQtOperationParserRuleCall_7_0()); }
-	ruleQtOperation{ after(grammarAccess.getQtNamespaceAccess().getOperationsQtOperationParserRuleCall_7_0()); }
+{ before(grammarAccess.getQtNamespaceAccess().getOperationsQtOperationParserRuleCall_3_4_0()); }
+	ruleQtOperation{ after(grammarAccess.getQtNamespaceAccess().getOperationsQtOperationParserRuleCall_3_4_0()); }
 )
 
 ;
@@ -16010,14 +15872,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__QtClass__EnumsAssignment_4
+rule__QtClass__EnumsAssignment_4_0
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getQtClassAccess().getEnumsQtEnumParserRuleCall_4_0()); }
-	ruleQtEnum{ after(grammarAccess.getQtClassAccess().getEnumsQtEnumParserRuleCall_4_0()); }
+{ before(grammarAccess.getQtClassAccess().getEnumsQtEnumParserRuleCall_4_0_0()); }
+	ruleQtEnum{ after(grammarAccess.getQtClassAccess().getEnumsQtEnumParserRuleCall_4_0_0()); }
 )
 
 ;
@@ -16025,14 +15887,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__QtClass__FlagsAssignment_5
+rule__QtClass__FlagsAssignment_4_1
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getQtClassAccess().getFlagsQtFlagsParserRuleCall_5_0()); }
-	ruleQtFlags{ after(grammarAccess.getQtClassAccess().getFlagsQtFlagsParserRuleCall_5_0()); }
+{ before(grammarAccess.getQtClassAccess().getFlagsQtFlagsParserRuleCall_4_1_0()); }
+	ruleQtFlags{ after(grammarAccess.getQtClassAccess().getFlagsQtFlagsParserRuleCall_4_1_0()); }
 )
 
 ;
@@ -16040,14 +15902,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__QtClass__ClassesAssignment_6
+rule__QtClass__ClassesAssignment_4_2
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getQtClassAccess().getClassesQtClassParserRuleCall_6_0()); }
-	ruleQtClass{ after(grammarAccess.getQtClassAccess().getClassesQtClassParserRuleCall_6_0()); }
+{ before(grammarAccess.getQtClassAccess().getClassesQtClassParserRuleCall_4_2_0()); }
+	ruleQtClass{ after(grammarAccess.getQtClassAccess().getClassesQtClassParserRuleCall_4_2_0()); }
 )
 
 ;
@@ -16055,14 +15917,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__QtClass__PropertiesAssignment_7
+rule__QtClass__PropertiesAssignment_4_3
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getQtClassAccess().getPropertiesQtPropertyParserRuleCall_7_0()); }
-	ruleQtProperty{ after(grammarAccess.getQtClassAccess().getPropertiesQtPropertyParserRuleCall_7_0()); }
+{ before(grammarAccess.getQtClassAccess().getPropertiesQtPropertyParserRuleCall_4_3_0()); }
+	ruleQtProperty{ after(grammarAccess.getQtClassAccess().getPropertiesQtPropertyParserRuleCall_4_3_0()); }
 )
 
 ;
@@ -16070,14 +15932,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__QtClass__ConstructorsAssignment_8
+rule__QtClass__ConstructorsAssignment_4_4
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getQtClassAccess().getConstructorsQtConstructorParserRuleCall_8_0()); }
-	ruleQtConstructor{ after(grammarAccess.getQtClassAccess().getConstructorsQtConstructorParserRuleCall_8_0()); }
+{ before(grammarAccess.getQtClassAccess().getConstructorsQtConstructorParserRuleCall_4_4_0()); }
+	ruleQtConstructor{ after(grammarAccess.getQtClassAccess().getConstructorsQtConstructorParserRuleCall_4_4_0()); }
 )
 
 ;
@@ -16085,14 +15947,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__QtClass__OperationsAssignment_9
+rule__QtClass__OperationsAssignment_4_5
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getQtClassAccess().getOperationsQtOperationParserRuleCall_9_0()); }
-	ruleQtOperation{ after(grammarAccess.getQtClassAccess().getOperationsQtOperationParserRuleCall_9_0()); }
+{ before(grammarAccess.getQtClassAccess().getOperationsQtOperationParserRuleCall_4_5_0()); }
+	ruleQtOperation{ after(grammarAccess.getQtClassAccess().getOperationsQtOperationParserRuleCall_4_5_0()); }
 )
 
 ;
@@ -16224,14 +16086,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__QtEnumValue__EnumMaskAssignment_2_0
+rule__QtEnumValue__EnumMaskAssignment_2
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getQtEnumValueAccess().getEnumMaskQtEnumValueMaskParserRuleCall_2_0_0()); }
-	ruleQtEnumValueMask{ after(grammarAccess.getQtEnumValueAccess().getEnumMaskQtEnumValueMaskParserRuleCall_2_0_0()); }
+{ before(grammarAccess.getQtEnumValueAccess().getEnumMaskQtEnumValueMaskParserRuleCall_2_0()); }
+	ruleQtEnumValueMask{ after(grammarAccess.getQtEnumValueAccess().getEnumMaskQtEnumValueMaskParserRuleCall_2_0()); }
 )
 
 ;
@@ -16239,14 +16101,18 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__QtEnumValue__NumericValueAssignment_2_1
+rule__QtEnumValueMask__ValueAssignment_0_0
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getQtEnumValueAccess().getNumericValueINTTerminalRuleCall_2_1_0()); }
-	RULE_INT{ after(grammarAccess.getQtEnumValueAccess().getNumericValueINTTerminalRuleCall_2_1_0()); }
+{ before(grammarAccess.getQtEnumValueMaskAccess().getValueQtEnumValueCrossReference_0_0_0()); }
+(
+{ before(grammarAccess.getQtEnumValueMaskAccess().getValueQtEnumValueQualifiedNameParserRuleCall_0_0_0_1()); }
+	ruleQualifiedName{ after(grammarAccess.getQtEnumValueMaskAccess().getValueQtEnumValueQualifiedNameParserRuleCall_0_0_0_1()); }
+)
+{ after(grammarAccess.getQtEnumValueMaskAccess().getValueQtEnumValueCrossReference_0_0_0()); }
 )
 
 ;
@@ -16254,18 +16120,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__QtEnumValueMask__ValueAssignment_0
+rule__QtEnumValueMask__NumericValueAssignment_0_1
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getQtEnumValueMaskAccess().getValueQtEnumValueCrossReference_0_0()); }
-(
-{ before(grammarAccess.getQtEnumValueMaskAccess().getValueQtEnumValueQualifiedNameParserRuleCall_0_0_1()); }
-	ruleQualifiedName{ after(grammarAccess.getQtEnumValueMaskAccess().getValueQtEnumValueQualifiedNameParserRuleCall_0_0_1()); }
-)
-{ after(grammarAccess.getQtEnumValueMaskAccess().getValueQtEnumValueCrossReference_0_0()); }
+{ before(grammarAccess.getQtEnumValueMaskAccess().getNumericValueLONGTerminalRuleCall_0_1_0()); }
+	RULE_LONG{ after(grammarAccess.getQtEnumValueMaskAccess().getNumericValueLONGTerminalRuleCall_0_1_0()); }
 )
 
 ;
@@ -16273,18 +16135,33 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__QtEnumValueMask__ValueAssignment_1_1
+rule__QtEnumValueMask__ValueAssignment_1_1_0
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getQtEnumValueMaskAccess().getValueQtEnumValueCrossReference_1_1_0()); }
+{ before(grammarAccess.getQtEnumValueMaskAccess().getValueQtEnumValueCrossReference_1_1_0_0()); }
 (
-{ before(grammarAccess.getQtEnumValueMaskAccess().getValueQtEnumValueQualifiedNameParserRuleCall_1_1_0_1()); }
-	ruleQualifiedName{ after(grammarAccess.getQtEnumValueMaskAccess().getValueQtEnumValueQualifiedNameParserRuleCall_1_1_0_1()); }
+{ before(grammarAccess.getQtEnumValueMaskAccess().getValueQtEnumValueQualifiedNameParserRuleCall_1_1_0_0_1()); }
+	ruleQualifiedName{ after(grammarAccess.getQtEnumValueMaskAccess().getValueQtEnumValueQualifiedNameParserRuleCall_1_1_0_0_1()); }
 )
-{ after(grammarAccess.getQtEnumValueMaskAccess().getValueQtEnumValueCrossReference_1_1_0()); }
+{ after(grammarAccess.getQtEnumValueMaskAccess().getValueQtEnumValueCrossReference_1_1_0_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__QtEnumValueMask__NumericValueAssignment_1_1_1
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getQtEnumValueMaskAccess().getNumericValueLONGTerminalRuleCall_1_1_1_0()); }
+	RULE_LONG{ after(grammarAccess.getQtEnumValueMaskAccess().getNumericValueLONGTerminalRuleCall_1_1_1_0()); }
 )
 
 ;
@@ -16496,8 +16373,8 @@ rule__QtValue__TypeAssignment_2
 (
 { before(grammarAccess.getQtValueAccess().getTypeQtTypeCrossReference_2_0()); }
 (
-{ before(grammarAccess.getQtValueAccess().getTypeQtTypeIDTerminalRuleCall_2_0_1()); }
-	RULE_ID{ after(grammarAccess.getQtValueAccess().getTypeQtTypeIDTerminalRuleCall_2_0_1()); }
+{ before(grammarAccess.getQtValueAccess().getTypeQtTypeQualifiedNameParserRuleCall_2_0_1()); }
+	ruleQualifiedName{ after(grammarAccess.getQtValueAccess().getTypeQtTypeQualifiedNameParserRuleCall_2_0_1()); }
 )
 { after(grammarAccess.getQtValueAccess().getTypeQtTypeCrossReference_2_0()); }
 )
@@ -16617,8 +16494,8 @@ rule__QtReturnValue__TypeAssignment_2
 (
 { before(grammarAccess.getQtReturnValueAccess().getTypeQtTypeCrossReference_2_0()); }
 (
-{ before(grammarAccess.getQtReturnValueAccess().getTypeQtTypeIDTerminalRuleCall_2_0_1()); }
-	RULE_ID{ after(grammarAccess.getQtReturnValueAccess().getTypeQtTypeIDTerminalRuleCall_2_0_1()); }
+{ before(grammarAccess.getQtReturnValueAccess().getTypeQtTypeQualifiedNameParserRuleCall_2_0_1()); }
+	ruleQualifiedName{ after(grammarAccess.getQtReturnValueAccess().getTypeQtTypeQualifiedNameParserRuleCall_2_0_1()); }
 )
 { after(grammarAccess.getQtReturnValueAccess().getTypeQtTypeCrossReference_2_0()); }
 )
@@ -18387,6 +18264,8 @@ finally {
 
 
 
+
+RULE_LONG : '-'? ('0'..'9')+;
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'$'|'_') ('a'..'z'|'A'..'Z'|'$'|'_'|'0'..'9')*;
 

@@ -29,7 +29,7 @@ public class InternalQIdlLexer extends Lexer {
     public static final int T__24=24;
     public static final int T__23=23;
     public static final int T__22=22;
-    public static final int RULE_ANY_OTHER=10;
+    public static final int RULE_ANY_OTHER=11;
     public static final int T__21=21;
     public static final int T__20=20;
     public static final int T__61=61;
@@ -40,8 +40,9 @@ public class InternalQIdlLexer extends Lexer {
     public static final int T__19=19;
     public static final int T__57=57;
     public static final int T__58=58;
-    public static final int T__51=51;
     public static final int T__16=16;
+    public static final int T__51=51;
+    public static final int T__90=90;
     public static final int T__52=52;
     public static final int T__15=15;
     public static final int T__53=53;
@@ -49,11 +50,10 @@ public class InternalQIdlLexer extends Lexer {
     public static final int T__54=54;
     public static final int T__17=17;
     public static final int T__12=12;
-    public static final int T__11=11;
     public static final int T__14=14;
     public static final int T__13=13;
     public static final int T__59=59;
-    public static final int RULE_INT=5;
+    public static final int RULE_INT=6;
     public static final int T__50=50;
     public static final int T__42=42;
     public static final int T__43=43;
@@ -68,19 +68,20 @@ public class InternalQIdlLexer extends Lexer {
     public static final int T__45=45;
     public static final int T__83=83;
     public static final int T__48=48;
+    public static final int RULE_LONG=5;
     public static final int T__49=49;
     public static final int T__85=85;
     public static final int T__84=84;
-    public static final int RULE_SL_COMMENT=8;
+    public static final int RULE_SL_COMMENT=9;
     public static final int T__87=87;
     public static final int T__86=86;
     public static final int T__89=89;
     public static final int T__88=88;
-    public static final int RULE_ML_COMMENT=7;
+    public static final int RULE_ML_COMMENT=8;
     public static final int T__30=30;
     public static final int T__31=31;
     public static final int T__32=32;
-    public static final int RULE_STRING=6;
+    public static final int RULE_STRING=7;
     public static final int T__33=33;
     public static final int T__71=71;
     public static final int T__34=34;
@@ -92,7 +93,7 @@ public class InternalQIdlLexer extends Lexer {
     public static final int T__38=38;
     public static final int T__39=39;
     public static final int T__76=76;
-    public static final int RULE_WS=9;
+    public static final int RULE_WS=10;
     public static final int T__75=75;
     public static final int T__74=74;
     public static final int T__73=73;
@@ -113,36 +114,15 @@ public class InternalQIdlLexer extends Lexer {
     }
     public String getGrammarFileName() { return "../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g"; }
 
-    // $ANTLR start "T__11"
-    public final void mT__11() throws RecognitionException {
-        try {
-            int _type = T__11;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:11:7: ( '=' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:11:9: '='
-            {
-            match('='); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__11"
-
     // $ANTLR start "T__12"
     public final void mT__12() throws RecognitionException {
         try {
             int _type = T__12;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:12:7: ( '+=' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:12:9: '+='
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:11:7: ( '=' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:11:9: '='
             {
-            match("+="); 
-
+            match('='); 
 
             }
 
@@ -159,10 +139,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__13;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:13:7: ( '||' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:13:9: '||'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:12:7: ( '+=' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:12:9: '+='
             {
-            match("||"); 
+            match("+="); 
 
 
             }
@@ -180,10 +160,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__14;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:14:7: ( '&&' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:14:9: '&&'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:13:7: ( '||' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:13:9: '||'
             {
-            match("&&"); 
+            match("||"); 
 
 
             }
@@ -201,10 +181,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__15;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:15:7: ( '==' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:15:9: '=='
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:14:7: ( '&&' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:14:9: '&&'
             {
-            match("=="); 
+            match("&&"); 
 
 
             }
@@ -222,10 +202,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__16;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:16:7: ( '!=' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:16:9: '!='
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:15:7: ( '==' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:15:9: '=='
             {
-            match("!="); 
+            match("=="); 
 
 
             }
@@ -243,10 +223,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:17:7: ( '>=' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:17:9: '>='
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:16:7: ( '!=' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:16:9: '!='
             {
-            match(">="); 
+            match("!="); 
 
 
             }
@@ -264,10 +244,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18:7: ( '<=' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18:9: '<='
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:17:7: ( '>=' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:17:9: '>='
             {
-            match("<="); 
+            match(">="); 
 
 
             }
@@ -285,10 +265,11 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:19:7: ( '>' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:19:9: '>'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18:7: ( '<=' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18:9: '<='
             {
-            match('>'); 
+            match("<="); 
+
 
             }
 
@@ -305,10 +286,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:20:7: ( '<' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:20:9: '<'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:19:7: ( '>' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:19:9: '>'
             {
-            match('<'); 
+            match('>'); 
 
             }
 
@@ -325,11 +306,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:21:7: ( '->' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:21:9: '->'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:20:7: ( '<' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:20:9: '<'
             {
-            match("->"); 
-
+            match('<'); 
 
             }
 
@@ -346,10 +326,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:22:7: ( '..' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:22:9: '..'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:21:7: ( '->' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:21:9: '->'
             {
-            match(".."); 
+            match("->"); 
 
 
             }
@@ -367,10 +347,11 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:23:7: ( '+' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:23:9: '+'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:22:7: ( '..' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:22:9: '..'
             {
-            match('+'); 
+            match(".."); 
+
 
             }
 
@@ -387,10 +368,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:24:7: ( '-' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:24:9: '-'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:23:7: ( '+' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:23:9: '+'
             {
-            match('-'); 
+            match('+'); 
 
             }
 
@@ -407,10 +388,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:25:7: ( '*' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:25:9: '*'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:24:7: ( '-' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:24:9: '-'
             {
-            match('*'); 
+            match('-'); 
 
             }
 
@@ -427,11 +408,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:26:7: ( '**' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:26:9: '**'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:25:7: ( '*' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:25:9: '*'
             {
-            match("**"); 
-
+            match('*'); 
 
             }
 
@@ -448,10 +428,11 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:27:7: ( '/' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:27:9: '/'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:26:7: ( '**' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:26:9: '**'
             {
-            match('/'); 
+            match("**"); 
+
 
             }
 
@@ -468,10 +449,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:28:7: ( '%' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:28:9: '%'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:27:7: ( '/' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:27:9: '/'
             {
-            match('%'); 
+            match('/'); 
 
             }
 
@@ -488,10 +469,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:29:7: ( '!' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:29:9: '!'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:28:7: ( '%' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:28:9: '%'
             {
-            match('!'); 
+            match('%'); 
 
             }
 
@@ -508,10 +489,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:30:7: ( '.' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:30:9: '.'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:29:7: ( '!' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:29:9: '!'
             {
-            match('.'); 
+            match('!'); 
 
             }
 
@@ -528,11 +509,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:31:7: ( 'val' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:31:9: 'val'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:30:7: ( '.' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:30:9: '.'
             {
-            match("val"); 
-
+            match('.'); 
 
             }
 
@@ -549,10 +529,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:32:7: ( 'super' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:32:9: 'super'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:31:7: ( 'val' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:31:9: 'val'
             {
-            match("super"); 
+            match("val"); 
 
 
             }
@@ -570,10 +550,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:33:7: ( 'false' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:33:9: 'false'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:32:7: ( 'super' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:32:9: 'super'
             {
-            match("false"); 
+            match("super"); 
 
 
             }
@@ -591,10 +571,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:34:7: ( 'virtual' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:34:9: 'virtual'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:33:7: ( 'false' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:33:9: 'false'
             {
-            match("virtual"); 
+            match("false"); 
 
 
             }
@@ -612,10 +592,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:35:7: ( 'purevirtual' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:35:9: 'purevirtual'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:34:7: ( 'virtual' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:34:9: 'virtual'
             {
-            match("purevirtual"); 
+            match("virtual"); 
 
 
             }
@@ -633,10 +613,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:36:7: ( 'public' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:36:9: 'public'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:35:7: ( 'purevirtual' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:35:9: 'purevirtual'
             {
-            match("public"); 
+            match("purevirtual"); 
 
 
             }
@@ -654,10 +634,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:37:7: ( 'protected' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:37:9: 'protected'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:36:7: ( 'public' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:36:9: 'public'
             {
-            match("protected"); 
+            match("public"); 
 
 
             }
@@ -675,10 +655,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:38:7: ( 'member' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:38:9: 'member'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:37:7: ( 'protected' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:37:9: 'protected'
             {
-            match("member"); 
+            match("protected"); 
 
 
             }
@@ -696,10 +676,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:39:7: ( 'class' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:39:9: 'class'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:38:7: ( 'member' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:38:9: 'member'
             {
-            match("class"); 
+            match("member"); 
 
 
             }
@@ -717,10 +697,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:40:7: ( 'pointer' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:40:9: 'pointer'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:39:7: ( 'class' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:39:9: 'class'
             {
-            match("pointer"); 
+            match("class"); 
 
 
             }
@@ -738,10 +718,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:41:7: ( 'reference' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:41:9: 'reference'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:40:7: ( 'pointer' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:40:9: 'pointer'
             {
-            match("reference"); 
+            match("pointer"); 
 
 
             }
@@ -759,10 +739,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:42:7: ( 'namespace' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:42:9: 'namespace'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:41:7: ( 'reference' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:41:9: 'reference'
             {
-            match("namespace"); 
+            match("reference"); 
 
 
             }
@@ -780,10 +760,11 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__43;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:43:7: ( '{' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:43:9: '{'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:42:7: ( 'namespace' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:42:9: 'namespace'
             {
-            match('{'); 
+            match("namespace"); 
+
 
             }
 
@@ -800,10 +781,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__44;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:44:7: ( '}' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:44:9: '}'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:43:7: ( '{' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:43:9: '{'
             {
-            match('}'); 
+            match('{'); 
 
             }
 
@@ -820,11 +801,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__45;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:45:7: ( 'extends' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:45:9: 'extends'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:44:7: ( '}' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:44:9: '}'
             {
-            match("extends"); 
-
+            match('}'); 
 
             }
 
@@ -841,10 +821,11 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__46;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:46:7: ( ',' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:46:9: ','
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:45:7: ( 'extends' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:45:9: 'extends'
             {
-            match(','); 
+            match("extends"); 
+
 
             }
 
@@ -861,11 +842,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__47;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:47:7: ( 'constructor' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:47:9: 'constructor'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:46:7: ( ',' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:46:9: ','
             {
-            match("constructor"); 
-
+            match(','); 
 
             }
 
@@ -882,10 +862,11 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__48;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:48:7: ( '(' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:48:9: '('
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:47:7: ( 'constructor' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:47:9: 'constructor'
             {
-            match('('); 
+            match("constructor"); 
+
 
             }
 
@@ -902,11 +883,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__49;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:49:7: ( ');' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:49:9: ');'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:48:7: ( '(' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:48:9: '('
             {
-            match(");"); 
-
+            match('('); 
 
             }
 
@@ -923,10 +903,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__50;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:50:7: ( 'property' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:50:9: 'property'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:49:7: ( ');' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:49:9: ');'
             {
-            match("property"); 
+            match(");"); 
 
 
             }
@@ -944,10 +924,11 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__51;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:51:7: ( ';' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:51:9: ';'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:50:7: ( 'property' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:50:9: 'property'
             {
-            match(';'); 
+            match("property"); 
+
 
             }
 
@@ -964,11 +945,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__52;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:52:7: ( 'enumeration' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:52:9: 'enumeration'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:51:7: ( ';' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:51:9: ';'
             {
-            match("enumeration"); 
-
+            match(';'); 
 
             }
 
@@ -985,10 +965,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__53;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:53:7: ( 'flags' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:53:9: 'flags'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:52:7: ( 'enumeration' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:52:9: 'enumeration'
             {
-            match("flags"); 
+            match("enumeration"); 
 
 
             }
@@ -1006,10 +986,11 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__54;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:54:7: ( ':' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:54:9: ':'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:53:7: ( 'flags' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:53:9: 'flags'
             {
-            match(':'); 
+            match("flags"); 
+
 
             }
 
@@ -1026,10 +1007,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__55;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:55:7: ( '|' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:55:9: '|'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:54:7: ( ':' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:54:9: ':'
             {
-            match('|'); 
+            match(':'); 
 
             }
 
@@ -1046,11 +1027,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__56;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:56:7: ( 'builtin' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:56:9: 'builtin'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:55:7: ( '|' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:55:9: '|'
             {
-            match("builtin"); 
-
+            match('|'); 
 
             }
 
@@ -1067,10 +1047,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__57;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:57:7: ( 'function' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:57:9: 'function'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:56:7: ( 'builtin' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:56:9: 'builtin'
             {
-            match("function"); 
+            match("builtin"); 
 
 
             }
@@ -1088,10 +1068,11 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__58;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:58:7: ( ')' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:58:9: ')'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:57:7: ( 'function' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:57:9: 'function'
             {
-            match(')'); 
+            match("function"); 
+
 
             }
 
@@ -1108,11 +1089,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__59;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:59:7: ( 'signal' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:59:9: 'signal'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:58:7: ( ')' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:58:9: ')'
             {
-            match("signal"); 
-
+            match(')'); 
 
             }
 
@@ -1129,10 +1109,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__60;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:60:7: ( 'slot' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:60:9: 'slot'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:59:7: ( 'signal' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:59:9: 'signal'
             {
-            match("slot"); 
+            match("signal"); 
 
 
             }
@@ -1150,10 +1130,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__61;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:61:7: ( 'instanceof' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:61:9: 'instanceof'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:60:7: ( 'slot' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:60:9: 'slot'
             {
-            match("instanceof"); 
+            match("slot"); 
 
 
             }
@@ -1171,10 +1151,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__62;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:62:7: ( 'as' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:62:9: 'as'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:61:7: ( 'instanceof' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:61:9: 'instanceof'
             {
-            match("as"); 
+            match("instanceof"); 
 
 
             }
@@ -1192,10 +1172,11 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__63;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:63:7: ( '[' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:63:9: '['
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:62:7: ( 'as' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:62:9: 'as'
             {
-            match('['); 
+            match("as"); 
+
 
             }
 
@@ -1212,10 +1193,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__64;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:64:7: ( ']' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:64:9: ']'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:63:7: ( '[' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:63:9: '['
             {
-            match(']'); 
+            match('['); 
 
             }
 
@@ -1232,11 +1213,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__65;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:65:7: ( 'if' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:65:9: 'if'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:64:7: ( ']' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:64:9: ']'
             {
-            match("if"); 
-
+            match(']'); 
 
             }
 
@@ -1253,10 +1233,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__66;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:66:7: ( 'else' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:66:9: 'else'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:65:7: ( 'if' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:65:9: 'if'
             {
-            match("else"); 
+            match("if"); 
 
 
             }
@@ -1274,10 +1254,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__67;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:67:7: ( 'switch' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:67:9: 'switch'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:66:7: ( 'else' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:66:9: 'else'
             {
-            match("switch"); 
+            match("else"); 
 
 
             }
@@ -1295,10 +1275,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__68;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:68:7: ( 'default' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:68:9: 'default'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:67:7: ( 'switch' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:67:9: 'switch'
             {
-            match("default"); 
+            match("switch"); 
 
 
             }
@@ -1316,10 +1296,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__69;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:69:7: ( 'case' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:69:9: 'case'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:68:7: ( 'default' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:68:9: 'default'
             {
-            match("case"); 
+            match("default"); 
 
 
             }
@@ -1337,10 +1317,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__70;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:70:7: ( 'for' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:70:9: 'for'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:69:7: ( 'case' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:69:9: 'case'
             {
-            match("for"); 
+            match("case"); 
 
 
             }
@@ -1358,10 +1338,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__71;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:71:7: ( 'while' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:71:9: 'while'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:70:7: ( 'for' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:70:9: 'for'
             {
-            match("while"); 
+            match("for"); 
 
 
             }
@@ -1379,10 +1359,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__72;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:72:7: ( 'do' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:72:9: 'do'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:71:7: ( 'while' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:71:9: 'while'
             {
-            match("do"); 
+            match("while"); 
 
 
             }
@@ -1400,10 +1380,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__73;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:73:7: ( '::' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:73:9: '::'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:72:7: ( 'do' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:72:9: 'do'
             {
-            match("::"); 
+            match("do"); 
 
 
             }
@@ -1421,10 +1401,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__74;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:74:7: ( 'new' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:74:9: 'new'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:73:7: ( '::' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:73:9: '::'
             {
-            match("new"); 
+            match("::"); 
 
 
             }
@@ -1442,10 +1422,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__75;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:75:7: ( 'null' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:75:9: 'null'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:74:7: ( 'new' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:74:9: 'new'
             {
-            match("null"); 
+            match("new"); 
 
 
             }
@@ -1463,10 +1443,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__76;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:76:7: ( 'typeof' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:76:9: 'typeof'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:75:7: ( 'null' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:75:9: 'null'
             {
-            match("typeof"); 
+            match("null"); 
 
 
             }
@@ -1484,10 +1464,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__77;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:77:7: ( 'throw' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:77:9: 'throw'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:76:7: ( 'typeof' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:76:9: 'typeof'
             {
-            match("throw"); 
+            match("typeof"); 
 
 
             }
@@ -1505,10 +1485,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__78;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:78:7: ( 'return' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:78:9: 'return'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:77:7: ( 'throw' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:77:9: 'throw'
             {
-            match("return"); 
+            match("throw"); 
 
 
             }
@@ -1526,10 +1506,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__79;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:79:7: ( 'try' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:79:9: 'try'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:78:7: ( 'return' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:78:9: 'return'
             {
-            match("try"); 
+            match("return"); 
 
 
             }
@@ -1547,10 +1527,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__80;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:80:7: ( 'finally' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:80:9: 'finally'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:79:7: ( 'try' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:79:9: 'try'
             {
-            match("finally"); 
+            match("try"); 
 
 
             }
@@ -1568,10 +1548,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__81;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:81:7: ( 'catch' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:81:9: 'catch'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:80:7: ( 'finally' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:80:9: 'finally'
             {
-            match("catch"); 
+            match("finally"); 
 
 
             }
@@ -1589,10 +1569,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__82;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:82:7: ( '=>' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:82:9: '=>'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:81:7: ( 'catch' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:81:9: 'catch'
             {
-            match("=>"); 
+            match("catch"); 
 
 
             }
@@ -1610,10 +1590,11 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__83;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:83:7: ( '?' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:83:9: '?'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:82:7: ( '=>' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:82:9: '=>'
             {
-            match('?'); 
+            match("=>"); 
+
 
             }
 
@@ -1630,10 +1611,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__84;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:84:7: ( '&' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:84:9: '&'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:83:7: ( '?' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:83:9: '?'
             {
-            match('&'); 
+            match('?'); 
 
             }
 
@@ -1650,11 +1631,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__85;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:85:7: ( 'const' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:85:9: 'const'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:84:7: ( '&' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:84:9: '&'
             {
-            match("const"); 
-
+            match('&'); 
 
             }
 
@@ -1671,10 +1651,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__86;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:86:7: ( '?.' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:86:9: '?.'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:85:7: ( 'const' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:85:9: 'const'
             {
-            match("?."); 
+            match("const"); 
 
 
             }
@@ -1692,10 +1672,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__87;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:87:7: ( '*.' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:87:9: '*.'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:86:7: ( '?.' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:86:9: '?.'
             {
-            match("*."); 
+            match("?."); 
 
 
             }
@@ -1713,10 +1693,10 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__88;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:88:7: ( 'var' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:88:9: 'var'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:87:7: ( '*.' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:87:9: '*.'
             {
-            match("var"); 
+            match("*."); 
 
 
             }
@@ -1734,6 +1714,27 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = T__89;
             int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:88:7: ( 'var' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:88:9: 'var'
+            {
+            match("var"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__89"
+
+    // $ANTLR start "T__90"
+    public final void mT__90() throws RecognitionException {
+        try {
+            int _type = T__90;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
             // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:89:7: ( 'true' )
             // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:89:9: 'true'
             {
@@ -1748,26 +1749,93 @@ public class InternalQIdlLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "T__89"
+    // $ANTLR end "T__90"
+
+    // $ANTLR start "RULE_LONG"
+    public final void mRULE_LONG() throws RecognitionException {
+        try {
+            int _type = RULE_LONG;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18268:11: ( ( '-' )? ( '0' .. '9' )+ )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18268:13: ( '-' )? ( '0' .. '9' )+
+            {
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18268:13: ( '-' )?
+            int alt1=2;
+            int LA1_0 = input.LA(1);
+
+            if ( (LA1_0=='-') ) {
+                alt1=1;
+            }
+            switch (alt1) {
+                case 1 :
+                    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18268:13: '-'
+                    {
+                    match('-'); 
+
+                    }
+                    break;
+
+            }
+
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18268:18: ( '0' .. '9' )+
+            int cnt2=0;
+            loop2:
+            do {
+                int alt2=2;
+                int LA2_0 = input.LA(1);
+
+                if ( ((LA2_0>='0' && LA2_0<='9')) ) {
+                    alt2=1;
+                }
+
+
+                switch (alt2) {
+            	case 1 :
+            	    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18268:19: '0' .. '9'
+            	    {
+            	    matchRange('0','9'); 
+
+            	    }
+            	    break;
+
+            	default :
+            	    if ( cnt2 >= 1 ) break loop2;
+                        EarlyExitException eee =
+                            new EarlyExitException(2, input);
+                        throw eee;
+                }
+                cnt2++;
+            } while (true);
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_LONG"
 
     // $ANTLR start "RULE_ID"
     public final void mRULE_ID() throws RecognitionException {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18391:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' | '0' .. '9' )* )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18391:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' | '0' .. '9' )*
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18270:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' | '0' .. '9' )* )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18270:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' | '0' .. '9' )*
             {
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18391:11: ( '^' )?
-            int alt1=2;
-            int LA1_0 = input.LA(1);
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18270:11: ( '^' )?
+            int alt3=2;
+            int LA3_0 = input.LA(1);
 
-            if ( (LA1_0=='^') ) {
-                alt1=1;
+            if ( (LA3_0=='^') ) {
+                alt3=1;
             }
-            switch (alt1) {
+            switch (alt3) {
                 case 1 :
-                    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18391:11: '^'
+                    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18270:11: '^'
                     {
                     match('^'); 
 
@@ -1785,18 +1853,18 @@ public class InternalQIdlLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18391:44: ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' | '0' .. '9' )*
-            loop2:
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18270:44: ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' | '0' .. '9' )*
+            loop4:
             do {
-                int alt2=2;
-                int LA2_0 = input.LA(1);
+                int alt4=2;
+                int LA4_0 = input.LA(1);
 
-                if ( (LA2_0=='$'||(LA2_0>='0' && LA2_0<='9')||(LA2_0>='A' && LA2_0<='Z')||LA2_0=='_'||(LA2_0>='a' && LA2_0<='z')) ) {
-                    alt2=1;
+                if ( (LA4_0=='$'||(LA4_0>='0' && LA4_0<='9')||(LA4_0>='A' && LA4_0<='Z')||LA4_0=='_'||(LA4_0>='a' && LA4_0<='z')) ) {
+                    alt4=1;
                 }
 
 
-                switch (alt2) {
+                switch (alt4) {
             	case 1 :
             	    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:
             	    {
@@ -1814,7 +1882,7 @@ public class InternalQIdlLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop2;
+            	    break loop4;
                 }
             } while (true);
 
@@ -1834,24 +1902,24 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18393:10: ( ( '0' .. '9' )+ )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18393:12: ( '0' .. '9' )+
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18272:10: ( ( '0' .. '9' )+ )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18272:12: ( '0' .. '9' )+
             {
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18393:12: ( '0' .. '9' )+
-            int cnt3=0;
-            loop3:
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18272:12: ( '0' .. '9' )+
+            int cnt5=0;
+            loop5:
             do {
-                int alt3=2;
-                int LA3_0 = input.LA(1);
+                int alt5=2;
+                int LA5_0 = input.LA(1);
 
-                if ( ((LA3_0>='0' && LA3_0<='9')) ) {
-                    alt3=1;
+                if ( ((LA5_0>='0' && LA5_0<='9')) ) {
+                    alt5=1;
                 }
 
 
-                switch (alt3) {
+                switch (alt5) {
             	case 1 :
-            	    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18393:13: '0' .. '9'
+            	    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18272:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -1859,12 +1927,12 @@ public class InternalQIdlLexer extends Lexer {
             	    break;
 
             	default :
-            	    if ( cnt3 >= 1 ) break loop3;
+            	    if ( cnt5 >= 1 ) break loop5;
                         EarlyExitException eee =
-                            new EarlyExitException(3, input);
+                            new EarlyExitException(5, input);
                         throw eee;
                 }
-                cnt3++;
+                cnt5++;
             } while (true);
 
 
@@ -1883,47 +1951,47 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18395:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18395:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18274:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18274:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18395:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
-            int alt6=2;
-            int LA6_0 = input.LA(1);
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18274:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            int alt8=2;
+            int LA8_0 = input.LA(1);
 
-            if ( (LA6_0=='\"') ) {
-                alt6=1;
+            if ( (LA8_0=='\"') ) {
+                alt8=1;
             }
-            else if ( (LA6_0=='\'') ) {
-                alt6=2;
+            else if ( (LA8_0=='\'') ) {
+                alt8=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 6, 0, input);
+                    new NoViableAltException("", 8, 0, input);
 
                 throw nvae;
             }
-            switch (alt6) {
+            switch (alt8) {
                 case 1 :
-                    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18395:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18274:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18395:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
-                    loop4:
+                    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18274:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    loop6:
                     do {
-                        int alt4=3;
-                        int LA4_0 = input.LA(1);
+                        int alt6=3;
+                        int LA6_0 = input.LA(1);
 
-                        if ( (LA4_0=='\\') ) {
-                            alt4=1;
+                        if ( (LA6_0=='\\') ) {
+                            alt6=1;
                         }
-                        else if ( ((LA4_0>='\u0000' && LA4_0<='!')||(LA4_0>='#' && LA4_0<='[')||(LA4_0>=']' && LA4_0<='\uFFFF')) ) {
-                            alt4=2;
+                        else if ( ((LA6_0>='\u0000' && LA6_0<='!')||(LA6_0>='#' && LA6_0<='[')||(LA6_0>=']' && LA6_0<='\uFFFF')) ) {
+                            alt6=2;
                         }
 
 
-                        switch (alt4) {
+                        switch (alt6) {
                     	case 1 :
-                    	    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18395:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18274:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -1939,7 +2007,7 @@ public class InternalQIdlLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18395:66: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18274:66: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1955,7 +2023,7 @@ public class InternalQIdlLexer extends Lexer {
                     	    break;
 
                     	default :
-                    	    break loop4;
+                    	    break loop6;
                         }
                     } while (true);
 
@@ -1964,26 +2032,26 @@ public class InternalQIdlLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18395:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18274:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18395:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
-                    loop5:
+                    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18274:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    loop7:
                     do {
-                        int alt5=3;
-                        int LA5_0 = input.LA(1);
+                        int alt7=3;
+                        int LA7_0 = input.LA(1);
 
-                        if ( (LA5_0=='\\') ) {
-                            alt5=1;
+                        if ( (LA7_0=='\\') ) {
+                            alt7=1;
                         }
-                        else if ( ((LA5_0>='\u0000' && LA5_0<='&')||(LA5_0>='(' && LA5_0<='[')||(LA5_0>=']' && LA5_0<='\uFFFF')) ) {
-                            alt5=2;
+                        else if ( ((LA7_0>='\u0000' && LA7_0<='&')||(LA7_0>='(' && LA7_0<='[')||(LA7_0>=']' && LA7_0<='\uFFFF')) ) {
+                            alt7=2;
                         }
 
 
-                        switch (alt5) {
+                        switch (alt7) {
                     	case 1 :
-                    	    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18395:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18274:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -1999,7 +2067,7 @@ public class InternalQIdlLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18395:137: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18274:137: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -2015,7 +2083,7 @@ public class InternalQIdlLexer extends Lexer {
                     	    break;
 
                     	default :
-                    	    break loop5;
+                    	    break loop7;
                         }
                     } while (true);
 
@@ -2042,37 +2110,37 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18397:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18397:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18276:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18276:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18397:24: ( options {greedy=false; } : . )*
-            loop7:
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18276:24: ( options {greedy=false; } : . )*
+            loop9:
             do {
-                int alt7=2;
-                int LA7_0 = input.LA(1);
+                int alt9=2;
+                int LA9_0 = input.LA(1);
 
-                if ( (LA7_0=='*') ) {
-                    int LA7_1 = input.LA(2);
+                if ( (LA9_0=='*') ) {
+                    int LA9_1 = input.LA(2);
 
-                    if ( (LA7_1=='/') ) {
-                        alt7=2;
+                    if ( (LA9_1=='/') ) {
+                        alt9=2;
                     }
-                    else if ( ((LA7_1>='\u0000' && LA7_1<='.')||(LA7_1>='0' && LA7_1<='\uFFFF')) ) {
-                        alt7=1;
+                    else if ( ((LA9_1>='\u0000' && LA9_1<='.')||(LA9_1>='0' && LA9_1<='\uFFFF')) ) {
+                        alt9=1;
                     }
 
 
                 }
-                else if ( ((LA7_0>='\u0000' && LA7_0<=')')||(LA7_0>='+' && LA7_0<='\uFFFF')) ) {
-                    alt7=1;
+                else if ( ((LA9_0>='\u0000' && LA9_0<=')')||(LA9_0>='+' && LA9_0<='\uFFFF')) ) {
+                    alt9=1;
                 }
 
 
-                switch (alt7) {
+                switch (alt9) {
             	case 1 :
-            	    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18397:52: .
+            	    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18276:52: .
             	    {
             	    matchAny(); 
 
@@ -2080,7 +2148,7 @@ public class InternalQIdlLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop7;
+            	    break loop9;
                 }
             } while (true);
 
@@ -2102,25 +2170,25 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18399:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18399:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18278:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18278:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18399:24: (~ ( ( '\\n' | '\\r' ) ) )*
-            loop8:
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18278:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            loop10:
             do {
-                int alt8=2;
-                int LA8_0 = input.LA(1);
+                int alt10=2;
+                int LA10_0 = input.LA(1);
 
-                if ( ((LA8_0>='\u0000' && LA8_0<='\t')||(LA8_0>='\u000B' && LA8_0<='\f')||(LA8_0>='\u000E' && LA8_0<='\uFFFF')) ) {
-                    alt8=1;
+                if ( ((LA10_0>='\u0000' && LA10_0<='\t')||(LA10_0>='\u000B' && LA10_0<='\f')||(LA10_0>='\u000E' && LA10_0<='\uFFFF')) ) {
+                    alt10=1;
                 }
 
 
-                switch (alt8) {
+                switch (alt10) {
             	case 1 :
-            	    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18399:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18278:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -2136,31 +2204,31 @@ public class InternalQIdlLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop8;
+            	    break loop10;
                 }
             } while (true);
 
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18399:40: ( ( '\\r' )? '\\n' )?
-            int alt10=2;
-            int LA10_0 = input.LA(1);
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18278:40: ( ( '\\r' )? '\\n' )?
+            int alt12=2;
+            int LA12_0 = input.LA(1);
 
-            if ( (LA10_0=='\n'||LA10_0=='\r') ) {
-                alt10=1;
+            if ( (LA12_0=='\n'||LA12_0=='\r') ) {
+                alt12=1;
             }
-            switch (alt10) {
+            switch (alt12) {
                 case 1 :
-                    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18399:41: ( '\\r' )? '\\n'
+                    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18278:41: ( '\\r' )? '\\n'
                     {
-                    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18399:41: ( '\\r' )?
-                    int alt9=2;
-                    int LA9_0 = input.LA(1);
+                    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18278:41: ( '\\r' )?
+                    int alt11=2;
+                    int LA11_0 = input.LA(1);
 
-                    if ( (LA9_0=='\r') ) {
-                        alt9=1;
+                    if ( (LA11_0=='\r') ) {
+                        alt11=1;
                     }
-                    switch (alt9) {
+                    switch (alt11) {
                         case 1 :
-                            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18399:41: '\\r'
+                            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18278:41: '\\r'
                             {
                             match('\r'); 
 
@@ -2192,22 +2260,22 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18401:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18401:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18280:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18280:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18401:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
-            int cnt11=0;
-            loop11:
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18280:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            int cnt13=0;
+            loop13:
             do {
-                int alt11=2;
-                int LA11_0 = input.LA(1);
+                int alt13=2;
+                int LA13_0 = input.LA(1);
 
-                if ( ((LA11_0>='\t' && LA11_0<='\n')||LA11_0=='\r'||LA11_0==' ') ) {
-                    alt11=1;
+                if ( ((LA13_0>='\t' && LA13_0<='\n')||LA13_0=='\r'||LA13_0==' ') ) {
+                    alt13=1;
                 }
 
 
-                switch (alt11) {
+                switch (alt13) {
             	case 1 :
             	    // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:
             	    {
@@ -2225,12 +2293,12 @@ public class InternalQIdlLexer extends Lexer {
             	    break;
 
             	default :
-            	    if ( cnt11 >= 1 ) break loop11;
+            	    if ( cnt13 >= 1 ) break loop13;
                         EarlyExitException eee =
-                            new EarlyExitException(11, input);
+                            new EarlyExitException(13, input);
                         throw eee;
                 }
-                cnt11++;
+                cnt13++;
             } while (true);
 
 
@@ -2249,8 +2317,8 @@ public class InternalQIdlLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18403:16: ( . )
-            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18403:18: .
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18282:16: ( . )
+            // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:18282:18: .
             {
             matchAny(); 
 
@@ -2265,607 +2333,614 @@ public class InternalQIdlLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt12=86;
-        alt12 = dfa12.predict(input);
-        switch (alt12) {
+        // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:8: ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | RULE_LONG | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt14=87;
+        alt14 = dfa14.predict(input);
+        switch (alt14) {
             case 1 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:10: T__11
-                {
-                mT__11(); 
-
-                }
-                break;
-            case 2 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:16: T__12
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:10: T__12
                 {
                 mT__12(); 
 
                 }
                 break;
-            case 3 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:22: T__13
+            case 2 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:16: T__13
                 {
                 mT__13(); 
 
                 }
                 break;
-            case 4 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:28: T__14
+            case 3 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:22: T__14
                 {
                 mT__14(); 
 
                 }
                 break;
-            case 5 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:34: T__15
+            case 4 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:28: T__15
                 {
                 mT__15(); 
 
                 }
                 break;
-            case 6 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:40: T__16
+            case 5 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:34: T__16
                 {
                 mT__16(); 
 
                 }
                 break;
-            case 7 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:46: T__17
+            case 6 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:40: T__17
                 {
                 mT__17(); 
 
                 }
                 break;
-            case 8 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:52: T__18
+            case 7 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:46: T__18
                 {
                 mT__18(); 
 
                 }
                 break;
-            case 9 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:58: T__19
+            case 8 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:52: T__19
                 {
                 mT__19(); 
 
                 }
                 break;
-            case 10 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:64: T__20
+            case 9 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:58: T__20
                 {
                 mT__20(); 
 
                 }
                 break;
-            case 11 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:70: T__21
+            case 10 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:64: T__21
                 {
                 mT__21(); 
 
                 }
                 break;
-            case 12 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:76: T__22
+            case 11 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:70: T__22
                 {
                 mT__22(); 
 
                 }
                 break;
-            case 13 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:82: T__23
+            case 12 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:76: T__23
                 {
                 mT__23(); 
 
                 }
                 break;
-            case 14 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:88: T__24
+            case 13 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:82: T__24
                 {
                 mT__24(); 
 
                 }
                 break;
-            case 15 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:94: T__25
+            case 14 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:88: T__25
                 {
                 mT__25(); 
 
                 }
                 break;
-            case 16 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:100: T__26
+            case 15 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:94: T__26
                 {
                 mT__26(); 
 
                 }
                 break;
-            case 17 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:106: T__27
+            case 16 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:100: T__27
                 {
                 mT__27(); 
 
                 }
                 break;
-            case 18 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:112: T__28
+            case 17 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:106: T__28
                 {
                 mT__28(); 
 
                 }
                 break;
-            case 19 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:118: T__29
+            case 18 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:112: T__29
                 {
                 mT__29(); 
 
                 }
                 break;
-            case 20 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:124: T__30
+            case 19 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:118: T__30
                 {
                 mT__30(); 
 
                 }
                 break;
-            case 21 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:130: T__31
+            case 20 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:124: T__31
                 {
                 mT__31(); 
 
                 }
                 break;
-            case 22 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:136: T__32
+            case 21 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:130: T__32
                 {
                 mT__32(); 
 
                 }
                 break;
-            case 23 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:142: T__33
+            case 22 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:136: T__33
                 {
                 mT__33(); 
 
                 }
                 break;
-            case 24 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:148: T__34
+            case 23 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:142: T__34
                 {
                 mT__34(); 
 
                 }
                 break;
-            case 25 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:154: T__35
+            case 24 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:148: T__35
                 {
                 mT__35(); 
 
                 }
                 break;
-            case 26 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:160: T__36
+            case 25 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:154: T__36
                 {
                 mT__36(); 
 
                 }
                 break;
-            case 27 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:166: T__37
+            case 26 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:160: T__37
                 {
                 mT__37(); 
 
                 }
                 break;
-            case 28 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:172: T__38
+            case 27 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:166: T__38
                 {
                 mT__38(); 
 
                 }
                 break;
-            case 29 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:178: T__39
+            case 28 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:172: T__39
                 {
                 mT__39(); 
 
                 }
                 break;
-            case 30 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:184: T__40
+            case 29 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:178: T__40
                 {
                 mT__40(); 
 
                 }
                 break;
-            case 31 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:190: T__41
+            case 30 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:184: T__41
                 {
                 mT__41(); 
 
                 }
                 break;
-            case 32 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:196: T__42
+            case 31 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:190: T__42
                 {
                 mT__42(); 
 
                 }
                 break;
-            case 33 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:202: T__43
+            case 32 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:196: T__43
                 {
                 mT__43(); 
 
                 }
                 break;
-            case 34 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:208: T__44
+            case 33 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:202: T__44
                 {
                 mT__44(); 
 
                 }
                 break;
-            case 35 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:214: T__45
+            case 34 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:208: T__45
                 {
                 mT__45(); 
 
                 }
                 break;
-            case 36 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:220: T__46
+            case 35 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:214: T__46
                 {
                 mT__46(); 
 
                 }
                 break;
-            case 37 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:226: T__47
+            case 36 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:220: T__47
                 {
                 mT__47(); 
 
                 }
                 break;
-            case 38 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:232: T__48
+            case 37 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:226: T__48
                 {
                 mT__48(); 
 
                 }
                 break;
-            case 39 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:238: T__49
+            case 38 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:232: T__49
                 {
                 mT__49(); 
 
                 }
                 break;
-            case 40 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:244: T__50
+            case 39 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:238: T__50
                 {
                 mT__50(); 
 
                 }
                 break;
-            case 41 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:250: T__51
+            case 40 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:244: T__51
                 {
                 mT__51(); 
 
                 }
                 break;
-            case 42 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:256: T__52
+            case 41 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:250: T__52
                 {
                 mT__52(); 
 
                 }
                 break;
-            case 43 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:262: T__53
+            case 42 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:256: T__53
                 {
                 mT__53(); 
 
                 }
                 break;
-            case 44 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:268: T__54
+            case 43 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:262: T__54
                 {
                 mT__54(); 
 
                 }
                 break;
-            case 45 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:274: T__55
+            case 44 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:268: T__55
                 {
                 mT__55(); 
 
                 }
                 break;
-            case 46 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:280: T__56
+            case 45 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:274: T__56
                 {
                 mT__56(); 
 
                 }
                 break;
-            case 47 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:286: T__57
+            case 46 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:280: T__57
                 {
                 mT__57(); 
 
                 }
                 break;
-            case 48 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:292: T__58
+            case 47 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:286: T__58
                 {
                 mT__58(); 
 
                 }
                 break;
-            case 49 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:298: T__59
+            case 48 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:292: T__59
                 {
                 mT__59(); 
 
                 }
                 break;
-            case 50 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:304: T__60
+            case 49 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:298: T__60
                 {
                 mT__60(); 
 
                 }
                 break;
-            case 51 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:310: T__61
+            case 50 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:304: T__61
                 {
                 mT__61(); 
 
                 }
                 break;
-            case 52 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:316: T__62
+            case 51 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:310: T__62
                 {
                 mT__62(); 
 
                 }
                 break;
-            case 53 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:322: T__63
+            case 52 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:316: T__63
                 {
                 mT__63(); 
 
                 }
                 break;
-            case 54 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:328: T__64
+            case 53 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:322: T__64
                 {
                 mT__64(); 
 
                 }
                 break;
-            case 55 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:334: T__65
+            case 54 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:328: T__65
                 {
                 mT__65(); 
 
                 }
                 break;
-            case 56 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:340: T__66
+            case 55 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:334: T__66
                 {
                 mT__66(); 
 
                 }
                 break;
-            case 57 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:346: T__67
+            case 56 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:340: T__67
                 {
                 mT__67(); 
 
                 }
                 break;
-            case 58 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:352: T__68
+            case 57 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:346: T__68
                 {
                 mT__68(); 
 
                 }
                 break;
-            case 59 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:358: T__69
+            case 58 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:352: T__69
                 {
                 mT__69(); 
 
                 }
                 break;
-            case 60 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:364: T__70
+            case 59 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:358: T__70
                 {
                 mT__70(); 
 
                 }
                 break;
-            case 61 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:370: T__71
+            case 60 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:364: T__71
                 {
                 mT__71(); 
 
                 }
                 break;
-            case 62 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:376: T__72
+            case 61 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:370: T__72
                 {
                 mT__72(); 
 
                 }
                 break;
-            case 63 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:382: T__73
+            case 62 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:376: T__73
                 {
                 mT__73(); 
 
                 }
                 break;
-            case 64 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:388: T__74
+            case 63 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:382: T__74
                 {
                 mT__74(); 
 
                 }
                 break;
-            case 65 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:394: T__75
+            case 64 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:388: T__75
                 {
                 mT__75(); 
 
                 }
                 break;
-            case 66 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:400: T__76
+            case 65 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:394: T__76
                 {
                 mT__76(); 
 
                 }
                 break;
-            case 67 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:406: T__77
+            case 66 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:400: T__77
                 {
                 mT__77(); 
 
                 }
                 break;
-            case 68 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:412: T__78
+            case 67 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:406: T__78
                 {
                 mT__78(); 
 
                 }
                 break;
-            case 69 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:418: T__79
+            case 68 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:412: T__79
                 {
                 mT__79(); 
 
                 }
                 break;
-            case 70 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:424: T__80
+            case 69 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:418: T__80
                 {
                 mT__80(); 
 
                 }
                 break;
-            case 71 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:430: T__81
+            case 70 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:424: T__81
                 {
                 mT__81(); 
 
                 }
                 break;
-            case 72 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:436: T__82
+            case 71 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:430: T__82
                 {
                 mT__82(); 
 
                 }
                 break;
-            case 73 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:442: T__83
+            case 72 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:436: T__83
                 {
                 mT__83(); 
 
                 }
                 break;
-            case 74 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:448: T__84
+            case 73 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:442: T__84
                 {
                 mT__84(); 
 
                 }
                 break;
-            case 75 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:454: T__85
+            case 74 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:448: T__85
                 {
                 mT__85(); 
 
                 }
                 break;
-            case 76 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:460: T__86
+            case 75 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:454: T__86
                 {
                 mT__86(); 
 
                 }
                 break;
-            case 77 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:466: T__87
+            case 76 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:460: T__87
                 {
                 mT__87(); 
 
                 }
                 break;
-            case 78 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:472: T__88
+            case 77 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:466: T__88
                 {
                 mT__88(); 
 
                 }
                 break;
-            case 79 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:478: T__89
+            case 78 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:472: T__89
                 {
                 mT__89(); 
 
                 }
                 break;
+            case 79 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:478: T__90
+                {
+                mT__90(); 
+
+                }
+                break;
             case 80 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:484: RULE_ID
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:484: RULE_LONG
+                {
+                mRULE_LONG(); 
+
+                }
+                break;
+            case 81 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:494: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 81 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:492: RULE_INT
+            case 82 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:502: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 82 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:501: RULE_STRING
+            case 83 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:511: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 83 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:513: RULE_ML_COMMENT
+            case 84 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:523: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 84 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:529: RULE_SL_COMMENT
+            case 85 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:539: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 85 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:545: RULE_WS
+            case 86 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:555: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 86 :
-                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:553: RULE_ANY_OTHER
+            case 87 :
+                // ../org.ufacekit.qt.idl.dsl.ui/src-gen/org/ufacekit/qt/idl/dsl/ui/contentassist/antlr/internal/InternalQIdl.g:1:563: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -2877,100 +2952,102 @@ public class InternalQIdlLexer extends Lexer {
     }
 
 
-    protected DFA12 dfa12 = new DFA12(this);
-    static final String DFA12_eotS =
-        "\1\uffff\1\57\1\61\1\63\1\65\1\67\1\71\1\73\1\75\1\77\1\102\1\105"+
-        "\1\uffff\10\111\2\uffff\1\111\2\uffff\1\146\1\uffff\1\151\3\111"+
-        "\2\uffff\3\111\1\167\1\54\2\uffff\2\54\34\uffff\2\111\1\uffff\24"+
-        "\111\2\uffff\3\111\7\uffff\2\111\1\u009a\1\u009b\2\uffff\1\111\1"+
-        "\u009d\4\111\5\uffff\1\u00a3\1\u00a4\10\111\1\u00ad\15\111\1\u00bc"+
-        "\6\111\2\uffff\1\111\1\uffff\3\111\1\u00c7\1\111\2\uffff\3\111\1"+
-        "\u00cc\4\111\1\uffff\11\111\1\u00da\4\111\1\uffff\1\u00df\2\111"+
-        "\1\u00e2\6\111\1\uffff\1\u00e9\1\111\1\u00eb\1\111\1\uffff\1\111"+
-        "\1\u00ee\1\u00ef\10\111\1\u00f8\1\u00fa\1\uffff\1\u00fb\3\111\1"+
-        "\uffff\2\111\1\uffff\3\111\1\u0104\1\111\1\u0106\1\uffff\1\111\1"+
-        "\uffff\1\u0108\1\u0109\2\uffff\3\111\1\u010d\3\111\1\u0111\1\uffff"+
-        "\1\111\2\uffff\1\111\1\u0114\6\111\1\uffff\1\u011b\1\uffff\1\u011c"+
-        "\2\uffff\1\111\1\u011e\1\111\1\uffff\2\111\1\u0122\1\uffff\2\111"+
-        "\1\uffff\1\111\1\u0126\1\111\1\u0128\1\111\1\u012a\2\uffff\1\u012b"+
-        "\1\uffff\2\111\1\u012e\1\uffff\3\111\1\uffff\1\111\1\uffff\1\111"+
-        "\2\uffff\1\111\1\u0135\1\uffff\1\111\1\u0137\1\u0138\3\111\1\uffff"+
-        "\1\111\2\uffff\1\111\1\u013e\1\u013f\1\u0140\1\u0141\4\uffff";
-    static final String DFA12_eofS =
-        "\u0142\uffff";
-    static final String DFA12_minS =
-        "\1\0\2\75\1\174\1\46\3\75\1\76\1\56\2\52\1\uffff\1\141\1\151\1\141"+
+    protected DFA14 dfa14 = new DFA14(this);
+    static final String DFA14_eotS =
+        "\1\uffff\1\57\1\61\1\63\1\65\1\67\1\71\1\73\1\75\1\100\1\103\1\106"+
+        "\1\uffff\10\112\2\uffff\1\112\2\uffff\1\147\1\uffff\1\152\3\112"+
+        "\2\uffff\3\112\1\170\1\76\1\54\1\uffff\2\54\35\uffff\2\112\1\uffff"+
+        "\24\112\2\uffff\3\112\7\uffff\2\112\1\u009b\1\u009c\2\uffff\1\112"+
+        "\1\u009e\4\112\2\uffff\1\76\2\uffff\1\u00a4\1\u00a5\10\112\1\u00ae"+
+        "\15\112\1\u00bd\6\112\2\uffff\1\112\1\uffff\3\112\1\u00c8\1\112"+
+        "\2\uffff\3\112\1\u00cd\4\112\1\uffff\11\112\1\u00db\4\112\1\uffff"+
+        "\1\u00e0\2\112\1\u00e3\6\112\1\uffff\1\u00ea\1\112\1\u00ec\1\112"+
+        "\1\uffff\1\112\1\u00ef\1\u00f0\10\112\1\u00f9\1\u00fb\1\uffff\1"+
+        "\u00fc\3\112\1\uffff\2\112\1\uffff\3\112\1\u0105\1\112\1\u0107\1"+
+        "\uffff\1\112\1\uffff\1\u0109\1\u010a\2\uffff\3\112\1\u010e\3\112"+
+        "\1\u0112\1\uffff\1\112\2\uffff\1\112\1\u0115\6\112\1\uffff\1\u011c"+
+        "\1\uffff\1\u011d\2\uffff\1\112\1\u011f\1\112\1\uffff\2\112\1\u0123"+
+        "\1\uffff\2\112\1\uffff\1\112\1\u0127\1\112\1\u0129\1\112\1\u012b"+
+        "\2\uffff\1\u012c\1\uffff\2\112\1\u012f\1\uffff\3\112\1\uffff\1\112"+
+        "\1\uffff\1\112\2\uffff\1\112\1\u0136\1\uffff\1\112\1\u0138\1\u0139"+
+        "\3\112\1\uffff\1\112\2\uffff\1\112\1\u013f\1\u0140\1\u0141\1\u0142"+
+        "\4\uffff";
+    static final String DFA14_eofS =
+        "\u0143\uffff";
+    static final String DFA14_minS =
+        "\1\0\2\75\1\174\1\46\3\75\1\60\1\56\2\52\1\uffff\1\141\1\151\1\141"+
         "\1\157\1\145\1\141\1\145\1\141\2\uffff\1\154\2\uffff\1\73\1\uffff"+
-        "\1\72\1\165\1\146\1\163\2\uffff\1\145\2\150\1\56\1\44\2\uffff\2"+
-        "\0\34\uffff\1\154\1\162\1\uffff\1\160\1\147\1\157\1\151\1\154\1"+
-        "\141\1\156\1\162\1\156\1\142\1\157\1\151\1\155\1\141\1\156\1\163"+
+        "\1\72\1\165\1\146\1\163\2\uffff\1\145\2\150\1\56\1\60\1\44\1\uffff"+
+        "\2\0\35\uffff\1\154\1\162\1\uffff\1\160\1\147\1\157\1\151\1\154"+
+        "\1\141\1\156\1\162\1\156\1\142\1\157\1\151\1\155\1\141\1\156\1\163"+
         "\1\146\1\155\1\167\1\154\2\uffff\1\164\1\165\1\163\7\uffff\1\151"+
-        "\1\163\2\44\2\uffff\1\146\1\44\1\151\1\160\1\162\1\165\5\uffff\2"+
-        "\44\1\164\1\145\1\156\2\164\1\163\1\147\1\143\1\44\1\141\1\145\1"+
-        "\154\1\160\1\156\1\142\2\163\1\145\1\143\1\145\1\165\1\145\1\44"+
-        "\1\154\1\145\1\155\1\145\1\154\1\164\2\uffff\1\141\1\uffff\1\154"+
-        "\1\145\1\157\1\44\1\145\2\uffff\1\165\1\162\1\141\1\44\1\143\1\145"+
-        "\1\163\1\164\1\uffff\1\154\1\166\1\151\2\145\1\164\1\145\1\163\1"+
-        "\164\1\44\1\150\2\162\1\163\1\uffff\1\44\1\156\1\145\1\44\1\164"+
-        "\1\141\1\165\1\145\1\157\1\167\1\uffff\1\44\1\141\1\44\1\154\1\uffff"+
-        "\1\150\2\44\1\151\1\154\1\151\2\143\1\162\1\145\1\162\2\44\1\uffff"+
-        "\1\44\1\145\1\156\1\160\1\uffff\1\144\1\162\1\uffff\1\151\1\156"+
-        "\1\154\1\44\1\146\1\44\1\uffff\1\154\1\uffff\2\44\2\uffff\1\157"+
-        "\1\171\1\162\1\44\2\164\1\162\1\44\1\uffff\1\165\2\uffff\1\156\1"+
-        "\44\1\141\1\163\1\141\1\156\1\143\1\164\1\uffff\1\44\1\uffff\1\44"+
-        "\2\uffff\1\156\1\44\1\164\1\uffff\1\145\1\171\1\44\1\uffff\2\143"+
-        "\1\uffff\1\143\1\44\1\164\1\44\1\145\1\44\2\uffff\1\44\1\uffff\1"+
-        "\165\1\144\1\44\1\uffff\1\164\2\145\1\uffff\1\151\1\uffff\1\157"+
+        "\1\163\2\44\2\uffff\1\146\1\44\1\151\1\160\1\162\1\165\2\uffff\1"+
+        "\60\2\uffff\2\44\1\164\1\145\1\156\2\164\1\163\1\147\1\143\1\44"+
+        "\1\141\1\145\1\154\1\160\1\156\1\142\2\163\1\145\1\143\1\145\1\165"+
+        "\1\145\1\44\1\154\1\145\1\155\1\145\1\154\1\164\2\uffff\1\141\1"+
+        "\uffff\1\154\1\145\1\157\1\44\1\145\2\uffff\1\165\1\162\1\141\1"+
+        "\44\1\143\1\145\1\163\1\164\1\uffff\1\154\1\166\1\151\2\145\1\164"+
+        "\1\145\1\163\1\164\1\44\1\150\2\162\1\163\1\uffff\1\44\1\156\1\145"+
+        "\1\44\1\164\1\141\1\165\1\145\1\157\1\167\1\uffff\1\44\1\141\1\44"+
+        "\1\154\1\uffff\1\150\2\44\1\151\1\154\1\151\2\143\1\162\1\145\1"+
+        "\162\2\44\1\uffff\1\44\1\145\1\156\1\160\1\uffff\1\144\1\162\1\uffff"+
+        "\1\151\1\156\1\154\1\44\1\146\1\44\1\uffff\1\154\1\uffff\2\44\2"+
+        "\uffff\1\157\1\171\1\162\1\44\2\164\1\162\1\44\1\uffff\1\165\2\uffff"+
+        "\1\156\1\44\1\141\1\163\1\141\1\156\1\143\1\164\1\uffff\1\44\1\uffff"+
+        "\1\44\2\uffff\1\156\1\44\1\164\1\uffff\1\145\1\171\1\44\1\uffff"+
+        "\2\143\1\uffff\1\143\1\44\1\164\1\44\1\145\1\44\2\uffff\1\44\1\uffff"+
+        "\1\165\1\144\1\44\1\uffff\1\164\2\145\1\uffff\1\151\1\uffff\1\157"+
         "\2\uffff\1\141\1\44\1\uffff\1\157\2\44\1\157\1\146\1\154\1\uffff"+
         "\1\162\2\uffff\1\156\4\44\4\uffff";
-    static final String DFA12_maxS =
+    static final String DFA14_maxS =
         "\1\uffff\1\76\1\75\1\174\1\46\3\75\1\76\2\56\1\57\1\uffff\1\151"+
         "\1\167\2\165\1\145\1\157\1\145\1\165\2\uffff\1\170\2\uffff\1\73"+
         "\1\uffff\1\72\1\165\1\156\1\163\2\uffff\1\157\1\150\1\171\1\56\1"+
-        "\172\2\uffff\2\uffff\34\uffff\2\162\1\uffff\1\160\1\147\1\157\1"+
-        "\151\1\154\1\141\1\156\1\162\1\156\1\162\1\157\1\151\1\155\1\141"+
+        "\71\1\172\1\uffff\2\uffff\35\uffff\2\162\1\uffff\1\160\1\147\1\157"+
+        "\1\151\1\154\1\141\1\156\1\162\1\156\1\162\1\157\1\151\1\155\1\141"+
         "\1\156\2\164\1\155\1\167\1\154\2\uffff\1\164\1\165\1\163\7\uffff"+
-        "\1\151\1\163\2\172\2\uffff\1\146\1\172\1\151\1\160\1\162\1\171\5"+
-        "\uffff\2\172\1\164\1\145\1\156\2\164\1\163\1\147\1\143\1\172\1\141"+
-        "\1\145\1\154\1\164\1\156\1\142\2\163\1\145\1\143\1\145\1\165\1\145"+
-        "\1\172\1\154\1\145\1\155\1\145\1\154\1\164\2\uffff\1\141\1\uffff"+
-        "\1\154\1\145\1\157\1\172\1\145\2\uffff\1\165\1\162\1\141\1\172\1"+
-        "\143\1\145\1\163\1\164\1\uffff\1\154\1\166\1\151\2\145\1\164\1\145"+
-        "\1\163\1\164\1\172\1\150\2\162\1\163\1\uffff\1\172\1\156\1\145\1"+
-        "\172\1\164\1\141\1\165\1\145\1\157\1\167\1\uffff\1\172\1\141\1\172"+
-        "\1\154\1\uffff\1\150\2\172\1\151\1\154\1\151\2\143\1\162\1\145\1"+
-        "\162\2\172\1\uffff\1\172\1\145\1\156\1\160\1\uffff\1\144\1\162\1"+
-        "\uffff\1\151\1\156\1\154\1\172\1\146\1\172\1\uffff\1\154\1\uffff"+
-        "\2\172\2\uffff\1\157\1\171\1\162\1\172\2\164\1\162\1\172\1\uffff"+
-        "\1\165\2\uffff\1\156\1\172\1\141\1\163\1\141\1\156\1\143\1\164\1"+
-        "\uffff\1\172\1\uffff\1\172\2\uffff\1\156\1\172\1\164\1\uffff\1\145"+
-        "\1\171\1\172\1\uffff\2\143\1\uffff\1\143\1\172\1\164\1\172\1\145"+
-        "\1\172\2\uffff\1\172\1\uffff\1\165\1\144\1\172\1\uffff\1\164\2\145"+
-        "\1\uffff\1\151\1\uffff\1\157\2\uffff\1\141\1\172\1\uffff\1\157\2"+
-        "\172\1\157\1\146\1\154\1\uffff\1\162\2\uffff\1\156\4\172\4\uffff";
-    static final String DFA12_acceptS =
+        "\1\151\1\163\2\172\2\uffff\1\146\1\172\1\151\1\160\1\162\1\171\2"+
+        "\uffff\1\71\2\uffff\2\172\1\164\1\145\1\156\2\164\1\163\1\147\1"+
+        "\143\1\172\1\141\1\145\1\154\1\164\1\156\1\142\2\163\1\145\1\143"+
+        "\1\145\1\165\1\145\1\172\1\154\1\145\1\155\1\145\1\154\1\164\2\uffff"+
+        "\1\141\1\uffff\1\154\1\145\1\157\1\172\1\145\2\uffff\1\165\1\162"+
+        "\1\141\1\172\1\143\1\145\1\163\1\164\1\uffff\1\154\1\166\1\151\2"+
+        "\145\1\164\1\145\1\163\1\164\1\172\1\150\2\162\1\163\1\uffff\1\172"+
+        "\1\156\1\145\1\172\1\164\1\141\1\165\1\145\1\157\1\167\1\uffff\1"+
+        "\172\1\141\1\172\1\154\1\uffff\1\150\2\172\1\151\1\154\1\151\2\143"+
+        "\1\162\1\145\1\162\2\172\1\uffff\1\172\1\145\1\156\1\160\1\uffff"+
+        "\1\144\1\162\1\uffff\1\151\1\156\1\154\1\172\1\146\1\172\1\uffff"+
+        "\1\154\1\uffff\2\172\2\uffff\1\157\1\171\1\162\1\172\2\164\1\162"+
+        "\1\172\1\uffff\1\165\2\uffff\1\156\1\172\1\141\1\163\1\141\1\156"+
+        "\1\143\1\164\1\uffff\1\172\1\uffff\1\172\2\uffff\1\156\1\172\1\164"+
+        "\1\uffff\1\145\1\171\1\172\1\uffff\2\143\1\uffff\1\143\1\172\1\164"+
+        "\1\172\1\145\1\172\2\uffff\1\172\1\uffff\1\165\1\144\1\172\1\uffff"+
+        "\1\164\2\145\1\uffff\1\151\1\uffff\1\157\2\uffff\1\141\1\172\1\uffff"+
+        "\1\157\2\172\1\157\1\146\1\154\1\uffff\1\162\2\uffff\1\156\4\172"+
+        "\4\uffff";
+    static final String DFA14_acceptS =
         "\14\uffff\1\22\10\uffff\1\41\1\42\1\uffff\1\44\1\46\1\uffff\1\51"+
-        "\4\uffff\1\65\1\66\5\uffff\1\120\1\121\2\uffff\1\125\1\126\1\5\1"+
-        "\110\1\1\1\2\1\15\1\3\1\55\1\4\1\112\1\6\1\23\1\7\1\11\1\10\1\12"+
-        "\1\13\1\16\1\14\1\24\1\20\1\115\1\17\1\123\1\124\1\21\1\22\2\uffff"+
-        "\1\120\24\uffff\1\41\1\42\3\uffff\1\44\1\46\1\47\1\60\1\51\1\77"+
-        "\1\54\4\uffff\1\65\1\66\6\uffff\1\114\1\111\1\121\1\122\1\125\37"+
-        "\uffff\1\67\1\64\1\uffff\1\76\5\uffff\1\25\1\116\10\uffff\1\74\16"+
-        "\uffff\1\100\12\uffff\1\105\4\uffff\1\62\15\uffff\1\73\4\uffff\1"+
-        "\101\2\uffff\1\70\6\uffff\1\117\1\uffff\1\26\2\uffff\1\27\1\53\10"+
-        "\uffff\1\35\1\uffff\1\113\1\107\10\uffff\1\75\1\uffff\1\103\1\uffff"+
-        "\1\61\1\71\3\uffff\1\32\3\uffff\1\34\2\uffff\1\104\6\uffff\1\102"+
-        "\1\30\1\uffff\1\106\3\uffff\1\36\3\uffff\1\43\1\uffff\1\56\1\uffff"+
-        "\1\72\1\57\2\uffff\1\50\6\uffff\1\33\1\uffff\1\37\1\40\5\uffff\1"+
-        "\63\1\31\1\45\1\52";
-    static final String DFA12_specialS =
-        "\1\2\50\uffff\1\0\1\1\u0117\uffff}>";
-    static final String[] DFA12_transitionS = {
-            "\11\54\2\53\2\54\1\53\22\54\1\53\1\5\1\51\1\54\1\47\1\14\1\4"+
-            "\1\52\1\31\1\32\1\12\1\2\1\30\1\10\1\11\1\13\12\50\1\34\1\33"+
-            "\1\7\1\1\1\6\1\45\1\54\32\47\1\40\1\54\1\41\1\46\1\47\1\54\1"+
-            "\37\1\35\1\22\1\42\1\27\1\17\2\47\1\36\3\47\1\21\1\24\1\47\1"+
-            "\20\1\47\1\23\1\16\1\44\1\47\1\15\1\43\3\47\1\25\1\3\1\26\uff82"+
+        "\4\uffff\1\65\1\66\6\uffff\1\121\2\uffff\1\126\1\127\1\5\1\110\1"+
+        "\1\1\2\1\15\1\3\1\55\1\4\1\112\1\6\1\23\1\7\1\11\1\10\1\12\1\13"+
+        "\1\16\1\120\1\14\1\24\1\20\1\115\1\17\1\124\1\125\1\21\1\22\2\uffff"+
+        "\1\121\24\uffff\1\41\1\42\3\uffff\1\44\1\46\1\47\1\60\1\51\1\77"+
+        "\1\54\4\uffff\1\65\1\66\6\uffff\1\114\1\111\1\uffff\1\123\1\126"+
+        "\37\uffff\1\67\1\64\1\uffff\1\76\5\uffff\1\25\1\116\10\uffff\1\74"+
+        "\16\uffff\1\100\12\uffff\1\105\4\uffff\1\62\15\uffff\1\73\4\uffff"+
+        "\1\101\2\uffff\1\70\6\uffff\1\117\1\uffff\1\26\2\uffff\1\27\1\53"+
+        "\10\uffff\1\35\1\uffff\1\113\1\107\10\uffff\1\75\1\uffff\1\103\1"+
+        "\uffff\1\61\1\71\3\uffff\1\32\3\uffff\1\34\2\uffff\1\104\6\uffff"+
+        "\1\102\1\30\1\uffff\1\106\3\uffff\1\36\3\uffff\1\43\1\uffff\1\56"+
+        "\1\uffff\1\72\1\57\2\uffff\1\50\6\uffff\1\33\1\uffff\1\37\1\40\5"+
+        "\uffff\1\63\1\31\1\45\1\52";
+    static final String DFA14_specialS =
+        "\1\1\50\uffff\1\0\1\2\u0118\uffff}>";
+    static final String[] DFA14_transitionS = {
+            "\11\54\2\53\2\54\1\53\22\54\1\53\1\5\1\51\1\54\1\50\1\14\1\4"+
+            "\1\52\1\31\1\32\1\12\1\2\1\30\1\10\1\11\1\13\12\46\1\34\1\33"+
+            "\1\7\1\1\1\6\1\45\1\54\32\50\1\40\1\54\1\41\1\47\1\50\1\54\1"+
+            "\37\1\35\1\22\1\42\1\27\1\17\2\50\1\36\3\50\1\21\1\24\1\50\1"+
+            "\20\1\50\1\23\1\16\1\44\1\50\1\15\1\43\3\50\1\25\1\3\1\26\uff82"+
             "\54",
             "\1\55\1\56",
             "\1\60",
@@ -2979,44 +3056,42 @@ public class InternalQIdlLexer extends Lexer {
             "\1\66",
             "\1\70",
             "\1\72",
-            "\1\74",
-            "\1\76",
-            "\1\100\3\uffff\1\101",
-            "\1\103\4\uffff\1\104",
+            "\12\76\4\uffff\1\74",
+            "\1\77",
+            "\1\101\3\uffff\1\102",
+            "\1\104\4\uffff\1\105",
             "",
-            "\1\107\7\uffff\1\110",
-            "\1\113\2\uffff\1\114\10\uffff\1\112\1\uffff\1\115",
-            "\1\116\7\uffff\1\122\2\uffff\1\117\2\uffff\1\121\5\uffff\1"+
-            "\120",
-            "\1\125\2\uffff\1\124\2\uffff\1\123",
-            "\1\126",
-            "\1\131\12\uffff\1\127\2\uffff\1\130",
-            "\1\132",
-            "\1\133\3\uffff\1\134\17\uffff\1\135",
-            "",
-            "",
-            "\1\142\1\uffff\1\141\11\uffff\1\140",
+            "\1\110\7\uffff\1\111",
+            "\1\114\2\uffff\1\115\10\uffff\1\113\1\uffff\1\116",
+            "\1\117\7\uffff\1\123\2\uffff\1\120\2\uffff\1\122\5\uffff\1"+
+            "\121",
+            "\1\126\2\uffff\1\125\2\uffff\1\124",
+            "\1\127",
+            "\1\132\12\uffff\1\130\2\uffff\1\131",
+            "\1\133",
+            "\1\134\3\uffff\1\135\17\uffff\1\136",
             "",
             "",
-            "\1\145",
-            "",
-            "\1\150",
-            "\1\152",
-            "\1\154\7\uffff\1\153",
-            "\1\155",
+            "\1\143\1\uffff\1\142\11\uffff\1\141",
             "",
             "",
-            "\1\160\11\uffff\1\161",
-            "\1\162",
-            "\1\164\11\uffff\1\165\6\uffff\1\163",
-            "\1\166",
-            "\1\111\34\uffff\32\111\4\uffff\1\111\1\uffff\32\111",
+            "\1\146",
+            "",
+            "\1\151",
+            "\1\153",
+            "\1\155\7\uffff\1\154",
+            "\1\156",
             "",
             "",
-            "\0\171",
-            "\0\171",
+            "\1\161\11\uffff\1\162",
+            "\1\163",
+            "\1\165\11\uffff\1\166\6\uffff\1\164",
+            "\1\167",
+            "\12\171",
+            "\1\112\34\uffff\32\112\4\uffff\1\112\1\uffff\32\112",
             "",
-            "",
+            "\0\172",
+            "\0\172",
             "",
             "",
             "",
@@ -3043,10 +3118,12 @@ public class InternalQIdlLexer extends Lexer {
             "",
             "",
             "",
-            "\1\173\5\uffff\1\174",
-            "\1\175",
             "",
+            "",
+            "",
+            "\1\174\5\uffff\1\175",
             "\1\176",
+            "",
             "\1\177",
             "\1\u0080",
             "\1\u0081",
@@ -3055,54 +3132,54 @@ public class InternalQIdlLexer extends Lexer {
             "\1\u0084",
             "\1\u0085",
             "\1\u0086",
-            "\1\u0088\17\uffff\1\u0087",
-            "\1\u0089",
+            "\1\u0087",
+            "\1\u0089\17\uffff\1\u0088",
             "\1\u008a",
             "\1\u008b",
             "\1\u008c",
             "\1\u008d",
-            "\1\u008e\1\u008f",
-            "\1\u0090\15\uffff\1\u0091",
-            "\1\u0092",
+            "\1\u008e",
+            "\1\u008f\1\u0090",
+            "\1\u0091\15\uffff\1\u0092",
             "\1\u0093",
             "\1\u0094",
-            "",
-            "",
             "\1\u0095",
+            "",
+            "",
             "\1\u0096",
             "\1\u0097",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
             "\1\u0098",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
             "\1\u0099",
-            "\1\111\13\uffff\12\111\7\uffff\32\111\4\uffff\1\111\1\uffff"+
-            "\32\111",
-            "\1\111\13\uffff\12\111\7\uffff\32\111\4\uffff\1\111\1\uffff"+
-            "\32\111",
+            "\1\u009a",
+            "\1\112\13\uffff\12\112\7\uffff\32\112\4\uffff\1\112\1\uffff"+
+            "\32\112",
+            "\1\112\13\uffff\12\112\7\uffff\32\112\4\uffff\1\112\1\uffff"+
+            "\32\112",
             "",
             "",
-            "\1\u009c",
-            "\1\111\13\uffff\12\111\7\uffff\32\111\4\uffff\1\111\1\uffff"+
-            "\32\111",
-            "\1\u009e",
+            "\1\u009d",
+            "\1\112\13\uffff\12\112\7\uffff\32\112\4\uffff\1\112\1\uffff"+
+            "\32\112",
             "\1\u009f",
             "\1\u00a0",
-            "\1\u00a2\3\uffff\1\u00a1",
+            "\1\u00a1",
+            "\1\u00a3\3\uffff\1\u00a2",
             "",
             "",
+            "\12\171",
             "",
             "",
-            "",
-            "\1\111\13\uffff\12\111\7\uffff\32\111\4\uffff\1\111\1\uffff"+
-            "\32\111",
-            "\1\111\13\uffff\12\111\7\uffff\32\111\4\uffff\1\111\1\uffff"+
-            "\32\111",
-            "\1\u00a5",
+            "\1\112\13\uffff\12\112\7\uffff\32\112\4\uffff\1\112\1\uffff"+
+            "\32\112",
+            "\1\112\13\uffff\12\112\7\uffff\32\112\4\uffff\1\112\1\uffff"+
+            "\32\112",
             "\1\u00a6",
             "\1\u00a7",
             "\1\u00a8",
@@ -3110,13 +3187,13 @@ public class InternalQIdlLexer extends Lexer {
             "\1\u00aa",
             "\1\u00ab",
             "\1\u00ac",
-            "\1\111\13\uffff\12\111\7\uffff\32\111\4\uffff\1\111\1\uffff"+
-            "\32\111",
-            "\1\u00ae",
+            "\1\u00ad",
+            "\1\112\13\uffff\12\112\7\uffff\32\112\4\uffff\1\112\1\uffff"+
+            "\32\112",
             "\1\u00af",
             "\1\u00b0",
-            "\1\u00b2\3\uffff\1\u00b1",
-            "\1\u00b3",
+            "\1\u00b1",
+            "\1\u00b3\3\uffff\1\u00b2",
             "\1\u00b4",
             "\1\u00b5",
             "\1\u00b6",
@@ -3125,37 +3202,37 @@ public class InternalQIdlLexer extends Lexer {
             "\1\u00b9",
             "\1\u00ba",
             "\1\u00bb",
-            "\1\111\13\uffff\12\111\7\uffff\32\111\4\uffff\1\111\1\uffff"+
-            "\32\111",
-            "\1\u00bd",
+            "\1\u00bc",
+            "\1\112\13\uffff\12\112\7\uffff\32\112\4\uffff\1\112\1\uffff"+
+            "\32\112",
             "\1\u00be",
             "\1\u00bf",
             "\1\u00c0",
             "\1\u00c1",
             "\1\u00c2",
-            "",
-            "",
             "\1\u00c3",
             "",
+            "",
             "\1\u00c4",
+            "",
             "\1\u00c5",
             "\1\u00c6",
-            "\1\111\13\uffff\12\111\7\uffff\32\111\4\uffff\1\111\1\uffff"+
-            "\32\111",
-            "\1\u00c8",
-            "",
-            "",
+            "\1\u00c7",
+            "\1\112\13\uffff\12\112\7\uffff\32\112\4\uffff\1\112\1\uffff"+
+            "\32\112",
             "\1\u00c9",
+            "",
+            "",
             "\1\u00ca",
             "\1\u00cb",
-            "\1\111\13\uffff\12\111\7\uffff\32\111\4\uffff\1\111\1\uffff"+
-            "\32\111",
-            "\1\u00cd",
+            "\1\u00cc",
+            "\1\112\13\uffff\12\112\7\uffff\32\112\4\uffff\1\112\1\uffff"+
+            "\32\112",
             "\1\u00ce",
             "\1\u00cf",
             "\1\u00d0",
-            "",
             "\1\u00d1",
+            "",
             "\1\u00d2",
             "\1\u00d3",
             "\1\u00d4",
@@ -3164,39 +3241,39 @@ public class InternalQIdlLexer extends Lexer {
             "\1\u00d7",
             "\1\u00d8",
             "\1\u00d9",
-            "\1\111\13\uffff\12\111\7\uffff\32\111\4\uffff\1\111\1\uffff"+
-            "\32\111",
-            "\1\u00db",
+            "\1\u00da",
+            "\1\112\13\uffff\12\112\7\uffff\32\112\4\uffff\1\112\1\uffff"+
+            "\32\112",
             "\1\u00dc",
             "\1\u00dd",
             "\1\u00de",
+            "\1\u00df",
             "",
-            "\1\111\13\uffff\12\111\7\uffff\32\111\4\uffff\1\111\1\uffff"+
-            "\32\111",
-            "\1\u00e0",
+            "\1\112\13\uffff\12\112\7\uffff\32\112\4\uffff\1\112\1\uffff"+
+            "\32\112",
             "\1\u00e1",
-            "\1\111\13\uffff\12\111\7\uffff\32\111\4\uffff\1\111\1\uffff"+
-            "\32\111",
-            "\1\u00e3",
+            "\1\u00e2",
+            "\1\112\13\uffff\12\112\7\uffff\32\112\4\uffff\1\112\1\uffff"+
+            "\32\112",
             "\1\u00e4",
             "\1\u00e5",
             "\1\u00e6",
             "\1\u00e7",
             "\1\u00e8",
+            "\1\u00e9",
             "",
-            "\1\111\13\uffff\12\111\7\uffff\32\111\4\uffff\1\111\1\uffff"+
-            "\32\111",
-            "\1\u00ea",
-            "\1\111\13\uffff\12\111\7\uffff\32\111\4\uffff\1\111\1\uffff"+
-            "\32\111",
-            "\1\u00ec",
-            "",
+            "\1\112\13\uffff\12\112\7\uffff\32\112\4\uffff\1\112\1\uffff"+
+            "\32\112",
+            "\1\u00eb",
+            "\1\112\13\uffff\12\112\7\uffff\32\112\4\uffff\1\112\1\uffff"+
+            "\32\112",
             "\1\u00ed",
-            "\1\111\13\uffff\12\111\7\uffff\32\111\4\uffff\1\111\1\uffff"+
-            "\32\111",
-            "\1\111\13\uffff\12\111\7\uffff\32\111\4\uffff\1\111\1\uffff"+
-            "\32\111",
-            "\1\u00f0",
+            "",
+            "\1\u00ee",
+            "\1\112\13\uffff\12\112\7\uffff\32\112\4\uffff\1\112\1\uffff"+
+            "\32\112",
+            "\1\112\13\uffff\12\112\7\uffff\32\112\4\uffff\1\112\1\uffff"+
+            "\32\112",
             "\1\u00f1",
             "\1\u00f2",
             "\1\u00f3",
@@ -3204,293 +3281,294 @@ public class InternalQIdlLexer extends Lexer {
             "\1\u00f5",
             "\1\u00f6",
             "\1\u00f7",
-            "\1\111\13\uffff\12\111\7\uffff\32\111\4\uffff\1\111\1\uffff"+
-            "\32\111",
-            "\1\111\13\uffff\12\111\7\uffff\32\111\4\uffff\1\111\1\uffff"+
-            "\21\111\1\u00f9\10\111",
+            "\1\u00f8",
+            "\1\112\13\uffff\12\112\7\uffff\32\112\4\uffff\1\112\1\uffff"+
+            "\32\112",
+            "\1\112\13\uffff\12\112\7\uffff\32\112\4\uffff\1\112\1\uffff"+
+            "\21\112\1\u00fa\10\112",
             "",
-            "\1\111\13\uffff\12\111\7\uffff\32\111\4\uffff\1\111\1\uffff"+
-            "\32\111",
-            "\1\u00fc",
+            "\1\112\13\uffff\12\112\7\uffff\32\112\4\uffff\1\112\1\uffff"+
+            "\32\112",
             "\1\u00fd",
             "\1\u00fe",
-            "",
             "\1\u00ff",
-            "\1\u0100",
             "",
+            "\1\u0100",
             "\1\u0101",
+            "",
             "\1\u0102",
             "\1\u0103",
-            "\1\111\13\uffff\12\111\7\uffff\32\111\4\uffff\1\111\1\uffff"+
-            "\32\111",
-            "\1\u0105",
-            "\1\111\13\uffff\12\111\7\uffff\32\111\4\uffff\1\111\1\uffff"+
-            "\32\111",
+            "\1\u0104",
+            "\1\112\13\uffff\12\112\7\uffff\32\112\4\uffff\1\112\1\uffff"+
+            "\32\112",
+            "\1\u0106",
+            "\1\112\13\uffff\12\112\7\uffff\32\112\4\uffff\1\112\1\uffff"+
+            "\32\112",
             "",
-            "\1\u0107",
+            "\1\u0108",
             "",
-            "\1\111\13\uffff\12\111\7\uffff\32\111\4\uffff\1\111\1\uffff"+
-            "\32\111",
-            "\1\111\13\uffff\12\111\7\uffff\32\111\4\uffff\1\111\1\uffff"+
-            "\32\111",
+            "\1\112\13\uffff\12\112\7\uffff\32\112\4\uffff\1\112\1\uffff"+
+            "\32\112",
+            "\1\112\13\uffff\12\112\7\uffff\32\112\4\uffff\1\112\1\uffff"+
+            "\32\112",
             "",
             "",
-            "\1\u010a",
             "\1\u010b",
             "\1\u010c",
-            "\1\111\13\uffff\12\111\7\uffff\32\111\4\uffff\1\111\1\uffff"+
-            "\32\111",
-            "\1\u010e",
+            "\1\u010d",
+            "\1\112\13\uffff\12\112\7\uffff\32\112\4\uffff\1\112\1\uffff"+
+            "\32\112",
             "\1\u010f",
             "\1\u0110",
-            "\1\111\13\uffff\12\111\7\uffff\32\111\4\uffff\1\111\1\uffff"+
-            "\32\111",
-            "",
-            "\1\u0112",
-            "",
+            "\1\u0111",
+            "\1\112\13\uffff\12\112\7\uffff\32\112\4\uffff\1\112\1\uffff"+
+            "\32\112",
             "",
             "\1\u0113",
-            "\1\111\13\uffff\12\111\7\uffff\32\111\4\uffff\1\111\1\uffff"+
-            "\32\111",
-            "\1\u0115",
+            "",
+            "",
+            "\1\u0114",
+            "\1\112\13\uffff\12\112\7\uffff\32\112\4\uffff\1\112\1\uffff"+
+            "\32\112",
             "\1\u0116",
             "\1\u0117",
             "\1\u0118",
             "\1\u0119",
             "\1\u011a",
+            "\1\u011b",
             "",
-            "\1\111\13\uffff\12\111\7\uffff\32\111\4\uffff\1\111\1\uffff"+
-            "\32\111",
+            "\1\112\13\uffff\12\112\7\uffff\32\112\4\uffff\1\112\1\uffff"+
+            "\32\112",
             "",
-            "\1\111\13\uffff\12\111\7\uffff\32\111\4\uffff\1\111\1\uffff"+
-            "\32\111",
+            "\1\112\13\uffff\12\112\7\uffff\32\112\4\uffff\1\112\1\uffff"+
+            "\32\112",
             "",
             "",
-            "\1\u011d",
-            "\1\111\13\uffff\12\111\7\uffff\32\111\4\uffff\1\111\1\uffff"+
-            "\32\111",
-            "\1\u011f",
-            "",
+            "\1\u011e",
+            "\1\112\13\uffff\12\112\7\uffff\32\112\4\uffff\1\112\1\uffff"+
+            "\32\112",
             "\1\u0120",
+            "",
             "\1\u0121",
-            "\1\111\13\uffff\12\111\7\uffff\32\111\4\uffff\1\111\1\uffff"+
-            "\32\111",
+            "\1\u0122",
+            "\1\112\13\uffff\12\112\7\uffff\32\112\4\uffff\1\112\1\uffff"+
+            "\32\112",
             "",
-            "\1\u0123",
             "\1\u0124",
-            "",
             "\1\u0125",
-            "\1\111\13\uffff\12\111\7\uffff\32\111\4\uffff\1\111\1\uffff"+
-            "\32\111",
-            "\1\u0127",
-            "\1\111\13\uffff\12\111\7\uffff\32\111\4\uffff\1\111\1\uffff"+
-            "\32\111",
-            "\1\u0129",
-            "\1\111\13\uffff\12\111\7\uffff\32\111\4\uffff\1\111\1\uffff"+
-            "\32\111",
+            "",
+            "\1\u0126",
+            "\1\112\13\uffff\12\112\7\uffff\32\112\4\uffff\1\112\1\uffff"+
+            "\32\112",
+            "\1\u0128",
+            "\1\112\13\uffff\12\112\7\uffff\32\112\4\uffff\1\112\1\uffff"+
+            "\32\112",
+            "\1\u012a",
+            "\1\112\13\uffff\12\112\7\uffff\32\112\4\uffff\1\112\1\uffff"+
+            "\32\112",
             "",
             "",
-            "\1\111\13\uffff\12\111\7\uffff\32\111\4\uffff\1\111\1\uffff"+
-            "\32\111",
+            "\1\112\13\uffff\12\112\7\uffff\32\112\4\uffff\1\112\1\uffff"+
+            "\32\112",
             "",
-            "\1\u012c",
             "\1\u012d",
-            "\1\111\13\uffff\12\111\7\uffff\32\111\4\uffff\1\111\1\uffff"+
-            "\32\111",
+            "\1\u012e",
+            "\1\112\13\uffff\12\112\7\uffff\32\112\4\uffff\1\112\1\uffff"+
+            "\32\112",
             "",
-            "\1\u012f",
             "\1\u0130",
             "\1\u0131",
-            "",
             "\1\u0132",
             "",
             "\1\u0133",
             "",
-            "",
             "\1\u0134",
-            "\1\111\13\uffff\12\111\7\uffff\32\111\4\uffff\1\111\1\uffff"+
-            "\32\111",
             "",
-            "\1\u0136",
-            "\1\111\13\uffff\12\111\7\uffff\32\111\4\uffff\1\111\1\uffff"+
-            "\32\111",
-            "\1\111\13\uffff\12\111\7\uffff\32\111\4\uffff\1\111\1\uffff"+
-            "\32\111",
-            "\1\u0139",
+            "",
+            "\1\u0135",
+            "\1\112\13\uffff\12\112\7\uffff\32\112\4\uffff\1\112\1\uffff"+
+            "\32\112",
+            "",
+            "\1\u0137",
+            "\1\112\13\uffff\12\112\7\uffff\32\112\4\uffff\1\112\1\uffff"+
+            "\32\112",
+            "\1\112\13\uffff\12\112\7\uffff\32\112\4\uffff\1\112\1\uffff"+
+            "\32\112",
             "\1\u013a",
             "\1\u013b",
-            "",
             "\1\u013c",
             "",
-            "",
             "\1\u013d",
-            "\1\111\13\uffff\12\111\7\uffff\32\111\4\uffff\1\111\1\uffff"+
-            "\32\111",
-            "\1\111\13\uffff\12\111\7\uffff\32\111\4\uffff\1\111\1\uffff"+
-            "\32\111",
-            "\1\111\13\uffff\12\111\7\uffff\32\111\4\uffff\1\111\1\uffff"+
-            "\32\111",
-            "\1\111\13\uffff\12\111\7\uffff\32\111\4\uffff\1\111\1\uffff"+
-            "\32\111",
+            "",
+            "",
+            "\1\u013e",
+            "\1\112\13\uffff\12\112\7\uffff\32\112\4\uffff\1\112\1\uffff"+
+            "\32\112",
+            "\1\112\13\uffff\12\112\7\uffff\32\112\4\uffff\1\112\1\uffff"+
+            "\32\112",
+            "\1\112\13\uffff\12\112\7\uffff\32\112\4\uffff\1\112\1\uffff"+
+            "\32\112",
+            "\1\112\13\uffff\12\112\7\uffff\32\112\4\uffff\1\112\1\uffff"+
+            "\32\112",
             "",
             "",
             "",
             ""
     };
 
-    static final short[] DFA12_eot = DFA.unpackEncodedString(DFA12_eotS);
-    static final short[] DFA12_eof = DFA.unpackEncodedString(DFA12_eofS);
-    static final char[] DFA12_min = DFA.unpackEncodedStringToUnsignedChars(DFA12_minS);
-    static final char[] DFA12_max = DFA.unpackEncodedStringToUnsignedChars(DFA12_maxS);
-    static final short[] DFA12_accept = DFA.unpackEncodedString(DFA12_acceptS);
-    static final short[] DFA12_special = DFA.unpackEncodedString(DFA12_specialS);
-    static final short[][] DFA12_transition;
+    static final short[] DFA14_eot = DFA.unpackEncodedString(DFA14_eotS);
+    static final short[] DFA14_eof = DFA.unpackEncodedString(DFA14_eofS);
+    static final char[] DFA14_min = DFA.unpackEncodedStringToUnsignedChars(DFA14_minS);
+    static final char[] DFA14_max = DFA.unpackEncodedStringToUnsignedChars(DFA14_maxS);
+    static final short[] DFA14_accept = DFA.unpackEncodedString(DFA14_acceptS);
+    static final short[] DFA14_special = DFA.unpackEncodedString(DFA14_specialS);
+    static final short[][] DFA14_transition;
 
     static {
-        int numStates = DFA12_transitionS.length;
-        DFA12_transition = new short[numStates][];
+        int numStates = DFA14_transitionS.length;
+        DFA14_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA12_transition[i] = DFA.unpackEncodedString(DFA12_transitionS[i]);
+            DFA14_transition[i] = DFA.unpackEncodedString(DFA14_transitionS[i]);
         }
     }
 
-    class DFA12 extends DFA {
+    class DFA14 extends DFA {
 
-        public DFA12(BaseRecognizer recognizer) {
+        public DFA14(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 12;
-            this.eot = DFA12_eot;
-            this.eof = DFA12_eof;
-            this.min = DFA12_min;
-            this.max = DFA12_max;
-            this.accept = DFA12_accept;
-            this.special = DFA12_special;
-            this.transition = DFA12_transition;
+            this.decisionNumber = 14;
+            this.eot = DFA14_eot;
+            this.eof = DFA14_eof;
+            this.min = DFA14_min;
+            this.max = DFA14_max;
+            this.accept = DFA14_accept;
+            this.special = DFA14_special;
+            this.transition = DFA14_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | RULE_LONG | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA12_41 = input.LA(1);
+                        int LA14_41 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA12_41>='\u0000' && LA12_41<='\uFFFF')) ) {s = 121;}
+                        if ( ((LA14_41>='\u0000' && LA14_41<='\uFFFF')) ) {s = 122;}
 
                         else s = 44;
 
                         if ( s>=0 ) return s;
                         break;
                     case 1 : 
-                        int LA12_42 = input.LA(1);
+                        int LA14_0 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA12_42>='\u0000' && LA12_42<='\uFFFF')) ) {s = 121;}
+                        if ( (LA14_0=='=') ) {s = 1;}
+
+                        else if ( (LA14_0=='+') ) {s = 2;}
+
+                        else if ( (LA14_0=='|') ) {s = 3;}
+
+                        else if ( (LA14_0=='&') ) {s = 4;}
+
+                        else if ( (LA14_0=='!') ) {s = 5;}
+
+                        else if ( (LA14_0=='>') ) {s = 6;}
+
+                        else if ( (LA14_0=='<') ) {s = 7;}
+
+                        else if ( (LA14_0=='-') ) {s = 8;}
+
+                        else if ( (LA14_0=='.') ) {s = 9;}
+
+                        else if ( (LA14_0=='*') ) {s = 10;}
+
+                        else if ( (LA14_0=='/') ) {s = 11;}
+
+                        else if ( (LA14_0=='%') ) {s = 12;}
+
+                        else if ( (LA14_0=='v') ) {s = 13;}
+
+                        else if ( (LA14_0=='s') ) {s = 14;}
+
+                        else if ( (LA14_0=='f') ) {s = 15;}
+
+                        else if ( (LA14_0=='p') ) {s = 16;}
+
+                        else if ( (LA14_0=='m') ) {s = 17;}
+
+                        else if ( (LA14_0=='c') ) {s = 18;}
+
+                        else if ( (LA14_0=='r') ) {s = 19;}
+
+                        else if ( (LA14_0=='n') ) {s = 20;}
+
+                        else if ( (LA14_0=='{') ) {s = 21;}
+
+                        else if ( (LA14_0=='}') ) {s = 22;}
+
+                        else if ( (LA14_0=='e') ) {s = 23;}
+
+                        else if ( (LA14_0==',') ) {s = 24;}
+
+                        else if ( (LA14_0=='(') ) {s = 25;}
+
+                        else if ( (LA14_0==')') ) {s = 26;}
+
+                        else if ( (LA14_0==';') ) {s = 27;}
+
+                        else if ( (LA14_0==':') ) {s = 28;}
+
+                        else if ( (LA14_0=='b') ) {s = 29;}
+
+                        else if ( (LA14_0=='i') ) {s = 30;}
+
+                        else if ( (LA14_0=='a') ) {s = 31;}
+
+                        else if ( (LA14_0=='[') ) {s = 32;}
+
+                        else if ( (LA14_0==']') ) {s = 33;}
+
+                        else if ( (LA14_0=='d') ) {s = 34;}
+
+                        else if ( (LA14_0=='w') ) {s = 35;}
+
+                        else if ( (LA14_0=='t') ) {s = 36;}
+
+                        else if ( (LA14_0=='?') ) {s = 37;}
+
+                        else if ( ((LA14_0>='0' && LA14_0<='9')) ) {s = 38;}
+
+                        else if ( (LA14_0=='^') ) {s = 39;}
+
+                        else if ( (LA14_0=='$'||(LA14_0>='A' && LA14_0<='Z')||LA14_0=='_'||(LA14_0>='g' && LA14_0<='h')||(LA14_0>='j' && LA14_0<='l')||LA14_0=='o'||LA14_0=='q'||LA14_0=='u'||(LA14_0>='x' && LA14_0<='z')) ) {s = 40;}
+
+                        else if ( (LA14_0=='\"') ) {s = 41;}
+
+                        else if ( (LA14_0=='\'') ) {s = 42;}
+
+                        else if ( ((LA14_0>='\t' && LA14_0<='\n')||LA14_0=='\r'||LA14_0==' ') ) {s = 43;}
+
+                        else if ( ((LA14_0>='\u0000' && LA14_0<='\b')||(LA14_0>='\u000B' && LA14_0<='\f')||(LA14_0>='\u000E' && LA14_0<='\u001F')||LA14_0=='#'||LA14_0=='@'||LA14_0=='\\'||LA14_0=='`'||(LA14_0>='~' && LA14_0<='\uFFFF')) ) {s = 44;}
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
+                        int LA14_42 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA14_42>='\u0000' && LA14_42<='\uFFFF')) ) {s = 122;}
 
                         else s = 44;
 
                         if ( s>=0 ) return s;
                         break;
-                    case 2 : 
-                        int LA12_0 = input.LA(1);
-
-                        s = -1;
-                        if ( (LA12_0=='=') ) {s = 1;}
-
-                        else if ( (LA12_0=='+') ) {s = 2;}
-
-                        else if ( (LA12_0=='|') ) {s = 3;}
-
-                        else if ( (LA12_0=='&') ) {s = 4;}
-
-                        else if ( (LA12_0=='!') ) {s = 5;}
-
-                        else if ( (LA12_0=='>') ) {s = 6;}
-
-                        else if ( (LA12_0=='<') ) {s = 7;}
-
-                        else if ( (LA12_0=='-') ) {s = 8;}
-
-                        else if ( (LA12_0=='.') ) {s = 9;}
-
-                        else if ( (LA12_0=='*') ) {s = 10;}
-
-                        else if ( (LA12_0=='/') ) {s = 11;}
-
-                        else if ( (LA12_0=='%') ) {s = 12;}
-
-                        else if ( (LA12_0=='v') ) {s = 13;}
-
-                        else if ( (LA12_0=='s') ) {s = 14;}
-
-                        else if ( (LA12_0=='f') ) {s = 15;}
-
-                        else if ( (LA12_0=='p') ) {s = 16;}
-
-                        else if ( (LA12_0=='m') ) {s = 17;}
-
-                        else if ( (LA12_0=='c') ) {s = 18;}
-
-                        else if ( (LA12_0=='r') ) {s = 19;}
-
-                        else if ( (LA12_0=='n') ) {s = 20;}
-
-                        else if ( (LA12_0=='{') ) {s = 21;}
-
-                        else if ( (LA12_0=='}') ) {s = 22;}
-
-                        else if ( (LA12_0=='e') ) {s = 23;}
-
-                        else if ( (LA12_0==',') ) {s = 24;}
-
-                        else if ( (LA12_0=='(') ) {s = 25;}
-
-                        else if ( (LA12_0==')') ) {s = 26;}
-
-                        else if ( (LA12_0==';') ) {s = 27;}
-
-                        else if ( (LA12_0==':') ) {s = 28;}
-
-                        else if ( (LA12_0=='b') ) {s = 29;}
-
-                        else if ( (LA12_0=='i') ) {s = 30;}
-
-                        else if ( (LA12_0=='a') ) {s = 31;}
-
-                        else if ( (LA12_0=='[') ) {s = 32;}
-
-                        else if ( (LA12_0==']') ) {s = 33;}
-
-                        else if ( (LA12_0=='d') ) {s = 34;}
-
-                        else if ( (LA12_0=='w') ) {s = 35;}
-
-                        else if ( (LA12_0=='t') ) {s = 36;}
-
-                        else if ( (LA12_0=='?') ) {s = 37;}
-
-                        else if ( (LA12_0=='^') ) {s = 38;}
-
-                        else if ( (LA12_0=='$'||(LA12_0>='A' && LA12_0<='Z')||LA12_0=='_'||(LA12_0>='g' && LA12_0<='h')||(LA12_0>='j' && LA12_0<='l')||LA12_0=='o'||LA12_0=='q'||LA12_0=='u'||(LA12_0>='x' && LA12_0<='z')) ) {s = 39;}
-
-                        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {s = 40;}
-
-                        else if ( (LA12_0=='\"') ) {s = 41;}
-
-                        else if ( (LA12_0=='\'') ) {s = 42;}
-
-                        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 43;}
-
-                        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='#'||LA12_0=='@'||LA12_0=='\\'||LA12_0=='`'||(LA12_0>='~' && LA12_0<='\uFFFF')) ) {s = 44;}
-
-                        if ( s>=0 ) return s;
-                        break;
             }
             NoViableAltException nvae =
-                new NoViableAltException(getDescription(), 12, _s, input);
+                new NoViableAltException(getDescription(), 14, _s, input);
             error(nvae);
             throw nvae;
         }

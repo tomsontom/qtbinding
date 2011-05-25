@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.QtEnumValueMask#getValue <em>Value</em>}</li>
+ *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.QtEnumValueMask#getNumericValue <em>Numeric Value</em>}</li>
  * </ul>
  * </p>
  *
@@ -42,5 +43,21 @@ public interface QtEnumValueMask extends EObject
    * @generated
    */
   EList<QtEnumValue> getValue();
+
+  /**
+   * Returns the value of the '<em><b>Numeric Value</b></em>' attribute list.
+   * The list contents are of type {@link java.lang.Long}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Numeric Value</em>' attribute list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Numeric Value</em>' attribute list.
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QIdlPackage#getQtEnumValueMask_NumericValue()
+   * @model unique="false"
+   * @generated
+   */
+  EList<Long> getNumericValue();
 
 } // QtEnumValueMask

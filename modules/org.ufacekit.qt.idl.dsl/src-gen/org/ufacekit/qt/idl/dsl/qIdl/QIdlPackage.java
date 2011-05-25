@@ -436,7 +436,7 @@ public interface QIdlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int QT_FLAGS__NAME = 0;
+  int QT_FLAGS__NAME = QT_TYPE__NAME;
 
   /**
    * The feature id for the '<em><b>Enumeration</b></em>' reference.
@@ -445,7 +445,7 @@ public interface QIdlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int QT_FLAGS__ENUMERATION = 1;
+  int QT_FLAGS__ENUMERATION = QT_TYPE_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Qt Flags</em>' class.
@@ -454,7 +454,7 @@ public interface QIdlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int QT_FLAGS_FEATURE_COUNT = 2;
+  int QT_FLAGS_FEATURE_COUNT = QT_TYPE_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtEnumValueImpl <em>Qt Enum Value</em>}' class.
@@ -485,22 +485,13 @@ public interface QIdlPackage extends EPackage
   int QT_ENUM_VALUE__ENUM_MASK = 1;
 
   /**
-   * The feature id for the '<em><b>Numeric Value</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int QT_ENUM_VALUE__NUMERIC_VALUE = 2;
-
-  /**
    * The number of structural features of the '<em>Qt Enum Value</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int QT_ENUM_VALUE_FEATURE_COUNT = 3;
+  int QT_ENUM_VALUE_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtEnumValueMaskImpl <em>Qt Enum Value Mask</em>}' class.
@@ -522,13 +513,22 @@ public interface QIdlPackage extends EPackage
   int QT_ENUM_VALUE_MASK__VALUE = 0;
 
   /**
+   * The feature id for the '<em><b>Numeric Value</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QT_ENUM_VALUE_MASK__NUMERIC_VALUE = 1;
+
+  /**
    * The number of structural features of the '<em>Qt Enum Value Mask</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int QT_ENUM_VALUE_MASK_FEATURE_COUNT = 1;
+  int QT_ENUM_VALUE_MASK_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtBuitinTypeImpl <em>Qt Buitin Type</em>}' class.
@@ -1251,17 +1251,6 @@ public interface QIdlPackage extends EPackage
   EClass getQtFlags();
 
   /**
-   * Returns the meta object for the attribute '{@link org.ufacekit.qt.idl.dsl.qIdl.QtFlags#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.ufacekit.qt.idl.dsl.qIdl.QtFlags#getName()
-   * @see #getQtFlags()
-   * @generated
-   */
-  EAttribute getQtFlags_Name();
-
-  /**
    * Returns the meta object for the reference '{@link org.ufacekit.qt.idl.dsl.qIdl.QtFlags#getEnumeration <em>Enumeration</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1305,17 +1294,6 @@ public interface QIdlPackage extends EPackage
   EReference getQtEnumValue_EnumMask();
 
   /**
-   * Returns the meta object for the attribute '{@link org.ufacekit.qt.idl.dsl.qIdl.QtEnumValue#getNumericValue <em>Numeric Value</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Numeric Value</em>'.
-   * @see org.ufacekit.qt.idl.dsl.qIdl.QtEnumValue#getNumericValue()
-   * @see #getQtEnumValue()
-   * @generated
-   */
-  EAttribute getQtEnumValue_NumericValue();
-
-  /**
    * Returns the meta object for class '{@link org.ufacekit.qt.idl.dsl.qIdl.QtEnumValueMask <em>Qt Enum Value Mask</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1335,6 +1313,17 @@ public interface QIdlPackage extends EPackage
    * @generated
    */
   EReference getQtEnumValueMask_Value();
+
+  /**
+   * Returns the meta object for the attribute list '{@link org.ufacekit.qt.idl.dsl.qIdl.QtEnumValueMask#getNumericValue <em>Numeric Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Numeric Value</em>'.
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QtEnumValueMask#getNumericValue()
+   * @see #getQtEnumValueMask()
+   * @generated
+   */
+  EAttribute getQtEnumValueMask_NumericValue();
 
   /**
    * Returns the meta object for class '{@link org.ufacekit.qt.idl.dsl.qIdl.QtBuitinType <em>Qt Buitin Type</em>}'.
@@ -1893,14 +1882,6 @@ public interface QIdlPackage extends EPackage
     EClass QT_FLAGS = eINSTANCE.getQtFlags();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute QT_FLAGS__NAME = eINSTANCE.getQtFlags_Name();
-
-    /**
      * The meta object literal for the '<em><b>Enumeration</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1935,14 +1916,6 @@ public interface QIdlPackage extends EPackage
     EReference QT_ENUM_VALUE__ENUM_MASK = eINSTANCE.getQtEnumValue_EnumMask();
 
     /**
-     * The meta object literal for the '<em><b>Numeric Value</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute QT_ENUM_VALUE__NUMERIC_VALUE = eINSTANCE.getQtEnumValue_NumericValue();
-
-    /**
      * The meta object literal for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtEnumValueMaskImpl <em>Qt Enum Value Mask</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1959,6 +1932,14 @@ public interface QIdlPackage extends EPackage
      * @generated
      */
     EReference QT_ENUM_VALUE_MASK__VALUE = eINSTANCE.getQtEnumValueMask_Value();
+
+    /**
+     * The meta object literal for the '<em><b>Numeric Value</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute QT_ENUM_VALUE_MASK__NUMERIC_VALUE = eINSTANCE.getQtEnumValueMask_NumericValue();
 
     /**
      * The meta object literal for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtBuitinTypeImpl <em>Qt Buitin Type</em>}' class.

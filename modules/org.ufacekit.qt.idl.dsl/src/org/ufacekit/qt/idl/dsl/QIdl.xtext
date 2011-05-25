@@ -16,28 +16,32 @@ QtIdlTyp:
 
 QtNamespace:
 	'namespace' name=ID '{'
-		namespaces+=QtNamespace*
-		enums+=QtEnum*
-		flags+=QtFlags*
-		classes+=QtClass*
-		operations+=QtOperation*
+		( 
+			namespaces+=QtNamespace | 
+			enums+=QtEnum | 
+			flags+=QtFlags | 
+			classes+=QtClass | 
+			operations+=QtOperation
+		)*
 	'}'
 ;
 
 QtType:
-	QtEnum | QtClass | QtBuitinType;
+	QtEnum | QtFlags | QtClass | QtBuitinType;
 
 QtOperation:
 	QtFunction | QtSignal | QtSlot;
 
 QtClass:
 	'class' name=ID ('extends' superTypes+=[QtClass] (',' superTypes+=[QtClass])*)? '{'
-		enums+=QtEnum*
-		flags+=QtFlags*
-		classes+=QtClass*
-		properties+=QtProperty*
-		constructors+=QtConstructor*
-		operations+=QtOperation*
+		( 
+			enums+=QtEnum |
+			flags+=QtFlags |
+			classes+=QtClass |
+			properties+=QtProperty |
+			constructors+=QtConstructor |
+			operations+=QtOperation
+		)*
 	'}';
 
 
@@ -53,13 +57,17 @@ QtEnum:
 	'}';
 
 QtFlags:
-	'flags' name=ID ':' enumeration=[QtEnum];
+	'flags' name=ID ':' enumeration=[QtEnum] ';';
 
 QtEnumValue:
-	name=ID '=' (enumMask=QtEnumValueMask | numericValue=INT );
+	name=ID '=' enumMask=QtEnumValueMask;
 
 QtEnumValueMask:
-	(value+=[QtEnumValue|QualifiedName] ('|' value+=[QtEnumValue|QualifiedName])*);
+	( (value+=[QtEnumValue|QualifiedName] | numericValue+=LONG) ('|' (value+=[QtEnumValue|QualifiedName] | numericValue+=LONG) )* );
+
+//QtEnumValueMask:
+//	numericValue+=INT ('|' numericValue+=INT )*;
+
 
 QtBuitinType:
 	'builtin' name=ID ':' value=JvmArgumentTypeReference;
@@ -68,13 +76,13 @@ QtFunction:
 	visibility=Visibility const='const'? virtual=Virtuality? owner=Owner 'function' name=ID '(' (params+=QtParameter (',' params+=QtParameter)*)? ')' ':' returnValue=QtReturnValue ';';
 
 QtValue:
-	const='const'? valueType=Type? type=[QtType] name=ID;
+	const='const'? valueType=Type? type=[QtType|QualifiedName] name=ID;
 
 QtParameter:
 	value=QtValue ('=' (defaultInt=INT | defaultEnum=[QtEnumValue]) )?;
 
 QtReturnValue:
-	const='const'? valueType=Type? type=[QtType];
+	const='const'? valueType=Type? type=[QtType|QualifiedName];
 
 QtSignal:
 	'signal' name=ID '(' (params+=QtParameter (',' params+=QtParameter)*)? ')' ':' returnValue=QtReturnValue ';'; 
@@ -94,5 +102,4 @@ enum Owner:
 enum Type:
 	pointer | reference;
 
-//terminal HEX returns ecore::EInt: '0x' ('0'..'9' | 'A' .. 'F')+;
-//terminal LONG returns ecore::ELong: ('0'..'9')+;
+terminal LONG returns ecore::ELong: '-'? ('0'..'9')+;

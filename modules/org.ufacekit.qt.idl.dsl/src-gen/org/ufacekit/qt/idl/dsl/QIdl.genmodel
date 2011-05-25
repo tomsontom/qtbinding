@@ -63,16 +63,15 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtEnum/values"/>
     </genClasses>
     <genClasses ecoreClass="platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtFlags">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtFlags/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtFlags/enumeration"/>
     </genClasses>
     <genClasses ecoreClass="platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtEnumValue">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtEnumValue/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtEnumValue/enumMask"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtEnumValue/numericValue"/>
     </genClasses>
     <genClasses ecoreClass="platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtEnumValueMask">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtEnumValueMask/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtEnumValueMask/numericValue"/>
     </genClasses>
     <genClasses ecoreClass="platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtBuitinType">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtBuitinType/value"/>
