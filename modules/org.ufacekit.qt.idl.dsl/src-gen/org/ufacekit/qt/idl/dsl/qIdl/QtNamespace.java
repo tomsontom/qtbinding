@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.QtNamespace#getFlags <em>Flags</em>}</li>
  *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.QtNamespace#getClasses <em>Classes</em>}</li>
  *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.QtNamespace#getOperations <em>Operations</em>}</li>
+ *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.QtNamespace#getTypedef <em>Typedef</em>}</li>
  * </ul>
  * </p>
  *
@@ -137,5 +138,21 @@ public interface QtNamespace extends EObject
    * @generated
    */
   EList<QtOperation> getOperations();
+
+  /**
+   * Returns the value of the '<em><b>Typedef</b></em>' containment reference list.
+   * The list contents are of type {@link org.ufacekit.qt.idl.dsl.qIdl.QtTypeDef}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Typedef</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Typedef</em>' containment reference list.
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QIdlPackage#getQtNamespace_Typedef()
+   * @model containment="true"
+   * @generated
+   */
+  EList<QtTypeDef> getTypedef();
 
 } // QtNamespace

@@ -27,6 +27,7 @@ import org.ufacekit.qt.idl.dsl.qIdl.QtEnum;
 import org.ufacekit.qt.idl.dsl.qIdl.QtFlags;
 import org.ufacekit.qt.idl.dsl.qIdl.QtNamespace;
 import org.ufacekit.qt.idl.dsl.qIdl.QtOperation;
+import org.ufacekit.qt.idl.dsl.qIdl.QtTypeDef;
 
 /**
  * <!-- begin-user-doc -->
@@ -41,6 +42,7 @@ import org.ufacekit.qt.idl.dsl.qIdl.QtOperation;
  *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtNamespaceImpl#getFlags <em>Flags</em>}</li>
  *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtNamespaceImpl#getClasses <em>Classes</em>}</li>
  *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtNamespaceImpl#getOperations <em>Operations</em>}</li>
+ *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtNamespaceImpl#getTypedef <em>Typedef</em>}</li>
  * </ul>
  * </p>
  *
@@ -117,6 +119,16 @@ public class QtNamespaceImpl extends MinimalEObjectImpl.Container implements QtN
    * @ordered
    */
   protected EList<QtOperation> operations;
+
+  /**
+   * The cached value of the '{@link #getTypedef() <em>Typedef</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTypedef()
+   * @generated
+   * @ordered
+   */
+  protected EList<QtTypeDef> typedef;
 
   /**
    * <!-- begin-user-doc -->
@@ -237,6 +249,20 @@ public class QtNamespaceImpl extends MinimalEObjectImpl.Container implements QtN
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<QtTypeDef> getTypedef()
+  {
+    if (typedef == null)
+    {
+      typedef = new EObjectContainmentEList<QtTypeDef>(QtTypeDef.class, this, QIdlPackage.QT_NAMESPACE__TYPEDEF);
+    }
+    return typedef;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -252,6 +278,8 @@ public class QtNamespaceImpl extends MinimalEObjectImpl.Container implements QtN
         return ((InternalEList<?>)getClasses()).basicRemove(otherEnd, msgs);
       case QIdlPackage.QT_NAMESPACE__OPERATIONS:
         return ((InternalEList<?>)getOperations()).basicRemove(otherEnd, msgs);
+      case QIdlPackage.QT_NAMESPACE__TYPEDEF:
+        return ((InternalEList<?>)getTypedef()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -278,6 +306,8 @@ public class QtNamespaceImpl extends MinimalEObjectImpl.Container implements QtN
         return getClasses();
       case QIdlPackage.QT_NAMESPACE__OPERATIONS:
         return getOperations();
+      case QIdlPackage.QT_NAMESPACE__TYPEDEF:
+        return getTypedef();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -316,6 +346,10 @@ public class QtNamespaceImpl extends MinimalEObjectImpl.Container implements QtN
         getOperations().clear();
         getOperations().addAll((Collection<? extends QtOperation>)newValue);
         return;
+      case QIdlPackage.QT_NAMESPACE__TYPEDEF:
+        getTypedef().clear();
+        getTypedef().addAll((Collection<? extends QtTypeDef>)newValue);
+        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -348,6 +382,9 @@ public class QtNamespaceImpl extends MinimalEObjectImpl.Container implements QtN
       case QIdlPackage.QT_NAMESPACE__OPERATIONS:
         getOperations().clear();
         return;
+      case QIdlPackage.QT_NAMESPACE__TYPEDEF:
+        getTypedef().clear();
+        return;
     }
     super.eUnset(featureID);
   }
@@ -374,6 +411,8 @@ public class QtNamespaceImpl extends MinimalEObjectImpl.Container implements QtN
         return classes != null && !classes.isEmpty();
       case QIdlPackage.QT_NAMESPACE__OPERATIONS:
         return operations != null && !operations.isEmpty();
+      case QIdlPackage.QT_NAMESPACE__TYPEDEF:
+        return typedef != null && !typedef.isEmpty();
     }
     return super.eIsSet(featureID);
   }

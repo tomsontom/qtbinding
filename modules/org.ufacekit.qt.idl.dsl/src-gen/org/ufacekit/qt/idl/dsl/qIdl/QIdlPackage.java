@@ -153,13 +153,22 @@ public interface QIdlPackage extends EPackage
   int QT_NAMESPACE__OPERATIONS = 5;
 
   /**
+   * The feature id for the '<em><b>Typedef</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QT_NAMESPACE__TYPEDEF = 6;
+
+  /**
    * The number of structural features of the '<em>Qt Namespace</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int QT_NAMESPACE_FEATURE_COUNT = 6;
+  int QT_NAMESPACE_FEATURE_COUNT = 7;
 
   /**
    * The meta object id for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtTypeImpl <em>Qt Type</em>}' class.
@@ -255,13 +264,22 @@ public interface QIdlPackage extends EPackage
   int QT_CLASS__NAME = QT_TYPE__NAME;
 
   /**
-   * The feature id for the '<em><b>Super Types</b></em>' reference list.
+   * The feature id for the '<em><b>Template Types</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int QT_CLASS__SUPER_TYPES = QT_TYPE_FEATURE_COUNT + 0;
+  int QT_CLASS__TEMPLATE_TYPES = QT_TYPE_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Super Types</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QT_CLASS__SUPER_TYPES = QT_TYPE_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Enums</b></em>' containment reference list.
@@ -270,7 +288,7 @@ public interface QIdlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int QT_CLASS__ENUMS = QT_TYPE_FEATURE_COUNT + 1;
+  int QT_CLASS__ENUMS = QT_TYPE_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Flags</b></em>' containment reference list.
@@ -279,7 +297,7 @@ public interface QIdlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int QT_CLASS__FLAGS = QT_TYPE_FEATURE_COUNT + 2;
+  int QT_CLASS__FLAGS = QT_TYPE_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Classes</b></em>' containment reference list.
@@ -288,7 +306,7 @@ public interface QIdlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int QT_CLASS__CLASSES = QT_TYPE_FEATURE_COUNT + 3;
+  int QT_CLASS__CLASSES = QT_TYPE_FEATURE_COUNT + 4;
 
   /**
    * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -297,7 +315,7 @@ public interface QIdlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int QT_CLASS__PROPERTIES = QT_TYPE_FEATURE_COUNT + 4;
+  int QT_CLASS__PROPERTIES = QT_TYPE_FEATURE_COUNT + 5;
 
   /**
    * The feature id for the '<em><b>Constructors</b></em>' containment reference list.
@@ -306,7 +324,7 @@ public interface QIdlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int QT_CLASS__CONSTRUCTORS = QT_TYPE_FEATURE_COUNT + 5;
+  int QT_CLASS__CONSTRUCTORS = QT_TYPE_FEATURE_COUNT + 6;
 
   /**
    * The feature id for the '<em><b>Operations</b></em>' containment reference list.
@@ -315,7 +333,16 @@ public interface QIdlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int QT_CLASS__OPERATIONS = QT_TYPE_FEATURE_COUNT + 6;
+  int QT_CLASS__OPERATIONS = QT_TYPE_FEATURE_COUNT + 7;
+
+  /**
+   * The feature id for the '<em><b>Typedef</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QT_CLASS__TYPEDEF = QT_TYPE_FEATURE_COUNT + 8;
 
   /**
    * The number of structural features of the '<em>Qt Class</em>' class.
@@ -324,7 +351,72 @@ public interface QIdlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int QT_CLASS_FEATURE_COUNT = QT_TYPE_FEATURE_COUNT + 7;
+  int QT_CLASS_FEATURE_COUNT = QT_TYPE_FEATURE_COUNT + 9;
+
+  /**
+   * The meta object id for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtTemplateParamImpl <em>Qt Template Param</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QtTemplateParamImpl
+   * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QIdlPackageImpl#getQtTemplateParam()
+   * @generated
+   */
+  int QT_TEMPLATE_PARAM = 5;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QT_TEMPLATE_PARAM__NAME = QT_TYPE__NAME;
+
+  /**
+   * The number of structural features of the '<em>Qt Template Param</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QT_TEMPLATE_PARAM_FEATURE_COUNT = QT_TYPE_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtTypeDefImpl <em>Qt Type Def</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QtTypeDefImpl
+   * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QIdlPackageImpl#getQtTypeDef()
+   * @generated
+   */
+  int QT_TYPE_DEF = 6;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QT_TYPE_DEF__NAME = QT_TYPE__NAME;
+
+  /**
+   * The feature id for the '<em><b>Type Ref</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QT_TYPE_DEF__TYPE_REF = QT_TYPE_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Qt Type Def</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QT_TYPE_DEF_FEATURE_COUNT = QT_TYPE_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtConstructorImpl <em>Qt Constructor</em>}' class.
@@ -334,7 +426,7 @@ public interface QIdlPackage extends EPackage
    * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QIdlPackageImpl#getQtConstructor()
    * @generated
    */
-  int QT_CONSTRUCTOR = 5;
+  int QT_CONSTRUCTOR = 7;
 
   /**
    * The feature id for the '<em><b>Params</b></em>' containment reference list.
@@ -362,7 +454,7 @@ public interface QIdlPackage extends EPackage
    * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QIdlPackageImpl#getQtProperty()
    * @generated
    */
-  int QT_PROPERTY = 6;
+  int QT_PROPERTY = 8;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' containment reference.
@@ -390,7 +482,7 @@ public interface QIdlPackage extends EPackage
    * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QIdlPackageImpl#getQtEnum()
    * @generated
    */
-  int QT_ENUM = 7;
+  int QT_ENUM = 9;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -427,7 +519,7 @@ public interface QIdlPackage extends EPackage
    * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QIdlPackageImpl#getQtFlags()
    * @generated
    */
-  int QT_FLAGS = 8;
+  int QT_FLAGS = 10;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -464,7 +556,7 @@ public interface QIdlPackage extends EPackage
    * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QIdlPackageImpl#getQtEnumValue()
    * @generated
    */
-  int QT_ENUM_VALUE = 9;
+  int QT_ENUM_VALUE = 11;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -501,7 +593,7 @@ public interface QIdlPackage extends EPackage
    * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QIdlPackageImpl#getQtEnumValueMask()
    * @generated
    */
-  int QT_ENUM_VALUE_MASK = 10;
+  int QT_ENUM_VALUE_MASK = 12;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' reference list.
@@ -538,7 +630,7 @@ public interface QIdlPackage extends EPackage
    * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QIdlPackageImpl#getQtBuitinType()
    * @generated
    */
-  int QT_BUITIN_TYPE = 11;
+  int QT_BUITIN_TYPE = 13;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -575,7 +667,7 @@ public interface QIdlPackage extends EPackage
    * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QIdlPackageImpl#getQtFunction()
    * @generated
    */
-  int QT_FUNCTION = 12;
+  int QT_FUNCTION = 14;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -657,7 +749,7 @@ public interface QIdlPackage extends EPackage
    * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QIdlPackageImpl#getQtValue()
    * @generated
    */
-  int QT_VALUE = 13;
+  int QT_VALUE = 15;
 
   /**
    * The feature id for the '<em><b>Const</b></em>' attribute.
@@ -678,13 +770,13 @@ public interface QIdlPackage extends EPackage
   int QT_VALUE__VALUE_TYPE = 1;
 
   /**
-   * The feature id for the '<em><b>Type</b></em>' reference.
+   * The feature id for the '<em><b>Type Ref</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int QT_VALUE__TYPE = 2;
+  int QT_VALUE__TYPE_REF = 2;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -705,6 +797,80 @@ public interface QIdlPackage extends EPackage
   int QT_VALUE_FEATURE_COUNT = 4;
 
   /**
+   * The meta object id for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtTypeRefImpl <em>Qt Type Ref</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QtTypeRefImpl
+   * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QIdlPackageImpl#getQtTypeRef()
+   * @generated
+   */
+  int QT_TYPE_REF = 16;
+
+  /**
+   * The feature id for the '<em><b>Type</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QT_TYPE_REF__TYPE = 0;
+
+  /**
+   * The feature id for the '<em><b>Template Types</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QT_TYPE_REF__TEMPLATE_TYPES = 1;
+
+  /**
+   * The number of structural features of the '<em>Qt Type Ref</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QT_TYPE_REF_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtClassTypeRefImpl <em>Qt Class Type Ref</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QtClassTypeRefImpl
+   * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QIdlPackageImpl#getQtClassTypeRef()
+   * @generated
+   */
+  int QT_CLASS_TYPE_REF = 17;
+
+  /**
+   * The feature id for the '<em><b>Type</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QT_CLASS_TYPE_REF__TYPE = 0;
+
+  /**
+   * The feature id for the '<em><b>Template Types</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QT_CLASS_TYPE_REF__TEMPLATE_TYPES = 1;
+
+  /**
+   * The number of structural features of the '<em>Qt Class Type Ref</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QT_CLASS_TYPE_REF_FEATURE_COUNT = 2;
+
+  /**
    * The meta object id for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtParameterImpl <em>Qt Parameter</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -712,7 +878,7 @@ public interface QIdlPackage extends EPackage
    * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QIdlPackageImpl#getQtParameter()
    * @generated
    */
-  int QT_PARAMETER = 14;
+  int QT_PARAMETER = 18;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -758,7 +924,7 @@ public interface QIdlPackage extends EPackage
    * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QIdlPackageImpl#getQtReturnValue()
    * @generated
    */
-  int QT_RETURN_VALUE = 15;
+  int QT_RETURN_VALUE = 19;
 
   /**
    * The feature id for the '<em><b>Const</b></em>' attribute.
@@ -779,13 +945,13 @@ public interface QIdlPackage extends EPackage
   int QT_RETURN_VALUE__VALUE_TYPE = 1;
 
   /**
-   * The feature id for the '<em><b>Type</b></em>' reference.
+   * The feature id for the '<em><b>Type Ref</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int QT_RETURN_VALUE__TYPE = 2;
+  int QT_RETURN_VALUE__TYPE_REF = 2;
 
   /**
    * The number of structural features of the '<em>Qt Return Value</em>' class.
@@ -804,7 +970,7 @@ public interface QIdlPackage extends EPackage
    * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QIdlPackageImpl#getQtSignal()
    * @generated
    */
-  int QT_SIGNAL = 16;
+  int QT_SIGNAL = 20;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -850,7 +1016,7 @@ public interface QIdlPackage extends EPackage
    * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QIdlPackageImpl#getQtSlot()
    * @generated
    */
-  int QT_SLOT = 17;
+  int QT_SLOT = 21;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -896,7 +1062,7 @@ public interface QIdlPackage extends EPackage
    * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QIdlPackageImpl#getVirtuality()
    * @generated
    */
-  int VIRTUALITY = 18;
+  int VIRTUALITY = 22;
 
   /**
    * The meta object id for the '{@link org.ufacekit.qt.idl.dsl.qIdl.Visibility <em>Visibility</em>}' enum.
@@ -906,7 +1072,7 @@ public interface QIdlPackage extends EPackage
    * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QIdlPackageImpl#getVisibility()
    * @generated
    */
-  int VISIBILITY = 19;
+  int VISIBILITY = 23;
 
   /**
    * The meta object id for the '{@link org.ufacekit.qt.idl.dsl.qIdl.Owner <em>Owner</em>}' enum.
@@ -916,7 +1082,7 @@ public interface QIdlPackage extends EPackage
    * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QIdlPackageImpl#getOwner()
    * @generated
    */
-  int OWNER = 20;
+  int OWNER = 24;
 
   /**
    * The meta object id for the '{@link org.ufacekit.qt.idl.dsl.qIdl.Type <em>Type</em>}' enum.
@@ -926,7 +1092,7 @@ public interface QIdlPackage extends EPackage
    * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QIdlPackageImpl#getType()
    * @generated
    */
-  int TYPE = 21;
+  int TYPE = 25;
 
 
   /**
@@ -1027,6 +1193,17 @@ public interface QIdlPackage extends EPackage
   EReference getQtNamespace_Operations();
 
   /**
+   * Returns the meta object for the containment reference list '{@link org.ufacekit.qt.idl.dsl.qIdl.QtNamespace#getTypedef <em>Typedef</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Typedef</em>'.
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QtNamespace#getTypedef()
+   * @see #getQtNamespace()
+   * @generated
+   */
+  EReference getQtNamespace_Typedef();
+
+  /**
    * Returns the meta object for class '{@link org.ufacekit.qt.idl.dsl.qIdl.QtType <em>Qt Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1101,10 +1278,21 @@ public interface QIdlPackage extends EPackage
   EClass getQtClass();
 
   /**
-   * Returns the meta object for the reference list '{@link org.ufacekit.qt.idl.dsl.qIdl.QtClass#getSuperTypes <em>Super Types</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.ufacekit.qt.idl.dsl.qIdl.QtClass#getTemplateTypes <em>Template Types</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference list '<em>Super Types</em>'.
+   * @return the meta object for the containment reference list '<em>Template Types</em>'.
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QtClass#getTemplateTypes()
+   * @see #getQtClass()
+   * @generated
+   */
+  EReference getQtClass_TemplateTypes();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.ufacekit.qt.idl.dsl.qIdl.QtClass#getSuperTypes <em>Super Types</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Super Types</em>'.
    * @see org.ufacekit.qt.idl.dsl.qIdl.QtClass#getSuperTypes()
    * @see #getQtClass()
    * @generated
@@ -1176,6 +1364,48 @@ public interface QIdlPackage extends EPackage
    * @generated
    */
   EReference getQtClass_Operations();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.ufacekit.qt.idl.dsl.qIdl.QtClass#getTypedef <em>Typedef</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Typedef</em>'.
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QtClass#getTypedef()
+   * @see #getQtClass()
+   * @generated
+   */
+  EReference getQtClass_Typedef();
+
+  /**
+   * Returns the meta object for class '{@link org.ufacekit.qt.idl.dsl.qIdl.QtTemplateParam <em>Qt Template Param</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Qt Template Param</em>'.
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QtTemplateParam
+   * @generated
+   */
+  EClass getQtTemplateParam();
+
+  /**
+   * Returns the meta object for class '{@link org.ufacekit.qt.idl.dsl.qIdl.QtTypeDef <em>Qt Type Def</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Qt Type Def</em>'.
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QtTypeDef
+   * @generated
+   */
+  EClass getQtTypeDef();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.ufacekit.qt.idl.dsl.qIdl.QtTypeDef#getTypeRef <em>Type Ref</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Type Ref</em>'.
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QtTypeDef#getTypeRef()
+   * @see #getQtTypeDef()
+   * @generated
+   */
+  EReference getQtTypeDef_TypeRef();
 
   /**
    * Returns the meta object for class '{@link org.ufacekit.qt.idl.dsl.qIdl.QtConstructor <em>Qt Constructor</em>}'.
@@ -1433,15 +1663,15 @@ public interface QIdlPackage extends EPackage
   EAttribute getQtValue_ValueType();
 
   /**
-   * Returns the meta object for the reference '{@link org.ufacekit.qt.idl.dsl.qIdl.QtValue#getType <em>Type</em>}'.
+   * Returns the meta object for the containment reference '{@link org.ufacekit.qt.idl.dsl.qIdl.QtValue#getTypeRef <em>Type Ref</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Type</em>'.
-   * @see org.ufacekit.qt.idl.dsl.qIdl.QtValue#getType()
+   * @return the meta object for the containment reference '<em>Type Ref</em>'.
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QtValue#getTypeRef()
    * @see #getQtValue()
    * @generated
    */
-  EReference getQtValue_Type();
+  EReference getQtValue_TypeRef();
 
   /**
    * Returns the meta object for the attribute '{@link org.ufacekit.qt.idl.dsl.qIdl.QtValue#getName <em>Name</em>}'.
@@ -1453,6 +1683,70 @@ public interface QIdlPackage extends EPackage
    * @generated
    */
   EAttribute getQtValue_Name();
+
+  /**
+   * Returns the meta object for class '{@link org.ufacekit.qt.idl.dsl.qIdl.QtTypeRef <em>Qt Type Ref</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Qt Type Ref</em>'.
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QtTypeRef
+   * @generated
+   */
+  EClass getQtTypeRef();
+
+  /**
+   * Returns the meta object for the reference '{@link org.ufacekit.qt.idl.dsl.qIdl.QtTypeRef#getType <em>Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Type</em>'.
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QtTypeRef#getType()
+   * @see #getQtTypeRef()
+   * @generated
+   */
+  EReference getQtTypeRef_Type();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.ufacekit.qt.idl.dsl.qIdl.QtTypeRef#getTemplateTypes <em>Template Types</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Template Types</em>'.
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QtTypeRef#getTemplateTypes()
+   * @see #getQtTypeRef()
+   * @generated
+   */
+  EReference getQtTypeRef_TemplateTypes();
+
+  /**
+   * Returns the meta object for class '{@link org.ufacekit.qt.idl.dsl.qIdl.QtClassTypeRef <em>Qt Class Type Ref</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Qt Class Type Ref</em>'.
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QtClassTypeRef
+   * @generated
+   */
+  EClass getQtClassTypeRef();
+
+  /**
+   * Returns the meta object for the reference '{@link org.ufacekit.qt.idl.dsl.qIdl.QtClassTypeRef#getType <em>Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Type</em>'.
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QtClassTypeRef#getType()
+   * @see #getQtClassTypeRef()
+   * @generated
+   */
+  EReference getQtClassTypeRef_Type();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.ufacekit.qt.idl.dsl.qIdl.QtClassTypeRef#getTemplateTypes <em>Template Types</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Template Types</em>'.
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QtClassTypeRef#getTemplateTypes()
+   * @see #getQtClassTypeRef()
+   * @generated
+   */
+  EReference getQtClassTypeRef_TemplateTypes();
 
   /**
    * Returns the meta object for class '{@link org.ufacekit.qt.idl.dsl.qIdl.QtParameter <em>Qt Parameter</em>}'.
@@ -1530,15 +1824,15 @@ public interface QIdlPackage extends EPackage
   EAttribute getQtReturnValue_ValueType();
 
   /**
-   * Returns the meta object for the reference '{@link org.ufacekit.qt.idl.dsl.qIdl.QtReturnValue#getType <em>Type</em>}'.
+   * Returns the meta object for the containment reference '{@link org.ufacekit.qt.idl.dsl.qIdl.QtReturnValue#getTypeRef <em>Type Ref</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Type</em>'.
-   * @see org.ufacekit.qt.idl.dsl.qIdl.QtReturnValue#getType()
+   * @return the meta object for the containment reference '<em>Type Ref</em>'.
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QtReturnValue#getTypeRef()
    * @see #getQtReturnValue()
    * @generated
    */
-  EReference getQtReturnValue_Type();
+  EReference getQtReturnValue_TypeRef();
 
   /**
    * Returns the meta object for class '{@link org.ufacekit.qt.idl.dsl.qIdl.QtSignal <em>Qt Signal</em>}'.
@@ -1700,6 +1994,14 @@ public interface QIdlPackage extends EPackage
     EReference QT_NAMESPACE__OPERATIONS = eINSTANCE.getQtNamespace_Operations();
 
     /**
+     * The meta object literal for the '<em><b>Typedef</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference QT_NAMESPACE__TYPEDEF = eINSTANCE.getQtNamespace_Typedef();
+
+    /**
      * The meta object literal for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtTypeImpl <em>Qt Type</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1762,7 +2064,15 @@ public interface QIdlPackage extends EPackage
     EClass QT_CLASS = eINSTANCE.getQtClass();
 
     /**
-     * The meta object literal for the '<em><b>Super Types</b></em>' reference list feature.
+     * The meta object literal for the '<em><b>Template Types</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference QT_CLASS__TEMPLATE_TYPES = eINSTANCE.getQtClass_TemplateTypes();
+
+    /**
+     * The meta object literal for the '<em><b>Super Types</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -1816,6 +2126,42 @@ public interface QIdlPackage extends EPackage
      * @generated
      */
     EReference QT_CLASS__OPERATIONS = eINSTANCE.getQtClass_Operations();
+
+    /**
+     * The meta object literal for the '<em><b>Typedef</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference QT_CLASS__TYPEDEF = eINSTANCE.getQtClass_Typedef();
+
+    /**
+     * The meta object literal for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtTemplateParamImpl <em>Qt Template Param</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QtTemplateParamImpl
+     * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QIdlPackageImpl#getQtTemplateParam()
+     * @generated
+     */
+    EClass QT_TEMPLATE_PARAM = eINSTANCE.getQtTemplateParam();
+
+    /**
+     * The meta object literal for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtTypeDefImpl <em>Qt Type Def</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QtTypeDefImpl
+     * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QIdlPackageImpl#getQtTypeDef()
+     * @generated
+     */
+    EClass QT_TYPE_DEF = eINSTANCE.getQtTypeDef();
+
+    /**
+     * The meta object literal for the '<em><b>Type Ref</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference QT_TYPE_DEF__TYPE_REF = eINSTANCE.getQtTypeDef_TypeRef();
 
     /**
      * The meta object literal for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtConstructorImpl <em>Qt Constructor</em>}' class.
@@ -2028,12 +2374,12 @@ public interface QIdlPackage extends EPackage
     EAttribute QT_VALUE__VALUE_TYPE = eINSTANCE.getQtValue_ValueType();
 
     /**
-     * The meta object literal for the '<em><b>Type</b></em>' reference feature.
+     * The meta object literal for the '<em><b>Type Ref</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference QT_VALUE__TYPE = eINSTANCE.getQtValue_Type();
+    EReference QT_VALUE__TYPE_REF = eINSTANCE.getQtValue_TypeRef();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -2042,6 +2388,58 @@ public interface QIdlPackage extends EPackage
      * @generated
      */
     EAttribute QT_VALUE__NAME = eINSTANCE.getQtValue_Name();
+
+    /**
+     * The meta object literal for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtTypeRefImpl <em>Qt Type Ref</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QtTypeRefImpl
+     * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QIdlPackageImpl#getQtTypeRef()
+     * @generated
+     */
+    EClass QT_TYPE_REF = eINSTANCE.getQtTypeRef();
+
+    /**
+     * The meta object literal for the '<em><b>Type</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference QT_TYPE_REF__TYPE = eINSTANCE.getQtTypeRef_Type();
+
+    /**
+     * The meta object literal for the '<em><b>Template Types</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference QT_TYPE_REF__TEMPLATE_TYPES = eINSTANCE.getQtTypeRef_TemplateTypes();
+
+    /**
+     * The meta object literal for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtClassTypeRefImpl <em>Qt Class Type Ref</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QtClassTypeRefImpl
+     * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QIdlPackageImpl#getQtClassTypeRef()
+     * @generated
+     */
+    EClass QT_CLASS_TYPE_REF = eINSTANCE.getQtClassTypeRef();
+
+    /**
+     * The meta object literal for the '<em><b>Type</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference QT_CLASS_TYPE_REF__TYPE = eINSTANCE.getQtClassTypeRef_Type();
+
+    /**
+     * The meta object literal for the '<em><b>Template Types</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference QT_CLASS_TYPE_REF__TEMPLATE_TYPES = eINSTANCE.getQtClassTypeRef_TemplateTypes();
 
     /**
      * The meta object literal for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtParameterImpl <em>Qt Parameter</em>}' class.
@@ -2104,12 +2502,12 @@ public interface QIdlPackage extends EPackage
     EAttribute QT_RETURN_VALUE__VALUE_TYPE = eINSTANCE.getQtReturnValue_ValueType();
 
     /**
-     * The meta object literal for the '<em><b>Type</b></em>' reference feature.
+     * The meta object literal for the '<em><b>Type Ref</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference QT_RETURN_VALUE__TYPE = eINSTANCE.getQtReturnValue_Type();
+    EReference QT_RETURN_VALUE__TYPE_REF = eINSTANCE.getQtReturnValue_TypeRef();
 
     /**
      * The meta object literal for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtSignalImpl <em>Qt Signal</em>}' class.

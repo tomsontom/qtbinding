@@ -24,6 +24,7 @@ import org.ufacekit.qt.idl.dsl.qIdl.QIdlFactory;
 import org.ufacekit.qt.idl.dsl.qIdl.QIdlPackage;
 import org.ufacekit.qt.idl.dsl.qIdl.QtBuitinType;
 import org.ufacekit.qt.idl.dsl.qIdl.QtClass;
+import org.ufacekit.qt.idl.dsl.qIdl.QtClassTypeRef;
 import org.ufacekit.qt.idl.dsl.qIdl.QtConstructor;
 import org.ufacekit.qt.idl.dsl.qIdl.QtEnum;
 import org.ufacekit.qt.idl.dsl.qIdl.QtEnumValue;
@@ -38,7 +39,10 @@ import org.ufacekit.qt.idl.dsl.qIdl.QtProperty;
 import org.ufacekit.qt.idl.dsl.qIdl.QtReturnValue;
 import org.ufacekit.qt.idl.dsl.qIdl.QtSignal;
 import org.ufacekit.qt.idl.dsl.qIdl.QtSlot;
+import org.ufacekit.qt.idl.dsl.qIdl.QtTemplateParam;
 import org.ufacekit.qt.idl.dsl.qIdl.QtType;
+import org.ufacekit.qt.idl.dsl.qIdl.QtTypeDef;
+import org.ufacekit.qt.idl.dsl.qIdl.QtTypeRef;
 import org.ufacekit.qt.idl.dsl.qIdl.QtValue;
 import org.ufacekit.qt.idl.dsl.qIdl.Type;
 import org.ufacekit.qt.idl.dsl.qIdl.Virtuality;
@@ -86,6 +90,20 @@ public class QIdlPackageImpl extends EPackageImpl implements QIdlPackage
    * @generated
    */
   private EClass qtClassEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass qtTemplateParamEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass qtTypeDefEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -149,6 +167,20 @@ public class QIdlPackageImpl extends EPackageImpl implements QIdlPackage
    * @generated
    */
   private EClass qtValueEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass qtTypeRefEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass qtClassTypeRefEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -368,6 +400,16 @@ public class QIdlPackageImpl extends EPackageImpl implements QIdlPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getQtNamespace_Typedef()
+  {
+    return (EReference)qtNamespaceEClass.getEStructuralFeatures().get(6);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getQtType()
   {
     return qtTypeEClass;
@@ -438,7 +480,7 @@ public class QIdlPackageImpl extends EPackageImpl implements QIdlPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getQtClass_SuperTypes()
+  public EReference getQtClass_TemplateTypes()
   {
     return (EReference)qtClassEClass.getEStructuralFeatures().get(0);
   }
@@ -448,7 +490,7 @@ public class QIdlPackageImpl extends EPackageImpl implements QIdlPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getQtClass_Enums()
+  public EReference getQtClass_SuperTypes()
   {
     return (EReference)qtClassEClass.getEStructuralFeatures().get(1);
   }
@@ -458,7 +500,7 @@ public class QIdlPackageImpl extends EPackageImpl implements QIdlPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getQtClass_Flags()
+  public EReference getQtClass_Enums()
   {
     return (EReference)qtClassEClass.getEStructuralFeatures().get(2);
   }
@@ -468,7 +510,7 @@ public class QIdlPackageImpl extends EPackageImpl implements QIdlPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getQtClass_Classes()
+  public EReference getQtClass_Flags()
   {
     return (EReference)qtClassEClass.getEStructuralFeatures().get(3);
   }
@@ -478,7 +520,7 @@ public class QIdlPackageImpl extends EPackageImpl implements QIdlPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getQtClass_Properties()
+  public EReference getQtClass_Classes()
   {
     return (EReference)qtClassEClass.getEStructuralFeatures().get(4);
   }
@@ -488,7 +530,7 @@ public class QIdlPackageImpl extends EPackageImpl implements QIdlPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getQtClass_Constructors()
+  public EReference getQtClass_Properties()
   {
     return (EReference)qtClassEClass.getEStructuralFeatures().get(5);
   }
@@ -498,9 +540,59 @@ public class QIdlPackageImpl extends EPackageImpl implements QIdlPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getQtClass_Operations()
+  public EReference getQtClass_Constructors()
   {
     return (EReference)qtClassEClass.getEStructuralFeatures().get(6);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getQtClass_Operations()
+  {
+    return (EReference)qtClassEClass.getEStructuralFeatures().get(7);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getQtClass_Typedef()
+  {
+    return (EReference)qtClassEClass.getEStructuralFeatures().get(8);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getQtTemplateParam()
+  {
+    return qtTemplateParamEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getQtTypeDef()
+  {
+    return qtTypeDefEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getQtTypeDef_TypeRef()
+  {
+    return (EReference)qtTypeDefEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -748,7 +840,7 @@ public class QIdlPackageImpl extends EPackageImpl implements QIdlPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getQtValue_Type()
+  public EReference getQtValue_TypeRef()
   {
     return (EReference)qtValueEClass.getEStructuralFeatures().get(2);
   }
@@ -761,6 +853,66 @@ public class QIdlPackageImpl extends EPackageImpl implements QIdlPackage
   public EAttribute getQtValue_Name()
   {
     return (EAttribute)qtValueEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getQtTypeRef()
+  {
+    return qtTypeRefEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getQtTypeRef_Type()
+  {
+    return (EReference)qtTypeRefEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getQtTypeRef_TemplateTypes()
+  {
+    return (EReference)qtTypeRefEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getQtClassTypeRef()
+  {
+    return qtClassTypeRefEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getQtClassTypeRef_Type()
+  {
+    return (EReference)qtClassTypeRefEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getQtClassTypeRef_TemplateTypes()
+  {
+    return (EReference)qtClassTypeRefEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -838,7 +990,7 @@ public class QIdlPackageImpl extends EPackageImpl implements QIdlPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getQtReturnValue_Type()
+  public EReference getQtReturnValue_TypeRef()
   {
     return (EReference)qtReturnValueEClass.getEStructuralFeatures().get(2);
   }
@@ -943,6 +1095,7 @@ public class QIdlPackageImpl extends EPackageImpl implements QIdlPackage
     createEReference(qtNamespaceEClass, QT_NAMESPACE__FLAGS);
     createEReference(qtNamespaceEClass, QT_NAMESPACE__CLASSES);
     createEReference(qtNamespaceEClass, QT_NAMESPACE__OPERATIONS);
+    createEReference(qtNamespaceEClass, QT_NAMESPACE__TYPEDEF);
 
     qtTypeEClass = createEClass(QT_TYPE);
     createEAttribute(qtTypeEClass, QT_TYPE__NAME);
@@ -953,6 +1106,7 @@ public class QIdlPackageImpl extends EPackageImpl implements QIdlPackage
     createEReference(qtOperationEClass, QT_OPERATION__RETURN_VALUE);
 
     qtClassEClass = createEClass(QT_CLASS);
+    createEReference(qtClassEClass, QT_CLASS__TEMPLATE_TYPES);
     createEReference(qtClassEClass, QT_CLASS__SUPER_TYPES);
     createEReference(qtClassEClass, QT_CLASS__ENUMS);
     createEReference(qtClassEClass, QT_CLASS__FLAGS);
@@ -960,6 +1114,12 @@ public class QIdlPackageImpl extends EPackageImpl implements QIdlPackage
     createEReference(qtClassEClass, QT_CLASS__PROPERTIES);
     createEReference(qtClassEClass, QT_CLASS__CONSTRUCTORS);
     createEReference(qtClassEClass, QT_CLASS__OPERATIONS);
+    createEReference(qtClassEClass, QT_CLASS__TYPEDEF);
+
+    qtTemplateParamEClass = createEClass(QT_TEMPLATE_PARAM);
+
+    qtTypeDefEClass = createEClass(QT_TYPE_DEF);
+    createEReference(qtTypeDefEClass, QT_TYPE_DEF__TYPE_REF);
 
     qtConstructorEClass = createEClass(QT_CONSTRUCTOR);
     createEReference(qtConstructorEClass, QT_CONSTRUCTOR__PARAMS);
@@ -993,8 +1153,16 @@ public class QIdlPackageImpl extends EPackageImpl implements QIdlPackage
     qtValueEClass = createEClass(QT_VALUE);
     createEAttribute(qtValueEClass, QT_VALUE__CONST);
     createEAttribute(qtValueEClass, QT_VALUE__VALUE_TYPE);
-    createEReference(qtValueEClass, QT_VALUE__TYPE);
+    createEReference(qtValueEClass, QT_VALUE__TYPE_REF);
     createEAttribute(qtValueEClass, QT_VALUE__NAME);
+
+    qtTypeRefEClass = createEClass(QT_TYPE_REF);
+    createEReference(qtTypeRefEClass, QT_TYPE_REF__TYPE);
+    createEReference(qtTypeRefEClass, QT_TYPE_REF__TEMPLATE_TYPES);
+
+    qtClassTypeRefEClass = createEClass(QT_CLASS_TYPE_REF);
+    createEReference(qtClassTypeRefEClass, QT_CLASS_TYPE_REF__TYPE);
+    createEReference(qtClassTypeRefEClass, QT_CLASS_TYPE_REF__TEMPLATE_TYPES);
 
     qtParameterEClass = createEClass(QT_PARAMETER);
     createEReference(qtParameterEClass, QT_PARAMETER__VALUE);
@@ -1004,7 +1172,7 @@ public class QIdlPackageImpl extends EPackageImpl implements QIdlPackage
     qtReturnValueEClass = createEClass(QT_RETURN_VALUE);
     createEAttribute(qtReturnValueEClass, QT_RETURN_VALUE__CONST);
     createEAttribute(qtReturnValueEClass, QT_RETURN_VALUE__VALUE_TYPE);
-    createEReference(qtReturnValueEClass, QT_RETURN_VALUE__TYPE);
+    createEReference(qtReturnValueEClass, QT_RETURN_VALUE__TYPE_REF);
 
     qtSignalEClass = createEClass(QT_SIGNAL);
 
@@ -1050,6 +1218,8 @@ public class QIdlPackageImpl extends EPackageImpl implements QIdlPackage
 
     // Add supertypes to classes
     qtClassEClass.getESuperTypes().add(this.getQtType());
+    qtTemplateParamEClass.getESuperTypes().add(this.getQtType());
+    qtTypeDefEClass.getESuperTypes().add(this.getQtType());
     qtEnumEClass.getESuperTypes().add(this.getQtType());
     qtFlagsEClass.getESuperTypes().add(this.getQtType());
     qtBuitinTypeEClass.getESuperTypes().add(this.getQtType());
@@ -1068,6 +1238,7 @@ public class QIdlPackageImpl extends EPackageImpl implements QIdlPackage
     initEReference(getQtNamespace_Flags(), this.getQtFlags(), null, "flags", null, 0, -1, QtNamespace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getQtNamespace_Classes(), this.getQtClass(), null, "classes", null, 0, -1, QtNamespace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getQtNamespace_Operations(), this.getQtOperation(), null, "operations", null, 0, -1, QtNamespace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getQtNamespace_Typedef(), this.getQtTypeDef(), null, "typedef", null, 0, -1, QtNamespace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(qtTypeEClass, QtType.class, "QtType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getQtType_Name(), ecorePackage.getEString(), "name", null, 0, 1, QtType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1078,13 +1249,20 @@ public class QIdlPackageImpl extends EPackageImpl implements QIdlPackage
     initEReference(getQtOperation_ReturnValue(), this.getQtReturnValue(), null, "returnValue", null, 0, 1, QtOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(qtClassEClass, QtClass.class, "QtClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getQtClass_SuperTypes(), this.getQtClass(), null, "superTypes", null, 0, -1, QtClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getQtClass_TemplateTypes(), this.getQtTemplateParam(), null, "templateTypes", null, 0, -1, QtClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getQtClass_SuperTypes(), this.getQtClassTypeRef(), null, "superTypes", null, 0, -1, QtClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getQtClass_Enums(), this.getQtEnum(), null, "enums", null, 0, -1, QtClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getQtClass_Flags(), this.getQtFlags(), null, "flags", null, 0, -1, QtClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getQtClass_Classes(), this.getQtClass(), null, "classes", null, 0, -1, QtClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getQtClass_Properties(), this.getQtProperty(), null, "properties", null, 0, -1, QtClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getQtClass_Constructors(), this.getQtConstructor(), null, "constructors", null, 0, -1, QtClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getQtClass_Operations(), this.getQtOperation(), null, "operations", null, 0, -1, QtClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getQtClass_Typedef(), this.getQtTypeDef(), null, "typedef", null, 0, -1, QtClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(qtTemplateParamEClass, QtTemplateParam.class, "QtTemplateParam", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(qtTypeDefEClass, QtTypeDef.class, "QtTypeDef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getQtTypeDef_TypeRef(), this.getQtTypeRef(), null, "typeRef", null, 0, 1, QtTypeDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(qtConstructorEClass, QtConstructor.class, "QtConstructor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getQtConstructor_Params(), this.getQtParameter(), null, "params", null, 0, -1, QtConstructor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1118,8 +1296,16 @@ public class QIdlPackageImpl extends EPackageImpl implements QIdlPackage
     initEClass(qtValueEClass, QtValue.class, "QtValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getQtValue_Const(), ecorePackage.getEString(), "const", null, 0, 1, QtValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getQtValue_ValueType(), this.getType(), "valueType", null, 0, 1, QtValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getQtValue_Type(), this.getQtType(), null, "type", null, 0, 1, QtValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getQtValue_TypeRef(), this.getQtTypeRef(), null, "typeRef", null, 0, 1, QtValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getQtValue_Name(), ecorePackage.getEString(), "name", null, 0, 1, QtValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(qtTypeRefEClass, QtTypeRef.class, "QtTypeRef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getQtTypeRef_Type(), this.getQtType(), null, "type", null, 0, 1, QtTypeRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getQtTypeRef_TemplateTypes(), this.getQtTypeRef(), null, "templateTypes", null, 0, -1, QtTypeRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(qtClassTypeRefEClass, QtClassTypeRef.class, "QtClassTypeRef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getQtClassTypeRef_Type(), this.getQtClass(), null, "type", null, 0, 1, QtClassTypeRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getQtClassTypeRef_TemplateTypes(), this.getQtTypeRef(), null, "templateTypes", null, 0, -1, QtClassTypeRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(qtParameterEClass, QtParameter.class, "QtParameter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getQtParameter_Value(), this.getQtValue(), null, "value", null, 0, 1, QtParameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1129,7 +1315,7 @@ public class QIdlPackageImpl extends EPackageImpl implements QIdlPackage
     initEClass(qtReturnValueEClass, QtReturnValue.class, "QtReturnValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getQtReturnValue_Const(), ecorePackage.getEString(), "const", null, 0, 1, QtReturnValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getQtReturnValue_ValueType(), this.getType(), "valueType", null, 0, 1, QtReturnValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getQtReturnValue_Type(), this.getQtType(), null, "type", null, 0, 1, QtReturnValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getQtReturnValue_TypeRef(), this.getQtTypeRef(), null, "typeRef", null, 0, 1, QtReturnValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(qtSignalEClass, QtSignal.class, "QtSignal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

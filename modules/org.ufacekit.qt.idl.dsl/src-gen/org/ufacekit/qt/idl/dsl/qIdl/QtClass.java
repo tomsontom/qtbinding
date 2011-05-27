@@ -15,6 +15,7 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.QtClass#getTemplateTypes <em>Template Types</em>}</li>
  *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.QtClass#getSuperTypes <em>Super Types</em>}</li>
  *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.QtClass#getEnums <em>Enums</em>}</li>
  *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.QtClass#getFlags <em>Flags</em>}</li>
@@ -22,6 +23,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.QtClass#getProperties <em>Properties</em>}</li>
  *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.QtClass#getConstructors <em>Constructors</em>}</li>
  *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.QtClass#getOperations <em>Operations</em>}</li>
+ *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.QtClass#getTypedef <em>Typedef</em>}</li>
  * </ul>
  * </p>
  *
@@ -32,20 +34,36 @@ import org.eclipse.emf.common.util.EList;
 public interface QtClass extends QtType
 {
   /**
-   * Returns the value of the '<em><b>Super Types</b></em>' reference list.
-   * The list contents are of type {@link org.ufacekit.qt.idl.dsl.qIdl.QtClass}.
+   * Returns the value of the '<em><b>Template Types</b></em>' containment reference list.
+   * The list contents are of type {@link org.ufacekit.qt.idl.dsl.qIdl.QtTemplateParam}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Super Types</em>' reference list isn't clear,
+   * If the meaning of the '<em>Template Types</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Super Types</em>' reference list.
-   * @see org.ufacekit.qt.idl.dsl.qIdl.QIdlPackage#getQtClass_SuperTypes()
-   * @model
+   * @return the value of the '<em>Template Types</em>' containment reference list.
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QIdlPackage#getQtClass_TemplateTypes()
+   * @model containment="true"
    * @generated
    */
-  EList<QtClass> getSuperTypes();
+  EList<QtTemplateParam> getTemplateTypes();
+
+  /**
+   * Returns the value of the '<em><b>Super Types</b></em>' containment reference list.
+   * The list contents are of type {@link org.ufacekit.qt.idl.dsl.qIdl.QtClassTypeRef}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Super Types</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Super Types</em>' containment reference list.
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QIdlPackage#getQtClass_SuperTypes()
+   * @model containment="true"
+   * @generated
+   */
+  EList<QtClassTypeRef> getSuperTypes();
 
   /**
    * Returns the value of the '<em><b>Enums</b></em>' containment reference list.
@@ -142,5 +160,21 @@ public interface QtClass extends QtType
    * @generated
    */
   EList<QtOperation> getOperations();
+
+  /**
+   * Returns the value of the '<em><b>Typedef</b></em>' containment reference list.
+   * The list contents are of type {@link org.ufacekit.qt.idl.dsl.qIdl.QtTypeDef}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Typedef</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Typedef</em>' containment reference list.
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QIdlPackage#getQtClass_Typedef()
+   * @model containment="true"
+   * @generated
+   */
+  EList<QtTypeDef> getTypedef();
 
 } // QtClass

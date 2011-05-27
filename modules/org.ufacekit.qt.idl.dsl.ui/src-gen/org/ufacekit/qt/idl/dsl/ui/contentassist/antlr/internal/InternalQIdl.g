@@ -172,6 +172,62 @@ finally {
 
 
 
+// Entry rule entryRuleQtTemplateParam
+entryRuleQtTemplateParam 
+:
+{ before(grammarAccess.getQtTemplateParamRule()); }
+	 ruleQtTemplateParam
+{ after(grammarAccess.getQtTemplateParamRule()); } 
+	 EOF 
+;
+
+// Rule QtTemplateParam
+ruleQtTemplateParam
+    @init {
+		int stackSize = keepStackSize();
+    }
+	:
+(
+{ before(grammarAccess.getQtTemplateParamAccess().getNameAssignment()); }
+(rule__QtTemplateParam__NameAssignment)
+{ after(grammarAccess.getQtTemplateParamAccess().getNameAssignment()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+
+// Entry rule entryRuleQtTypeDef
+entryRuleQtTypeDef 
+:
+{ before(grammarAccess.getQtTypeDefRule()); }
+	 ruleQtTypeDef
+{ after(grammarAccess.getQtTypeDefRule()); } 
+	 EOF 
+;
+
+// Rule QtTypeDef
+ruleQtTypeDef
+    @init {
+		int stackSize = keepStackSize();
+    }
+	:
+(
+{ before(grammarAccess.getQtTypeDefAccess().getGroup()); }
+(rule__QtTypeDef__Group__0)
+{ after(grammarAccess.getQtTypeDefAccess().getGroup()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+
 // Entry rule entryRuleQtConstructor
 entryRuleQtConstructor 
 :
@@ -415,6 +471,62 @@ ruleQtValue
 { before(grammarAccess.getQtValueAccess().getGroup()); }
 (rule__QtValue__Group__0)
 { after(grammarAccess.getQtValueAccess().getGroup()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+
+// Entry rule entryRuleQtTypeRef
+entryRuleQtTypeRef 
+:
+{ before(grammarAccess.getQtTypeRefRule()); }
+	 ruleQtTypeRef
+{ after(grammarAccess.getQtTypeRefRule()); } 
+	 EOF 
+;
+
+// Rule QtTypeRef
+ruleQtTypeRef
+    @init {
+		int stackSize = keepStackSize();
+    }
+	:
+(
+{ before(grammarAccess.getQtTypeRefAccess().getGroup()); }
+(rule__QtTypeRef__Group__0)
+{ after(grammarAccess.getQtTypeRefAccess().getGroup()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+
+// Entry rule entryRuleQtClassTypeRef
+entryRuleQtClassTypeRef 
+:
+{ before(grammarAccess.getQtClassTypeRefRule()); }
+	 ruleQtClassTypeRef
+{ after(grammarAccess.getQtClassTypeRefRule()); } 
+	 EOF 
+;
+
+// Rule QtClassTypeRef
+ruleQtClassTypeRef
+    @init {
+		int stackSize = keepStackSize();
+    }
+	:
+(
+{ before(grammarAccess.getQtClassTypeRefAccess().getGroup()); }
+(rule__QtClassTypeRef__Group__0)
+{ after(grammarAccess.getQtClassTypeRefAccess().getGroup()); }
 )
 
 ;
@@ -2305,6 +2417,12 @@ rule__QtIdlTyp__ElementAlternatives_0
 { after(grammarAccess.getQtIdlTypAccess().getElementQtNamespaceParserRuleCall_0_2()); }
 )
 
+    |(
+{ before(grammarAccess.getQtIdlTypAccess().getElementQtTypeDefParserRuleCall_0_3()); }
+	ruleQtTypeDef
+{ after(grammarAccess.getQtIdlTypAccess().getElementQtTypeDefParserRuleCall_0_3()); }
+)
+
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -2345,6 +2463,12 @@ rule__QtNamespace__Alternatives_3
 { after(grammarAccess.getQtNamespaceAccess().getOperationsAssignment_3_4()); }
 )
 
+    |(
+{ before(grammarAccess.getQtNamespaceAccess().getTypedefAssignment_3_5()); }
+(rule__QtNamespace__TypedefAssignment_3_5)
+{ after(grammarAccess.getQtNamespaceAccess().getTypedefAssignment_3_5()); }
+)
+
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -2379,45 +2503,51 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__QtClass__Alternatives_4
+rule__QtClass__Alternatives_5
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getQtClassAccess().getEnumsAssignment_4_0()); }
-(rule__QtClass__EnumsAssignment_4_0)
-{ after(grammarAccess.getQtClassAccess().getEnumsAssignment_4_0()); }
+{ before(grammarAccess.getQtClassAccess().getEnumsAssignment_5_0()); }
+(rule__QtClass__EnumsAssignment_5_0)
+{ after(grammarAccess.getQtClassAccess().getEnumsAssignment_5_0()); }
 )
 
     |(
-{ before(grammarAccess.getQtClassAccess().getFlagsAssignment_4_1()); }
-(rule__QtClass__FlagsAssignment_4_1)
-{ after(grammarAccess.getQtClassAccess().getFlagsAssignment_4_1()); }
+{ before(grammarAccess.getQtClassAccess().getFlagsAssignment_5_1()); }
+(rule__QtClass__FlagsAssignment_5_1)
+{ after(grammarAccess.getQtClassAccess().getFlagsAssignment_5_1()); }
 )
 
     |(
-{ before(grammarAccess.getQtClassAccess().getClassesAssignment_4_2()); }
-(rule__QtClass__ClassesAssignment_4_2)
-{ after(grammarAccess.getQtClassAccess().getClassesAssignment_4_2()); }
+{ before(grammarAccess.getQtClassAccess().getClassesAssignment_5_2()); }
+(rule__QtClass__ClassesAssignment_5_2)
+{ after(grammarAccess.getQtClassAccess().getClassesAssignment_5_2()); }
 )
 
     |(
-{ before(grammarAccess.getQtClassAccess().getPropertiesAssignment_4_3()); }
-(rule__QtClass__PropertiesAssignment_4_3)
-{ after(grammarAccess.getQtClassAccess().getPropertiesAssignment_4_3()); }
+{ before(grammarAccess.getQtClassAccess().getPropertiesAssignment_5_3()); }
+(rule__QtClass__PropertiesAssignment_5_3)
+{ after(grammarAccess.getQtClassAccess().getPropertiesAssignment_5_3()); }
 )
 
     |(
-{ before(grammarAccess.getQtClassAccess().getConstructorsAssignment_4_4()); }
-(rule__QtClass__ConstructorsAssignment_4_4)
-{ after(grammarAccess.getQtClassAccess().getConstructorsAssignment_4_4()); }
+{ before(grammarAccess.getQtClassAccess().getConstructorsAssignment_5_4()); }
+(rule__QtClass__ConstructorsAssignment_5_4)
+{ after(grammarAccess.getQtClassAccess().getConstructorsAssignment_5_4()); }
 )
 
     |(
-{ before(grammarAccess.getQtClassAccess().getOperationsAssignment_4_5()); }
-(rule__QtClass__OperationsAssignment_4_5)
-{ after(grammarAccess.getQtClassAccess().getOperationsAssignment_4_5()); }
+{ before(grammarAccess.getQtClassAccess().getOperationsAssignment_5_5()); }
+(rule__QtClass__OperationsAssignment_5_5)
+{ after(grammarAccess.getQtClassAccess().getOperationsAssignment_5_5()); }
+)
+
+    |(
+{ before(grammarAccess.getQtClassAccess().getTypedefAssignment_5_6()); }
+(rule__QtClass__TypedefAssignment_5_6)
+{ after(grammarAccess.getQtClassAccess().getTypedefAssignment_5_6()); }
 )
 
 ;
@@ -3575,11 +3705,9 @@ rule__QtClass__Group__3__Impl
     }
 :
 (
-{ before(grammarAccess.getQtClassAccess().getLeftCurlyBracketKeyword_3()); }
-
-	'{' 
-
-{ after(grammarAccess.getQtClassAccess().getLeftCurlyBracketKeyword_3()); }
+{ before(grammarAccess.getQtClassAccess().getGroup_3()); }
+(rule__QtClass__Group_3__0)?
+{ after(grammarAccess.getQtClassAccess().getGroup_3()); }
 )
 
 ;
@@ -3606,9 +3734,11 @@ rule__QtClass__Group__4__Impl
     }
 :
 (
-{ before(grammarAccess.getQtClassAccess().getAlternatives_4()); }
-(rule__QtClass__Alternatives_4)*
-{ after(grammarAccess.getQtClassAccess().getAlternatives_4()); }
+{ before(grammarAccess.getQtClassAccess().getLeftCurlyBracketKeyword_4()); }
+
+	'{' 
+
+{ after(grammarAccess.getQtClassAccess().getLeftCurlyBracketKeyword_4()); }
 )
 
 ;
@@ -3623,6 +3753,7 @@ rule__QtClass__Group__5
     }
 :
 	rule__QtClass__Group__5__Impl
+	rule__QtClass__Group__6
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -3634,17 +3765,47 @@ rule__QtClass__Group__5__Impl
     }
 :
 (
-{ before(grammarAccess.getQtClassAccess().getRightCurlyBracketKeyword_5()); }
-
-	'}' 
-
-{ after(grammarAccess.getQtClassAccess().getRightCurlyBracketKeyword_5()); }
+{ before(grammarAccess.getQtClassAccess().getAlternatives_5()); }
+(rule__QtClass__Alternatives_5)*
+{ after(grammarAccess.getQtClassAccess().getAlternatives_5()); }
 )
 
 ;
 finally {
 	restoreStackSize(stackSize);
 }
+
+
+rule__QtClass__Group__6
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__QtClass__Group__6__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__QtClass__Group__6__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getQtClassAccess().getRightCurlyBracketKeyword_6()); }
+
+	'}' 
+
+{ after(grammarAccess.getQtClassAccess().getRightCurlyBracketKeyword_6()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
 
 
 
@@ -3677,11 +3838,11 @@ rule__QtClass__Group_2__0__Impl
     }
 :
 (
-{ before(grammarAccess.getQtClassAccess().getExtendsKeyword_2_0()); }
+{ before(grammarAccess.getQtClassAccess().getLessThanSignKeyword_2_0()); }
 
-	'extends' 
+	'<' 
 
-{ after(grammarAccess.getQtClassAccess().getExtendsKeyword_2_0()); }
+{ after(grammarAccess.getQtClassAccess().getLessThanSignKeyword_2_0()); }
 )
 
 ;
@@ -3708,9 +3869,9 @@ rule__QtClass__Group_2__1__Impl
     }
 :
 (
-{ before(grammarAccess.getQtClassAccess().getSuperTypesAssignment_2_1()); }
-(rule__QtClass__SuperTypesAssignment_2_1)
-{ after(grammarAccess.getQtClassAccess().getSuperTypesAssignment_2_1()); }
+{ before(grammarAccess.getQtClassAccess().getTemplateTypesAssignment_2_1()); }
+(rule__QtClass__TemplateTypesAssignment_2_1)
+{ after(grammarAccess.getQtClassAccess().getTemplateTypesAssignment_2_1()); }
 )
 
 ;
@@ -3725,6 +3886,7 @@ rule__QtClass__Group_2__2
     }
 :
 	rule__QtClass__Group_2__2__Impl
+	rule__QtClass__Group_2__3
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -3745,6 +3907,38 @@ rule__QtClass__Group_2__2__Impl
 finally {
 	restoreStackSize(stackSize);
 }
+
+
+rule__QtClass__Group_2__3
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__QtClass__Group_2__3__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__QtClass__Group_2__3__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getQtClassAccess().getGreaterThanSignKeyword_2_3()); }
+
+	'>' 
+
+{ after(grammarAccess.getQtClassAccess().getGreaterThanSignKeyword_2_3()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
 
 
 
@@ -3801,15 +3995,332 @@ rule__QtClass__Group_2_2__1__Impl
     }
 :
 (
-{ before(grammarAccess.getQtClassAccess().getSuperTypesAssignment_2_2_1()); }
-(rule__QtClass__SuperTypesAssignment_2_2_1)
-{ after(grammarAccess.getQtClassAccess().getSuperTypesAssignment_2_2_1()); }
+{ before(grammarAccess.getQtClassAccess().getTemplateTypesAssignment_2_2_1()); }
+(rule__QtClass__TemplateTypesAssignment_2_2_1)
+{ after(grammarAccess.getQtClassAccess().getTemplateTypesAssignment_2_2_1()); }
 )
 
 ;
 finally {
 	restoreStackSize(stackSize);
 }
+
+
+
+
+
+
+rule__QtClass__Group_3__0
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__QtClass__Group_3__0__Impl
+	rule__QtClass__Group_3__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__QtClass__Group_3__0__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getQtClassAccess().getExtendsKeyword_3_0()); }
+
+	'extends' 
+
+{ after(grammarAccess.getQtClassAccess().getExtendsKeyword_3_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__QtClass__Group_3__1
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__QtClass__Group_3__1__Impl
+	rule__QtClass__Group_3__2
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__QtClass__Group_3__1__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getQtClassAccess().getSuperTypesAssignment_3_1()); }
+(rule__QtClass__SuperTypesAssignment_3_1)
+{ after(grammarAccess.getQtClassAccess().getSuperTypesAssignment_3_1()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__QtClass__Group_3__2
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__QtClass__Group_3__2__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__QtClass__Group_3__2__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getQtClassAccess().getGroup_3_2()); }
+(rule__QtClass__Group_3_2__0)*
+{ after(grammarAccess.getQtClassAccess().getGroup_3_2()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+
+
+
+
+
+
+rule__QtClass__Group_3_2__0
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__QtClass__Group_3_2__0__Impl
+	rule__QtClass__Group_3_2__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__QtClass__Group_3_2__0__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getQtClassAccess().getCommaKeyword_3_2_0()); }
+
+	',' 
+
+{ after(grammarAccess.getQtClassAccess().getCommaKeyword_3_2_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__QtClass__Group_3_2__1
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__QtClass__Group_3_2__1__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__QtClass__Group_3_2__1__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getQtClassAccess().getSuperTypesAssignment_3_2_1()); }
+(rule__QtClass__SuperTypesAssignment_3_2_1)
+{ after(grammarAccess.getQtClassAccess().getSuperTypesAssignment_3_2_1()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+
+
+
+
+rule__QtTypeDef__Group__0
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__QtTypeDef__Group__0__Impl
+	rule__QtTypeDef__Group__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__QtTypeDef__Group__0__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getQtTypeDefAccess().getTypedefKeyword_0()); }
+
+	'typedef' 
+
+{ after(grammarAccess.getQtTypeDefAccess().getTypedefKeyword_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__QtTypeDef__Group__1
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__QtTypeDef__Group__1__Impl
+	rule__QtTypeDef__Group__2
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__QtTypeDef__Group__1__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getQtTypeDefAccess().getNameAssignment_1()); }
+(rule__QtTypeDef__NameAssignment_1)
+{ after(grammarAccess.getQtTypeDefAccess().getNameAssignment_1()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__QtTypeDef__Group__2
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__QtTypeDef__Group__2__Impl
+	rule__QtTypeDef__Group__3
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__QtTypeDef__Group__2__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getQtTypeDefAccess().getColonKeyword_2()); }
+
+	':' 
+
+{ after(grammarAccess.getQtTypeDefAccess().getColonKeyword_2()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__QtTypeDef__Group__3
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__QtTypeDef__Group__3__Impl
+	rule__QtTypeDef__Group__4
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__QtTypeDef__Group__3__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getQtTypeDefAccess().getTypeRefAssignment_3()); }
+(rule__QtTypeDef__TypeRefAssignment_3)
+{ after(grammarAccess.getQtTypeDefAccess().getTypeRefAssignment_3()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__QtTypeDef__Group__4
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__QtTypeDef__Group__4__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__QtTypeDef__Group__4__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getQtTypeDefAccess().getSemicolonKeyword_4()); }
+
+	';' 
+
+{ after(grammarAccess.getQtTypeDefAccess().getSemicolonKeyword_4()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+
+
+
+
 
 
 
@@ -5444,9 +5955,9 @@ rule__QtValue__Group__2__Impl
     }
 :
 (
-{ before(grammarAccess.getQtValueAccess().getTypeAssignment_2()); }
-(rule__QtValue__TypeAssignment_2)
-{ after(grammarAccess.getQtValueAccess().getTypeAssignment_2()); }
+{ before(grammarAccess.getQtValueAccess().getTypeRefAssignment_2()); }
+(rule__QtValue__TypeRefAssignment_2)
+{ after(grammarAccess.getQtValueAccess().getTypeRefAssignment_2()); }
 )
 
 ;
@@ -5485,6 +5996,508 @@ finally {
 
 
 
+
+
+
+
+
+
+rule__QtTypeRef__Group__0
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__QtTypeRef__Group__0__Impl
+	rule__QtTypeRef__Group__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__QtTypeRef__Group__0__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getQtTypeRefAccess().getTypeAssignment_0()); }
+(rule__QtTypeRef__TypeAssignment_0)
+{ after(grammarAccess.getQtTypeRefAccess().getTypeAssignment_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__QtTypeRef__Group__1
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__QtTypeRef__Group__1__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__QtTypeRef__Group__1__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getQtTypeRefAccess().getGroup_1()); }
+(rule__QtTypeRef__Group_1__0)?
+{ after(grammarAccess.getQtTypeRefAccess().getGroup_1()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+
+
+
+
+rule__QtTypeRef__Group_1__0
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__QtTypeRef__Group_1__0__Impl
+	rule__QtTypeRef__Group_1__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__QtTypeRef__Group_1__0__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getQtTypeRefAccess().getLessThanSignKeyword_1_0()); }
+
+	'<' 
+
+{ after(grammarAccess.getQtTypeRefAccess().getLessThanSignKeyword_1_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__QtTypeRef__Group_1__1
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__QtTypeRef__Group_1__1__Impl
+	rule__QtTypeRef__Group_1__2
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__QtTypeRef__Group_1__1__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getQtTypeRefAccess().getTemplateTypesAssignment_1_1()); }
+(rule__QtTypeRef__TemplateTypesAssignment_1_1)
+{ after(grammarAccess.getQtTypeRefAccess().getTemplateTypesAssignment_1_1()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__QtTypeRef__Group_1__2
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__QtTypeRef__Group_1__2__Impl
+	rule__QtTypeRef__Group_1__3
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__QtTypeRef__Group_1__2__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getQtTypeRefAccess().getGroup_1_2()); }
+(rule__QtTypeRef__Group_1_2__0)*
+{ after(grammarAccess.getQtTypeRefAccess().getGroup_1_2()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__QtTypeRef__Group_1__3
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__QtTypeRef__Group_1__3__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__QtTypeRef__Group_1__3__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getQtTypeRefAccess().getGreaterThanSignKeyword_1_3()); }
+
+	'>' 
+
+{ after(grammarAccess.getQtTypeRefAccess().getGreaterThanSignKeyword_1_3()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+
+
+
+
+
+
+
+
+rule__QtTypeRef__Group_1_2__0
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__QtTypeRef__Group_1_2__0__Impl
+	rule__QtTypeRef__Group_1_2__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__QtTypeRef__Group_1_2__0__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getQtTypeRefAccess().getCommaKeyword_1_2_0()); }
+
+	',' 
+
+{ after(grammarAccess.getQtTypeRefAccess().getCommaKeyword_1_2_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__QtTypeRef__Group_1_2__1
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__QtTypeRef__Group_1_2__1__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__QtTypeRef__Group_1_2__1__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getQtTypeRefAccess().getTemplateTypesAssignment_1_2_1()); }
+(rule__QtTypeRef__TemplateTypesAssignment_1_2_1)
+{ after(grammarAccess.getQtTypeRefAccess().getTemplateTypesAssignment_1_2_1()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+
+
+
+
+rule__QtClassTypeRef__Group__0
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__QtClassTypeRef__Group__0__Impl
+	rule__QtClassTypeRef__Group__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__QtClassTypeRef__Group__0__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getQtClassTypeRefAccess().getTypeAssignment_0()); }
+(rule__QtClassTypeRef__TypeAssignment_0)
+{ after(grammarAccess.getQtClassTypeRefAccess().getTypeAssignment_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__QtClassTypeRef__Group__1
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__QtClassTypeRef__Group__1__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__QtClassTypeRef__Group__1__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getQtClassTypeRefAccess().getGroup_1()); }
+(rule__QtClassTypeRef__Group_1__0)?
+{ after(grammarAccess.getQtClassTypeRefAccess().getGroup_1()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+
+
+
+
+rule__QtClassTypeRef__Group_1__0
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__QtClassTypeRef__Group_1__0__Impl
+	rule__QtClassTypeRef__Group_1__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__QtClassTypeRef__Group_1__0__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getQtClassTypeRefAccess().getLessThanSignKeyword_1_0()); }
+
+	'<' 
+
+{ after(grammarAccess.getQtClassTypeRefAccess().getLessThanSignKeyword_1_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__QtClassTypeRef__Group_1__1
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__QtClassTypeRef__Group_1__1__Impl
+	rule__QtClassTypeRef__Group_1__2
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__QtClassTypeRef__Group_1__1__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getQtClassTypeRefAccess().getTemplateTypesAssignment_1_1()); }
+(rule__QtClassTypeRef__TemplateTypesAssignment_1_1)
+{ after(grammarAccess.getQtClassTypeRefAccess().getTemplateTypesAssignment_1_1()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__QtClassTypeRef__Group_1__2
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__QtClassTypeRef__Group_1__2__Impl
+	rule__QtClassTypeRef__Group_1__3
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__QtClassTypeRef__Group_1__2__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getQtClassTypeRefAccess().getGroup_1_2()); }
+(rule__QtClassTypeRef__Group_1_2__0)*
+{ after(grammarAccess.getQtClassTypeRefAccess().getGroup_1_2()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__QtClassTypeRef__Group_1__3
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__QtClassTypeRef__Group_1__3__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__QtClassTypeRef__Group_1__3__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getQtClassTypeRefAccess().getGreaterThanSignKeyword_1_3()); }
+
+	'>' 
+
+{ after(grammarAccess.getQtClassTypeRefAccess().getGreaterThanSignKeyword_1_3()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+
+
+
+
+
+
+
+
+rule__QtClassTypeRef__Group_1_2__0
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__QtClassTypeRef__Group_1_2__0__Impl
+	rule__QtClassTypeRef__Group_1_2__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__QtClassTypeRef__Group_1_2__0__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getQtClassTypeRefAccess().getCommaKeyword_1_2_0()); }
+
+	',' 
+
+{ after(grammarAccess.getQtClassTypeRefAccess().getCommaKeyword_1_2_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__QtClassTypeRef__Group_1_2__1
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__QtClassTypeRef__Group_1_2__1__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__QtClassTypeRef__Group_1_2__1__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getQtClassTypeRefAccess().getTemplateTypesAssignment_1_2_1()); }
+(rule__QtClassTypeRef__TemplateTypesAssignment_1_2_1)
+{ after(grammarAccess.getQtClassTypeRefAccess().getTemplateTypesAssignment_1_2_1()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
 
 
 
@@ -5690,9 +6703,9 @@ rule__QtReturnValue__Group__2__Impl
     }
 :
 (
-{ before(grammarAccess.getQtReturnValueAccess().getTypeAssignment_2()); }
-(rule__QtReturnValue__TypeAssignment_2)
-{ after(grammarAccess.getQtReturnValueAccess().getTypeAssignment_2()); }
+{ before(grammarAccess.getQtReturnValueAccess().getTypeRefAssignment_2()); }
+(rule__QtReturnValue__TypeRefAssignment_2)
+{ after(grammarAccess.getQtReturnValueAccess().getTypeRefAssignment_2()); }
 )
 
 ;
@@ -15819,6 +16832,21 @@ finally {
 	restoreStackSize(stackSize);
 }
 
+rule__QtNamespace__TypedefAssignment_3_5
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getQtNamespaceAccess().getTypedefQtTypeDefParserRuleCall_3_5_0()); }
+	ruleQtTypeDef{ after(grammarAccess.getQtNamespaceAccess().getTypedefQtTypeDefParserRuleCall_3_5_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
 rule__QtClass__NameAssignment_1
     @init {
 		int stackSize = keepStackSize();
@@ -15834,18 +16862,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__QtClass__SuperTypesAssignment_2_1
+rule__QtClass__TemplateTypesAssignment_2_1
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getQtClassAccess().getSuperTypesQtClassCrossReference_2_1_0()); }
-(
-{ before(grammarAccess.getQtClassAccess().getSuperTypesQtClassIDTerminalRuleCall_2_1_0_1()); }
-	RULE_ID{ after(grammarAccess.getQtClassAccess().getSuperTypesQtClassIDTerminalRuleCall_2_1_0_1()); }
-)
-{ after(grammarAccess.getQtClassAccess().getSuperTypesQtClassCrossReference_2_1_0()); }
+{ before(grammarAccess.getQtClassAccess().getTemplateTypesQtTemplateParamParserRuleCall_2_1_0()); }
+	ruleQtTemplateParam{ after(grammarAccess.getQtClassAccess().getTemplateTypesQtTemplateParamParserRuleCall_2_1_0()); }
 )
 
 ;
@@ -15853,18 +16877,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__QtClass__SuperTypesAssignment_2_2_1
+rule__QtClass__TemplateTypesAssignment_2_2_1
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getQtClassAccess().getSuperTypesQtClassCrossReference_2_2_1_0()); }
-(
-{ before(grammarAccess.getQtClassAccess().getSuperTypesQtClassIDTerminalRuleCall_2_2_1_0_1()); }
-	RULE_ID{ after(grammarAccess.getQtClassAccess().getSuperTypesQtClassIDTerminalRuleCall_2_2_1_0_1()); }
-)
-{ after(grammarAccess.getQtClassAccess().getSuperTypesQtClassCrossReference_2_2_1_0()); }
+{ before(grammarAccess.getQtClassAccess().getTemplateTypesQtTemplateParamParserRuleCall_2_2_1_0()); }
+	ruleQtTemplateParam{ after(grammarAccess.getQtClassAccess().getTemplateTypesQtTemplateParamParserRuleCall_2_2_1_0()); }
 )
 
 ;
@@ -15872,14 +16892,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__QtClass__EnumsAssignment_4_0
+rule__QtClass__SuperTypesAssignment_3_1
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getQtClassAccess().getEnumsQtEnumParserRuleCall_4_0_0()); }
-	ruleQtEnum{ after(grammarAccess.getQtClassAccess().getEnumsQtEnumParserRuleCall_4_0_0()); }
+{ before(grammarAccess.getQtClassAccess().getSuperTypesQtClassTypeRefParserRuleCall_3_1_0()); }
+	ruleQtClassTypeRef{ after(grammarAccess.getQtClassAccess().getSuperTypesQtClassTypeRefParserRuleCall_3_1_0()); }
 )
 
 ;
@@ -15887,14 +16907,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__QtClass__FlagsAssignment_4_1
+rule__QtClass__SuperTypesAssignment_3_2_1
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getQtClassAccess().getFlagsQtFlagsParserRuleCall_4_1_0()); }
-	ruleQtFlags{ after(grammarAccess.getQtClassAccess().getFlagsQtFlagsParserRuleCall_4_1_0()); }
+{ before(grammarAccess.getQtClassAccess().getSuperTypesQtClassTypeRefParserRuleCall_3_2_1_0()); }
+	ruleQtClassTypeRef{ after(grammarAccess.getQtClassAccess().getSuperTypesQtClassTypeRefParserRuleCall_3_2_1_0()); }
 )
 
 ;
@@ -15902,14 +16922,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__QtClass__ClassesAssignment_4_2
+rule__QtClass__EnumsAssignment_5_0
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getQtClassAccess().getClassesQtClassParserRuleCall_4_2_0()); }
-	ruleQtClass{ after(grammarAccess.getQtClassAccess().getClassesQtClassParserRuleCall_4_2_0()); }
+{ before(grammarAccess.getQtClassAccess().getEnumsQtEnumParserRuleCall_5_0_0()); }
+	ruleQtEnum{ after(grammarAccess.getQtClassAccess().getEnumsQtEnumParserRuleCall_5_0_0()); }
 )
 
 ;
@@ -15917,14 +16937,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__QtClass__PropertiesAssignment_4_3
+rule__QtClass__FlagsAssignment_5_1
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getQtClassAccess().getPropertiesQtPropertyParserRuleCall_4_3_0()); }
-	ruleQtProperty{ after(grammarAccess.getQtClassAccess().getPropertiesQtPropertyParserRuleCall_4_3_0()); }
+{ before(grammarAccess.getQtClassAccess().getFlagsQtFlagsParserRuleCall_5_1_0()); }
+	ruleQtFlags{ after(grammarAccess.getQtClassAccess().getFlagsQtFlagsParserRuleCall_5_1_0()); }
 )
 
 ;
@@ -15932,14 +16952,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__QtClass__ConstructorsAssignment_4_4
+rule__QtClass__ClassesAssignment_5_2
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getQtClassAccess().getConstructorsQtConstructorParserRuleCall_4_4_0()); }
-	ruleQtConstructor{ after(grammarAccess.getQtClassAccess().getConstructorsQtConstructorParserRuleCall_4_4_0()); }
+{ before(grammarAccess.getQtClassAccess().getClassesQtClassParserRuleCall_5_2_0()); }
+	ruleQtClass{ after(grammarAccess.getQtClassAccess().getClassesQtClassParserRuleCall_5_2_0()); }
 )
 
 ;
@@ -15947,14 +16967,104 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__QtClass__OperationsAssignment_4_5
+rule__QtClass__PropertiesAssignment_5_3
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getQtClassAccess().getOperationsQtOperationParserRuleCall_4_5_0()); }
-	ruleQtOperation{ after(grammarAccess.getQtClassAccess().getOperationsQtOperationParserRuleCall_4_5_0()); }
+{ before(grammarAccess.getQtClassAccess().getPropertiesQtPropertyParserRuleCall_5_3_0()); }
+	ruleQtProperty{ after(grammarAccess.getQtClassAccess().getPropertiesQtPropertyParserRuleCall_5_3_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__QtClass__ConstructorsAssignment_5_4
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getQtClassAccess().getConstructorsQtConstructorParserRuleCall_5_4_0()); }
+	ruleQtConstructor{ after(grammarAccess.getQtClassAccess().getConstructorsQtConstructorParserRuleCall_5_4_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__QtClass__OperationsAssignment_5_5
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getQtClassAccess().getOperationsQtOperationParserRuleCall_5_5_0()); }
+	ruleQtOperation{ after(grammarAccess.getQtClassAccess().getOperationsQtOperationParserRuleCall_5_5_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__QtClass__TypedefAssignment_5_6
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getQtClassAccess().getTypedefQtTypeDefParserRuleCall_5_6_0()); }
+	ruleQtTypeDef{ after(grammarAccess.getQtClassAccess().getTypedefQtTypeDefParserRuleCall_5_6_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__QtTemplateParam__NameAssignment
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getQtTemplateParamAccess().getNameIDTerminalRuleCall_0()); }
+	RULE_ID{ after(grammarAccess.getQtTemplateParamAccess().getNameIDTerminalRuleCall_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__QtTypeDef__NameAssignment_1
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getQtTypeDefAccess().getNameIDTerminalRuleCall_1_0()); }
+	RULE_ID{ after(grammarAccess.getQtTypeDefAccess().getNameIDTerminalRuleCall_1_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__QtTypeDef__TypeRefAssignment_3
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getQtTypeDefAccess().getTypeRefQtTypeRefParserRuleCall_3_0()); }
+	ruleQtTypeRef{ after(grammarAccess.getQtTypeDefAccess().getTypeRefQtTypeRefParserRuleCall_3_0()); }
 )
 
 ;
@@ -16365,18 +17475,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__QtValue__TypeAssignment_2
+rule__QtValue__TypeRefAssignment_2
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getQtValueAccess().getTypeQtTypeCrossReference_2_0()); }
-(
-{ before(grammarAccess.getQtValueAccess().getTypeQtTypeQualifiedNameParserRuleCall_2_0_1()); }
-	ruleQualifiedName{ after(grammarAccess.getQtValueAccess().getTypeQtTypeQualifiedNameParserRuleCall_2_0_1()); }
-)
-{ after(grammarAccess.getQtValueAccess().getTypeQtTypeCrossReference_2_0()); }
+{ before(grammarAccess.getQtValueAccess().getTypeRefQtTypeRefParserRuleCall_2_0()); }
+	ruleQtTypeRef{ after(grammarAccess.getQtValueAccess().getTypeRefQtTypeRefParserRuleCall_2_0()); }
 )
 
 ;
@@ -16392,6 +17498,104 @@ rule__QtValue__NameAssignment_3
 (
 { before(grammarAccess.getQtValueAccess().getNameIDTerminalRuleCall_3_0()); }
 	RULE_ID{ after(grammarAccess.getQtValueAccess().getNameIDTerminalRuleCall_3_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__QtTypeRef__TypeAssignment_0
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getQtTypeRefAccess().getTypeQtTypeCrossReference_0_0()); }
+(
+{ before(grammarAccess.getQtTypeRefAccess().getTypeQtTypeQualifiedNameParserRuleCall_0_0_1()); }
+	ruleQualifiedName{ after(grammarAccess.getQtTypeRefAccess().getTypeQtTypeQualifiedNameParserRuleCall_0_0_1()); }
+)
+{ after(grammarAccess.getQtTypeRefAccess().getTypeQtTypeCrossReference_0_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__QtTypeRef__TemplateTypesAssignment_1_1
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getQtTypeRefAccess().getTemplateTypesQtTypeRefParserRuleCall_1_1_0()); }
+	ruleQtTypeRef{ after(grammarAccess.getQtTypeRefAccess().getTemplateTypesQtTypeRefParserRuleCall_1_1_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__QtTypeRef__TemplateTypesAssignment_1_2_1
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getQtTypeRefAccess().getTemplateTypesQtTypeRefParserRuleCall_1_2_1_0()); }
+	ruleQtTypeRef{ after(grammarAccess.getQtTypeRefAccess().getTemplateTypesQtTypeRefParserRuleCall_1_2_1_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__QtClassTypeRef__TypeAssignment_0
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getQtClassTypeRefAccess().getTypeQtClassCrossReference_0_0()); }
+(
+{ before(grammarAccess.getQtClassTypeRefAccess().getTypeQtClassQualifiedNameParserRuleCall_0_0_1()); }
+	ruleQualifiedName{ after(grammarAccess.getQtClassTypeRefAccess().getTypeQtClassQualifiedNameParserRuleCall_0_0_1()); }
+)
+{ after(grammarAccess.getQtClassTypeRefAccess().getTypeQtClassCrossReference_0_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__QtClassTypeRef__TemplateTypesAssignment_1_1
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getQtClassTypeRefAccess().getTemplateTypesQtTypeRefParserRuleCall_1_1_0()); }
+	ruleQtTypeRef{ after(grammarAccess.getQtClassTypeRefAccess().getTemplateTypesQtTypeRefParserRuleCall_1_1_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__QtClassTypeRef__TemplateTypesAssignment_1_2_1
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getQtClassTypeRefAccess().getTemplateTypesQtTypeRefParserRuleCall_1_2_1_0()); }
+	ruleQtTypeRef{ after(grammarAccess.getQtClassTypeRefAccess().getTemplateTypesQtTypeRefParserRuleCall_1_2_1_0()); }
 )
 
 ;
@@ -16486,18 +17690,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__QtReturnValue__TypeAssignment_2
+rule__QtReturnValue__TypeRefAssignment_2
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getQtReturnValueAccess().getTypeQtTypeCrossReference_2_0()); }
-(
-{ before(grammarAccess.getQtReturnValueAccess().getTypeQtTypeQualifiedNameParserRuleCall_2_0_1()); }
-	ruleQualifiedName{ after(grammarAccess.getQtReturnValueAccess().getTypeQtTypeQualifiedNameParserRuleCall_2_0_1()); }
-)
-{ after(grammarAccess.getQtReturnValueAccess().getTypeQtTypeCrossReference_2_0()); }
+{ before(grammarAccess.getQtReturnValueAccess().getTypeRefQtTypeRefParserRuleCall_2_0()); }
+	ruleQtTypeRef{ after(grammarAccess.getQtReturnValueAccess().getTypeRefQtTypeRefParserRuleCall_2_0()); }
 )
 
 ;

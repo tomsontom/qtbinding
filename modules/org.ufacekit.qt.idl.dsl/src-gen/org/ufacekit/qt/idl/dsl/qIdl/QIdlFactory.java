@@ -71,6 +71,24 @@ public interface QIdlFactory extends EFactory
   QtClass createQtClass();
 
   /**
+   * Returns a new object of class '<em>Qt Template Param</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Qt Template Param</em>'.
+   * @generated
+   */
+  QtTemplateParam createQtTemplateParam();
+
+  /**
+   * Returns a new object of class '<em>Qt Type Def</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Qt Type Def</em>'.
+   * @generated
+   */
+  QtTypeDef createQtTypeDef();
+
+  /**
    * Returns a new object of class '<em>Qt Constructor</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -150,6 +168,24 @@ public interface QIdlFactory extends EFactory
    * @generated
    */
   QtValue createQtValue();
+
+  /**
+   * Returns a new object of class '<em>Qt Type Ref</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Qt Type Ref</em>'.
+   * @generated
+   */
+  QtTypeRef createQtTypeRef();
+
+  /**
+   * Returns a new object of class '<em>Qt Class Type Ref</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Qt Class Type Ref</em>'.
+   * @generated
+   */
+  QtClassTypeRef createQtClassTypeRef();
 
   /**
    * Returns a new object of class '<em>Qt Parameter</em>'.

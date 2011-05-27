@@ -6,6 +6,7 @@
 package org.ufacekit.qt.idl.dsl.qIdl.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -15,7 +16,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.ufacekit.qt.idl.dsl.qIdl.QIdlPackage;
 import org.ufacekit.qt.idl.dsl.qIdl.QtReturnValue;
-import org.ufacekit.qt.idl.dsl.qIdl.QtType;
+import org.ufacekit.qt.idl.dsl.qIdl.QtTypeRef;
 import org.ufacekit.qt.idl.dsl.qIdl.Type;
 
 /**
@@ -27,7 +28,7 @@ import org.ufacekit.qt.idl.dsl.qIdl.Type;
  * <ul>
  *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtReturnValueImpl#getConst <em>Const</em>}</li>
  *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtReturnValueImpl#getValueType <em>Value Type</em>}</li>
- *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtReturnValueImpl#getType <em>Type</em>}</li>
+ *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtReturnValueImpl#getTypeRef <em>Type Ref</em>}</li>
  * </ul>
  * </p>
  *
@@ -76,14 +77,14 @@ public class QtReturnValueImpl extends MinimalEObjectImpl.Container implements Q
   protected Type valueType = VALUE_TYPE_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getType() <em>Type</em>}' reference.
+   * The cached value of the '{@link #getTypeRef() <em>Type Ref</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getType()
+   * @see #getTypeRef()
    * @generated
    * @ordered
    */
-  protected QtType type;
+  protected QtTypeRef typeRef;
 
   /**
    * <!-- begin-user-doc -->
@@ -157,19 +158,9 @@ public class QtReturnValueImpl extends MinimalEObjectImpl.Container implements Q
    * <!-- end-user-doc -->
    * @generated
    */
-  public QtType getType()
+  public QtTypeRef getTypeRef()
   {
-    if (type != null && type.eIsProxy())
-    {
-      InternalEObject oldType = (InternalEObject)type;
-      type = (QtType)eResolveProxy(oldType);
-      if (type != oldType)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, QIdlPackage.QT_RETURN_VALUE__TYPE, oldType, type));
-      }
-    }
-    return type;
+    return typeRef;
   }
 
   /**
@@ -177,22 +168,53 @@ public class QtReturnValueImpl extends MinimalEObjectImpl.Container implements Q
    * <!-- end-user-doc -->
    * @generated
    */
-  public QtType basicGetType()
+  public NotificationChain basicSetTypeRef(QtTypeRef newTypeRef, NotificationChain msgs)
   {
-    return type;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setType(QtType newType)
-  {
-    QtType oldType = type;
-    type = newType;
+    QtTypeRef oldTypeRef = typeRef;
+    typeRef = newTypeRef;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, QIdlPackage.QT_RETURN_VALUE__TYPE, oldType, type));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, QIdlPackage.QT_RETURN_VALUE__TYPE_REF, oldTypeRef, newTypeRef);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setTypeRef(QtTypeRef newTypeRef)
+  {
+    if (newTypeRef != typeRef)
+    {
+      NotificationChain msgs = null;
+      if (typeRef != null)
+        msgs = ((InternalEObject)typeRef).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - QIdlPackage.QT_RETURN_VALUE__TYPE_REF, null, msgs);
+      if (newTypeRef != null)
+        msgs = ((InternalEObject)newTypeRef).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - QIdlPackage.QT_RETURN_VALUE__TYPE_REF, null, msgs);
+      msgs = basicSetTypeRef(newTypeRef, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, QIdlPackage.QT_RETURN_VALUE__TYPE_REF, newTypeRef, newTypeRef));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case QIdlPackage.QT_RETURN_VALUE__TYPE_REF:
+        return basicSetTypeRef(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -209,9 +231,8 @@ public class QtReturnValueImpl extends MinimalEObjectImpl.Container implements Q
         return getConst();
       case QIdlPackage.QT_RETURN_VALUE__VALUE_TYPE:
         return getValueType();
-      case QIdlPackage.QT_RETURN_VALUE__TYPE:
-        if (resolve) return getType();
-        return basicGetType();
+      case QIdlPackage.QT_RETURN_VALUE__TYPE_REF:
+        return getTypeRef();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -232,8 +253,8 @@ public class QtReturnValueImpl extends MinimalEObjectImpl.Container implements Q
       case QIdlPackage.QT_RETURN_VALUE__VALUE_TYPE:
         setValueType((Type)newValue);
         return;
-      case QIdlPackage.QT_RETURN_VALUE__TYPE:
-        setType((QtType)newValue);
+      case QIdlPackage.QT_RETURN_VALUE__TYPE_REF:
+        setTypeRef((QtTypeRef)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -255,8 +276,8 @@ public class QtReturnValueImpl extends MinimalEObjectImpl.Container implements Q
       case QIdlPackage.QT_RETURN_VALUE__VALUE_TYPE:
         setValueType(VALUE_TYPE_EDEFAULT);
         return;
-      case QIdlPackage.QT_RETURN_VALUE__TYPE:
-        setType((QtType)null);
+      case QIdlPackage.QT_RETURN_VALUE__TYPE_REF:
+        setTypeRef((QtTypeRef)null);
         return;
     }
     super.eUnset(featureID);
@@ -276,8 +297,8 @@ public class QtReturnValueImpl extends MinimalEObjectImpl.Container implements Q
         return CONST_EDEFAULT == null ? const_ != null : !CONST_EDEFAULT.equals(const_);
       case QIdlPackage.QT_RETURN_VALUE__VALUE_TYPE:
         return valueType != VALUE_TYPE_EDEFAULT;
-      case QIdlPackage.QT_RETURN_VALUE__TYPE:
-        return type != null;
+      case QIdlPackage.QT_RETURN_VALUE__TYPE_REF:
+        return typeRef != null;
     }
     return super.eIsSet(featureID);
   }

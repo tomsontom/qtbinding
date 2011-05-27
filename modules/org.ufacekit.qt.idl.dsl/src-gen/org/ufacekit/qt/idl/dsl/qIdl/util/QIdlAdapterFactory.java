@@ -103,6 +103,16 @@ public class QIdlAdapterFactory extends AdapterFactoryImpl
         return createQtClassAdapter();
       }
       @Override
+      public Adapter caseQtTemplateParam(QtTemplateParam object)
+      {
+        return createQtTemplateParamAdapter();
+      }
+      @Override
+      public Adapter caseQtTypeDef(QtTypeDef object)
+      {
+        return createQtTypeDefAdapter();
+      }
+      @Override
       public Adapter caseQtConstructor(QtConstructor object)
       {
         return createQtConstructorAdapter();
@@ -146,6 +156,16 @@ public class QIdlAdapterFactory extends AdapterFactoryImpl
       public Adapter caseQtValue(QtValue object)
       {
         return createQtValueAdapter();
+      }
+      @Override
+      public Adapter caseQtTypeRef(QtTypeRef object)
+      {
+        return createQtTypeRefAdapter();
+      }
+      @Override
+      public Adapter caseQtClassTypeRef(QtClassTypeRef object)
+      {
+        return createQtClassTypeRefAdapter();
       }
       @Override
       public Adapter caseQtParameter(QtParameter object)
@@ -260,6 +280,36 @@ public class QIdlAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createQtClassAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.ufacekit.qt.idl.dsl.qIdl.QtTemplateParam <em>Qt Template Param</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QtTemplateParam
+   * @generated
+   */
+  public Adapter createQtTemplateParamAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.ufacekit.qt.idl.dsl.qIdl.QtTypeDef <em>Qt Type Def</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QtTypeDef
+   * @generated
+   */
+  public Adapter createQtTypeDefAdapter()
   {
     return null;
   }
@@ -395,6 +445,36 @@ public class QIdlAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createQtValueAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.ufacekit.qt.idl.dsl.qIdl.QtTypeRef <em>Qt Type Ref</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QtTypeRef
+   * @generated
+   */
+  public Adapter createQtTypeRefAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.ufacekit.qt.idl.dsl.qIdl.QtClassTypeRef <em>Qt Class Type Ref</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QtClassTypeRef
+   * @generated
+   */
+  public Adapter createQtClassTypeRefAdapter()
   {
     return null;
   }

@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.QtReturnValue#getConst <em>Const</em>}</li>
  *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.QtReturnValue#getValueType <em>Value Type</em>}</li>
- *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.QtReturnValue#getType <em>Type</em>}</li>
+ *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.QtReturnValue#getTypeRef <em>Type Ref</em>}</li>
  * </ul>
  * </p>
  *
@@ -83,29 +83,29 @@ public interface QtReturnValue extends EObject
   void setValueType(Type value);
 
   /**
-   * Returns the value of the '<em><b>Type</b></em>' reference.
+   * Returns the value of the '<em><b>Type Ref</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Type</em>' reference isn't clear,
+   * If the meaning of the '<em>Type Ref</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Type</em>' reference.
-   * @see #setType(QtType)
-   * @see org.ufacekit.qt.idl.dsl.qIdl.QIdlPackage#getQtReturnValue_Type()
-   * @model
+   * @return the value of the '<em>Type Ref</em>' containment reference.
+   * @see #setTypeRef(QtTypeRef)
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QIdlPackage#getQtReturnValue_TypeRef()
+   * @model containment="true"
    * @generated
    */
-  QtType getType();
+  QtTypeRef getTypeRef();
 
   /**
-   * Sets the value of the '{@link org.ufacekit.qt.idl.dsl.qIdl.QtReturnValue#getType <em>Type</em>}' reference.
+   * Sets the value of the '{@link org.ufacekit.qt.idl.dsl.qIdl.QtReturnValue#getTypeRef <em>Type Ref</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Type</em>' reference.
-   * @see #getType()
+   * @param value the new value of the '<em>Type Ref</em>' containment reference.
+   * @see #getTypeRef()
    * @generated
    */
-  void setType(QtType value);
+  void setTypeRef(QtTypeRef value);
 
 } // QtReturnValue

@@ -73,6 +73,8 @@ public class QIdlFactoryImpl extends EFactoryImpl implements QIdlFactory
       case QIdlPackage.QT_TYPE: return createQtType();
       case QIdlPackage.QT_OPERATION: return createQtOperation();
       case QIdlPackage.QT_CLASS: return createQtClass();
+      case QIdlPackage.QT_TEMPLATE_PARAM: return createQtTemplateParam();
+      case QIdlPackage.QT_TYPE_DEF: return createQtTypeDef();
       case QIdlPackage.QT_CONSTRUCTOR: return createQtConstructor();
       case QIdlPackage.QT_PROPERTY: return createQtProperty();
       case QIdlPackage.QT_ENUM: return createQtEnum();
@@ -82,6 +84,8 @@ public class QIdlFactoryImpl extends EFactoryImpl implements QIdlFactory
       case QIdlPackage.QT_BUITIN_TYPE: return createQtBuitinType();
       case QIdlPackage.QT_FUNCTION: return createQtFunction();
       case QIdlPackage.QT_VALUE: return createQtValue();
+      case QIdlPackage.QT_TYPE_REF: return createQtTypeRef();
+      case QIdlPackage.QT_CLASS_TYPE_REF: return createQtClassTypeRef();
       case QIdlPackage.QT_PARAMETER: return createQtParameter();
       case QIdlPackage.QT_RETURN_VALUE: return createQtReturnValue();
       case QIdlPackage.QT_SIGNAL: return createQtSignal();
@@ -197,6 +201,28 @@ public class QIdlFactoryImpl extends EFactoryImpl implements QIdlFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public QtTemplateParam createQtTemplateParam()
+  {
+    QtTemplateParamImpl qtTemplateParam = new QtTemplateParamImpl();
+    return qtTemplateParam;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public QtTypeDef createQtTypeDef()
+  {
+    QtTypeDefImpl qtTypeDef = new QtTypeDefImpl();
+    return qtTypeDef;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public QtConstructor createQtConstructor()
   {
     QtConstructorImpl qtConstructor = new QtConstructorImpl();
@@ -289,6 +315,28 @@ public class QIdlFactoryImpl extends EFactoryImpl implements QIdlFactory
   {
     QtValueImpl qtValue = new QtValueImpl();
     return qtValue;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public QtTypeRef createQtTypeRef()
+  {
+    QtTypeRefImpl qtTypeRef = new QtTypeRefImpl();
+    return qtTypeRef;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public QtClassTypeRef createQtClassTypeRef()
+  {
+    QtClassTypeRefImpl qtClassTypeRef = new QtClassTypeRefImpl();
+    return qtClassTypeRef;
   }
 
   /**

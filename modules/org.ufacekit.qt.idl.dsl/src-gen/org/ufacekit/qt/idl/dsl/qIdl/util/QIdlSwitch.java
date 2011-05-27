@@ -111,6 +111,22 @@ public class QIdlSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case QIdlPackage.QT_TEMPLATE_PARAM:
+      {
+        QtTemplateParam qtTemplateParam = (QtTemplateParam)theEObject;
+        T result = caseQtTemplateParam(qtTemplateParam);
+        if (result == null) result = caseQtType(qtTemplateParam);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case QIdlPackage.QT_TYPE_DEF:
+      {
+        QtTypeDef qtTypeDef = (QtTypeDef)theEObject;
+        T result = caseQtTypeDef(qtTypeDef);
+        if (result == null) result = caseQtType(qtTypeDef);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case QIdlPackage.QT_CONSTRUCTOR:
       {
         QtConstructor qtConstructor = (QtConstructor)theEObject;
@@ -175,6 +191,20 @@ public class QIdlSwitch<T> extends Switch<T>
       {
         QtValue qtValue = (QtValue)theEObject;
         T result = caseQtValue(qtValue);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case QIdlPackage.QT_TYPE_REF:
+      {
+        QtTypeRef qtTypeRef = (QtTypeRef)theEObject;
+        T result = caseQtTypeRef(qtTypeRef);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case QIdlPackage.QT_CLASS_TYPE_REF:
+      {
+        QtClassTypeRef qtClassTypeRef = (QtClassTypeRef)theEObject;
+        T result = caseQtClassTypeRef(qtClassTypeRef);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -288,6 +318,38 @@ public class QIdlSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseQtClass(QtClass object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Qt Template Param</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Qt Template Param</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseQtTemplateParam(QtTemplateParam object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Qt Type Def</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Qt Type Def</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseQtTypeDef(QtTypeDef object)
   {
     return null;
   }
@@ -432,6 +494,38 @@ public class QIdlSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseQtValue(QtValue object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Qt Type Ref</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Qt Type Ref</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseQtTypeRef(QtTypeRef object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Qt Class Type Ref</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Qt Class Type Ref</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseQtClassTypeRef(QtClassTypeRef object)
   {
     return null;
   }

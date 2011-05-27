@@ -15,16 +15,18 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.ufacekit.qt.idl.dsl.qIdl.QIdlPackage;
 import org.ufacekit.qt.idl.dsl.qIdl.QtClass;
+import org.ufacekit.qt.idl.dsl.qIdl.QtClassTypeRef;
 import org.ufacekit.qt.idl.dsl.qIdl.QtConstructor;
 import org.ufacekit.qt.idl.dsl.qIdl.QtEnum;
 import org.ufacekit.qt.idl.dsl.qIdl.QtFlags;
 import org.ufacekit.qt.idl.dsl.qIdl.QtOperation;
 import org.ufacekit.qt.idl.dsl.qIdl.QtProperty;
+import org.ufacekit.qt.idl.dsl.qIdl.QtTemplateParam;
+import org.ufacekit.qt.idl.dsl.qIdl.QtTypeDef;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,6 +35,7 @@ import org.ufacekit.qt.idl.dsl.qIdl.QtProperty;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtClassImpl#getTemplateTypes <em>Template Types</em>}</li>
  *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtClassImpl#getSuperTypes <em>Super Types</em>}</li>
  *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtClassImpl#getEnums <em>Enums</em>}</li>
  *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtClassImpl#getFlags <em>Flags</em>}</li>
@@ -40,6 +43,7 @@ import org.ufacekit.qt.idl.dsl.qIdl.QtProperty;
  *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtClassImpl#getProperties <em>Properties</em>}</li>
  *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtClassImpl#getConstructors <em>Constructors</em>}</li>
  *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtClassImpl#getOperations <em>Operations</em>}</li>
+ *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtClassImpl#getTypedef <em>Typedef</em>}</li>
  * </ul>
  * </p>
  *
@@ -48,14 +52,24 @@ import org.ufacekit.qt.idl.dsl.qIdl.QtProperty;
 public class QtClassImpl extends QtTypeImpl implements QtClass
 {
   /**
-   * The cached value of the '{@link #getSuperTypes() <em>Super Types</em>}' reference list.
+   * The cached value of the '{@link #getTemplateTypes() <em>Template Types</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTemplateTypes()
+   * @generated
+   * @ordered
+   */
+  protected EList<QtTemplateParam> templateTypes;
+
+  /**
+   * The cached value of the '{@link #getSuperTypes() <em>Super Types</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getSuperTypes()
    * @generated
    * @ordered
    */
-  protected EList<QtClass> superTypes;
+  protected EList<QtClassTypeRef> superTypes;
 
   /**
    * The cached value of the '{@link #getEnums() <em>Enums</em>}' containment reference list.
@@ -118,6 +132,16 @@ public class QtClassImpl extends QtTypeImpl implements QtClass
   protected EList<QtOperation> operations;
 
   /**
+   * The cached value of the '{@link #getTypedef() <em>Typedef</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTypedef()
+   * @generated
+   * @ordered
+   */
+  protected EList<QtTypeDef> typedef;
+
+  /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -143,11 +167,25 @@ public class QtClassImpl extends QtTypeImpl implements QtClass
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<QtClass> getSuperTypes()
+  public EList<QtTemplateParam> getTemplateTypes()
+  {
+    if (templateTypes == null)
+    {
+      templateTypes = new EObjectContainmentEList<QtTemplateParam>(QtTemplateParam.class, this, QIdlPackage.QT_CLASS__TEMPLATE_TYPES);
+    }
+    return templateTypes;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<QtClassTypeRef> getSuperTypes()
   {
     if (superTypes == null)
     {
-      superTypes = new EObjectResolvingEList<QtClass>(QtClass.class, this, QIdlPackage.QT_CLASS__SUPER_TYPES);
+      superTypes = new EObjectContainmentEList<QtClassTypeRef>(QtClassTypeRef.class, this, QIdlPackage.QT_CLASS__SUPER_TYPES);
     }
     return superTypes;
   }
@@ -241,11 +279,29 @@ public class QtClassImpl extends QtTypeImpl implements QtClass
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<QtTypeDef> getTypedef()
+  {
+    if (typedef == null)
+    {
+      typedef = new EObjectContainmentEList<QtTypeDef>(QtTypeDef.class, this, QIdlPackage.QT_CLASS__TYPEDEF);
+    }
+    return typedef;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
     switch (featureID)
     {
+      case QIdlPackage.QT_CLASS__TEMPLATE_TYPES:
+        return ((InternalEList<?>)getTemplateTypes()).basicRemove(otherEnd, msgs);
+      case QIdlPackage.QT_CLASS__SUPER_TYPES:
+        return ((InternalEList<?>)getSuperTypes()).basicRemove(otherEnd, msgs);
       case QIdlPackage.QT_CLASS__ENUMS:
         return ((InternalEList<?>)getEnums()).basicRemove(otherEnd, msgs);
       case QIdlPackage.QT_CLASS__FLAGS:
@@ -258,6 +314,8 @@ public class QtClassImpl extends QtTypeImpl implements QtClass
         return ((InternalEList<?>)getConstructors()).basicRemove(otherEnd, msgs);
       case QIdlPackage.QT_CLASS__OPERATIONS:
         return ((InternalEList<?>)getOperations()).basicRemove(otherEnd, msgs);
+      case QIdlPackage.QT_CLASS__TYPEDEF:
+        return ((InternalEList<?>)getTypedef()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -272,6 +330,8 @@ public class QtClassImpl extends QtTypeImpl implements QtClass
   {
     switch (featureID)
     {
+      case QIdlPackage.QT_CLASS__TEMPLATE_TYPES:
+        return getTemplateTypes();
       case QIdlPackage.QT_CLASS__SUPER_TYPES:
         return getSuperTypes();
       case QIdlPackage.QT_CLASS__ENUMS:
@@ -286,6 +346,8 @@ public class QtClassImpl extends QtTypeImpl implements QtClass
         return getConstructors();
       case QIdlPackage.QT_CLASS__OPERATIONS:
         return getOperations();
+      case QIdlPackage.QT_CLASS__TYPEDEF:
+        return getTypedef();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -301,9 +363,13 @@ public class QtClassImpl extends QtTypeImpl implements QtClass
   {
     switch (featureID)
     {
+      case QIdlPackage.QT_CLASS__TEMPLATE_TYPES:
+        getTemplateTypes().clear();
+        getTemplateTypes().addAll((Collection<? extends QtTemplateParam>)newValue);
+        return;
       case QIdlPackage.QT_CLASS__SUPER_TYPES:
         getSuperTypes().clear();
-        getSuperTypes().addAll((Collection<? extends QtClass>)newValue);
+        getSuperTypes().addAll((Collection<? extends QtClassTypeRef>)newValue);
         return;
       case QIdlPackage.QT_CLASS__ENUMS:
         getEnums().clear();
@@ -329,6 +395,10 @@ public class QtClassImpl extends QtTypeImpl implements QtClass
         getOperations().clear();
         getOperations().addAll((Collection<? extends QtOperation>)newValue);
         return;
+      case QIdlPackage.QT_CLASS__TYPEDEF:
+        getTypedef().clear();
+        getTypedef().addAll((Collection<? extends QtTypeDef>)newValue);
+        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -343,6 +413,9 @@ public class QtClassImpl extends QtTypeImpl implements QtClass
   {
     switch (featureID)
     {
+      case QIdlPackage.QT_CLASS__TEMPLATE_TYPES:
+        getTemplateTypes().clear();
+        return;
       case QIdlPackage.QT_CLASS__SUPER_TYPES:
         getSuperTypes().clear();
         return;
@@ -364,6 +437,9 @@ public class QtClassImpl extends QtTypeImpl implements QtClass
       case QIdlPackage.QT_CLASS__OPERATIONS:
         getOperations().clear();
         return;
+      case QIdlPackage.QT_CLASS__TYPEDEF:
+        getTypedef().clear();
+        return;
     }
     super.eUnset(featureID);
   }
@@ -378,6 +454,8 @@ public class QtClassImpl extends QtTypeImpl implements QtClass
   {
     switch (featureID)
     {
+      case QIdlPackage.QT_CLASS__TEMPLATE_TYPES:
+        return templateTypes != null && !templateTypes.isEmpty();
       case QIdlPackage.QT_CLASS__SUPER_TYPES:
         return superTypes != null && !superTypes.isEmpty();
       case QIdlPackage.QT_CLASS__ENUMS:
@@ -392,6 +470,8 @@ public class QtClassImpl extends QtTypeImpl implements QtClass
         return constructors != null && !constructors.isEmpty();
       case QIdlPackage.QT_CLASS__OPERATIONS:
         return operations != null && !operations.isEmpty();
+      case QIdlPackage.QT_CLASS__TYPEDEF:
+        return typedef != null && !typedef.isEmpty();
     }
     return super.eIsSet(featureID);
   }

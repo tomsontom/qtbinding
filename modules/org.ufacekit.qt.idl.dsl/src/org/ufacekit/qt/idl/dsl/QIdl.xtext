@@ -5,14 +5,7 @@ generate qIdl "http://www.ufacekit.org/qt/idl/dsl/QIdl"
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 
 QtIdlTyp:
-	element=( QtBuitinType | QtClass | QtNamespace );
-
-
-//QtModule:
-//	'module' name=ID '{'
-//		namespaces+=[QtNamespace]*
-//		classes+=[QtClass]* 
-//	'}';
+	element=( QtBuitinType | QtClass | QtNamespace | QtTypeDef );
 
 QtNamespace:
 	'namespace' name=ID '{'
@@ -21,29 +14,38 @@ QtNamespace:
 			enums+=QtEnum | 
 			flags+=QtFlags | 
 			classes+=QtClass | 
-			operations+=QtOperation
+			operations+=QtOperation |
+			typedef+=QtTypeDef
 		)*
 	'}'
 ;
 
 QtType:
-	QtEnum | QtFlags | QtClass | QtBuitinType;
+	QtEnum | QtFlags | QtClass | QtBuitinType | QtTypeDef | QtTemplateParam;
 
 QtOperation:
 	QtFunction | QtSignal | QtSlot;
 
 QtClass:
-	'class' name=ID ('extends' superTypes+=[QtClass] (',' superTypes+=[QtClass])*)? '{'
+	'class' name=ID ('<' (templateTypes+=QtTemplateParam) ( ',' templateTypes+=QtTemplateParam )* '>')? ('extends' superTypes+=QtClassTypeRef (',' superTypes+=QtClassTypeRef)*)? '{'
 		( 
 			enums+=QtEnum |
 			flags+=QtFlags |
 			classes+=QtClass |
 			properties+=QtProperty |
 			constructors+=QtConstructor |
-			operations+=QtOperation
+			operations+=QtOperation |
+			typedef+=QtTypeDef
 		)*
 	'}';
+	
+QtTemplateParam:
+	name=ID // ( 'extends' (typeRef+=[QtTypeRef] | ('&' | typeRef+=[QtTypeRef])* ) )	
+;
 
+QtTypeDef:
+	'typedef' name=ID ':' typeRef=QtTypeRef ';'
+;
 
 QtConstructor:
 	'constructor' {QtConstructor} '(' (params+=QtParameter (',' params+=QtParameter)*)? ');';
@@ -65,10 +67,6 @@ QtEnumValue:
 QtEnumValueMask:
 	( (value+=[QtEnumValue|QualifiedName] | numericValue+=LONG) ('|' (value+=[QtEnumValue|QualifiedName] | numericValue+=LONG) )* );
 
-//QtEnumValueMask:
-//	numericValue+=INT ('|' numericValue+=INT )*;
-
-
 QtBuitinType:
 	'builtin' name=ID ':' value=JvmArgumentTypeReference;
 
@@ -76,13 +74,25 @@ QtFunction:
 	visibility=Visibility const='const'? virtual=Virtuality? owner=Owner 'function' name=ID '(' (params+=QtParameter (',' params+=QtParameter)*)? ')' ':' returnValue=QtReturnValue ';';
 
 QtValue:
-	const='const'? valueType=Type? type=[QtType|QualifiedName] name=ID;
+	const='const'? valueType=Type? typeRef=QtTypeRef name=ID;
+
+//QtTypeRef returns QtParameterizedTypeRef:
+//	QtParameterizedTypeRef
+//;
+
+QtTypeRef: 
+	type=[QtType|QualifiedName]  ('<' (templateTypes+=QtTypeRef) ( ',' templateTypes+=QtTypeRef )* '>')?	
+;
+
+QtClassTypeRef: 
+	type=[QtClass|QualifiedName]  ('<' (templateTypes+=QtTypeRef) ( ',' templateTypes+=QtTypeRef )* '>')?	
+;
 
 QtParameter:
 	value=QtValue ('=' (defaultInt=INT | defaultEnum=[QtEnumValue]) )?;
 
 QtReturnValue:
-	const='const'? valueType=Type? type=[QtType|QualifiedName];
+	const='const'? valueType=Type? typeRef=QtTypeRef;
 
 QtSignal:
 	'signal' name=ID '(' (params+=QtParameter (',' params+=QtParameter)*)? ')' ':' returnValue=QtReturnValue ';'; 

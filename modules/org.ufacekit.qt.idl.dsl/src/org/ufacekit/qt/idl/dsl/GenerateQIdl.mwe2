@@ -5,7 +5,7 @@ import org.eclipse.xtext.generator.*
 import org.eclipse.xtext.ui.generator.*
 
 var grammarURI = "classpath:/org/ufacekit/qt/idl/dsl/QIdl.xtext"
-var file.extensions = "qbuiltin,qclass,qnamespace"
+var file.extensions = "qbuiltin,qclass,qnamespace,qtypedef"
 var projectName = "org.ufacekit.qt.idl.dsl"
 var runtimeProject = "../${projectName}"
 
