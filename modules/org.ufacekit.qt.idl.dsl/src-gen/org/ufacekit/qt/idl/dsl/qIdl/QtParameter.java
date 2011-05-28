@@ -62,12 +62,12 @@ public interface QtParameter extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Default Int</em>' attribute.
-   * @see #setDefaultInt(int)
+   * @see #setDefaultInt(long)
    * @see org.ufacekit.qt.idl.dsl.qIdl.QIdlPackage#getQtParameter_DefaultInt()
    * @model
    * @generated
    */
-  int getDefaultInt();
+  long getDefaultInt();
 
   /**
    * Sets the value of the '{@link org.ufacekit.qt.idl.dsl.qIdl.QtParameter#getDefaultInt <em>Default Int</em>}' attribute.
@@ -77,7 +77,7 @@ public interface QtParameter extends EObject
    * @see #getDefaultInt()
    * @generated
    */
-  void setDefaultInt(int value);
+  void setDefaultInt(long value);
 
   /**
    * Returns the value of the '<em><b>Default Enum</b></em>' reference.

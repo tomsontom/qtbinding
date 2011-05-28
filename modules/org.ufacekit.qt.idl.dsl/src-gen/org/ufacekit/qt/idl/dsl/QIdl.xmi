@@ -25,7 +25,7 @@
         <classifier xsi:type="ecore:EClass" href="http://www.ufacekit.org/qt/idl/dsl/QIdl#//QtNamespace"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <elements xsi:type="xtext:Keyword" value="namespace"/>
+        <elements xsi:type="xtext:Keyword" value="q_namespace"/>
         <elements xsi:type="xtext:Assignment" feature="name" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/2/@rules.10"/>
         </elements>
@@ -81,7 +81,7 @@
         <classifier xsi:type="ecore:EClass" href="http://www.ufacekit.org/qt/idl/dsl/QIdl#//QtClass"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <elements xsi:type="xtext:Keyword" value="class"/>
+        <elements xsi:type="xtext:Keyword" value="q_class"/>
         <elements xsi:type="xtext:Assignment" feature="name" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/2/@rules.10"/>
         </elements>
@@ -150,7 +150,7 @@
         <classifier xsi:type="ecore:EClass" href="http://www.ufacekit.org/qt/idl/dsl/QIdl#//QtTypeDef"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <elements xsi:type="xtext:Keyword" value="typedef"/>
+        <elements xsi:type="xtext:Keyword" value="q_typedef"/>
         <elements xsi:type="xtext:Assignment" feature="name" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/2/@rules.10"/>
         </elements>
@@ -166,7 +166,7 @@
         <classifier xsi:type="ecore:EClass" href="http://www.ufacekit.org/qt/idl/dsl/QIdl#//QtConstructor"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <elements xsi:type="xtext:Keyword" value="constructor"/>
+        <elements xsi:type="xtext:Keyword" value="q_constructor"/>
         <elements xsi:type="xtext:Action">
           <type metamodel="/0/@metamodelDeclarations.0">
             <classifier xsi:type="ecore:EClass" href="http://www.ufacekit.org/qt/idl/dsl/QIdl#//QtConstructor"/>
@@ -192,7 +192,7 @@
         <classifier xsi:type="ecore:EClass" href="http://www.ufacekit.org/qt/idl/dsl/QIdl#//QtProperty"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <elements xsi:type="xtext:Keyword" value="property"/>
+        <elements xsi:type="xtext:Keyword" value="q_property"/>
         <elements xsi:type="xtext:Assignment" feature="type" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.15"/>
         </elements>
@@ -204,7 +204,7 @@
         <classifier xsi:type="ecore:EClass" href="http://www.ufacekit.org/qt/idl/dsl/QIdl#//QtEnum"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <elements xsi:type="xtext:Keyword" value="enumeration"/>
+        <elements xsi:type="xtext:Keyword" value="q_enumeration"/>
         <elements xsi:type="xtext:Assignment" feature="name" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/2/@rules.10"/>
         </elements>
@@ -220,7 +220,7 @@
         <classifier xsi:type="ecore:EClass" href="http://www.ufacekit.org/qt/idl/dsl/QIdl#//QtFlags"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <elements xsi:type="xtext:Keyword" value="flags"/>
+        <elements xsi:type="xtext:Keyword" value="q_flags"/>
         <elements xsi:type="xtext:Assignment" feature="name" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/2/@rules.10"/>
         </elements>
@@ -265,7 +265,7 @@
             </terminal>
           </elements>
           <elements xsi:type="xtext:Assignment" feature="numericValue" operator="+=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.26"/>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.25"/>
           </elements>
         </elements>
         <elements xsi:type="xtext:Group" cardinality="*">
@@ -280,7 +280,7 @@
               </terminal>
             </elements>
             <elements xsi:type="xtext:Assignment" feature="numericValue" operator="+=">
-              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.26"/>
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.25"/>
             </elements>
           </elements>
         </elements>
@@ -291,7 +291,7 @@
         <classifier xsi:type="ecore:EClass" href="http://www.ufacekit.org/qt/idl/dsl/QIdl#//QtBuitinType"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <elements xsi:type="xtext:Keyword" value="builtin"/>
+        <elements xsi:type="xtext:Keyword" value="q_builtin"/>
         <elements xsi:type="xtext:Assignment" feature="name" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/2/@rules.10"/>
         </elements>
@@ -318,7 +318,7 @@
         <elements xsi:type="xtext:Assignment" feature="owner" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.24"/>
         </elements>
-        <elements xsi:type="xtext:Keyword" value="function"/>
+        <elements xsi:type="xtext:Keyword" value="q_function"/>
         <elements xsi:type="xtext:Assignment" feature="name" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/2/@rules.10"/>
         </elements>
@@ -351,7 +351,10 @@
           <terminal xsi:type="xtext:Keyword" value="const"/>
         </elements>
         <elements xsi:type="xtext:Assignment" cardinality="?" feature="valueType" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.25"/>
+          <terminal xsi:type="xtext:Alternatives">
+            <elements xsi:type="xtext:Keyword" value="*"/>
+            <elements xsi:type="xtext:Keyword" value="&amp;"/>
+          </terminal>
         </elements>
         <elements xsi:type="xtext:Assignment" feature="typeRef" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.16"/>
@@ -386,6 +389,12 @@
             </elements>
           </elements>
           <elements xsi:type="xtext:Keyword" value=">"/>
+        </elements>
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="valueType" operator="=">
+          <terminal xsi:type="xtext:Alternatives">
+            <elements xsi:type="xtext:Keyword" value="*"/>
+            <elements xsi:type="xtext:Keyword" value="&amp;"/>
+          </terminal>
         </elements>
       </alternatives>
     </rules>
@@ -429,14 +438,14 @@
           <elements xsi:type="xtext:Keyword" value="="/>
           <elements xsi:type="xtext:Alternatives">
             <elements xsi:type="xtext:Assignment" feature="defaultInt" operator="=">
-              <terminal xsi:type="xtext:RuleCall" rule="/3/@rules.1"/>
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.25"/>
             </elements>
             <elements xsi:type="xtext:Assignment" feature="defaultEnum" operator="=">
               <terminal xsi:type="xtext:CrossReference">
                 <type metamodel="/0/@metamodelDeclarations.0">
                   <classifier xsi:type="ecore:EClass" href="http://www.ufacekit.org/qt/idl/dsl/QIdl#//QtEnumValue"/>
                 </type>
-                <terminal xsi:type="xtext:RuleCall" rule="/2/@rules.10"/>
+                <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.50"/>
               </terminal>
             </elements>
           </elements>
@@ -452,7 +461,10 @@
           <terminal xsi:type="xtext:Keyword" value="const"/>
         </elements>
         <elements xsi:type="xtext:Assignment" cardinality="?" feature="valueType" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.25"/>
+          <terminal xsi:type="xtext:Alternatives">
+            <elements xsi:type="xtext:Keyword" value="*"/>
+            <elements xsi:type="xtext:Keyword" value="&amp;"/>
+          </terminal>
         </elements>
         <elements xsi:type="xtext:Assignment" feature="typeRef" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.16"/>
@@ -464,7 +476,7 @@
         <classifier xsi:type="ecore:EClass" href="http://www.ufacekit.org/qt/idl/dsl/QIdl#//QtSignal"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <elements xsi:type="xtext:Keyword" value="signal"/>
+        <elements xsi:type="xtext:Keyword" value="q_signal"/>
         <elements xsi:type="xtext:Assignment" feature="name" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/2/@rules.10"/>
         </elements>
@@ -493,7 +505,7 @@
         <classifier xsi:type="ecore:EClass" href="http://www.ufacekit.org/qt/idl/dsl/QIdl#//QtSlot"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <elements xsi:type="xtext:Keyword" value="slot"/>
+        <elements xsi:type="xtext:Keyword" value="q_slot"/>
         <elements xsi:type="xtext:Assignment" feature="name" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/2/@rules.10"/>
         </elements>
@@ -559,21 +571,6 @@
         <elements xsi:type="xtext:EnumLiteralDeclaration">
           <enumLiteral href="http://www.ufacekit.org/qt/idl/dsl/QIdl#//Owner/class"/>
           <literal value="class"/>
-        </elements>
-      </alternatives>
-    </rules>
-    <rules xsi:type="xtext:EnumRule" name="Type">
-      <type metamodel="/0/@metamodelDeclarations.0">
-        <classifier xsi:type="ecore:EEnum" href="http://www.ufacekit.org/qt/idl/dsl/QIdl#//Type"/>
-      </type>
-      <alternatives xsi:type="xtext:Alternatives">
-        <elements xsi:type="xtext:EnumLiteralDeclaration">
-          <enumLiteral href="http://www.ufacekit.org/qt/idl/dsl/QIdl#//Type/pointer"/>
-          <literal value="pointer"/>
-        </elements>
-        <elements xsi:type="xtext:EnumLiteralDeclaration">
-          <enumLiteral href="http://www.ufacekit.org/qt/idl/dsl/QIdl#//Type/reference"/>
-          <literal value="reference"/>
         </elements>
       </alternatives>
     </rules>

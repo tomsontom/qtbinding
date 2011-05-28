@@ -34,6 +34,7 @@ import org.ufacekit.qt.idl.dsl.qIdl.QtTypeRef;
  * <ul>
  *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtTypeRefImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtTypeRefImpl#getTemplateTypes <em>Template Types</em>}</li>
+ *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtTypeRefImpl#getValueType <em>Value Type</em>}</li>
  * </ul>
  * </p>
  *
@@ -60,6 +61,26 @@ public class QtTypeRefImpl extends MinimalEObjectImpl.Container implements QtTyp
    * @ordered
    */
   protected EList<QtTypeRef> templateTypes;
+
+  /**
+   * The default value of the '{@link #getValueType() <em>Value Type</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getValueType()
+   * @generated
+   * @ordered
+   */
+  protected static final String VALUE_TYPE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getValueType() <em>Value Type</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getValueType()
+   * @generated
+   * @ordered
+   */
+  protected String valueType = VALUE_TYPE_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -144,6 +165,29 @@ public class QtTypeRefImpl extends MinimalEObjectImpl.Container implements QtTyp
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getValueType()
+  {
+    return valueType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setValueType(String newValueType)
+  {
+    String oldValueType = valueType;
+    valueType = newValueType;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, QIdlPackage.QT_TYPE_REF__VALUE_TYPE, oldValueType, valueType));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -170,6 +214,8 @@ public class QtTypeRefImpl extends MinimalEObjectImpl.Container implements QtTyp
         return basicGetType();
       case QIdlPackage.QT_TYPE_REF__TEMPLATE_TYPES:
         return getTemplateTypes();
+      case QIdlPackage.QT_TYPE_REF__VALUE_TYPE:
+        return getValueType();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -192,6 +238,9 @@ public class QtTypeRefImpl extends MinimalEObjectImpl.Container implements QtTyp
         getTemplateTypes().clear();
         getTemplateTypes().addAll((Collection<? extends QtTypeRef>)newValue);
         return;
+      case QIdlPackage.QT_TYPE_REF__VALUE_TYPE:
+        setValueType((String)newValue);
+        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -212,6 +261,9 @@ public class QtTypeRefImpl extends MinimalEObjectImpl.Container implements QtTyp
       case QIdlPackage.QT_TYPE_REF__TEMPLATE_TYPES:
         getTemplateTypes().clear();
         return;
+      case QIdlPackage.QT_TYPE_REF__VALUE_TYPE:
+        setValueType(VALUE_TYPE_EDEFAULT);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -230,8 +282,27 @@ public class QtTypeRefImpl extends MinimalEObjectImpl.Container implements QtTyp
         return type != null;
       case QIdlPackage.QT_TYPE_REF__TEMPLATE_TYPES:
         return templateTypes != null && !templateTypes.isEmpty();
+      case QIdlPackage.QT_TYPE_REF__VALUE_TYPE:
+        return VALUE_TYPE_EDEFAULT == null ? valueType != null : !VALUE_TYPE_EDEFAULT.equals(valueType);
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (valueType: ");
+    result.append(valueType);
+    result.append(')');
+    return result.toString();
   }
 
 } //QtTypeRefImpl

@@ -8,7 +8,7 @@ QtIdlTyp:
 	element=( QtBuitinType | QtClass | QtNamespace | QtTypeDef );
 
 QtNamespace:
-	'namespace' name=ID '{'
+	'q_namespace' name=ID '{'
 		( 
 			namespaces+=QtNamespace | 
 			enums+=QtEnum | 
@@ -27,7 +27,7 @@ QtOperation:
 	QtFunction | QtSignal | QtSlot;
 
 QtClass:
-	'class' name=ID ('<' (templateTypes+=QtTemplateParam) ( ',' templateTypes+=QtTemplateParam )* '>')? ('extends' superTypes+=QtClassTypeRef (',' superTypes+=QtClassTypeRef)*)? '{'
+	'q_class' name=ID ('<' (templateTypes+=QtTemplateParam) ( ',' templateTypes+=QtTemplateParam )* '>')? ('extends' superTypes+=QtClassTypeRef (',' superTypes+=QtClassTypeRef)*)? '{'
 		( 
 			enums+=QtEnum |
 			flags+=QtFlags |
@@ -44,22 +44,22 @@ QtTemplateParam:
 ;
 
 QtTypeDef:
-	'typedef' name=ID ':' typeRef=QtTypeRef ';'
+	'q_typedef' name=ID ':' typeRef=QtTypeRef ';'
 ;
 
 QtConstructor:
-	'constructor' {QtConstructor} '(' (params+=QtParameter (',' params+=QtParameter)*)? ');';
+	'q_constructor' {QtConstructor} '(' (params+=QtParameter (',' params+=QtParameter)*)? ');';
 
 QtProperty:
-	'property' type=QtValue ';';
+	'q_property' type=QtValue ';';
 
 QtEnum:
-	'enumeration' name=ID '{'
+	'q_enumeration' name=ID '{'
 		values+=QtEnumValue*
 	'}';
 
 QtFlags:
-	'flags' name=ID ':' enumeration=[QtEnum] ';';
+	'q_flags' name=ID ':' enumeration=[QtEnum] ';';
 
 QtEnumValue:
 	name=ID '=' enumMask=QtEnumValueMask;
@@ -68,20 +68,20 @@ QtEnumValueMask:
 	( (value+=[QtEnumValue|QualifiedName] | numericValue+=LONG) ('|' (value+=[QtEnumValue|QualifiedName] | numericValue+=LONG) )* );
 
 QtBuitinType:
-	'builtin' name=ID ':' value=JvmArgumentTypeReference;
+	'q_builtin' name=ID ':' value=JvmArgumentTypeReference;
 
 QtFunction:
-	visibility=Visibility const='const'? virtual=Virtuality? owner=Owner 'function' name=ID '(' (params+=QtParameter (',' params+=QtParameter)*)? ')' ':' returnValue=QtReturnValue ';';
+	visibility=Visibility const='const'? virtual=Virtuality? owner=Owner 'q_function' name=ID '(' (params+=QtParameter (',' params+=QtParameter)*)? ')' ':' returnValue=QtReturnValue ';';
 
 QtValue:
-	const='const'? valueType=Type? typeRef=QtTypeRef name=ID;
+	const='const'? valueType=('*'|'&')? typeRef=QtTypeRef name=ID;
 
 //QtTypeRef returns QtParameterizedTypeRef:
 //	QtParameterizedTypeRef
 //;
 
 QtTypeRef: 
-	type=[QtType|QualifiedName]  ('<' (templateTypes+=QtTypeRef) ( ',' templateTypes+=QtTypeRef )* '>')?	
+	type=[QtType|QualifiedName]  ('<' (templateTypes+=QtTypeRef) ( ',' templateTypes+=QtTypeRef )* '>')? valueType=('*'|'&')?	
 ;
 
 QtClassTypeRef: 
@@ -89,16 +89,16 @@ QtClassTypeRef:
 ;
 
 QtParameter:
-	value=QtValue ('=' (defaultInt=INT | defaultEnum=[QtEnumValue]) )?;
+	value=QtValue ('=' (defaultInt=LONG | defaultEnum=[QtEnumValue|QualifiedName]) )?;
 
 QtReturnValue:
-	const='const'? valueType=Type? typeRef=QtTypeRef;
+	const='const'? valueType=('*'|'&')? typeRef=QtTypeRef;
 
 QtSignal:
-	'signal' name=ID '(' (params+=QtParameter (',' params+=QtParameter)*)? ')' ':' returnValue=QtReturnValue ';'; 
+	'q_signal' name=ID '(' (params+=QtParameter (',' params+=QtParameter)*)? ')' ':' returnValue=QtReturnValue ';'; 
 
 QtSlot:
-	'slot' name=ID '(' (params+=QtParameter (',' params+=QtParameter)*)? ')' ':' returnValue=QtReturnValue ';';
+	'q_slot' name=ID '(' (params+=QtParameter (',' params+=QtParameter)*)? ')' ':' returnValue=QtReturnValue ';';
 
 enum Virtuality:
 	virtual | purevirtual;
@@ -109,7 +109,7 @@ enum Visibility:
 enum Owner:
 	member | class;
 
-enum Type:
-	pointer | reference;
+//enum Type:
+//	pointer | reference;
 
 terminal LONG returns ecore::ELong: '-'? ('0'..'9')+;

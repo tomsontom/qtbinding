@@ -111,8 +111,6 @@ public class QIdlFactoryImpl extends EFactoryImpl implements QIdlFactory
         return createVisibilityFromString(eDataType, initialValue);
       case QIdlPackage.OWNER:
         return createOwnerFromString(eDataType, initialValue);
-      case QIdlPackage.TYPE:
-        return createTypeFromString(eDataType, initialValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -134,8 +132,6 @@ public class QIdlFactoryImpl extends EFactoryImpl implements QIdlFactory
         return convertVisibilityToString(eDataType, instanceValue);
       case QIdlPackage.OWNER:
         return convertOwnerToString(eDataType, instanceValue);
-      case QIdlPackage.TYPE:
-        return convertTypeToString(eDataType, instanceValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -445,28 +441,6 @@ public class QIdlFactoryImpl extends EFactoryImpl implements QIdlFactory
    * @generated
    */
   public String convertOwnerToString(EDataType eDataType, Object instanceValue)
-  {
-    return instanceValue == null ? null : instanceValue.toString();
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Type createTypeFromString(EDataType eDataType, String initialValue)
-  {
-    Type result = Type.get(initialValue);
-    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-    return result;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String convertTypeToString(EDataType eDataType, Object instanceValue)
   {
     return instanceValue == null ? null : instanceValue.toString();
   }

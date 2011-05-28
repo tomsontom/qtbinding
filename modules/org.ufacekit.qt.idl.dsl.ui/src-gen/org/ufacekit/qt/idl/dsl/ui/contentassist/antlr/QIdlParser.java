@@ -44,7 +44,10 @@ public class QIdlParser extends AbstractContentAssistParser {
 					put(grammarAccess.getQtClassAccess().getAlternatives_5(), "rule__QtClass__Alternatives_5");
 					put(grammarAccess.getQtEnumValueMaskAccess().getAlternatives_0(), "rule__QtEnumValueMask__Alternatives_0");
 					put(grammarAccess.getQtEnumValueMaskAccess().getAlternatives_1_1(), "rule__QtEnumValueMask__Alternatives_1_1");
+					put(grammarAccess.getQtValueAccess().getValueTypeAlternatives_1_0(), "rule__QtValue__ValueTypeAlternatives_1_0");
+					put(grammarAccess.getQtTypeRefAccess().getValueTypeAlternatives_2_0(), "rule__QtTypeRef__ValueTypeAlternatives_2_0");
 					put(grammarAccess.getQtParameterAccess().getAlternatives_1_1(), "rule__QtParameter__Alternatives_1_1");
+					put(grammarAccess.getQtReturnValueAccess().getValueTypeAlternatives_1_0(), "rule__QtReturnValue__ValueTypeAlternatives_1_0");
 					put(grammarAccess.getXAssignmentAccess().getAlternatives(), "rule__XAssignment__Alternatives");
 					put(grammarAccess.getOpEqualityAccess().getAlternatives(), "rule__OpEquality__Alternatives");
 					put(grammarAccess.getXRelationalExpressionAccess().getAlternatives_1(), "rule__XRelationalExpression__Alternatives_1");
@@ -74,7 +77,6 @@ public class QIdlParser extends AbstractContentAssistParser {
 					put(grammarAccess.getVirtualityAccess().getAlternatives(), "rule__Virtuality__Alternatives");
 					put(grammarAccess.getVisibilityAccess().getAlternatives(), "rule__Visibility__Alternatives");
 					put(grammarAccess.getOwnerAccess().getAlternatives(), "rule__Owner__Alternatives");
-					put(grammarAccess.getTypeAccess().getAlternatives(), "rule__Type__Alternatives");
 					put(grammarAccess.getQtNamespaceAccess().getGroup(), "rule__QtNamespace__Group__0");
 					put(grammarAccess.getQtClassAccess().getGroup(), "rule__QtClass__Group__0");
 					put(grammarAccess.getQtClassAccess().getGroup_2(), "rule__QtClass__Group_2__0");
@@ -281,6 +283,7 @@ public class QIdlParser extends AbstractContentAssistParser {
 					put(grammarAccess.getQtTypeRefAccess().getTypeAssignment_0(), "rule__QtTypeRef__TypeAssignment_0");
 					put(grammarAccess.getQtTypeRefAccess().getTemplateTypesAssignment_1_1(), "rule__QtTypeRef__TemplateTypesAssignment_1_1");
 					put(grammarAccess.getQtTypeRefAccess().getTemplateTypesAssignment_1_2_1(), "rule__QtTypeRef__TemplateTypesAssignment_1_2_1");
+					put(grammarAccess.getQtTypeRefAccess().getValueTypeAssignment_2(), "rule__QtTypeRef__ValueTypeAssignment_2");
 					put(grammarAccess.getQtClassTypeRefAccess().getTypeAssignment_0(), "rule__QtClassTypeRef__TypeAssignment_0");
 					put(grammarAccess.getQtClassTypeRefAccess().getTemplateTypesAssignment_1_1(), "rule__QtClassTypeRef__TemplateTypesAssignment_1_1");
 					put(grammarAccess.getQtClassTypeRefAccess().getTemplateTypesAssignment_1_2_1(), "rule__QtClassTypeRef__TemplateTypesAssignment_1_2_1");

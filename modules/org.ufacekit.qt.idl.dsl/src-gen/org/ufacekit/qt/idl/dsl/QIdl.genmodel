@@ -21,10 +21,6 @@
       <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//Owner/member"/>
       <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//Owner/class"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//Type">
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//Type/pointer"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//Type/reference"/>
-    </genEnums>
     <genClasses ecoreClass="platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtIdlTyp">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtIdlTyp/element"/>
     </genClasses>
@@ -98,6 +94,7 @@
     <genClasses ecoreClass="platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtTypeRef">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtTypeRef/type"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtTypeRef/templateTypes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtTypeRef/valueType"/>
     </genClasses>
     <genClasses ecoreClass="platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtClassTypeRef">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.ufacekit.qt.idl.dsl/src-gen/org/ufacekit/qt/idl/dsl/QIdl.ecore#//QtClassTypeRef/type"/>

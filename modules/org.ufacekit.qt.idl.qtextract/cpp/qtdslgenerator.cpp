@@ -58,7 +58,7 @@ const QString QtDslGenerator::enumValueDslValue(const Tree *tree, const EnumItem
                 }
                 rv.append(QString::number(QString(n.trimmed()).remove(0,2).toLong(0,16)));
             } else if( n.contains("::") ) {
-                //TODO Fixme
+                return qualifiedEnumValuePath(tree,n);
             } else {
                 if( rv.size() > 0 ) {
                     rv.append(" | ");
@@ -71,14 +71,45 @@ const QString QtDslGenerator::enumValueDslValue(const Tree *tree, const EnumItem
             return rv;
         }
 
-        return NULL;
+        return "__UNKNOWN__";
     }
 
-    return NULL;
+    return "__UNKNOWN__";
 }
 
-QString QtDslGenerator::qualifiedEnumValuePath(const Tree *tree, const QString cppValuePath) {
+const QString QtDslGenerator::qualifiedEnumValuePath(const Tree *tree, const QString cppValuePath) {
+    foreach( QString s, cppValuePath.split("::") ) {
 
+    }
+
+    return "__UNKNOWN__";
+}
+
+const QString QtDslGenerator::typeConverter(QString type) {
+    QString rv;
+    type = type.trimmed();
+    /*if( type.endsWith('*') ) {
+        rv = QString("pointer " + type.remove("*").replace("::","."));
+    } else if( type.endsWith('&') ) {
+        rv = QString("reference " + type.remove("&").replace("::","."));
+    } else {*/
+        rv = QString(type.replace("::","."));
+    //}
+
+    if( rv.contains("const ") ) {
+        rv = rv.replace("const ","");
+        rv = rv.prepend("const ");
+    }
+
+    if( rv.contains(" const") ) {
+        rv = rv.replace(" const","");
+        rv = rv.prepend("const ");
+    }
+
+    //rv = rv.replace(QRegExp("\\s+")," ");
+    rv = rv.trimmed();
+
+    return rv;
 }
 
 void QtDslGenerator::generateNodeContent(const Tree *tree, const Node *node, CodeMarker *marker, QTextStream & stream, int indent) {
@@ -86,22 +117,52 @@ void QtDslGenerator::generateNodeContent(const Tree *tree, const Node *node, Cod
     const EnumNode *enume;
     const PropertyNode * property;
     const FunctionNode *func;
+    const TypedefNode *typeDef;
+    const ClassNode *classe;
+    int i = 0;
 
     switch (node->type()) {
+        case Node::Typedef:
+            typeDef = static_cast<const TypedefNode *>(node);
+
+            // std::cout << " => " << node->name().toStdString() << ":" << typeDef->isInnerNode() << std::endl;
+            // std::cout << " => " << typeDef->location().toStdString() << std::endl;
+            // std::cout << " => " << typeDef->pageType() << std::endl;
+            stream << indentStr(indent) << "q_typedef " << node->name() << " : " << "___UNKNOWN___" << ";\n\n";
+            break;
         case Node::Namespace:
-            stream << indentStr(indent) << "namespace " << node->name() << " {" << "\n";
+            stream << indentStr(indent) << "q_namespace " << node->name() << " {" << "\n";
             close = true;
             ++indent;
             break;
         case Node::Class:
-            stream << indentStr(indent) << "class " << node->name() << " {"<< "\n";
+            classe = static_cast<const ClassNode *>(node);
+
+            stream << indentStr(indent) << "q_class " << node->name();
+            if( ! classe->baseClasses().isEmpty() ) {
+                stream << " extends ";
+            }
+
+            // std::cout << " ==> " << classe->templateStuff().toStdString() << std::endl;
+
+            foreach (const RelatedClass &baseClass, classe->baseClasses()) {
+                if( i > 0 ) {
+                    stream << ", ";
+                }
+
+                stream << baseClass.dataTypeWithTemplateArgs;
+
+                i++;
+            }
+
+            stream << " {"<< "\n";
             close = true;
             ++indent;
             break;
         case Node::Enum:
             enume = static_cast<const EnumNode *>(node);
 
-            stream << indentStr(indent) << "enumeration " << node->name() << " {" << "\n";
+            stream << indentStr(indent) << "q_enumeration " << node->name() << " {" << "\n";
 
             foreach (const EnumItem &item, enume->items()) {
                 QString value = enumValueDslValue(tree,item,enume);
@@ -111,7 +172,7 @@ void QtDslGenerator::generateNodeContent(const Tree *tree, const Node *node, Cod
             stream << indentStr(indent) << "}\n\n";
 
             if( enume->flagsType() ) {
-                stream << indentStr(indent) << "flags " << enume->flagsType()->name() << " : " << node->name() << ";\n\n";
+                stream << indentStr(indent) << "q_flags " << enume->flagsType()->name() << " : " << node->name() << ";\n\n";
             }
 
             ++indent;
@@ -153,17 +214,44 @@ void QtDslGenerator::generateNodeContent(const Tree *tree, const Node *node, Cod
                         stream << "member ";
                     }
 
-                    stream << "function ";
+                    stream << "q_function ";
 
                     stream << func->name();
                     stream << "(";
+
+                    foreach( Parameter param, func->parameters() ) {
+                        if( i > 0 ) {
+                            stream << ", ";
+                        }
+
+                        stream << typeConverter(param.leftType()) << " " << param.name();
+                        if( param.defaultValue() != NULL ) {
+                            stream << " = " << typeConverter(param.defaultValue());
+                        }
+
+                        i++;
+                    }
+
                     stream << ") : ";
 
-                    if( func->returnType().contains('*') ) {
-                        stream << "pointer " << QString(func->returnType()).remove("*") << ";\n";
-                    } else {
-                        stream << func->returnType() << ";\n";
+                    stream << typeConverter(func->returnType()) << ";\n";
+
+                    /*QString val(func->returnType().trimmed());
+                    if( val.startsWith("const ") ) {
+                        stream << "const ";
+                        val = val.remove(0, QString("const ").size());
+                        val = val.trimmed();
                     }
+
+
+
+                    if( val.contains('*') ) {
+                        stream << "pointer " << val.remove("*").replace("::",".") << ";\n";
+                    } else if( func->returnType().trimmed().contains('&') ) {
+                        stream << "reference " << val.remove("&").replace("::",".") << ";\n";
+                    } else {
+                        stream << val.replace("::",".") << ";\n";
+                    }*/
                 }
             }
 
@@ -176,17 +264,21 @@ void QtDslGenerator::generateNodeContent(const Tree *tree, const Node *node, Cod
             break;
         case Node::Property:
             property = static_cast<const PropertyNode *>(node);
-            stream << indentStr(indent) << "property ";
+            stream << indentStr(indent) << "q_property ";
 
             if( property->isConstant() ) {
                 stream << "const ";
             }
 
-            if( property->qualifiedDataType().contains('*') ) {
-                stream << "pointer " << QString(property->qualifiedDataType()).remove("*");
+            stream << typeConverter( property->qualifiedDataType() );
+
+            /*if( property->qualifiedDataType().trimmed().contains('*') ) {
+                stream << "pointer " << QString(property->qualifiedDataType().trimmed()).remove("*");
+            } else if( property->qualifiedDataType().trimmed().contains('&') ) {
+                stream << "pointer " << QString(property->qualifiedDataType().trimmed()).remove("&");
             } else {
-                stream << property->qualifiedDataType();
-            }
+                stream << QString(property->qualifiedDataType()).replace("::",".");
+            }*/
 
             stream << " " << node->name() << ";\n";
 
@@ -206,12 +298,21 @@ void QtDslGenerator::generateNodeContent(const Tree *tree, const Node *node, Cod
         QList<const Node *> protectedMethods;
         QList<const Node *> slotMethods;
         QList<const Node *> signalMethods;
+        QList<const Node *> typeDefs;
 
         foreach (const Node *child, nodes) {
             if( child->type() == Node::Namespace ) {
                 namespaceNodes.append(child);
             } else if( child->type() == Node::Class ) {
                 classNodes.append(child);
+            } else if( child->type() == Node::Typedef ) {
+                const TypedefNode * typeDef = static_cast<const TypedefNode *>(child);
+                if( ! typeDef->associatedEnum() ) {
+                    typeDefs.append(child);
+                    // std::cout << "Not Enum " << typeDef->name().toStdString() << std::endl;
+                } else {
+                    // std::cout << "Enum: " << typeDef->name().toStdString() << std::endl;
+                }
             } else if( child->type() == Node::Enum ) {
                 enumNodes.append(child);
             } else if( child->type() == Node::Property ) {
@@ -230,10 +331,12 @@ void QtDslGenerator::generateNodeContent(const Tree *tree, const Node *node, Cod
                      } else if( func->metaness() == FunctionNode::Slot ) {
                         slotMethods.append(child);
                      } else {
-                        if( func->access() == Node::Protected ) {
-                            protectedMethods.append(child);
-                        } else if( func->access() == Node::Public ) {
-                            publicMethods.append(child);
+                        if( ! child->name().startsWith("operator") ) {
+                            if( func->access() == Node::Protected ) {
+                                protectedMethods.append(child);
+                            } else if( func->access() == Node::Public ) {
+                                publicMethods.append(child);
+                            }
                         }
                      }
                 }
@@ -253,6 +356,14 @@ void QtDslGenerator::generateNodeContent(const Tree *tree, const Node *node, Cod
         }
 
         if( ! enumNodes.isEmpty() ) {
+            stream << "\n";
+        }
+
+        foreach( const Node *child, typeDefs ) {
+            generateNodeContent(tree, child, marker,stream, indent);
+        }
+
+        if( ! typeDefs.isEmpty() ) {
             stream << "\n";
         }
 
@@ -317,21 +428,37 @@ void QtDslGenerator::generateNode(const Tree *tree, const Node *node, CodeMarker
     // std::cout << "Generating: " << node->name().toStdString() << std::endl;
 
     if( node->type() == Node::Namespace ) {
+        std::cout << "Working for " << node->moduleName().toStdString() <<  "::" << node->name().toStdString();
         QTextStream stream;
-        QFile outfile( QString("/Users/tomschindl/qtbinding/modules/org.eclipse.ufacekit.qt.idl/src-auto/").append(node->name()).append(".qnamespace"));
+        QFile outfile( QString("/Users/tomschindl/model-qt/modules/org.ufacekit.qt.idl/src-gen/org/ufacekit/qt/idl/").append(node->moduleName().toLower()).append("/").append(node->name()).append(".qnamespace"));
+
         outfile.open(QIODevice::WriteOnly);
         stream.setDevice(&outfile);
 
         generateNodeContent(tree, node,marker,stream);
         outfile.flush();
+        std::cout << "Done" << std::endl;
     } else if( node->type() == Node::Class )  {
+        std::cout << "Working for " << node->moduleName().toStdString() <<  "::" << node->name().toStdString();
         QTextStream stream;
-        QFile outfile( QString("/Users/tomschindl/qtbinding/modules/org.eclipse.ufacekit.qt.idl/src-auto/").append(node->name()).append(".qclass"));
+        QFile outfile( QString("/Users/tomschindl/model-qt/modules/org.ufacekit.qt.idl/src-gen/org/ufacekit/qt/idl/").append(node->moduleName().toLower()).append("/").append(node->name()).append(".qclass"));
         outfile.open(QIODevice::WriteOnly);
         stream.setDevice(&outfile);
 
         generateNodeContent(tree, node,marker,stream);
         outfile.flush();
+        std::cout << " Done" << std::endl;
+    } else if( node->type() == Node::Typedef ) {
+        /*QTextStream stream;
+        QFile outfile( QString("/Users/tomschindl/model-qt/modules/org.ufacekit.qt.idl/src-gen/org/ufacekit/qt/idl/").append(node->moduleName().toLower()).append("/").append(node->name()).append(".qtypedef"));
+        outfile.open(QIODevice::WriteOnly);
+        stream.setDevice(&outfile);
+
+        generateNodeContent(tree, node,marker,stream);
+        outfile.flush();*/
+    } else if( node->type() == Node::Variable ) {
+        // const FakeNode *inner = static_cast<const FakeNode *>(node);
+        //std::cout << "Variable:" << node->name().toStdString() << std::endl;
     }
 
     /*

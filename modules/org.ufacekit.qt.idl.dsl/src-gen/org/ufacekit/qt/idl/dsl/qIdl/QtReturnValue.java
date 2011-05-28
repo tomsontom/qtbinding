@@ -55,7 +55,6 @@ public interface QtReturnValue extends EObject
 
   /**
    * Returns the value of the '<em><b>Value Type</b></em>' attribute.
-   * The literals are from the enumeration {@link org.ufacekit.qt.idl.dsl.qIdl.Type}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Value Type</em>' attribute isn't clear,
@@ -63,24 +62,22 @@ public interface QtReturnValue extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Value Type</em>' attribute.
-   * @see org.ufacekit.qt.idl.dsl.qIdl.Type
-   * @see #setValueType(Type)
+   * @see #setValueType(String)
    * @see org.ufacekit.qt.idl.dsl.qIdl.QIdlPackage#getQtReturnValue_ValueType()
    * @model
    * @generated
    */
-  Type getValueType();
+  String getValueType();
 
   /**
    * Sets the value of the '{@link org.ufacekit.qt.idl.dsl.qIdl.QtReturnValue#getValueType <em>Value Type</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Value Type</em>' attribute.
-   * @see org.ufacekit.qt.idl.dsl.qIdl.Type
    * @see #getValueType()
    * @generated
    */
-  void setValueType(Type value);
+  void setValueType(String value);
 
   /**
    * Returns the value of the '<em><b>Type Ref</b></em>' containment reference.

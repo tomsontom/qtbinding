@@ -17,7 +17,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.ufacekit.qt.idl.dsl.qIdl.QIdlPackage;
 import org.ufacekit.qt.idl.dsl.qIdl.QtTypeRef;
 import org.ufacekit.qt.idl.dsl.qIdl.QtValue;
-import org.ufacekit.qt.idl.dsl.qIdl.Type;
 
 /**
  * <!-- begin-user-doc -->
@@ -65,7 +64,7 @@ public class QtValueImpl extends MinimalEObjectImpl.Container implements QtValue
    * @generated
    * @ordered
    */
-  protected static final Type VALUE_TYPE_EDEFAULT = Type.POINTER;
+  protected static final String VALUE_TYPE_EDEFAULT = null;
 
   /**
    * The cached value of the '{@link #getValueType() <em>Value Type</em>}' attribute.
@@ -75,7 +74,7 @@ public class QtValueImpl extends MinimalEObjectImpl.Container implements QtValue
    * @generated
    * @ordered
    */
-  protected Type valueType = VALUE_TYPE_EDEFAULT;
+  protected String valueType = VALUE_TYPE_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getTypeRef() <em>Type Ref</em>}' containment reference.
@@ -156,7 +155,7 @@ public class QtValueImpl extends MinimalEObjectImpl.Container implements QtValue
    * <!-- end-user-doc -->
    * @generated
    */
-  public Type getValueType()
+  public String getValueType()
   {
     return valueType;
   }
@@ -166,10 +165,10 @@ public class QtValueImpl extends MinimalEObjectImpl.Container implements QtValue
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setValueType(Type newValueType)
+  public void setValueType(String newValueType)
   {
-    Type oldValueType = valueType;
-    valueType = newValueType == null ? VALUE_TYPE_EDEFAULT : newValueType;
+    String oldValueType = valueType;
+    valueType = newValueType;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, QIdlPackage.QT_VALUE__VALUE_TYPE, oldValueType, valueType));
   }
@@ -297,7 +296,7 @@ public class QtValueImpl extends MinimalEObjectImpl.Container implements QtValue
         setConst((String)newValue);
         return;
       case QIdlPackage.QT_VALUE__VALUE_TYPE:
-        setValueType((Type)newValue);
+        setValueType((String)newValue);
         return;
       case QIdlPackage.QT_VALUE__TYPE_REF:
         setTypeRef((QtTypeRef)newValue);
@@ -348,7 +347,7 @@ public class QtValueImpl extends MinimalEObjectImpl.Container implements QtValue
       case QIdlPackage.QT_VALUE__CONST:
         return CONST_EDEFAULT == null ? const_ != null : !CONST_EDEFAULT.equals(const_);
       case QIdlPackage.QT_VALUE__VALUE_TYPE:
-        return valueType != VALUE_TYPE_EDEFAULT;
+        return VALUE_TYPE_EDEFAULT == null ? valueType != null : !VALUE_TYPE_EDEFAULT.equals(valueType);
       case QIdlPackage.QT_VALUE__TYPE_REF:
         return typeRef != null;
       case QIdlPackage.QT_VALUE__NAME:

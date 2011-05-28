@@ -196,12 +196,12 @@ protected class QtIdlTyp_ElementAssignment extends AssignmentToken  {
 /************ begin Rule QtNamespace ****************
  *
  * QtNamespace:
- * 	"namespace" name=ID "{" (namespaces+=QtNamespace | enums+=QtEnum | flags+=QtFlags | classes+=QtClass |
+ * 	"q_namespace" name=ID "{" (namespaces+=QtNamespace | enums+=QtEnum | flags+=QtFlags | classes+=QtClass |
  * 	operations+=QtOperation | typedef+=QtTypeDef)* "}";
  *
  **/
 
-// "namespace" name=ID "{" (namespaces+=QtNamespace | enums+=QtEnum | flags+=QtFlags | classes+=QtClass |
+// "q_namespace" name=ID "{" (namespaces+=QtNamespace | enums+=QtEnum | flags+=QtFlags | classes+=QtClass |
 // operations+=QtOperation | typedef+=QtTypeDef)* "}"
 protected class QtNamespace_Group extends GroupToken {
 	
@@ -231,16 +231,16 @@ protected class QtNamespace_Group extends GroupToken {
 
 }
 
-// "namespace"
-protected class QtNamespace_NamespaceKeyword_0 extends KeywordToken  {
+// "q_namespace"
+protected class QtNamespace_Q_namespaceKeyword_0 extends KeywordToken  {
 	
-	public QtNamespace_NamespaceKeyword_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public QtNamespace_Q_namespaceKeyword_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Keyword getGrammarElement() {
-		return grammarAccess.getQtNamespaceAccess().getNamespaceKeyword_0();
+		return grammarAccess.getQtNamespaceAccess().getQ_namespaceKeyword_0();
 	}
 
     @Override
@@ -267,7 +267,7 @@ protected class QtNamespace_NameAssignment_1 extends AssignmentToken  {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new QtNamespace_NamespaceKeyword_0(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new QtNamespace_Q_namespaceKeyword_0(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -1067,13 +1067,13 @@ protected class QtOperation_QtSlotParserRuleCall_2 extends RuleCallToken {
 /************ begin Rule QtClass ****************
  *
  * QtClass:
- * 	"class" name=ID ("<" templateTypes+=QtTemplateParam ("," templateTypes+=QtTemplateParam)* ">")? ("extends"
+ * 	"q_class" name=ID ("<" templateTypes+=QtTemplateParam ("," templateTypes+=QtTemplateParam)* ">")? ("extends"
  * 	superTypes+=QtClassTypeRef ("," superTypes+=QtClassTypeRef)*)? "{" (enums+=QtEnum | flags+=QtFlags | classes+=QtClass
  * 	| properties+=QtProperty | constructors+=QtConstructor | operations+=QtOperation | typedef+=QtTypeDef)* "}";
  *
  **/
 
-// "class" name=ID ("<" templateTypes+=QtTemplateParam ("," templateTypes+=QtTemplateParam)* ">")? ("extends"
+// "q_class" name=ID ("<" templateTypes+=QtTemplateParam ("," templateTypes+=QtTemplateParam)* ">")? ("extends"
 // superTypes+=QtClassTypeRef ("," superTypes+=QtClassTypeRef)*)? "{" (enums+=QtEnum | flags+=QtFlags | classes+=QtClass |
 // properties+=QtProperty | constructors+=QtConstructor | operations+=QtOperation | typedef+=QtTypeDef)* "}"
 protected class QtClass_Group extends GroupToken {
@@ -1104,16 +1104,16 @@ protected class QtClass_Group extends GroupToken {
 
 }
 
-// "class"
-protected class QtClass_ClassKeyword_0 extends KeywordToken  {
+// "q_class"
+protected class QtClass_Q_classKeyword_0 extends KeywordToken  {
 	
-	public QtClass_ClassKeyword_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public QtClass_Q_classKeyword_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Keyword getGrammarElement() {
-		return grammarAccess.getQtClassAccess().getClassKeyword_0();
+		return grammarAccess.getQtClassAccess().getQ_classKeyword_0();
 	}
 
     @Override
@@ -1140,7 +1140,7 @@ protected class QtClass_NameAssignment_1 extends AssignmentToken  {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new QtClass_ClassKeyword_0(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new QtClass_Q_classKeyword_0(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -2010,11 +2010,11 @@ protected class QtTemplateParam_NameAssignment extends AssignmentToken  {
 /************ begin Rule QtTypeDef ****************
  *
  * QtTypeDef:
- * 	"typedef" name=ID ":" typeRef=QtTypeRef ";";
+ * 	"q_typedef" name=ID ":" typeRef=QtTypeRef ";";
  *
  **/
 
-// "typedef" name=ID ":" typeRef=QtTypeRef ";"
+// "q_typedef" name=ID ":" typeRef=QtTypeRef ";"
 protected class QtTypeDef_Group extends GroupToken {
 	
 	public QtTypeDef_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -2043,16 +2043,16 @@ protected class QtTypeDef_Group extends GroupToken {
 
 }
 
-// "typedef"
-protected class QtTypeDef_TypedefKeyword_0 extends KeywordToken  {
+// "q_typedef"
+protected class QtTypeDef_Q_typedefKeyword_0 extends KeywordToken  {
 	
-	public QtTypeDef_TypedefKeyword_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public QtTypeDef_Q_typedefKeyword_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Keyword getGrammarElement() {
-		return grammarAccess.getQtTypeDefAccess().getTypedefKeyword_0();
+		return grammarAccess.getQtTypeDefAccess().getQ_typedefKeyword_0();
 	}
 
     @Override
@@ -2079,7 +2079,7 @@ protected class QtTypeDef_NameAssignment_1 extends AssignmentToken  {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new QtTypeDef_TypedefKeyword_0(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new QtTypeDef_Q_typedefKeyword_0(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -2195,11 +2195,11 @@ protected class QtTypeDef_SemicolonKeyword_4 extends KeywordToken  {
 /************ begin Rule QtConstructor ****************
  *
  * QtConstructor:
- * 	"constructor" {QtConstructor} "(" (params+=QtParameter ("," params+=QtParameter)*)? ");";
+ * 	"q_constructor" {QtConstructor} "(" (params+=QtParameter ("," params+=QtParameter)*)? ");";
  *
  **/
 
-// "constructor" {QtConstructor} "(" (params+=QtParameter ("," params+=QtParameter)*)? ");"
+// "q_constructor" {QtConstructor} "(" (params+=QtParameter ("," params+=QtParameter)*)? ");"
 protected class QtConstructor_Group extends GroupToken {
 	
 	public QtConstructor_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -2228,16 +2228,16 @@ protected class QtConstructor_Group extends GroupToken {
 
 }
 
-// "constructor"
-protected class QtConstructor_ConstructorKeyword_0 extends KeywordToken  {
+// "q_constructor"
+protected class QtConstructor_Q_constructorKeyword_0 extends KeywordToken  {
 	
-	public QtConstructor_ConstructorKeyword_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public QtConstructor_Q_constructorKeyword_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Keyword getGrammarElement() {
-		return grammarAccess.getQtConstructorAccess().getConstructorKeyword_0();
+		return grammarAccess.getQtConstructorAccess().getQ_constructorKeyword_0();
 	}
 
     @Override
@@ -2264,7 +2264,7 @@ protected class QtConstructor_QtConstructorAction_1 extends ActionToken  {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new QtConstructor_ConstructorKeyword_0(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new QtConstructor_Q_constructorKeyword_0(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -2490,11 +2490,11 @@ protected class QtConstructor_RightParenthesisSemicolonKeyword_4 extends Keyword
 /************ begin Rule QtProperty ****************
  *
  * QtProperty:
- * 	"property" type=QtValue ";";
+ * 	"q_property" type=QtValue ";";
  *
  **/
 
-// "property" type=QtValue ";"
+// "q_property" type=QtValue ";"
 protected class QtProperty_Group extends GroupToken {
 	
 	public QtProperty_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -2523,16 +2523,16 @@ protected class QtProperty_Group extends GroupToken {
 
 }
 
-// "property"
-protected class QtProperty_PropertyKeyword_0 extends KeywordToken  {
+// "q_property"
+protected class QtProperty_Q_propertyKeyword_0 extends KeywordToken  {
 	
-	public QtProperty_PropertyKeyword_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public QtProperty_Q_propertyKeyword_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Keyword getGrammarElement() {
-		return grammarAccess.getQtPropertyAccess().getPropertyKeyword_0();
+		return grammarAccess.getQtPropertyAccess().getQ_propertyKeyword_0();
 	}
 
     @Override
@@ -2584,7 +2584,7 @@ protected class QtProperty_TypeAssignment_1 extends AssignmentToken  {
 	public AbstractToken createFollowerAfterReturn(AbstractToken next,	int actIndex, int index, IEObjectConsumer inst) {
 		if(value == inst.getEObject() && !inst.isConsumed()) return null;
 		switch(index) {
-			case 0: return new QtProperty_PropertyKeyword_0(lastRuleCallOrigin, next, actIndex, consumed);
+			case 0: return new QtProperty_Q_propertyKeyword_0(lastRuleCallOrigin, next, actIndex, consumed);
 			default: return null;
 		}	
 	}	
@@ -2619,11 +2619,11 @@ protected class QtProperty_SemicolonKeyword_2 extends KeywordToken  {
 /************ begin Rule QtEnum ****************
  *
  * QtEnum:
- * 	"enumeration" name=ID "{" values+=QtEnumValue* "}";
+ * 	"q_enumeration" name=ID "{" values+=QtEnumValue* "}";
  *
  **/
 
-// "enumeration" name=ID "{" values+=QtEnumValue* "}"
+// "q_enumeration" name=ID "{" values+=QtEnumValue* "}"
 protected class QtEnum_Group extends GroupToken {
 	
 	public QtEnum_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -2652,16 +2652,16 @@ protected class QtEnum_Group extends GroupToken {
 
 }
 
-// "enumeration"
-protected class QtEnum_EnumerationKeyword_0 extends KeywordToken  {
+// "q_enumeration"
+protected class QtEnum_Q_enumerationKeyword_0 extends KeywordToken  {
 	
-	public QtEnum_EnumerationKeyword_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public QtEnum_Q_enumerationKeyword_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Keyword getGrammarElement() {
-		return grammarAccess.getQtEnumAccess().getEnumerationKeyword_0();
+		return grammarAccess.getQtEnumAccess().getQ_enumerationKeyword_0();
 	}
 
     @Override
@@ -2688,7 +2688,7 @@ protected class QtEnum_NameAssignment_1 extends AssignmentToken  {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new QtEnum_EnumerationKeyword_0(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new QtEnum_Q_enumerationKeyword_0(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -2806,11 +2806,11 @@ protected class QtEnum_RightCurlyBracketKeyword_4 extends KeywordToken  {
 /************ begin Rule QtFlags ****************
  *
  * QtFlags:
- * 	"flags" name=ID ":" enumeration=[QtEnum] ";";
+ * 	"q_flags" name=ID ":" enumeration=[QtEnum] ";";
  *
  **/
 
-// "flags" name=ID ":" enumeration=[QtEnum] ";"
+// "q_flags" name=ID ":" enumeration=[QtEnum] ";"
 protected class QtFlags_Group extends GroupToken {
 	
 	public QtFlags_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -2839,16 +2839,16 @@ protected class QtFlags_Group extends GroupToken {
 
 }
 
-// "flags"
-protected class QtFlags_FlagsKeyword_0 extends KeywordToken  {
+// "q_flags"
+protected class QtFlags_Q_flagsKeyword_0 extends KeywordToken  {
 	
-	public QtFlags_FlagsKeyword_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public QtFlags_Q_flagsKeyword_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Keyword getGrammarElement() {
-		return grammarAccess.getQtFlagsAccess().getFlagsKeyword_0();
+		return grammarAccess.getQtFlagsAccess().getQ_flagsKeyword_0();
 	}
 
     @Override
@@ -2875,7 +2875,7 @@ protected class QtFlags_NameAssignment_1 extends AssignmentToken  {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new QtFlags_FlagsKeyword_0(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new QtFlags_Q_flagsKeyword_0(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -3400,11 +3400,11 @@ protected class QtEnumValueMask_NumericValueAssignment_1_1_1 extends AssignmentT
 /************ begin Rule QtBuitinType ****************
  *
  * QtBuitinType:
- * 	"builtin" name=ID ":" value=JvmArgumentTypeReference;
+ * 	"q_builtin" name=ID ":" value=JvmArgumentTypeReference;
  *
  **/
 
-// "builtin" name=ID ":" value=JvmArgumentTypeReference
+// "q_builtin" name=ID ":" value=JvmArgumentTypeReference
 protected class QtBuitinType_Group extends GroupToken {
 	
 	public QtBuitinType_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -3433,16 +3433,16 @@ protected class QtBuitinType_Group extends GroupToken {
 
 }
 
-// "builtin"
-protected class QtBuitinType_BuiltinKeyword_0 extends KeywordToken  {
+// "q_builtin"
+protected class QtBuitinType_Q_builtinKeyword_0 extends KeywordToken  {
 	
-	public QtBuitinType_BuiltinKeyword_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public QtBuitinType_Q_builtinKeyword_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Keyword getGrammarElement() {
-		return grammarAccess.getQtBuitinTypeAccess().getBuiltinKeyword_0();
+		return grammarAccess.getQtBuitinTypeAccess().getQ_builtinKeyword_0();
 	}
 
     @Override
@@ -3469,7 +3469,7 @@ protected class QtBuitinType_NameAssignment_1 extends AssignmentToken  {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new QtBuitinType_BuiltinKeyword_0(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new QtBuitinType_Q_builtinKeyword_0(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -3563,12 +3563,12 @@ protected class QtBuitinType_ValueAssignment_3 extends AssignmentToken  {
 /************ begin Rule QtFunction ****************
  *
  * QtFunction:
- * 	visibility=Visibility const="const"? virtual=Virtuality? owner=Owner "function" name=ID "(" (params+=QtParameter (","
- * 	params+=QtParameter)*)? ")" ":" returnValue=QtReturnValue ";";
+ * 	visibility=Visibility const="const"? virtual=Virtuality? owner=Owner "q_function" name=ID "(" (params+=QtParameter
+ * 	("," params+=QtParameter)*)? ")" ":" returnValue=QtReturnValue ";";
  *
  **/
 
-// visibility=Visibility const="const"? virtual=Virtuality? owner=Owner "function" name=ID "(" (params+=QtParameter (","
+// visibility=Visibility const="const"? virtual=Virtuality? owner=Owner "q_function" name=ID "(" (params+=QtParameter (","
 // params+=QtParameter)*)? ")" ":" returnValue=QtReturnValue ";"
 protected class QtFunction_Group extends GroupToken {
 	
@@ -3736,16 +3736,16 @@ protected class QtFunction_OwnerAssignment_3 extends AssignmentToken  {
 
 }
 
-// "function"
-protected class QtFunction_FunctionKeyword_4 extends KeywordToken  {
+// "q_function"
+protected class QtFunction_Q_functionKeyword_4 extends KeywordToken  {
 	
-	public QtFunction_FunctionKeyword_4(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public QtFunction_Q_functionKeyword_4(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Keyword getGrammarElement() {
-		return grammarAccess.getQtFunctionAccess().getFunctionKeyword_4();
+		return grammarAccess.getQtFunctionAccess().getQ_functionKeyword_4();
 	}
 
     @Override
@@ -3773,7 +3773,7 @@ protected class QtFunction_NameAssignment_5 extends AssignmentToken  {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new QtFunction_FunctionKeyword_4(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new QtFunction_Q_functionKeyword_4(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -4096,11 +4096,11 @@ protected class QtFunction_SemicolonKeyword_11 extends KeywordToken  {
 /************ begin Rule QtValue ****************
  *
  * QtValue:
- * 	const="const"? valueType=Type? typeRef=QtTypeRef name=ID;
+ * 	const="const"? valueType=("*" | "&")? typeRef=QtTypeRef name=ID;
  *
  **/
 
-// const="const"? valueType=Type? typeRef=QtTypeRef name=ID
+// const="const"? valueType=("*" | "&")? typeRef=QtTypeRef name=ID
 protected class QtValue_Group extends GroupToken {
 	
 	public QtValue_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -4162,7 +4162,7 @@ protected class QtValue_ConstAssignment_0 extends AssignmentToken  {
 
 }
 
-// valueType=Type?
+// valueType=("*" | "&")?
 protected class QtValue_ValueTypeAssignment_1 extends AssignmentToken  {
 	
 	public QtValue_ValueTypeAssignment_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -4186,9 +4186,14 @@ protected class QtValue_ValueTypeAssignment_1 extends AssignmentToken  {
 	public IEObjectConsumer tryConsume() {
 		if((value = eObjectConsumer.getConsumable("valueType",false)) == null) return null;
 		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("valueType");
-		if(enumLitSerializer.isValid(obj.getEObject(), grammarAccess.getQtValueAccess().getValueTypeTypeEnumRuleCall_1_0(), value, null)) { 
-			type = AssignmentType.ENUM_RULE_CALL;
-			element = grammarAccess.getQtValueAccess().getValueTypeTypeEnumRuleCall_1_0();
+		if(keywordSerializer.isValid(obj.getEObject(), grammarAccess.getQtValueAccess().getValueTypeAsteriskKeyword_1_0_0(), value, null)) {
+			type = AssignmentType.KEYWORD;
+			element = grammarAccess.getQtValueAccess().getValueTypeAsteriskKeyword_1_0_0();
+			return obj;
+		}
+		if(keywordSerializer.isValid(obj.getEObject(), grammarAccess.getQtValueAccess().getValueTypeAmpersandKeyword_1_0_1(), value, null)) {
+			type = AssignmentType.KEYWORD;
+			element = grammarAccess.getQtValueAccess().getValueTypeAmpersandKeyword_1_0_1();
 			return obj;
 		}
 		return null;
@@ -4287,11 +4292,12 @@ protected class QtValue_NameAssignment_3 extends AssignmentToken  {
  * //	QtParameterizedTypeRef
  * //;
  * QtTypeRef:
- * 	type=[QtType|QualifiedName] ("<" templateTypes+=QtTypeRef ("," templateTypes+=QtTypeRef)* ">")?;
+ * 	type=[QtType|QualifiedName] ("<" templateTypes+=QtTypeRef ("," templateTypes+=QtTypeRef)* ">")? valueType=("*" |
+ * 	"&")?;
  *
  **/
 
-// type=[QtType|QualifiedName] ("<" templateTypes+=QtTypeRef ("," templateTypes+=QtTypeRef)* ">")?
+// type=[QtType|QualifiedName] ("<" templateTypes+=QtTypeRef ("," templateTypes+=QtTypeRef)* ">")? valueType=("*" | "&")?
 protected class QtTypeRef_Group extends GroupToken {
 	
 	public QtTypeRef_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -4306,8 +4312,9 @@ protected class QtTypeRef_Group extends GroupToken {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new QtTypeRef_Group_1(lastRuleCallOrigin, this, 0, inst);
-			case 1: return new QtTypeRef_TypeAssignment_0(lastRuleCallOrigin, this, 1, inst);
+			case 0: return new QtTypeRef_ValueTypeAssignment_2(lastRuleCallOrigin, this, 0, inst);
+			case 1: return new QtTypeRef_Group_1(lastRuleCallOrigin, this, 1, inst);
+			case 2: return new QtTypeRef_TypeAssignment_0(lastRuleCallOrigin, this, 2, inst);
 			default: return null;
 		}	
 	}
@@ -4562,6 +4569,46 @@ protected class QtTypeRef_GreaterThanSignKeyword_1_3 extends KeywordToken  {
 
 }
 
+
+// valueType=("*" | "&")?
+protected class QtTypeRef_ValueTypeAssignment_2 extends AssignmentToken  {
+	
+	public QtTypeRef_ValueTypeAssignment_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Assignment getGrammarElement() {
+		return grammarAccess.getQtTypeRefAccess().getValueTypeAssignment_2();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new QtTypeRef_Group_1(lastRuleCallOrigin, this, 0, inst);
+			case 1: return new QtTypeRef_TypeAssignment_0(lastRuleCallOrigin, this, 1, inst);
+			default: return null;
+		}	
+	}
+
+    @Override	
+	public IEObjectConsumer tryConsume() {
+		if((value = eObjectConsumer.getConsumable("valueType",false)) == null) return null;
+		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("valueType");
+		if(keywordSerializer.isValid(obj.getEObject(), grammarAccess.getQtTypeRefAccess().getValueTypeAsteriskKeyword_2_0_0(), value, null)) {
+			type = AssignmentType.KEYWORD;
+			element = grammarAccess.getQtTypeRefAccess().getValueTypeAsteriskKeyword_2_0_0();
+			return obj;
+		}
+		if(keywordSerializer.isValid(obj.getEObject(), grammarAccess.getQtTypeRefAccess().getValueTypeAmpersandKeyword_2_0_1(), value, null)) {
+			type = AssignmentType.KEYWORD;
+			element = grammarAccess.getQtTypeRefAccess().getValueTypeAmpersandKeyword_2_0_1();
+			return obj;
+		}
+		return null;
+	}
+
+}
 
 
 /************ end Rule QtTypeRef ****************/
@@ -4853,11 +4900,11 @@ protected class QtClassTypeRef_GreaterThanSignKeyword_1_3 extends KeywordToken  
 /************ begin Rule QtParameter ****************
  *
  * QtParameter:
- * 	value=QtValue ("=" (defaultInt=INT | defaultEnum=[QtEnumValue]))?;
+ * 	value=QtValue ("=" (defaultInt=LONG | defaultEnum=[QtEnumValue|QualifiedName]))?;
  *
  **/
 
-// value=QtValue ("=" (defaultInt=INT | defaultEnum=[QtEnumValue]))?
+// value=QtValue ("=" (defaultInt=LONG | defaultEnum=[QtEnumValue|QualifiedName]))?
 protected class QtParameter_Group extends GroupToken {
 	
 	public QtParameter_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -4932,7 +4979,7 @@ protected class QtParameter_ValueAssignment_0 extends AssignmentToken  {
 	}	
 }
 
-// ("=" (defaultInt=INT | defaultEnum=[QtEnumValue]))?
+// ("=" (defaultInt=LONG | defaultEnum=[QtEnumValue|QualifiedName]))?
 protected class QtParameter_Group_1 extends GroupToken {
 	
 	public QtParameter_Group_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -4976,7 +5023,7 @@ protected class QtParameter_EqualsSignKeyword_1_0 extends KeywordToken  {
 
 }
 
-// defaultInt=INT | defaultEnum=[QtEnumValue]
+// defaultInt=LONG | defaultEnum=[QtEnumValue|QualifiedName]
 protected class QtParameter_Alternatives_1_1 extends AlternativesToken {
 
 	public QtParameter_Alternatives_1_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -4999,7 +5046,7 @@ protected class QtParameter_Alternatives_1_1 extends AlternativesToken {
 
 }
 
-// defaultInt=INT
+// defaultInt=LONG
 protected class QtParameter_DefaultIntAssignment_1_1_0 extends AssignmentToken  {
 	
 	public QtParameter_DefaultIntAssignment_1_1_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -5023,9 +5070,9 @@ protected class QtParameter_DefaultIntAssignment_1_1_0 extends AssignmentToken  
 	public IEObjectConsumer tryConsume() {
 		if((value = eObjectConsumer.getConsumable("defaultInt",true)) == null) return null;
 		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("defaultInt");
-		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getQtParameterAccess().getDefaultIntINTTerminalRuleCall_1_1_0_0(), value, null)) {
+		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getQtParameterAccess().getDefaultIntLONGTerminalRuleCall_1_1_0_0(), value, null)) {
 			type = AssignmentType.TERMINAL_RULE_CALL;
-			element = grammarAccess.getQtParameterAccess().getDefaultIntINTTerminalRuleCall_1_1_0_0();
+			element = grammarAccess.getQtParameterAccess().getDefaultIntLONGTerminalRuleCall_1_1_0_0();
 			return obj;
 		}
 		return null;
@@ -5033,7 +5080,7 @@ protected class QtParameter_DefaultIntAssignment_1_1_0 extends AssignmentToken  
 
 }
 
-// defaultEnum=[QtEnumValue]
+// defaultEnum=[QtEnumValue|QualifiedName]
 protected class QtParameter_DefaultEnumAssignment_1_1_1 extends AssignmentToken  {
 	
 	public QtParameter_DefaultEnumAssignment_1_1_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -5079,11 +5126,11 @@ protected class QtParameter_DefaultEnumAssignment_1_1_1 extends AssignmentToken 
 /************ begin Rule QtReturnValue ****************
  *
  * QtReturnValue:
- * 	const="const"? valueType=Type? typeRef=QtTypeRef;
+ * 	const="const"? valueType=("*" | "&")? typeRef=QtTypeRef;
  *
  **/
 
-// const="const"? valueType=Type? typeRef=QtTypeRef
+// const="const"? valueType=("*" | "&")? typeRef=QtTypeRef
 protected class QtReturnValue_Group extends GroupToken {
 	
 	public QtReturnValue_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -5145,7 +5192,7 @@ protected class QtReturnValue_ConstAssignment_0 extends AssignmentToken  {
 
 }
 
-// valueType=Type?
+// valueType=("*" | "&")?
 protected class QtReturnValue_ValueTypeAssignment_1 extends AssignmentToken  {
 	
 	public QtReturnValue_ValueTypeAssignment_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -5169,9 +5216,14 @@ protected class QtReturnValue_ValueTypeAssignment_1 extends AssignmentToken  {
 	public IEObjectConsumer tryConsume() {
 		if((value = eObjectConsumer.getConsumable("valueType",false)) == null) return null;
 		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("valueType");
-		if(enumLitSerializer.isValid(obj.getEObject(), grammarAccess.getQtReturnValueAccess().getValueTypeTypeEnumRuleCall_1_0(), value, null)) { 
-			type = AssignmentType.ENUM_RULE_CALL;
-			element = grammarAccess.getQtReturnValueAccess().getValueTypeTypeEnumRuleCall_1_0();
+		if(keywordSerializer.isValid(obj.getEObject(), grammarAccess.getQtReturnValueAccess().getValueTypeAsteriskKeyword_1_0_0(), value, null)) {
+			type = AssignmentType.KEYWORD;
+			element = grammarAccess.getQtReturnValueAccess().getValueTypeAsteriskKeyword_1_0_0();
+			return obj;
+		}
+		if(keywordSerializer.isValid(obj.getEObject(), grammarAccess.getQtReturnValueAccess().getValueTypeAmpersandKeyword_1_0_1(), value, null)) {
+			type = AssignmentType.KEYWORD;
+			element = grammarAccess.getQtReturnValueAccess().getValueTypeAmpersandKeyword_1_0_1();
 			return obj;
 		}
 		return null;
@@ -5233,11 +5285,11 @@ protected class QtReturnValue_TypeRefAssignment_2 extends AssignmentToken  {
 /************ begin Rule QtSignal ****************
  *
  * QtSignal:
- * 	"signal" name=ID "(" (params+=QtParameter ("," params+=QtParameter)*)? ")" ":" returnValue=QtReturnValue ";";
+ * 	"q_signal" name=ID "(" (params+=QtParameter ("," params+=QtParameter)*)? ")" ":" returnValue=QtReturnValue ";";
  *
  **/
 
-// "signal" name=ID "(" (params+=QtParameter ("," params+=QtParameter)*)? ")" ":" returnValue=QtReturnValue ";"
+// "q_signal" name=ID "(" (params+=QtParameter ("," params+=QtParameter)*)? ")" ":" returnValue=QtReturnValue ";"
 protected class QtSignal_Group extends GroupToken {
 	
 	public QtSignal_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -5266,16 +5318,16 @@ protected class QtSignal_Group extends GroupToken {
 
 }
 
-// "signal"
-protected class QtSignal_SignalKeyword_0 extends KeywordToken  {
+// "q_signal"
+protected class QtSignal_Q_signalKeyword_0 extends KeywordToken  {
 	
-	public QtSignal_SignalKeyword_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public QtSignal_Q_signalKeyword_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Keyword getGrammarElement() {
-		return grammarAccess.getQtSignalAccess().getSignalKeyword_0();
+		return grammarAccess.getQtSignalAccess().getQ_signalKeyword_0();
 	}
 
     @Override
@@ -5302,7 +5354,7 @@ protected class QtSignal_NameAssignment_1 extends AssignmentToken  {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new QtSignal_SignalKeyword_0(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new QtSignal_Q_signalKeyword_0(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -5625,11 +5677,11 @@ protected class QtSignal_SemicolonKeyword_7 extends KeywordToken  {
 /************ begin Rule QtSlot ****************
  *
  * QtSlot:
- * 	"slot" name=ID "(" (params+=QtParameter ("," params+=QtParameter)*)? ")" ":" returnValue=QtReturnValue ";";
+ * 	"q_slot" name=ID "(" (params+=QtParameter ("," params+=QtParameter)*)? ")" ":" returnValue=QtReturnValue ";";
  *
  **/
 
-// "slot" name=ID "(" (params+=QtParameter ("," params+=QtParameter)*)? ")" ":" returnValue=QtReturnValue ";"
+// "q_slot" name=ID "(" (params+=QtParameter ("," params+=QtParameter)*)? ")" ":" returnValue=QtReturnValue ";"
 protected class QtSlot_Group extends GroupToken {
 	
 	public QtSlot_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -5658,16 +5710,16 @@ protected class QtSlot_Group extends GroupToken {
 
 }
 
-// "slot"
-protected class QtSlot_SlotKeyword_0 extends KeywordToken  {
+// "q_slot"
+protected class QtSlot_Q_slotKeyword_0 extends KeywordToken  {
 	
-	public QtSlot_SlotKeyword_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public QtSlot_Q_slotKeyword_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Keyword getGrammarElement() {
-		return grammarAccess.getQtSlotAccess().getSlotKeyword_0();
+		return grammarAccess.getQtSlotAccess().getQ_slotKeyword_0();
 	}
 
     @Override
@@ -5694,7 +5746,7 @@ protected class QtSlot_NameAssignment_1 extends AssignmentToken  {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new QtSlot_SlotKeyword_0(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new QtSlot_Q_slotKeyword_0(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}

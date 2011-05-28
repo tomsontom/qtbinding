@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.QtTypeRef#getType <em>Type</em>}</li>
  *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.QtTypeRef#getTemplateTypes <em>Template Types</em>}</li>
+ *   <li>{@link org.ufacekit.qt.idl.dsl.qIdl.QtTypeRef#getValueType <em>Value Type</em>}</li>
  * </ul>
  * </p>
  *
@@ -69,5 +70,31 @@ public interface QtTypeRef extends EObject
    * @generated
    */
   EList<QtTypeRef> getTemplateTypes();
+
+  /**
+   * Returns the value of the '<em><b>Value Type</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Value Type</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Value Type</em>' attribute.
+   * @see #setValueType(String)
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QIdlPackage#getQtTypeRef_ValueType()
+   * @model
+   * @generated
+   */
+  String getValueType();
+
+  /**
+   * Sets the value of the '{@link org.ufacekit.qt.idl.dsl.qIdl.QtTypeRef#getValueType <em>Value Type</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Value Type</em>' attribute.
+   * @see #getValueType()
+   * @generated
+   */
+  void setValueType(String value);
 
 } // QtTypeRef

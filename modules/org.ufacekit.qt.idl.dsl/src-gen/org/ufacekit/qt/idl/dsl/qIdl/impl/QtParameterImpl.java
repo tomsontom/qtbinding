@@ -54,7 +54,7 @@ public class QtParameterImpl extends MinimalEObjectImpl.Container implements QtP
    * @generated
    * @ordered
    */
-  protected static final int DEFAULT_INT_EDEFAULT = 0;
+  protected static final long DEFAULT_INT_EDEFAULT = 0L;
 
   /**
    * The cached value of the '{@link #getDefaultInt() <em>Default Int</em>}' attribute.
@@ -64,7 +64,7 @@ public class QtParameterImpl extends MinimalEObjectImpl.Container implements QtP
    * @generated
    * @ordered
    */
-  protected int defaultInt = DEFAULT_INT_EDEFAULT;
+  protected long defaultInt = DEFAULT_INT_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getDefaultEnum() <em>Default Enum</em>}' reference.
@@ -150,7 +150,7 @@ public class QtParameterImpl extends MinimalEObjectImpl.Container implements QtP
    * <!-- end-user-doc -->
    * @generated
    */
-  public int getDefaultInt()
+  public long getDefaultInt()
   {
     return defaultInt;
   }
@@ -160,9 +160,9 @@ public class QtParameterImpl extends MinimalEObjectImpl.Container implements QtP
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setDefaultInt(int newDefaultInt)
+  public void setDefaultInt(long newDefaultInt)
   {
-    int oldDefaultInt = defaultInt;
+    long oldDefaultInt = defaultInt;
     defaultInt = newDefaultInt;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, QIdlPackage.QT_PARAMETER__DEFAULT_INT, oldDefaultInt, defaultInt));
@@ -262,7 +262,7 @@ public class QtParameterImpl extends MinimalEObjectImpl.Container implements QtP
         setValue((QtValue)newValue);
         return;
       case QIdlPackage.QT_PARAMETER__DEFAULT_INT:
-        setDefaultInt((Integer)newValue);
+        setDefaultInt((Long)newValue);
         return;
       case QIdlPackage.QT_PARAMETER__DEFAULT_ENUM:
         setDefaultEnum((QtEnumValue)newValue);

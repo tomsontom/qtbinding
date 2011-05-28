@@ -825,13 +825,22 @@ public interface QIdlPackage extends EPackage
   int QT_TYPE_REF__TEMPLATE_TYPES = 1;
 
   /**
+   * The feature id for the '<em><b>Value Type</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QT_TYPE_REF__VALUE_TYPE = 2;
+
+  /**
    * The number of structural features of the '<em>Qt Type Ref</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int QT_TYPE_REF_FEATURE_COUNT = 2;
+  int QT_TYPE_REF_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtClassTypeRefImpl <em>Qt Class Type Ref</em>}' class.
@@ -1083,16 +1092,6 @@ public interface QIdlPackage extends EPackage
    * @generated
    */
   int OWNER = 24;
-
-  /**
-   * The meta object id for the '{@link org.ufacekit.qt.idl.dsl.qIdl.Type <em>Type</em>}' enum.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.ufacekit.qt.idl.dsl.qIdl.Type
-   * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QIdlPackageImpl#getType()
-   * @generated
-   */
-  int TYPE = 25;
 
 
   /**
@@ -1717,6 +1716,17 @@ public interface QIdlPackage extends EPackage
   EReference getQtTypeRef_TemplateTypes();
 
   /**
+   * Returns the meta object for the attribute '{@link org.ufacekit.qt.idl.dsl.qIdl.QtTypeRef#getValueType <em>Value Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value Type</em>'.
+   * @see org.ufacekit.qt.idl.dsl.qIdl.QtTypeRef#getValueType()
+   * @see #getQtTypeRef()
+   * @generated
+   */
+  EAttribute getQtTypeRef_ValueType();
+
+  /**
    * Returns the meta object for class '{@link org.ufacekit.qt.idl.dsl.qIdl.QtClassTypeRef <em>Qt Class Type Ref</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1883,16 +1893,6 @@ public interface QIdlPackage extends EPackage
    * @generated
    */
   EEnum getOwner();
-
-  /**
-   * Returns the meta object for enum '{@link org.ufacekit.qt.idl.dsl.qIdl.Type <em>Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for enum '<em>Type</em>'.
-   * @see org.ufacekit.qt.idl.dsl.qIdl.Type
-   * @generated
-   */
-  EEnum getType();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -2416,6 +2416,14 @@ public interface QIdlPackage extends EPackage
     EReference QT_TYPE_REF__TEMPLATE_TYPES = eINSTANCE.getQtTypeRef_TemplateTypes();
 
     /**
+     * The meta object literal for the '<em><b>Value Type</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute QT_TYPE_REF__VALUE_TYPE = eINSTANCE.getQtTypeRef_ValueType();
+
+    /**
      * The meta object literal for the '{@link org.ufacekit.qt.idl.dsl.qIdl.impl.QtClassTypeRefImpl <em>Qt Class Type Ref</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2558,16 +2566,6 @@ public interface QIdlPackage extends EPackage
      * @generated
      */
     EEnum OWNER = eINSTANCE.getOwner();
-
-    /**
-     * The meta object literal for the '{@link org.ufacekit.qt.idl.dsl.qIdl.Type <em>Type</em>}' enum.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.ufacekit.qt.idl.dsl.qIdl.Type
-     * @see org.ufacekit.qt.idl.dsl.qIdl.impl.QIdlPackageImpl#getType()
-     * @generated
-     */
-    EEnum TYPE = eINSTANCE.getType();
 
   }
 
