@@ -1,0 +1,10 @@
+q_class QNetworkCookieJar extends QObject {
+    public const virtual member q_function cookiesForUrl(const QUrl & url) : QList<QNetworkCookie>;
+    public virtual member q_function setCookiesFromUrl(const QList<QNetworkCookie> & cookieList, const QUrl & url) : bool;
+
+    protected const member q_function allCookies() : QList<QNetworkCookie>;
+    protected member q_function setAllCookies(const QList<QNetworkCookie> & cookieList) : void;
+
+
+}
+

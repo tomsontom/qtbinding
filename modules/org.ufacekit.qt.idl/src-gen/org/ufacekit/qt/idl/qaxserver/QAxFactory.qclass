@@ -1,0 +1,33 @@
+q_class QAxFactory extends QObject {
+    q_enumeration ServerType {
+        SingleInstance = 0
+        MultipleInstances = 1
+    }
+
+
+    public const virtual member q_function appID() : QUuid;
+    public const virtual member q_function classID(const QString & key) : QUuid;
+    public purevirtual member q_function createObject(const QString & key) : QObject *;
+    public virtual member q_function createObjectWrapper(QObject * object, IDispatch ** wrapper) : bool;
+    public const virtual member q_function eventsID(const QString & key) : QUuid;
+    public const virtual member q_function exposeToSuperClass(const QString & key) : QString;
+    public const purevirtual member q_function featureList() : QStringList;
+    public const virtual member q_function hasStockEvents(const QString & key) : bool;
+    public const virtual member q_function interfaceID(const QString & key) : QUuid;
+    public class q_function isServer() : bool;
+    public const virtual member q_function isService() : bool;
+    public const purevirtual member q_function metaObject(const QString & key) : const QMetaObject *;
+    public class q_function registerActiveObject(QObject * object) : bool;
+    public const virtual member q_function registerClass(const QString & key, QSettings * settings) : void;
+    public class q_function serverDirPath() : QString;
+    public class q_function serverFilePath() : QString;
+    public class q_function startServer(ServerType type = MultipleInstances) : bool;
+    public const virtual member q_function stayTopLevel(const QString & key) : bool;
+    public class q_function stopServer() : bool;
+    public const virtual member q_function typeLibID() : QUuid;
+    public const virtual member q_function unregisterClass(const QString & key, QSettings * settings) : void;
+    public const virtual member q_function validateLicenseKey(const QString & key, const QString & licenseKey) : bool;
+
+
+}
+

@@ -1,0 +1,13 @@
+q_class QSslKey {
+    public const member q_function algorithm() : QSsl.KeyAlgorithm;
+    public member q_function clear() : void;
+    public const member q_function handle() : Qt.HANDLE;
+    public const member q_function isNull() : bool;
+    public const member q_function length() : int;
+    public const member q_function toDer(const QByteArray & passPhrase = QByteArray()) : QByteArray;
+    public const member q_function toPem(const QByteArray & passPhrase = QByteArray()) : QByteArray;
+    public const member q_function type() : QSsl.KeyType;
+
+
+}
+

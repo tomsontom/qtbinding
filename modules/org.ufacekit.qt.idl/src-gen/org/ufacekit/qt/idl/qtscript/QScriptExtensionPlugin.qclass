@@ -1,0 +1,8 @@
+q_class QScriptExtensionPlugin extends QObject {
+    public purevirtual member q_function initialize(const QString & key, QScriptEngine * engine) : void;
+    public const purevirtual member q_function keys() : QStringList;
+    public const member q_function setupPackage(const QString & key, QScriptEngine * engine) : QScriptValue;
+
+
+}
+

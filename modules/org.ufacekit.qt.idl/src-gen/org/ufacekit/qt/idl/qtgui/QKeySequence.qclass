@@ -1,0 +1,94 @@
+q_class QKeySequence {
+    q_enumeration SequenceFormat {
+        NativeText = 0
+        PortableText = 1
+    }
+
+    q_enumeration SequenceMatch {
+        NoMatch = 0
+        PartialMatch = 1
+        ExactMatch = 2
+    }
+
+    q_enumeration StandardKey {
+        UnknownKey = 0
+        HelpContents = 1
+        WhatsThis = 2
+        Open = 3
+        Close = 4
+        Save = 5
+        New = 6
+        Delete = 7
+        Cut = 8
+        Copy = 9
+        Paste = 10
+        Undo = 11
+        Redo = 12
+        Back = 13
+        Forward = 14
+        Refresh = 15
+        ZoomIn = 16
+        ZoomOut = 17
+        Print = 18
+        AddTab = 19
+        NextChild = 20
+        PreviousChild = 21
+        Find = 22
+        FindNext = 23
+        FindPrevious = 24
+        Replace = 25
+        SelectAll = 26
+        Bold = 27
+        Italic = 28
+        Underline = 29
+        MoveToNextChar = 30
+        MoveToPreviousChar = 31
+        MoveToNextWord = 32
+        MoveToPreviousWord = 33
+        MoveToNextLine = 34
+        MoveToPreviousLine = 35
+        MoveToNextPage = 36
+        MoveToPreviousPage = 37
+        MoveToStartOfLine = 38
+        MoveToEndOfLine = 39
+        MoveToStartOfBlock = 40
+        MoveToEndOfBlock = 41
+        MoveToStartOfDocument = 42
+        MoveToEndOfDocument = 43
+        SelectNextChar = 44
+        SelectPreviousChar = 45
+        SelectNextWord = 46
+        SelectPreviousWord = 47
+        SelectNextLine = 48
+        SelectPreviousLine = 49
+        SelectNextPage = 50
+        SelectPreviousPage = 51
+        SelectStartOfLine = 52
+        SelectEndOfLine = 53
+        SelectStartOfBlock = 54
+        SelectEndOfBlock = 55
+        SelectStartOfDocument = 56
+        SelectEndOfDocument = 57
+        DeleteStartOfWord = 58
+        DeleteEndOfWord = 59
+        DeleteEndOfLine = 60
+        InsertParagraphSeparator = 61
+        InsertLineSeparator = 62
+        SaveAs = 63
+        Preferences = 64
+        Quit = 65
+    }
+
+
+    q_typedef DataPtr : ___UNKNOWN___;
+
+
+    public class q_function fromString(const QString & str, SequenceFormat format = PortableText) : QKeySequence;
+    public const member q_function isEmpty() : bool;
+    public class q_function keyBindings(StandardKey key) : QList<QKeySequence>;
+    public const member q_function matches(const QKeySequence & seq) : SequenceMatch;
+    public class q_function mnemonic(const QString & text) : QKeySequence;
+
+
+}
+

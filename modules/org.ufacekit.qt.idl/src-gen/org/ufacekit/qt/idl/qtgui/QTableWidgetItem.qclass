@@ -1,0 +1,50 @@
+q_class QTableWidgetItem {
+    q_enumeration ItemType {
+        Type = 0
+        UserType = 1000
+    }
+
+
+    public const member q_function background() : QBrush;
+    public const member q_function backgroundColor() : QColor;
+    public const member q_function checkState() : Qt.CheckState;
+    public const virtual member q_function clone() : QTableWidgetItem *;
+    public const member q_function column() : int;
+    public const virtual member q_function data(int role) : QVariant;
+    public const member q_function flags() : Qt.ItemFlags;
+    public const member q_function font() : QFont;
+    public const member q_function foreground() : QBrush;
+    public const member q_function icon() : QIcon;
+    public const member q_function isSelected() : bool;
+    public virtual member q_function read(QDataStream & in) : void;
+    public const member q_function row() : int;
+    public member q_function setBackground(const QBrush & brush) : void;
+    public member q_function setBackgroundColor(const QColor & color) : void;
+    public member q_function setCheckState(Qt.CheckState state) : void;
+    public virtual member q_function setData(int role, const QVariant & value) : void;
+    public member q_function setFlags(Qt.ItemFlags flags) : void;
+    public member q_function setFont(const QFont & font) : void;
+    public member q_function setForeground(const QBrush & brush) : void;
+    public member q_function setIcon(const QIcon & icon) : void;
+    public member q_function setSelected(bool select) : void;
+    public member q_function setSizeHint(const QSize & size) : void;
+    public member q_function setStatusTip(const QString & statusTip) : void;
+    public member q_function setText(const QString & text) : void;
+    public member q_function setTextAlignment(int alignment) : void;
+    public member q_function setTextColor(const QColor & color) : void;
+    public member q_function setToolTip(const QString & toolTip) : void;
+    public member q_function setWhatsThis(const QString & whatsThis) : void;
+    public const member q_function sizeHint() : QSize;
+    public const member q_function statusTip() : QString;
+    public const member q_function tableWidget() : QTableWidget *;
+    public const member q_function text() : QString;
+    public const member q_function textAlignment() : int;
+    public const member q_function textColor() : QColor;
+    public const member q_function toolTip() : QString;
+    public const member q_function type() : int;
+    public const member q_function whatsThis() : QString;
+    public const virtual member q_function write(QDataStream & out) : void;
+
+
+}
+

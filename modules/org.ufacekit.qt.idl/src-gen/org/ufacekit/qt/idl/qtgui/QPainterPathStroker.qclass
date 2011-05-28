@@ -1,0 +1,20 @@
+q_class QPainterPathStroker {
+    public const member q_function capStyle() : Qt.PenCapStyle;
+    public const member q_function createStroke(const QPainterPath & path) : QPainterPath;
+    public const member q_function curveThreshold() : qreal;
+    public const member q_function dashOffset() : qreal;
+    public const member q_function dashPattern() : QVector<qreal>;
+    public const member q_function joinStyle() : Qt.PenJoinStyle;
+    public const member q_function miterLimit() : qreal;
+    public member q_function setCapStyle(Qt.PenCapStyle style) : void;
+    public member q_function setCurveThreshold(qreal threshold) : void;
+    public member q_function setDashOffset(qreal offset) : void;
+    public member q_function setDashPattern(const QVector<qreal> & dashPattern) : void;
+    public member q_function setDashPattern(Qt.PenStyle style) : void;
+    public member q_function setJoinStyle(Qt.PenJoinStyle style) : void;
+    public member q_function setMiterLimit(qreal limit) : void;
+    public const member q_function width() : qreal;
+
+
+}
+

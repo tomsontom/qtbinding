@@ -1,0 +1,13 @@
+q_class QStyleOptionComplex extends QStyleOption {
+    q_enumeration StyleOptionType {
+        Type = SO_Complex
+    }
+
+    q_enumeration StyleOptionVersion {
+        Version = 1
+    }
+
+
+
+}
+

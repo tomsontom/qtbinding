@@ -1,0 +1,25 @@
+q_class QDialog extends QWidget {
+    q_enumeration DialogCode {
+        Rejected = 0
+        Accepted = 1
+    }
+
+
+    q_property bool modal;
+    q_property bool sizeGripEnabled;
+
+    public const member q_function extension() : QWidget *;
+    public const member q_function isSizeGripEnabled() : bool;
+    public const member q_function orientation() : Qt.Orientation;
+    public const member q_function result() : int;
+    public member q_function setExtension(QWidget * extension) : void;
+    public member q_function setModal(bool modal) : void;
+    public member q_function setOrientation(Qt.Orientation orientation) : void;
+    public member q_function setResult(int i) : void;
+    public member q_function setSizeGripEnabled(bool ) : void;
+
+
+
+
+}
+

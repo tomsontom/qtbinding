@@ -1,0 +1,8 @@
+q_class QAbstractExtensionManager {
+    public const purevirtual member q_function extension(QObject * object, const QString & iid) : QObject *;
+    public purevirtual member q_function registerExtensions(QAbstractExtensionFactory * factory, const QString & iid) : void;
+    public purevirtual member q_function unregisterExtensions(QAbstractExtensionFactory * factory, const QString & iid) : void;
+
+
+}
+

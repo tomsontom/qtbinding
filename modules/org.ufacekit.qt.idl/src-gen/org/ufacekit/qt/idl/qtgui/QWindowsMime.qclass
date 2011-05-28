@@ -1,0 +1,11 @@
+q_class QWindowsMime {
+    public const purevirtual member q_function canConvertToMime(const QString & mimeType, IDataObject * pDataObj) : bool;
+    public const purevirtual member q_function convertFromMime(const FORMATETC & formatetc, const QMimeData * mimeData, STGMEDIUM * pmedium) : bool;
+    public const purevirtual member q_function convertToMime(const QString & mimeType, IDataObject * pDataObj, QVariant.Type preferredType) : QVariant;
+    public const purevirtual member q_function formatsForMime(const QString & mimeType, const QMimeData * mimeData) : QVector<FORMATETC>;
+    public const purevirtual member q_function mimeForFormat(const FORMATETC & formatetc) : QString;
+    public class q_function registerMimeType(const QString & mime) : int;
+
+
+}
+

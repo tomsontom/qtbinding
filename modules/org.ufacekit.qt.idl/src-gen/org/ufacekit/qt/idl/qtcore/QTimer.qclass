@@ -1,0 +1,17 @@
+q_class QTimer extends QObject {
+    q_property const bool active;
+    q_property int interval;
+    q_property bool singleShot;
+
+    public const member q_function interval() : int;
+    public const member q_function isSingleShot() : bool;
+    public member q_function setInterval(int msec) : void;
+    public member q_function setSingleShot(bool singleShot) : void;
+    public class q_function singleShot(int msec, QObject * receiver, const char * member) : void;
+    public const member q_function timerId() : int;
+
+
+
+
+}
+

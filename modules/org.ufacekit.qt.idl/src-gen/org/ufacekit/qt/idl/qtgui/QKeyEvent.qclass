@@ -1,0 +1,13 @@
+q_class QKeyEvent extends QInputEvent {
+    public const member q_function count() : int;
+    public const member q_function isAutoRepeat() : bool;
+    public const member q_function key() : int;
+    public const member q_function modifiers() : Qt.KeyboardModifiers;
+    public const member q_function nativeModifiers() : quint32;
+    public const member q_function nativeScanCode() : quint32;
+    public const member q_function nativeVirtualKey() : quint32;
+    public const member q_function text() : QString;
+
+
+}
+

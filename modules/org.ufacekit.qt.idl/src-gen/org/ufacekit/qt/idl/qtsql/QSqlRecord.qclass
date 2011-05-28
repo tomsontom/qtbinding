@@ -1,0 +1,29 @@
+q_class QSqlRecord {
+    public member q_function clear() : void;
+    public member q_function clearValues() : void;
+    public const member q_function contains(const QString & name) : bool;
+    public const member q_function count() : int;
+    public const member q_function field(int index) : QSqlField;
+    public const member q_function field(const QString & name) : QSqlField;
+    public const member q_function fieldName(int index) : QString;
+    public const member q_function indexOf(const QString & name) : int;
+    public member q_function insert(int pos, const QSqlField & field) : void;
+    public const member q_function isEmpty() : bool;
+    public const member q_function isGenerated(const QString & name) : bool;
+    public const member q_function isGenerated(int index) : bool;
+    public const member q_function isNull(const QString & name) : bool;
+    public const member q_function isNull(int index) : bool;
+    public member q_function remove(int pos) : void;
+    public member q_function replace(int pos, const QSqlField & field) : void;
+    public member q_function setGenerated(const QString & name, bool generated) : void;
+    public member q_function setGenerated(int index, bool generated) : void;
+    public member q_function setNull(const QString & name) : void;
+    public member q_function setNull(int index) : void;
+    public member q_function setValue(int index, const QVariant & val) : void;
+    public member q_function setValue(const QString & name, const QVariant & val) : void;
+    public const member q_function value(int index) : QVariant;
+    public const member q_function value(const QString & name) : QVariant;
+
+
+}
+

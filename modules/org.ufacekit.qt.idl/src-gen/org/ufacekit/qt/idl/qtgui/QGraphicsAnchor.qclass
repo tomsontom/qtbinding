@@ -1,0 +1,13 @@
+q_class QGraphicsAnchor extends QObject {
+    q_property QSizePolicy.Policy sizePolicy;
+    q_property qreal spacing;
+
+    public member q_function setSizePolicy(QSizePolicy.Policy policy) : void;
+    public member q_function setSpacing(qreal spacing) : void;
+    public const member q_function sizePolicy() : QSizePolicy.Policy;
+    public const member q_function spacing() : qreal;
+    public member q_function unsetSpacing() : void;
+
+
+}
+

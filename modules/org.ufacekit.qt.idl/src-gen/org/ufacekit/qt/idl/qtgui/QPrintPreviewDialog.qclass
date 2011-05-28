@@ -1,0 +1,7 @@
+q_class QPrintPreviewDialog extends QDialog {
+    public member q_function printer() : QPrinter *;
+
+
+
+}
+

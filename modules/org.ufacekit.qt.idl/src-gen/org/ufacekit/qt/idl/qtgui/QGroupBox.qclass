@@ -1,0 +1,23 @@
+q_class QGroupBox extends QWidget {
+    q_property Qt.Alignment alignment;
+    q_property bool checkable;
+    q_property bool checked;
+    q_property bool flat;
+    q_property QString title;
+
+    public const member q_function alignment() : Qt.Alignment;
+    public const member q_function isCheckable() : bool;
+    public const member q_function isChecked() : bool;
+    public const member q_function isFlat() : bool;
+    public member q_function setAlignment(int alignment) : void;
+    public member q_function setCheckable(bool checkable) : void;
+    public member q_function setFlat(bool flat) : void;
+    public member q_function setTitle(const QString & title) : void;
+
+    protected const member q_function initStyleOption(QStyleOptionGroupBox * option) : void;
+
+
+
+
+}
+

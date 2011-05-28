@@ -1,0 +1,31 @@
+q_class QTextBoundaryFinder {
+    q_enumeration BoundaryReason {
+        NotAtBoundary = 0
+        StartWord = 1
+        EndWord = 2
+    }
+
+    q_flags BoundaryReasons : BoundaryReason;
+
+    q_enumeration BoundaryType {
+        Grapheme = 0
+        Word = 1
+        Line = 2
+        Sentence = 3
+    }
+
+
+    public const member q_function boundaryReasons() : BoundaryReasons;
+    public const member q_function isAtBoundary() : bool;
+    public const member q_function isValid() : bool;
+    public const member q_function position() : int;
+    public member q_function setPosition(int position) : void;
+    public const member q_function string() : QString;
+    public member q_function toEnd() : void;
+    public member q_function toNextBoundary() : int;
+    public member q_function toStart() : void;
+    public const member q_function type() : BoundaryType;
+
+
+}
+

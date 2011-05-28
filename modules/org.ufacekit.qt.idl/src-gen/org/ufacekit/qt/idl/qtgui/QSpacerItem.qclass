@@ -1,0 +1,8 @@
+q_class QSpacerItem extends QLayoutItem {
+    public member q_function changeSize(int w, int h, QSizePolicy.Policy hPolicy = QSizePolicy.Minimum, QSizePolicy.Policy vPolicy = QSizePolicy.Minimum) : void;
+    public const virtual member q_function isEmpty() : bool;
+    public virtual member q_function spacerItem() : QSpacerItem *;
+
+
+}
+

@@ -1,0 +1,13 @@
+q_class QUndoCommand {
+    public const member q_function child(int index) : const QUndoCommand *;
+    public const member q_function childCount() : int;
+    public const virtual member q_function id() : int;
+    public virtual member q_function mergeWith(const QUndoCommand * command) : bool;
+    public virtual member q_function redo() : void;
+    public member q_function setText(const QString & text) : void;
+    public const member q_function text() : QString;
+    public virtual member q_function undo() : void;
+
+
+}
+

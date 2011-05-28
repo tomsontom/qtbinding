@@ -1,0 +1,20 @@
+q_class QFutureWatcher extends QObject {
+    public const member q_function future() : QFuture<T>;
+    public const member q_function isCanceled() : bool;
+    public const member q_function isFinished() : bool;
+    public const member q_function isPaused() : bool;
+    public const member q_function isRunning() : bool;
+    public const member q_function isStarted() : bool;
+    public const member q_function progressMaximum() : int;
+    public const member q_function progressMinimum() : int;
+    public const member q_function progressText() : QString;
+    public const member q_function result() : T;
+    public const member q_function resultAt(int index) : T;
+    public member q_function setPendingResultsLimit(int limit) : void;
+    public member q_function waitForFinished() : void;
+
+
+
+
+}
+

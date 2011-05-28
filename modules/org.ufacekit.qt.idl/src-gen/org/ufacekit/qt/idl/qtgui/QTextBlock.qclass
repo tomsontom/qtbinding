@@ -1,0 +1,46 @@
+q_class QTextBlock {
+    q_typedef Iterator : ___UNKNOWN___;
+
+
+    q_class iterator {
+        public const member q_function atEnd() : bool;
+        public const member q_function fragment() : QTextFragment;
+
+
+    }
+
+
+    public const member q_function begin() : iterator;
+    public const member q_function blockFormat() : QTextBlockFormat;
+    public const member q_function blockFormatIndex() : int;
+    public const member q_function blockNumber() : int;
+    public const member q_function charFormat() : QTextCharFormat;
+    public const member q_function charFormatIndex() : int;
+    public member q_function clearLayout() : void;
+    public const member q_function contains(int position) : bool;
+    public const member q_function document() : const QTextDocument *;
+    public const member q_function end() : iterator;
+    public const member q_function firstLineNumber() : int;
+    public const member q_function isValid() : bool;
+    public const member q_function isVisible() : bool;
+    public const member q_function layout() : QTextLayout *;
+    public const member q_function length() : int;
+    public const member q_function lineCount() : int;
+    public const member q_function next() : QTextBlock;
+    public const member q_function position() : int;
+    public const member q_function previous() : QTextBlock;
+    public const member q_function revision() : int;
+    public member q_function setLineCount(int count) : void;
+    public member q_function setRevision(int rev) : void;
+    public member q_function setUserData(QTextBlockUserData * data) : void;
+    public member q_function setUserState(int state) : void;
+    public member q_function setVisible(bool visible) : void;
+    public const member q_function text() : QString;
+    public const member q_function textDirection() : Qt.LayoutDirection;
+    public const member q_function textList() : QTextList *;
+    public const member q_function userData() : QTextBlockUserData *;
+    public const member q_function userState() : int;
+
+
+}
+

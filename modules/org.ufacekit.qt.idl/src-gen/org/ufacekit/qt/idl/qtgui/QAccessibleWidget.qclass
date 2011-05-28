@@ -1,0 +1,12 @@
+q_class QAccessibleWidget extends QAccessibleObject {
+    protected member q_function addControllingSignal(const QString & signal) : void;
+    protected const member q_function parentObject() : QObject *;
+    protected member q_function setAccelerator(const QString & accel) : void;
+    protected member q_function setDescription(const QString & desc) : void;
+    protected member q_function setHelp(const QString & help) : void;
+    protected member q_function setValue(const QString & value) : void;
+    protected const member q_function widget() : QWidget *;
+
+
+}
+

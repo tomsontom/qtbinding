@@ -1,0 +1,21 @@
+q_class QGraphicsPixmapItem extends QGraphicsItem {
+    q_enumeration ShapeMode {
+        MaskShape = 0
+        BoundingRectShape = 1
+        HeuristicMaskShape = 2
+    }
+
+
+    public const member q_function offset() : QPointF;
+    public const member q_function pixmap() : QPixmap;
+    public member q_function setOffset(qreal x, qreal y) : void;
+    public member q_function setOffset(const QPointF & offset) : void;
+    public member q_function setPixmap(const QPixmap & pixmap) : void;
+    public member q_function setShapeMode(ShapeMode mode) : void;
+    public member q_function setTransformationMode(Qt.TransformationMode mode) : void;
+    public const member q_function shapeMode() : ShapeMode;
+    public const member q_function transformationMode() : Qt.TransformationMode;
+
+
+}
+

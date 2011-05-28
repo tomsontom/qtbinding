@@ -1,0 +1,23 @@
+q_class QBrush {
+    q_typedef DataPtr : ___UNKNOWN___;
+
+
+    public const member q_function color() : const QColor &;
+    public const member q_function gradient() : const QGradient *;
+    public const member q_function isOpaque() : bool;
+    public const member q_function matrix() : const QMatrix &;
+    public member q_function setColor(const QColor & color) : void;
+    public member q_function setColor(Qt.GlobalColor color) : void;
+    public member q_function setMatrix(const QMatrix & matrix) : void;
+    public member q_function setStyle(Qt.BrushStyle style) : void;
+    public member q_function setTexture(const QPixmap & pixmap) : void;
+    public member q_function setTextureImage(const QImage & image) : void;
+    public member q_function setTransform(const QTransform & matrix) : void;
+    public const member q_function style() : Qt.BrushStyle;
+    public const member q_function texture() : QPixmap;
+    public const member q_function textureImage() : QImage;
+    public const member q_function transform() : QTransform;
+
+
+}
+

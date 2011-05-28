@@ -1,0 +1,86 @@
+q_class QDateTimeEdit extends QAbstractSpinBox {
+    q_enumeration Section {
+        NoSection = 0
+        AmPmSection = 1
+        MSecSection = 2
+        SecondSection = 4
+        MinuteSection = 8
+        HourSection = 16
+        DaySection = 256
+        MonthSection = 512
+        YearSection = 1024
+        TimeSections_Mask = AmPmSection  |  MSecSection  |  SecondSection  |  MinuteSection  |  HourSection
+        DateSections_Mask = DaySection  |  MonthSection  |  YearSection
+    }
+
+    q_flags Sections : Section;
+
+
+    q_property bool calendarPopup;
+    q_property Section currentSection;
+    q_property int currentSectionIndex;
+    q_property QDate date;
+    q_property QDateTime dateTime;
+    q_property QString displayFormat;
+    q_property const Sections displayedSections;
+    q_property QDate maximumDate;
+    q_property QDateTime maximumDateTime;
+    q_property QTime maximumTime;
+    q_property QDate minimumDate;
+    q_property QDateTime minimumDateTime;
+    q_property QTime minimumTime;
+    q_property const int sectionCount;
+    q_property QTime time;
+    q_property Qt.TimeSpec timeSpec;
+
+    public const member q_function calendarPopup() : bool;
+    public const member q_function calendarWidget() : QCalendarWidget *;
+    public member q_function clearMaximumDate() : void;
+    public member q_function clearMaximumDateTime() : void;
+    public member q_function clearMaximumTime() : void;
+    public member q_function clearMinimumDate() : void;
+    public member q_function clearMinimumDateTime() : void;
+    public member q_function clearMinimumTime() : void;
+    public const member q_function currentSection() : Section;
+    public const member q_function currentSectionIndex() : int;
+    public const member q_function date() : QDate;
+    public const member q_function dateTime() : QDateTime;
+    public const member q_function displayFormat() : QString;
+    public const member q_function displayedSections() : Sections;
+    public const member q_function maximumDate() : QDate;
+    public const member q_function maximumDateTime() : QDateTime;
+    public const member q_function maximumTime() : QTime;
+    public const member q_function minimumDate() : QDate;
+    public const member q_function minimumDateTime() : QDateTime;
+    public const member q_function minimumTime() : QTime;
+    public const member q_function sectionAt(int index) : Section;
+    public const member q_function sectionCount() : int;
+    public const member q_function sectionText(Section section) : QString;
+    public member q_function setCalendarPopup(bool enable) : void;
+    public member q_function setCalendarWidget(QCalendarWidget * calendarWidget) : void;
+    public member q_function setCurrentSection(Section section) : void;
+    public member q_function setCurrentSectionIndex(int index) : void;
+    public member q_function setDateRange(const QDate & min, const QDate & max) : void;
+    public member q_function setDateTimeRange(const QDateTime & min, const QDateTime & max) : void;
+    public member q_function setDisplayFormat(const QString & format) : void;
+    public member q_function setMaximumDate(const QDate & max) : void;
+    public member q_function setMaximumDateTime(const QDateTime & dt) : void;
+    public member q_function setMaximumTime(const QTime & max) : void;
+    public member q_function setMinimumDate(const QDate & min) : void;
+    public member q_function setMinimumDateTime(const QDateTime & dt) : void;
+    public member q_function setMinimumTime(const QTime & min) : void;
+    public member q_function setSelectedSection(Section section) : void;
+    public member q_function setTimeRange(const QTime & min, const QTime & max) : void;
+    public member q_function setTimeSpec(Qt.TimeSpec spec) : void;
+    public const member q_function time() : QTime;
+    public const member q_function timeSpec() : Qt.TimeSpec;
+
+    protected const virtual member q_function dateTimeFromText(const QString & text) : QDateTime;
+    protected const member q_function initStyleOption(QStyleOptionSpinBox * option) : void;
+    protected const virtual member q_function textFromDateTime(const QDateTime & dateTime) : QString;
+
+
+
+
+}
+

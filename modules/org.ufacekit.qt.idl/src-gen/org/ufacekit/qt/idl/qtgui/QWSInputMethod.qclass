@@ -1,0 +1,28 @@
+q_class QWSInputMethod extends QObject {
+    q_enumeration UpdateType {
+        Update = 0
+        FocusIn = 1
+        FocusOut = 2
+        Reset = 3
+        Destroyed = 4
+    }
+
+
+    public virtual member q_function filter(const QPoint & position, int state, int wheel) : bool;
+    public virtual member q_function filter(int unicode, int keycode, int modifiers, bool isPress, bool autoRepeat) : bool;
+    public virtual member q_function mouseHandler(int offset, int state) : void;
+    public virtual member q_function queryResponse(int property, const QVariant & result) : void;
+    public virtual member q_function reset() : void;
+    public virtual member q_function updateHandler(int type) : void;
+
+    protected const member q_function inputResolutionShift() : uint;
+    protected member q_function sendCommitString(const QString & commitString, int replaceFromPosition = 0, int replaceLength = 0) : void;
+    protected member q_function sendEvent(const QInputMethodEvent * event) : void;
+    protected member q_function sendMouseEvent(const QPoint & position, int state, int wheel) : void;
+    protected member q_function sendPreeditString(const QString & preeditString, int cursorPosition, int selectionLength = 0) : void;
+    protected member q_function sendQuery(int property) : void;
+    protected member q_function setInputResolution(bool isHigh) : uint;
+
+
+}
+

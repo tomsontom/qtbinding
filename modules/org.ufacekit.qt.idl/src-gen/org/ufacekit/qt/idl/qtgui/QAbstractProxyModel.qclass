@@ -1,0 +1,11 @@
+q_class QAbstractProxyModel extends QAbstractItemModel {
+    public const purevirtual member q_function mapFromSource(const QModelIndex & sourceIndex) : QModelIndex;
+    public const virtual member q_function mapSelectionFromSource(const QItemSelection & sourceSelection) : QItemSelection;
+    public const virtual member q_function mapSelectionToSource(const QItemSelection & proxySelection) : QItemSelection;
+    public const purevirtual member q_function mapToSource(const QModelIndex & proxyIndex) : QModelIndex;
+    public virtual member q_function setSourceModel(QAbstractItemModel * sourceModel) : void;
+    public const member q_function sourceModel() : QAbstractItemModel *;
+
+
+}
+

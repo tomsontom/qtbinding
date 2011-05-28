@@ -1,0 +1,105 @@
+q_class QTextEdit extends QAbstractScrollArea {
+    q_enumeration AutoFormattingFlag {
+        AutoNone = 0
+        AutoBulletList = 1
+        AutoAll = 4294967295
+    }
+
+    q_flags AutoFormatting : AutoFormattingFlag;
+
+    q_enumeration LineWrapMode {
+        NoWrap = 0
+        WidgetWidth = 1
+        FixedPixelWidth = 2
+        FixedColumnWidth = 3
+    }
+
+
+    q_class ExtraSelection {
+
+    }
+
+
+    q_property bool acceptRichText;
+    q_property AutoFormatting autoFormatting;
+    q_property int cursorWidth;
+    q_property QString documentTitle;
+    q_property QString html;
+    q_property int lineWrapColumnOrWidth;
+    q_property LineWrapMode lineWrapMode;
+    q_property bool overwriteMode;
+    q_property QString plainText;
+    q_property bool readOnly;
+    q_property bool tabChangesFocus;
+    q_property int tabStopWidth;
+    q_property Qt.TextInteractionFlags textInteractionFlags;
+    q_property bool undoRedoEnabled;
+    q_property QTextOption.WrapMode wordWrapMode;
+
+    public const member q_function acceptRichText() : bool;
+    public const member q_function alignment() : Qt.Alignment;
+    public const member q_function anchorAt(const QPoint & pos) : QString;
+    public const member q_function autoFormatting() : AutoFormatting;
+    public const member q_function canPaste() : bool;
+    public member q_function createStandardContextMenu() : QMenu *;
+    public member q_function createStandardContextMenu(const QPoint & position) : QMenu *;
+    public const member q_function currentCharFormat() : QTextCharFormat;
+    public const member q_function currentFont() : QFont;
+    public const member q_function cursorRect() : QRect;
+    public const member q_function cursorRect(const QTextCursor & cursor) : QRect;
+    public const member q_function cursorWidth() : int;
+    public const member q_function document() : QTextDocument *;
+    public const member q_function documentTitle() : QString;
+    public const member q_function extraSelections() : QList<ExtraSelection>;
+    public member q_function find(const QString & exp, QTextDocument.FindFlags options = 0) : bool;
+    public const member q_function fontFamily() : QString;
+    public const member q_function fontItalic() : bool;
+    public const member q_function fontPointSize() : qreal;
+    public const member q_function fontUnderline() : bool;
+    public const member q_function fontWeight() : int;
+    public const member q_function isReadOnly() : bool;
+    public const member q_function isUndoRedoEnabled() : bool;
+    public const member q_function lineWrapColumnOrWidth() : int;
+    public const member q_function lineWrapMode() : LineWrapMode;
+    public virtual member q_function loadResource(int type, const QUrl & name) : QVariant;
+    public member q_function mergeCurrentCharFormat(const QTextCharFormat & modifier) : void;
+    public member q_function moveCursor(QTextCursor.MoveOperation operation, QTextCursor.MoveMode mode = QTextCursor.MoveAnchor) : void;
+    public const member q_function overwriteMode() : bool;
+    public const member q_function print(QPrinter * printer) : void;
+    public member q_function setAcceptRichText(bool accept) : void;
+    public member q_function setAutoFormatting(AutoFormatting features) : void;
+    public member q_function setCurrentCharFormat(const QTextCharFormat & format) : void;
+    public member q_function setCursorWidth(int width) : void;
+    public member q_function setDocumentTitle(const QString & title) : void;
+    public member q_function setExtraSelections(const QList<ExtraSelection> & selections) : void;
+    public member q_function setLineWrapColumnOrWidth(int w) : void;
+    public member q_function setLineWrapMode(LineWrapMode mode) : void;
+    public member q_function setOverwriteMode(bool overwrite) : void;
+    public member q_function setReadOnly(bool ro) : void;
+    public member q_function setTabChangesFocus(bool b) : void;
+    public member q_function setTabStopWidth(int width) : void;
+    public member q_function setTextCursor(const QTextCursor & cursor) : void;
+    public member q_function setTextInteractionFlags(Qt.TextInteractionFlags flags) : void;
+    public member q_function setUndoRedoEnabled(bool enable) : void;
+    public member q_function setWordWrapMode(QTextOption.WrapMode policy) : void;
+    public const member q_function tabChangesFocus() : bool;
+    public const member q_function tabStopWidth() : int;
+    public const member q_function textBackgroundColor() : QColor;
+    public const member q_function textColor() : QColor;
+    public const member q_function textCursor() : QTextCursor;
+    public const member q_function textInteractionFlags() : Qt.TextInteractionFlags;
+    public const member q_function toHtml() : QString;
+    public const member q_function toPlainText() : QString;
+    public const member q_function wordWrapMode() : QTextOption.WrapMode;
+
+    protected const virtual member q_function canInsertFromMimeData(const QMimeData * source) : bool;
+    protected virtual member q_function contextMenuEvent(QContextMenuEvent * event) : void;
+    protected const virtual member q_function createMimeDataFromSelection() : QMimeData *;
+    protected virtual member q_function insertFromMimeData(const QMimeData * source) : void;
+    protected virtual member q_function paintEvent(QPaintEvent * event) : void;
+
+
+
+
+}
+

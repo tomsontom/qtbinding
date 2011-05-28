@@ -1,0 +1,27 @@
+q_class QUuid {
+    q_enumeration Variant {
+        VarUnknown = -1
+        NCS = 0
+        DCE = 2
+        Microsoft = 6
+        Reserved = 7
+    }
+
+    q_enumeration Version {
+        VerUnknown = -1
+        Time = 1
+        EmbeddedPOSIX = 2
+        Name = 3
+        Random = 4
+    }
+
+
+    public class q_function createUuid() : QUuid;
+    public const member q_function isNull() : bool;
+    public const member q_function toString() : QString;
+    public const member q_function variant() : QUuid.Variant;
+    public const member q_function version() : QUuid.Version;
+
+
+}
+

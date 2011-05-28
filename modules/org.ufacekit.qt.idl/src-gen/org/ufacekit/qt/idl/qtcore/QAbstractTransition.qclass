@@ -1,0 +1,21 @@
+q_class QAbstractTransition extends QObject {
+    q_property const QState * sourceState;
+    q_property QAbstractState * targetState;
+    q_property QList<QAbstractState *> targetStates;
+
+    public const member q_function animations() : QList<QAbstractAnimation *>;
+    public const member q_function machine() : QStateMachine *;
+    public member q_function removeAnimation(QAbstractAnimation * animation) : void;
+    public member q_function setTargetState(QAbstractState * target) : void;
+    public member q_function setTargetStates(const QList<QAbstractState *> & targets) : void;
+    public const member q_function sourceState() : QState *;
+    public const member q_function targetState() : QAbstractState *;
+    public const member q_function targetStates() : QList<QAbstractState *>;
+
+    protected purevirtual member q_function eventTest(QEvent * event) : bool;
+    protected purevirtual member q_function onTransition(QEvent * event) : void;
+
+
+
+}
+

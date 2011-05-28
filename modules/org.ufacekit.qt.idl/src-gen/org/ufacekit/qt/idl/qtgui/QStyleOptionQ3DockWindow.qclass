@@ -1,0 +1,13 @@
+q_class QStyleOptionQ3DockWindow extends QStyleOption {
+    q_enumeration StyleOptionType {
+        Type = SO_Q3DockWindow
+    }
+
+    q_enumeration StyleOptionVersion {
+        Version = 1
+    }
+
+
+
+}
+

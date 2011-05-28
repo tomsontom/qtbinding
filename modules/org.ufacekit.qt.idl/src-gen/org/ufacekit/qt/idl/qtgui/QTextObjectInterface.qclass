@@ -1,0 +1,7 @@
+q_class QTextObjectInterface {
+    public purevirtual member q_function drawObject(QPainter * painter, const QRectF & rect, QTextDocument * doc, int posInDocument, const QTextFormat & format) : void;
+    public purevirtual member q_function intrinsicSize(QTextDocument * doc, int posInDocument, const QTextFormat & format) : QSizeF;
+
+
+}
+

@@ -1,0 +1,32 @@
+q_class QDeclarativeComponent extends QObject {
+    q_enumeration Status {
+        Null = 0
+        Ready = 1
+        Loading = 2
+        Error = 3
+    }
+
+
+    q_property const qreal progress;
+    q_property const Status status;
+    q_property const QUrl url;
+
+    public virtual member q_function beginCreate(QDeclarativeContext * context) : QObject *;
+    public virtual member q_function completeCreate() : void;
+    public virtual member q_function create(QDeclarativeContext * context = 0) : QObject *;
+    public const member q_function creationContext() : QDeclarativeContext *;
+    public const member q_function errors() : QList<QDeclarativeError>;
+    public const member q_function isError() : bool;
+    public const member q_function isLoading() : bool;
+    public const member q_function isNull() : bool;
+    public const member q_function isReady() : bool;
+    public member q_function loadUrl(const QUrl & url) : void;
+    public const member q_function progress() : qreal;
+    public member q_function setData(const QByteArray & data, const QUrl & url) : void;
+    public const member q_function status() : Status;
+    public const member q_function url() : QUrl;
+
+
+
+}
+

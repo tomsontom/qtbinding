@@ -1,0 +1,21 @@
+q_class QGLPixelBuffer extends QPaintDevice {
+    public member q_function bindTexture(const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D) : GLuint;
+    public member q_function bindTexture(const QImage & image, GLenum target = GL_TEXTURE_2D) : GLuint;
+    public member q_function bindTexture(const QString & fileName) : GLuint;
+    public member q_function bindToDynamicTexture(GLuint texture_id) : bool;
+    public member q_function deleteTexture(GLuint texture_id) : void;
+    public member q_function doneCurrent() : bool;
+    public member q_function drawTexture(const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D) : void;
+    public member q_function drawTexture(const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D) : void;
+    public const member q_function format() : QGLFormat;
+    public const member q_function generateDynamicTexture() : GLuint;
+    public const member q_function handle() : Qt.HANDLE;
+    public class q_function hasOpenGLPbuffers() : bool;
+    public member q_function makeCurrent() : bool;
+    public member q_function releaseFromDynamicTexture() : void;
+    public const member q_function toImage() : QImage;
+    public const member q_function updateDynamicTexture(GLuint texture_id) : void;
+
+
+}
+

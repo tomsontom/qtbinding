@@ -1,0 +1,48 @@
+q_class QTextLayout {
+    q_enumeration CursorMode {
+        SkipCharacters = 0
+        SkipWords = 1
+    }
+
+
+    q_class FormatRange {
+
+    }
+
+
+    public const member q_function additionalFormats() : QList<FormatRange>;
+    public member q_function beginLayout() : void;
+    public const member q_function boundingRect() : QRectF;
+    public const member q_function cacheEnabled() : bool;
+    public member q_function clearAdditionalFormats() : void;
+    public member q_function clearLayout() : void;
+    public member q_function createLine() : QTextLine;
+    public const member q_function draw(QPainter * p, const QPointF & pos, const QVector<FormatRange> & selections = QVector<FormatRange> (), const QRectF & clip = QRectF()) : void;
+    public const member q_function drawCursor(QPainter * painter, const QPointF & position, int cursorPosition) : void;
+    public const member q_function drawCursor(QPainter * painter, const QPointF & position, int cursorPosition, int width) : void;
+    public member q_function endLayout() : void;
+    public const member q_function font() : QFont;
+    public const member q_function isValidCursorPosition(int pos) : bool;
+    public const member q_function lineAt(int i) : QTextLine;
+    public const member q_function lineCount() : int;
+    public const member q_function lineForTextPosition(int pos) : QTextLine;
+    public const member q_function maximumWidth() : qreal;
+    public const member q_function minimumWidth() : qreal;
+    public const member q_function nextCursorPosition(int oldPos, CursorMode mode = SkipCharacters) : int;
+    public const member q_function position() : QPointF;
+    public const member q_function preeditAreaPosition() : int;
+    public const member q_function preeditAreaText() : QString;
+    public const member q_function previousCursorPosition(int oldPos, CursorMode mode = SkipCharacters) : int;
+    public member q_function setAdditionalFormats(const QList<FormatRange> & formatList) : void;
+    public member q_function setCacheEnabled(bool enable) : void;
+    public member q_function setFont(const QFont & font) : void;
+    public member q_function setPosition(const QPointF & p) : void;
+    public member q_function setPreeditArea(int position, const QString & text) : void;
+    public member q_function setText(const QString & string) : void;
+    public member q_function setTextOption(const QTextOption & option) : void;
+    public const member q_function text() : QString;
+    public const member q_function textOption() : QTextOption;
+
+
+}
+

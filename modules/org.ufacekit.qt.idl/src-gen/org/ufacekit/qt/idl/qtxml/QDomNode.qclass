@@ -1,0 +1,90 @@
+q_class QDomNode {
+    q_enumeration EncodingPolicy {
+        EncodingFromDocument = 1
+        EncodingFromTextStream = 2
+    }
+
+    q_enumeration NodeType {
+        ElementNode = 1
+        AttributeNode = 2
+        TextNode = 3
+        CDATASectionNode = 4
+        EntityReferenceNode = 5
+        EntityNode = 6
+        ProcessingInstructionNode = 7
+        CommentNode = 8
+        DocumentNode = 9
+        DocumentTypeNode = 10
+        DocumentFragmentNode = 11
+        NotationNode = 12
+        BaseNode = 21
+        CharacterDataNode = 22
+    }
+
+
+    public member q_function appendChild(const QDomNode & newChild) : QDomNode;
+    public const member q_function attributes() : QDomNamedNodeMap;
+    public const member q_function childNodes() : QDomNodeList;
+    public member q_function clear() : void;
+    public const member q_function cloneNode(bool deep = true) : QDomNode;
+    public const member q_function columnNumber() : int;
+    public const member q_function firstChild() : QDomNode;
+    public const member q_function firstChildElement(const QString & tagName = QString()) : QDomElement;
+    public const member q_function hasAttributes() : bool;
+    public const member q_function hasChildNodes() : bool;
+    public member q_function insertAfter(const QDomNode & newChild, const QDomNode & refChild) : QDomNode;
+    public member q_function insertBefore(const QDomNode & newChild, const QDomNode & refChild) : QDomNode;
+    public const member q_function isAttr() : bool;
+    public const member q_function isCDATASection() : bool;
+    public const member q_function isCharacterData() : bool;
+    public const member q_function isComment() : bool;
+    public const member q_function isDocument() : bool;
+    public const member q_function isDocumentFragment() : bool;
+    public const member q_function isDocumentType() : bool;
+    public const member q_function isElement() : bool;
+    public const member q_function isEntity() : bool;
+    public const member q_function isEntityReference() : bool;
+    public const member q_function isNotation() : bool;
+    public const member q_function isNull() : bool;
+    public const member q_function isProcessingInstruction() : bool;
+    public const member q_function isSupported(const QString & feature, const QString & version) : bool;
+    public const member q_function isText() : bool;
+    public const member q_function lastChild() : QDomNode;
+    public const member q_function lastChildElement(const QString & tagName = QString()) : QDomElement;
+    public const member q_function lineNumber() : int;
+    public const member q_function localName() : QString;
+    public const member q_function namedItem(const QString & name) : QDomNode;
+    public const member q_function namespaceURI() : QString;
+    public const member q_function nextSibling() : QDomNode;
+    public const member q_function nextSiblingElement(const QString & tagName = QString()) : QDomElement;
+    public const member q_function nodeName() : QString;
+    public const member q_function nodeType() : NodeType;
+    public const member q_function nodeValue() : QString;
+    public member q_function normalize() : void;
+    public const member q_function ownerDocument() : QDomDocument;
+    public const member q_function parentNode() : QDomNode;
+    public const member q_function prefix() : QString;
+    public const member q_function previousSibling() : QDomNode;
+    public const member q_function previousSiblingElement(const QString & tagName = QString()) : QDomElement;
+    public member q_function removeChild(const QDomNode & oldChild) : QDomNode;
+    public member q_function replaceChild(const QDomNode & newChild, const QDomNode & oldChild) : QDomNode;
+    public const member q_function save(QTextStream & str, int indent) : void;
+    public const member q_function save(QTextStream & str, int indent, EncodingPolicy encodingPolicy) : void;
+    public member q_function setNodeValue(const QString & v) : void;
+    public member q_function setPrefix(const QString & pre) : void;
+    public const member q_function toAttr() : QDomAttr;
+    public const member q_function toCDATASection() : QDomCDATASection;
+    public const member q_function toCharacterData() : QDomCharacterData;
+    public const member q_function toDocument() : QDomDocument;
+    public const member q_function toDocumentFragment() : QDomDocumentFragment;
+    public const member q_function toDocumentType() : QDomDocumentType;
+    public const member q_function toElement() : QDomElement;
+    public const member q_function toEntity() : QDomEntity;
+    public const member q_function toEntityReference() : QDomEntityReference;
+    public const member q_function toNotation() : QDomNotation;
+    public const member q_function toProcessingInstruction() : QDomProcessingInstruction;
+    public const member q_function toText() : QDomText;
+
+
+}
+

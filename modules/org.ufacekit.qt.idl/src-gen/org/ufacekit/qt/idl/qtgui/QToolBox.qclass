@@ -1,0 +1,30 @@
+q_class QToolBox extends QFrame {
+    q_property const int count;
+    q_property int currentIndex;
+
+    public member q_function addItem(QWidget * widget, const QIcon & iconSet, const QString & text) : int;
+    public member q_function addItem(QWidget * w, const QString & text) : int;
+    public const member q_function count() : int;
+    public const member q_function currentIndex() : int;
+    public const member q_function currentWidget() : QWidget *;
+    public const member q_function indexOf(QWidget * widget) : int;
+    public member q_function insertItem(int index, QWidget * widget, const QIcon & icon, const QString & text) : int;
+    public member q_function insertItem(int index, QWidget * widget, const QString & text) : int;
+    public const member q_function isItemEnabled(int index) : bool;
+    public const member q_function itemIcon(int index) : QIcon;
+    public const member q_function itemText(int index) : QString;
+    public const member q_function itemToolTip(int index) : QString;
+    public member q_function removeItem(int index) : void;
+    public member q_function setItemEnabled(int index, bool enabled) : void;
+    public member q_function setItemIcon(int index, const QIcon & icon) : void;
+    public member q_function setItemText(int index, const QString & text) : void;
+    public const member q_function widget(int index) : QWidget *;
+
+    protected virtual member q_function itemInserted(int index) : void;
+    protected virtual member q_function itemRemoved(int index) : void;
+
+
+
+
+}
+

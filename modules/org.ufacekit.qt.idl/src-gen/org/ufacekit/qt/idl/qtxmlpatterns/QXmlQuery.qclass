@@ -1,0 +1,44 @@
+q_class QXmlQuery {
+    q_enumeration QueryLanguage {
+        XQuery10 = 1
+        XSLT20 = 2
+        XmlSchema11IdentityConstraintSelector = 1024
+        XmlSchema11IdentityConstraintField = 2048
+        XPath20 = 4096
+    }
+
+
+    public member q_function bindVariable(const QString & localName, const QXmlItem & value) : void;
+    public member q_function bindVariable(const QXmlName & name, QIODevice * device) : void;
+    public member q_function bindVariable(const QXmlName & name, const QXmlQuery & query) : void;
+    public member q_function bindVariable(const QXmlName & name, const QXmlItem & value) : void;
+    public member q_function bindVariable(const QString & localName, QIODevice * device) : void;
+    public member q_function bindVariable(const QString & localName, const QXmlQuery & query) : void;
+    public const member q_function evaluateTo(QIODevice * target) : bool;
+    public const member q_function evaluateTo(QStringList * target) : bool;
+    public const member q_function evaluateTo(QXmlResultItems * result) : void;
+    public const member q_function evaluateTo(QAbstractXmlReceiver * callback) : bool;
+    public const member q_function evaluateTo(QString * output) : bool;
+    public const member q_function initialTemplateName() : QXmlName;
+    public const member q_function isValid() : bool;
+    public const member q_function messageHandler() : QAbstractMessageHandler *;
+    public const member q_function namePool() : QXmlNamePool;
+    public const member q_function networkAccessManager() : QNetworkAccessManager *;
+    public const member q_function queryLanguage() : QueryLanguage;
+    public member q_function setFocus(const QUrl & documentURI) : bool;
+    public member q_function setFocus(QIODevice * document) : bool;
+    public member q_function setFocus(const QString & focus) : bool;
+    public member q_function setFocus(const QXmlItem & item) : void;
+    public member q_function setInitialTemplateName(const QString & localName) : void;
+    public member q_function setInitialTemplateName(const QXmlName & name) : void;
+    public member q_function setMessageHandler(QAbstractMessageHandler * aMessageHandler) : void;
+    public member q_function setNetworkAccessManager(QNetworkAccessManager * newManager) : void;
+    public member q_function setQuery(const QUrl & queryURI, const QUrl & baseURI = QUrl()) : void;
+    public member q_function setQuery(const QString & sourceCode, const QUrl & documentURI = QUrl()) : void;
+    public member q_function setQuery(QIODevice * sourceCode, const QUrl & documentURI = QUrl()) : void;
+    public member q_function setUriResolver(const QAbstractUriResolver * resolver) : void;
+    public const member q_function uriResolver() : const QAbstractUriResolver *;
+
+
+}
+

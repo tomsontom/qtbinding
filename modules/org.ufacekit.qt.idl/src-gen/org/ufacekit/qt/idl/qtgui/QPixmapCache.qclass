@@ -1,0 +1,22 @@
+q_class QPixmapCache {
+    q_class Key {
+
+    }
+
+
+    public class q_function cacheLimit() : int;
+    public class q_function clear() : void;
+    public class q_function find(const Key & key, QPixmap * pixmap) : bool;
+    public class q_function find(const QString & key, QPixmap * pixmap) : bool;
+    public class q_function find(const QString & key) : QPixmap *;
+    public class q_function find(const QString & key, QPixmap & pixmap) : bool;
+    public class q_function insert(const QPixmap & pixmap) : Key;
+    public class q_function insert(const QString & key, const QPixmap & pixmap) : bool;
+    public class q_function remove(const Key & key) : void;
+    public class q_function remove(const QString & key) : void;
+    public class q_function replace(const Key & key, const QPixmap & pixmap) : bool;
+    public class q_function setCacheLimit(int n) : void;
+
+
+}
+

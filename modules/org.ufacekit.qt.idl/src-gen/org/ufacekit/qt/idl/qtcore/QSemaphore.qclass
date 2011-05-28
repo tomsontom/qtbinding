@@ -1,0 +1,10 @@
+q_class QSemaphore {
+    public member q_function acquire(int n = 1) : void;
+    public const member q_function available() : int;
+    public member q_function release(int n = 1) : void;
+    public member q_function tryAcquire(int n = 1) : bool;
+    public member q_function tryAcquire(int n, int timeout) : bool;
+
+
+}
+

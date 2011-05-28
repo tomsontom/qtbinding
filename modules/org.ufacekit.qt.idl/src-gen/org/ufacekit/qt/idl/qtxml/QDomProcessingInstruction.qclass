@@ -1,0 +1,9 @@
+q_class QDomProcessingInstruction extends QDomNode {
+    public const member q_function data() : QString;
+    public const member q_function nodeType() : QDomNode.NodeType;
+    public member q_function setData(const QString & d) : void;
+    public const member q_function target() : QString;
+
+
+}
+

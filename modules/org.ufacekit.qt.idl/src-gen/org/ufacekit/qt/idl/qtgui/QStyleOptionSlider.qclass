@@ -1,0 +1,13 @@
+q_class QStyleOptionSlider extends QStyleOptionComplex {
+    q_enumeration StyleOptionType {
+        Type = SO_Slider
+    }
+
+    q_enumeration StyleOptionVersion {
+        Version = 1
+    }
+
+
+
+}
+

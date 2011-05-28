@@ -1,0 +1,8 @@
+q_class QTextDecoder {
+    public member q_function toUnicode(const QByteArray & ba) : QString;
+    public member q_function toUnicode(QString * target, const char * chars, int len) : void;
+    public member q_function toUnicode(const char * chars, int len) : QString;
+
+
+}
+

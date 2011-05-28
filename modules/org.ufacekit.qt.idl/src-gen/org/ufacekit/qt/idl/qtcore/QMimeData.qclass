@@ -1,0 +1,26 @@
+q_class QMimeData extends QObject {
+    public member q_function clear() : void;
+    public const member q_function colorData() : QVariant;
+    public const member q_function data(const QString & mimeType) : QByteArray;
+    public const virtual member q_function formats() : QStringList;
+    public const member q_function hasColor() : bool;
+    public const virtual member q_function hasFormat(const QString & mimeType) : bool;
+    public const member q_function hasHtml() : bool;
+    public const member q_function hasImage() : bool;
+    public const member q_function hasText() : bool;
+    public const member q_function hasUrls() : bool;
+    public const member q_function imageData() : QVariant;
+    public member q_function removeFormat(const QString & mimeType) : void;
+    public member q_function setData(const QString & mimeType, const QByteArray & data) : void;
+    public member q_function setHtml(const QString & html) : void;
+    public member q_function setImageData(const QVariant & image) : void;
+    public member q_function setText(const QString & text) : void;
+    public member q_function setUrls(const QList<QUrl> & urls) : void;
+    public const member q_function text() : QString;
+    public const member q_function urls() : QList<QUrl>;
+
+    protected const virtual member q_function retrieveData(const QString & mimeType, QVariant.Type type) : QVariant;
+
+
+}
+

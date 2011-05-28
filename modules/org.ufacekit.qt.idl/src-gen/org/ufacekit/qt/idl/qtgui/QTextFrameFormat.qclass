@@ -1,0 +1,55 @@
+q_class QTextFrameFormat extends QTextFormat {
+    q_enumeration BorderStyle {
+        BorderStyle_None = 0
+        BorderStyle_Dotted = 1
+        BorderStyle_Dashed = 2
+        BorderStyle_Solid = 3
+        BorderStyle_Double = 4
+        BorderStyle_DotDash = 5
+        BorderStyle_DotDotDash = 6
+        BorderStyle_Groove = 7
+        BorderStyle_Ridge = 8
+        BorderStyle_Inset = 9
+        BorderStyle_Outset = 10
+    }
+
+    q_enumeration Position {
+        InFlow = 0
+        FloatLeft = 1
+        FloatRight = 2
+    }
+
+
+    public const member q_function border() : qreal;
+    public const member q_function borderBrush() : QBrush;
+    public const member q_function borderStyle() : BorderStyle;
+    public const member q_function bottomMargin() : qreal;
+    public const member q_function height() : QTextLength;
+    public const member q_function isValid() : bool;
+    public const member q_function leftMargin() : qreal;
+    public const member q_function margin() : qreal;
+    public const member q_function padding() : qreal;
+    public const member q_function pageBreakPolicy() : PageBreakFlags;
+    public const member q_function position() : Position;
+    public const member q_function rightMargin() : qreal;
+    public member q_function setBorder(qreal width) : void;
+    public member q_function setBorderBrush(const QBrush & brush) : void;
+    public member q_function setBorderStyle(BorderStyle style) : void;
+    public member q_function setBottomMargin(qreal margin) : void;
+    public member q_function setHeight(qreal height) : void;
+    public member q_function setHeight(const QTextLength & height) : void;
+    public member q_function setLeftMargin(qreal margin) : void;
+    public member q_function setMargin(qreal margin) : void;
+    public member q_function setPadding(qreal width) : void;
+    public member q_function setPageBreakPolicy(PageBreakFlags policy) : void;
+    public member q_function setPosition(Position policy) : void;
+    public member q_function setRightMargin(qreal margin) : void;
+    public member q_function setTopMargin(qreal margin) : void;
+    public member q_function setWidth(qreal width) : void;
+    public member q_function setWidth(const QTextLength & width) : void;
+    public const member q_function topMargin() : qreal;
+    public const member q_function width() : QTextLength;
+
+
+}
+

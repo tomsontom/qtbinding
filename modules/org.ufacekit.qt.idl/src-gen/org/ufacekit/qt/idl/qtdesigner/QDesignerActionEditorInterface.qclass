@@ -1,0 +1,9 @@
+q_class QDesignerActionEditorInterface extends QWidget {
+    public const virtual member q_function core() : QDesignerFormEditorInterface *;
+    public purevirtual member q_function manageAction(QAction * action) : void;
+    public purevirtual member q_function unmanageAction(QAction * action) : void;
+
+
+
+}
+

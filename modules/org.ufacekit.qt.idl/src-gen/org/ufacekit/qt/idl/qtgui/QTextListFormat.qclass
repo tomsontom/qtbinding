@@ -1,0 +1,22 @@
+q_class QTextListFormat extends QTextFormat {
+    q_enumeration Style {
+        ListDisc = -1
+        ListCircle = -2
+        ListSquare = -3
+        ListDecimal = -4
+        ListLowerAlpha = -5
+        ListUpperAlpha = -6
+        ListLowerRoman = -7
+        ListUpperRoman = -8
+        ListStyleUndefined = 0
+    }
+
+
+    public const member q_function indent() : int;
+    public member q_function setIndent(int indentation) : void;
+    public member q_function setStyle(Style style) : void;
+    public const member q_function style() : Style;
+
+
+}
+

@@ -1,0 +1,7 @@
+q_class QPaintEvent extends QEvent {
+    public const member q_function rect() : const QRect &;
+    public const member q_function region() : const QRegion &;
+
+
+}
+

@@ -1,0 +1,45 @@
+q_class QLabel extends QFrame {
+    q_property Qt.Alignment alignment;
+    q_property const bool hasSelectedText;
+    q_property int indent;
+    q_property int margin;
+    q_property bool openExternalLinks;
+    q_property QPixmap pixmap;
+    q_property bool scaledContents;
+    q_property const QString selectedText;
+    q_property QString text;
+    q_property Qt.TextFormat textFormat;
+    q_property Qt.TextInteractionFlags textInteractionFlags;
+    q_property bool wordWrap;
+
+    public const member q_function alignment() : Qt.Alignment;
+    public const member q_function buddy() : QWidget *;
+    public const member q_function hasScaledContents() : bool;
+    public const member q_function hasSelectedText() : bool;
+    public const member q_function indent() : int;
+    public const member q_function margin() : int;
+    public const member q_function movie() : QMovie *;
+    public const member q_function openExternalLinks() : bool;
+    public const member q_function picture() : const QPicture *;
+    public const member q_function pixmap() : const QPixmap *;
+    public const member q_function selectedText() : QString;
+    public const member q_function selectionStart() : int;
+    public member q_function setAlignment(Qt.Alignment ) : void;
+    public member q_function setIndent(int ) : void;
+    public member q_function setMargin(int ) : void;
+    public member q_function setOpenExternalLinks(bool open) : void;
+    public member q_function setScaledContents(bool ) : void;
+    public member q_function setSelection(int start, int length) : void;
+    public member q_function setTextFormat(Qt.TextFormat ) : void;
+    public member q_function setTextInteractionFlags(Qt.TextInteractionFlags flags) : void;
+    public member q_function setWordWrap(bool on) : void;
+    public const member q_function text() : QString;
+    public const member q_function textFormat() : Qt.TextFormat;
+    public const member q_function textInteractionFlags() : Qt.TextInteractionFlags;
+    public const member q_function wordWrap() : bool;
+
+
+
+
+}
+

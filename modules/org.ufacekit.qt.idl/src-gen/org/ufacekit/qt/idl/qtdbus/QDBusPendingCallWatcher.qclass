@@ -1,0 +1,8 @@
+q_class QDBusPendingCallWatcher extends QObject, QDBusPendingCall {
+    public const member q_function isFinished() : bool;
+    public member q_function waitForFinished() : void;
+
+
+
+}
+

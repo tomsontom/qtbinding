@@ -1,0 +1,15 @@
+q_class QMetaEnum {
+    public const member q_function isFlag() : bool;
+    public const member q_function isValid() : bool;
+    public const member q_function key(int index) : const char *;
+    public const member q_function keyCount() : int;
+    public const member q_function keyToValue(const char * key) : int;
+    public const member q_function keysToValue(const char * keys) : int;
+    public const member q_function scope() : const char *;
+    public const member q_function value(int index) : int;
+    public const member q_function valueToKey(int value) : const char *;
+    public const member q_function valueToKeys(int value) : QByteArray;
+
+
+}
+

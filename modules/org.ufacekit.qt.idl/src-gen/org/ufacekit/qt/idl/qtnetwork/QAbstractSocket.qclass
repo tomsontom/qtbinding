@@ -1,0 +1,95 @@
+q_class QAbstractSocket extends QIODevice {
+    q_enumeration NetworkLayerProtocol {
+        IPv4Protocol = 0
+        IPv6Protocol = 1
+        UnknownNetworkLayerProtocol = -1
+    }
+
+    q_enumeration SocketError {
+        ConnectionRefusedError = 0
+        RemoteHostClosedError = 1
+        HostNotFoundError = 2
+        SocketAccessError = 3
+        SocketResourceError = 4
+        SocketTimeoutError = 5
+        DatagramTooLargeError = 6
+        NetworkError = 7
+        AddressInUseError = 8
+        SocketAddressNotAvailableError = 9
+        UnsupportedSocketOperationError = 10
+        UnfinishedSocketOperationError = 11
+        ProxyAuthenticationRequiredError = 12
+        SslHandshakeFailedError = 13
+        ProxyConnectionRefusedError = 14
+        ProxyConnectionClosedError = 15
+        ProxyConnectionTimeoutError = 16
+        ProxyNotFoundError = 17
+        ProxyProtocolError = 18
+        UnknownSocketError = -1
+    }
+
+    q_enumeration SocketOption {
+        LowDelayOption = 0
+        KeepAliveOption = 1
+    }
+
+    q_enumeration SocketState {
+        UnconnectedState = 0
+        HostLookupState = 1
+        ConnectingState = 2
+        ConnectedState = 3
+        BoundState = 4
+        ListeningState = 5
+        ClosingState = 6
+    }
+
+    q_enumeration SocketType {
+        TcpSocket = 0
+        UdpSocket = 1
+        UnknownSocketType = -1
+    }
+
+
+    public member q_function abort() : void;
+    public const virtual member q_function bytesAvailable() : qint64;
+    public const virtual member q_function bytesToWrite() : qint64;
+    public const virtual member q_function canReadLine() : bool;
+    public virtual member q_function close() : void;
+    public member q_function connectToHost(const QString & hostName, quint16 port, OpenMode openMode = ReadWrite) : void;
+    public member q_function connectToHost(const QHostAddress & address, quint16 port, OpenMode openMode = ReadWrite) : void;
+    public member q_function disconnectFromHost() : void;
+    public const member q_function error() : SocketError;
+    public member q_function flush() : bool;
+    public const member q_function isValid() : bool;
+    public const member q_function localAddress() : QHostAddress;
+    public const member q_function localPort() : quint16;
+    public const member q_function peerAddress() : QHostAddress;
+    public const member q_function peerName() : QString;
+    public const member q_function peerPort() : quint16;
+    public const member q_function proxy() : QNetworkProxy;
+    public const member q_function readBufferSize() : qint64;
+    public member q_function setProxy(const QNetworkProxy & networkProxy) : void;
+    public member q_function setReadBufferSize(qint64 size) : void;
+    public member q_function setSocketDescriptor(int socketDescriptor, SocketState socketState = ConnectedState, OpenMode openMode = ReadWrite) : bool;
+    public member q_function setSocketOption(QAbstractSocket.SocketOption option, const QVariant & value) : void;
+    public const member q_function socketDescriptor() : int;
+    public member q_function socketOption(QAbstractSocket.SocketOption option) : QVariant;
+    public const member q_function socketType() : SocketType;
+    public const member q_function state() : SocketState;
+    public member q_function waitForConnected(int msecs = 30000) : bool;
+    public member q_function waitForDisconnected(int msecs = 30000) : bool;
+    public virtual member q_function waitForReadyRead(int msecs = 30000) : bool;
+
+    protected member q_function setLocalAddress(const QHostAddress & address) : void;
+    protected member q_function setLocalPort(quint16 port) : void;
+    protected member q_function setPeerAddress(const QHostAddress & address) : void;
+    protected member q_function setPeerName(const QString & name) : void;
+    protected member q_function setPeerPort(quint16 port) : void;
+    protected member q_function setSocketError(SocketError socketError) : void;
+    protected member q_function setSocketState(SocketState state) : void;
+
+
+
+
+}
+

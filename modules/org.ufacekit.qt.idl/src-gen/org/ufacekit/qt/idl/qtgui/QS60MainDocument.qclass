@@ -1,0 +1,6 @@
+q_class QS60MainDocument {
+    public virtual member q_function CreateAppUiL() : CEikAppUi *;
+
+
+}
+

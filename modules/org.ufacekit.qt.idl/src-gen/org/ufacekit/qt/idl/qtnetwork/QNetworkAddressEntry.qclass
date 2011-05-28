@@ -1,0 +1,13 @@
+q_class QNetworkAddressEntry {
+    public const member q_function broadcast() : QHostAddress;
+    public const member q_function ip() : QHostAddress;
+    public const member q_function netmask() : QHostAddress;
+    public const member q_function prefixLength() : int;
+    public member q_function setBroadcast(const QHostAddress & newBroadcast) : void;
+    public member q_function setIp(const QHostAddress & newIp) : void;
+    public member q_function setNetmask(const QHostAddress & newNetmask) : void;
+    public member q_function setPrefixLength(int length) : void;
+
+
+}
+

@@ -1,0 +1,8 @@
+q_class QSizeGrip extends QWidget {
+    protected virtual member q_function mouseMoveEvent(QMouseEvent * event) : void;
+    protected virtual member q_function mousePressEvent(QMouseEvent * event) : void;
+    protected virtual member q_function paintEvent(QPaintEvent * event) : void;
+
+
+}
+

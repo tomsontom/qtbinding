@@ -1,0 +1,19 @@
+q_class QRubberBand extends QWidget {
+    q_enumeration Shape {
+        Line = 0
+        Rectangle = 1
+    }
+
+
+    public member q_function move(const QPoint & p) : void;
+    public member q_function move(int x, int y) : void;
+    public member q_function resize(int width, int height) : void;
+    public member q_function resize(const QSize & size) : void;
+    public member q_function setGeometry(int x, int y, int width, int height) : void;
+    public member q_function setGeometry(const QRect & rect) : void;
+
+    protected const member q_function initStyleOption(QStyleOptionRubberBand * option) : void;
+
+
+}
+

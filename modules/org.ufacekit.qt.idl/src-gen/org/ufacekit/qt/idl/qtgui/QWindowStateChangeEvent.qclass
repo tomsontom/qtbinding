@@ -1,0 +1,6 @@
+q_class QWindowStateChangeEvent extends QEvent {
+    public const member q_function oldState() : Qt.WindowStates;
+
+
+}
+

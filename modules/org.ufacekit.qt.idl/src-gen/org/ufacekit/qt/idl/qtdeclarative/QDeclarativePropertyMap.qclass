@@ -1,0 +1,14 @@
+q_class QDeclarativePropertyMap extends QObject {
+    public member q_function clear(const QString & key) : void;
+    public const member q_function contains(const QString & key) : bool;
+    public const member q_function count() : int;
+    public member q_function insert(const QString & key, const QVariant & value) : void;
+    public const member q_function isEmpty() : bool;
+    public const member q_function keys() : QStringList;
+    public const member q_function size() : int;
+    public const member q_function value(const QString & key) : QVariant;
+
+
+
+}
+

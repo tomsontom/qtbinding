@@ -1,0 +1,69 @@
+q_class QSizePolicy {
+    q_enumeration ControlType {
+        DefaultType = 1
+        ButtonBox = 2
+        CheckBox = 4
+        ComboBox = 8
+        Frame = 16
+        GroupBox = 32
+        Label = 64
+        Line = 128
+        LineEdit = 256
+        PushButton = 512
+        RadioButton = 1024
+        Slider = 2048
+        SpinBox = 4096
+        TabWidget = 8192
+        ToolButton = 16384
+    }
+
+    q_flags ControlTypes : ControlType;
+
+    q_enumeration Policy {
+        Fixed = 0
+        Minimum = GrowFlag
+        Maximum = ShrinkFlag
+        Preferred = GrowFlag  |  ShrinkFlag
+        MinimumExpanding = GrowFlag  |  ExpandFlag
+        Expanding = GrowFlag  |  ShrinkFlag  |  ExpandFlag
+        Ignored = ShrinkFlag  |  GrowFlag  |  IgnoreFlag
+    }
+
+    q_enumeration PolicyFlag {
+        GrowFlag = 1
+        ExpandFlag = 2
+        ShrinkFlag = 4
+        IgnoreFlag = 8
+    }
+
+    q_enumeration SizePolicyMasks {
+        HSize = 4
+        HMask = 15
+        VMask = HMask<<HSize
+        CTShift = 9
+        CTSize = 5
+        WFHShift = CTShift + CTSize
+        CTMask = ( ( 0x1<<CTSize ) -1 ) <<CTShift
+        UnusedShift = CTShift + CTSize
+        UnusedSize = 2
+    }
+
+
+    public const member q_function controlType() : ControlType;
+    public const member q_function expandingDirections() : Qt.Orientations;
+    public const member q_function hasHeightForWidth() : bool;
+    public const member q_function horizontalPolicy() : Policy;
+    public const member q_function horizontalStretch() : int;
+    public member q_function setControlType(ControlType type) : void;
+    public member q_function setHeightForWidth(bool dependent) : void;
+    public member q_function setHorizontalPolicy(Policy policy) : void;
+    public member q_function setHorizontalStretch(uchar stretchFactor) : void;
+    public member q_function setVerticalPolicy(Policy policy) : void;
+    public member q_function setVerticalStretch(uchar stretchFactor) : void;
+    public member q_function transpose() : void;
+    public const member q_function verticalPolicy() : Policy;
+    public const member q_function verticalStretch() : int;
+
+
+}
+

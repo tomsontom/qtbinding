@@ -1,0 +1,10 @@
+q_class QItemEditorFactory {
+    public const virtual member q_function createEditor(QVariant.Type type, QWidget * parent) : QWidget *;
+    public class q_function defaultFactory() : const QItemEditorFactory *;
+    public member q_function registerEditor(QVariant.Type type, QItemEditorCreatorBase * creator) : void;
+    public class q_function setDefaultFactory(QItemEditorFactory * factory) : void;
+    public const virtual member q_function valuePropertyName(QVariant.Type type) : QByteArray;
+
+
+}
+

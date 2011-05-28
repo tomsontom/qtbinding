@@ -1,0 +1,13 @@
+q_class QStyleHintReturnVariant extends QStyleHintReturn {
+    q_enumeration StyleOptionType {
+        Type = SH_Variant
+    }
+
+    q_enumeration StyleOptionVersion {
+        Version = 1
+    }
+
+
+
+}
+

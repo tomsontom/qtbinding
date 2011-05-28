@@ -1,0 +1,9 @@
+q_class QStyleOptionViewItemV3 extends QStyleOptionViewItemV2 {
+    q_enumeration StyleOptionVersion {
+        Version = 3
+    }
+
+
+
+}
+

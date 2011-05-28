@@ -1,0 +1,51 @@
+q_class QTableView extends QAbstractItemView {
+    q_property bool cornerButtonEnabled;
+    q_property Qt.PenStyle gridStyle;
+    q_property bool showGrid;
+    q_property bool sortingEnabled;
+    q_property bool wordWrap;
+
+    public member q_function clearSpans() : void;
+    public const member q_function columnAt(int x) : int;
+    public const member q_function columnSpan(int row, int column) : int;
+    public const member q_function columnViewportPosition(int column) : int;
+    public const member q_function columnWidth(int column) : int;
+    public const member q_function gridStyle() : Qt.PenStyle;
+    public const member q_function horizontalHeader() : QHeaderView *;
+    public const virtual member q_function indexAt(const QPoint & pos) : QModelIndex;
+    public const member q_function isColumnHidden(int column) : bool;
+    public const member q_function isCornerButtonEnabled() : bool;
+    public const member q_function isRowHidden(int row) : bool;
+    public const member q_function isSortingEnabled() : bool;
+    public const member q_function rowAt(int y) : int;
+    public const member q_function rowHeight(int row) : int;
+    public const member q_function rowSpan(int row, int column) : int;
+    public const member q_function rowViewportPosition(int row) : int;
+    public member q_function setColumnHidden(int column, bool hide) : void;
+    public member q_function setColumnWidth(int column, int width) : void;
+    public member q_function setCornerButtonEnabled(bool enable) : void;
+    public member q_function setGridStyle(Qt.PenStyle style) : void;
+    public member q_function setHorizontalHeader(QHeaderView * header) : void;
+    public member q_function setRowHeight(int row, int height) : void;
+    public member q_function setRowHidden(int row, bool hide) : void;
+    public member q_function setSortingEnabled(bool enable) : void;
+    public member q_function setSpan(int row, int column, int rowSpanCount, int columnSpanCount) : void;
+    public member q_function setVerticalHeader(QHeaderView * header) : void;
+    public member q_function setWordWrap(bool on) : void;
+    public const member q_function showGrid() : bool;
+    public member q_function sortByColumn(int column, Qt.SortOrder order) : void;
+    public const member q_function verticalHeader() : QHeaderView *;
+    public const member q_function wordWrap() : bool;
+
+    protected const virtual member q_function horizontalOffset() : int;
+    protected virtual member q_function moveCursor(CursorAction cursorAction, Qt.KeyboardModifiers modifiers) : QModelIndex;
+    protected virtual member q_function paintEvent(QPaintEvent * event) : void;
+    protected virtual member q_function setSelection(const QRect & rect, QItemSelectionModel.SelectionFlags flags) : void;
+    protected const virtual member q_function sizeHintForColumn(int column) : int;
+    protected const virtual member q_function sizeHintForRow(int row) : int;
+    protected const virtual member q_function verticalOffset() : int;
+
+
+
+}
+

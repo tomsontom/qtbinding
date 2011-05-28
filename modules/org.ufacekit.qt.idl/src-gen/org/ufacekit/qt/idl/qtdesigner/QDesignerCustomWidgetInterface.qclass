@@ -1,0 +1,17 @@
+q_class QDesignerCustomWidgetInterface {
+    public const virtual member q_function codeTemplate() : QString;
+    public purevirtual member q_function createWidget(QWidget * parent) : QWidget *;
+    public const virtual member q_function domXml() : QString;
+    public const purevirtual member q_function group() : QString;
+    public const purevirtual member q_function icon() : QIcon;
+    public const purevirtual member q_function includeFile() : QString;
+    public virtual member q_function initialize(QDesignerFormEditorInterface * formEditor) : void;
+    public const purevirtual member q_function isContainer() : bool;
+    public const virtual member q_function isInitialized() : bool;
+    public const purevirtual member q_function name() : QString;
+    public const purevirtual member q_function toolTip() : QString;
+    public const purevirtual member q_function whatsThis() : QString;
+
+
+}
+

@@ -1,0 +1,18 @@
+q_class QStackedWidget extends QFrame {
+    q_property const int count;
+    q_property int currentIndex;
+
+    public member q_function addWidget(QWidget * widget) : int;
+    public const member q_function count() : int;
+    public const member q_function currentIndex() : int;
+    public const member q_function currentWidget() : QWidget *;
+    public const member q_function indexOf(QWidget * widget) : int;
+    public member q_function insertWidget(int index, QWidget * widget) : int;
+    public member q_function removeWidget(QWidget * widget) : void;
+    public const member q_function widget(int index) : QWidget *;
+
+
+
+
+}
+

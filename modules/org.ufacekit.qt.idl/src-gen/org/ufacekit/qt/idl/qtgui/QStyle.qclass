@@ -1,0 +1,625 @@
+q_class QStyle extends QObject {
+    q_enumeration ComplexControl {
+        CC_SpinBox = 0
+        CC_ComboBox = 1
+        CC_ScrollBar = 2
+        CC_Slider = 3
+        CC_ToolButton = 4
+        CC_TitleBar = 5
+        CC_Q3ListView = 6
+        CC_Dial = 7
+        CC_GroupBox = 8
+        CC_MdiControls = 9
+        CC_CustomBase = 4026531840
+    }
+
+    q_enumeration ContentsType {
+        CT_PushButton = 0
+        CT_CheckBox = 1
+        CT_RadioButton = 2
+        CT_ToolButton = 3
+        CT_ComboBox = 4
+        CT_Splitter = 5
+        CT_Q3DockWindow = 6
+        CT_ProgressBar = 7
+        CT_MenuItem = 8
+        CT_MenuBarItem = 9
+        CT_MenuBar = 10
+        CT_Menu = 11
+        CT_TabBarTab = 12
+        CT_Slider = 13
+        CT_ScrollBar = 14
+        CT_Q3Header = 15
+        CT_LineEdit = 16
+        CT_SpinBox = 17
+        CT_SizeGrip = 18
+        CT_TabWidget = 19
+        CT_DialogButtons = 20
+        CT_HeaderSection = 21
+        CT_GroupBox = 22
+        CT_MdiControls = 23
+        CT_ItemViewItem = 24
+        CT_CustomBase = 4026531840
+    }
+
+    q_enumeration ControlElement {
+        CE_PushButton = 0
+        CE_PushButtonBevel = 1
+        CE_PushButtonLabel = 2
+        CE_CheckBox = 3
+        CE_CheckBoxLabel = 4
+        CE_RadioButton = 5
+        CE_RadioButtonLabel = 6
+        CE_TabBarTab = 7
+        CE_TabBarTabShape = 8
+        CE_TabBarTabLabel = 9
+        CE_ProgressBar = 10
+        CE_ProgressBarGroove = 11
+        CE_ProgressBarContents = 12
+        CE_ProgressBarLabel = 13
+        CE_MenuItem = 14
+        CE_MenuScroller = 15
+        CE_MenuVMargin = 16
+        CE_MenuHMargin = 17
+        CE_MenuTearoff = 18
+        CE_MenuEmptyArea = 19
+        CE_MenuBarItem = 20
+        CE_MenuBarEmptyArea = 21
+        CE_ToolButtonLabel = 22
+        CE_Header = 23
+        CE_HeaderSection = 24
+        CE_HeaderLabel = 25
+        CE_Q3DockWindowEmptyArea = 26
+        CE_ToolBoxTab = 27
+        CE_SizeGrip = 28
+        CE_Splitter = 29
+        CE_RubberBand = 30
+        CE_DockWidgetTitle = 31
+        CE_ScrollBarAddLine = 32
+        CE_ScrollBarSubLine = 33
+        CE_ScrollBarAddPage = 34
+        CE_ScrollBarSubPage = 35
+        CE_ScrollBarSlider = 36
+        CE_ScrollBarFirst = 37
+        CE_ScrollBarLast = 38
+        CE_FocusFrame = 39
+        CE_ComboBoxLabel = 40
+        CE_ToolBar = 41
+        CE_ToolBoxTabShape = 42
+        CE_ToolBoxTabLabel = 43
+        CE_HeaderEmptyArea = 44
+        CE_ColumnViewGrip = 45
+        CE_ItemViewItem = 46
+        CE_ShapedFrame = 47
+        CE_CustomBase = 4026531840
+    }
+
+    q_enumeration PixelMetric {
+        PM_ButtonMargin = 0
+        PM_ButtonDefaultIndicator = 1
+        PM_MenuButtonIndicator = 2
+        PM_ButtonShiftHorizontal = 3
+        PM_ButtonShiftVertical = 4
+        PM_DefaultFrameWidth = 5
+        PM_SpinBoxFrameWidth = 6
+        PM_ComboBoxFrameWidth = 7
+        PM_MaximumDragDistance = 8
+        PM_ScrollBarExtent = 9
+        PM_ScrollBarSliderMin = 10
+        PM_SliderThickness = 11
+        PM_SliderControlThickness = 12
+        PM_SliderLength = 13
+        PM_SliderTickmarkOffset = 14
+        PM_SliderSpaceAvailable = 15
+        PM_DockWidgetSeparatorExtent = 16
+        PM_DockWidgetHandleExtent = 17
+        PM_DockWidgetFrameWidth = 18
+        PM_TabBarTabOverlap = 19
+        PM_TabBarTabHSpace = 20
+        PM_TabBarTabVSpace = 21
+        PM_TabBarBaseHeight = 22
+        PM_TabBarBaseOverlap = 23
+        PM_ProgressBarChunkWidth = 24
+        PM_SplitterWidth = 25
+        PM_TitleBarHeight = 26
+        PM_MenuScrollerHeight = 27
+        PM_MenuHMargin = 28
+        PM_MenuVMargin = 29
+        PM_MenuPanelWidth = 30
+        PM_MenuTearoffHeight = 31
+        PM_MenuDesktopFrameWidth = 32
+        PM_MenuBarPanelWidth = 33
+        PM_MenuBarItemSpacing = 34
+        PM_MenuBarVMargin = 35
+        PM_MenuBarHMargin = 36
+        PM_IndicatorWidth = 37
+        PM_IndicatorHeight = 38
+        PM_ExclusiveIndicatorWidth = 39
+        PM_ExclusiveIndicatorHeight = 40
+        PM_CheckListButtonSize = 41
+        PM_CheckListControllerSize = 42
+        PM_DialogButtonsSeparator = 43
+        PM_DialogButtonsButtonWidth = 44
+        PM_DialogButtonsButtonHeight = 45
+        PM_MdiSubWindowFrameWidth = 46
+        PM_MDIFrameWidth = PM_MdiSubWindowFrameWidth
+        PM_MdiSubWindowMinimizedWidth = __UNKNOWN__
+        PM_MDIMinimizedWidth = PM_MdiSubWindowMinimizedWidth
+        PM_HeaderMargin = __UNKNOWN__
+        PM_HeaderMarkSize = __UNKNOWN__
+        PM_HeaderGripMargin = __UNKNOWN__
+        PM_TabBarTabShiftHorizontal = __UNKNOWN__
+        PM_TabBarTabShiftVertical = __UNKNOWN__
+        PM_TabBarScrollButtonWidth = __UNKNOWN__
+        PM_ToolBarFrameWidth = __UNKNOWN__
+        PM_ToolBarHandleExtent = __UNKNOWN__
+        PM_ToolBarItemSpacing = __UNKNOWN__
+        PM_ToolBarItemMargin = __UNKNOWN__
+        PM_ToolBarSeparatorExtent = __UNKNOWN__
+        PM_ToolBarExtensionExtent = __UNKNOWN__
+        PM_SpinBoxSliderHeight = __UNKNOWN__
+        PM_DefaultTopLevelMargin = __UNKNOWN__
+        PM_DefaultChildMargin = __UNKNOWN__
+        PM_DefaultLayoutSpacing = __UNKNOWN__
+        PM_ToolBarIconSize = __UNKNOWN__
+        PM_ListViewIconSize = __UNKNOWN__
+        PM_IconViewIconSize = __UNKNOWN__
+        PM_SmallIconSize = __UNKNOWN__
+        PM_LargeIconSize = __UNKNOWN__
+        PM_FocusFrameVMargin = __UNKNOWN__
+        PM_FocusFrameHMargin = __UNKNOWN__
+        PM_ToolTipLabelFrameWidth = __UNKNOWN__
+        PM_CheckBoxLabelSpacing = __UNKNOWN__
+        PM_TabBarIconSize = __UNKNOWN__
+        PM_SizeGripSize = __UNKNOWN__
+        PM_DockWidgetTitleMargin = __UNKNOWN__
+        PM_MessageBoxIconSize = __UNKNOWN__
+        PM_ButtonIconSize = __UNKNOWN__
+        PM_DockWidgetTitleBarButtonMargin = __UNKNOWN__
+        PM_RadioButtonLabelSpacing = __UNKNOWN__
+        PM_LayoutLeftMargin = __UNKNOWN__
+        PM_LayoutTopMargin = __UNKNOWN__
+        PM_LayoutRightMargin = __UNKNOWN__
+        PM_LayoutBottomMargin = __UNKNOWN__
+        PM_LayoutHorizontalSpacing = __UNKNOWN__
+        PM_LayoutVerticalSpacing = __UNKNOWN__
+        PM_TabBar_ScrollButtonOverlap = __UNKNOWN__
+        PM_TextCursorWidth = __UNKNOWN__
+        PM_TabCloseIndicatorWidth = __UNKNOWN__
+        PM_TabCloseIndicatorHeight = __UNKNOWN__
+        PM_ScrollView_ScrollBarSpacing = __UNKNOWN__
+        PM_SubMenuOverlap = __UNKNOWN__
+        PM_CustomBase = 4026531840
+    }
+
+    q_enumeration PrimitiveElement {
+        PE_Q3CheckListController = 0
+        PE_Q3CheckListExclusiveIndicator = 1
+        PE_Q3CheckListIndicator = 2
+        PE_Q3DockWindowSeparator = 3
+        PE_Q3Separator = 4
+        PE_Frame = 5
+        PE_FrameDefaultButton = 6
+        PE_FrameDockWidget = 7
+        PE_FrameFocusRect = 8
+        PE_FrameGroupBox = 9
+        PE_FrameLineEdit = 10
+        PE_FrameMenu = 11
+        PE_FrameStatusBar = 12
+        PE_FrameStatusBarItem = PE_FrameStatusBar
+        PE_FrameTabWidget = __UNKNOWN__
+        PE_FrameWindow = __UNKNOWN__
+        PE_FrameButtonBevel = __UNKNOWN__
+        PE_FrameButtonTool = __UNKNOWN__
+        PE_FrameTabBarBase = __UNKNOWN__
+        PE_PanelButtonCommand = __UNKNOWN__
+        PE_PanelButtonBevel = __UNKNOWN__
+        PE_PanelButtonTool = __UNKNOWN__
+        PE_PanelMenuBar = __UNKNOWN__
+        PE_PanelToolBar = __UNKNOWN__
+        PE_PanelLineEdit = __UNKNOWN__
+        PE_IndicatorArrowDown = __UNKNOWN__
+        PE_IndicatorArrowLeft = __UNKNOWN__
+        PE_IndicatorArrowRight = __UNKNOWN__
+        PE_IndicatorArrowUp = __UNKNOWN__
+        PE_IndicatorBranch = __UNKNOWN__
+        PE_IndicatorButtonDropDown = __UNKNOWN__
+        PE_IndicatorViewItemCheck = __UNKNOWN__
+        PE_IndicatorItemViewItemCheck = PE_IndicatorViewItemCheck
+        PE_IndicatorCheckBox = __UNKNOWN__
+        PE_IndicatorDockWidgetResizeHandle = __UNKNOWN__
+        PE_IndicatorHeaderArrow = __UNKNOWN__
+        PE_IndicatorMenuCheckMark = __UNKNOWN__
+        PE_IndicatorProgressChunk = __UNKNOWN__
+        PE_IndicatorRadioButton = __UNKNOWN__
+        PE_IndicatorSpinDown = __UNKNOWN__
+        PE_IndicatorSpinMinus = __UNKNOWN__
+        PE_IndicatorSpinPlus = __UNKNOWN__
+        PE_IndicatorSpinUp = __UNKNOWN__
+        PE_IndicatorToolBarHandle = __UNKNOWN__
+        PE_IndicatorToolBarSeparator = __UNKNOWN__
+        PE_PanelTipLabel = __UNKNOWN__
+        PE_IndicatorTabTear = __UNKNOWN__
+        PE_PanelScrollAreaCorner = __UNKNOWN__
+        PE_Widget = __UNKNOWN__
+        PE_IndicatorColumnViewArrow = __UNKNOWN__
+        PE_IndicatorItemViewItemDrop = __UNKNOWN__
+        PE_PanelItemViewItem = __UNKNOWN__
+        PE_PanelItemViewRow = __UNKNOWN__
+        PE_PanelStatusBar = __UNKNOWN__
+        PE_IndicatorTabClose = __UNKNOWN__
+        PE_PanelMenu = __UNKNOWN__
+        PE_CustomBase = 251658240
+    }
+
+    q_enumeration RequestSoftwareInputPanel {
+        RSIP_OnMouseClickAndAlreadyFocused = 0
+        RSIP_OnMouseClick = 1
+    }
+
+    q_enumeration StandardPixmap {
+        SP_TitleBarMenuButton = 0
+        SP_TitleBarMinButton = 1
+        SP_TitleBarMaxButton = 2
+        SP_TitleBarCloseButton = 3
+        SP_TitleBarNormalButton = 4
+        SP_TitleBarShadeButton = 5
+        SP_TitleBarUnshadeButton = 6
+        SP_TitleBarContextHelpButton = 7
+        SP_DockWidgetCloseButton = 8
+        SP_MessageBoxInformation = 9
+        SP_MessageBoxWarning = 10
+        SP_MessageBoxCritical = 11
+        SP_MessageBoxQuestion = 12
+        SP_DesktopIcon = 13
+        SP_TrashIcon = 14
+        SP_ComputerIcon = 15
+        SP_DriveFDIcon = 16
+        SP_DriveHDIcon = 17
+        SP_DriveCDIcon = 18
+        SP_DriveDVDIcon = 19
+        SP_DriveNetIcon = 20
+        SP_DirOpenIcon = 21
+        SP_DirClosedIcon = 22
+        SP_DirLinkIcon = 23
+        SP_FileIcon = 24
+        SP_FileLinkIcon = 25
+        SP_ToolBarHorizontalExtensionButton = 26
+        SP_ToolBarVerticalExtensionButton = 27
+        SP_FileDialogStart = 28
+        SP_FileDialogEnd = 29
+        SP_FileDialogToParent = 30
+        SP_FileDialogNewFolder = 31
+        SP_FileDialogDetailedView = 32
+        SP_FileDialogInfoView = 33
+        SP_FileDialogContentsView = 34
+        SP_FileDialogListView = 35
+        SP_FileDialogBack = 36
+        SP_DirIcon = 37
+        SP_DialogOkButton = 38
+        SP_DialogCancelButton = 39
+        SP_DialogHelpButton = 40
+        SP_DialogOpenButton = 41
+        SP_DialogSaveButton = 42
+        SP_DialogCloseButton = 43
+        SP_DialogApplyButton = 44
+        SP_DialogResetButton = 45
+        SP_DialogDiscardButton = 46
+        SP_DialogYesButton = 47
+        SP_DialogNoButton = 48
+        SP_ArrowUp = 49
+        SP_ArrowDown = 50
+        SP_ArrowLeft = 51
+        SP_ArrowRight = 52
+        SP_ArrowBack = 53
+        SP_ArrowForward = 54
+        SP_DirHomeIcon = 55
+        SP_CommandLink = 56
+        SP_VistaShield = 57
+        SP_BrowserReload = 58
+        SP_BrowserStop = 59
+        SP_MediaPlay = 60
+        SP_MediaStop = 61
+        SP_MediaPause = 62
+        SP_MediaSkipForward = 63
+        SP_MediaSkipBackward = 64
+        SP_MediaSeekForward = 65
+        SP_MediaSeekBackward = 66
+        SP_MediaVolume = 67
+        SP_MediaVolumeMuted = 68
+        SP_CustomBase = 4026531840
+    }
+
+    q_enumeration StateFlag {
+        State_None = 0
+        State_Enabled = 1
+        State_Raised = 2
+        State_Sunken = 4
+        State_Off = 8
+        State_NoChange = 16
+        State_On = 32
+        State_DownArrow = 64
+        State_Horizontal = 128
+        State_HasFocus = 256
+        State_Top = 512
+        State_Bottom = 1024
+        State_FocusAtBorder = 2048
+        State_AutoRaise = 4096
+        State_MouseOver = 8192
+        State_UpArrow = 16384
+        State_Selected = 32768
+        State_Active = 65536
+        State_Window = 131072
+        State_Open = 262144
+        State_Children = 524288
+        State_Item = 1048576
+        State_Sibling = 2097152
+        State_Editing = 4194304
+        State_KeyboardFocusChange = 8388608
+        State_HasEditFocus = 16777216
+        State_ReadOnly = 33554432
+        State_Small = 67108864
+        State_Mini = 134217728
+    }
+
+    q_flags State : StateFlag;
+
+    q_enumeration StyleHint {
+        SH_EtchDisabledText = 0
+        SH_DitherDisabledText = 1
+        SH_ScrollBar_MiddleClickAbsolutePosition = 2
+        SH_ScrollBar_ScrollWhenPointerLeavesControl = 3
+        SH_TabBar_SelectMouseType = 4
+        SH_TabBar_Alignment = 5
+        SH_Header_ArrowAlignment = 6
+        SH_Slider_SnapToValue = 7
+        SH_Slider_SloppyKeyEvents = 8
+        SH_ProgressDialog_CenterCancelButton = 9
+        SH_ProgressDialog_TextLabelAlignment = 10
+        SH_PrintDialog_RightAlignButtons = 11
+        SH_MainWindow_SpaceBelowMenuBar = 12
+        SH_FontDialog_SelectAssociatedText = 13
+        SH_Menu_AllowActiveAndDisabled = 14
+        SH_Menu_SpaceActivatesItem = 15
+        SH_Menu_SubMenuPopupDelay = 16
+        SH_ScrollView_FrameOnlyAroundContents = 17
+        SH_MenuBar_AltKeyNavigation = 18
+        SH_ComboBox_ListMouseTracking = 19
+        SH_Menu_MouseTracking = 20
+        SH_MenuBar_MouseTracking = 21
+        SH_ItemView_ChangeHighlightOnFocus = 22
+        SH_Widget_ShareActivation = 23
+        SH_Workspace_FillSpaceOnMaximize = 24
+        SH_ComboBox_Popup = 25
+        SH_TitleBar_NoBorder = 26
+        SH_Slider_StopMouseOverSlider = 27
+        SH_ScrollBar_StopMouseOverSlider = SH_Slider_StopMouseOverSlider
+        SH_BlinkCursorWhenTextSelected = __UNKNOWN__
+        SH_RichText_FullWidthSelection = __UNKNOWN__
+        SH_Menu_Scrollable = __UNKNOWN__
+        SH_GroupBox_TextLabelVerticalAlignment = __UNKNOWN__
+        SH_GroupBox_TextLabelColor = __UNKNOWN__
+        SH_Menu_SloppySubMenus = __UNKNOWN__
+        SH_Table_GridLineColor = __UNKNOWN__
+        SH_LineEdit_PasswordCharacter = __UNKNOWN__
+        SH_DialogButtons_DefaultButton = __UNKNOWN__
+        SH_ToolBox_SelectedPageTitleBold = __UNKNOWN__
+        SH_TabBar_PreferNoArrows = __UNKNOWN__
+        SH_ScrollBar_LeftClickAbsolutePosition = __UNKNOWN__
+        SH_Q3ListViewExpand_SelectMouseType = __UNKNOWN__
+        SH_UnderlineShortcut = __UNKNOWN__
+        SH_SpinBox_AnimateButton = __UNKNOWN__
+        SH_SpinBox_KeyPressAutoRepeatRate = __UNKNOWN__
+        SH_SpinBox_ClickAutoRepeatRate = __UNKNOWN__
+        SH_Menu_FillScreenWithScroll = __UNKNOWN__
+        SH_ToolTipLabel_Opacity = __UNKNOWN__
+        SH_DrawMenuBarSeparator = __UNKNOWN__
+        SH_TitleBar_ModifyNotification = __UNKNOWN__
+        SH_Button_FocusPolicy = __UNKNOWN__
+        SH_MenuBar_DismissOnSecondClick = __UNKNOWN__
+        SH_MessageBox_UseBorderForButtonSpacing = __UNKNOWN__
+        SH_TitleBar_AutoRaise = __UNKNOWN__
+        SH_ToolButton_PopupDelay = __UNKNOWN__
+        SH_FocusFrame_Mask = __UNKNOWN__
+        SH_RubberBand_Mask = __UNKNOWN__
+        SH_WindowFrame_Mask = __UNKNOWN__
+        SH_SpinControls_DisableOnBounds = __UNKNOWN__
+        SH_Dial_BackgroundRole = __UNKNOWN__
+        SH_ComboBox_LayoutDirection = __UNKNOWN__
+        SH_ItemView_EllipsisLocation = __UNKNOWN__
+        SH_ItemView_ShowDecorationSelected = __UNKNOWN__
+        SH_ItemView_ActivateItemOnSingleClick = __UNKNOWN__
+        SH_ScrollBar_ContextMenu = __UNKNOWN__
+        SH_ScrollBar_RollBetweenButtons = __UNKNOWN__
+        SH_Slider_AbsoluteSetButtons = __UNKNOWN__
+        SH_Slider_PageSetButtons = __UNKNOWN__
+        SH_Menu_KeyboardSearch = __UNKNOWN__
+        SH_TabBar_ElideMode = __UNKNOWN__
+        SH_DialogButtonLayout = __UNKNOWN__
+        SH_ComboBox_PopupFrameStyle = __UNKNOWN__
+        SH_MessageBox_TextInteractionFlags = __UNKNOWN__
+        SH_DialogButtonBox_ButtonsHaveIcons = __UNKNOWN__
+        SH_SpellCheckUnderlineStyle = __UNKNOWN__
+        SH_MessageBox_CenterButtons = __UNKNOWN__
+        SH_Menu_SelectionWrap = __UNKNOWN__
+        SH_ItemView_MovementWithoutUpdatingSelection = __UNKNOWN__
+        SH_ToolTip_Mask = __UNKNOWN__
+        SH_FocusFrame_AboveWidget = __UNKNOWN__
+        SH_TextControl_FocusIndicatorTextCharFormat = __UNKNOWN__
+        SH_WizardStyle = __UNKNOWN__
+        SH_ItemView_ArrowKeysNavigateIntoChildren = __UNKNOWN__
+        SH_Menu_Mask = __UNKNOWN__
+        SH_Menu_FlashTriggeredItem = __UNKNOWN__
+        SH_Menu_FadeOutOnHide = __UNKNOWN__
+        SH_SpinBox_ClickAutoRepeatThreshold = __UNKNOWN__
+        SH_ItemView_PaintAlternatingRowColorsForEmptyArea = __UNKNOWN__
+        SH_FormLayoutWrapPolicy = __UNKNOWN__
+        SH_TabWidget_DefaultTabPosition = __UNKNOWN__
+        SH_ToolBar_Movable = __UNKNOWN__
+        SH_FormLayoutFieldGrowthPolicy = __UNKNOWN__
+        SH_FormLayoutFormAlignment = __UNKNOWN__
+        SH_FormLayoutLabelAlignment = __UNKNOWN__
+        SH_ItemView_DrawDelegateFrame = __UNKNOWN__
+        SH_TabBar_CloseButtonPosition = __UNKNOWN__
+        SH_DockWidget_ButtonsHaveFrame = __UNKNOWN__
+        SH_ToolButtonStyle = __UNKNOWN__
+        SH_RequestSoftwareInputPanel = __UNKNOWN__
+        SH_CustomBase = 4026531840
+    }
+
+    q_enumeration SubControl {
+        SC_None = 0
+        SC_ScrollBarAddLine = 1
+        SC_ScrollBarSubLine = 2
+        SC_ScrollBarAddPage = 4
+        SC_ScrollBarSubPage = 8
+        SC_ScrollBarFirst = 16
+        SC_ScrollBarLast = 32
+        SC_ScrollBarSlider = 64
+        SC_ScrollBarGroove = 128
+        SC_SpinBoxUp = 1
+        SC_SpinBoxDown = 2
+        SC_SpinBoxFrame = 4
+        SC_SpinBoxEditField = 8
+        SC_ComboBoxFrame = 1
+        SC_ComboBoxEditField = 2
+        SC_ComboBoxArrow = 4
+        SC_ComboBoxListBoxPopup = 8
+        SC_SliderGroove = 1
+        SC_SliderHandle = 2
+        SC_SliderTickmarks = 4
+        SC_ToolButton = 1
+        SC_ToolButtonMenu = 2
+        SC_TitleBarSysMenu = 1
+        SC_TitleBarMinButton = 2
+        SC_TitleBarMaxButton = 4
+        SC_TitleBarCloseButton = 8
+        SC_TitleBarNormalButton = 16
+        SC_TitleBarShadeButton = 32
+        SC_TitleBarUnshadeButton = 64
+        SC_TitleBarContextHelpButton = 128
+        SC_TitleBarLabel = 256
+        SC_Q3ListView = 1
+        SC_Q3ListViewBranch = 2
+        SC_Q3ListViewExpand = 4
+        SC_DialGroove = 1
+        SC_DialHandle = 2
+        SC_DialTickmarks = 4
+        SC_GroupBoxCheckBox = 1
+        SC_GroupBoxLabel = 2
+        SC_GroupBoxContents = 4
+        SC_GroupBoxFrame = 8
+        SC_MdiMinButton = 1
+        SC_MdiNormalButton = 2
+        SC_MdiCloseButton = 4
+        SC_CustomBase = 4026531840
+        SC_All = 4294967295
+    }
+
+    q_flags SubControls : SubControl;
+
+    q_enumeration SubElement {
+        SE_PushButtonContents = 0
+        SE_PushButtonFocusRect = 1
+        SE_CheckBoxIndicator = 2
+        SE_CheckBoxContents = 3
+        SE_CheckBoxFocusRect = 4
+        SE_CheckBoxClickRect = 5
+        SE_RadioButtonIndicator = 6
+        SE_RadioButtonContents = 7
+        SE_RadioButtonFocusRect = 8
+        SE_RadioButtonClickRect = 9
+        SE_ComboBoxFocusRect = 10
+        SE_SliderFocusRect = 11
+        SE_Q3DockWindowHandleRect = 12
+        SE_ProgressBarGroove = 13
+        SE_ProgressBarContents = 14
+        SE_ProgressBarLabel = 15
+        SE_DialogButtonAccept = 16
+        SE_DialogButtonReject = 17
+        SE_DialogButtonApply = 18
+        SE_DialogButtonHelp = 19
+        SE_DialogButtonAll = 20
+        SE_DialogButtonAbort = 21
+        SE_DialogButtonIgnore = 22
+        SE_DialogButtonRetry = 23
+        SE_DialogButtonCustom = 24
+        SE_ToolBoxTabContents = 25
+        SE_HeaderLabel = 26
+        SE_HeaderArrow = 27
+        SE_TabWidgetTabBar = 28
+        SE_TabWidgetTabPane = 29
+        SE_TabWidgetTabContents = 30
+        SE_TabWidgetLeftCorner = 31
+        SE_TabWidgetRightCorner = 32
+        SE_ViewItemCheckIndicator = 33
+        SE_ItemViewItemCheckIndicator = SE_ViewItemCheckIndicator
+        SE_TabBarTearIndicator = __UNKNOWN__
+        SE_TreeViewDisclosureItem = __UNKNOWN__
+        SE_LineEditContents = __UNKNOWN__
+        SE_FrameContents = __UNKNOWN__
+        SE_DockWidgetCloseButton = __UNKNOWN__
+        SE_DockWidgetFloatButton = __UNKNOWN__
+        SE_DockWidgetTitleBarText = __UNKNOWN__
+        SE_DockWidgetIcon = __UNKNOWN__
+        SE_CheckBoxLayoutItem = __UNKNOWN__
+        SE_ComboBoxLayoutItem = __UNKNOWN__
+        SE_DateTimeEditLayoutItem = __UNKNOWN__
+        SE_DialogButtonBoxLayoutItem = __UNKNOWN__
+        SE_LabelLayoutItem = __UNKNOWN__
+        SE_ProgressBarLayoutItem = __UNKNOWN__
+        SE_PushButtonLayoutItem = __UNKNOWN__
+        SE_RadioButtonLayoutItem = __UNKNOWN__
+        SE_SliderLayoutItem = __UNKNOWN__
+        SE_SpinBoxLayoutItem = __UNKNOWN__
+        SE_ToolButtonLayoutItem = __UNKNOWN__
+        SE_FrameLayoutItem = __UNKNOWN__
+        SE_GroupBoxLayoutItem = __UNKNOWN__
+        SE_TabWidgetLayoutItem = __UNKNOWN__
+        SE_ItemViewItemDecoration = __UNKNOWN__
+        SE_ItemViewItemText = __UNKNOWN__
+        SE_ItemViewItemFocusRect = __UNKNOWN__
+        SE_TabBarTabLeftButton = __UNKNOWN__
+        SE_TabBarTabRightButton = __UNKNOWN__
+        SE_TabBarTabText = __UNKNOWN__
+        SE_ShapedFrameContents = __UNKNOWN__
+        SE_ToolBarHandle = __UNKNOWN__
+        SE_CustomBase = 4026531840
+    }
+
+
+    public class q_function alignedRect(Qt.LayoutDirection direction, Qt.Alignment alignment, const QSize & size, const QRect & rectangle) : QRect;
+    public const member q_function combinedLayoutSpacing(QSizePolicy.ControlTypes controls1, QSizePolicy.ControlTypes controls2, Qt.Orientation orientation, QStyleOption * option = 0, QWidget * widget = 0) : int;
+    public const purevirtual member q_function drawComplexControl(ComplexControl control, const QStyleOptionComplex * option, QPainter * painter, const QWidget * widget = 0) : void;
+    public const purevirtual member q_function drawControl(ControlElement element, const QStyleOption * option, QPainter * painter, const QWidget * widget = 0) : void;
+    public const virtual member q_function drawItemPixmap(QPainter * painter, const QRect & rectangle, int alignment, const QPixmap & pixmap) : void;
+    public const virtual member q_function drawItemText(QPainter * painter, const QRect & rectangle, int alignment, const QPalette & palette, bool enabled, const QString & text, QPalette.ColorRole textRole = QPalette.NoRole) : void;
+    public const purevirtual member q_function drawPrimitive(PrimitiveElement element, const QStyleOption * option, QPainter * painter, const QWidget * widget = 0) : void;
+    public const purevirtual member q_function generatedIconPixmap(QIcon.Mode iconMode, const QPixmap & pixmap, const QStyleOption * option) : QPixmap;
+    public const purevirtual member q_function hitTestComplexControl(ComplexControl control, const QStyleOptionComplex * option, const QPoint & position, const QWidget * widget = 0) : SubControl;
+    public const virtual member q_function itemPixmapRect(const QRect & rectangle, int alignment, const QPixmap & pixmap) : QRect;
+    public const virtual member q_function itemTextRect(const QFontMetrics & metrics, const QRect & rectangle, int alignment, bool enabled, const QString & text) : QRect;
+    public const member q_function layoutSpacing(QSizePolicy.ControlType control1, QSizePolicy.ControlType control2, Qt.Orientation orientation, const QStyleOption * option = 0, const QWidget * widget = 0) : int;
+    public const purevirtual member q_function pixelMetric(PixelMetric metric, const QStyleOption * option = 0, const QWidget * widget = 0) : int;
+    public virtual member q_function polish(QApplication * application) : void;
+    public virtual member q_function polish(QPalette & palette) : void;
+    public virtual member q_function polish(QWidget * widget) : void;
+    public const member q_function proxy() : const QStyle *;
+    public const purevirtual member q_function sizeFromContents(ContentsType type, const QStyleOption * option, const QSize & contentsSize, const QWidget * widget = 0) : QSize;
+    public class q_function sliderPositionFromValue(int min, int max, int logicalValue, int span, bool upsideDown = false) : int;
+    public class q_function sliderValueFromPosition(int min, int max, int position, int span, bool upsideDown = false) : int;
+    public const member q_function standardIcon(StandardPixmap standardIcon, const QStyleOption * option = 0, const QWidget * widget = 0) : QIcon;
+    public const virtual member q_function standardPalette() : QPalette;
+    public const purevirtual member q_function standardPixmap(StandardPixmap standardPixmap, const QStyleOption * option = 0, const QWidget * widget = 0) : QPixmap;
+    public const purevirtual member q_function subControlRect(ComplexControl control, const QStyleOptionComplex * option, SubControl subControl, const QWidget * widget = 0) : QRect;
+    public const purevirtual member q_function subElementRect(SubElement element, const QStyleOption * option, const QWidget * widget = 0) : QRect;
+    public virtual member q_function unpolish(QWidget * widget) : void;
+    public virtual member q_function unpolish(QApplication * application) : void;
+    public class q_function visualAlignment(Qt.LayoutDirection direction, Qt.Alignment alignment) : Qt.Alignment;
+    public class q_function visualPos(Qt.LayoutDirection direction, const QRect & boundingRectangle, const QPoint & logicalPosition) : QPoint;
+    public class q_function visualRect(Qt.LayoutDirection direction, const QRect & boundingRectangle, const QRect & logicalRectangle) : QRect;
+
+
+
+}
+

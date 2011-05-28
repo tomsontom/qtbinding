@@ -1,0 +1,6 @@
+q_class QDeclarativeNetworkAccessManagerFactory {
+    public purevirtual member q_function create(QObject * parent) : QNetworkAccessManager *;
+
+
+}
+

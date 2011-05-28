@@ -1,0 +1,13 @@
+q_class QStyleOptionToolBox extends QStyleOption {
+    q_enumeration StyleOptionType {
+        Type = SO_ToolBox
+    }
+
+    q_enumeration StyleOptionVersion {
+        Version = 1
+    }
+
+
+
+}
+

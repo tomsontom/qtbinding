@@ -1,0 +1,7 @@
+q_class QSvgWidget extends QWidget {
+    public const member q_function renderer() : QSvgRenderer *;
+
+
+
+}
+

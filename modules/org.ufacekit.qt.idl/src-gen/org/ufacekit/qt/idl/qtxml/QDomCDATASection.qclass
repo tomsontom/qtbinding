@@ -1,0 +1,6 @@
+q_class QDomCDATASection extends QDomText {
+    public const member q_function nodeType() : QDomNode.NodeType;
+
+
+}
+

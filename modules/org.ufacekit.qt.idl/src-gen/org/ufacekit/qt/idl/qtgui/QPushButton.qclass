@@ -1,0 +1,18 @@
+q_class QPushButton extends QAbstractButton {
+    q_property bool autoDefault;
+    q_property bool default;
+    q_property bool flat;
+
+    public const member q_function autoDefault() : bool;
+    public const member q_function isDefault() : bool;
+    public const member q_function isFlat() : bool;
+    public const member q_function menu() : QMenu *;
+    public member q_function setAutoDefault(bool ) : void;
+    public member q_function setDefault(bool ) : void;
+    public member q_function setFlat(bool ) : void;
+
+    protected const member q_function initStyleOption(QStyleOptionButton * option) : void;
+
+
+}
+

@@ -1,0 +1,17 @@
+q_class QXmlContentHandler {
+    public purevirtual member q_function characters(const QString & ch) : bool;
+    public purevirtual member q_function endDocument() : bool;
+    public purevirtual member q_function endElement(const QString & namespaceURI, const QString & localName, const QString & qName) : bool;
+    public purevirtual member q_function endPrefixMapping(const QString & prefix) : bool;
+    public const purevirtual member q_function errorString() : QString;
+    public purevirtual member q_function ignorableWhitespace(const QString & ch) : bool;
+    public purevirtual member q_function processingInstruction(const QString & target, const QString & data) : bool;
+    public purevirtual member q_function setDocumentLocator(QXmlLocator * locator) : void;
+    public purevirtual member q_function skippedEntity(const QString & name) : bool;
+    public purevirtual member q_function startDocument() : bool;
+    public purevirtual member q_function startElement(const QString & namespaceURI, const QString & localName, const QString & qName, const QXmlAttributes & atts) : bool;
+    public purevirtual member q_function startPrefixMapping(const QString & prefix, const QString & uri) : bool;
+
+
+}
+

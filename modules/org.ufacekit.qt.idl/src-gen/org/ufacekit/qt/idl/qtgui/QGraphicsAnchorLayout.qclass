@@ -1,0 +1,15 @@
+q_class QGraphicsAnchorLayout extends QGraphicsLayout {
+    public member q_function addAnchor(QGraphicsLayoutItem * firstItem, Qt.AnchorPoint firstEdge, QGraphicsLayoutItem * secondItem, Qt.AnchorPoint secondEdge) : QGraphicsAnchor *;
+    public member q_function addAnchors(QGraphicsLayoutItem * firstItem, QGraphicsLayoutItem * secondItem, Qt.Orientations orientations = Qt.Horizontal | Qt.Vertical) : void;
+    public member q_function addCornerAnchors(QGraphicsLayoutItem * firstItem, Qt.Corner firstCorner, QGraphicsLayoutItem * secondItem, Qt.Corner secondCorner) : void;
+    public member q_function anchor(QGraphicsLayoutItem * firstItem, Qt.AnchorPoint firstEdge, QGraphicsLayoutItem * secondItem, Qt.AnchorPoint secondEdge) : QGraphicsAnchor *;
+    public const member q_function horizontalSpacing() : qreal;
+    public virtual member q_function removeAt(int index) : void;
+    public member q_function setHorizontalSpacing(qreal spacing) : void;
+    public member q_function setSpacing(qreal spacing) : void;
+    public member q_function setVerticalSpacing(qreal spacing) : void;
+    public const member q_function verticalSpacing() : qreal;
+
+
+}
+

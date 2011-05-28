@@ -1,0 +1,7 @@
+q_class QTextEncoder {
+    public member q_function fromUnicode(const QChar * uc, int len) : QByteArray;
+    public member q_function fromUnicode(const QString & str) : QByteArray;
+
+
+}
+

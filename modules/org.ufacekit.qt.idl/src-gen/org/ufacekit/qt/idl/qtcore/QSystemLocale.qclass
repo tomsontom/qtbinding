@@ -1,0 +1,37 @@
+q_class QSystemLocale {
+    q_enumeration QueryType {
+        LanguageId = 0
+        CountryId = 1
+        DecimalPoint = 2
+        GroupSeparator = 3
+        ZeroDigit = 4
+        NegativeSign = 5
+        DateFormatLong = 6
+        DateFormatShort = 7
+        TimeFormatLong = 8
+        TimeFormatShort = 9
+        DayNameLong = 10
+        DayNameShort = 11
+        MonthNameLong = 12
+        MonthNameShort = 13
+        DateToStringLong = 14
+        DateToStringShort = 15
+        TimeToStringLong = 16
+        TimeToStringShort = 17
+        DateTimeFormatLong = 18
+        DateTimeFormatShort = 19
+        DateTimeToStringLong = 20
+        DateTimeToStringShort = 21
+        MeasurementSystem = 22
+        PositiveSign = 23
+        AMText = 24
+        PMText = 25
+    }
+
+
+    public const virtual member q_function fallbackLocale() : QLocale;
+    public const virtual member q_function query(QueryType type, QVariant in) : QVariant;
+
+
+}
+

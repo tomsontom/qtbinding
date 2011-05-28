@@ -1,0 +1,27 @@
+q_class QVector3D {
+    public class q_function crossProduct(const QVector3D & v1, const QVector3D & v2) : QVector3D;
+    public const member q_function distanceToLine(const QVector3D & point, const QVector3D & direction) : qreal;
+    public const member q_function distanceToPlane(const QVector3D & plane, const QVector3D & normal) : qreal;
+    public const member q_function distanceToPlane(const QVector3D & plane1, const QVector3D & plane2, const QVector3D & plane3) : qreal;
+    public class q_function dotProduct(const QVector3D & v1, const QVector3D & v2) : qreal;
+    public const member q_function isNull() : bool;
+    public const member q_function length() : qreal;
+    public const member q_function lengthSquared() : qreal;
+    public class q_function normal(const QVector3D & v1, const QVector3D & v2, const QVector3D & v3) : QVector3D;
+    public class q_function normal(const QVector3D & v1, const QVector3D & v2) : QVector3D;
+    public member q_function normalize() : void;
+    public const member q_function normalized() : QVector3D;
+    public member q_function setX(qreal x) : void;
+    public member q_function setY(qreal y) : void;
+    public member q_function setZ(qreal z) : void;
+    public const member q_function toPoint() : QPoint;
+    public const member q_function toPointF() : QPointF;
+    public const member q_function toVector2D() : QVector2D;
+    public const member q_function toVector4D() : QVector4D;
+    public const member q_function x() : qreal;
+    public const member q_function y() : qreal;
+    public const member q_function z() : qreal;
+
+
+}
+

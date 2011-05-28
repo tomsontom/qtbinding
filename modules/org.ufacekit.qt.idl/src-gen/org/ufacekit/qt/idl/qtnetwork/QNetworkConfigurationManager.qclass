@@ -1,0 +1,25 @@
+q_class QNetworkConfigurationManager extends QObject {
+    q_enumeration Capability {
+        CanStartAndStopInterfaces = 1
+        DirectConnectionRouting = 2
+        SystemSessionSupport = 4
+        ApplicationLevelRoaming = 8
+        ForcedRoaming = 16
+        DataStatistics = 32
+        NetworkSessionRequired = 64
+    }
+
+    q_flags Capabilities : Capability;
+
+
+    public const member q_function allConfigurations(QNetworkConfiguration.StateFlags filter = 0) : QList<QNetworkConfiguration>;
+    public const member q_function capabilities() : QNetworkConfigurationManager.Capabilities;
+    public const member q_function configurationFromIdentifier(const QString & identifier) : QNetworkConfiguration;
+    public const member q_function defaultConfiguration() : QNetworkConfiguration;
+    public const member q_function isOnline() : bool;
+    public member q_function updateConfigurations() : void;
+
+
+
+}
+

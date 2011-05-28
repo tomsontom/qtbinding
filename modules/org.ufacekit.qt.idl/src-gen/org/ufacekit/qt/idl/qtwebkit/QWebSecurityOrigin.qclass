@@ -1,0 +1,15 @@
+q_class QWebSecurityOrigin {
+    public class q_function addLocalScheme(const QString & scheme) : void;
+    public class q_function allOrigins() : QList<QWebSecurityOrigin>;
+    public const member q_function databaseQuota() : qint64;
+    public const member q_function databaseUsage() : qint64;
+    public const member q_function databases() : QList<QWebDatabase>;
+    public const member q_function host() : QString;
+    public class q_function localSchemes() : QStringList;
+    public const member q_function port() : int;
+    public class q_function removeLocalScheme(const QString & scheme) : void;
+    public member q_function setDatabaseQuota(qint64 quota) : void;
+
+
+}
+

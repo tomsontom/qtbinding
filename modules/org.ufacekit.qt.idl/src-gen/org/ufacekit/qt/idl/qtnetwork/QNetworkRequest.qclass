@@ -1,0 +1,68 @@
+q_class QNetworkRequest {
+    q_enumeration Attribute {
+        HttpStatusCodeAttribute = 0
+        HttpReasonPhraseAttribute = 1
+        RedirectionTargetAttribute = 2
+        ConnectionEncryptedAttribute = 3
+        CacheLoadControlAttribute = 4
+        CacheSaveControlAttribute = 5
+        SourceIsFromCacheAttribute = 6
+        DoNotBufferUploadDataAttribute = 7
+        HttpPipeliningAllowedAttribute = 8
+        HttpPipeliningWasUsedAttribute = 9
+        CustomVerbAttribute = 10
+        CookieLoadControlAttribute = 11
+        AuthenticationReuseAttribute = 12
+        CookieSaveControlAttribute = 13
+        MaximumDownloadBufferSizeAttribute = 14
+        DownloadBufferAttribute = 15
+        User = 1000
+        UserMax = 32767
+    }
+
+    q_enumeration CacheLoadControl {
+        AlwaysNetwork = 0
+        PreferNetwork = 1
+        PreferCache = 2
+        AlwaysCache = 3
+    }
+
+    q_enumeration KnownHeaders {
+        ContentTypeHeader = 0
+        ContentLengthHeader = 1
+        LocationHeader = 2
+        LastModifiedHeader = 3
+        CookieHeader = 4
+        SetCookieHeader = 5
+    }
+
+    q_enumeration LoadControl {
+        Automatic = 0
+        Manual = 1
+    }
+
+    q_enumeration Priority {
+        HighPriority = 1
+        NormalPriority = 3
+        LowPriority = 5
+    }
+
+
+    public const member q_function attribute(Attribute code, const QVariant & defaultValue = QVariant()) : QVariant;
+    public const member q_function hasRawHeader(const QByteArray & headerName) : bool;
+    public const member q_function header(KnownHeaders header) : QVariant;
+    public const member q_function originatingObject() : QObject *;
+    public const member q_function priority() : Priority;
+    public const member q_function rawHeader(const QByteArray & headerName) : QByteArray;
+    public const member q_function rawHeaderList() : QList<QByteArray>;
+    public member q_function setAttribute(Attribute code, const QVariant & value) : void;
+    public member q_function setHeader(KnownHeaders header, const QVariant & value) : void;
+    public member q_function setPriority(Priority priority) : void;
+    public member q_function setRawHeader(const QByteArray & headerName, const QByteArray & headerValue) : void;
+    public member q_function setSslConfiguration(const QSslConfiguration & config) : void;
+    public member q_function setUrl(const QUrl & url) : void;
+    public const member q_function url() : QUrl;
+
+
+}
+

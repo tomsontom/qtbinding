@@ -1,0 +1,29 @@
+q_class QClipboard extends QObject {
+    q_enumeration Mode {
+        Clipboard = 0
+        Selection = 1
+        FindBuffer = 2
+        LastMode = FindBuffer
+    }
+
+
+    public member q_function clear(Mode mode = Clipboard) : void;
+    public const member q_function image(Mode mode = Clipboard) : QImage;
+    public const member q_function ownsClipboard() : bool;
+    public const member q_function ownsFindBuffer() : bool;
+    public const member q_function ownsSelection() : bool;
+    public const member q_function pixmap(Mode mode = Clipboard) : QPixmap;
+    public member q_function setImage(const QImage & image, Mode mode = Clipboard) : void;
+    public member q_function setMimeData(QMimeData * src, Mode mode = Clipboard) : void;
+    public member q_function setPixmap(const QPixmap & pixmap, Mode mode = Clipboard) : void;
+    public member q_function setText(const QString & text, Mode mode = Clipboard) : void;
+    public const member q_function supportsFindBuffer() : bool;
+    public const member q_function supportsSelection() : bool;
+    public const member q_function text(QString & subtype, Mode mode = Clipboard) : QString;
+    public const member q_function text(Mode mode = Clipboard) : QString;
+
+
+
+
+}
+

@@ -1,0 +1,31 @@
+q_class QTextBrowser extends QTextEdit {
+    q_property const bool modified;
+    q_property bool openExternalLinks;
+    q_property bool openLinks;
+    q_property const bool readOnly;
+    q_property QStringList searchPaths;
+    q_property QUrl source;
+    q_property const bool undoRedoEnabled;
+
+    public const member q_function backwardHistoryCount() : int;
+    public member q_function clearHistory() : void;
+    public const member q_function forwardHistoryCount() : int;
+    public const member q_function historyTitle(int i) : QString;
+    public const member q_function historyUrl(int i) : QUrl;
+    public const member q_function isBackwardAvailable() : bool;
+    public const member q_function isForwardAvailable() : bool;
+    public virtual member q_function loadResource(int type, const QUrl & name) : QVariant;
+    public const member q_function openExternalLinks() : bool;
+    public const member q_function openLinks() : bool;
+    public const member q_function searchPaths() : QStringList;
+    public member q_function setOpenExternalLinks(bool open) : void;
+    public member q_function setOpenLinks(bool open) : void;
+    public member q_function setSearchPaths(const QStringList & paths) : void;
+
+    protected virtual member q_function keyPressEvent(QKeyEvent * ev) : void;
+
+
+
+
+}
+

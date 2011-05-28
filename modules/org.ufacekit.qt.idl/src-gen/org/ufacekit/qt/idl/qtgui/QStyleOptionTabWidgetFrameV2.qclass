@@ -1,0 +1,9 @@
+q_class QStyleOptionTabWidgetFrameV2 extends QStyleOptionTabWidgetFrame {
+    q_enumeration StyleOptionVersion {
+        Version = 2
+    }
+
+
+
+}
+

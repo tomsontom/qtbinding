@@ -1,0 +1,27 @@
+q_class QFontComboBox extends QComboBox {
+    q_enumeration FontFilter {
+        AllFonts = 0
+        ScalableFonts = 1
+        NonScalableFonts = 2
+        MonospacedFonts = 4
+        ProportionalFonts = 8
+    }
+
+    q_flags FontFilters : FontFilter;
+
+
+    q_property QFont currentFont;
+    q_property FontFilters fontFilters;
+    q_property QFontDatabase.WritingSystem writingSystem;
+
+    public const member q_function currentFont() : QFont;
+    public const member q_function fontFilters() : FontFilters;
+    public member q_function setFontFilters(FontFilters filters) : void;
+    public member q_function setWritingSystem(QFontDatabase.WritingSystem script) : void;
+    public const member q_function writingSystem() : QFontDatabase.WritingSystem;
+
+
+
+
+}
+

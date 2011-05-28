@@ -1,0 +1,13 @@
+q_class QStringListModel extends QAbstractListModel {
+    public const virtual member q_function data(const QModelIndex & index, int role) : QVariant;
+    public const virtual member q_function flags(const QModelIndex & index) : Qt.ItemFlags;
+    public virtual member q_function insertRows(int row, int count, const QModelIndex & parent = QModelIndex()) : bool;
+    public virtual member q_function removeRows(int row, int count, const QModelIndex & parent = QModelIndex()) : bool;
+    public const virtual member q_function rowCount(const QModelIndex & parent = QModelIndex()) : int;
+    public virtual member q_function setData(const QModelIndex & index, const QVariant & value, int role = Qt.EditRole) : bool;
+    public member q_function setStringList(const QStringList & strings) : void;
+    public const member q_function stringList() : QStringList;
+
+
+}
+

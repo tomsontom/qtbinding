@@ -1,0 +1,9 @@
+q_class QXmlErrorHandler {
+    public purevirtual member q_function error(const QXmlParseException & exception) : bool;
+    public const purevirtual member q_function errorString() : QString;
+    public purevirtual member q_function fatalError(const QXmlParseException & exception) : bool;
+    public purevirtual member q_function warning(const QXmlParseException & exception) : bool;
+
+
+}
+

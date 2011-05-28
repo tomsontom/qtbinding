@@ -1,0 +1,28 @@
+q_class QTextFrame extends QTextObject {
+    q_typedef Iterator : ___UNKNOWN___;
+
+
+    q_class iterator {
+        public const member q_function atEnd() : bool;
+        public const member q_function currentBlock() : QTextBlock;
+        public const member q_function currentFrame() : QTextFrame *;
+        public const member q_function parentFrame() : QTextFrame *;
+
+
+    }
+
+
+    public const member q_function begin() : iterator;
+    public const member q_function childFrames() : QList<QTextFrame *>;
+    public const member q_function end() : iterator;
+    public const member q_function firstCursorPosition() : QTextCursor;
+    public const member q_function firstPosition() : int;
+    public const member q_function frameFormat() : QTextFrameFormat;
+    public const member q_function lastCursorPosition() : QTextCursor;
+    public const member q_function lastPosition() : int;
+    public const member q_function parentFrame() : QTextFrame *;
+    public member q_function setFrameFormat(const QTextFrameFormat & format) : void;
+
+
+}
+

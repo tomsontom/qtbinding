@@ -1,0 +1,235 @@
+q_class QString {
+    q_enumeration NormalizationForm {
+        NormalizationForm_D = 0
+        NormalizationForm_C = 1
+        NormalizationForm_KD = 2
+        NormalizationForm_KC = 3
+    }
+
+    q_enumeration SectionFlag {
+        SectionDefault = 0
+        SectionSkipEmpty = 1
+        SectionIncludeLeadingSep = 2
+        SectionIncludeTrailingSep = 4
+        SectionCaseInsensitiveSeps = 8
+    }
+
+    q_flags SectionFlags : SectionFlag;
+
+    q_enumeration SplitBehavior {
+        KeepEmptyParts = 0
+        SkipEmptyParts = 1
+    }
+
+
+    q_typedef ConstIterator : ___UNKNOWN___;
+
+    q_typedef DataPtr : ___UNKNOWN___;
+
+    q_typedef Iterator : ___UNKNOWN___;
+
+    q_typedef const_iterator : ___UNKNOWN___;
+
+    q_typedef iterator : ___UNKNOWN___;
+
+
+    q_class Data {
+
+    }
+
+    q_class Null {
+
+    }
+
+
+    public member q_function append(const QByteArray & ba) : QString &;
+    public member q_function append(const QLatin1String & str) : QString &;
+    public member q_function append(const char * str) : QString &;
+    public member q_function append(const QStringRef & reference) : QString &;
+    public member q_function append(const QString & str) : QString &;
+    public member q_function append(QChar ch) : QString &;
+    public const member q_function arg(QChar a, int fieldWidth = 0, const QChar & fillChar = QLatin1Char( ' ' )) : QString;
+    public const member q_function arg(uint a, int fieldWidth = 0, int base = 10, const QChar & fillChar = QLatin1Char( ' ' )) : QString;
+    public const member q_function arg(char a, int fieldWidth = 0, const QChar & fillChar = QLatin1Char( ' ' )) : QString;
+    public const member q_function arg(ushort a, int fieldWidth = 0, int base = 10, const QChar & fillChar = QLatin1Char( ' ' )) : QString;
+    public const member q_function arg(short a, int fieldWidth = 0, int base = 10, const QChar & fillChar = QLatin1Char( ' ' )) : QString;
+    public const member q_function arg(double a, int fieldWidth = 0, char format = 'g', int precision = -1, const QChar & fillChar = QLatin1Char( ' ' )) : QString;
+    public const member q_function arg(const QString & a1, const QString & a2) : QString;
+    public const member q_function arg(const QString & a1, const QString & a2, const QString & a3, const QString & a4, const QString & a5, const QString & a6, const QString & a7, const QString & a8, const QString & a9) : QString;
+    public const member q_function arg(const QString & a1, const QString & a2, const QString & a3) : QString;
+    public const member q_function arg(const QString & a1, const QString & a2, const QString & a3, const QString & a4, const QString & a5, const QString & a6, const QString & a7, const QString & a8) : QString;
+    public const member q_function arg(const QString & a1, const QString & a2, const QString & a3, const QString & a4, const QString & a5) : QString;
+    public const member q_function arg(const QString & a1, const QString & a2, const QString & a3, const QString & a4) : QString;
+    public const member q_function arg(const QString & a1, const QString & a2, const QString & a3, const QString & a4, const QString & a5, const QString & a6) : QString;
+    public const member q_function arg(const QString & a, int fieldWidth = 0, const QChar & fillChar = QLatin1Char( ' ' )) : QString;
+    public const member q_function arg(const QString & a1, const QString & a2, const QString & a3, const QString & a4, const QString & a5, const QString & a6, const QString & a7) : QString;
+    public const member q_function arg(qlonglong a, int fieldWidth = 0, int base = 10, const QChar & fillChar = QLatin1Char( ' ' )) : QString;
+    public const member q_function arg(int a, int fieldWidth = 0, int base = 10, const QChar & fillChar = QLatin1Char( ' ' )) : QString;
+    public const member q_function arg(qulonglong a, int fieldWidth = 0, int base = 10, const QChar & fillChar = QLatin1Char( ' ' )) : QString;
+    public const member q_function arg(ulong a, int fieldWidth = 0, int base = 10, const QChar & fillChar = QLatin1Char( ' ' )) : QString;
+    public const member q_function arg(long a, int fieldWidth = 0, int base = 10, const QChar & fillChar = QLatin1Char( ' ' )) : QString;
+    public const member q_function at(int position) : const QChar;
+    public const member q_function begin() : const_iterator;
+    public member q_function begin() : iterator;
+    public const member q_function capacity() : int;
+    public member q_function chop(int n) : void;
+    public member q_function clear() : void;
+    public const member q_function compare(const QLatin1String & other, Qt.CaseSensitivity cs = Qt.CaseSensitive) : int;
+    public class q_function compare(const QString & s1, const QString & s2) : int;
+    public const member q_function compare(const QString & other) : int;
+    public class q_function compare(const QString & s1, const QString & s2, Qt.CaseSensitivity cs) : int;
+    public const member q_function compare(const QString & other, Qt.CaseSensitivity cs) : int;
+    public const member q_function compare(const QStringRef & ref, Qt.CaseSensitivity cs = Qt.CaseSensitive) : int;
+    public class q_function compare(const QString & s1, const QStringRef & s2, Qt.CaseSensitivity cs = Qt.CaseSensitive) : int;
+    public class q_function compare(const QString & s1, const QLatin1String & s2, Qt.CaseSensitivity cs = Qt.CaseSensitive) : int;
+    public class q_function compare(const QLatin1String & s1, const QString & s2, Qt.CaseSensitivity cs = Qt.CaseSensitive) : int;
+    public const member q_function constBegin() : const_iterator;
+    public const member q_function constData() : const QChar *;
+    public const member q_function constEnd() : const_iterator;
+    public const member q_function contains(QRegExp & rx) : bool;
+    public const member q_function contains(const QRegExp & rx) : bool;
+    public const member q_function contains(QChar ch, Qt.CaseSensitivity cs = Qt.CaseSensitive) : bool;
+    public const member q_function contains(const QString & str, Qt.CaseSensitivity cs = Qt.CaseSensitive) : bool;
+    public const member q_function count() : int;
+    public const member q_function count(const QString & str, Qt.CaseSensitivity cs = Qt.CaseSensitive) : int;
+    public const member q_function count(QChar ch, Qt.CaseSensitivity cs = Qt.CaseSensitive) : int;
+    public const member q_function count(const QRegExp & rx) : int;
+    public const member q_function data() : const QChar *;
+    public member q_function data() : QChar *;
+    public member q_function end() : iterator;
+    public const member q_function end() : const_iterator;
+    public const member q_function endsWith(const QLatin1String & s, Qt.CaseSensitivity cs = Qt.CaseSensitive) : bool;
+    public const member q_function endsWith(const QChar & c, Qt.CaseSensitivity cs = Qt.CaseSensitive) : bool;
+    public const member q_function endsWith(const QString & s, Qt.CaseSensitivity cs = Qt.CaseSensitive) : bool;
+    public member q_function fill(QChar ch, int size = -1) : QString &;
+    public class q_function fromAscii(const char * str, int size = -1) : QString;
+    public class q_function fromLatin1(const char * str, int size = -1) : QString;
+    public class q_function fromLocal8Bit(const char * str, int size = -1) : QString;
+    public class q_function fromRawData(const QChar * unicode, int size) : QString;
+    public class q_function fromStdString(const std.string & str) : QString;
+    public class q_function fromStdWString(const std.wstring & str) : QString;
+    public class q_function fromUcs4(const uint * unicode, int size = -1) : QString;
+    public class q_function fromUtf16(const ushort * unicode, int size = -1) : QString;
+    public class q_function fromUtf8(const char * str, int size = -1) : QString;
+    public class q_function fromWCharArray(const wchar_t * string, int size = -1) : QString;
+    public const member q_function indexOf(QChar ch, int from = 0, Qt.CaseSensitivity cs = Qt.CaseSensitive) : int;
+    public const member q_function indexOf(const QLatin1String & str, int from = 0, Qt.CaseSensitivity cs = Qt.CaseSensitive) : int;
+    public const member q_function indexOf(const QString & str, int from = 0, Qt.CaseSensitivity cs = Qt.CaseSensitive) : int;
+    public const member q_function indexOf(QRegExp & rx, int from = 0) : int;
+    public member q_function insert(int position, const QString & str) : QString &;
+    public member q_function insert(int position, const QLatin1String & str) : QString &;
+    public member q_function insert(int position, const QChar * unicode, int size) : QString &;
+    public member q_function insert(int position, QChar ch) : QString &;
+    public const member q_function isEmpty() : bool;
+    public const member q_function isNull() : bool;
+    public const member q_function isRightToLeft() : bool;
+    public const member q_function lastIndexOf(const QLatin1String & str, int from = -1, Qt.CaseSensitivity cs = Qt.CaseSensitive) : int;
+    public const member q_function lastIndexOf(QRegExp & rx, int from = -1) : int;
+    public const member q_function lastIndexOf(const QRegExp & rx, int from = -1) : int;
+    public const member q_function lastIndexOf(QChar ch, int from = -1, Qt.CaseSensitivity cs = Qt.CaseSensitive) : int;
+    public const member q_function lastIndexOf(const QString & str, int from = -1, Qt.CaseSensitivity cs = Qt.CaseSensitive) : int;
+    public const member q_function left(int n) : QString;
+    public const member q_function leftJustified(int width, QChar fill = QLatin1Char( ' ' ), bool truncate = false) : QString;
+    public const member q_function leftRef(int n) : QStringRef;
+    public const member q_function length() : int;
+    public const member q_function localeAwareCompare(const QStringRef & other) : int;
+    public const member q_function localeAwareCompare(const QString & other) : int;
+    public class q_function localeAwareCompare(const QString & s1, const QString & s2) : int;
+    public class q_function localeAwareCompare(const QString & s1, const QStringRef & s2) : int;
+    public const member q_function mid(int position, int n = -1) : QString;
+    public const member q_function midRef(int position, int n = -1) : QStringRef;
+    public const member q_function normalized(NormalizationForm mode, QChar.UnicodeVersion version) : QString;
+    public const member q_function normalized(NormalizationForm mode) : QString;
+    public class q_function number(uint n, int base = 10) : QString;
+    public class q_function number(ulong n, int base = 10) : QString;
+    public class q_function number(long n, int base = 10) : QString;
+    public class q_function number(int n, int base = 10) : QString;
+    public class q_function number(double n, char format = 'g', int precision = 6) : QString;
+    public class q_function number(qlonglong n, int base = 10) : QString;
+    public class q_function number(qulonglong n, int base = 10) : QString;
+    public member q_function prepend(const QByteArray & ba) : QString &;
+    public member q_function prepend(const char * str) : QString &;
+    public member q_function prepend(QChar ch) : QString &;
+    public member q_function prepend(const QString & str) : QString &;
+    public member q_function prepend(const QLatin1String & str) : QString &;
+    public member q_function push_back(const QString & other) : void;
+    public member q_function push_back(QChar ch) : void;
+    public member q_function push_front(const QString & other) : void;
+    public member q_function push_front(QChar ch) : void;
+    public member q_function remove(const QString & str, Qt.CaseSensitivity cs = Qt.CaseSensitive) : QString &;
+    public member q_function remove(QChar ch, Qt.CaseSensitivity cs = Qt.CaseSensitive) : QString &;
+    public member q_function remove(const QRegExp & rx) : QString &;
+    public member q_function remove(int position, int n) : QString &;
+    public const member q_function repeated(int times) : QString;
+    public member q_function replace(const QLatin1String & before, const QLatin1String & after, Qt.CaseSensitivity cs = Qt.CaseSensitive) : QString &;
+    public member q_function replace(QChar before, QChar after, Qt.CaseSensitivity cs = Qt.CaseSensitive) : QString &;
+    public member q_function replace(QChar ch, const QString & after, Qt.CaseSensitivity cs = Qt.CaseSensitive) : QString &;
+    public member q_function replace(const QString & before, const QString & after, Qt.CaseSensitivity cs = Qt.CaseSensitive) : QString &;
+    public member q_function replace(QChar c, const QLatin1String & after, Qt.CaseSensitivity cs = Qt.CaseSensitive) : QString &;
+    public member q_function replace(const QRegExp & rx, const QString & after) : QString &;
+    public member q_function replace(int position, int n, const QString & after) : QString &;
+    public member q_function replace(const QChar * before, int blen, const QChar * after, int alen, Qt.CaseSensitivity cs = Qt.CaseSensitive) : QString &;
+    public member q_function replace(const QLatin1String & before, const QString & after, Qt.CaseSensitivity cs = Qt.CaseSensitive) : QString &;
+    public member q_function replace(int position, int n, const QChar * unicode, int size) : QString &;
+    public member q_function replace(const QString & before, const QLatin1String & after, Qt.CaseSensitivity cs = Qt.CaseSensitive) : QString &;
+    public member q_function replace(int position, int n, QChar after) : QString &;
+    public member q_function reserve(int size) : void;
+    public member q_function resize(int size) : void;
+    public const member q_function right(int n) : QString;
+    public const member q_function rightJustified(int width, QChar fill = QLatin1Char( ' ' ), bool truncate = false) : QString;
+    public const member q_function rightRef(int n) : QStringRef;
+    public const member q_function section(const QString & sep, int start, int end = -1, SectionFlags flags = SectionDefault) : QString;
+    public const member q_function section(QChar sep, int start, int end = -1, SectionFlags flags = SectionDefault) : QString;
+    public member q_function setNum(ushort n, int base = 10) : QString &;
+    public member q_function setNum(short n, int base = 10) : QString &;
+    public member q_function setNum(int n, int base = 10) : QString &;
+    public member q_function setNum(double n, char format = 'g', int precision = 6) : QString &;
+    public member q_function setNum(float n, char format = 'g', int precision = 6) : QString &;
+    public member q_function setNum(qulonglong n, int base = 10) : QString &;
+    public member q_function setNum(uint n, int base = 10) : QString &;
+    public member q_function setNum(long n, int base = 10) : QString &;
+    public member q_function setNum(ulong n, int base = 10) : QString &;
+    public member q_function setNum(qlonglong n, int base = 10) : QString &;
+    public member q_function setRawData(const QChar * unicode, int size) : QString &;
+    public member q_function setUnicode(const QChar * unicode, int size) : QString &;
+    public member q_function setUtf16(const ushort * unicode, int size) : QString &;
+    public const member q_function simplified() : QString;
+    public const member q_function size() : int;
+    public const member q_function split(const QChar & sep, SplitBehavior behavior = KeepEmptyParts, Qt.CaseSensitivity cs = Qt.CaseSensitive) : QStringList;
+    public const member q_function split(const QRegExp & rx, SplitBehavior behavior = KeepEmptyParts) : QStringList;
+    public const member q_function split(const QString & sep, SplitBehavior behavior = KeepEmptyParts, Qt.CaseSensitivity cs = Qt.CaseSensitive) : QStringList;
+    public member q_function sprintf(const char * cformat, ... ) : QString &;
+    public member q_function squeeze() : void;
+    public const member q_function startsWith(const QChar & c, Qt.CaseSensitivity cs = Qt.CaseSensitive) : bool;
+    public const member q_function startsWith(const QLatin1String & s, Qt.CaseSensitivity cs = Qt.CaseSensitive) : bool;
+    public const member q_function startsWith(const QString & s, Qt.CaseSensitivity cs = Qt.CaseSensitive) : bool;
+    public const member q_function toAscii() : QByteArray;
+    public const member q_function toCaseFolded() : QString;
+    public const member q_function toDouble(bool * ok = 0) : double;
+    public const member q_function toFloat(bool * ok = 0) : float;
+    public const member q_function toInt(bool * ok = 0, int base = 10) : int;
+    public const member q_function toLatin1() : QByteArray;
+    public const member q_function toLocal8Bit() : QByteArray;
+    public const member q_function toLong(bool * ok = 0, int base = 10) : long;
+    public const member q_function toLongLong(bool * ok = 0, int base = 10) : qlonglong;
+    public const member q_function toLower() : QString;
+    public const member q_function toShort(bool * ok = 0, int base = 10) : short;
+    public const member q_function toStdString() : std.string;
+    public const member q_function toStdWString() : std.wstring;
+    public const member q_function toUInt(bool * ok = 0, int base = 10) : uint;
+    public const member q_function toULong(bool * ok = 0, int base = 10) : ulong;
+    public const member q_function toULongLong(bool * ok = 0, int base = 10) : qulonglong;
+    public const member q_function toUShort(bool * ok = 0, int base = 10) : ushort;
+    public const member q_function toUcs4() : QVector<uint>;
+    public const member q_function toUpper() : QString;
+    public const member q_function toUtf8() : QByteArray;
+    public const member q_function toWCharArray(wchar_t * array) : int;
+    public const member q_function trimmed() : QString;
+    public member q_function truncate(int position) : void;
+    public const member q_function unicode() : const QChar *;
+    public const member q_function utf16() : const ushort *;
+    public member q_function vsprintf(const char * cformat, va_list ap) : QString &;
+
+
+}
+

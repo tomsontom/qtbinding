@@ -1,0 +1,6 @@
+q_class QRadioButton extends QAbstractButton {
+    protected const member q_function initStyleOption(QStyleOptionButton * option) : void;
+
+
+}
+

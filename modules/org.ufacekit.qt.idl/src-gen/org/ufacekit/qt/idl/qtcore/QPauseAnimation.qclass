@@ -1,0 +1,8 @@
+q_class QPauseAnimation extends QAbstractAnimation {
+    q_property int duration;
+
+    public member q_function setDuration(int msecs) : void;
+
+
+}
+

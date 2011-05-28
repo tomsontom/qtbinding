@@ -1,0 +1,129 @@
+q_class QUrl {
+    q_enumeration FormattingOption {
+        None = 0
+        RemoveScheme = 1
+        RemovePassword = 2
+        RemoveUserInfo = RemovePassword  | 4
+        RemovePort = 8
+        RemoveAuthority = RemoveUserInfo  |  RemovePort  | 16
+        RemovePath = 32
+        RemoveQuery = 64
+        RemoveFragment = 128
+        StripTrailingSlash = 65536
+    }
+
+    q_flags FormattingOptions : FormattingOption;
+
+    q_enumeration ParsingMode {
+        TolerantMode = 0
+        StrictMode = 1
+    }
+
+
+    q_typedef DataPtr : ___UNKNOWN___;
+
+
+    public member q_function addEncodedQueryItem(const QByteArray & key, const QByteArray & value) : void;
+    public member q_function addPath(const QString & p) : void;
+    public member q_function addQueryItem(const QString & key, const QString & value) : void;
+    public const member q_function allEncodedQueryItemValues(const QByteArray & key) : QList<QByteArray>;
+    public const member q_function allQueryItemValues(const QString & key) : QStringList;
+    public const member q_function authority() : QString;
+    public member q_function cdUp() : bool;
+    public member q_function clear() : void;
+    public class q_function decode(QString & url) : void;
+    public const member q_function dirPath() : QString;
+    public class q_function encode(QString & url) : void;
+    public const member q_function encodedFragment() : QByteArray;
+    public const member q_function encodedHost() : QByteArray;
+    public const member q_function encodedPassword() : QByteArray;
+    public const member q_function encodedPath() : QByteArray;
+    public const member q_function encodedQuery() : QByteArray;
+    public const member q_function encodedQueryItemValue(const QByteArray & key) : QByteArray;
+    public const member q_function encodedQueryItems() : QList<QPair<QByteArray, QByteArray> >;
+    public const member q_function encodedUserName() : QByteArray;
+    public const member q_function errorString() : QString;
+    public const member q_function fileName() : QString;
+    public const member q_function fragment() : QString;
+    public class q_function fromAce(const QByteArray & domain) : QString;
+    public class q_function fromEncoded(const QByteArray & input, ParsingMode parsingMode) : QUrl;
+    public class q_function fromEncoded(const QByteArray & input) : QUrl;
+    public class q_function fromLocalFile(const QString & localFile) : QUrl;
+    public class q_function fromPercentEncoding(const QByteArray & input) : QString;
+    public class q_function fromPunycode(const QByteArray & pc) : QString;
+    public class q_function fromUserInput(const QString & userInput) : QUrl;
+    public const member q_function hasEncodedQueryItem(const QByteArray & key) : bool;
+    public const member q_function hasFragment() : bool;
+    public const member q_function hasHost() : bool;
+    public const member q_function hasPassword() : bool;
+    public const member q_function hasPath() : bool;
+    public const member q_function hasPort() : bool;
+    public const member q_function hasQuery() : bool;
+    public const member q_function hasQueryItem(const QString & key) : bool;
+    public const member q_function hasRef() : bool;
+    public const member q_function hasUser() : bool;
+    public const member q_function host() : QString;
+    public class q_function idnWhitelist() : QStringList;
+    public const member q_function isEmpty() : bool;
+    public const member q_function isParentOf(const QUrl & childUrl) : bool;
+    public const member q_function isRelative() : bool;
+    public class q_function isRelativeUrl(const QString & url) : bool;
+    public const member q_function isValid() : bool;
+    public const member q_function password() : QString;
+    public const member q_function path() : QString;
+    public const member q_function port(int defaultPort) : int;
+    public const member q_function port() : int;
+    public const member q_function protocol() : QString;
+    public const member q_function query() : QString;
+    public const member q_function queryItemValue(const QString & key) : QString;
+    public const member q_function queryItems() : QList<QPair<QString, QString> >;
+    public const member q_function queryPairDelimiter() : char;
+    public const member q_function queryValueDelimiter() : char;
+    public const member q_function ref() : QString;
+    public member q_function removeAllEncodedQueryItems(const QByteArray & key) : void;
+    public member q_function removeAllQueryItems(const QString & key) : void;
+    public member q_function removeEncodedQueryItem(const QByteArray & key) : void;
+    public member q_function removeQueryItem(const QString & key) : void;
+    public const member q_function resolved(const QUrl & relative) : QUrl;
+    public const member q_function scheme() : QString;
+    public member q_function setAuthority(const QString & authority) : void;
+    public member q_function setEncodedFragment(const QByteArray & fragment) : void;
+    public member q_function setEncodedHost(const QByteArray & host) : void;
+    public member q_function setEncodedPassword(const QByteArray & password) : void;
+    public member q_function setEncodedPath(const QByteArray & path) : void;
+    public member q_function setEncodedQuery(const QByteArray & query) : void;
+    public member q_function setEncodedQueryItems(const QList<QPair<QByteArray, QByteArray> > & query) : void;
+    public member q_function setEncodedUrl(const QByteArray & encodedUrl) : void;
+    public member q_function setEncodedUrl(const QByteArray & encodedUrl, ParsingMode parsingMode) : void;
+    public member q_function setEncodedUserName(const QByteArray & userName) : void;
+    public member q_function setFileName(const QString & txt) : void;
+    public member q_function setFragment(const QString & fragment) : void;
+    public member q_function setHost(const QString & host) : void;
+    public class q_function setIdnWhitelist(const QStringList & list) : void;
+    public member q_function setPassword(const QString & password) : void;
+    public member q_function setPath(const QString & path) : void;
+    public member q_function setPort(int port) : void;
+    public member q_function setProtocol(const QString & s) : void;
+    public member q_function setQuery(const QString & txt) : void;
+    public member q_function setQueryDelimiters(char valueDelimiter, char pairDelimiter) : void;
+    public member q_function setQueryItems(const QList<QPair<QString, QString> > & query) : void;
+    public member q_function setRef(const QString & txt) : void;
+    public member q_function setScheme(const QString & scheme) : void;
+    public member q_function setUrl(const QString & url) : void;
+    public member q_function setUrl(const QString & url, ParsingMode parsingMode) : void;
+    public member q_function setUser(const QString & s) : void;
+    public member q_function setUserInfo(const QString & userInfo) : void;
+    public member q_function setUserName(const QString & userName) : void;
+    public class q_function toAce(const QString & domain) : QByteArray;
+    public const member q_function toEncoded(FormattingOptions options = None) : QByteArray;
+    public const member q_function toLocalFile() : QString;
+    public class q_function toPercentEncoding(const QString & input, const QByteArray & exclude = QByteArray(), const QByteArray & include = QByteArray()) : QByteArray;
+    public class q_function toPunycode(const QString & uc) : QByteArray;
+    public const member q_function toString(FormattingOptions options = None) : QString;
+    public const member q_function user() : QString;
+    public const member q_function userInfo() : QString;
+    public const member q_function userName() : QString;
+
+
+}
+

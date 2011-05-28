@@ -1,0 +1,8 @@
+q_class QGraphicsRectItem extends QAbstractGraphicsShapeItem {
+    public const member q_function rect() : QRectF;
+    public member q_function setRect(qreal x, qreal y, qreal width, qreal height) : void;
+    public member q_function setRect(const QRectF & rectangle) : void;
+
+
+}
+

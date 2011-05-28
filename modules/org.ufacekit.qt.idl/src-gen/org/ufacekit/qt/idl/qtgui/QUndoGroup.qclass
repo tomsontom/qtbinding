@@ -1,0 +1,17 @@
+q_class QUndoGroup extends QObject {
+    public const member q_function activeStack() : QUndoStack *;
+    public member q_function addStack(QUndoStack * stack) : void;
+    public const member q_function canRedo() : bool;
+    public const member q_function canUndo() : bool;
+    public const member q_function createRedoAction(QObject * parent, const QString & prefix = QString()) : QAction *;
+    public const member q_function isClean() : bool;
+    public const member q_function redoText() : QString;
+    public member q_function removeStack(QUndoStack * stack) : void;
+    public const member q_function stacks() : QList<QUndoStack *>;
+    public const member q_function undoText() : QString;
+
+
+
+
+}
+

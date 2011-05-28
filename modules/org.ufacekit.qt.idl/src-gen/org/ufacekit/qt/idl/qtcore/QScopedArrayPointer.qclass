@@ -1,0 +1,4 @@
+q_class QScopedArrayPointer extends QScopedPointer<T, Cleanup> {
+
+}
+

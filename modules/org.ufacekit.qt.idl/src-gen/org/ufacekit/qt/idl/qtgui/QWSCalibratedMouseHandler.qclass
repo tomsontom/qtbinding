@@ -1,0 +1,13 @@
+q_class QWSCalibratedMouseHandler extends QWSMouseHandler {
+    public virtual member q_function calibrate(const QWSPointerCalibrationData * data) : void;
+    public virtual member q_function clearCalibration() : void;
+
+    protected member q_function readCalibration() : void;
+    protected member q_function sendFiltered(const QPoint & position, int state) : bool;
+    protected member q_function setFilterSize(int size) : void;
+    protected member q_function transform(const QPoint & position) : QPoint;
+    protected member q_function writeCalibration() : void;
+
+
+}
+

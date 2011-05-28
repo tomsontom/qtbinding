@@ -1,0 +1,19 @@
+q_class QPanGesture extends QGesture {
+    q_property qreal acceleration;
+    q_property const QPointF delta;
+    q_property const qreal horizontalVelocity;
+    q_property QPointF lastOffset;
+    q_property QPointF offset;
+    q_property const qreal verticalVelocity;
+
+    public const member q_function acceleration() : qreal;
+    public const member q_function delta() : QPointF;
+    public const member q_function lastOffset() : QPointF;
+    public const member q_function offset() : QPointF;
+    public member q_function setAcceleration(qreal value) : void;
+    public member q_function setLastOffset(const QPointF & value) : void;
+    public member q_function setOffset(const QPointF & value) : void;
+
+
+}
+

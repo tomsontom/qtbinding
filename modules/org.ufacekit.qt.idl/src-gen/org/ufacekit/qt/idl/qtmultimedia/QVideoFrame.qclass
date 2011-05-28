@@ -1,0 +1,72 @@
+q_class QVideoFrame {
+    q_enumeration FieldType {
+        ProgressiveFrame = 0
+        TopField = 1
+        BottomField = 2
+        InterlacedFrame = 3
+    }
+
+    q_enumeration PixelFormat {
+        Format_Invalid = 0
+        Format_ARGB32 = 1
+        Format_ARGB32_Premultiplied = 2
+        Format_RGB32 = 3
+        Format_RGB24 = 4
+        Format_RGB565 = 5
+        Format_RGB555 = 6
+        Format_ARGB8565_Premultiplied = 7
+        Format_BGRA32 = 8
+        Format_BGRA32_Premultiplied = 9
+        Format_BGR32 = 10
+        Format_BGR24 = 11
+        Format_BGR565 = 12
+        Format_BGR555 = 13
+        Format_BGRA5658_Premultiplied = 14
+        Format_AYUV444 = 15
+        Format_AYUV444_Premultiplied = 16
+        Format_YUV444 = 17
+        Format_YUV420P = 18
+        Format_YV12 = 19
+        Format_UYVY = 20
+        Format_YUYV = 21
+        Format_NV12 = 22
+        Format_NV21 = 23
+        Format_IMC1 = 24
+        Format_IMC2 = 25
+        Format_IMC3 = 26
+        Format_IMC4 = 27
+        Format_Y8 = 28
+        Format_Y16 = 29
+        Format_User = 1000
+    }
+
+
+    public member q_function bits() : uchar *;
+    public const member q_function bits() : const uchar *;
+    public const member q_function bytesPerLine() : int;
+    public const member q_function endTime() : qint64;
+    public const member q_function fieldType() : FieldType;
+    public const member q_function handle() : QVariant;
+    public const member q_function handleType() : QAbstractVideoBuffer.HandleType;
+    public const member q_function height() : int;
+    public class q_function imageFormatFromPixelFormat(PixelFormat format) : QImage.Format;
+    public const member q_function isMapped() : bool;
+    public const member q_function isReadable() : bool;
+    public const member q_function isValid() : bool;
+    public const member q_function isWritable() : bool;
+    public member q_function map(QAbstractVideoBuffer.MapMode mode) : bool;
+    public const member q_function mapMode() : QAbstractVideoBuffer.MapMode;
+    public const member q_function mappedBytes() : int;
+    public const member q_function pixelFormat() : PixelFormat;
+    public class q_function pixelFormatFromImageFormat(QImage.Format format) : PixelFormat;
+    public member q_function setEndTime(qint64 time) : void;
+    public member q_function setFieldType(FieldType field) : void;
+    public member q_function setStartTime(qint64 time) : void;
+    public const member q_function size() : QSize;
+    public const member q_function startTime() : qint64;
+    public member q_function unmap() : void;
+    public const member q_function width() : int;
+
+
+}
+

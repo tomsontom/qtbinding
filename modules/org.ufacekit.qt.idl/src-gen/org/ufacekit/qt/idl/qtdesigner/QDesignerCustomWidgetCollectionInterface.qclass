@@ -1,0 +1,6 @@
+q_class QDesignerCustomWidgetCollectionInterface {
+    public const purevirtual member q_function customWidgets() : QList<QDesignerCustomWidgetInterface *>;
+
+
+}
+

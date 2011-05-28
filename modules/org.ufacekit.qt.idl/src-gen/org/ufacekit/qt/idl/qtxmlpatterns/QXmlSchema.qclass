@@ -1,0 +1,17 @@
+q_class QXmlSchema {
+    public const member q_function documentUri() : QUrl;
+    public const member q_function isValid() : bool;
+    public member q_function load(const QByteArray & data, const QUrl & documentUri = QUrl()) : bool;
+    public member q_function load(QIODevice * source, const QUrl & documentUri = QUrl()) : bool;
+    public member q_function load(const QUrl & source) : bool;
+    public const member q_function messageHandler() : QAbstractMessageHandler *;
+    public const member q_function namePool() : QXmlNamePool;
+    public const member q_function networkAccessManager() : QNetworkAccessManager *;
+    public member q_function setMessageHandler(QAbstractMessageHandler * handler) : void;
+    public member q_function setNetworkAccessManager(QNetworkAccessManager * manager) : void;
+    public member q_function setUriResolver(const QAbstractUriResolver * resolver) : void;
+    public const member q_function uriResolver() : const QAbstractUriResolver *;
+
+
+}
+

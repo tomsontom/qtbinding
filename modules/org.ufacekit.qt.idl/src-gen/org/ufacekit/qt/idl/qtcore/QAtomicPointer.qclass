@@ -1,0 +1,23 @@
+q_class QAtomicPointer {
+    public member q_function fetchAndAddAcquire(qptrdiff valueToAdd) : T *;
+    public member q_function fetchAndAddOrdered(qptrdiff valueToAdd) : T *;
+    public member q_function fetchAndAddRelaxed(qptrdiff valueToAdd) : T *;
+    public member q_function fetchAndAddRelease(qptrdiff valueToAdd) : T *;
+    public member q_function fetchAndStoreAcquire(T * newValue) : T *;
+    public member q_function fetchAndStoreOrdered(T * newValue) : T *;
+    public member q_function fetchAndStoreRelaxed(T * newValue) : T *;
+    public member q_function fetchAndStoreRelease(T * newValue) : T *;
+    public class q_function isFetchAndAddNative() : bool;
+    public class q_function isFetchAndAddWaitFree() : bool;
+    public class q_function isFetchAndStoreNative() : bool;
+    public class q_function isFetchAndStoreWaitFree() : bool;
+    public class q_function isTestAndSetNative() : bool;
+    public class q_function isTestAndSetWaitFree() : bool;
+    public member q_function testAndSetAcquire(T * expectedValue, T * newValue) : bool;
+    public member q_function testAndSetOrdered(T * expectedValue, T * newValue) : bool;
+    public member q_function testAndSetRelaxed(T * expectedValue, T * newValue) : bool;
+    public member q_function testAndSetRelease(T * expectedValue, T * newValue) : bool;
+
+
+}
+

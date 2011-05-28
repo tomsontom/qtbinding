@@ -1,0 +1,26 @@
+q_class QInputContext extends QObject {
+    q_enumeration StandardFormat {
+        PreeditFormat = 0
+        SelectionFormat = 1
+    }
+
+
+    public virtual member q_function actions() : QList<QAction *>;
+    public virtual member q_function filterEvent(const QEvent * event) : bool;
+    public const member q_function focusWidget() : QWidget *;
+    public const virtual member q_function font() : QFont;
+    public const purevirtual member q_function isComposing() : bool;
+    public purevirtual member q_function language() : QString;
+    public virtual member q_function mouseHandler(int x, QMouseEvent * event) : void;
+    public purevirtual member q_function reset() : void;
+    public member q_function sendEvent(const QInputMethodEvent & event) : void;
+    public virtual member q_function setFocusWidget(QWidget * widget) : void;
+    public const member q_function standardFormat(StandardFormat s) : QTextFormat;
+    public virtual member q_function symbianFilterEvent(QWidget * keywidget, const QSymbianEvent * event) : bool;
+    public virtual member q_function update() : void;
+    public virtual member q_function widgetDestroyed(QWidget * widget) : void;
+    public virtual member q_function x11FilterEvent(QWidget * keywidget, XEvent * event) : bool;
+
+
+}
+

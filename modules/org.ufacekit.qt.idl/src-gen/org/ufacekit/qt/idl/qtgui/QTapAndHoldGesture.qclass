@@ -1,0 +1,11 @@
+q_class QTapAndHoldGesture extends QGesture {
+    q_property QPointF position;
+
+    public const member q_function position() : QPointF;
+    public member q_function setPosition(const QPointF & pos) : void;
+    public class q_function setTimeout(int msecs) : void;
+    public class q_function timeout() : int;
+
+
+}
+

@@ -1,0 +1,10 @@
+q_class QAxAggregated {
+    public purevirtual member q_function queryInterface(const QUuid & iid, void ** iface) : long;
+
+    protected const member q_function controllingUnknown() : IUnknown *;
+    protected const member q_function object() : QObject *;
+    protected const member q_function widget() : QWidget *;
+
+
+}
+

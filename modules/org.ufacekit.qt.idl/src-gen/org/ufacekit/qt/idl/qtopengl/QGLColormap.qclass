@@ -1,0 +1,19 @@
+q_class QGLColormap {
+    q_class QGLColormapData {
+
+    }
+
+
+    public const member q_function entryColor(int idx) : QColor;
+    public const member q_function entryRgb(int idx) : QRgb;
+    public const member q_function find(QRgb color) : int;
+    public const member q_function findNearest(QRgb color) : int;
+    public const member q_function isEmpty() : bool;
+    public member q_function setEntries(int count, const QRgb * colors, int base = 0) : void;
+    public member q_function setEntry(int idx, const QColor & color) : void;
+    public member q_function setEntry(int idx, QRgb color) : void;
+    public const member q_function size() : int;
+
+
+}
+

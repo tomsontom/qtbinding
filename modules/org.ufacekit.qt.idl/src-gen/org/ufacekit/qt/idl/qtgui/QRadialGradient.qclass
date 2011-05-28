@@ -1,0 +1,13 @@
+q_class QRadialGradient extends QGradient {
+    public const member q_function center() : QPointF;
+    public const member q_function focalPoint() : QPointF;
+    public const member q_function radius() : qreal;
+    public member q_function setCenter(const QPointF & center) : void;
+    public member q_function setCenter(qreal x, qreal y) : void;
+    public member q_function setFocalPoint(const QPointF & focalPoint) : void;
+    public member q_function setFocalPoint(qreal x, qreal y) : void;
+    public member q_function setRadius(qreal radius) : void;
+
+
+}
+

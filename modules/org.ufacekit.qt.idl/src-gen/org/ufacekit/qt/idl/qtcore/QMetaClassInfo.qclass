@@ -1,0 +1,7 @@
+q_class QMetaClassInfo {
+    public const member q_function name() : const char *;
+    public const member q_function value() : const char *; 
+
+
+}
+

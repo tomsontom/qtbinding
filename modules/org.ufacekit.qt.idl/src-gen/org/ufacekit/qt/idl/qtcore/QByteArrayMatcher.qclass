@@ -1,0 +1,14 @@
+q_class QByteArrayMatcher {
+    q_class Data {
+
+    }
+
+
+    public const member q_function indexIn(const char * str, int len, int from = 0) : int;
+    public const member q_function indexIn(const QByteArray & ba, int from = 0) : int;
+    public const member q_function pattern() : QByteArray;
+    public member q_function setPattern(const QByteArray & pattern) : void;
+
+
+}
+

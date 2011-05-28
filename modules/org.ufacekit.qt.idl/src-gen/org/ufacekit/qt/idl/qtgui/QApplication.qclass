@@ -1,0 +1,119 @@
+q_class QApplication extends QCoreApplication {
+    q_enumeration ColorSpec {
+        NormalColor = 0
+        CustomColor = 1
+        ManyColor = 2
+    }
+
+    q_enumeration Type {
+        Tty = 0
+        GuiClient = 1
+        GuiServer = 2
+    }
+
+
+    q_typedef QS60MainApplicationFactory : ___UNKNOWN___;
+
+
+    q_property int autoMaximizeThreshold;
+    q_property bool autoSipEnabled;
+    q_property int cursorFlashTime;
+    q_property int doubleClickInterval;
+    q_property QSize globalStrut;
+    q_property int keyboardInputInterval;
+    q_property Qt.LayoutDirection layoutDirection;
+    q_property bool quitOnLastWindowClosed;
+    q_property int startDragDistance;
+    q_property int startDragTime;
+    q_property QString styleSheet;
+    q_property int wheelScrollLines;
+    q_property QIcon windowIcon;
+
+    public class q_function activeModalWidget() : QWidget *;
+    public class q_function activePopupWidget() : QWidget *;
+    public class q_function activeWindow() : QWidget *;
+    public class q_function alert(QWidget * widget, int msec = 0) : void;
+    public class q_function allWidgets() : QWidgetList;
+    public class q_function beep() : void;
+    public class q_function changeOverrideCursor(const QCursor & cursor) : void;
+    public class q_function colorSpec() : int;
+    public virtual member q_function commitData(QSessionManager & manager) : void;
+    public class q_function cursorFlashTime() : int;
+    public class q_function desktop() : QDesktopWidget *;
+    public class q_function desktopSettingsAware() : bool;
+    public class q_function doubleClickInterval() : int;
+    public class q_function exec() : int;
+    public class q_function focusWidget() : QWidget *;
+    public class q_function font() : QFont;
+    public class q_function font(const QWidget * widget) : QFont;
+    public class q_function font(const char * className) : QFont;
+    public class q_function fontMetrics() : QFontMetrics;
+    public class q_function globalStrut() : QSize;
+    public const member q_function inputContext() : QInputContext *;
+    public class q_function isEffectEnabled(Qt.UIEffect effect) : bool;
+    public class q_function isLeftToRight() : bool;
+    public class q_function isRightToLeft() : bool;
+    public class q_function keyboardInputDirection() : Qt.LayoutDirection;
+    public class q_function keyboardInputInterval() : int;
+    public class q_function keyboardModifiers() : Qt.KeyboardModifiers;
+    public class q_function layoutDirection() : Qt.LayoutDirection;
+    public virtual member q_function macEventFilter(EventHandlerCallRef caller, EventRef event) : bool;
+    public class q_function mouseButtons() : Qt.MouseButtons;
+    public class q_function navigationMode() : Qt.NavigationMode;
+    public class q_function overrideCursor() : QCursor *;
+    public class q_function palette() : QPalette;
+    public class q_function palette(const QWidget * widget) : QPalette;
+    public class q_function palette(const char * className) : QPalette;
+    public class q_function quitOnLastWindowClosed() : bool;
+    public class q_function qwsDecoration() : QDecoration &;
+    public virtual member q_function qwsEventFilter(QWSEvent * event) : bool;
+    public member q_function qwsSetCustomColors(QRgb * colorTable, int start, int numColors) : void;
+    public class q_function qwsSetDecoration(const QString & decoration) : QDecoration *;
+    public class q_function qwsSetDecoration(QDecoration * decoration) : void;
+    public class q_function restoreOverrideCursor() : void;
+    public virtual member q_function saveState(QSessionManager & manager) : void;
+    public const member q_function sessionId() : QString;
+    public const member q_function sessionKey() : QString;
+    public class q_function setActiveWindow(QWidget * active) : void;
+    public class q_function setColorSpec(int spec) : void;
+    public class q_function setCursorFlashTime(int ) : void;
+    public class q_function setDesktopSettingsAware(bool on) : void;
+    public class q_function setDoubleClickInterval(int ) : void;
+    public class q_function setEffectEnabled(Qt.UIEffect effect, bool enable = true) : void;
+    public class q_function setFont(const QFont & font, const char * className = 0) : void;
+    public class q_function setGlobalStrut(const QSize & ) : void;
+    public class q_function setGraphicsSystem(const QString & system) : void;
+    public member q_function setInputContext(QInputContext * inputContext) : void;
+    public class q_function setKeyboardInputInterval(int ) : void;
+    public class q_function setLayoutDirection(Qt.LayoutDirection direction) : void;
+    public class q_function setNavigationMode(Qt.NavigationMode mode) : void;
+    public class q_function setOverrideCursor(const QCursor & cursor) : void;
+    public class q_function setPalette(const QPalette & palette, const char * className = 0) : void;
+    public class q_function setQuitOnLastWindowClosed(bool quit) : void;
+    public class q_function setStartDragDistance(int l) : void;
+    public class q_function setStartDragTime(int ms) : void;
+    public class q_function setStyle(const QString & style) : QStyle *;
+    public class q_function setStyle(QStyle * style) : void;
+    public class q_function setWheelScrollLines(int ) : void;
+    public class q_function setWindowIcon(const QIcon & icon) : void;
+    public class q_function startDragDistance() : int;
+    public class q_function startDragTime() : int;
+    public class q_function style() : QStyle *;
+    public const member q_function styleSheet() : QString;
+    public virtual member q_function symbianEventFilter(const QSymbianEvent * event) : bool;
+    public member q_function symbianProcessEvent(const QSymbianEvent * event) : int;
+    public class q_function syncX() : void;
+    public class q_function topLevelAt(int x, int y) : QWidget *;
+    public class q_function topLevelAt(const QPoint & point) : QWidget *;
+    public class q_function topLevelWidgets() : QWidgetList;
+    public class q_function wheelScrollLines() : int;
+    public class q_function widgetAt(const QPoint & point) : QWidget *;
+    public class q_function widgetAt(int x, int y) : QWidget *;
+    public class q_function windowIcon() : QIcon;
+    public member q_function x11ProcessEvent(XEvent * event) : int;
+
+
+
+
+}
+

@@ -1,0 +1,24 @@
+q_class QTextTable extends QTextFrame {
+    public member q_function appendColumns(int count) : void;
+    public member q_function appendRows(int count) : void;
+    public const member q_function cellAt(const QTextCursor & cursor) : QTextTableCell;
+    public const member q_function cellAt(int row, int column) : QTextTableCell;
+    public const member q_function cellAt(int position) : QTextTableCell;
+    public const member q_function columns() : int;
+    public const member q_function format() : QTextTableFormat;
+    public member q_function insertColumns(int index, int columns) : void;
+    public member q_function insertRows(int index, int rows) : void;
+    public member q_function mergeCells(const QTextCursor & cursor) : void;
+    public member q_function mergeCells(int row, int column, int numRows, int numCols) : void;
+    public member q_function removeColumns(int index, int columns) : void;
+    public member q_function removeRows(int index, int rows) : void;
+    public member q_function resize(int rows, int columns) : void;
+    public const member q_function rowEnd(const QTextCursor & cursor) : QTextCursor;
+    public const member q_function rowStart(const QTextCursor & cursor) : QTextCursor;
+    public const member q_function rows() : int;
+    public member q_function setFormat(const QTextTableFormat & format) : void;
+    public member q_function splitCell(int row, int column, int numRows, int numCols) : void;
+
+
+}
+

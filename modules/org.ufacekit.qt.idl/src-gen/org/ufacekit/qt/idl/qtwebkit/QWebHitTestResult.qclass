@@ -1,0 +1,21 @@
+q_class QWebHitTestResult {
+    public const member q_function alternateText() : QString;
+    public const member q_function boundingRect() : QRect;
+    public const member q_function element() : QWebElement;
+    public const member q_function enclosingBlockElement() : QWebElement;
+    public const member q_function frame() : QWebFrame *;
+    public const member q_function imageUrl() : QUrl;
+    public const member q_function isContentEditable() : bool;
+    public const member q_function isContentSelected() : bool;
+    public const member q_function linkElement() : QWebElement;
+    public const member q_function linkTargetFrame() : QWebFrame *;
+    public const member q_function linkText() : QString;
+    public const member q_function linkTitle() : QUrl;
+    public const member q_function linkUrl() : QUrl;
+    public const member q_function pixmap() : QPixmap;
+    public const member q_function pos() : QPoint;
+    public const member q_function title() : QString;
+
+
+}
+

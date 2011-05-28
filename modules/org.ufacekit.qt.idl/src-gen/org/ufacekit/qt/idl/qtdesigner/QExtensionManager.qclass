@@ -1,0 +1,13 @@
+q_class QExtensionManager extends QObject, QAbstractExtensionManager {
+    q_typedef FactoryList : ___UNKNOWN___;
+
+    q_typedef FactoryMap : ___UNKNOWN___;
+
+
+    public const virtual member q_function extension(QObject * object, const QString & iid) : QObject *;
+    public virtual member q_function registerExtensions(QAbstractExtensionFactory * factory, const QString & iid = QString()) : void;
+    public virtual member q_function unregisterExtensions(QAbstractExtensionFactory * factory, const QString & iid = QString()) : void;
+
+
+}
+

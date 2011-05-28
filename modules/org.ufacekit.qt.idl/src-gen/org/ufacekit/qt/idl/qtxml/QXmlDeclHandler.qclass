@@ -1,0 +1,9 @@
+q_class QXmlDeclHandler {
+    public purevirtual member q_function attributeDecl(const QString & eName, const QString & aName, const QString & type, const QString & valueDefault, const QString & value) : bool;
+    public const purevirtual member q_function errorString() : QString;
+    public purevirtual member q_function externalEntityDecl(const QString & name, const QString & publicId, const QString & systemId) : bool;
+    public purevirtual member q_function internalEntityDecl(const QString & name, const QString & value) : bool;
+
+
+}
+

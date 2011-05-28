@@ -1,0 +1,41 @@
+q_class QToolBar extends QWidget {
+    q_property Qt.ToolBarAreas allowedAreas;
+    q_property bool floatable;
+    q_property const bool floating;
+    q_property QSize iconSize;
+    q_property bool movable;
+    q_property Qt.Orientation orientation;
+    q_property Qt.ToolButtonStyle toolButtonStyle;
+
+    public const member q_function actionAt(const QPoint & p) : QAction *;
+    public const member q_function actionAt(int x, int y) : QAction *;
+    public member q_function addAction(QAction * action) : void;
+    public member q_function addAction(const QIcon & icon, const QString & text, const QObject * receiver, const char * member) : QAction *;
+    public member q_function addAction(const QString & text) : QAction *;
+    public member q_function addAction(const QString & text, const QObject * receiver, const char * member) : QAction *;
+    public member q_function addAction(const QIcon & icon, const QString & text) : QAction *;
+    public member q_function addSeparator() : QAction *;
+    public member q_function addWidget(QWidget * widget) : QAction *;
+    public const member q_function allowedAreas() : Qt.ToolBarAreas;
+    public member q_function clear() : void;
+    public const member q_function iconSize() : QSize;
+    public member q_function insertSeparator(QAction * before) : QAction *;
+    public member q_function insertWidget(QAction * before, QWidget * widget) : QAction *;
+    public const member q_function isAreaAllowed(Qt.ToolBarArea area) : bool;
+    public const member q_function isFloatable() : bool;
+    public const member q_function isFloating() : bool;
+    public const member q_function isMovable() : bool;
+    public const member q_function orientation() : Qt.Orientation;
+    public member q_function setAllowedAreas(Qt.ToolBarAreas areas) : void;
+    public member q_function setFloatable(bool floatable) : void;
+    public member q_function setMovable(bool movable) : void;
+    public member q_function setOrientation(Qt.Orientation orientation) : void;
+    public const member q_function toggleViewAction() : QAction *;
+    public const member q_function toolButtonStyle() : Qt.ToolButtonStyle;
+    public const member q_function widgetForAction(QAction * action) : QWidget *;
+
+
+
+
+}
+

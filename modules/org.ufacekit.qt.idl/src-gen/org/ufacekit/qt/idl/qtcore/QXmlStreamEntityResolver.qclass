@@ -1,0 +1,6 @@
+q_class QXmlStreamEntityResolver {
+    public virtual member q_function resolveUndeclaredEntity(const QString & name) : QString;
+
+
+}
+

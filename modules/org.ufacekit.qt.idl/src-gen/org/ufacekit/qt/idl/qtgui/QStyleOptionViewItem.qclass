@@ -1,0 +1,20 @@
+q_class QStyleOptionViewItem extends QStyleOption {
+    q_enumeration Position {
+        Left = 0
+        Right = 1
+        Top = 2
+        Bottom = 3
+    }
+
+    q_enumeration StyleOptionType {
+        Type = SO_ViewItem
+    }
+
+    q_enumeration StyleOptionVersion {
+        Version = 1
+    }
+
+
+
+}
+

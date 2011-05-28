@@ -1,0 +1,6 @@
+q_class QAbstractExtensionFactory {
+    public const purevirtual member q_function extension(QObject * object, const QString & iid) : QObject *;
+
+
+}
+

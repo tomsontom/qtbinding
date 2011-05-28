@@ -1,0 +1,8 @@
+q_class QAbstractMessageHandler extends QObject {
+    public member q_function message(QtMsgType type, const QString & description, const QUrl & identifier = QUrl(), const QSourceLocation & sourceLocation = QSourceLocation()) : void;
+
+    protected purevirtual member q_function handleMessage(QtMsgType type, const QString & description, const QUrl & identifier, const QSourceLocation & sourceLocation) : void;
+
+
+}
+

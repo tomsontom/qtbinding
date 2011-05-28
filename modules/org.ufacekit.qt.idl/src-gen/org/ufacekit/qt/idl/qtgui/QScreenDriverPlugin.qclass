@@ -1,0 +1,7 @@
+q_class QScreenDriverPlugin extends QObject {
+    public purevirtual member q_function create(const QString & key, int displayId) : QScreen *;
+    public const purevirtual member q_function keys() : QStringList;
+
+
+}
+

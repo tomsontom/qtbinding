@@ -1,0 +1,22 @@
+q_class QAccessibleInterface extends QAccessible {
+    public const purevirtual member q_function actionText(int action, Text t, int child) : QString;
+    public const purevirtual member q_function childAt(int x, int y) : int;
+    public const purevirtual member q_function childCount() : int;
+    public purevirtual member q_function doAction(int action, int child, const QVariantList & params = QVariantList()) : bool;
+    public const purevirtual member q_function indexOfChild(const QAccessibleInterface * child) : int;
+    public member q_function invokeMethod(Method method, int child = 0, const QVariantList & params = QVariantList()) : QVariant;
+    public const purevirtual member q_function isValid() : bool;
+    public const purevirtual member q_function navigate(RelationFlag relation, int entry, QAccessibleInterface ** target) : int;
+    public const purevirtual member q_function object() : QObject *;
+    public const purevirtual member q_function rect(int child) : QRect;
+    public const purevirtual member q_function relationTo(int child, const QAccessibleInterface * other, int otherChild) : Relation;
+    public const purevirtual member q_function role(int child) : Role;
+    public purevirtual member q_function setText(Text t, int child, const QString & text) : void;
+    public const purevirtual member q_function state(int child) : State;
+    public member q_function supportedMethods() : QSet<Method>;
+    public const purevirtual member q_function text(Text t, int child) : QString;
+    public const purevirtual member q_function userActionCount(int child) : int;
+
+
+}
+

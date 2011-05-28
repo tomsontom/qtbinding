@@ -1,0 +1,89 @@
+q_class QFile extends QIODevice {
+    q_enumeration FileError {
+        NoError = 0
+        ReadError = 1
+        WriteError = 2
+        FatalError = 3
+        ResourceError = 4
+        OpenError = 5
+        AbortError = 6
+        TimeOutError = 7
+        UnspecifiedError = 8
+        RemoveError = 9
+        RenameError = 10
+        PositionError = 11
+        ResizeError = 12
+        PermissionsError = 13
+        CopyError = 14
+    }
+
+    q_enumeration MemoryMapFlags {
+        NoOptions = 0
+    }
+
+    q_enumeration Permission {
+        ReadOwner = 16384
+        WriteOwner = 8192
+        ExeOwner = 4096
+        ReadUser = 1024
+        WriteUser = 512
+        ExeUser = 256
+        ReadGroup = 64
+        WriteGroup = 32
+        ExeGroup = 16
+        ReadOther = 4
+        WriteOther = 2
+        ExeOther = 1
+    }
+
+    q_flags Permissions : Permission;
+
+
+    q_typedef DecoderFn : ___UNKNOWN___;
+
+    q_typedef EncoderFn : ___UNKNOWN___;
+
+
+    public const virtual member q_function atEnd() : bool;
+    public virtual member q_function close() : void;
+    public class q_function copy(const QString & fileName, const QString & newName) : bool;
+    public member q_function copy(const QString & newName) : bool;
+    public class q_function decodeName(const char * localFileName) : QString;
+    public class q_function decodeName(const QByteArray & localFileName) : QString;
+    public class q_function encodeName(const QString & fileName) : QByteArray;
+    public const member q_function exists() : bool;
+    public class q_function exists(const QString & fileName) : bool;
+    public const member q_function fileName() : QString;
+    public member q_function flush() : bool;
+    public const member q_function handle() : int;
+    public const virtual member q_function isSequential() : bool;
+    public class q_function link(const QString & fileName, const QString & linkName) : bool;
+    public member q_function link(const QString & linkName) : bool; 
+    public member q_function map(qint64 offset, qint64 size, MemoryMapFlags flags = NoOptions) : uchar *;
+    public member q_function open(FILE * fh, OpenMode mode) : bool;
+    public member q_function open(int fd, OpenMode mode) : bool;
+    public virtual member q_function open(OpenMode mode) : bool;
+    public class q_function permissions(const QString & fileName) : Permissions;
+    public const member q_function permissions() : Permissions;
+    public class q_function readLink(const QString & fileName) : QString;
+    public const member q_function readLink() : QString;
+    public class q_function remove(const QString & fileName) : bool;
+    public member q_function remove() : bool;
+    public member q_function rename(const QString & newName) : bool;
+    public class q_function rename(const QString & oldName, const QString & newName) : bool;
+    public class q_function resize(const QString & fileName, qint64 sz) : bool;
+    public member q_function resize(qint64 sz) : bool;
+    public class q_function setDecodingFunction(DecoderFn function) : void;
+    public class q_function setEncodingFunction(EncoderFn function) : void;
+    public member q_function setFileName(const QString & name) : void;
+    public member q_function setPermissions(Permissions permissions) : bool;
+    public class q_function setPermissions(const QString & fileName, Permissions permissions) : bool;
+    public const virtual member q_function size() : qint64;
+    public const member q_function symLinkTarget() : QString;
+    public class q_function symLinkTarget(const QString & fileName) : QString;
+    public member q_function unmap(uchar * address) : bool;
+    public member q_function unsetError() : void;
+
+
+}
+

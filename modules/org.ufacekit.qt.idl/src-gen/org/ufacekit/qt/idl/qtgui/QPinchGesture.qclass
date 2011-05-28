@@ -1,0 +1,48 @@
+q_class QPinchGesture extends QGesture {
+    q_enumeration ChangeFlag {
+        ScaleFactorChanged = 1
+        RotationAngleChanged = 2
+        CenterPointChanged = 4
+    }
+
+    q_flags ChangeFlags : ChangeFlag;
+
+
+    q_property QPointF centerPoint;
+    q_property ChangeFlags changeFlags;
+    q_property QPointF lastCenterPoint;
+    q_property qreal lastRotationAngle;
+    q_property qreal lastScaleFactor;
+    q_property qreal rotationAngle;
+    q_property qreal scaleFactor;
+    q_property QPointF startCenterPoint;
+    q_property ChangeFlags totalChangeFlags;
+    q_property qreal totalRotationAngle;
+    q_property qreal totalScaleFactor;
+
+    public const member q_function centerPoint() : QPointF;
+    public const member q_function changeFlags() : ChangeFlags;
+    public const member q_function lastCenterPoint() : QPointF;
+    public const member q_function lastRotationAngle() : qreal;
+    public const member q_function lastScaleFactor() : qreal;
+    public const member q_function rotationAngle() : qreal;
+    public const member q_function scaleFactor() : qreal;
+    public member q_function setCenterPoint(const QPointF & value) : void;
+    public member q_function setChangeFlags(ChangeFlags value) : void;
+    public member q_function setLastCenterPoint(const QPointF & value) : void;
+    public member q_function setLastRotationAngle(qreal value) : void;
+    public member q_function setLastScaleFactor(qreal value) : void;
+    public member q_function setRotationAngle(qreal value) : void;
+    public member q_function setScaleFactor(qreal value) : void;
+    public member q_function setStartCenterPoint(const QPointF & value) : void;
+    public member q_function setTotalChangeFlags(ChangeFlags value) : void;
+    public member q_function setTotalRotationAngle(qreal value) : void;
+    public member q_function setTotalScaleFactor(qreal value) : void;
+    public const member q_function startCenterPoint() : QPointF;
+    public const member q_function totalChangeFlags() : ChangeFlags;
+    public const member q_function totalRotationAngle() : qreal;
+    public const member q_function totalScaleFactor() : qreal;
+
+
+}
+

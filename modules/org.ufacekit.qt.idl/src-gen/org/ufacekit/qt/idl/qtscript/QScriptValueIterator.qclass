@@ -1,0 +1,16 @@
+q_class QScriptValueIterator {
+    public const member q_function flags() : QScriptValue.PropertyFlags;
+    public const member q_function hasPrevious() : bool;
+    public const member q_function name() : QString;
+    public member q_function next() : void;
+    public member q_function previous() : void;
+    public member q_function remove() : void;
+    public const member q_function scriptName() : QScriptString;
+    public member q_function setValue(const QScriptValue & value) : void;
+    public member q_function toBack() : void;
+    public member q_function toFront() : void;
+    public const member q_function value() : QScriptValue;
+
+
+}
+

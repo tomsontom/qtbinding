@@ -1,0 +1,7 @@
+q_class QAccessiblePlugin extends QObject, QAccessible {
+    public purevirtual member q_function create(const QString & key, QObject * object) : QAccessibleInterface *;
+    public const purevirtual member q_function keys() : QStringList;
+
+
+}
+

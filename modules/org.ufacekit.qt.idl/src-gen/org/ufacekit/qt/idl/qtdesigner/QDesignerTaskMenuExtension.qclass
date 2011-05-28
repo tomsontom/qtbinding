@@ -1,0 +1,7 @@
+q_class QDesignerTaskMenuExtension {
+    public const virtual member q_function preferredEditAction() : QAction *;
+    public const purevirtual member q_function taskActions() : QList<QAction *>;
+
+
+}
+

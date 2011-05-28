@@ -1,0 +1,6 @@
+q_class QMacCocoaViewContainer extends QWidget {
+    public const member q_function cocoaView() : void *;
+
+
+}
+

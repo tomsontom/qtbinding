@@ -1,0 +1,14 @@
+q_class QDeclarativeError {
+    public const member q_function column() : int;
+    public const member q_function description() : QString;
+    public const member q_function line() : int;
+    public member q_function setColumn(int column) : void;
+    public member q_function setDescription(const QString & description) : void;
+    public member q_function setLine(int line) : void;
+    public member q_function setUrl(const QUrl & url) : void;
+    public const member q_function toString() : QString;
+    public const member q_function url() : QUrl;
+
+
+}
+

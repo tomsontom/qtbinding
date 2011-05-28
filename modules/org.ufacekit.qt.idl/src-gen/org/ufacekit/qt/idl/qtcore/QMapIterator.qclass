@@ -1,0 +1,20 @@
+q_class QMapIterator {
+    q_typedef Item : ___UNKNOWN___;
+
+    q_typedef const_iterator : ___UNKNOWN___;
+
+
+    public member q_function findNext(const T & value) : bool;
+    public const member q_function hasNext() : bool;
+    public const member q_function hasPrevious() : bool;
+    public const member q_function key() : const Key &;
+    public member q_function next() : Item;
+    public const member q_function peekNext() : Item;
+    public const member q_function peekPrevious() : Item;
+    public member q_function toBack() : void;
+    public member q_function toFront() : void;
+    public const member q_function value() : const T &;
+
+
+}
+

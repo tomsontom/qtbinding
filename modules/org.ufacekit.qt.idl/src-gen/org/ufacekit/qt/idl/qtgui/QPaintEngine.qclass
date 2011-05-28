@@ -1,0 +1,101 @@
+q_class QPaintEngine {
+    q_enumeration DirtyFlag {
+        DirtyPen = 1
+        DirtyBrush = 2
+        DirtyBrushOrigin = 4
+        DirtyFont = 8
+        DirtyBackground = 16
+        DirtyBackgroundMode = 32
+        DirtyTransform = 64
+        DirtyClipRegion = 128
+        DirtyClipPath = 256
+        DirtyHints = 512
+        DirtyCompositionMode = 1024
+        DirtyClipEnabled = 2048
+        DirtyOpacity = 4096
+        AllDirty = 65535
+    }
+
+    q_flags DirtyFlags : DirtyFlag;
+
+    q_enumeration PaintEngineFeature {
+        PrimitiveTransform = 1
+        PatternTransform = 2
+        PixmapTransform = 4
+        PatternBrush = 8
+        LinearGradientFill = 16
+        RadialGradientFill = 32
+        ConicalGradientFill = 64
+        AlphaBlend = 128
+        PorterDuff = 256
+        PainterPaths = 512
+        Antialiasing = 1024
+        BrushStroke = 2048
+        ConstantOpacity = 4096
+        MaskedBrush = 8192
+        PerspectiveTransform = 16384
+        BlendModes = 32768
+        ObjectBoundingModeGradients = 65536
+        RasterOpModes = 131072
+        PaintOutsidePaintEvent = 536870912
+        AllFeatures = 4294967295
+    }
+
+    q_flags PaintEngineFeatures : PaintEngineFeature;
+
+    q_enumeration PolygonDrawMode {
+        OddEvenMode = 0
+        WindingMode = 1
+        ConvexMode = 2
+        PolylineMode = 3
+    }
+
+    q_enumeration Type {
+        X11 = 0
+        Windows = 1
+        QuickDraw = 2
+        CoreGraphics = 3
+        MacPrinter = 4
+        QWindowSystem = 5
+        PostScript = 6
+        OpenGL = 7
+        Picture = 8
+        SVG = 9
+        Raster = 10
+        Direct3D = 11
+        Pdf = 12
+        OpenVG = 13
+        OpenGL2 = 14
+        PaintBuffer = 15
+        User = 50
+        MaxUser = 100
+    }
+
+
+    public purevirtual member q_function begin(QPaintDevice * pdev) : bool;
+    public virtual member q_function drawEllipse(const QRectF & rect) : void;
+    public virtual member q_function drawEllipse(const QRect & rect) : void;
+    public virtual member q_function drawImage(const QRectF & rectangle, const QImage & image, const QRectF & sr, Qt.ImageConversionFlags flags = Qt.AutoColor) : void;
+    public virtual member q_function drawLines(const QLineF * lines, int lineCount) : void;
+    public virtual member q_function drawLines(const QLine * lines, int lineCount) : void;
+    public virtual member q_function drawPath(const QPainterPath & path) : void;
+    public purevirtual member q_function drawPixmap(const QRectF & r, const QPixmap & pm, const QRectF & sr) : void;
+    public virtual member q_function drawPoints(const QPointF * points, int pointCount) : void;
+    public virtual member q_function drawPoints(const QPoint * points, int pointCount) : void;
+    public virtual member q_function drawPolygon(const QPointF * points, int pointCount, PolygonDrawMode mode) : void;
+    public virtual member q_function drawPolygon(const QPoint * points, int pointCount, PolygonDrawMode mode) : void;
+    public virtual member q_function drawRects(const QRectF * rects, int rectCount) : void;
+    public virtual member q_function drawRects(const QRect * rects, int rectCount) : void;
+    public virtual member q_function drawTextItem(const QPointF & p, const QTextItem & textItem) : void;
+    public virtual member q_function drawTiledPixmap(const QRectF & rect, const QPixmap & pixmap, const QPointF & p) : void;
+    public purevirtual member q_function end() : bool;
+    public const member q_function hasFeature(PaintEngineFeatures feature) : bool;
+    public const member q_function paintDevice() : QPaintDevice *;
+    public const member q_function painter() : QPainter *;
+    public member q_function setActive(bool state) : void;
+    public const purevirtual member q_function type() : Type;
+    public purevirtual member q_function updateState(const QPaintEngineState & state) : void;
+
+
+}
+

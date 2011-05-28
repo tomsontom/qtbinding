@@ -1,0 +1,50 @@
+q_class QDesignerFormWindowInterface extends QWidget {
+    q_enumeration FeatureFlag {
+        EditFeature = 1
+        GridFeature = 2
+        TabOrderFeature = 4
+        DefaultFeature = EditFeature  |  GridFeature
+    }
+
+    q_flags Feature : FeatureFlag;
+
+
+    public const purevirtual member q_function absoluteDir() : QDir;
+    public purevirtual member q_function addResourceFile(const QString & path) : void;
+    public const purevirtual member q_function author() : QString;
+    public const purevirtual member q_function comment() : QString;
+    public const purevirtual member q_function contents() : QString;
+    public const virtual member q_function core() : QDesignerFormEditorInterface *;
+    public const purevirtual member q_function cursor() : QDesignerFormWindowCursorInterface *;
+    public purevirtual member q_function emitSelectionChanged() : void;
+    public const purevirtual member q_function exportMacro() : QString;
+    public const purevirtual member q_function features() : Feature;
+    public const purevirtual member q_function fileName() : QString;
+    public class q_function findFormWindow(QObject * object) : QDesignerFormWindowInterface *;
+    public class q_function findFormWindow(QWidget * widget) : QDesignerFormWindowInterface *;
+    public const purevirtual member q_function grid() : QPoint;
+    public const purevirtual member q_function hasFeature(Feature feature) : bool;
+    public const purevirtual member q_function includeHints() : QStringList;
+    public const purevirtual member q_function isDirty() : bool;
+    public const purevirtual member q_function isManaged(QWidget * widget) : bool;
+    public purevirtual member q_function layoutDefault(int * margin, int * spacing) : void;
+    public purevirtual member q_function layoutFunction(QString * margin, QString * spacing) : void;
+    public const purevirtual member q_function mainContainer() : QWidget *;
+    public const purevirtual member q_function pixmapFunction() : QString;
+    public purevirtual member q_function removeResourceFile(const QString & path) : void;
+    public const purevirtual member q_function resourceFiles() : QStringList;
+    public purevirtual member q_function setAuthor(const QString & author) : void;
+    public purevirtual member q_function setComment(const QString & comment) : void;
+    public purevirtual member q_function setContents(QIODevice * device) : void;
+    public purevirtual member q_function setExportMacro(const QString & exportMacro) : void;
+    public purevirtual member q_function setIncludeHints(const QStringList & includeHints) : void;
+    public purevirtual member q_function setLayoutDefault(int margin, int spacing) : void;
+    public purevirtual member q_function setLayoutFunction(const QString & margin, const QString & spacing) : void;
+    public purevirtual member q_function setMainContainer(QWidget * mainContainer) : void;
+    public purevirtual member q_function setPixmapFunction(const QString & pixmapFunction) : void;
+
+
+
+
+}
+

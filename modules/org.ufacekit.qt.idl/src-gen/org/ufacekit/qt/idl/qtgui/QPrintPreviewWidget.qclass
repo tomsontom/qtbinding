@@ -1,0 +1,27 @@
+q_class QPrintPreviewWidget extends QWidget {
+    q_enumeration ViewMode {
+        SinglePageView = 0
+        FacingPagesView = 1
+        AllPagesView = 2
+    }
+
+    q_enumeration ZoomMode {
+        CustomZoom = 0
+        FitToWidth = 1
+        FitInView = 2
+    }
+
+
+    public const member q_function currentPage() : int;
+    public const member q_function numPages() : int;
+    public const member q_function orientation() : QPrinter.Orientation;
+    public const member q_function pageCount() : int;
+    public const member q_function viewMode() : ViewMode;
+    public const member q_function zoomFactor() : qreal;
+    public const member q_function zoomMode() : ZoomMode;
+
+
+
+
+}
+

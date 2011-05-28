@@ -1,0 +1,20 @@
+q_class QSyntaxHighlighter extends QObject {
+    public const member q_function document() : QTextDocument *;
+    public member q_function setDocument(QTextDocument * doc) : void;
+
+    protected const member q_function currentBlock() : QTextBlock;
+    protected const member q_function currentBlockState() : int;
+    protected const member q_function currentBlockUserData() : QTextBlockUserData *;
+    protected const member q_function format(int position) : QTextCharFormat;
+    protected purevirtual member q_function highlightBlock(const QString & text) : void;
+    protected const member q_function previousBlockState() : int;
+    protected member q_function setCurrentBlockState(int newState) : void;
+    protected member q_function setCurrentBlockUserData(QTextBlockUserData * data) : void;
+    protected member q_function setFormat(int start, int count, const QColor & color) : void;
+    protected member q_function setFormat(int start, int count, const QTextCharFormat & format) : void;
+    protected member q_function setFormat(int start, int count, const QFont & font) : void;
+
+
+
+}
+

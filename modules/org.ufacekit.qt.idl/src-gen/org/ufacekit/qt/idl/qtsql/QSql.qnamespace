@@ -1,0 +1,33 @@
+q_namespace QSql {
+    q_enumeration Location {
+        BeforeFirstRow = -1
+        AfterLastRow = -2
+    }
+
+    q_enumeration NumericalPrecisionPolicy {
+        LowPrecisionInt32 = 1
+        LowPrecisionInt64 = 2
+        LowPrecisionDouble = 4
+        HighPrecision = 0
+    }
+
+    q_enumeration ParamTypeFlag {
+        In = 1
+        Out = 2
+        InOut = In  |  Out
+        Binary = 4
+    }
+
+    q_flags ParamType : ParamTypeFlag;
+
+    q_enumeration TableType {
+        Tables = 1
+        SystemTables = 2
+        Views = 4
+        AllTables = 255
+    }
+
+
+
+}
+

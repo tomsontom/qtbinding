@@ -1,0 +1,42 @@
+q_class QWebView extends QWidget {
+    q_property const QIcon icon;
+    q_property const bool modified;
+    q_property QPainter.RenderHints renderHints;
+    q_property const QString selectedText;
+    q_property const qreal textSizeMultiplier;
+    q_property const QString title;
+    q_property QUrl url;
+    q_property qreal zoomFactor;
+
+    public member q_function findText(const QString & subString, QWebPage.FindFlags options = 0) : bool;
+    public const member q_function history() : QWebHistory *;
+    public const member q_function icon() : QIcon;
+    public const member q_function isModified() : bool;
+    public member q_function load(const QNetworkRequest & request, QNetworkAccessManager.Operation operation = QNetworkAccessManager.GetOperation, const QByteArray & body = QByteArray()) : void;
+    public member q_function load(const QUrl & url) : void;
+    public const member q_function page() : QWebPage *;
+    public const member q_function pageAction(QWebPage.WebAction action) : QAction *;
+    public const member q_function renderHints() : QPainter.RenderHints;
+    public const member q_function selectedText() : QString;
+    public member q_function setContent(const QByteArray & data, const QString & mimeType = QString(), const QUrl & baseUrl = QUrl()) : void;
+    public member q_function setHtml(const QString & html, const QUrl & baseUrl = QUrl()) : void;
+    public member q_function setPage(QWebPage * page) : void;
+    public member q_function setRenderHint(QPainter.RenderHint hint, bool enabled = true) : void;
+    public member q_function setRenderHints(QPainter.RenderHints hints) : void;
+    public member q_function setTextSizeMultiplier(qreal factor) : void;
+    public member q_function setUrl(const QUrl & url) : void;
+    public member q_function setZoomFactor(qreal factor) : void;
+    public const member q_function settings() : QWebSettings *;
+    public const member q_function textSizeMultiplier() : qreal;
+    public const member q_function title() : QString;
+    public member q_function triggerPageAction(QWebPage.WebAction action, bool checked = false) : void;
+    public const member q_function url() : QUrl;
+    public const member q_function zoomFactor() : qreal;
+
+    protected virtual member q_function createWindow(QWebPage.WebWindowType type) : QWebView *;
+
+
+
+
+}
+

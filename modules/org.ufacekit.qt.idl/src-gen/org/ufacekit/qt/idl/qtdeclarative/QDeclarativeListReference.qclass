@@ -1,0 +1,15 @@
+q_class QDeclarativeListReference {
+    public const member q_function append(QObject * object) : bool;
+    public const member q_function at(int index) : QObject *;
+    public const member q_function canAppend() : bool;
+    public const member q_function canAt() : bool;
+    public const member q_function canClear() : bool;
+    public const member q_function canCount() : bool;
+    public const member q_function clear() : bool;
+    public const member q_function count() : int;
+    public const member q_function listElementType() : const QMetaObject *;
+    public const member q_function object() : QObject *;
+
+
+}
+

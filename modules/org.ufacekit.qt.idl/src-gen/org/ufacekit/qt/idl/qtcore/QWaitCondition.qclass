@@ -1,0 +1,9 @@
+q_class QWaitCondition {
+    public member q_function wait(QMutex * mutex, unsigned long time = ULONG_MAX) : bool;
+    public member q_function wait(QReadWriteLock * readWriteLock, unsigned long time = ULONG_MAX) : bool;
+    public member q_function wakeAll() : void;
+    public member q_function wakeOne() : void;
+
+
+}
+

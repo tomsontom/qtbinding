@@ -1,0 +1,7 @@
+q_class QXmlStreamNamespaceDeclaration {
+    public const member q_function namespaceUri() : QStringRef;
+    public const member q_function prefix() : QStringRef;
+
+
+}
+

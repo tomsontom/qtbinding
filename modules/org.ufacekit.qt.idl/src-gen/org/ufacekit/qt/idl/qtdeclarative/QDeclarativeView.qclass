@@ -1,0 +1,34 @@
+q_class QDeclarativeView extends QGraphicsView {
+    q_enumeration ResizeMode {
+        SizeViewToRootObject = 0
+        SizeRootObjectToView = 1
+    }
+
+    q_enumeration Status {
+        Null = 0
+        Ready = 1
+        Loading = 2
+        Error = 3
+    }
+
+
+    q_property ResizeMode resizeMode;
+    q_property QUrl source;
+    q_property const Status status;
+
+    public const member q_function engine() : QDeclarativeEngine *;
+    public const member q_function errors() : QList<QDeclarativeError>;
+    public const member q_function initialSize() : QSize;
+    public const member q_function resizeMode() : ResizeMode;
+    public const member q_function rootContext() : QDeclarativeContext *;
+    public const member q_function rootObject() : QGraphicsObject *;
+    public member q_function setResizeMode(ResizeMode ) : void;
+    public member q_function setSource(const QUrl & url) : void;
+    public const member q_function source() : QUrl;
+    public const member q_function status() : Status;
+
+
+
+
+}
+

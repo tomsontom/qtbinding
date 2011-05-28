@@ -1,0 +1,138 @@
+q_class QByteArray {
+    q_typedef ConstIterator : ___UNKNOWN___;
+
+    q_typedef DataPtr : ___UNKNOWN___;
+
+    q_typedef Iterator : ___UNKNOWN___;
+
+    q_typedef const_iterator : ___UNKNOWN___;
+
+    q_typedef const_reference : ___UNKNOWN___;
+
+    q_typedef iterator : ___UNKNOWN___;
+
+    q_typedef reference : ___UNKNOWN___;
+
+    q_typedef value_type : ___UNKNOWN___;
+
+
+    q_class Data {
+
+    }
+
+
+    public member q_function append(const char * str) : QByteArray &;
+    public member q_function append(const QString & str) : QByteArray &;
+    public member q_function append(const QByteArray & ba) : QByteArray &;
+    public member q_function append(const char * str, int len) : QByteArray &;
+    public member q_function append(char ch) : QByteArray &;
+    public const member q_function capacity() : int;
+    public member q_function chop(int n) : void;
+    public member q_function clear() : void;
+    public const member q_function constData() : const char *;
+    public const member q_function contains(const char * str) : bool;
+    public const member q_function contains(const QByteArray & ba) : bool;
+    public const member q_function contains(char ch) : bool;
+    public const member q_function count(char ch) : int;
+    public const member q_function count(const QByteArray & ba) : int;
+    public const member q_function count() : int;
+    public const member q_function count(const char * str) : int;
+    public const member q_function data() : const char *;
+    public const member q_function endsWith(const QByteArray & ba) : bool;
+    public const member q_function endsWith(const char * str) : bool;
+    public const member q_function endsWith(char ch) : bool;
+    public member q_function fill(char ch, int size = -1) : QByteArray &;
+    public class q_function fromBase64(const QByteArray & base64) : QByteArray;
+    public class q_function fromHex(const QByteArray & hexEncoded) : QByteArray;
+    public class q_function fromPercentEncoding(const QByteArray & input, char percent = '%') : QByteArray;
+    public class q_function fromRawData(const char * data, int size) : QByteArray;
+    public const member q_function indexOf(const QString & str, int from = 0) : int;
+    public const member q_function indexOf(const QByteArray & ba, int from = 0) : int;
+    public const member q_function indexOf(char ch, int from = 0) : int;
+    public const member q_function indexOf(const char * str, int from = 0) : int;
+    public member q_function insert(int i, const char * str, int len) : QByteArray &;
+    public member q_function insert(int i, const QString & str) : QByteArray &;
+    public member q_function insert(int i, const QByteArray & ba) : QByteArray &;
+    public member q_function insert(int i, const char * str) : QByteArray &;
+    public member q_function insert(int i, char ch) : QByteArray &;
+    public const member q_function isEmpty() : bool;
+    public const member q_function isNull() : bool;
+    public const member q_function lastIndexOf(const QString & str, int from = -1) : int;
+    public const member q_function lastIndexOf(const QByteArray & ba, int from = -1) : int;
+    public const member q_function lastIndexOf(char ch, int from = -1) : int;
+    public const member q_function lastIndexOf(const char * str, int from = -1) : int;
+    public const member q_function left(int len) : QByteArray;
+    public const member q_function leftJustified(int width, char fill = ' ', bool truncate = false) : QByteArray;
+    public const member q_function length() : int;
+    public const member q_function mid(int pos, int len = -1) : QByteArray;
+    public class q_function number(int n, int base = 10) : QByteArray;
+    public class q_function number(qulonglong n, int base = 10) : QByteArray;
+    public class q_function number(qlonglong n, int base = 10) : QByteArray;
+    public class q_function number(uint n, int base = 10) : QByteArray;
+    public class q_function number(double n, char f = 'g', int prec = 6) : QByteArray;
+    public member q_function prepend(const char * str) : QByteArray &;
+    public member q_function prepend(const char * str, int len) : QByteArray &;
+    public member q_function prepend(const QByteArray & ba) : QByteArray &;
+    public member q_function push_back(char ch) : void;
+    public member q_function push_back(const QByteArray & other) : void;
+    public member q_function push_back(const char * str) : void;
+    public member q_function push_front(const char * str) : void;
+    public member q_function push_front(char ch) : void;
+    public member q_function push_front(const QByteArray & other) : void;
+    public member q_function remove(int pos, int len) : QByteArray &;
+    public const member q_function repeated(int times) : QByteArray;
+    public member q_function replace(const QByteArray & before, const QByteArray & after) : QByteArray &;
+    public member q_function replace(const QByteArray & before, const char * after) : QByteArray &;
+    public member q_function replace(const char * before, const QByteArray & after) : QByteArray &;
+    public member q_function replace(const char * before, const char * after) : QByteArray &;
+    public member q_function replace(char before, const QByteArray & after) : QByteArray &;
+    public member q_function replace(int pos, int len, const char * after) : QByteArray &;
+    public member q_function replace(char before, char after) : QByteArray &;
+    public member q_function replace(int pos, int len, const char * after, int alen) : QByteArray &;
+    public member q_function replace(char before, const char * after) : QByteArray &;
+    public member q_function replace(int pos, int len, const QByteArray & after) : QByteArray &;
+    public member q_function replace(const char * before, int bsize, const char * after, int asize) : QByteArray &;
+    public member q_function replace(const QString & before, const QByteArray & after) : QByteArray &;
+    public member q_function replace(char before, const QString & after) : QByteArray &;
+    public member q_function replace(const QString & before, const char * after) : QByteArray &;
+    public member q_function reserve(int size) : void;
+    public member q_function resize(int size) : void;
+    public const member q_function right(int len) : QByteArray;
+    public const member q_function rightJustified(int width, char fill = ' ', bool truncate = false) : QByteArray;
+    public member q_function setNum(qlonglong n, int base = 10) : QByteArray &;
+    public member q_function setNum(ushort n, int base = 10) : QByteArray &;
+    public member q_function setNum(int n, int base = 10) : QByteArray &;
+    public member q_function setNum(float n, char f = 'g', int prec = 6) : QByteArray &;
+    public member q_function setNum(uint n, int base = 10) : QByteArray &;
+    public member q_function setNum(double n, char f = 'g', int prec = 6) : QByteArray &;
+    public member q_function setNum(qulonglong n, int base = 10) : QByteArray &;
+    public member q_function setNum(short n, int base = 10) : QByteArray &;
+    public member q_function setRawData(const char * data, uint size) : QByteArray &;
+    public const member q_function simplified() : QByteArray;
+    public const member q_function size() : int;
+    public const member q_function split(char sep) : QList<QByteArray>;
+    public member q_function squeeze() : void;
+    public const member q_function startsWith(char ch) : bool;
+    public const member q_function startsWith(const char * str) : bool;
+    public const member q_function startsWith(const QByteArray & ba) : bool;
+    public const member q_function toBase64() : QByteArray;
+    public const member q_function toDouble(bool * ok = 0) : double;
+    public const member q_function toFloat(bool * ok = 0) : float;
+    public const member q_function toHex() : QByteArray;
+    public const member q_function toInt(bool * ok = 0, int base = 10) : int;
+    public const member q_function toLong(bool * ok = 0, int base = 10) : long;
+    public const member q_function toLongLong(bool * ok = 0, int base = 10) : qlonglong;
+    public const member q_function toLower() : QByteArray;
+    public const member q_function toPercentEncoding(const QByteArray & exclude = QByteArray(), const QByteArray & include = QByteArray(), char percent = '%') : QByteArray;
+    public const member q_function toShort(bool * ok = 0, int base = 10) : short;
+    public const member q_function toUInt(bool * ok = 0, int base = 10) : uint;
+    public const member q_function toULong(bool * ok = 0, int base = 10) : ulong;
+    public const member q_function toULongLong(bool * ok = 0, int base = 10) : qulonglong;
+    public const member q_function toUShort(bool * ok = 0, int base = 10) : ushort;
+    public const member q_function toUpper() : QByteArray;
+    public const member q_function trimmed() : QByteArray;
+    public member q_function truncate(int pos) : void;
+
+
+}
+

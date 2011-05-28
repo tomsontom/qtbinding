@@ -1,0 +1,30 @@
+q_class QHostAddress {
+    q_enumeration SpecialAddress {
+        Null = 0
+        Broadcast = 1
+        LocalHost = 2
+        LocalHostIPv6 = 3
+        Any = 4
+        AnyIPv6 = 5
+    }
+
+
+    public member q_function clear() : void;
+    public const member q_function isInSubnet(const QPair<QHostAddress, int> & subnet) : bool;
+    public const member q_function isNull() : bool;
+    public class q_function parseSubnet(const QString & subnet) : QPair<QHostAddress, int>;
+    public const member q_function protocol() : QAbstractSocket.NetworkLayerProtocol;
+    public const member q_function scopeId() : QString;
+    public member q_function setAddress(const Q_IPV6ADDR & ip6Addr) : void;
+    public member q_function setAddress(quint32 ip4Addr) : void;
+    public member q_function setAddress(quint8 * ip6Addr) : void;
+    public member q_function setAddress(const sockaddr * sockaddr) : void;
+    public member q_function setAddress(const QString & address) : bool;
+    public member q_function setScopeId(const QString & id) : void;
+    public const member q_function toIPv4Address() : quint32;
+    public const member q_function toIPv6Address() : Q_IPV6ADDR;
+    public const member q_function toString() : QString;
+
+
+}
+

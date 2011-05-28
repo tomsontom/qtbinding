@@ -1,0 +1,9 @@
+q_class QWebHistoryInterface extends QObject {
+    public purevirtual member q_function addHistoryEntry(const QString & url) : void;
+    public class q_function defaultInterface() : QWebHistoryInterface *;
+    public const purevirtual member q_function historyContains(const QString & url) : bool;
+    public class q_function setDefaultInterface(QWebHistoryInterface * defaultInterface) : void;
+
+
+}
+

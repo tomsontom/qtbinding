@@ -1,0 +1,52 @@
+q_class QMetaObject {
+    q_enumeration Call {
+        InvokeMetaMethod = 0
+        ReadProperty = 1
+        WriteProperty = 2
+        ResetProperty = 3
+        QueryPropertyDesignable = 4
+        QueryPropertyScriptable = 5
+        QueryPropertyStored = 6
+        QueryPropertyEditable = 7
+        QueryPropertyUser = 8
+        CreateInstance = 9
+    }
+
+
+    public class q_function checkConnectArgs(const char * signal, const char * method) : bool;
+    public const member q_function classInfo(int index) : QMetaClassInfo;
+    public const member q_function classInfoCount() : int;
+    public const member q_function classInfoOffset() : int;
+    public const member q_function className() : const char *;
+    public class q_function connectSlotsByName(QObject * object) : void;
+    public const member q_function constructor(int index) : QMetaMethod;
+    public const member q_function constructorCount() : int;
+    public const member q_function enumerator(int index) : QMetaEnum;
+    public const member q_function enumeratorCount() : int;
+    public const member q_function enumeratorOffset() : int;
+    public const member q_function indexOfClassInfo(const char * name) : int;
+    public const member q_function indexOfConstructor(const char * constructor) : int;
+    public const member q_function indexOfEnumerator(const char * name) : int;
+    public const member q_function indexOfMethod(const char * method) : int;
+    public const member q_function indexOfProperty(const char * name) : int;
+    public const member q_function indexOfSignal(const char * signal) : int;
+    public const member q_function indexOfSlot(const char * slot) : int;
+    public class q_function invokeMethod(QObject * obj, const char * member, Qt.ConnectionType type, QGenericArgument val0 = QGenericArgument( 0 ), QGenericArgument val1 = QGenericArgument(), QGenericArgument val2 = QGenericArgument(), QGenericArgument val3 = QGenericArgument(), QGenericArgument val4 = QGenericArgument(), QGenericArgument val5 = QGenericArgument(), QGenericArgument val6 = QGenericArgument(), QGenericArgument val7 = QGenericArgument(), QGenericArgument val8 = QGenericArgument(), QGenericArgument val9 = QGenericArgument()) : bool;
+    public class q_function invokeMethod(QObject * obj, const char * member, QGenericArgument val0 = QGenericArgument( 0 ), QGenericArgument val1 = QGenericArgument(), QGenericArgument val2 = QGenericArgument(), QGenericArgument val3 = QGenericArgument(), QGenericArgument val4 = QGenericArgument(), QGenericArgument val5 = QGenericArgument(), QGenericArgument val6 = QGenericArgument(), QGenericArgument val7 = QGenericArgument(), QGenericArgument val8 = QGenericArgument(), QGenericArgument val9 = QGenericArgument()) : bool;
+    public class q_function invokeMethod(QObject * obj, const char * member, QGenericReturnArgument ret, QGenericArgument val0 = QGenericArgument( 0 ), QGenericArgument val1 = QGenericArgument(), QGenericArgument val2 = QGenericArgument(), QGenericArgument val3 = QGenericArgument(), QGenericArgument val4 = QGenericArgument(), QGenericArgument val5 = QGenericArgument(), QGenericArgument val6 = QGenericArgument(), QGenericArgument val7 = QGenericArgument(), QGenericArgument val8 = QGenericArgument(), QGenericArgument val9 = QGenericArgument()) : bool;
+    public class q_function invokeMethod(QObject * obj, const char * member, Qt.ConnectionType type, QGenericReturnArgument ret, QGenericArgument val0 = QGenericArgument( 0 ), QGenericArgument val1 = QGenericArgument(), QGenericArgument val2 = QGenericArgument(), QGenericArgument val3 = QGenericArgument(), QGenericArgument val4 = QGenericArgument(), QGenericArgument val5 = QGenericArgument(), QGenericArgument val6 = QGenericArgument(), QGenericArgument val7 = QGenericArgument(), QGenericArgument val8 = QGenericArgument(), QGenericArgument val9 = QGenericArgument()) : bool;
+    public const member q_function method(int index) : QMetaMethod;
+    public const member q_function methodCount() : int;
+    public const member q_function methodOffset() : int;
+    public const member q_function newInstance(QGenericArgument val0 = QGenericArgument( 0 ), QGenericArgument val1 = QGenericArgument(), QGenericArgument val2 = QGenericArgument(), QGenericArgument val3 = QGenericArgument(), QGenericArgument val4 = QGenericArgument(), QGenericArgument val5 = QGenericArgument(), QGenericArgument val6 = QGenericArgument(), QGenericArgument val7 = QGenericArgument(), QGenericArgument val8 = QGenericArgument(), QGenericArgument val9 = QGenericArgument()) : QObject *;
+    public class q_function normalizedSignature(const char * method) : QByteArray;
+    public class q_function normalizedType(const char * type) : QByteArray;
+    public const member q_function property(int index) : QMetaProperty;
+    public const member q_function propertyCount() : int;
+    public const member q_function propertyOffset() : int;
+    public const member q_function superClass() : const QMetaObject *;
+    public const member q_function userProperty() : QMetaProperty;
+
+
+}
+

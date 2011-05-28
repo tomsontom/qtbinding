@@ -1,0 +1,72 @@
+q_class QCalendarWidget extends QWidget {
+    q_enumeration HorizontalHeaderFormat {
+        NoHorizontalHeader = 0
+        SingleLetterDayNames = 1
+        ShortDayNames = 2
+        LongDayNames = 3
+    }
+
+    q_enumeration SelectionMode {
+        NoSelection = 0
+        SingleSelection = 1
+    }
+
+    q_enumeration VerticalHeaderFormat {
+        NoVerticalHeader = 0
+        ISOWeekNumbers = 1
+    }
+
+
+    q_property int dateEditAcceptDelay;
+    q_property bool dateEditEnabled;
+    q_property Qt.DayOfWeek firstDayOfWeek;
+    q_property bool gridVisible;
+    q_property bool headerVisible;
+    q_property HorizontalHeaderFormat horizontalHeaderFormat;
+    q_property QDate maximumDate;
+    q_property QDate minimumDate;
+    q_property bool navigationBarVisible;
+    q_property QDate selectedDate;
+    q_property SelectionMode selectionMode;
+    q_property VerticalHeaderFormat verticalHeaderFormat;
+
+    public const member q_function dateEditAcceptDelay() : int;
+    public const member q_function dateTextFormat() : QMap<QDate, QTextCharFormat>;
+    public const member q_function dateTextFormat(const QDate & date) : QTextCharFormat;
+    public const member q_function firstDayOfWeek() : Qt.DayOfWeek;
+    public const member q_function headerTextFormat() : QTextCharFormat;
+    public const member q_function horizontalHeaderFormat() : HorizontalHeaderFormat;
+    public const member q_function isDateEditEnabled() : bool;
+    public const member q_function isGridVisible() : bool;
+    public const member q_function isHeaderVisible() : bool;
+    public const member q_function isNavigationBarVisible() : bool;
+    public const member q_function maximumDate() : QDate;
+    public const member q_function minimumDate() : QDate;
+    public const member q_function monthShown() : int;
+    public const member q_function selectedDate() : QDate;
+    public const member q_function selectionMode() : SelectionMode;
+    public member q_function setDateEditAcceptDelay(int delay) : void;
+    public member q_function setDateEditEnabled(bool enable) : void;
+    public member q_function setDateTextFormat(const QDate & date, const QTextCharFormat & format) : void;
+    public member q_function setFirstDayOfWeek(Qt.DayOfWeek dayOfWeek) : void;
+    public member q_function setHeaderTextFormat(const QTextCharFormat & format) : void;
+    public member q_function setHeaderVisible(bool visible) : void;
+    public member q_function setHorizontalHeaderFormat(HorizontalHeaderFormat format) : void;
+    public member q_function setMaximumDate(const QDate & date) : void;
+    public member q_function setMinimumDate(const QDate & date) : void;
+    public member q_function setSelectionMode(SelectionMode mode) : void;
+    public member q_function setVerticalHeaderFormat(VerticalHeaderFormat format) : void;
+    public member q_function setWeekdayTextFormat(Qt.DayOfWeek dayOfWeek, const QTextCharFormat & format) : void;
+    public const member q_function verticalHeaderFormat() : VerticalHeaderFormat;
+    public const member q_function weekdayTextFormat(Qt.DayOfWeek dayOfWeek) : QTextCharFormat;
+    public const member q_function yearShown() : int;
+
+    protected const virtual member q_function paintCell(QPainter * painter, const QRect & rect, const QDate & date) : void;
+    protected member q_function updateCell(const QDate & date) : void;
+    protected member q_function updateCells() : void;
+
+
+
+
+}
+

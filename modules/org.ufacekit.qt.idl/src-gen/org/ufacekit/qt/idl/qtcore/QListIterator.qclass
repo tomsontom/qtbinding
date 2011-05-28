@@ -1,0 +1,15 @@
+q_class QListIterator {
+    q_typedef const_iterator : ___UNKNOWN___;
+
+
+    public member q_function findNext(const T & value) : bool;
+    public member q_function findPrevious(const T & value) : bool;
+    public const member q_function hasNext() : bool;
+    public const member q_function hasPrevious() : bool;
+    public member q_function previous() : const T &;
+    public member q_function toBack() : void;
+    public member q_function toFront() : void;
+
+
+}
+

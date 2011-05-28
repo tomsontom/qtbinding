@@ -1,0 +1,24 @@
+q_class QSqlQueryModel extends QAbstractTableModel {
+    public const virtual member q_function canFetchMore(const QModelIndex & parent = QModelIndex()) : bool;
+    public virtual member q_function clear() : void;
+    public const virtual member q_function data(const QModelIndex & item, int role = Qt.DisplayRole) : QVariant;
+    public virtual member q_function fetchMore(const QModelIndex & parent = QModelIndex()) : void;
+    public const virtual member q_function headerData(int section, Qt.Orientation orientation, int role = Qt.DisplayRole) : QVariant;
+    public virtual member q_function insertColumns(int column, int count, const QModelIndex & parent = QModelIndex()) : bool;
+    public const member q_function lastError() : QSqlError;
+    public const member q_function query() : QSqlQuery;
+    public const member q_function record(int row) : QSqlRecord;
+    public const member q_function record() : QSqlRecord;
+    public virtual member q_function removeColumns(int column, int count, const QModelIndex & parent = QModelIndex()) : bool;
+    public const virtual member q_function rowCount(const QModelIndex & parent = QModelIndex()) : int;
+    public virtual member q_function setHeaderData(int section, Qt.Orientation orientation, const QVariant & value, int role = Qt.EditRole) : bool;
+    public member q_function setQuery(const QSqlQuery & query) : void;
+    public member q_function setQuery(const QString & query, const QSqlDatabase & db = QSqlDatabase()) : void;
+
+    protected const member q_function indexInQuery(const QModelIndex & item) : QModelIndex;
+    protected virtual member q_function queryChange() : void;
+    protected member q_function setLastError(const QSqlError & error) : void;
+
+
+}
+

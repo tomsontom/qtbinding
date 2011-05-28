@@ -1,0 +1,31 @@
+q_class QToolButton extends QAbstractButton {
+    q_enumeration ToolButtonPopupMode {
+        DelayedPopup = 0
+        MenuButtonPopup = 1
+        InstantPopup = 2
+    }
+
+
+    q_property Qt.ArrowType arrowType;
+    q_property bool autoRaise;
+    q_property ToolButtonPopupMode popupMode;
+    q_property Qt.ToolButtonStyle toolButtonStyle;
+
+    public const member q_function arrowType() : Qt.ArrowType;
+    public const member q_function autoRaise() : bool;
+    public const member q_function defaultAction() : QAction *;
+    public const member q_function menu() : QMenu *;
+    public const member q_function popupMode() : ToolButtonPopupMode;
+    public member q_function setArrowType(Qt.ArrowType type) : void;
+    public member q_function setAutoRaise(bool enable) : void;
+    public member q_function setPopupMode(ToolButtonPopupMode mode) : void;
+    public const member q_function toolButtonStyle() : Qt.ToolButtonStyle;
+
+    protected const member q_function initStyleOption(QStyleOptionToolButton * option) : void;
+    protected virtual member q_function paintEvent(QPaintEvent * event) : void;
+
+
+
+
+}
+

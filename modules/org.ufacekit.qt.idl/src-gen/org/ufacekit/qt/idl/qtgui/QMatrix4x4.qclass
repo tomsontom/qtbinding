@@ -1,0 +1,47 @@
+q_class QMatrix4x4 {
+    public const member q_function column(int index) : QVector4D;
+    public const member q_function constData() : const qreal *;
+    public const member q_function copyDataTo(qreal * values) : void;
+    public const member q_function data() : const qreal *;
+    public member q_function data() : qreal *;
+    public const member q_function determinant() : qreal;
+    public member q_function fill(qreal value) : void;
+    public member q_function flipCoordinates() : void;
+    public member q_function frustum(qreal left, qreal right, qreal bottom, qreal top, qreal nearPlane, qreal farPlane) : void;
+    public const member q_function inverted(bool * invertible = 0) : QMatrix4x4;
+    public const member q_function isIdentity() : bool;
+    public member q_function lookAt(const QVector3D & eye, const QVector3D & center, const QVector3D & up) : void;
+    public const member q_function map(const QVector4D & point) : QVector4D;
+    public const member q_function map(const QVector3D & point) : QVector3D;
+    public const member q_function map(const QPointF & point) : QPointF;
+    public const member q_function map(const QPoint & point) : QPoint;
+    public const member q_function mapRect(const QRectF & rect) : QRectF;
+    public const member q_function mapVector(const QVector3D & vector) : QVector3D;
+    public const member q_function normalMatrix() : QMatrix3x3;
+    public member q_function optimize() : void;
+    public member q_function ortho(const QRectF & rect) : void;
+    public member q_function ortho(qreal left, qreal right, qreal bottom, qreal top, qreal nearPlane, qreal farPlane) : void;
+    public member q_function perspective(qreal angle, qreal aspect, qreal nearPlane, qreal farPlane) : void;
+    public member q_function rotate(qreal angle, qreal x, qreal y, qreal z = 0.0f) : void;
+    public member q_function rotate(qreal angle, const QVector3D & vector) : void;
+    public member q_function rotate(const QQuaternion & quaternion) : void;
+    public const member q_function row(int index) : QVector4D;
+    public member q_function scale(qreal x, qreal y, qreal z) : void;
+    public member q_function scale(qreal factor) : void;
+    public member q_function scale(qreal x, qreal y) : void;
+    public member q_function scale(const QVector3D & vector) : void;
+    public member q_function setColumn(int index, const QVector4D & value) : void;
+    public member q_function setRow(int index, const QVector4D & value) : void;
+    public member q_function setToIdentity() : void;
+    public const member q_function toAffine() : QMatrix;
+    public const member q_function toGenericMatrix() : QGenericMatrix<N, M, qreal>;
+    public const member q_function toTransform() : QTransform;
+    public const member q_function toTransform(qreal distanceToPlane) : QTransform;
+    public member q_function translate(qreal x, qreal y, qreal z) : void;
+    public member q_function translate(qreal x, qreal y) : void;
+    public member q_function translate(const QVector3D & vector) : void;
+    public const member q_function transposed() : QMatrix4x4;
+
+
+}
+

@@ -1,0 +1,102 @@
+q_class QDir {
+    q_enumeration Filter {
+        Dirs = 1
+        Files = 2
+        Drives = 4
+        NoSymLinks = 8
+        AllEntries = Dirs  |  Files  |  Drives
+        TypeMask = 15
+        Readable = 16
+        Writable = 32
+        Executable = 64
+        PermissionMask = 112
+        Modified = 128
+        Hidden = 256
+        System = 512
+        AccessMask = 1008
+        AllDirs = 1024
+        CaseSensitive = 2048
+        NoDotAndDotDot = 4096
+        NoDot = 8192
+        NoDotDot = 16384
+        NoFilter = -1
+    }
+
+    q_flags Filters : Filter;
+
+    q_enumeration SortFlag {
+        Name = 0
+        Time = 1
+        Size = 2
+        Unsorted = 3
+        SortByMask = 3
+        DirsFirst = 4
+        Reversed = 8
+        IgnoreCase = 16
+        DirsLast = 32
+        LocaleAware = 64
+        Type = 128
+        NoSort = -1
+    }
+
+    q_flags SortFlags : SortFlag;
+
+
+    public const member q_function absoluteFilePath(const QString & fileName) : QString;
+    public const member q_function absolutePath() : QString;
+    public class q_function addResourceSearchPath(const QString & path) : void;
+    public class q_function addSearchPath(const QString & prefix, const QString & path) : void;
+    public const member q_function canonicalPath() : QString;
+    public member q_function cd(const QString & dirName) : bool;
+    public member q_function cdUp() : bool;
+    public class q_function cleanPath(const QString & path) : QString; 
+    public const member q_function count() : uint;
+    public class q_function current() : QDir;
+    public const member q_function dirName() : QString;
+    public class q_function drives() : QFileInfoList;
+    public const member q_function entryInfoList(const QStringList & nameFilters, Filters filters = NoFilter, SortFlags sort = NoSort) : QFileInfoList;
+    public const member q_function entryInfoList(Filters filters = NoFilter, SortFlags sort = NoSort) : QFileInfoList;
+    public const member q_function entryList(const QStringList & nameFilters, Filters filters = NoFilter, SortFlags sort = NoSort) : QStringList;
+    public const member q_function entryList(Filters filters = NoFilter, SortFlags sort = NoSort) : QStringList;
+    public const member q_function exists(const QString & name) : bool;
+    public const member q_function exists() : bool;
+    public const member q_function filePath(const QString & fileName) : QString;
+    public const member q_function filter() : Filters;
+    public class q_function fromNativeSeparators(const QString & pathName) : QString;
+    public class q_function home() : QDir;
+    public class q_function homePath() : QString;
+    public const member q_function isAbsolute() : bool;
+    public class q_function isAbsolutePath(const QString & path) : bool;
+    public const member q_function isReadable() : bool;
+    public const member q_function isRelative() : bool;
+    public class q_function isRelativePath(const QString & path) : bool;
+    public const member q_function isRoot() : bool;
+    public member q_function makeAbsolute() : bool;
+    public class q_function match(const QString & filter, const QString & fileName) : bool;
+    public const member q_function mkdir(const QString & dirName) : bool;
+    public const member q_function mkpath(const QString & dirPath) : bool;
+    public const member q_function nameFilters() : QStringList;
+    public const member q_function path() : QString;
+    public const member q_function refresh() : void;
+    public const member q_function relativeFilePath(const QString & fileName) : QString;
+    public member q_function remove(const QString & fileName) : bool;
+    public member q_function rename(const QString & oldName, const QString & newName) : bool;
+    public const member q_function rmdir(const QString & dirName) : bool;
+    public const member q_function rmpath(const QString & dirPath) : bool;
+    public class q_function root() : QDir;
+    public class q_function rootPath() : QString;
+    public class q_function searchPaths(const QString & prefix) : QStringList;
+    public class q_function separator() : QChar;
+    public class q_function setCurrent(const QString & path) : bool;
+    public member q_function setFilter(Filters filters) : void;
+    public member q_function setNameFilters(const QStringList & nameFilters) : void;
+    public member q_function setPath(const QString & path) : void;
+    public class q_function setSearchPaths(const QString & prefix, const QStringList & searchPaths) : void;
+    public member q_function setSorting(SortFlags sort) : void;
+    public const member q_function sorting() : SortFlags;
+    public class q_function temp() : QDir;
+    public class q_function tempPath() : QString;
+
+
+}
+

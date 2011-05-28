@@ -1,0 +1,34 @@
+q_class QGridLayout extends QLayout {
+    q_property int horizontalSpacing;
+    q_property int verticalSpacing;
+
+    public member q_function addItem(QLayoutItem * item, int row, int column, int rowSpan = 1, int columnSpan = 1, Qt.Alignment alignment = 0) : void;
+    public member q_function addLayout(QLayout * layout, int row, int column, Qt.Alignment alignment = 0) : void;
+    public member q_function addLayout(QLayout * layout, int row, int column, int rowSpan, int columnSpan, Qt.Alignment alignment = 0) : void;
+    public member q_function addWidget(QWidget * widget, int fromRow, int fromColumn, int rowSpan, int columnSpan, Qt.Alignment alignment = 0) : void;
+    public member q_function addWidget(QWidget * widget, int row, int column, Qt.Alignment alignment = 0) : void;
+    public const member q_function cellRect(int row, int column) : QRect;
+    public const member q_function columnCount() : int;
+    public const member q_function columnMinimumWidth(int column) : int;
+    public const member q_function columnStretch(int column) : int;
+    public member q_function getItemPosition(int index, int * row, int * column, int * rowSpan, int * columnSpan) : void;
+    public const member q_function horizontalSpacing() : int;
+    public const member q_function itemAtPosition(int row, int column) : QLayoutItem *;
+    public const member q_function originCorner() : Qt.Corner;
+    public const member q_function rowCount() : int;
+    public const member q_function rowMinimumHeight(int row) : int;
+    public const member q_function rowStretch(int row) : int;
+    public member q_function setColumnMinimumWidth(int column, int minSize) : void;
+    public member q_function setColumnStretch(int column, int stretch) : void;
+    public member q_function setHorizontalSpacing(int spacing) : void;
+    public member q_function setOriginCorner(Qt.Corner corner) : void;
+    public member q_function setRowMinimumHeight(int row, int minSize) : void;
+    public member q_function setRowStretch(int row, int stretch) : void;
+    public member q_function setSpacing(int spacing) : void;
+    public member q_function setVerticalSpacing(int spacing) : void;
+    public const member q_function spacing() : int;
+    public const member q_function verticalSpacing() : int;
+
+
+}
+

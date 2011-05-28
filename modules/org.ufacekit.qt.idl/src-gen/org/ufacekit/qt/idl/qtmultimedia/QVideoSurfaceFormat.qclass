@@ -1,0 +1,43 @@
+q_class QVideoSurfaceFormat {
+    q_enumeration Direction {
+        TopToBottom = 0
+        BottomToTop = 1
+    }
+
+    q_enumeration YCbCrColorSpace {
+        YCbCr_Undefined = 0
+        YCbCr_BT601 = 1
+        YCbCr_BT709 = 2
+        YCbCr_xvYCC601 = 3
+        YCbCr_xvYCC709 = 4
+        YCbCr_JPEG = 5
+    }
+
+
+    public const member q_function frameHeight() : int;
+    public const member q_function frameRate() : qreal;
+    public const member q_function frameSize() : QSize;
+    public const member q_function frameWidth() : int;
+    public const member q_function handleType() : QAbstractVideoBuffer.HandleType;
+    public const member q_function isValid() : bool;
+    public const member q_function pixelAspectRatio() : QSize;
+    public const member q_function pixelFormat() : QVideoFrame.PixelFormat;
+    public const member q_function property(const char * name) : QVariant;
+    public const member q_function propertyNames() : QList<QByteArray>;
+    public const member q_function scanLineDirection() : Direction;
+    public member q_function setFrameRate(qreal rate) : void;
+    public member q_function setFrameSize(const QSize & size) : void;
+    public member q_function setFrameSize(int width, int height) : void;
+    public member q_function setPixelAspectRatio(const QSize & ratio) : void;
+    public member q_function setPixelAspectRatio(int horizontal, int vertical) : void;
+    public member q_function setProperty(const char * name, const QVariant & value) : void;
+    public member q_function setScanLineDirection(Direction direction) : void;
+    public member q_function setViewport(const QRect & viewport) : void;
+    public member q_function setYCbCrColorSpace(YCbCrColorSpace space) : void;
+    public const member q_function sizeHint() : QSize;
+    public const member q_function viewport() : QRect;
+    public const member q_function yCbCrColorSpace() : YCbCrColorSpace;
+
+
+}
+

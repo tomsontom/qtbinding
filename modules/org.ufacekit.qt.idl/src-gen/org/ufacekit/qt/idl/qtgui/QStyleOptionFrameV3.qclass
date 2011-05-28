@@ -1,0 +1,9 @@
+q_class QStyleOptionFrameV3 extends QStyleOptionFrameV2 {
+    q_enumeration StyleOptionVersion {
+        Version = 3
+    }
+
+
+
+}
+

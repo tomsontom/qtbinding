@@ -1,0 +1,14 @@
+q_class QWSPointerCalibrationData {
+    q_enumeration Location {
+        TopLeft = 0
+        BottomLeft = 1
+        BottomRight = 2
+        TopRight = 3
+        Center = 4
+        LastLocation = Center
+    }
+
+
+
+}
+

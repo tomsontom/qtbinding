@@ -1,0 +1,9 @@
+q_class QDragMoveEvent extends QDropEvent {
+    public member q_function accept() : void;
+    public member q_function accept(const QRect & rectangle) : void;
+    public member q_function ignore(const QRect & rectangle) : void;
+    public member q_function ignore() : void;
+
+
+}
+

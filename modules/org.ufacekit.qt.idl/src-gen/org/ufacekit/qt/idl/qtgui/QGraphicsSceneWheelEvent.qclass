@@ -1,0 +1,12 @@
+q_class QGraphicsSceneWheelEvent extends QGraphicsSceneEvent {
+    public const member q_function buttons() : Qt.MouseButtons;
+    public const member q_function delta() : int;
+    public const member q_function modifiers() : Qt.KeyboardModifiers;
+    public const member q_function orientation() : Qt.Orientation;
+    public const member q_function pos() : QPointF;
+    public const member q_function scenePos() : QPointF;
+    public const member q_function screenPos() : QPoint;
+
+
+}
+

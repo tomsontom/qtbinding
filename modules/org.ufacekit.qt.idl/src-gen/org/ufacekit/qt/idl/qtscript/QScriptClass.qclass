@@ -1,0 +1,28 @@
+q_class QScriptClass {
+    q_enumeration Extension {
+        Callable = 0
+        HasInstance = 1
+    }
+
+    q_enumeration QueryFlag {
+        HandlesReadAccess = 1
+        HandlesWriteAccess = 2
+    }
+
+    q_flags QueryFlags : QueryFlag;
+
+
+    public const member q_function engine() : QScriptEngine *;
+    public virtual member q_function extension(Extension extension, const QVariant & argument = QVariant()) : QVariant;
+    public const virtual member q_function name() : QString;
+    public virtual member q_function newIterator(const QScriptValue & object) : QScriptClassPropertyIterator *;
+    public virtual member q_function property(const QScriptValue & object, const QScriptString & name, uint id) : QScriptValue;
+    public virtual member q_function propertyFlags(const QScriptValue & object, const QScriptString & name, uint id) : QScriptValue.PropertyFlags;
+    public const virtual member q_function prototype() : QScriptValue;
+    public virtual member q_function queryProperty(const QScriptValue & object, const QScriptString & name, QueryFlags flags, uint * id) : QueryFlags;
+    public virtual member q_function setProperty(QScriptValue & object, const QScriptString & name, uint id, const QScriptValue & value) : void;
+    public const virtual member q_function supportsExtension(Extension extension) : bool;
+
+
+}
+

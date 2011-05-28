@@ -1,0 +1,11 @@
+q_class QDeclarativeScriptString {
+    public const member q_function context() : QDeclarativeContext *;
+    public const member q_function scopeObject() : QObject *;
+    public const member q_function script() : QString;
+    public member q_function setContext(QDeclarativeContext * context) : void;
+    public member q_function setScopeObject(QObject * object) : void;
+    public member q_function setScript(const QString & script) : void;
+
+
+}
+

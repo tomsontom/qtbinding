@@ -1,0 +1,72 @@
+q_class QWSServer extends QObject {
+    q_enumeration IMMouse {
+        MousePress = 0
+        MouseRelease = 1
+        MouseMove = 2
+        MouseOutside = 3
+    }
+
+    q_enumeration ServerFlags {
+        DisableKeyboard = 1
+        DisableMouse = 2
+    }
+
+    q_enumeration WindowEvent {
+        Create = 1
+        Destroy = 2
+        Hide = 4
+        Show = 8
+        Raise = 16
+        Lower = 32
+        Geometry = 64
+        Active = 128
+        Name = 256
+    }
+
+
+    q_class KeyboardFilter {
+        public purevirtual member q_function filter(int unicode, int keycode, int modifiers, bool isPress, bool autoRepeat) : bool;
+
+
+    }
+
+
+    public class q_function addKeyboardFilter(KeyboardFilter * filter) : void;
+    public const member q_function backgroundBrush() : const QBrush &;
+    public member q_function clientWindows() : const QList<QWSWindow *> &;
+    public member q_function closeKeyboard() : void;
+    public member q_function closeMouse() : void;
+    public member q_function enablePainting(bool enable) : void;
+    public class q_function instance() : QWSServer *;
+    public class q_function isCursorVisible() : bool;
+    public class q_function keyboardHandler() : QWSKeyboardHandler *;
+    public class q_function mouseHandler() : QWSMouseHandler *;
+    public class q_function mouseHandlers() : const QList<QWSMouseHandler *> &;
+    public member q_function openMouse() : void;
+    public class q_function processKeyEvent(int unicode, int keycode, Qt.KeyboardModifiers modifiers, bool isPress, bool autoRepeat) : void;
+    public member q_function refresh(QRegion & region) : void;
+    public member q_function refresh() : void;
+    public class q_function removeKeyboardFilter() : void;
+    public member q_function resumeMouse() : void;
+    public class q_function screenSaverActivate(bool activate) : void;
+    public class q_function screenSaverActive() : bool;
+    public member q_function sendIMEvent(const QInputMethodEvent * event) : void;
+    public member q_function sendIMQuery(int property) : void;
+    public class q_function sendKeyEvent(int unicode, int keycode, Qt.KeyboardModifiers modifiers, bool isPress, bool autoRepeat) : void;
+    public class q_function setBackground(const QBrush & brush) : void;
+    public class q_function setCursorVisible(bool visible) : void;
+    public class q_function setDefaultKeyboard(const char * keyboardDriver) : void;
+    public class q_function setKeyboardHandler(QWSKeyboardHandler * driver) : void;
+    public class q_function setMaxWindowRect(const QRect & rectangle) : void;
+    public class q_function setMouseHandler(QWSMouseHandler * driver) : void;
+    public class q_function setScreenSaver(QWSScreenSaver * screenSaver) : void;
+    public class q_function setScreenSaverBlockLevel(int eventBlockLevel) : void;
+    public class q_function setScreenSaverInterval(int milliseconds) : void;
+    public class q_function setScreenSaverIntervals(int * intervals) : void;
+    public member q_function suspendMouse() : void;
+    public member q_function windowAt(const QPoint & position) : QWSWindow *;
+
+
+
+}
+

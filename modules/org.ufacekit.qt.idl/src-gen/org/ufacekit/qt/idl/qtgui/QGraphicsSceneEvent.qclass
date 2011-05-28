@@ -1,0 +1,6 @@
+q_class QGraphicsSceneEvent extends QEvent {
+    public const member q_function widget() : QWidget *;
+
+
+}
+

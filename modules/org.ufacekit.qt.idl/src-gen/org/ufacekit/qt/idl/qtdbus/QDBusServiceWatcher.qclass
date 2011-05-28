@@ -1,0 +1,26 @@
+q_class QDBusServiceWatcher extends QObject {
+    q_enumeration WatchModeFlag {
+        WatchForRegistration = 1
+        WatchForUnregistration = 2
+        WatchForOwnerChange = 3
+    }
+
+    q_flags WatchMode : WatchModeFlag;
+
+
+    q_property WatchMode watchMode;
+    q_property QStringList watchedServices;
+
+    public member q_function addWatchedService(const QString & newService) : void;
+    public const member q_function connection() : QDBusConnection;
+    public member q_function removeWatchedService(const QString & service) : bool;
+    public member q_function setConnection(const QDBusConnection & connection) : void;
+    public member q_function setWatchMode(WatchMode mode) : void;
+    public member q_function setWatchedServices(const QStringList & services) : void;
+    public const member q_function watchMode() : WatchMode;
+    public const member q_function watchedServices() : QStringList;
+
+
+
+}
+

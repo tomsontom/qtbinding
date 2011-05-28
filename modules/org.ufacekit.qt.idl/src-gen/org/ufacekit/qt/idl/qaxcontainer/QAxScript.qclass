@@ -1,0 +1,18 @@
+q_class QAxScript extends QObject {
+    q_enumeration FunctionFlags {
+        FunctionNames = 0
+        FunctionSignatures = 1
+    }
+
+
+    public member q_function call(const QString & function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant()) : QVariant;
+    public member q_function call(const QString & function, QList<QVariant> & arguments) : QVariant;
+    public const member q_function functions(FunctionFlags flags = FunctionNames) : QStringList;
+    public const member q_function scriptCode() : QString;
+    public const member q_function scriptEngine() : QAxScriptEngine *;
+    public const member q_function scriptName() : QString;
+
+
+
+}
+

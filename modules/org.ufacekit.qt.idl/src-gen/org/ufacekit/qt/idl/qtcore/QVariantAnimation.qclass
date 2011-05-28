@@ -1,0 +1,35 @@
+q_class QVariantAnimation extends QAbstractAnimation {
+    q_typedef Interpolator : ___UNKNOWN___;
+
+    q_typedef KeyValue : ___UNKNOWN___;
+
+    q_typedef KeyValues : ___UNKNOWN___;
+
+
+    q_property const QVariant currentValue;
+    q_property int duration;
+    q_property QEasingCurve easingCurve;
+    q_property QVariant endValue;
+    q_property QVariant startValue;
+
+    public const member q_function currentValue() : QVariant;
+    public const virtual member q_function duration() : int;
+    public const member q_function easingCurve() : QEasingCurve;
+    public const member q_function endValue() : QVariant;
+    public const member q_function keyValueAt(qreal step) : QVariant;
+    public const member q_function keyValues() : KeyValues;
+    public member q_function setDuration(int msecs) : void;
+    public member q_function setEasingCurve(const QEasingCurve & easing) : void;
+    public member q_function setEndValue(const QVariant & value) : void;
+    public member q_function setKeyValueAt(qreal step, const QVariant & value) : void;
+    public member q_function setKeyValues(const KeyValues & keyValues) : void;
+    public member q_function setStartValue(const QVariant & value) : void;
+    public const member q_function startValue() : QVariant;
+
+    protected const virtual member q_function interpolated(const QVariant & from, const QVariant & to, qreal progress) : QVariant;
+    protected purevirtual member q_function updateCurrentValue(const QVariant & value) : void;
+
+
+
+}
+

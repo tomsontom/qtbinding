@@ -1,0 +1,25 @@
+q_class QHttpHeader {
+    public member q_function addValue(const QString & key, const QString & value) : void;
+    public const member q_function allValues(const QString & key) : QStringList;
+    public const member q_function contentLength() : uint;
+    public const member q_function contentType() : QString;
+    public const member q_function hasContentLength() : bool;
+    public const member q_function hasContentType() : bool;
+    public const member q_function hasKey(const QString & key) : bool;
+    public const member q_function isValid() : bool;
+    public const member q_function keys() : QStringList;
+    public const purevirtual member q_function majorVersion() : int;
+    public const purevirtual member q_function minorVersion() : int;
+    public member q_function removeAllValues(const QString & key) : void;
+    public member q_function removeValue(const QString & key) : void;
+    public member q_function setContentLength(int len) : void;
+    public member q_function setContentType(const QString & type) : void;
+    public member q_function setValue(const QString & key, const QString & value) : void;
+    public member q_function setValues(const QList<QPair<QString, QString> > & values) : void;
+    public const virtual member q_function toString() : QString;
+    public const member q_function value(const QString & key) : QString;
+    public const member q_function values() : QList<QPair<QString, QString> >;
+
+
+}
+

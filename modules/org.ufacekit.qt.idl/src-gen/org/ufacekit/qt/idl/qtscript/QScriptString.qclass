@@ -1,0 +1,8 @@
+q_class QScriptString {
+    public const member q_function isValid() : bool;
+    public const member q_function toArrayIndex(bool * ok = 0) : quint32;
+    public const member q_function toString() : QString;
+
+
+}
+

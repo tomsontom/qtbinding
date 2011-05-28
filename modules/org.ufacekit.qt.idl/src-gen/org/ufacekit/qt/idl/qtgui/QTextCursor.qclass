@@ -1,0 +1,110 @@
+q_class QTextCursor {
+    q_enumeration MoveMode {
+        MoveAnchor = 0
+        KeepAnchor = 1
+    }
+
+    q_enumeration MoveOperation {
+        NoMove = 0
+        Start = 1
+        Up = 2
+        StartOfLine = 3
+        StartOfBlock = 4
+        StartOfWord = 5
+        PreviousBlock = 6
+        PreviousCharacter = 7
+        PreviousWord = 8
+        Left = 9
+        WordLeft = 10
+        End = 11
+        Down = 12
+        EndOfLine = 13
+        EndOfWord = 14
+        EndOfBlock = 15
+        NextBlock = 16
+        NextCharacter = 17
+        NextWord = 18
+        Right = 19
+        WordRight = 20
+        NextCell = 21
+        PreviousCell = 22
+        NextRow = 23
+        PreviousRow = 24
+    }
+
+    q_enumeration SelectionType {
+        WordUnderCursor = 0
+        LineUnderCursor = 1
+        BlockUnderCursor = 2
+        Document = 3
+    }
+
+
+    public const member q_function anchor() : int;
+    public const member q_function atBlockEnd() : bool;
+    public const member q_function atBlockStart() : bool;
+    public const member q_function atEnd() : bool;
+    public const member q_function atStart() : bool;
+    public member q_function beginEditBlock() : void;
+    public const member q_function block() : QTextBlock;
+    public const member q_function blockCharFormat() : QTextCharFormat;
+    public const member q_function blockFormat() : QTextBlockFormat;
+    public const member q_function blockNumber() : int;
+    public const member q_function charFormat() : QTextCharFormat;
+    public member q_function clearSelection() : void;
+    public const member q_function columnNumber() : int;
+    public member q_function createList(const QTextListFormat & format) : QTextList *;
+    public member q_function createList(QTextListFormat.Style style) : QTextList *;
+    public const member q_function currentFrame() : QTextFrame *;
+    public const member q_function currentList() : QTextList *;
+    public const member q_function currentTable() : QTextTable *;
+    public member q_function deleteChar() : void;
+    public member q_function deletePreviousChar() : void;
+    public const member q_function document() : QTextDocument *;
+    public member q_function endEditBlock() : void;
+    public const member q_function hasComplexSelection() : bool;
+    public const member q_function hasSelection() : bool;
+    public member q_function insertBlock() : void;
+    public member q_function insertBlock(const QTextBlockFormat & format, const QTextCharFormat & charFormat) : void;
+    public member q_function insertBlock(const QTextBlockFormat & format) : void;
+    public member q_function insertFragment(const QTextDocumentFragment & fragment) : void;
+    public member q_function insertFrame(const QTextFrameFormat & format) : QTextFrame *;
+    public member q_function insertHtml(const QString & html) : void;
+    public member q_function insertImage(const QImage & image, const QString & name = QString()) : void;
+    public member q_function insertImage(const QTextImageFormat & format) : void;
+    public member q_function insertImage(const QString & name) : void;
+    public member q_function insertList(const QTextListFormat & format) : QTextList *;
+    public member q_function insertList(QTextListFormat.Style style) : QTextList *;
+    public member q_function insertTable(int rows, int columns, const QTextTableFormat & format) : QTextTable *;
+    public member q_function insertTable(int rows, int columns) : QTextTable *;
+    public member q_function insertText(const QString & text) : void;
+    public member q_function insertText(const QString & text, const QTextCharFormat & format) : void;
+    public const member q_function isCopyOf(const QTextCursor & other) : bool;
+    public member q_function joinPreviousEditBlock() : void;
+    public const member q_function keepPositionOnInsert() : bool;
+    public member q_function mergeBlockCharFormat(const QTextCharFormat & modifier) : void;
+    public member q_function mergeBlockFormat(const QTextBlockFormat & modifier) : void;
+    public member q_function mergeCharFormat(const QTextCharFormat & modifier) : void;
+    public member q_function movePosition(MoveOperation operation, MoveMode mode = MoveAnchor, int n = 1) : bool;
+    public const member q_function position() : int;
+    public const member q_function positionInBlock() : int;
+    public member q_function removeSelectedText() : void;
+    public member q_function select(SelectionType selection) : void;
+    public const member q_function selectedTableCells(int * firstRow, int * numRows, int * firstColumn, int * numColumns) : void;
+    public const member q_function selectedText() : QString;
+    public const member q_function selection() : QTextDocumentFragment;
+    public const member q_function selectionEnd() : int;
+    public const member q_function selectionStart() : int;
+    public member q_function setBlockCharFormat(const QTextCharFormat & format) : void;
+    public member q_function setBlockFormat(const QTextBlockFormat & format) : void;
+    public member q_function setCharFormat(const QTextCharFormat & format) : void;
+    public member q_function setKeepPositionOnInsert(bool b) : void;
+    public member q_function setPosition(int pos, MoveMode m = MoveAnchor) : void;
+    public member q_function setVerticalMovementX(int x) : void;
+    public member q_function setVisualNavigation(bool b) : void;
+    public const member q_function verticalMovementX() : int;
+    public const member q_function visualNavigation() : bool;
+
+
+}
+

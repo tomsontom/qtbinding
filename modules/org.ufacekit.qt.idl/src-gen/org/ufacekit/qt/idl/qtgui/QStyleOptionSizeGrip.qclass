@@ -1,0 +1,13 @@
+q_class QStyleOptionSizeGrip extends QStyleOptionComplex {
+    q_enumeration StyleOptionType {
+        Type = SO_SizeGrip
+    }
+
+    q_enumeration StyleOptionVersion {
+        Version = 1
+    }
+
+
+
+}
+

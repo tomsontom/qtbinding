@@ -1,0 +1,35 @@
+q_class QAxBase {
+    q_typedef PropertyBag : ___UNKNOWN___;
+
+
+    q_property QString control;
+
+    public const member q_function asVariant() : QVariant;
+    public virtual member q_function clear() : void;
+    public member q_function disableClassInfo() : void;
+    public member q_function disableEventSink() : void;
+    public member q_function disableMetaObject() : void;
+    public member q_function dynamicCall(const char * function, QList<QVariant> & vars) : QVariant;
+    public member q_function dynamicCall(const char * function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant()) : QVariant;
+    public member q_function generateDocumentation() : QString;
+    public const member q_function isNull() : bool;
+    public const member q_function propertyBag() : PropertyBag;
+    public const virtual member q_function propertyWritable(const char * prop) : bool;
+    public const member q_function queryInterface(const QUuid & uuid, void ** iface) : long;
+    public member q_function querySubObject(const char * name, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant()) : QAxObject *;
+    public member q_function querySubObject(const char * name, QList<QVariant> & vars) : QAxObject *;
+    public member q_function setControl(const QString & ) : bool;
+    public member q_function setPropertyBag(const PropertyBag & bag) : void;
+    public virtual member q_function setPropertyWritable(const char * prop, bool ok) : void;
+    public const member q_function verbs() : QStringList;
+
+    protected virtual member q_function initialize(IUnknown ** ptr) : bool;
+    protected member q_function initializeActive(IUnknown ** ptr) : bool;
+    protected member q_function initializeFromFile(IUnknown ** ptr) : bool;
+    protected member q_function initializeLicensed(IUnknown ** ptr) : bool;
+    protected member q_function initializeRemote(IUnknown ** ptr) : bool;
+
+
+
+}
+

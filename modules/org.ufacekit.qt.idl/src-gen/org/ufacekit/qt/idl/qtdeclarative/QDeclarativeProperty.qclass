@@ -1,0 +1,47 @@
+q_class QDeclarativeProperty {
+    q_enumeration PropertyTypeCategory {
+        InvalidCategory = 0
+        List = 1
+        Object = 2
+        Normal = 3
+    }
+
+    q_enumeration Type {
+        Invalid = 0
+        Property = 1
+        SignalProperty = 2
+    }
+
+
+    public const member q_function connectNotifySignal(QObject * dest, const char * slot) : bool;
+    public const member q_function connectNotifySignal(QObject * dest, int method) : bool;
+    public const member q_function hasNotifySignal() : bool;
+    public const member q_function index() : int;
+    public const member q_function isDesignable() : bool;
+    public const member q_function isProperty() : bool;
+    public const member q_function isResettable() : bool;
+    public const member q_function isSignalProperty() : bool;
+    public const member q_function isValid() : bool;
+    public const member q_function isWritable() : bool;
+    public const member q_function method() : QMetaMethod;
+    public const member q_function name() : QString;
+    public const member q_function needsNotifySignal() : bool;
+    public const member q_function object() : QObject *;
+    public const member q_function property() : QMetaProperty;
+    public const member q_function propertyType() : int;
+    public const member q_function propertyTypeCategory() : PropertyTypeCategory;
+    public const member q_function propertyTypeName() : const char *;
+    public class q_function read(QObject * object, const QString & name) : QVariant;
+    public class q_function read(QObject * object, const QString & name, QDeclarativeContext * ctxt) : QVariant;
+    public const member q_function read() : QVariant;
+    public class q_function read(QObject * object, const QString & name, QDeclarativeEngine * engine) : QVariant;
+    public const member q_function reset() : bool;
+    public const member q_function type() : Type;
+    public class q_function write(QObject * object, const QString & name, const QVariant & value, QDeclarativeEngine * engine) : bool;
+    public class q_function write(QObject * object, const QString & name, const QVariant & value, QDeclarativeContext * ctxt) : bool;
+    public const member q_function write(const QVariant & value) : bool;
+    public class q_function write(QObject * object, const QString & name, const QVariant & value) : bool;
+
+
+}
+

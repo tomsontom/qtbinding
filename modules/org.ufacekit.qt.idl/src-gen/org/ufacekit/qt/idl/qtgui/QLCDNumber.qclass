@@ -1,0 +1,41 @@
+q_class QLCDNumber extends QFrame {
+    q_enumeration Mode {
+        Hex = 0
+        Dec = 1
+        Oct = 2
+        Bin = 3
+    }
+
+    q_enumeration SegmentStyle {
+        Outline = 0
+        Filled = 1
+        Flat = 2
+    }
+
+
+    q_property int digitCount;
+    q_property int intValue;
+    q_property Mode mode;
+    q_property int numDigits;
+    q_property SegmentStyle segmentStyle;
+    q_property bool smallDecimalPoint;
+    q_property double value;
+
+    public const member q_function checkOverflow(int num) : bool;
+    public const member q_function checkOverflow(double num) : bool;
+    public const member q_function digitCount() : int;
+    public const member q_function intValue() : int;
+    public const member q_function mode() : Mode;
+    public const member q_function segmentStyle() : SegmentStyle;
+    public member q_function setDigitCount(int numDigits) : void;
+    public member q_function setMode(Mode ) : void;
+    public member q_function setNumDigits(int nDigits) : void;
+    public member q_function setSegmentStyle(SegmentStyle ) : void;
+    public const member q_function smallDecimalPoint() : bool;
+    public const member q_function value() : double;
+
+
+
+
+}
+

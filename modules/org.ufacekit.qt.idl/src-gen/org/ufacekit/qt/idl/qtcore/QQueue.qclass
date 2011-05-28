@@ -1,0 +1,9 @@
+q_class QQueue extends QList<T> {
+    public member q_function dequeue() : T;
+    public member q_function enqueue(const T & t) : void;
+    public member q_function head() : T &;
+    public const member q_function head() : const T &;
+
+
+}
+

@@ -1,0 +1,7 @@
+q_class QGenericArgument {
+    public const member q_function data() : void *; 
+    public const member q_function name() : const char *;
+
+
+}
+

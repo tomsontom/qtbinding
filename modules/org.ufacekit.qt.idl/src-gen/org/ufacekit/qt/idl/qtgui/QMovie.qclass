@@ -1,0 +1,46 @@
+q_class QMovie extends QObject {
+    q_enumeration CacheMode {
+        CacheNone = 0
+        CacheAll = 1
+    }
+
+    q_enumeration MovieState {
+        NotRunning = 0
+        Paused = 1
+        Running = 2
+    }
+
+
+    q_property CacheMode cacheMode;
+    q_property int speed;
+
+    public const member q_function backgroundColor() : QColor;
+    public const member q_function cacheMode() : CacheMode;
+    public const member q_function currentFrameNumber() : int;
+    public const member q_function currentImage() : QImage;
+    public const member q_function currentPixmap() : QPixmap;
+    public const member q_function device() : QIODevice *;
+    public const member q_function fileName() : QString;
+    public const member q_function format() : QByteArray;
+    public const member q_function frameCount() : int;
+    public const member q_function frameRect() : QRect;
+    public const member q_function isValid() : bool;
+    public member q_function jumpToFrame(int frameNumber) : bool;
+    public const member q_function loopCount() : int;
+    public const member q_function nextFrameDelay() : int;
+    public member q_function scaledSize() : QSize;
+    public member q_function setBackgroundColor(const QColor & color) : void;
+    public member q_function setCacheMode(CacheMode mode) : void;
+    public member q_function setDevice(QIODevice * device) : void;
+    public member q_function setFileName(const QString & fileName) : void;
+    public member q_function setFormat(const QByteArray & format) : void;
+    public member q_function setScaledSize(const QSize & size) : void;
+    public const member q_function speed() : int;
+    public const member q_function state() : MovieState;
+    public class q_function supportedFormats() : QList<QByteArray>;
+
+
+
+
+}
+

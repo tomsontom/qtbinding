@@ -1,0 +1,13 @@
+q_class QXmlLexicalHandler {
+    public purevirtual member q_function comment(const QString & ch) : bool;
+    public purevirtual member q_function endCDATA() : bool;
+    public purevirtual member q_function endDTD() : bool;
+    public purevirtual member q_function endEntity(const QString & name) : bool;
+    public const purevirtual member q_function errorString() : QString;
+    public purevirtual member q_function startCDATA() : bool;
+    public purevirtual member q_function startDTD(const QString & name, const QString & publicId, const QString & systemId) : bool;
+    public purevirtual member q_function startEntity(const QString & name) : bool;
+
+
+}
+

@@ -1,0 +1,17 @@
+q_class QExtensionFactory extends QObject, QAbstractExtensionFactory {
+    q_typedef ExtendedSet : ___UNKNOWN___;
+
+    q_typedef ExtensionMap : ___UNKNOWN___;
+
+    q_typedef IdObjectKey : ___UNKNOWN___;
+
+
+    public const virtual member q_function extension(QObject * object, const QString & iid) : QObject *;
+    public const member q_function extensionManager() : QExtensionManager *;
+
+    protected const virtual member q_function createExtension(QObject * object, const QString & iid, QObject * parent) : QObject *;
+
+
+
+}
+

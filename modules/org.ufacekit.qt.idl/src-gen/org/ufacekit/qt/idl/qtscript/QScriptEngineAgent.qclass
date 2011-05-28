@@ -1,0 +1,22 @@
+q_class QScriptEngineAgent {
+    q_enumeration Extension {
+        DebuggerInvocationRequest = 0
+    }
+
+
+    public virtual member q_function contextPop() : void;
+    public virtual member q_function contextPush() : void;
+    public const member q_function engine() : QScriptEngine *;
+    public virtual member q_function exceptionCatch(qint64 scriptId, const QScriptValue & exception) : void;
+    public virtual member q_function exceptionThrow(qint64 scriptId, const QScriptValue & exception, bool hasHandler) : void;
+    public virtual member q_function extension(Extension extension, const QVariant & argument = QVariant()) : QVariant;
+    public virtual member q_function functionEntry(qint64 scriptId) : void;
+    public virtual member q_function functionExit(qint64 scriptId, const QScriptValue & returnValue) : void;
+    public virtual member q_function positionChange(qint64 scriptId, int lineNumber, int columnNumber) : void;
+    public virtual member q_function scriptLoad(qint64 id, const QString & program, const QString & fileName, int baseLineNumber) : void;
+    public virtual member q_function scriptUnload(qint64 id) : void;
+    public const virtual member q_function supportsExtension(Extension extension) : bool;
+
+
+}
+

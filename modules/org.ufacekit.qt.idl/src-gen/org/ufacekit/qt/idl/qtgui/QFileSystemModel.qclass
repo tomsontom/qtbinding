@@ -1,0 +1,50 @@
+q_class QFileSystemModel extends QAbstractItemModel {
+    q_enumeration Roles {
+        FileIconRole = __UNKNOWN__
+        FilePathRole = __UNKNOWN__
+        FileNameRole = __UNKNOWN__
+        FilePermissions = __UNKNOWN__
+    }
+
+
+    q_property bool nameFilterDisables;
+    q_property bool readOnly;
+    q_property bool resolveSymlinks;
+
+    public virtual member q_function dropMimeData(const QMimeData * data, Qt.DropAction action, int row, int column, const QModelIndex & parent) : bool;
+    public const member q_function fileIcon(const QModelIndex & index) : QIcon;
+    public const member q_function fileInfo(const QModelIndex & index) : QFileInfo;
+    public const member q_function fileName(const QModelIndex & index) : QString;
+    public const member q_function filePath(const QModelIndex & index) : QString;
+    public const member q_function filter() : QDir.Filters;
+    public const member q_function iconProvider() : QFileIconProvider *;
+    public const member q_function index(const QString & path, int column = 0) : QModelIndex;
+    public const member q_function isDir(const QModelIndex & index) : bool;
+    public const member q_function isReadOnly() : bool;
+    public const member q_function lastModified(const QModelIndex & index) : QDateTime;
+    public const virtual member q_function mimeData(const QModelIndexList & indexes) : QMimeData *;
+    public const virtual member q_function mimeTypes() : QStringList;
+    public member q_function mkdir(const QModelIndex & parent, const QString & name) : QModelIndex;
+    public const member q_function myComputer(int role = Qt.DisplayRole) : QVariant;
+    public const member q_function nameFilterDisables() : bool;
+    public const member q_function nameFilters() : QStringList;
+    public const member q_function permissions(const QModelIndex & index) : QFile.Permissions;
+    public const member q_function remove(const QModelIndex & index) : bool;
+    public const member q_function resolveSymlinks() : bool;
+    public const member q_function rmdir(const QModelIndex & index) : bool;
+    public const member q_function rootDirectory() : QDir;
+    public const member q_function rootPath() : QString;
+    public member q_function setFilter(QDir.Filters filters) : void;
+    public member q_function setIconProvider(QFileIconProvider * provider) : void;
+    public member q_function setNameFilterDisables(bool enable) : void;
+    public member q_function setNameFilters(const QStringList & filters) : void;
+    public member q_function setReadOnly(bool enable) : void;
+    public member q_function setResolveSymlinks(bool enable) : void;
+    public member q_function setRootPath(const QString & newPath) : QModelIndex;
+    public const member q_function size(const QModelIndex & index) : qint64;
+    public const member q_function type(const QModelIndex & index) : QString;
+
+
+
+}
+

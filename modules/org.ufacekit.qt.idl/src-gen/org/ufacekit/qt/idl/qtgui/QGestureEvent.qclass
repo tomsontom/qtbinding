@@ -1,0 +1,23 @@
+q_class QGestureEvent extends QEvent {
+    public member q_function accept(Qt.GestureType gestureType) : void;
+    public member q_function accept() : void;
+    public member q_function accept(QGesture * gesture) : void;
+    public const member q_function activeGestures() : QList<QGesture *>;
+    public const member q_function canceledGestures() : QList<QGesture *>;
+    public const member q_function gesture(Qt.GestureType type) : QGesture *;
+    public const member q_function gestures() : QList<QGesture *>;
+    public member q_function ignore() : void;
+    public member q_function ignore(QGesture * gesture) : void;
+    public member q_function ignore(Qt.GestureType gestureType) : void;
+    public const member q_function isAccepted(Qt.GestureType gestureType) : bool;
+    public const member q_function isAccepted() : bool;
+    public const member q_function isAccepted(QGesture * gesture) : bool;
+    public const member q_function mapToGraphicsScene(const QPointF & gesturePoint) : QPointF;
+    public member q_function setAccepted(bool accepted) : void;
+    public member q_function setAccepted(Qt.GestureType gestureType, bool value) : void;
+    public member q_function setAccepted(QGesture * gesture, bool value) : void;
+    public const member q_function widget() : QWidget *;
+
+
+}
+

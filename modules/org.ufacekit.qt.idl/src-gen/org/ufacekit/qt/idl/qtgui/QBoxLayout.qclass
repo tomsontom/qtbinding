@@ -1,0 +1,35 @@
+q_class QBoxLayout extends QLayout {
+    q_enumeration Direction {
+        LeftToRight = 0
+        RightToLeft = 1
+        TopToBottom = 2
+        BottomToTop = 3
+        Down = TopToBottom
+        Up = BottomToTop
+    }
+
+
+    public member q_function addLayout(QLayout * layout, int stretch = 0) : void;
+    public member q_function addSpacerItem(QSpacerItem * spacerItem) : void;
+    public member q_function addSpacing(int size) : void;
+    public member q_function addStretch(int stretch = 0) : void;
+    public member q_function addStrut(int size) : void;
+    public member q_function addWidget(QWidget * widget, int stretch = 0, Qt.Alignment alignment = 0) : void;
+    public const member q_function direction() : Direction;
+    public member q_function insertLayout(int index, QLayout * layout, int stretch = 0) : void;
+    public member q_function insertSpacerItem(int index, QSpacerItem * spacerItem) : void;
+    public member q_function insertSpacing(int index, int size) : void;
+    public member q_function insertStretch(int index, int stretch = 0) : void;
+    public member q_function insertWidget(int index, QWidget * widget, int stretch = 0, Qt.Alignment alignment = 0) : void;
+    public virtual member q_function invalidate() : void;
+    public member q_function setDirection(Direction direction) : void;
+    public member q_function setSpacing(int spacing) : void;
+    public member q_function setStretch(int index, int stretch) : void;
+    public member q_function setStretchFactor(QLayout * layout, int stretch) : bool;
+    public member q_function setStretchFactor(QWidget * widget, int stretch) : bool;
+    public const member q_function spacing() : int;
+    public const member q_function stretch(int index) : int;
+
+
+}
+

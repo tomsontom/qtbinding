@@ -1,0 +1,67 @@
+q_class QRectF {
+    public member q_function adjust(qreal dx1, qreal dy1, qreal dx2, qreal dy2) : void;
+    public const member q_function adjusted(qreal dx1, qreal dy1, qreal dx2, qreal dy2) : QRectF;
+    public const member q_function bottom() : qreal;
+    public const member q_function bottomLeft() : QPointF;
+    public const member q_function bottomRight() : QPointF;
+    public const member q_function center() : QPointF;
+    public const member q_function contains(qreal x, qreal y) : bool;
+    public const member q_function contains(const QPointF & point) : bool;
+    public const member q_function contains(const QRectF & rectangle) : bool;
+    public const member q_function getCoords(qreal * x1, qreal * y1, qreal * x2, qreal * y2) : void;
+    public const member q_function getRect(qreal * x, qreal * y, qreal * width, qreal * height) : void;
+    public const member q_function height() : qreal;
+    public const member q_function intersect(const QRectF & rectangle) : QRectF;
+    public const member q_function intersected(const QRectF & rectangle) : QRectF;
+    public const member q_function intersects(const QRectF & rectangle) : bool;
+    public const member q_function isEmpty() : bool;
+    public const member q_function isNull() : bool;
+    public const member q_function isValid() : bool;
+    public const member q_function left() : qreal;
+    public member q_function moveBottom(qreal y) : void;
+    public member q_function moveBottomLeft(const QPointF & position) : void;
+    public member q_function moveBottomRight(const QPointF & position) : void;
+    public member q_function moveCenter(const QPointF & position) : void;
+    public member q_function moveLeft(qreal x) : void;
+    public member q_function moveRight(qreal x) : void;
+    public member q_function moveTo(qreal x, qreal y) : void;
+    public member q_function moveTo(const QPointF & position) : void;
+    public member q_function moveTop(qreal y) : void;
+    public member q_function moveTopLeft(const QPointF & position) : void;
+    public member q_function moveTopRight(const QPointF & position) : void;
+    public const member q_function normalized() : QRectF;
+    public const member q_function right() : qreal;
+    public member q_function setBottom(qreal y) : void;
+    public member q_function setBottomLeft(const QPointF & position) : void;
+    public member q_function setBottomRight(const QPointF & position) : void;
+    public member q_function setCoords(qreal x1, qreal y1, qreal x2, qreal y2) : void;
+    public member q_function setHeight(qreal height) : void;
+    public member q_function setLeft(qreal x) : void;
+    public member q_function setRect(qreal x, qreal y, qreal width, qreal height) : void;
+    public member q_function setRight(qreal x) : void;
+    public member q_function setSize(const QSizeF & size) : void;
+    public member q_function setTop(qreal y) : void;
+    public member q_function setTopLeft(const QPointF & position) : void;
+    public member q_function setTopRight(const QPointF & position) : void;
+    public member q_function setWidth(qreal width) : void;
+    public member q_function setX(qreal x) : void;
+    public member q_function setY(qreal y) : void;
+    public const member q_function size() : QSizeF;
+    public const member q_function toAlignedRect() : QRect;
+    public const member q_function toRect() : QRect;
+    public const member q_function top() : qreal;
+    public const member q_function topLeft() : QPointF;
+    public const member q_function topRight() : QPointF;
+    public member q_function translate(const QPointF & offset) : void;
+    public member q_function translate(qreal dx, qreal dy) : void;
+    public const member q_function translated(qreal dx, qreal dy) : QRectF;
+    public const member q_function translated(const QPointF & offset) : QRectF;
+    public const member q_function unite(const QRectF & rectangle) : QRectF;
+    public const member q_function united(const QRectF & rectangle) : QRectF;
+    public const member q_function width() : qreal;
+    public const member q_function x() : qreal;
+    public const member q_function y() : qreal;
+
+
+}
+

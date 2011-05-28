@@ -1,0 +1,36 @@
+q_class QSqlField {
+    q_enumeration RequiredStatus {
+        Unknown = -1
+        Optional = 0
+        Required = 1
+    }
+
+
+    public member q_function clear() : void;
+    public const member q_function defaultValue() : QVariant;
+    public const member q_function isAutoValue() : bool;
+    public const member q_function isGenerated() : bool;
+    public const member q_function isNull() : bool;
+    public const member q_function isReadOnly() : bool;
+    public const member q_function isValid() : bool;
+    public const member q_function length() : int;
+    public const member q_function name() : QString;
+    public const member q_function precision() : int;
+    public const member q_function requiredStatus() : RequiredStatus;
+    public member q_function setAutoValue(bool autoVal) : void;
+    public member q_function setDefaultValue(const QVariant & value) : void;
+    public member q_function setGenerated(bool gen) : void;
+    public member q_function setLength(int fieldLength) : void;
+    public member q_function setName(const QString & name) : void;
+    public member q_function setPrecision(int precision) : void;
+    public member q_function setReadOnly(bool readOnly) : void;
+    public member q_function setRequired(bool required) : void;
+    public member q_function setRequiredStatus(RequiredStatus required) : void;
+    public member q_function setType(QVariant.Type type) : void;
+    public member q_function setValue(const QVariant & value) : void;
+    public const member q_function type() : QVariant.Type;
+    public const member q_function value() : QVariant;
+
+
+}
+

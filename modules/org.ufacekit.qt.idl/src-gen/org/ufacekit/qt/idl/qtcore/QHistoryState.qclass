@@ -1,0 +1,18 @@
+q_class QHistoryState extends QAbstractState {
+    q_enumeration HistoryType {
+        ShallowHistory = 0
+        DeepHistory = 1
+    }
+
+
+    q_property QAbstractState * defaultState;
+    q_property HistoryType historyType;
+
+    public const member q_function defaultState() : QAbstractState *;
+    public const member q_function historyType() : HistoryType;
+    public member q_function setDefaultState(QAbstractState * state) : void;
+    public member q_function setHistoryType(HistoryType type) : void;
+
+
+}
+

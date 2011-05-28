@@ -1,0 +1,5 @@
+q_class QCDEStyle extends QMotifStyle {
+
+
+}
+

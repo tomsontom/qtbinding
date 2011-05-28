@@ -1,0 +1,39 @@
+q_class QSplitter extends QFrame {
+    q_property bool childrenCollapsible;
+    q_property int handleWidth;
+    q_property bool opaqueResize;
+    q_property Qt.Orientation orientation;
+
+    public member q_function addWidget(QWidget * widget) : void;
+    public const member q_function childrenCollapsible() : bool;
+    public const member q_function count() : int;
+    public const member q_function getRange(int index, int * min, int * max) : void;
+    public const member q_function handle(int index) : QSplitterHandle *;
+    public const member q_function handleWidth() : int;
+    public const member q_function indexOf(QWidget * widget) : int;
+    public member q_function insertWidget(int index, QWidget * widget) : void;
+    public const member q_function isCollapsible(int index) : bool;
+    public const member q_function opaqueResize() : bool;
+    public const member q_function orientation() : Qt.Orientation;
+    public member q_function refresh() : void;
+    public member q_function restoreState(const QByteArray & state) : bool;
+    public const member q_function saveState() : QByteArray;
+    public member q_function setChildrenCollapsible(bool ) : void;
+    public member q_function setCollapsible(int index, bool collapse) : void;
+    public member q_function setHandleWidth(int ) : void;
+    public member q_function setOpaqueResize(bool opaque = true) : void;
+    public member q_function setOrientation(Qt.Orientation ) : void;
+    public member q_function setSizes(const QList<int> & list) : void;
+    public member q_function setStretchFactor(int index, int stretch) : void;
+    public const member q_function sizes() : QList<int>;
+    public const member q_function widget(int index) : QWidget *;
+
+    protected member q_function closestLegalPosition(int pos, int index) : int;
+    protected virtual member q_function createHandle() : QSplitterHandle *;
+    protected member q_function moveSplitter(int pos, int index) : void;
+    protected member q_function setRubberBand(int pos) : void;
+
+
+
+}
+

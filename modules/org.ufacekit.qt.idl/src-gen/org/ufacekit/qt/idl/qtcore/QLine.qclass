@@ -1,0 +1,22 @@
+q_class QLine {
+    public const member q_function dx() : int;
+    public const member q_function dy() : int;
+    public const member q_function isNull() : bool;
+    public const member q_function p1() : QPoint;
+    public const member q_function p2() : QPoint;
+    public member q_function setLine(int x1, int y1, int x2, int y2) : void;
+    public member q_function setP1(const QPoint & p1) : void;
+    public member q_function setP2(const QPoint & p2) : void;
+    public member q_function setPoints(const QPoint & p1, const QPoint & p2) : void;
+    public member q_function translate(const QPoint & offset) : void;
+    public member q_function translate(int dx, int dy) : void;
+    public const member q_function translated(int dx, int dy) : QLine;
+    public const member q_function translated(const QPoint & offset) : QLine; 
+    public const member q_function x1() : int;
+    public const member q_function x2() : int;
+    public const member q_function y1() : int;
+    public const member q_function y2() : int;
+
+
+}
+

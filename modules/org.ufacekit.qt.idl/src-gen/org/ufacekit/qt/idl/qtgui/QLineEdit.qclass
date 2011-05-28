@@ -1,0 +1,86 @@
+q_class QLineEdit extends QWidget {
+    q_enumeration EchoMode {
+        Normal = 0
+        NoEcho = 1
+        Password = 2
+        PasswordEchoOnEdit = 3
+    }
+
+
+    q_property const bool acceptableInput;
+    q_property Qt.Alignment alignment;
+    q_property int cursorPosition;
+    q_property const QString displayText;
+    q_property bool dragEnabled;
+    q_property EchoMode echoMode;
+    q_property bool frame;
+    q_property const bool hasSelectedText;
+    q_property QString inputMask;
+    q_property int maxLength;
+    q_property bool modified;
+    q_property QString placeholderText;
+    q_property bool readOnly;
+    q_property const bool redoAvailable;
+    q_property const QString selectedText;
+    q_property QString text;
+    q_property const bool undoAvailable;
+
+    public const member q_function alignment() : Qt.Alignment;
+    public member q_function backspace() : void;
+    public const member q_function completer() : QCompleter *;
+    public member q_function cursorBackward(bool mark, int steps = 1) : void;
+    public member q_function cursorForward(bool mark, int steps = 1) : void;
+    public const member q_function cursorPosition() : int;
+    public member q_function cursorPositionAt(const QPoint & pos) : int;
+    public member q_function cursorWordBackward(bool mark) : void;
+    public member q_function cursorWordForward(bool mark) : void;
+    public member q_function del() : void;
+    public member q_function deselect() : void;
+    public const member q_function displayText() : QString;
+    public const member q_function dragEnabled() : bool;
+    public const member q_function echoMode() : EchoMode;
+    public member q_function end(bool mark) : void;
+    public const member q_function getTextMargins(int * left, int * top, int * right, int * bottom) : void;
+    public const member q_function hasAcceptableInput() : bool;
+    public const member q_function hasFrame() : bool;
+    public const member q_function hasSelectedText() : bool;
+    public member q_function home(bool mark) : void;
+    public const member q_function inputMask() : QString;
+    public member q_function insert(const QString & newText) : void;
+    public const member q_function isModified() : bool;
+    public const member q_function isReadOnly() : bool;
+    public const member q_function isRedoAvailable() : bool;
+    public const member q_function isUndoAvailable() : bool;
+    public const member q_function maxLength() : int;
+    public const virtual member q_function minimumSizeHint() : QSize;
+    public const member q_function placeholderText() : QString;
+    public const member q_function selectedText() : QString;
+    public const member q_function selectionStart() : int;
+    public member q_function setAlignment(Qt.Alignment flag) : void;
+    public member q_function setCursorPosition(int ) : void;
+    public member q_function setDragEnabled(bool b) : void;
+    public member q_function setEchoMode(EchoMode ) : void;
+    public member q_function setFrame(bool ) : void;
+    public member q_function setInputMask(const QString & inputMask) : void;
+    public member q_function setMaxLength(int ) : void;
+    public member q_function setModified(bool ) : void;
+    public member q_function setPlaceholderText(const QString & ) : void;
+    public member q_function setReadOnly(bool ) : void;
+    public member q_function setSelection(int start, int length) : void;
+    public member q_function setTextMargins(int left, int top, int right, int bottom) : void;
+    public member q_function setTextMargins(const QMargins & margins) : void;
+    public member q_function setValidator(const QValidator * v) : void;
+    public const virtual member q_function sizeHint() : QSize;
+    public const member q_function textMargins() : QMargins;
+    public const member q_function validator() : const QValidator *;
+
+    protected virtual member q_function contextMenuEvent(QContextMenuEvent * event) : void;
+    protected const member q_function cursorRect() : QRect;
+    protected const member q_function initStyleOption(QStyleOptionFrame * option) : void;
+    protected virtual member q_function keyPressEvent(QKeyEvent * event) : void;
+
+
+
+
+}
+

@@ -1,0 +1,13 @@
+q_class QStyleOptionSpinBox extends QStyleOptionComplex {
+    q_enumeration StyleOptionType {
+        Type = SO_SpinBox
+    }
+
+    q_enumeration StyleOptionVersion {
+        Version = 1
+    }
+
+
+
+}
+

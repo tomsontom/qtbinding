@@ -1,0 +1,15 @@
+q_class QFutureIterator {
+    q_typedef const_iterator : ___UNKNOWN___;
+
+
+    public member q_function findNext(const T & value) : bool;
+    public member q_function findPrevious(const T & value) : bool;
+    public member q_function next() : const T &;
+    public const member q_function peekNext() : const T &;
+    public const member q_function peekPrevious() : const T &;
+    public member q_function previous() : const T &;
+    public member q_function toFront() : void;
+
+
+}
+

@@ -1,0 +1,19 @@
+q_class QButtonGroup extends QObject {
+    q_property bool exclusive;
+
+    public member q_function addButton(QAbstractButton * button) : void;
+    public member q_function addButton(QAbstractButton * button, int id) : void;
+    public const member q_function button(int id) : QAbstractButton *;
+    public const member q_function buttons() : QList<QAbstractButton *>;
+    public const member q_function checkedButton() : QAbstractButton *;
+    public const member q_function checkedId() : int;
+    public const member q_function exclusive() : bool;
+    public const member q_function id(QAbstractButton * button) : int;
+    public member q_function removeButton(QAbstractButton * button) : void;
+    public member q_function setExclusive(bool ) : void;
+    public member q_function setId(QAbstractButton * button, int id) : void;
+
+
+
+}
+

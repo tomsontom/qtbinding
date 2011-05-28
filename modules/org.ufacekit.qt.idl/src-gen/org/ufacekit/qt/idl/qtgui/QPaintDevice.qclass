@@ -1,0 +1,33 @@
+q_class QPaintDevice {
+    q_enumeration PaintDeviceMetric {
+        PdmWidth = 1
+        PdmHeight = 2
+        PdmWidthMM = 3
+        PdmHeightMM = 4
+        PdmNumColors = 5
+        PdmDepth = 6
+        PdmDpiX = 7
+        PdmDpiY = 8
+        PdmPhysicalDpiX = 9
+        PdmPhysicalDpiY = 10
+    }
+
+
+    public const member q_function colorCount() : int;
+    public const member q_function depth() : int;
+    public const member q_function height() : int;
+    public const member q_function heightMM() : int;
+    public const member q_function logicalDpiX() : int;
+    public const member q_function logicalDpiY() : int;
+    public const purevirtual member q_function paintEngine() : QPaintEngine *;
+    public const member q_function paintingActive() : bool;
+    public const member q_function physicalDpiX() : int;
+    public const member q_function physicalDpiY() : int;
+    public const member q_function width() : int;
+    public const member q_function widthMM() : int;
+
+    protected const virtual member q_function metric(PaintDeviceMetric metric) : int;
+
+
+}
+

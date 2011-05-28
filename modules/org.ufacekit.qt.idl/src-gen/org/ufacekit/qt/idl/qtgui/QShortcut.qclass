@@ -1,0 +1,23 @@
+q_class QShortcut extends QObject {
+    q_property bool autoRepeat;
+    q_property Qt.ShortcutContext context;
+    q_property bool enabled;
+    q_property QKeySequence key;
+    q_property QString whatsThis;
+
+    public const member q_function autoRepeat() : bool;
+    public member q_function context() : Qt.ShortcutContext;
+    public const member q_function id() : int;
+    public const member q_function isEnabled() : bool;
+    public const member q_function key() : QKeySequence;
+    public const member q_function parentWidget() : QWidget *;
+    public member q_function setAutoRepeat(bool on) : void;
+    public member q_function setContext(Qt.ShortcutContext context) : void;
+    public member q_function setEnabled(bool enable) : void;
+    public member q_function setWhatsThis(const QString & text) : void;
+    public const member q_function whatsThis() : QString;
+
+
+
+}
+

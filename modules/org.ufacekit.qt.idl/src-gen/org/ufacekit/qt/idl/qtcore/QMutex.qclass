@@ -1,0 +1,14 @@
+q_class QMutex {
+    q_enumeration RecursionMode {
+        NonRecursive = 0
+        Recursive = 1
+    }
+
+
+    public member q_function tryLock(int timeout) : bool;
+    public member q_function tryLock() : bool;
+    public member q_function unlock() : void;
+
+
+}
+

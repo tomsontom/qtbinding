@@ -1,0 +1,14 @@
+q_class QMouseEvent extends QInputEvent {
+    public const member q_function button() : Qt.MouseButton;
+    public const member q_function buttons() : Qt.MouseButtons;
+    public const member q_function globalPos() : const QPoint &;
+    public const member q_function globalX() : int;
+    public const member q_function globalY() : int;
+    public const member q_function pos() : const QPoint &;
+    public const member q_function posF() : QPointF;
+    public const member q_function x() : int;
+    public const member q_function y() : int;
+
+
+}
+

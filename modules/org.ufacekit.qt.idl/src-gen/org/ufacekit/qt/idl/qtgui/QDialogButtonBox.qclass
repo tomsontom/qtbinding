@@ -1,0 +1,73 @@
+q_class QDialogButtonBox extends QWidget {
+    q_enumeration ButtonLayout {
+        WinLayout = 0
+        MacLayout = 1
+        KdeLayout = 2
+        GnomeLayout = 3
+    }
+
+    q_enumeration ButtonRole {
+        InvalidRole = -1
+        AcceptRole = 0
+        RejectRole = 1
+        DestructiveRole = 2
+        ActionRole = 3
+        HelpRole = 4
+        YesRole = 5
+        NoRole = 6
+        ResetRole = 7
+        ApplyRole = 8
+        NRoles = 9
+    }
+
+    q_enumeration StandardButton {
+        NoButton = 0
+        Ok = 1024
+        Save = 2048
+        SaveAll = 4096
+        Open = 8192
+        Yes = 16384
+        YesToAll = 32768
+        No = 65536
+        NoToAll = 131072
+        Abort = 262144
+        Retry = 524288
+        Ignore = 1048576
+        Close = 2097152
+        Cancel = 4194304
+        Discard = 8388608
+        Help = 16777216
+        Apply = 33554432
+        Reset = 67108864
+        RestoreDefaults = 134217728
+        FirstButton = Ok
+        LastButton = RestoreDefaults
+    }
+
+    q_flags StandardButtons : StandardButton;
+
+
+    q_property bool centerButtons;
+    q_property Qt.Orientation orientation;
+    q_property StandardButtons standardButtons;
+
+    public member q_function addButton(StandardButton button) : QPushButton *;
+    public member q_function addButton(QAbstractButton * button, ButtonRole role) : void;
+    public member q_function addButton(const QString & text, ButtonRole role) : QPushButton *;
+    public const member q_function button(StandardButton which) : QPushButton *;
+    public const member q_function buttonRole(QAbstractButton * button) : ButtonRole;
+    public const member q_function buttons() : QList<QAbstractButton *>;
+    public const member q_function centerButtons() : bool;
+    public member q_function clear() : void;
+    public const member q_function orientation() : Qt.Orientation;
+    public member q_function removeButton(QAbstractButton * button) : void;
+    public member q_function setCenterButtons(bool center) : void;
+    public member q_function setOrientation(Qt.Orientation orientation) : void;
+    public member q_function setStandardButtons(StandardButtons buttons) : void;
+    public const member q_function standardButton(QAbstractButton * button) : StandardButton;
+    public const member q_function standardButtons() : StandardButtons;
+
+
+
+}
+

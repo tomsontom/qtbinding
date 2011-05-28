@@ -1,0 +1,15 @@
+q_class QStyleOptionGraphicsItem extends QStyleOption {
+    q_enumeration StyleOptionType {
+        Type = SO_GraphicsItem
+    }
+
+    q_enumeration StyleOptionVersion {
+        Version = 1
+    }
+
+
+    public class q_function levelOfDetailFromTransform(const QTransform & worldTransform) : qreal;
+
+
+}
+

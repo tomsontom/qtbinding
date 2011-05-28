@@ -1,0 +1,132 @@
+q_class QGraphicsScene extends QObject {
+    q_enumeration ItemIndexMethod {
+        BspTreeIndex = 0
+        NoIndex = -1
+    }
+
+    q_enumeration SceneLayer {
+        ItemLayer = 1
+        BackgroundLayer = 2
+        ForegroundLayer = 4
+        AllLayers = 65535
+    }
+
+    q_flags SceneLayers : SceneLayer;
+
+
+    q_property QBrush backgroundBrush;
+    q_property int bspTreeDepth;
+    q_property QFont font;
+    q_property QBrush foregroundBrush;
+    q_property ItemIndexMethod itemIndexMethod;
+    q_property QPalette palette;
+    q_property QRectF sceneRect;
+    q_property bool sortCacheEnabled;
+    q_property bool stickyFocus;
+
+    public const member q_function activePanel() : QGraphicsItem *;
+    public const member q_function activeWindow() : QGraphicsWidget *;
+    public member q_function addEllipse(const QRectF & rect, const QPen & pen = QPen(), const QBrush & brush = QBrush()) : QGraphicsEllipseItem *;
+    public member q_function addEllipse(qreal x, qreal y, qreal w, qreal h, const QPen & pen = QPen(), const QBrush & brush = QBrush()) : QGraphicsEllipseItem *;
+    public member q_function addItem(QGraphicsItem * item) : void;
+    public member q_function addLine(const QLineF & line, const QPen & pen = QPen()) : QGraphicsLineItem *;
+    public member q_function addLine(qreal x1, qreal y1, qreal x2, qreal y2, const QPen & pen = QPen()) : QGraphicsLineItem *;
+    public member q_function addPath(const QPainterPath & path, const QPen & pen = QPen(), const QBrush & brush = QBrush()) : QGraphicsPathItem *;
+    public member q_function addPixmap(const QPixmap & pixmap) : QGraphicsPixmapItem *;
+    public member q_function addPolygon(const QPolygonF & polygon, const QPen & pen = QPen(), const QBrush & brush = QBrush()) : QGraphicsPolygonItem *;
+    public member q_function addRect(qreal x, qreal y, qreal w, qreal h, const QPen & pen = QPen(), const QBrush & brush = QBrush()) : QGraphicsRectItem *;
+    public member q_function addRect(const QRectF & rect, const QPen & pen = QPen(), const QBrush & brush = QBrush()) : QGraphicsRectItem *;
+    public member q_function addSimpleText(const QString & text, const QFont & font = QFont()) : QGraphicsSimpleTextItem *;
+    public member q_function addText(const QString & text, const QFont & font = QFont()) : QGraphicsTextItem *;
+    public member q_function addWidget(QWidget * widget, Qt.WindowFlags wFlags = 0) : QGraphicsProxyWidget *;
+    public const member q_function backgroundBrush() : QBrush;
+    public const member q_function bspTreeDepth() : int;
+    public member q_function clearFocus() : void;
+    public const member q_function collidingItems(const QGraphicsItem * item, Qt.ItemSelectionMode mode = Qt.IntersectsItemShape) : QList<QGraphicsItem *>;
+    public member q_function createItemGroup(const QList<QGraphicsItem *> & items) : QGraphicsItemGroup *;
+    public member q_function destroyItemGroup(QGraphicsItemGroup * group) : void;
+    public const member q_function focusItem() : QGraphicsItem *;
+    public const member q_function font() : QFont;
+    public const member q_function foregroundBrush() : QBrush;
+    public const member q_function hasFocus() : bool;
+    public const member q_function height() : qreal;
+    public const virtual member q_function inputMethodQuery(Qt.InputMethodQuery query) : QVariant;
+    public member q_function invalidate(qreal x, qreal y, qreal w, qreal h, SceneLayers layers = AllLayers) : void;
+    public const member q_function isActive() : bool;
+    public const member q_function isSortCacheEnabled() : bool;
+    public const member q_function itemAt(qreal x, qreal y) : QGraphicsItem *;
+    public const member q_function itemAt(const QPointF & position, const QTransform & deviceTransform) : QGraphicsItem *;
+    public const member q_function itemAt(const QPointF & position) : QGraphicsItem *;
+    public const member q_function itemAt(qreal x, qreal y, const QTransform & deviceTransform) : QGraphicsItem *;
+    public const member q_function itemIndexMethod() : ItemIndexMethod;
+    public const member q_function items(const QPolygonF & polygon, Qt.ItemSelectionMode mode = Qt.IntersectsItemShape) : QList<QGraphicsItem *>;
+    public const member q_function items(const QPointF & pos) : QList<QGraphicsItem *>;
+    public const member q_function items(const QPainterPath & path, Qt.ItemSelectionMode mode = Qt.IntersectsItemShape) : QList<QGraphicsItem *>;
+    public const member q_function items(const QPolygonF & polygon, Qt.ItemSelectionMode mode, Qt.SortOrder order, const QTransform & deviceTransform = QTransform()) : QList<QGraphicsItem *>;
+    public const member q_function items(const QRectF & rectangle, Qt.ItemSelectionMode mode = Qt.IntersectsItemShape) : QList<QGraphicsItem *>;
+    public const member q_function items(qreal x, qreal y, qreal w, qreal h, Qt.ItemSelectionMode mode, Qt.SortOrder order, const QTransform & deviceTransform = QTransform()) : QList<QGraphicsItem *>;
+    public const member q_function items() : QList<QGraphicsItem *>;
+    public const member q_function items(qreal x, qreal y, qreal w, qreal h, Qt.ItemSelectionMode mode = Qt.IntersectsItemShape) : QList<QGraphicsItem *>;
+    public const member q_function items(Qt.SortOrder order) : QList<QGraphicsItem *>;
+    public const member q_function items(const QPainterPath & path, Qt.ItemSelectionMode mode, Qt.SortOrder order, const QTransform & deviceTransform = QTransform()) : QList<QGraphicsItem *>;
+    public const member q_function items(const QPointF & pos, Qt.ItemSelectionMode mode, Qt.SortOrder order, const QTransform & deviceTransform = QTransform()) : QList<QGraphicsItem *>;
+    public const member q_function items(const QRectF & rect, Qt.ItemSelectionMode mode, Qt.SortOrder order, const QTransform & deviceTransform = QTransform()) : QList<QGraphicsItem *>;
+    public const member q_function itemsBoundingRect() : QRectF;
+    public const member q_function mouseGrabberItem() : QGraphicsItem *;
+    public const member q_function palette() : QPalette;
+    public member q_function removeItem(QGraphicsItem * item) : void;
+    public member q_function render(QPainter * painter, const QRectF & target = QRectF(), const QRectF & source = QRectF(), Qt.AspectRatioMode aspectRatioMode = Qt.KeepAspectRatio) : void;
+    public const member q_function selectedItems() : QList<QGraphicsItem *>;
+    public const member q_function selectionArea() : QPainterPath;
+    public member q_function sendEvent(QGraphicsItem * item, QEvent * event) : bool;
+    public member q_function setActivePanel(QGraphicsItem * item) : void;
+    public member q_function setActiveWindow(QGraphicsWidget * widget) : void;
+    public member q_function setBackgroundBrush(const QBrush & brush) : void;
+    public member q_function setBspTreeDepth(int depth) : void;
+    public member q_function setFocus(Qt.FocusReason focusReason = Qt.OtherFocusReason) : void;
+    public member q_function setFocusItem(QGraphicsItem * item, Qt.FocusReason focusReason = Qt.OtherFocusReason) : void;
+    public member q_function setFont(const QFont & font) : void;
+    public member q_function setForegroundBrush(const QBrush & brush) : void;
+    public member q_function setItemIndexMethod(ItemIndexMethod method) : void;
+    public member q_function setPalette(const QPalette & palette) : void;
+    public member q_function setSceneRect(const QRectF & rect) : void;
+    public member q_function setSceneRect(qreal x, qreal y, qreal w, qreal h) : void;
+    public member q_function setSelectionArea(const QPainterPath & path, const QTransform & deviceTransform) : void;
+    public member q_function setSelectionArea(const QPainterPath & path, Qt.ItemSelectionMode mode, const QTransform & deviceTransform) : void;
+    public member q_function setSelectionArea(const QPainterPath & path, Qt.ItemSelectionMode mode) : void;
+    public member q_function setSelectionArea(const QPainterPath & path) : void;
+    public member q_function setSortCacheEnabled(bool enabled) : void;
+    public member q_function setStickyFocus(bool enabled) : void;
+    public member q_function setStyle(QStyle * style) : void;
+    public const member q_function stickyFocus() : bool;
+    public const member q_function style() : QStyle *;
+    public member q_function update(qreal x, qreal y, qreal w, qreal h) : void;
+    public const member q_function views() : QList<QGraphicsView *>;
+    public const member q_function width() : qreal;
+
+    protected virtual member q_function contextMenuEvent(QGraphicsSceneContextMenuEvent * contextMenuEvent) : void;
+    protected virtual member q_function dragEnterEvent(QGraphicsSceneDragDropEvent * event) : void;
+    protected virtual member q_function dragLeaveEvent(QGraphicsSceneDragDropEvent * event) : void;
+    protected virtual member q_function dragMoveEvent(QGraphicsSceneDragDropEvent * event) : void;
+    protected virtual member q_function drawBackground(QPainter * painter, const QRectF & rect) : void;
+    protected virtual member q_function drawForeground(QPainter * painter, const QRectF & rect) : void;
+    protected virtual member q_function drawItems(QPainter * painter, int numItems, QGraphicsItem *[] items, const QStyleOptionGraphicsItem[] options, QWidget * widget = 0) : void;
+    protected virtual member q_function dropEvent(QGraphicsSceneDragDropEvent * event) : void;
+    protected virtual member q_function event(QEvent * event) : bool;
+    protected virtual member q_function focusInEvent(QFocusEvent * focusEvent) : void;
+    protected virtual member q_function focusOutEvent(QFocusEvent * focusEvent) : void;
+    protected virtual member q_function helpEvent(QGraphicsSceneHelpEvent * helpEvent) : void;
+    protected virtual member q_function inputMethodEvent(QInputMethodEvent * event) : void;
+    protected virtual member q_function keyPressEvent(QKeyEvent * keyEvent) : void;
+    protected virtual member q_function keyReleaseEvent(QKeyEvent * keyEvent) : void;
+    protected virtual member q_function mouseDoubleClickEvent(QGraphicsSceneMouseEvent * mouseEvent) : void;
+    protected virtual member q_function mouseMoveEvent(QGraphicsSceneMouseEvent * mouseEvent) : void;
+    protected virtual member q_function mousePressEvent(QGraphicsSceneMouseEvent * mouseEvent) : void;
+    protected virtual member q_function mouseReleaseEvent(QGraphicsSceneMouseEvent * mouseEvent) : void;
+    protected virtual member q_function wheelEvent(QGraphicsSceneWheelEvent * wheelEvent) : void;
+
+
+
+
+}
+

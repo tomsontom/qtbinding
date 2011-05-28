@@ -1,0 +1,10 @@
+q_class QIconEngine {
+    public virtual member q_function actualSize(const QSize & size, QIcon.Mode mode, QIcon.State state) : QSize;
+    public virtual member q_function addFile(const QString & fileName, const QSize & size, QIcon.Mode mode, QIcon.State state) : void;
+    public virtual member q_function addPixmap(const QPixmap & pixmap, QIcon.Mode mode, QIcon.State state) : void;
+    public purevirtual member q_function paint(QPainter * painter, const QRect & rect, QIcon.Mode mode, QIcon.State state) : void;
+    public virtual member q_function pixmap(const QSize & size, QIcon.Mode mode, QIcon.State state) : QPixmap;
+
+
+}
+

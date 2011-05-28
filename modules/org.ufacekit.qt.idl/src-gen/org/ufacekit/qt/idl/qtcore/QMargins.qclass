@@ -1,0 +1,14 @@
+q_class QMargins {
+    public const member q_function bottom() : int;
+    public const member q_function isNull() : bool;
+    public const member q_function left() : int;
+    public const member q_function right() : int;
+    public member q_function setBottom(int bottom) : void;
+    public member q_function setLeft(int left) : void;
+    public member q_function setRight(int right) : void;
+    public member q_function setTop(int Top) : void;
+    public const member q_function top() : int; 
+
+
+}
+

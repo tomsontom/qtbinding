@@ -1,0 +1,30 @@
+q_class QFontMetricsF {
+    public const member q_function ascent() : qreal;
+    public const member q_function averageCharWidth() : qreal;
+    public const member q_function boundingRect(const QString & text) : QRectF;
+    public const member q_function boundingRect(const QRectF & rect, int flags, const QString & text, int tabStops = 0, int * tabArray = 0) : QRectF;
+    public const member q_function boundingRect(QChar ch) : QRectF;
+    public const member q_function descent() : qreal;
+    public const member q_function elidedText(const QString & text, Qt.TextElideMode mode, qreal width, int flags = 0) : QString;
+    public const member q_function height() : qreal;
+    public const member q_function inFont(QChar ch) : bool;
+    public const member q_function leading() : qreal;
+    public const member q_function leftBearing(QChar ch) : qreal;
+    public const member q_function lineSpacing() : qreal;
+    public const member q_function lineWidth() : qreal;
+    public const member q_function maxWidth() : qreal;
+    public const member q_function minLeftBearing() : qreal;
+    public const member q_function minRightBearing() : qreal;
+    public const member q_function overlinePos() : qreal;
+    public const member q_function rightBearing(QChar ch) : qreal;
+    public const member q_function size(int flags, const QString & text, int tabStops = 0, int * tabArray = 0) : QSizeF;
+    public const member q_function strikeOutPos() : qreal;
+    public const member q_function tightBoundingRect(const QString & text) : QRectF;
+    public const member q_function underlinePos() : qreal;
+    public const member q_function width(const QString & text) : qreal;
+    public const member q_function width(QChar ch) : qreal;
+    public const member q_function xHeight() : qreal;
+
+
+}
+

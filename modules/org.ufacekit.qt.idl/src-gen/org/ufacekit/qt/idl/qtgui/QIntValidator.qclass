@@ -1,0 +1,14 @@
+q_class QIntValidator extends QValidator {
+    q_property int bottom;
+    q_property int top;
+
+    public const member q_function bottom() : int;
+    public member q_function setBottom(int ) : void;
+    public virtual member q_function setRange(int bottom, int top) : void;
+    public member q_function setTop(int ) : void;
+    public const member q_function top() : int;
+    public const virtual member q_function validate(QString & input, int & pos) : QValidator.State;
+
+
+}
+

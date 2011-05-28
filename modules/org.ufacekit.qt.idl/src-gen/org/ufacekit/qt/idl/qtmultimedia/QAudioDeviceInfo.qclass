@@ -1,0 +1,21 @@
+q_class QAudioDeviceInfo {
+    public class q_function availableDevices(QAudio.Mode mode) : QList<QAudioDeviceInfo>;
+    public class q_function defaultInputDevice() : QAudioDeviceInfo;
+    public class q_function defaultOutputDevice() : QAudioDeviceInfo;
+    public const member q_function deviceName() : QString;
+    public const member q_function isFormatSupported(const QAudioFormat & settings) : bool;
+    public const member q_function isNull() : bool;
+    public const member q_function nearestFormat(const QAudioFormat & settings) : QAudioFormat;
+    public const member q_function preferredFormat() : QAudioFormat;
+    public const member q_function supportedByteOrders() : QList<QAudioFormat.Endian>;
+    public const member q_function supportedChannelCounts() : QList<int>;
+    public const member q_function supportedChannels() : QList<int>;
+    public const member q_function supportedCodecs() : QStringList;
+    public const member q_function supportedFrequencies() : QList<int>;
+    public const member q_function supportedSampleRates() : QList<int>;
+    public const member q_function supportedSampleSizes() : QList<int>;
+    public const member q_function supportedSampleTypes() : QList<QAudioFormat.SampleType>;
+
+
+}
+

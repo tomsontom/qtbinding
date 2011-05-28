@@ -1,0 +1,7 @@
+q_class QDBusAbstractAdaptor extends QObject {
+    protected const member q_function autoRelaySignals() : bool;
+    protected member q_function setAutoRelaySignals(bool enable) : void;
+
+
+}
+

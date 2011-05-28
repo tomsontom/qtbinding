@@ -1,0 +1,7 @@
+q_class QGraphicsSceneResizeEvent extends QGraphicsSceneEvent {
+    public const member q_function newSize() : QSizeF;
+    public const member q_function oldSize() : QSizeF;
+
+
+}
+

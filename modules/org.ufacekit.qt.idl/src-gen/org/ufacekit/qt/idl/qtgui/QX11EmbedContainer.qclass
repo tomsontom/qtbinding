@@ -1,0 +1,17 @@
+q_class QX11EmbedContainer extends QWidget {
+    q_enumeration Error {
+        Unknown = 0
+        Internal = 1
+        InvalidWindowID = 2
+    }
+
+
+    public const member q_function clientWinId() : WId;
+    public member q_function discardClient() : void;
+    public member q_function embedClient(WId id) : void;
+    public const member q_function error() : Error;
+
+
+
+}
+

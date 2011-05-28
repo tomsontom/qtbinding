@@ -1,0 +1,6 @@
+q_class QDomComment extends QDomCharacterData {
+    public const member q_function nodeType() : QDomNode.NodeType;
+
+
+}
+

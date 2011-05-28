@@ -1,0 +1,22 @@
+q_class QWorkspace extends QWidget {
+    q_enumeration WindowOrder {
+        CreationOrder = 0
+        StackingOrder = 1
+    }
+
+
+    q_property QBrush background;
+    q_property bool scrollBarsEnabled;
+
+    public const member q_function activeWindow() : QWidget *;
+    public member q_function addWindow(QWidget * w, Qt.WindowFlags flags = 0) : QWidget *;
+    public const member q_function background() : QBrush;
+    public const member q_function scrollBarsEnabled() : bool;
+    public member q_function setScrollBarsEnabled(bool enable) : void;
+    public const member q_function windowList(WindowOrder order = CreationOrder) : QWidgetList;
+
+
+
+
+}
+

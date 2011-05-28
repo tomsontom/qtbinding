@@ -1,0 +1,13 @@
+q_class QStyleOptionTitleBar extends QStyleOptionComplex {
+    q_enumeration StyleOptionType {
+        Type = SO_TitleBar
+    }
+
+    q_enumeration StyleOptionVersion {
+        Version = 1
+    }
+
+
+
+}
+

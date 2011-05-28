@@ -1,0 +1,64 @@
+q_class QAbstractSlider extends QWidget {
+    q_enumeration SliderAction {
+        SliderNoAction = 0
+        SliderSingleStepAdd = 1
+        SliderSingleStepSub = 2
+        SliderPageStepAdd = 3
+        SliderPageStepSub = 4
+        SliderToMinimum = 5
+        SliderToMaximum = 6
+        SliderMove = 7
+    }
+
+    q_enumeration SliderChange {
+        SliderRangeChange = 0
+        SliderOrientationChange = 1
+        SliderStepsChange = 2
+        SliderValueChange = 3
+    }
+
+
+    q_property bool invertedAppearance;
+    q_property bool invertedControls;
+    q_property int maximum;
+    q_property int minimum;
+    q_property Qt.Orientation orientation;
+    q_property int pageStep;
+    q_property int singleStep;
+    q_property bool sliderDown;
+    q_property int sliderPosition;
+    q_property bool tracking;
+    q_property int value;
+
+    public const member q_function hasTracking() : bool;
+    public const member q_function invertedAppearance() : bool;
+    public const member q_function invertedControls() : bool;
+    public const member q_function isSliderDown() : bool;
+    public const member q_function maximum() : int;
+    public const member q_function minimum() : int;
+    public const member q_function orientation() : Qt.Orientation;
+    public const member q_function pageStep() : int;
+    public member q_function setInvertedAppearance(bool ) : void;
+    public member q_function setInvertedControls(bool ) : void;
+    public member q_function setMaximum(int ) : void;
+    public member q_function setMinimum(int ) : void;
+    public member q_function setPageStep(int ) : void;
+    public member q_function setRange(int min, int max) : void;
+    public member q_function setSingleStep(int ) : void;
+    public member q_function setSliderDown(bool ) : void;
+    public member q_function setSliderPosition(int ) : void;
+    public member q_function setTracking(bool enable) : void;
+    public const member q_function singleStep() : int;
+    public const member q_function sliderPosition() : int;
+    public member q_function triggerAction(SliderAction action) : void;
+    public const member q_function value() : int;
+
+    protected const member q_function repeatAction() : SliderAction;
+    protected member q_function setRepeatAction(SliderAction action, int thresholdTime = 500, int repeatTime = 50) : void;
+    protected virtual member q_function sliderChange(SliderChange change) : void;
+
+
+
+
+}
+

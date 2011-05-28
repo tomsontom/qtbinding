@@ -1,0 +1,17 @@
+q_class QTextTableCell {
+    public const member q_function begin() : QTextFrame.iterator;
+    public const member q_function column() : int;
+    public const member q_function columnSpan() : int;
+    public const member q_function end() : QTextFrame.iterator;
+    public const member q_function firstCursorPosition() : QTextCursor;
+    public const member q_function format() : QTextCharFormat;
+    public const member q_function isValid() : bool;
+    public const member q_function lastCursorPosition() : QTextCursor;
+    public const member q_function row() : int;
+    public const member q_function rowSpan() : int;
+    public member q_function setFormat(const QTextCharFormat & format) : void;
+    public const member q_function tableCellFormatIndex() : int;
+
+
+}
+

@@ -1,0 +1,26 @@
+q_class QAbstractVideoSurface extends QObject {
+    q_enumeration Error {
+        NoError = 0
+        UnsupportedFormatError = 1
+        IncorrectFormatError = 2
+        StoppedError = 3
+        ResourceError = 4
+    }
+
+
+    public const member q_function error() : Error;
+    public const member q_function isActive() : bool;
+    public const virtual member q_function isFormatSupported(const QVideoSurfaceFormat & format) : bool;
+    public const virtual member q_function nearestFormat(const QVideoSurfaceFormat & format) : QVideoSurfaceFormat;
+    public purevirtual member q_function present(const QVideoFrame & frame) : bool;
+    public virtual member q_function start(const QVideoSurfaceFormat & format) : bool;
+    public virtual member q_function stop() : void;
+    public const purevirtual member q_function supportedPixelFormats(QAbstractVideoBuffer.HandleType type = QAbstractVideoBuffer.NoHandle) : QList<QVideoFrame.PixelFormat>;
+    public const member q_function surfaceFormat() : QVideoSurfaceFormat;
+
+    protected member q_function setError(Error error) : void;
+
+
+
+}
+

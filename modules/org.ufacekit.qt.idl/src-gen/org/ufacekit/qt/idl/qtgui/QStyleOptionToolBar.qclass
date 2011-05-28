@@ -1,0 +1,27 @@
+q_class QStyleOptionToolBar extends QStyleOption {
+    q_enumeration StyleOptionType {
+        Type = SO_ToolBar
+    }
+
+    q_enumeration StyleOptionVersion {
+        Version = 1
+    }
+
+    q_enumeration ToolBarFeature {
+        None = 0
+        Movable = 1
+    }
+
+    q_flags ToolBarFeatures : ToolBarFeature;
+
+    q_enumeration ToolBarPosition {
+        Beginning = 0
+        Middle = 1
+        End = 2
+        OnlyOne = 3
+    }
+
+
+
+}
+

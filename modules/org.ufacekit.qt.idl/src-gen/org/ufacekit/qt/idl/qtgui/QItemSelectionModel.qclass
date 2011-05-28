@@ -1,0 +1,38 @@
+q_class QItemSelectionModel extends QObject {
+    q_enumeration SelectionFlag {
+        NoUpdate = 0
+        Clear = 1
+        Select = 2
+        Deselect = 4
+        Toggle = 8
+        Current = 16
+        Rows = 32
+        Columns = 64
+        SelectCurrent = Select  |  Current
+        ToggleCurrent = Toggle  |  Current
+        ClearAndSelect = Clear  |  Select
+    }
+
+    q_flags SelectionFlags : SelectionFlag;
+
+
+    public const member q_function columnIntersectsSelection(int column, const QModelIndex & parent) : bool;
+    public const member q_function currentIndex() : QModelIndex;
+    public const member q_function hasSelection() : bool;
+    public const member q_function isColumnSelected(int column, const QModelIndex & parent) : bool;
+    public const member q_function isRowSelected(int row, const QModelIndex & parent) : bool;
+    public const member q_function isSelected(const QModelIndex & index) : bool;
+    public const member q_function model() : const QAbstractItemModel *;
+    public const member q_function rowIntersectsSelection(int row, const QModelIndex & parent) : bool;
+    public const member q_function selectedColumns(int row = 0) : QModelIndexList;
+    public const member q_function selectedIndexes() : QModelIndexList;
+    public const member q_function selectedRows(int column = 0) : QModelIndexList;
+    public const member q_function selection() : const QItemSelection;
+
+    protected member q_function emitSelectionChanged(const QItemSelection & newSelection, const QItemSelection & oldSelection) : void;
+
+
+
+
+}
+

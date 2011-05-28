@@ -1,0 +1,26 @@
+q_class QHostInfo {
+    q_enumeration HostInfoError {
+        NoError = 0
+        HostNotFound = 1
+        UnknownError = 2
+    }
+
+
+    public class q_function abortHostLookup(int id) : void;
+    public const member q_function addresses() : QList<QHostAddress>;
+    public const member q_function error() : HostInfoError;
+    public const member q_function errorString() : QString;
+    public class q_function fromName(const QString & name) : QHostInfo;
+    public class q_function localDomainName() : QString;
+    public class q_function localHostName() : QString;
+    public class q_function lookupHost(const QString & name, QObject * receiver, const char * member) : int;
+    public const member q_function lookupId() : int;
+    public member q_function setAddresses(const QList<QHostAddress> & addresses) : void;
+    public member q_function setError(HostInfoError error) : void;
+    public member q_function setErrorString(const QString & str) : void;
+    public member q_function setHostName(const QString & hostName) : void;
+    public member q_function setLookupId(int id) : void;
+
+
+}
+

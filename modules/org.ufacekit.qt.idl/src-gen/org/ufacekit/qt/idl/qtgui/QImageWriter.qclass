@@ -1,0 +1,32 @@
+q_class QImageWriter {
+    q_enumeration ImageWriterError {
+        UnknownError = 0
+        DeviceError = 1
+        UnsupportedFormatError = 2
+    }
+
+
+    public const member q_function canWrite() : bool;
+    public const member q_function compression() : int;
+    public const member q_function description() : QString;
+    public const member q_function device() : QIODevice *;
+    public const member q_function error() : ImageWriterError;
+    public const member q_function errorString() : QString;
+    public const member q_function fileName() : QString;
+    public const member q_function format() : QByteArray;
+    public const member q_function gamma() : float;
+    public const member q_function quality() : int;
+    public member q_function setCompression(int compression) : void;
+    public member q_function setDescription(const QString & description) : void;
+    public member q_function setDevice(QIODevice * device) : void;
+    public member q_function setFileName(const QString & fileName) : void;
+    public member q_function setGamma(float gamma) : void;
+    public member q_function setQuality(int quality) : void;
+    public member q_function setText(const QString & key, const QString & text) : void;
+    public class q_function supportedImageFormats() : QList<QByteArray>;
+    public const member q_function supportsOption(QImageIOHandler.ImageOption option) : bool;
+    public member q_function write(const QImage & image) : bool;
+
+
+}
+

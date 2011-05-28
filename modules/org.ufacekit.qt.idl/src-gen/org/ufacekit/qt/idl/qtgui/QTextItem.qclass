@@ -1,0 +1,22 @@
+q_class QTextItem {
+    q_enumeration RenderFlag {
+        RightToLeft = 1
+        Overline = 16
+        Underline = 32
+        StrikeOut = 64
+        Dummy = 4294967295
+    }
+
+    q_flags RenderFlags : RenderFlag;
+
+
+    public const member q_function ascent() : qreal;
+    public const member q_function descent() : qreal;
+    public const member q_function font() : QFont;
+    public const member q_function renderFlags() : RenderFlags;
+    public const member q_function text() : QString;
+    public const member q_function width() : qreal;
+
+
+}
+

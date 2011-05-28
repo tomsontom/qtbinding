@@ -1,0 +1,11 @@
+q_class QGraphicsColorizeEffect extends QGraphicsEffect {
+    q_property QColor color;
+    q_property qreal strength;
+
+    public const member q_function strength() : qreal;
+
+
+
+
+}
+

@@ -1,0 +1,8 @@
+q_class QAbstractGraphicsShapeItem extends QGraphicsItem {
+    public const member q_function brush() : QBrush;
+    public member q_function setBrush(const QBrush & brush) : void;
+    public member q_function setPen(const QPen & pen) : void;
+
+
+}
+

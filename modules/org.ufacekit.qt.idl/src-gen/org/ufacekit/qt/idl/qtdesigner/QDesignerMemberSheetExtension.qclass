@@ -1,0 +1,18 @@
+q_class QDesignerMemberSheetExtension {
+    public const purevirtual member q_function declaredInClass(int index) : QString;
+    public const purevirtual member q_function indexOf(const QString & name) : int;
+    public const purevirtual member q_function inheritedFromWidget(int index) : bool;
+    public const purevirtual member q_function isSignal(int index) : bool;
+    public const purevirtual member q_function isSlot(int index) : bool;
+    public const purevirtual member q_function isVisible(int index) : bool;
+    public const purevirtual member q_function memberGroup(int index) : QString;
+    public const purevirtual member q_function memberName(int index) : QString;
+    public const purevirtual member q_function parameterNames(int index) : QList<QByteArray>;
+    public const purevirtual member q_function parameterTypes(int index) : QList<QByteArray>;
+    public purevirtual member q_function setMemberGroup(int index, const QString & group) : void;
+    public purevirtual member q_function setVisible(int index, bool visible) : void;
+    public const purevirtual member q_function signature(int index) : QString;
+
+
+}
+

@@ -1,0 +1,79 @@
+q_class QFtp extends QObject {
+    q_enumeration Command {
+        None = 0
+        SetTransferMode = 1
+        SetProxy = 2
+        ConnectToHost = 3
+        Login = 4
+        Close = 5
+        List = 6
+        Cd = 7
+        Get = 8
+        Put = 9
+        Remove = 10
+        Mkdir = 11
+        Rmdir = 12
+        Rename = 13
+        RawCommand = 14
+    }
+
+    q_enumeration Error {
+        NoError = 0
+        UnknownError = 1
+        HostNotFound = 2
+        ConnectionRefused = 3
+        NotConnected = 4
+    }
+
+    q_enumeration State {
+        Unconnected = 0
+        HostLookup = 1
+        Connecting = 2
+        Connected = 3
+        LoggedIn = 4
+        Closing = 5
+    }
+
+    q_enumeration TransferMode {
+        Active = 0
+        Passive = 1
+    }
+
+    q_enumeration TransferType {
+        Binary = 0
+        Ascii = 1
+    }
+
+
+    public const member q_function bytesAvailable() : qint64;
+    public member q_function cd(const QString & dir) : int;
+    public member q_function clearPendingCommands() : void;
+    public member q_function close() : int;
+    public member q_function connectToHost(const QString & host, quint16 port = 21) : int;
+    public const member q_function currentCommand() : Command;
+    public const member q_function currentDevice() : QIODevice *;
+    public const member q_function currentId() : int;
+    public const member q_function error() : Error;
+    public const member q_function errorString() : QString;
+    public member q_function get(const QString & file, QIODevice * dev = 0, TransferType type = Binary) : int;
+    public const member q_function hasPendingCommands() : bool;
+    public member q_function list(const QString & dir = QString()) : int;
+    public member q_function login(const QString & user = QString(), const QString & password = QString()) : int;
+    public member q_function mkdir(const QString & dir) : int;
+    public member q_function put(QIODevice * dev, const QString & file, TransferType type = Binary) : int;
+    public member q_function put(const QByteArray & data, const QString & file, TransferType type = Binary) : int;
+    public member q_function rawCommand(const QString & command) : int;
+    public member q_function read(char * data, qint64 maxlen) : qint64;
+    public member q_function readAll() : QByteArray;
+    public member q_function remove(const QString & file) : int;
+    public member q_function rename(const QString & oldname, const QString & newname) : int;
+    public member q_function rmdir(const QString & dir) : int;
+    public member q_function setProxy(const QString & host, quint16 port) : int;
+    public member q_function setTransferMode(TransferMode mode) : int;
+    public const member q_function state() : State;
+
+
+
+
+}
+

@@ -1,0 +1,10 @@
+q_class QHttpRequestHeader extends QHttpHeader {
+    public const virtual member q_function majorVersion() : int;
+    public const member q_function method() : QString;
+    public const virtual member q_function minorVersion() : int;
+    public const member q_function path() : QString;
+    public member q_function setRequest(const QString & method, const QString & path, int majorVer = 1, int minorVer = 1) : void;
+
+
+}
+

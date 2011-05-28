@@ -1,0 +1,44 @@
+q_class QPrintEngine {
+    q_enumeration PrintEnginePropertyKey {
+        PPK_CollateCopies = 0
+        PPK_ColorMode = 1
+        PPK_Creator = 2
+        PPK_DocumentName = 3
+        PPK_FullPage = 4
+        PPK_NumberOfCopies = 5
+        PPK_Orientation = 6
+        PPK_OutputFileName = 7
+        PPK_PageOrder = 8
+        PPK_PageRect = 9
+        PPK_PageSize = 10
+        PPK_PaperRect = 11
+        PPK_PaperSource = 12
+        PPK_PrinterName = 13
+        PPK_PrinterProgram = 14
+        PPK_Resolution = 15
+        PPK_SelectionOption = 16
+        PPK_SupportedResolutions = 17
+        PPK_WindowsPageSize = 18
+        PPK_FontEmbedding = 19
+        PPK_SuppressSystemPrintStatus = 20
+        PPK_Duplex = 21
+        PPK_PaperSources = 22
+        PPK_CustomPaperSize = 23
+        PPK_PageMargins = 24
+        PPK_CopyCount = 25
+        PPK_SupportsMultipleCopies = 26
+        PPK_PaperSize = PPK_PageSize
+        PPK_CustomBase = 65280
+    }
+
+
+    public purevirtual member q_function abort() : bool;
+    public const purevirtual member q_function metric(QPaintDevice.PaintDeviceMetric id) : int;
+    public purevirtual member q_function newPage() : bool;
+    public const purevirtual member q_function printerState() : QPrinter.PrinterState;
+    public const purevirtual member q_function property(PrintEnginePropertyKey key) : QVariant;
+    public purevirtual member q_function setProperty(PrintEnginePropertyKey key, const QVariant & value) : void;
+
+
+}
+

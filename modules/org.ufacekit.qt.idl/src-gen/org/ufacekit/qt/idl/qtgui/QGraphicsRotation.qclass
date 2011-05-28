@@ -1,0 +1,17 @@
+q_class QGraphicsRotation extends QGraphicsTransform {
+    q_property qreal angle;
+    q_property QVector3D axis;
+    q_property QVector3D origin;
+
+    public const member q_function angle() : qreal;
+    public const member q_function axis() : QVector3D;
+    public const member q_function origin() : QVector3D;
+    public member q_function setAngle(qreal ) : void;
+    public member q_function setAxis(Qt.Axis axis) : void;
+    public member q_function setAxis(const QVector3D & axis) : void;
+    public member q_function setOrigin(const QVector3D & point) : void;
+
+
+
+}
+

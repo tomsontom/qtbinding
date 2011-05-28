@@ -1,0 +1,7 @@
+q_class QMouseDriverPlugin extends QObject {
+    public purevirtual member q_function create(const QString & key, const QString & device) : QWSMouseHandler *;
+    public const purevirtual member q_function keys() : QStringList;
+
+
+}
+

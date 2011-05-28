@@ -1,0 +1,15 @@
+q_class QSignalMapper extends QObject {
+    public const member q_function mapping(QWidget * widget) : QObject *;
+    public const member q_function mapping(int id) : QObject *;
+    public const member q_function mapping(QObject * object) : QObject *;
+    public const member q_function mapping(const QString & id) : QObject *;
+    public member q_function removeMappings(QObject * sender) : void;
+    public member q_function setMapping(QObject * sender, QWidget * widget) : void;
+    public member q_function setMapping(QObject * sender, const QString & text) : void;
+    public member q_function setMapping(QObject * sender, QObject * object) : void;
+
+
+
+
+}
+

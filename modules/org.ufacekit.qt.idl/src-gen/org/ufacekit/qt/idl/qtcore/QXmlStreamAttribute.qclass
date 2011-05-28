@@ -1,0 +1,11 @@
+q_class QXmlStreamAttribute {
+    public const member q_function isDefault() : bool;
+    public const member q_function name() : QStringRef;
+    public const member q_function namespaceUri() : QStringRef;
+    public const member q_function prefix() : QStringRef;
+    public const member q_function qualifiedName() : QStringRef;
+    public const member q_function value() : QStringRef;
+
+
+}
+

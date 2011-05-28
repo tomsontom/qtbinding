@@ -1,0 +1,12 @@
+q_class QDeclarativeImportDatabase {
+    public member q_function addImportPath(const QString & dir) : void;
+    public member q_function addPluginPath(const QString & path) : void;
+    public const member q_function importPathList() : QStringList;
+    public member q_function importPlugin(const QString & filePath, const QString & uri, QString * errorString) : bool;
+    public const member q_function pluginPathList() : QStringList;
+    public member q_function setImportPathList(const QStringList & paths) : void;
+    public member q_function setPluginPathList(const QStringList & paths) : void;
+
+
+}
+

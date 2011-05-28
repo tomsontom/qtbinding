@@ -1,0 +1,22 @@
+q_class QDesktopWidget extends QWidget {
+    q_property const int primaryScreen;
+    q_property const int screenCount;
+    q_property const bool virtualDesktop;
+
+    public const member q_function availableGeometry(int screen = -1) : const QRect;
+    public const member q_function availableGeometry(const QPoint & p) : const QRect;
+    public const member q_function availableGeometry(const QWidget * widget) : const QRect;
+    public const member q_function numScreens() : int;
+    public const member q_function primaryScreen() : int;
+    public member q_function screen(int screen = -1) : QWidget *;
+    public const member q_function screenCount() : int;
+    public const member q_function screenGeometry(const QPoint & p) : const QRect;
+    public const member q_function screenGeometry(const QWidget * widget) : const QRect;
+    public const member q_function screenGeometry(int screen = -1) : const QRect;
+    public const member q_function screenNumber(const QPoint & point) : int;
+    public const member q_function screenNumber(const QWidget * widget = 0) : int;
+
+
+
+}
+

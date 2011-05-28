@@ -1,0 +1,41 @@
+q_class QRegion {
+    q_enumeration RegionType {
+        Rectangle = 0
+        Ellipse = 1
+    }
+
+
+    q_class QRegionData {
+
+    }
+
+
+    public const member q_function boundingRect() : QRect;
+    public const member q_function contains(const QRect & r) : bool;
+    public const member q_function contains(const QPoint & p) : bool;
+    public const member q_function eor(const QRegion & r) : QRegion;
+    public const member q_function intersect(const QRect & rect) : QRegion;
+    public const member q_function intersect(const QRegion & r) : QRegion;
+    public const member q_function intersected(const QRegion & r) : QRegion;
+    public const member q_function intersected(const QRect & rect) : QRegion;
+    public const member q_function intersects(const QRegion & region) : bool;
+    public const member q_function intersects(const QRect & rect) : bool;
+    public const member q_function numRects() : int;
+    public const member q_function rectCount() : int;
+    public const member q_function rects() : QVector<QRect>;
+    public member q_function setRects(const QRect * rects, int number) : void;
+    public const member q_function subtract(const QRegion & r) : QRegion;
+    public const member q_function subtracted(const QRegion & r) : QRegion;
+    public member q_function translate(int dx, int dy) : void;
+    public member q_function translate(const QPoint & point) : void;
+    public const member q_function translated(int dx, int dy) : QRegion;
+    public const member q_function translated(const QPoint & p) : QRegion;
+    public const member q_function unite(const QRegion & r) : QRegion;
+    public const member q_function unite(const QRect & rect) : QRegion;
+    public const member q_function united(const QRect & rect) : QRegion;
+    public const member q_function united(const QRegion & r) : QRegion;
+    public const member q_function xored(const QRegion & r) : QRegion;
+
+
+}
+

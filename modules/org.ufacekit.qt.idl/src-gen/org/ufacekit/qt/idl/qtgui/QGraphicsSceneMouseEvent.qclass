@@ -1,0 +1,17 @@
+q_class QGraphicsSceneMouseEvent extends QGraphicsSceneEvent {
+    public const member q_function button() : Qt.MouseButton;
+    public const member q_function buttonDownPos(Qt.MouseButton button) : QPointF;
+    public const member q_function buttonDownScenePos(Qt.MouseButton button) : QPointF;
+    public const member q_function buttonDownScreenPos(Qt.MouseButton button) : QPoint;
+    public const member q_function buttons() : Qt.MouseButtons;
+    public const member q_function lastPos() : QPointF;
+    public const member q_function lastScenePos() : QPointF;
+    public const member q_function lastScreenPos() : QPoint;
+    public const member q_function modifiers() : Qt.KeyboardModifiers;
+    public const member q_function pos() : QPointF;
+    public const member q_function scenePos() : QPointF;
+    public const member q_function screenPos() : QPoint;
+
+
+}
+

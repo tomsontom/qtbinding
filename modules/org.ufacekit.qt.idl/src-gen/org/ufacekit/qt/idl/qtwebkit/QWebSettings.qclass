@@ -1,0 +1,92 @@
+q_class QWebSettings {
+    q_enumeration FontFamily {
+        StandardFont = 0
+        FixedFont = 1
+        SerifFont = 2
+        SansSerifFont = 3
+        CursiveFont = 4
+        FantasyFont = 5
+    }
+
+    q_enumeration FontSize {
+        MinimumFontSize = 0
+        MinimumLogicalFontSize = 1
+        DefaultFontSize = 2
+        DefaultFixedFontSize = 3
+    }
+
+    q_enumeration WebAttribute {
+        AutoLoadImages = 0
+        JavascriptEnabled = 1
+        JavaEnabled = 2
+        PluginsEnabled = 3
+        PrivateBrowsingEnabled = 4
+        JavascriptCanOpenWindows = 5
+        JavascriptCanAccessClipboard = 6
+        DeveloperExtrasEnabled = 7
+        LinksIncludedInFocusChain = 8
+        ZoomTextOnly = 9
+        PrintElementBackgrounds = 10
+        OfflineStorageDatabaseEnabled = 11
+        OfflineWebApplicationCacheEnabled = 12
+        LocalStorageEnabled = 13
+        LocalStorageDatabaseEnabled = LocalStorageEnabled
+        LocalContentCanAccessRemoteUrls = __UNKNOWN__
+        DnsPrefetchEnabled = __UNKNOWN__
+        XSSAuditingEnabled = __UNKNOWN__
+        AcceleratedCompositingEnabled = __UNKNOWN__
+        SpatialNavigationEnabled = __UNKNOWN__
+        LocalContentCanAccessFileUrls = __UNKNOWN__
+        TiledBackingStoreEnabled = __UNKNOWN__
+        FrameFlatteningEnabled = __UNKNOWN__
+        SiteSpecificQuirksEnabled = __UNKNOWN__
+    }
+
+    q_enumeration WebGraphic {
+        MissingImageGraphic = 0
+        MissingPluginGraphic = 1
+        DefaultFrameIconGraphic = 2
+        TextAreaSizeGripCornerGraphic = 3
+        DeleteButtonGraphic = 4
+    }
+
+
+    public class q_function clearIconDatabase() : void;
+    public class q_function clearMemoryCaches() : void;
+    public const member q_function defaultTextEncoding() : QString;
+    public class q_function enablePersistentStorage(const QString & path = QString()) : void;
+    public const member q_function fontFamily(FontFamily which) : QString;
+    public const member q_function fontSize(FontSize type) : int;
+    public class q_function globalSettings() : QWebSettings *;
+    public class q_function iconDatabasePath() : QString;
+    public class q_function iconForUrl(const QUrl & url) : QIcon;
+    public const member q_function localStoragePath() : QString;
+    public class q_function maximumPagesInCache() : int;
+    public class q_function offlineStorageDefaultQuota() : qint64;
+    public class q_function offlineStoragePath() : QString;
+    public class q_function offlineWebApplicationCachePath() : QString;
+    public class q_function offlineWebApplicationCacheQuota() : qint64;
+    public member q_function resetAttribute(WebAttribute attribute) : void;
+    public member q_function resetFontFamily(FontFamily which) : void;
+    public member q_function resetFontSize(FontSize type) : void;
+    public member q_function setAttribute(WebAttribute attribute, bool on) : void;
+    public member q_function setDefaultTextEncoding(const QString & encoding) : void;
+    public member q_function setFontFamily(FontFamily which, const QString & family) : void;
+    public member q_function setFontSize(FontSize type, int size) : void;
+    public class q_function setIconDatabasePath(const QString & path) : void;
+    public member q_function setLocalStoragePath(const QString & path) : void;
+    public class q_function setMaximumPagesInCache(int pages) : void;
+    public class q_function setObjectCacheCapacities(int cacheMinDeadCapacity, int cacheMaxDead, int totalCapacity) : void;
+    public class q_function setOfflineStorageDefaultQuota(qint64 maximumSize) : void;
+    public class q_function setOfflineStoragePath(const QString & path) : void;
+    public class q_function setOfflineWebApplicationCachePath(const QString & path) : void;
+    public class q_function setOfflineWebApplicationCacheQuota(qint64 maximumSize) : void;
+    public member q_function setUserStyleSheetUrl(const QUrl & location) : void;
+    public class q_function setWebGraphic(WebGraphic type, const QPixmap & graphic) : void;
+    public const member q_function testAttribute(WebAttribute attribute) : bool;
+    public const member q_function userStyleSheetUrl() : QUrl;
+    public class q_function webGraphic(WebGraphic type) : QPixmap;
+
+
+}
+

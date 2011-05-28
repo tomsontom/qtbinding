@@ -1,0 +1,25 @@
+q_class QStackedLayout extends QLayout {
+    q_enumeration StackingMode {
+        StackOne = 0
+        StackAll = 1
+    }
+
+
+    q_property const int count;
+    q_property int currentIndex;
+    q_property StackingMode stackingMode;
+
+    public member q_function addWidget(QWidget * widget) : int;
+    public const virtual member q_function count() : int;
+    public const member q_function currentIndex() : int;
+    public const member q_function currentWidget() : QWidget *;
+    public member q_function insertWidget(int index, QWidget * widget) : int;
+    public member q_function setStackingMode(StackingMode stackingMode) : void;
+    public const member q_function stackingMode() : StackingMode;
+    public const member q_function widget(int index) : QWidget *;
+
+
+
+
+}
+

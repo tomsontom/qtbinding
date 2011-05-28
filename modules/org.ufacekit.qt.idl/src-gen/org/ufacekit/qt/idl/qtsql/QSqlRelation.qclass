@@ -1,0 +1,9 @@
+q_class QSqlRelation {
+    public const member q_function displayColumn() : QString;
+    public const member q_function indexColumn() : QString;
+    public const member q_function isValid() : bool;
+    public const member q_function tableName() : QString;
+
+
+}
+

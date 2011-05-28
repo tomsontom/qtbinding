@@ -1,0 +1,32 @@
+q_class QMdiSubWindow extends QWidget {
+    q_enumeration SubWindowOption {
+        AllowOutsideAreaHorizontally = 1
+        AllowOutsideAreaVertically = 2
+        RubberBandResize = 4
+        RubberBandMove = 8
+    }
+
+    q_flags SubWindowOptions : SubWindowOption;
+
+
+    q_property int keyboardPageStep;
+    q_property int keyboardSingleStep;
+
+    public const member q_function isShaded() : bool;
+    public const member q_function keyboardPageStep() : int;
+    public const member q_function keyboardSingleStep() : int;
+    public const member q_function mdiArea() : QMdiArea *;
+    public member q_function setKeyboardPageStep(int step) : void;
+    public member q_function setKeyboardSingleStep(int step) : void;
+    public member q_function setOption(SubWindowOption option, bool on = true) : void;
+    public member q_function setSystemMenu(QMenu * systemMenu) : void;
+    public member q_function setWidget(QWidget * widget) : void;
+    public const member q_function systemMenu() : QMenu *;
+    public const member q_function testOption(SubWindowOption option) : bool;
+    public const member q_function widget() : QWidget *;
+
+
+
+
+}
+

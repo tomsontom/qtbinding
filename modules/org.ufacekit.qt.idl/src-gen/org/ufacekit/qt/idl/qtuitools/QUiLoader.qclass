@@ -1,0 +1,19 @@
+q_class QUiLoader extends QObject {
+    public member q_function addPluginPath(const QString & path) : void;
+    public const member q_function availableLayouts() : QStringList;
+    public const member q_function availableWidgets() : QStringList;
+    public member q_function clearPluginPaths() : void;
+    public virtual member q_function createAction(QObject * parent = 0, const QString & name = QString()) : QAction *;
+    public virtual member q_function createActionGroup(QObject * parent = 0, const QString & name = QString()) : QActionGroup *;
+    public virtual member q_function createLayout(const QString & className, QObject * parent = 0, const QString & name = QString()) : QLayout *;
+    public virtual member q_function createWidget(const QString & className, QWidget * parent = 0, const QString & name = QString()) : QWidget *;
+    public const member q_function isLanguageChangeEnabled() : bool;
+    public member q_function load(QIODevice * device, QWidget * parentWidget = 0) : QWidget *;
+    public const member q_function pluginPaths() : QStringList;
+    public member q_function setLanguageChangeEnabled(bool enabled) : void;
+    public member q_function setWorkingDirectory(const QDir & dir) : void;
+    public const member q_function workingDirectory() : QDir;
+
+
+}
+

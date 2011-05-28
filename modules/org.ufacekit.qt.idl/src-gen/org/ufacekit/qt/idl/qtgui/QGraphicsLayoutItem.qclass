@@ -1,0 +1,44 @@
+q_class QGraphicsLayoutItem {
+    public const member q_function contentsRect() : QRectF;
+    public const member q_function effectiveSizeHint(Qt.SizeHint which, const QSizeF & constraint = QSizeF()) : QSizeF;
+    public const member q_function geometry() : QRectF;
+    public const virtual member q_function getContentsMargins(qreal * left, qreal * top, qreal * right, qreal * bottom) : void;
+    public const member q_function graphicsItem() : QGraphicsItem *;
+    public const member q_function isLayout() : bool;
+    public const member q_function maximumHeight() : qreal;
+    public const member q_function maximumSize() : QSizeF;
+    public const member q_function maximumWidth() : qreal;
+    public const member q_function minimumHeight() : qreal;
+    public const member q_function minimumSize() : QSizeF;
+    public const member q_function minimumWidth() : qreal;
+    public const member q_function ownedByLayout() : bool;
+    public const member q_function parentLayoutItem() : QGraphicsLayoutItem *;
+    public const member q_function preferredHeight() : qreal;
+    public const member q_function preferredSize() : QSizeF;
+    public const member q_function preferredWidth() : qreal;
+    public virtual member q_function setGeometry(const QRectF & rect) : void;
+    public member q_function setMaximumHeight(qreal height) : void;
+    public member q_function setMaximumSize(const QSizeF & size) : void;
+    public member q_function setMaximumSize(qreal w, qreal h) : void;
+    public member q_function setMaximumWidth(qreal width) : void;
+    public member q_function setMinimumHeight(qreal height) : void;
+    public member q_function setMinimumSize(qreal w, qreal h) : void;
+    public member q_function setMinimumSize(const QSizeF & size) : void;
+    public member q_function setMinimumWidth(qreal width) : void;
+    public member q_function setParentLayoutItem(QGraphicsLayoutItem * parent) : void;
+    public member q_function setPreferredHeight(qreal height) : void;
+    public member q_function setPreferredSize(qreal w, qreal h) : void;
+    public member q_function setPreferredSize(const QSizeF & size) : void;
+    public member q_function setPreferredWidth(qreal width) : void;
+    public member q_function setSizePolicy(QSizePolicy.Policy hPolicy, QSizePolicy.Policy vPolicy, QSizePolicy.ControlType controlType = QSizePolicy.DefaultType) : void;
+    public member q_function setSizePolicy(const QSizePolicy & policy) : void;
+    public const member q_function sizePolicy() : QSizePolicy;
+    public virtual member q_function updateGeometry() : void;
+
+    protected member q_function setGraphicsItem(QGraphicsItem * item) : void;
+    protected member q_function setOwnedByLayout(bool ownership) : void;
+    protected const purevirtual member q_function sizeHint(Qt.SizeHint which, const QSizeF & constraint = QSizeF()) : QSizeF;
+
+
+}
+

@@ -1,0 +1,35 @@
+q_class QMatrix {
+    public const member q_function det() : qreal;
+    public const member q_function determinant() : qreal;
+    public const member q_function dx() : qreal;
+    public const member q_function dy() : qreal;
+    public const member q_function inverted(bool * invertible = 0) : QMatrix;
+    public const member q_function isIdentity() : bool;
+    public const member q_function isInvertible() : bool;
+    public const member q_function m11() : qreal;
+    public const member q_function m12() : qreal;
+    public const member q_function m21() : qreal;
+    public const member q_function m22() : qreal;
+    public const member q_function map(int x, int y, int * tx, int * ty) : void;
+    public const member q_function map(const QPainterPath & path) : QPainterPath;
+    public const member q_function map(qreal x, qreal y, qreal * tx, qreal * ty) : void;
+    public const member q_function map(const QPolygon & polygon) : QPolygon;
+    public const member q_function map(const QPoint & point) : QPoint;
+    public const member q_function map(const QRegion & region) : QRegion;
+    public const member q_function map(const QPointF & point) : QPointF;
+    public const member q_function map(const QLineF & line) : QLineF;
+    public const member q_function map(const QPolygonF & polygon) : QPolygonF;
+    public const member q_function map(const QLine & line) : QLine;
+    public const member q_function mapRect(const QRectF & rectangle) : QRectF;
+    public const member q_function mapRect(const QRect & rectangle) : QRect;
+    public const member q_function mapToPolygon(const QRect & rectangle) : QPolygon;
+    public member q_function reset() : void;
+    public member q_function rotate(qreal degrees) : QMatrix &;
+    public member q_function scale(qreal sx, qreal sy) : QMatrix &;
+    public member q_function setMatrix(qreal m11, qreal m12, qreal m21, qreal m22, qreal dx, qreal dy) : void;
+    public member q_function shear(qreal sh, qreal sv) : QMatrix &;
+    public member q_function translate(qreal dx, qreal dy) : QMatrix &;
+
+
+}
+

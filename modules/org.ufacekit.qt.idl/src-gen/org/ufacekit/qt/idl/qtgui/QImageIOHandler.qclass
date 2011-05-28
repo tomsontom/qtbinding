@@ -1,0 +1,42 @@
+q_class QImageIOHandler {
+    q_enumeration ImageOption {
+        Size = 0
+        ClipRect = 1
+        Description = 2
+        ScaledClipRect = 3
+        ScaledSize = 4
+        CompressionRatio = 5
+        Gamma = 6
+        Quality = 7
+        Name = 8
+        SubType = 9
+        IncrementalReading = 10
+        Endianness = 11
+        Animation = 12
+        BackgroundColor = 13
+        ImageFormat = 14
+    }
+
+
+    public const purevirtual member q_function canRead() : bool;
+    public const virtual member q_function currentImageNumber() : int;
+    public const virtual member q_function currentImageRect() : QRect;
+    public const member q_function device() : QIODevice *;
+    public const member q_function format() : QByteArray;
+    public const virtual member q_function imageCount() : int;
+    public virtual member q_function jumpToImage(int imageNumber) : bool;
+    public virtual member q_function jumpToNextImage() : bool;
+    public const virtual member q_function loopCount() : int;
+    public const virtual member q_function name() : QByteArray;
+    public const virtual member q_function nextImageDelay() : int;
+    public const virtual member q_function option(ImageOption option) : QVariant;
+    public purevirtual member q_function read(QImage * image) : bool;
+    public const member q_function setFormat(const QByteArray & format) : void;
+    public member q_function setFormat(const QByteArray & format) : void;
+    public virtual member q_function setOption(ImageOption option, const QVariant & value) : void;
+    public const virtual member q_function supportsOption(ImageOption option) : bool;
+    public virtual member q_function write(const QImage & image) : bool;
+
+
+}
+

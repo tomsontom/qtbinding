@@ -1,0 +1,266 @@
+q_class QPainter {
+    q_enumeration CompositionMode {
+        CompositionMode_SourceOver = 0
+        CompositionMode_DestinationOver = 1
+        CompositionMode_Clear = 2
+        CompositionMode_Source = 3
+        CompositionMode_Destination = 4
+        CompositionMode_SourceIn = 5
+        CompositionMode_DestinationIn = 6
+        CompositionMode_SourceOut = 7
+        CompositionMode_DestinationOut = 8
+        CompositionMode_SourceAtop = 9
+        CompositionMode_DestinationAtop = 10
+        CompositionMode_Xor = 11
+        CompositionMode_Plus = 12
+        CompositionMode_Multiply = 13
+        CompositionMode_Screen = 14
+        CompositionMode_Overlay = 15
+        CompositionMode_Darken = 16
+        CompositionMode_Lighten = 17
+        CompositionMode_ColorDodge = 18
+        CompositionMode_ColorBurn = 19
+        CompositionMode_HardLight = 20
+        CompositionMode_SoftLight = 21
+        CompositionMode_Difference = 22
+        CompositionMode_Exclusion = 23
+        RasterOp_SourceOrDestination = 24
+        RasterOp_SourceAndDestination = 25
+        RasterOp_SourceXorDestination = 26
+        RasterOp_NotSourceAndNotDestination = 27
+        RasterOp_NotSourceOrNotDestination = 28
+        RasterOp_NotSourceXorDestination = 29
+        RasterOp_NotSource = 30
+        RasterOp_NotSourceAndDestination = 31
+        RasterOp_SourceAndNotDestination = 32
+    }
+
+    q_enumeration PixmapFragmentHint {
+        OpaqueHint = 1
+    }
+
+    q_flags PixmapFragmentHints : PixmapFragmentHint;
+
+    q_enumeration RenderHint {
+        Antialiasing = 1
+        TextAntialiasing = 2
+        SmoothPixmapTransform = 4
+        HighQualityAntialiasing = 8
+        NonCosmeticDefaultPen = 16
+    }
+
+    q_flags RenderHints : RenderHint;
+
+
+    q_class PixmapFragment {
+        public class q_function create(const QPointF & pos, const QRectF & sourceRect, qreal scaleX = 1, qreal scaleY = 1, qreal rotation = 0, qreal opacity = 1) : PixmapFragment;
+
+
+    }
+
+
+    public const member q_function background() : const QBrush &;
+    public const member q_function backgroundMode() : Qt.BGMode;
+    public member q_function begin(QPaintDevice * device) : bool;
+    public member q_function beginNativePainting() : void;
+    public member q_function boundingRect(const QRectF & rectangle, int flags, const QString & text) : QRectF;
+    public member q_function boundingRect(const QRectF & rectangle, const QString & text, const QTextOption & option = QTextOption()) : QRectF;
+    public member q_function boundingRect(const QRect & rectangle, int flags, const QString & text) : QRect;
+    public member q_function boundingRect(int x, int y, int w, int h, int flags, const QString & text) : QRect;
+    public const member q_function brush() : const QBrush &;
+    public const member q_function brushOrigin() : QPoint;
+    public const member q_function clipPath() : QPainterPath;
+    public const member q_function clipRegion() : QRegion;
+    public const member q_function combinedMatrix() : QMatrix;
+    public const member q_function combinedTransform() : QTransform;
+    public const member q_function compositionMode() : CompositionMode;
+    public const member q_function device() : QPaintDevice *;
+    public const member q_function deviceMatrix() : const QMatrix &;
+    public const member q_function deviceTransform() : const QTransform &;
+    public member q_function drawArc(const QRect & rectangle, int startAngle, int spanAngle) : void;
+    public member q_function drawArc(int x, int y, int width, int height, int startAngle, int spanAngle) : void;
+    public member q_function drawArc(const QRectF & rectangle, int startAngle, int spanAngle) : void;
+    public member q_function drawChord(const QRectF & rectangle, int startAngle, int spanAngle) : void;
+    public member q_function drawChord(int x, int y, int width, int height, int startAngle, int spanAngle) : void;
+    public member q_function drawChord(const QRect & rectangle, int startAngle, int spanAngle) : void;
+    public member q_function drawConvexPolygon(const QPolygonF & polygon) : void;
+    public member q_function drawConvexPolygon(const QPoint * points, int pointCount) : void;
+    public member q_function drawConvexPolygon(const QPolygon & polygon) : void;
+    public member q_function drawConvexPolygon(const QPointF * points, int pointCount) : void;
+    public member q_function drawEllipse(const QRect & rectangle) : void;
+    public member q_function drawEllipse(const QPoint & center, int rx, int ry) : void;
+    public member q_function drawEllipse(const QPointF & center, qreal rx, qreal ry) : void;
+    public member q_function drawEllipse(const QRectF & rectangle) : void;
+    public member q_function drawEllipse(int x, int y, int width, int height) : void;
+    public member q_function drawImage(const QPoint & point, const QImage & image, const QRect & source, Qt.ImageConversionFlags flags = Qt.AutoColor) : void;
+    public member q_function drawImage(const QPoint & point, const QImage & image) : void;
+    public member q_function drawImage(const QRect & rectangle, const QImage & image) : void;
+    public member q_function drawImage(const QPointF & point, const QImage & image) : void;
+    public member q_function drawImage(const QRectF & rectangle, const QImage & image) : void;
+    public member q_function drawImage(int x, int y, const QImage & image, int sx = 0, int sy = 0, int sw = -1, int sh = -1, Qt.ImageConversionFlags flags = Qt.AutoColor) : void;
+    public member q_function drawImage(const QPointF & point, const QImage & image, const QRectF & source, Qt.ImageConversionFlags flags = Qt.AutoColor) : void;
+    public member q_function drawImage(const QRectF & target, const QImage & image, const QRectF & source, Qt.ImageConversionFlags flags = Qt.AutoColor) : void;
+    public member q_function drawImage(const QRect & target, const QImage & image, const QRect & source, Qt.ImageConversionFlags flags = Qt.AutoColor) : void;
+    public member q_function drawLine(const QLine & line) : void;
+    public member q_function drawLine(const QPoint & p1, const QPoint & p2) : void;
+    public member q_function drawLine(int x1, int y1, int x2, int y2) : void;
+    public member q_function drawLine(const QLineF & line) : void;
+    public member q_function drawLine(const QPointF & p1, const QPointF & p2) : void;
+    public member q_function drawLines(const QPoint * pointPairs, int lineCount) : void;
+    public member q_function drawLines(const QVector<QPointF> & pointPairs) : void;
+    public member q_function drawLines(const QLine * lines, int lineCount) : void;
+    public member q_function drawLines(const QPointF * pointPairs, int lineCount) : void;
+    public member q_function drawLines(const QVector<QLineF> & lines) : void;
+    public member q_function drawLines(const QVector<QLine> & lines) : void;
+    public member q_function drawLines(const QLineF * lines, int lineCount) : void;
+    public member q_function drawLines(const QVector<QPoint> & pointPairs) : void;
+    public member q_function drawPath(const QPainterPath & path) : void;
+    public member q_function drawPicture(const QPoint & point, const QPicture & picture) : void;
+    public member q_function drawPicture(int x, int y, const QPicture & picture) : void;
+    public member q_function drawPicture(const QPointF & point, const QPicture & picture) : void;
+    public member q_function drawPie(const QRect & rectangle, int startAngle, int spanAngle) : void;
+    public member q_function drawPie(int x, int y, int width, int height, int startAngle, int spanAngle) : void;
+    public member q_function drawPie(const QRectF & rectangle, int startAngle, int spanAngle) : void;
+    public member q_function drawPixmap(const QPointF & point, const QPixmap & pixmap) : void;
+    public member q_function drawPixmap(const QPointF & point, const QPixmap & pixmap, const QRectF & source) : void;
+    public member q_function drawPixmap(int x, int y, int w, int h, const QPixmap & pixmap, int sx, int sy, int sw, int sh) : void;
+    public member q_function drawPixmap(const QRectF & target, const QPixmap & pixmap, const QRectF & source) : void;
+    public member q_function drawPixmap(const QRect & target, const QPixmap & pixmap, const QRect & source) : void;
+    public member q_function drawPixmap(int x, int y, const QPixmap & pixmap, int sx, int sy, int sw, int sh) : void;
+    public member q_function drawPixmap(int x, int y, int width, int height, const QPixmap & pixmap) : void;
+    public member q_function drawPixmap(const QPoint & point, const QPixmap & pixmap) : void;
+    public member q_function drawPixmap(const QPoint & point, const QPixmap & pixmap, const QRect & source) : void;
+    public member q_function drawPixmap(int x, int y, const QPixmap & pixmap) : void;
+    public member q_function drawPixmap(const QRect & rectangle, const QPixmap & pixmap) : void;
+    public member q_function drawPixmapFragments(const PixmapFragment * fragments, int fragmentCount, const QPixmap & pixmap, PixmapFragmentHints hints = 0) : void;
+    public member q_function drawPoint(int x, int y) : void;
+    public member q_function drawPoint(const QPoint & position) : void;
+    public member q_function drawPoint(const QPointF & position) : void;
+    public member q_function drawPoints(const QPoint * points, int pointCount) : void;
+    public member q_function drawPoints(const QPolygonF & points) : void;
+    public member q_function drawPoints(const QPointF * points, int pointCount) : void;
+    public member q_function drawPoints(const QPolygon & points) : void;
+    public member q_function drawPolygon(const QPointF * points, int pointCount, Qt.FillRule fillRule = Qt.OddEvenFill) : void;
+    public member q_function drawPolygon(const QPolygonF & points, Qt.FillRule fillRule = Qt.OddEvenFill) : void;
+    public member q_function drawPolygon(const QPoint * points, int pointCount, Qt.FillRule fillRule = Qt.OddEvenFill) : void;
+    public member q_function drawPolygon(const QPolygon & points, Qt.FillRule fillRule = Qt.OddEvenFill) : void;
+    public member q_function drawPolyline(const QPointF * points, int pointCount) : void;
+    public member q_function drawPolyline(const QPoint * points, int pointCount) : void;
+    public member q_function drawPolyline(const QPolygon & points) : void;
+    public member q_function drawPolyline(const QPolygonF & points) : void;
+    public member q_function drawRect(const QRectF & rectangle) : void;
+    public member q_function drawRect(const QRect & rectangle) : void;
+    public member q_function drawRect(int x, int y, int width, int height) : void;
+    public member q_function drawRects(const QRect * rectangles, int rectCount) : void;
+    public member q_function drawRects(const QRectF * rectangles, int rectCount) : void;
+    public member q_function drawRects(const QVector<QRect> & rectangles) : void;
+    public member q_function drawRects(const QVector<QRectF> & rectangles) : void;
+    public member q_function drawRoundRect(const QRect & r, int xRnd = 25, int yRnd = 25) : void;
+    public member q_function drawRoundRect(int x, int y, int w, int h, int xRnd = 25, int yRnd = 25) : void;
+    public member q_function drawRoundRect(const QRectF & r, int xRnd = 25, int yRnd = 25) : void;
+    public member q_function drawRoundedRect(const QRect & rect, qreal xRadius, qreal yRadius, Qt.SizeMode mode = Qt.AbsoluteSize) : void;
+    public member q_function drawRoundedRect(const QRectF & rect, qreal xRadius, qreal yRadius, Qt.SizeMode mode = Qt.AbsoluteSize) : void;
+    public member q_function drawRoundedRect(int x, int y, int w, int h, qreal xRadius, qreal yRadius, Qt.SizeMode mode = Qt.AbsoluteSize) : void;
+    public member q_function drawStaticText(int left, int top, const QStaticText & staticText) : void;
+    public member q_function drawStaticText(const QPointF & topLeftPosition, const QStaticText & staticText) : void;
+    public member q_function drawStaticText(const QPoint & topLeftPosition, const QStaticText & staticText) : void;
+    public member q_function drawText(const QRectF & rectangle, int flags, const QString & text, QRectF * boundingRect = 0) : void;
+    public member q_function drawText(const QRect & rectangle, int flags, const QString & text, QRect * boundingRect = 0) : void;
+    public member q_function drawText(const QRectF & rectangle, const QString & text, const QTextOption & option = QTextOption()) : void;
+    public member q_function drawText(int x, int y, int width, int height, int flags, const QString & text, QRect * boundingRect = 0) : void;
+    public member q_function drawText(const QPointF & position, const QString & text) : void;
+    public member q_function drawText(const QPoint & position, const QString & text) : void;
+    public member q_function drawText(int x, int y, const QString & text) : void;
+    public member q_function drawTiledPixmap(int x, int y, int width, int height, const QPixmap & pixmap, int sx = 0, int sy = 0) : void;
+    public member q_function drawTiledPixmap(const QRect & rectangle, const QPixmap & pixmap, const QPoint & position = QPoint()) : void;
+    public member q_function drawTiledPixmap(const QRectF & rectangle, const QPixmap & pixmap, const QPointF & position = QPointF()) : void;
+    public member q_function end() : bool;
+    public member q_function endNativePainting() : void;
+    public member q_function eraseRect(const QRect & rectangle) : void;
+    public member q_function eraseRect(const QRectF & rectangle) : void;
+    public member q_function eraseRect(int x, int y, int width, int height) : void;
+    public member q_function fillPath(const QPainterPath & path, const QBrush & brush) : void;
+    public member q_function fillRect(const QRectF & rectangle, Qt.GlobalColor color) : void;
+    public member q_function fillRect(const QRectF & rectangle, Qt.BrushStyle style) : void;
+    public member q_function fillRect(const QRectF & rectangle, const QColor & color) : void;
+    public member q_function fillRect(const QRect & rectangle, const QColor & color) : void;
+    public member q_function fillRect(const QRect & rectangle, Qt.BrushStyle style) : void;
+    public member q_function fillRect(int x, int y, int width, int height, Qt.BrushStyle style) : void;
+    public member q_function fillRect(int x, int y, int width, int height, Qt.GlobalColor color) : void;
+    public member q_function fillRect(int x, int y, int width, int height, const QColor & color) : void;
+    public member q_function fillRect(const QRect & rectangle, Qt.GlobalColor color) : void;
+    public member q_function fillRect(const QRect & rectangle, const QBrush & brush) : void;
+    public member q_function fillRect(const QRectF & rectangle, const QBrush & brush) : void;
+    public member q_function fillRect(int x, int y, int width, int height, const QBrush & brush) : void;
+    public const member q_function font() : const QFont &;
+    public const member q_function fontInfo() : QFontInfo;
+    public const member q_function fontMetrics() : QFontMetrics;
+    public const member q_function hasClipping() : bool;
+    public member q_function initFrom(const QWidget * widget) : void;
+    public const member q_function isActive() : bool;
+    public const member q_function layoutDirection() : Qt.LayoutDirection;
+    public const member q_function matrix() : const QMatrix &;
+    public const member q_function matrixEnabled() : bool;
+    public const member q_function opacity() : qreal;
+    public const member q_function paintEngine() : QPaintEngine *;
+    public const member q_function pen() : const QPen &;
+    public class q_function redirected(const QPaintDevice * device, QPoint * offset = 0) : QPaintDevice *;
+    public const member q_function renderHints() : RenderHints;
+    public member q_function resetMatrix() : void;
+    public member q_function resetTransform() : void;
+    public member q_function restore() : void;
+    public class q_function restoreRedirected(const QPaintDevice * device) : void;
+    public member q_function rotate(qreal angle) : void;
+    public member q_function save() : void;
+    public member q_function scale(qreal sx, qreal sy) : void;
+    public member q_function setBackground(const QBrush & brush) : void;
+    public member q_function setBackgroundMode(Qt.BGMode mode) : void;
+    public member q_function setBrush(Qt.BrushStyle style) : void;
+    public member q_function setBrush(const QBrush & brush) : void;
+    public member q_function setBrushOrigin(const QPointF & position) : void;
+    public member q_function setBrushOrigin(const QPoint & position) : void;
+    public member q_function setBrushOrigin(int x, int y) : void;
+    public member q_function setClipPath(const QPainterPath & path, Qt.ClipOperation operation = Qt.ReplaceClip) : void;
+    public member q_function setClipRect(int x, int y, int width, int height, Qt.ClipOperation operation = Qt.ReplaceClip) : void;
+    public member q_function setClipRect(const QRectF & rectangle, Qt.ClipOperation operation = Qt.ReplaceClip) : void;
+    public member q_function setClipRect(const QRect & rectangle, Qt.ClipOperation operation = Qt.ReplaceClip) : void;
+    public member q_function setClipRegion(const QRegion & region, Qt.ClipOperation operation = Qt.ReplaceClip) : void;
+    public member q_function setClipping(bool enable) : void;
+    public member q_function setCompositionMode(CompositionMode mode) : void;
+    public member q_function setFont(const QFont & font) : void;
+    public member q_function setLayoutDirection(Qt.LayoutDirection direction) : void;
+    public member q_function setMatrix(const QMatrix & matrix, bool combine = false) : void;
+    public member q_function setMatrixEnabled(bool enable) : void;
+    public member q_function setOpacity(qreal opacity) : void;
+    public member q_function setPen(Qt.PenStyle style) : void;
+    public member q_function setPen(const QPen & pen) : void;
+    public member q_function setPen(const QColor & color) : void;
+    public class q_function setRedirected(const QPaintDevice * device, QPaintDevice * replacement, const QPoint & offset = QPoint()) : void;
+    public member q_function setRenderHint(RenderHint hint, bool on = true) : void;
+    public member q_function setRenderHints(RenderHints hints, bool on = true) : void;
+    public member q_function setTransform(const QTransform & transform, bool combine = false) : void;
+    public member q_function setViewTransformEnabled(bool enable) : void;
+    public member q_function setViewport(const QRect & rectangle) : void;
+    public member q_function setViewport(int x, int y, int width, int height) : void;
+    public member q_function setWindow(int x, int y, int width, int height) : void;
+    public member q_function setWindow(const QRect & rectangle) : void;
+    public member q_function setWorldMatrix(const QMatrix & matrix, bool combine = false) : void;
+    public member q_function setWorldMatrixEnabled(bool enable) : void;
+    public member q_function setWorldTransform(const QTransform & matrix, bool combine = false) : void;
+    public member q_function shear(qreal sh, qreal sv) : void;
+    public member q_function strokePath(const QPainterPath & path, const QPen & pen) : void;
+    public const member q_function testRenderHint(RenderHint hint) : bool;
+    public const member q_function transform() : const QTransform &;
+    public member q_function translate(qreal dx, qreal dy) : void;
+    public member q_function translate(const QPointF & offset) : void;
+    public member q_function translate(const QPoint & offset) : void;
+    public const member q_function viewTransformEnabled() : bool;
+    public const member q_function viewport() : QRect;
+    public const member q_function window() : QRect;
+    public const member q_function worldMatrix() : const QMatrix &;
+    public const member q_function worldMatrixEnabled() : bool;
+    public const member q_function worldTransform() : const QTransform &;
+
+
+}
+

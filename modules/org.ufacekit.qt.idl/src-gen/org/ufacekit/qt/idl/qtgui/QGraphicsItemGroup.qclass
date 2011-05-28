@@ -1,0 +1,7 @@
+q_class QGraphicsItemGroup extends QGraphicsItem {
+    public member q_function addToGroup(QGraphicsItem * item) : void;
+    public member q_function removeFromGroup(QGraphicsItem * item) : void;
+
+
+}
+

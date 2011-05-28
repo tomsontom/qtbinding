@@ -1,0 +1,26 @@
+q_class QDoubleValidator extends QValidator {
+    q_enumeration Notation {
+        StandardNotation = 0
+        ScientificNotation = 1
+    }
+
+
+    q_property double bottom;
+    q_property int decimals;
+    q_property Notation notation;
+    q_property double top;
+
+    public const member q_function bottom() : double;
+    public const member q_function decimals() : int;
+    public const member q_function notation() : Notation;
+    public member q_function setBottom(double ) : void;
+    public member q_function setDecimals(int ) : void;
+    public member q_function setNotation(Notation ) : void;
+    public virtual member q_function setRange(double minimum, double maximum, int decimals = 0) : void;
+    public member q_function setTop(double ) : void;
+    public const member q_function top() : double;
+    public const virtual member q_function validate(QString & input, int & pos) : QValidator.State;
+
+
+}
+

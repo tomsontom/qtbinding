@@ -1,0 +1,55 @@
+q_class QImageReader {
+    q_enumeration ImageReaderError {
+        UnknownError = 0
+        FileNotFoundError = 1
+        DeviceError = 2
+        UnsupportedFormatError = 3
+        InvalidDataError = 4
+    }
+
+
+    public const member q_function autoDetectImageFormat() : bool;
+    public const member q_function backgroundColor() : QColor;
+    public const member q_function canRead() : bool;
+    public const member q_function clipRect() : QRect;
+    public const member q_function currentImageNumber() : int;
+    public const member q_function currentImageRect() : QRect;
+    public const member q_function decideFormatFromContent() : bool;
+    public const member q_function device() : QIODevice *;
+    public const member q_function error() : ImageReaderError;
+    public const member q_function errorString() : QString;
+    public const member q_function fileName() : QString;
+    public const member q_function format() : QByteArray;
+    public const member q_function imageCount() : int;
+    public const member q_function imageFormat() : QImage.Format;
+    public class q_function imageFormat(const QString & fileName) : QByteArray;
+    public class q_function imageFormat(QIODevice * device) : QByteArray;
+    public member q_function jumpToImage(int imageNumber) : bool;
+    public member q_function jumpToNextImage() : bool;
+    public const member q_function loopCount() : int;
+    public const member q_function nextImageDelay() : int;
+    public const member q_function quality() : int;
+    public member q_function read(QImage * image) : bool;
+    public member q_function read() : QImage;
+    public const member q_function scaledClipRect() : QRect;
+    public const member q_function scaledSize() : QSize;
+    public member q_function setAutoDetectImageFormat(bool enabled) : void;
+    public member q_function setBackgroundColor(const QColor & color) : void;
+    public member q_function setClipRect(const QRect & rect) : void;
+    public member q_function setDecideFormatFromContent(bool ignored) : void;
+    public member q_function setDevice(QIODevice * device) : void;
+    public member q_function setFileName(const QString & fileName) : void;
+    public member q_function setFormat(const QByteArray & format) : void;
+    public member q_function setQuality(int quality) : void;
+    public member q_function setScaledClipRect(const QRect & rect) : void;
+    public member q_function setScaledSize(const QSize & size) : void;
+    public const member q_function size() : QSize;
+    public class q_function supportedImageFormats() : QList<QByteArray>;
+    public const member q_function supportsAnimation() : bool;
+    public const member q_function supportsOption(QImageIOHandler.ImageOption option) : bool;
+    public const member q_function text(const QString & key) : QString;
+    public const member q_function textKeys() : QStringList;
+
+
+}
+

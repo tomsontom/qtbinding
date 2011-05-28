@@ -1,0 +1,13 @@
+q_class QStyleOptionFrame extends QStyleOption {
+    q_enumeration StyleOptionType {
+        Type = SO_Frame
+    }
+
+    q_enumeration StyleOptionVersion {
+        Version = 1
+    }
+
+
+
+}
+

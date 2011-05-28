@@ -1,0 +1,40 @@
+q_class QAbstractPrintDialog extends QDialog {
+    q_enumeration PrintDialogOption {
+        None = 0
+        PrintToFile = 1
+        PrintSelection = 2
+        PrintPageRange = 4
+        PrintShowPageSize = 8
+        PrintCollateCopies = 16
+        DontUseSheet = 32
+        PrintCurrentPage = 64
+    }
+
+    q_flags PrintDialogOptions : PrintDialogOption;
+
+    q_enumeration PrintRange {
+        AllPages = 0
+        Selection = 1
+        PageRange = 2
+        CurrentPage = 3
+    }
+
+
+    public member q_function addEnabledOption(PrintDialogOption option) : void;
+    public const member q_function enabledOptions() : PrintDialogOptions;
+    public const member q_function fromPage() : int;
+    public const member q_function isOptionEnabled(PrintDialogOption option) : bool;
+    public const member q_function maxPage() : int;
+    public const member q_function minPage() : int;
+    public const member q_function printRange() : PrintRange;
+    public const member q_function printer() : QPrinter *;
+    public member q_function setEnabledOptions(PrintDialogOptions options) : void;
+    public member q_function setFromTo(int from, int to) : void;
+    public member q_function setMinMax(int min, int max) : void;
+    public member q_function setOptionTabs(const QList<QWidget *> & tabs) : void;
+    public member q_function setPrintRange(PrintRange range) : void;
+    public const member q_function toPage() : int;
+
+
+}
+

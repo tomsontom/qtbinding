@@ -1,0 +1,35 @@
+q_class QDataWidgetMapper extends QObject {
+    q_enumeration SubmitPolicy {
+        AutoSubmit = 0
+        ManualSubmit = 1
+    }
+
+
+    q_property int currentIndex;
+    q_property Qt.Orientation orientation;
+    q_property SubmitPolicy submitPolicy;
+
+    public member q_function addMapping(QWidget * widget, int section) : void;
+    public member q_function addMapping(QWidget * widget, int section, const QByteArray & propertyName) : void;
+    public member q_function clearMapping() : void;
+    public const member q_function currentIndex() : int;
+    public const member q_function itemDelegate() : QAbstractItemDelegate *;
+    public const member q_function mappedPropertyName(QWidget * widget) : QByteArray;
+    public const member q_function mappedSection(QWidget * widget) : int;
+    public const member q_function mappedWidgetAt(int section) : QWidget *;
+    public const member q_function model() : QAbstractItemModel *;
+    public const member q_function orientation() : Qt.Orientation;
+    public member q_function removeMapping(QWidget * widget) : void;
+    public const member q_function rootIndex() : QModelIndex;
+    public member q_function setItemDelegate(QAbstractItemDelegate * delegate) : void;
+    public member q_function setModel(QAbstractItemModel * model) : void;
+    public member q_function setOrientation(Qt.Orientation aOrientation) : void;
+    public member q_function setRootIndex(const QModelIndex & index) : void;
+    public member q_function setSubmitPolicy(SubmitPolicy policy) : void;
+    public const member q_function submitPolicy() : SubmitPolicy;
+
+
+
+
+}
+

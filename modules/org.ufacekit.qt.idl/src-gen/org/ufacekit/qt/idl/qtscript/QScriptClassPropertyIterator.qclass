@@ -1,0 +1,14 @@
+q_class QScriptClassPropertyIterator {
+    public const virtual member q_function flags() : QScriptValue.PropertyFlags;
+    public const purevirtual member q_function hasNext() : bool;
+    public const purevirtual member q_function hasPrevious() : bool;
+    public const virtual member q_function id() : uint;
+    public const purevirtual member q_function name() : QScriptString;
+    public purevirtual member q_function next() : void;
+    public purevirtual member q_function previous() : void;
+    public purevirtual member q_function toBack() : void;
+    public purevirtual member q_function toFront() : void;
+
+
+}
+

@@ -1,0 +1,23 @@
+q_class QMacStyle extends QWindowsStyle {
+    q_enumeration FocusRectPolicy {
+        FocusEnabled = 0
+        FocusDisabled = 1
+        FocusDefault = 2
+    }
+
+    q_enumeration WidgetSizePolicy {
+        SizeSmall = 0
+        SizeLarge = 1
+        SizeMini = 2
+        SizeDefault = 3
+    }
+
+
+    public class q_function focusRectPolicy(const QWidget * w) : FocusRectPolicy;
+    public class q_function setFocusRectPolicy(QWidget * w, FocusRectPolicy policy) : void;
+    public class q_function widgetSizePolicy(const QWidget * widget) : WidgetSizePolicy;
+
+
+
+}
+

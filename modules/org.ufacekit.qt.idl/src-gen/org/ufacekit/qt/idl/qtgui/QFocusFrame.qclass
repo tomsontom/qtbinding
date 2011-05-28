@@ -1,0 +1,9 @@
+q_class QFocusFrame extends QWidget {
+    public member q_function setWidget(QWidget * widget) : void;
+    public const member q_function widget() : QWidget *;
+
+    protected const member q_function initStyleOption(QStyleOption * option) : void;
+
+
+}
+

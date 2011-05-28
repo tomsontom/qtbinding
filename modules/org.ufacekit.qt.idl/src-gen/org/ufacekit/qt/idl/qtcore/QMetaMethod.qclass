@@ -1,0 +1,37 @@
+q_class QMetaMethod {
+    q_enumeration Access {
+        Private = 0
+        Protected = 1
+        Public = 2
+    }
+
+    q_enumeration Attributes {
+        Compatibility = 1
+        Cloned = 2
+        Scriptable = 4
+    }
+
+    q_enumeration MethodType {
+        Method = 0
+        Signal = 1
+        Slot = 2
+        Constructor = 3
+    }
+
+
+    public const member q_function access() : Access;
+    public const member q_function invoke(QObject * object, Qt.ConnectionType connectionType, QGenericReturnArgument returnValue, QGenericArgument val0 = QGenericArgument( 0 ), QGenericArgument val1 = QGenericArgument(), QGenericArgument val2 = QGenericArgument(), QGenericArgument val3 = QGenericArgument(), QGenericArgument val4 = QGenericArgument(), QGenericArgument val5 = QGenericArgument(), QGenericArgument val6 = QGenericArgument(), QGenericArgument val7 = QGenericArgument(), QGenericArgument val8 = QGenericArgument(), QGenericArgument val9 = QGenericArgument()) : bool;
+    public const member q_function invoke(QObject * object, Qt.ConnectionType connectionType, QGenericArgument val0 = QGenericArgument( 0 ), QGenericArgument val1 = QGenericArgument(), QGenericArgument val2 = QGenericArgument(), QGenericArgument val3 = QGenericArgument(), QGenericArgument val4 = QGenericArgument(), QGenericArgument val5 = QGenericArgument(), QGenericArgument val6 = QGenericArgument(), QGenericArgument val7 = QGenericArgument(), QGenericArgument val8 = QGenericArgument(), QGenericArgument val9 = QGenericArgument()) : bool;
+    public const member q_function invoke(QObject * object, QGenericReturnArgument returnValue, QGenericArgument val0 = QGenericArgument( 0 ), QGenericArgument val1 = QGenericArgument(), QGenericArgument val2 = QGenericArgument(), QGenericArgument val3 = QGenericArgument(), QGenericArgument val4 = QGenericArgument(), QGenericArgument val5 = QGenericArgument(), QGenericArgument val6 = QGenericArgument(), QGenericArgument val7 = QGenericArgument(), QGenericArgument val8 = QGenericArgument(), QGenericArgument val9 = QGenericArgument()) : bool;
+    public const member q_function invoke(QObject * object, QGenericArgument val0 = QGenericArgument( 0 ), QGenericArgument val1 = QGenericArgument(), QGenericArgument val2 = QGenericArgument(), QGenericArgument val3 = QGenericArgument(), QGenericArgument val4 = QGenericArgument(), QGenericArgument val5 = QGenericArgument(), QGenericArgument val6 = QGenericArgument(), QGenericArgument val7 = QGenericArgument(), QGenericArgument val8 = QGenericArgument(), QGenericArgument val9 = QGenericArgument()) : bool;
+    public const member q_function methodIndex() : int;
+    public const member q_function methodType() : MethodType;
+    public const member q_function parameterNames() : QList<QByteArray>;
+    public const member q_function parameterTypes() : QList<QByteArray>;
+    public const member q_function signature() : const char *;
+    public const member q_function tag() : const char *;
+    public const member q_function typeName() : const char *;
+
+
+}
+

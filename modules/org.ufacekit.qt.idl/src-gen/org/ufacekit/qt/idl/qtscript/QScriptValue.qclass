@@ -1,0 +1,85 @@
+q_class QScriptValue {
+    q_enumeration PropertyFlag {
+        ReadOnly = 1
+        Undeletable = 2
+        SkipInEnumeration = 4
+        PropertyGetter = 8
+        PropertySetter = 16
+        QObjectMember = 32
+        KeepExistingFlags = 2048
+        UserRange = 4278190080
+    }
+
+    q_flags PropertyFlags : PropertyFlag;
+
+    q_enumeration ResolveFlag {
+        ResolveLocal = 0
+        ResolvePrototype = 1
+        ResolveScope = 2
+        ResolveFull = ResolvePrototype  |  ResolveScope
+    }
+
+    q_flags ResolveFlags : ResolveFlag;
+
+    q_enumeration SpecialValue {
+        NullValue = 0
+        UndefinedValue = 1
+    }
+
+
+    public member q_function call(const QScriptValue & thisObject = QScriptValue(), const QScriptValueList & args = QScriptValueList()) : QScriptValue;
+    public member q_function call(const QScriptValue & thisObject, const QScriptValue & arguments) : QScriptValue;
+    public member q_function construct(const QScriptValue & arguments) : QScriptValue;
+    public member q_function construct(const QScriptValueList & args = QScriptValueList()) : QScriptValue;
+    public const member q_function data() : QScriptValue;
+    public const member q_function engine() : QScriptEngine *;
+    public const member q_function equals(const QScriptValue & other) : bool;
+    public const member q_function instanceOf(const QScriptValue & other) : bool;
+    public const member q_function isArray() : bool;
+    public const member q_function isBool() : bool;
+    public const member q_function isBoolean() : bool;
+    public const member q_function isDate() : bool;
+    public const member q_function isError() : bool;
+    public const member q_function isFunction() : bool;
+    public const member q_function isNull() : bool;
+    public const member q_function isNumber() : bool;
+    public const member q_function isObject() : bool;
+    public const member q_function isQMetaObject() : bool;
+    public const member q_function isQObject() : bool;
+    public const member q_function isRegExp() : bool;
+    public const member q_function isString() : bool;
+    public const member q_function isUndefined() : bool;
+    public const member q_function isValid() : bool;
+    public const member q_function isVariant() : bool;
+    public const member q_function lessThan(const QScriptValue & other) : bool;
+    public const member q_function property(const QScriptString & name, const ResolveFlags & mode = ResolvePrototype) : QScriptValue;
+    public const member q_function property(quint32 arrayIndex, const ResolveFlags & mode = ResolvePrototype) : QScriptValue;
+    public const member q_function property(const QString & name, const ResolveFlags & mode = ResolvePrototype) : QScriptValue;
+    public const member q_function propertyFlags(const QString & name, const ResolveFlags & mode = ResolvePrototype) : QScriptValue.PropertyFlags;
+    public const member q_function propertyFlags(const QScriptString & name, const ResolveFlags & mode = ResolvePrototype) : QScriptValue.PropertyFlags;
+    public const member q_function prototype() : QScriptValue;
+    public const member q_function scriptClass() : QScriptClass *;
+    public member q_function setData(const QScriptValue & data) : void;
+    public member q_function setProperty(const QScriptString & name, const QScriptValue & value, const PropertyFlags & flags = KeepExistingFlags) : void;
+    public member q_function setProperty(const QString & name, const QScriptValue & value, const PropertyFlags & flags = KeepExistingFlags) : void;
+    public member q_function setProperty(quint32 arrayIndex, const QScriptValue & value, const PropertyFlags & flags = KeepExistingFlags) : void;
+    public member q_function setPrototype(const QScriptValue & prototype) : void;
+    public member q_function setScriptClass(QScriptClass * scriptClass) : void;
+    public const member q_function strictlyEquals(const QScriptValue & other) : bool;
+    public const member q_function toBool() : bool;
+    public const member q_function toBoolean() : bool;
+    public const member q_function toDateTime() : QDateTime;
+    public const member q_function toInt32() : qint32;
+    public const member q_function toInteger() : qsreal;
+    public const member q_function toNumber() : qsreal;
+    public const member q_function toObject() : QScriptValue;
+    public const member q_function toQMetaObject() : const QMetaObject *;
+    public const member q_function toQObject() : QObject *;
+    public const member q_function toString() : QString;
+    public const member q_function toUInt16() : quint16;
+    public const member q_function toUInt32() : quint32;
+    public const member q_function toVariant() : QVariant;
+
+
+}
+

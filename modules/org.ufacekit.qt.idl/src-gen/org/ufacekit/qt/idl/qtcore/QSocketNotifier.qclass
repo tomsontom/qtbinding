@@ -1,0 +1,17 @@
+q_class QSocketNotifier extends QObject {
+    q_enumeration Type {
+        Read = 0
+        Write = 1
+        Exception = 2
+    }
+
+
+    public const member q_function isEnabled() : bool;
+    public const member q_function socket() : int;
+    public const member q_function type() : Type;
+
+
+
+
+}
+

@@ -1,0 +1,41 @@
+q_class QSortFilterProxyModel extends QAbstractProxyModel {
+    q_property bool dynamicSortFilter;
+    q_property Qt.CaseSensitivity filterCaseSensitivity;
+    q_property int filterKeyColumn;
+    q_property QRegExp filterRegExp;
+    q_property int filterRole;
+    q_property bool isSortLocaleAware;
+    q_property Qt.CaseSensitivity sortCaseSensitivity;
+    q_property int sortRole;
+
+    public const member q_function dynamicSortFilter() : bool;
+    public const member q_function filterCaseSensitivity() : Qt.CaseSensitivity;
+    public const member q_function filterKeyColumn() : int;
+    public const member q_function filterRegExp() : QRegExp;
+    public const member q_function filterRole() : int;
+    public const member q_function isSortLocaleAware() : bool;
+    public const virtual member q_function mapFromSource(const QModelIndex & sourceIndex) : QModelIndex;
+    public const virtual member q_function mapToSource(const QModelIndex & proxyIndex) : QModelIndex;
+    public member q_function setDynamicSortFilter(bool enable) : void;
+    public member q_function setFilterCaseSensitivity(Qt.CaseSensitivity cs) : void;
+    public member q_function setFilterKeyColumn(int column) : void;
+    public member q_function setFilterRegExp(const QRegExp & regExp) : void;
+    public member q_function setFilterRole(int role) : void;
+    public member q_function setSortCaseSensitivity(Qt.CaseSensitivity cs) : void;
+    public member q_function setSortLocaleAware(bool on) : void;
+    public member q_function setSortRole(int role) : void;
+    public const member q_function sortCaseSensitivity() : Qt.CaseSensitivity;
+    public const member q_function sortColumn() : int;
+    public const member q_function sortOrder() : Qt.SortOrder;
+    public const member q_function sortRole() : int;
+
+    protected const virtual member q_function filterAcceptsColumn(int source_column, const QModelIndex & source_parent) : bool;
+    protected const virtual member q_function filterAcceptsRow(int source_row, const QModelIndex & source_parent) : bool;
+    protected member q_function filterChanged() : void;
+    protected member q_function invalidateFilter() : void;
+    protected const virtual member q_function lessThan(const QModelIndex & left, const QModelIndex & right) : bool;
+
+
+
+}
+

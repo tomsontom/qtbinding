@@ -1,0 +1,41 @@
+q_class QNetworkProxy {
+    q_enumeration Capability {
+        TunnelingCapability = 1
+        ListeningCapability = 2
+        UdpTunnelingCapability = 4
+        CachingCapability = 8
+        HostNameLookupCapability = 16
+    }
+
+    q_flags Capabilities : Capability;
+
+    q_enumeration ProxyType {
+        DefaultProxy = 0
+        Socks5Proxy = 1
+        NoProxy = 2
+        HttpProxy = 3
+        HttpCachingProxy = 4
+        FtpCachingProxy = 5
+    }
+
+
+    public class q_function applicationProxy() : QNetworkProxy;
+    public const member q_function capabilities() : Capabilities;
+    public const member q_function hostName() : QString;
+    public const member q_function isCachingProxy() : bool;
+    public const member q_function isTransparentProxy() : bool;
+    public const member q_function password() : QString;
+    public const member q_function port() : quint16;
+    public class q_function setApplicationProxy(const QNetworkProxy & networkProxy) : void;
+    public member q_function setCapabilities(Capabilities capabilities) : void;
+    public member q_function setHostName(const QString & hostName) : void;
+    public member q_function setPassword(const QString & password) : void;
+    public member q_function setPort(quint16 port) : void;
+    public member q_function setType(QNetworkProxy.ProxyType type) : void;
+    public member q_function setUser(const QString & user) : void;
+    public const member q_function type() : QNetworkProxy.ProxyType;
+    public const member q_function user() : QString;
+
+
+}
+

@@ -1,0 +1,14 @@
+q_class QPrintDialog extends QAbstractPrintDialog {
+    q_property PrintDialogOptions options;
+
+    public virtual member q_function done(int result) : void;
+    public const member q_function options() : PrintDialogOptions;
+    public member q_function printer() : QPrinter *;
+    public member q_function setOption(PrintDialogOption option, bool on = true) : void;
+    public member q_function setOptions(PrintDialogOptions options) : void;
+    public const member q_function testOption(PrintDialogOption option) : bool;
+
+
+
+}
+

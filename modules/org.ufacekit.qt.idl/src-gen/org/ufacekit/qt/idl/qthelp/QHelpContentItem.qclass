@@ -1,0 +1,12 @@
+q_class QHelpContentItem {
+    public const member q_function child(int row) : QHelpContentItem *;
+    public const member q_function childCount() : int;
+    public const member q_function childPosition(QHelpContentItem * child) : int;
+    public const member q_function parent() : QHelpContentItem *;
+    public const member q_function row() : int;
+    public const member q_function title() : QString;
+    public const member q_function url() : QUrl;
+
+
+}
+

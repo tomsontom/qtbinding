@@ -1,0 +1,6 @@
+q_class QAbstractUriResolver extends QObject {
+    public const purevirtual member q_function resolve(const QUrl & relative, const QUrl & baseURI) : QUrl;
+
+
+}
+

@@ -1,0 +1,7 @@
+q_class QCleanlooksStyle extends QWindowsStyle {
+    public const virtual member q_function drawItemText(QPainter * painter, const QRect & rectangle, int alignment, const QPalette & palette, bool enabled, const QString & text, QPalette.ColorRole textRole = QPalette.NoRole) : void;
+
+
+
+}
+

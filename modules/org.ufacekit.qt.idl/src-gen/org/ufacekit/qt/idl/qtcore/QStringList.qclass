@@ -1,0 +1,17 @@
+q_class QStringList extends QList<QString> {
+    public const member q_function contains(const QString & str, Qt.CaseSensitivity cs = Qt.CaseSensitive) : bool;
+    public const member q_function filter(const QString & str, Qt.CaseSensitivity cs = Qt.CaseSensitive) : QStringList;
+    public const member q_function indexOf(QRegExp & rx, int from = 0) : int;
+    public const member q_function indexOf(const QRegExp & rx, int from = 0) : int;
+    public const member q_function join(const QString & separator) : QString;
+    public const member q_function lastIndexOf(const QRegExp & rx, int from = -1) : int;
+    public const member q_function lastIndexOf(QRegExp & rx, int from = -1) : int;
+    public const member q_function lastIndexOf(const QString & value, int from = -1) : int;
+    public member q_function removeDuplicates() : int;
+    public member q_function replaceInStrings(const QString & before, const QString & after, Qt.CaseSensitivity cs = Qt.CaseSensitive) : QStringList &;
+    public member q_function replaceInStrings(const QRegExp & rx, const QString & after) : QStringList &;
+    public member q_function sort() : void;
+
+
+}
+

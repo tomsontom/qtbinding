@@ -1,0 +1,24 @@
+q_class QVector4D {
+    public class q_function dotProduct(const QVector4D & v1, const QVector4D & v2) : qreal;
+    public const member q_function isNull() : bool;
+    public const member q_function length() : qreal;
+    public const member q_function lengthSquared() : qreal;
+    public member q_function normalize() : void;
+    public const member q_function normalized() : QVector4D;
+    public member q_function setW(qreal w) : void;
+    public member q_function setX(qreal x) : void;
+    public member q_function setY(qreal y) : void;
+    public member q_function setZ(qreal z) : void;
+    public const member q_function toPointF() : QPointF;
+    public const member q_function toVector2D() : QVector2D;
+    public const member q_function toVector2DAffine() : QVector2D;
+    public const member q_function toVector3D() : QVector3D;
+    public const member q_function toVector3DAffine() : QVector3D;
+    public const member q_function w() : qreal;
+    public const member q_function x() : qreal;
+    public const member q_function y() : qreal;
+    public const member q_function z() : qreal;
+
+
+}
+

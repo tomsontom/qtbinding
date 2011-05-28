@@ -1,0 +1,6 @@
+q_class QRunnable {
+    public member q_function setAutoDelete(bool autoDelete) : void; 
+
+
+}
+

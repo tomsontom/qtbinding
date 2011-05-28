@@ -1,0 +1,29 @@
+q_class QTime {
+    q_enumeration TimeFlag {
+        NullTime = -1
+    }
+
+
+    public const member q_function addMSecs(int ms) : QTime;
+    public const member q_function addSecs(int s) : QTime;
+    public class q_function currentTime() : QTime;
+    public const member q_function elapsed() : int;
+    public class q_function fromString(const QString & string, Qt.DateFormat format = Qt.TextDate) : QTime;
+    public class q_function fromString(const QString & string, const QString & format) : QTime;
+    public const member q_function hour() : int;
+    public const member q_function isNull() : bool;
+    public const member q_function isValid() : bool;
+    public class q_function isValid(int h, int m, int s, int ms = 0) : bool;
+    public const member q_function minute() : int;
+    public const member q_function msec() : int;
+    public const member q_function msecsTo(const QTime & t) : int;
+    public const member q_function second() : int;
+    public const member q_function secsTo(const QTime & t) : int;
+    public member q_function setHMS(int h, int m, int s, int ms = 0) : bool;
+    public member q_function start() : void;
+    public const member q_function toString(Qt.DateFormat format = Qt.TextDate) : QString;
+    public const member q_function toString(const QString & format) : QString;
+
+
+}
+

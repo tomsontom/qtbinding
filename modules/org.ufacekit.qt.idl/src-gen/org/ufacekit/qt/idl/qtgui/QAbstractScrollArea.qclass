@@ -1,0 +1,41 @@
+q_class QAbstractScrollArea extends QFrame {
+    q_property Qt.ScrollBarPolicy horizontalScrollBarPolicy;
+    q_property Qt.ScrollBarPolicy verticalScrollBarPolicy;
+
+    public member q_function addScrollBarWidget(QWidget * widget, Qt.Alignment alignment) : void;
+    public const member q_function cornerWidget() : QWidget *;
+    public const member q_function horizontalScrollBar() : QScrollBar *;
+    public const member q_function horizontalScrollBarPolicy() : Qt.ScrollBarPolicy;
+    public const member q_function maximumViewportSize() : QSize;
+    public member q_function scrollBarWidgets(Qt.Alignment alignment) : QWidgetList;
+    public member q_function setCornerWidget(QWidget * widget) : void;
+    public member q_function setHorizontalScrollBar(QScrollBar * scrollBar) : void;
+    public member q_function setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy ) : void;
+    public member q_function setVerticalScrollBar(QScrollBar * scrollBar) : void;
+    public member q_function setVerticalScrollBarPolicy(Qt.ScrollBarPolicy ) : void;
+    public member q_function setViewport(QWidget * widget) : void;
+    public const member q_function verticalScrollBar() : QScrollBar *;
+    public const member q_function verticalScrollBarPolicy() : Qt.ScrollBarPolicy;
+    public const member q_function viewport() : QWidget *;
+
+    protected virtual member q_function contextMenuEvent(QContextMenuEvent * e) : void;
+    protected virtual member q_function dragLeaveEvent(QDragLeaveEvent * event) : void;
+    protected virtual member q_function dragMoveEvent(QDragMoveEvent * event) : void;
+    protected virtual member q_function dropEvent(QDropEvent * event) : void;
+    protected virtual member q_function keyPressEvent(QKeyEvent * e) : void;
+    protected virtual member q_function mouseDoubleClickEvent(QMouseEvent * e) : void;
+    protected virtual member q_function mouseMoveEvent(QMouseEvent * e) : void;
+    protected virtual member q_function mousePressEvent(QMouseEvent * e) : void;
+    protected virtual member q_function mouseReleaseEvent(QMouseEvent * e) : void;
+    protected virtual member q_function paintEvent(QPaintEvent * event) : void;
+    protected virtual member q_function resizeEvent(QResizeEvent * event) : void;
+    protected virtual member q_function scrollContentsBy(int dx, int dy) : void;
+    protected member q_function setViewportMargins(int left, int top, int right, int bottom) : void;
+    protected member q_function setViewportMargins(const QMargins & margins) : void;
+    protected virtual member q_function viewportEvent(QEvent * event) : bool;
+    protected virtual member q_function wheelEvent(QWheelEvent * e) : void;
+
+
+
+}
+

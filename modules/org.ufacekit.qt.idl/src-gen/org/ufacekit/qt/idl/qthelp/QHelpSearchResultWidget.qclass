@@ -1,0 +1,7 @@
+q_class QHelpSearchResultWidget extends QWidget {
+    public member q_function linkAt(const QPoint & point) : QUrl;
+
+
+
+}
+

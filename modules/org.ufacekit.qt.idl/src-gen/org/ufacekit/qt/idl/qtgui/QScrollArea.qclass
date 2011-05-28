@@ -1,0 +1,17 @@
+q_class QScrollArea extends QAbstractScrollArea {
+    q_property Qt.Alignment alignment;
+    q_property bool widgetResizable;
+
+    public const member q_function alignment() : Qt.Alignment;
+    public member q_function ensureVisible(int x, int y, int xmargin = 50, int ymargin = 50) : void;
+    public member q_function ensureWidgetVisible(QWidget * childWidget, int xmargin = 50, int ymargin = 50) : void;
+    public member q_function setAlignment(Qt.Alignment ) : void;
+    public member q_function setWidget(QWidget * widget) : void;
+    public member q_function setWidgetResizable(bool resizable) : void;
+    public member q_function takeWidget() : QWidget *;
+    public const member q_function widget() : QWidget *;
+    public const member q_function widgetResizable() : bool;
+
+
+}
+

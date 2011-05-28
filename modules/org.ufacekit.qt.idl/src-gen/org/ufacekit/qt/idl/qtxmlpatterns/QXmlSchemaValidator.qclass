@@ -1,0 +1,17 @@
+q_class QXmlSchemaValidator {
+    public const member q_function messageHandler() : QAbstractMessageHandler *;
+    public const member q_function namePool() : QXmlNamePool;
+    public const member q_function networkAccessManager() : QNetworkAccessManager *;
+    public const member q_function schema() : QXmlSchema;
+    public member q_function setMessageHandler(QAbstractMessageHandler * handler) : void;
+    public member q_function setNetworkAccessManager(QNetworkAccessManager * manager) : void;
+    public member q_function setSchema(const QXmlSchema & schema) : void;
+    public member q_function setUriResolver(const QAbstractUriResolver * resolver) : void;
+    public const member q_function uriResolver() : const QAbstractUriResolver *;
+    public const member q_function validate(QIODevice * source, const QUrl & documentUri = QUrl()) : bool;
+    public const member q_function validate(const QUrl & source) : bool;
+    public const member q_function validate(const QByteArray & data, const QUrl & documentUri = QUrl()) : bool;
+
+
+}
+

@@ -1,0 +1,16 @@
+q_class QPolygonF extends QVector<QPointF> {
+    public const member q_function boundingRect() : QRectF;
+    public const member q_function containsPoint(const QPointF & point, Qt.FillRule fillRule) : bool;
+    public const member q_function intersected(const QPolygonF & r) : QPolygonF;
+    public const member q_function isClosed() : bool;
+    public const member q_function subtracted(const QPolygonF & r) : QPolygonF;
+    public const member q_function toPolygon() : QPolygon;
+    public member q_function translate(const QPointF & offset) : void;
+    public member q_function translate(qreal dx, qreal dy) : void;
+    public const member q_function translated(qreal dx, qreal dy) : QPolygonF;
+    public const member q_function translated(const QPointF & offset) : QPolygonF;
+    public const member q_function united(const QPolygonF & r) : QPolygonF;
+
+
+}
+

@@ -1,0 +1,16 @@
+q_class QValidator extends QObject {
+    q_enumeration State {
+        Invalid = 0
+        Intermediate = 1
+        Acceptable = 2
+    }
+
+
+    public const virtual member q_function fixup(QString & input) : void;
+    public const member q_function locale() : QLocale;
+    public member q_function setLocale(const QLocale & locale) : void;
+    public const purevirtual member q_function validate(QString & input, int & pos) : State;
+
+
+}
+

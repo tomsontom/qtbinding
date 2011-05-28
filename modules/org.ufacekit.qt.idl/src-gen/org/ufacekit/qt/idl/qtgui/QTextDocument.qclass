@@ -1,0 +1,118 @@
+q_class QTextDocument extends QObject {
+    q_enumeration FindFlag {
+        FindBackward = 1
+        FindCaseSensitively = 2
+        FindWholeWords = 4
+    }
+
+    q_flags FindFlags : FindFlag;
+
+    q_enumeration MetaInformation {
+        DocumentTitle = 0
+        DocumentUrl = 1
+    }
+
+    q_enumeration ResourceType {
+        HtmlResource = 1
+        ImageResource = 2
+        StyleSheetResource = 3
+        UserResource = 100
+    }
+
+    q_enumeration Stacks {
+        UndoStack = 1
+        RedoStack = 2
+        UndoAndRedoStacks = UndoStack  |  RedoStack
+    }
+
+
+    q_property const int blockCount;
+    q_property QFont defaultFont;
+    q_property QString defaultStyleSheet;
+    q_property QTextOption defaultTextOption;
+    q_property qreal documentMargin;
+    q_property qreal indentWidth;
+    q_property int maximumBlockCount;
+    q_property bool modified;
+    q_property QSizeF pageSize;
+    q_property const QSizeF size;
+    q_property qreal textWidth;
+    q_property bool undoRedoEnabled;
+    q_property bool useDesignMetrics;
+
+    public member q_function addResource(int type, const QUrl & name, const QVariant & resource) : void;
+    public member q_function adjustSize() : void;
+    public const member q_function allFormats() : QVector<QTextFormat>;
+    public const member q_function availableRedoSteps() : int;
+    public const member q_function availableUndoSteps() : int;
+    public const member q_function begin() : QTextBlock;
+    public const member q_function blockCount() : int;
+    public const member q_function characterAt(int pos) : QChar;
+    public const member q_function characterCount() : int;
+    public virtual member q_function clear() : void;
+    public member q_function clearUndoRedoStacks(Stacks stacksToClear = UndoAndRedoStacks) : void;
+    public const member q_function defaultFont() : QFont;
+    public const member q_function defaultStyleSheet() : QString;
+    public const member q_function defaultTextOption() : QTextOption;
+    public const member q_function documentLayout() : QAbstractTextDocumentLayout *;
+    public const member q_function documentMargin() : qreal;
+    public member q_function drawContents(QPainter * p, const QRectF & rect = QRectF()) : void;
+    public const member q_function end() : QTextBlock;
+    public const member q_function find(const QRegExp & expr, int position = 0, FindFlags options = 0) : QTextCursor;
+    public const member q_function find(const QString & subString, const QTextCursor & cursor, FindFlags options = 0) : QTextCursor;
+    public const member q_function find(const QString & subString, int position = 0, FindFlags options = 0) : QTextCursor;
+    public const member q_function find(const QRegExp & expr, const QTextCursor & cursor, FindFlags options = 0) : QTextCursor;
+    public const member q_function findBlock(int pos) : QTextBlock;
+    public const member q_function findBlockByLineNumber(int lineNumber) : QTextBlock;
+    public const member q_function findBlockByNumber(int blockNumber) : QTextBlock;
+    public const member q_function firstBlock() : QTextBlock;
+    public const member q_function idealWidth() : qreal;
+    public const member q_function indentWidth() : qreal;
+    public const member q_function isEmpty() : bool;
+    public const member q_function isModified() : bool;
+    public const member q_function isRedoAvailable() : bool;
+    public const member q_function isUndoAvailable() : bool;
+    public const member q_function isUndoRedoEnabled() : bool;
+    public const member q_function lastBlock() : QTextBlock;
+    public const member q_function lineCount() : int;
+    public member q_function markContentsDirty(int position, int length) : void;
+    public const member q_function maximumBlockCount() : int;
+    public const member q_function metaInformation(MetaInformation info) : QString;
+    public const member q_function object(int objectIndex) : QTextObject *;
+    public const member q_function objectForFormat(const QTextFormat & f) : QTextObject *;
+    public const member q_function pageCount() : int;
+    public const member q_function pageSize() : QSizeF;
+    public const member q_function print(QPrinter * printer) : void;
+    public member q_function redo(QTextCursor * cursor) : void;
+    public const member q_function resource(int type, const QUrl & name) : QVariant;
+    public const member q_function revision() : int;
+    public const member q_function rootFrame() : QTextFrame *;
+    public member q_function setDefaultFont(const QFont & font) : void;
+    public member q_function setDefaultStyleSheet(const QString & sheet) : void;
+    public member q_function setDefaultTextOption(const QTextOption & option) : void;
+    public member q_function setDocumentLayout(QAbstractTextDocumentLayout * layout) : void;
+    public member q_function setDocumentMargin(qreal margin) : void;
+    public member q_function setHtml(const QString & html) : void;
+    public member q_function setIndentWidth(qreal width) : void;
+    public member q_function setMaximumBlockCount(int maximum) : void;
+    public member q_function setMetaInformation(MetaInformation info, const QString & string) : void;
+    public member q_function setPageSize(const QSizeF & size) : void;
+    public member q_function setPlainText(const QString & text) : void;
+    public member q_function setTextWidth(qreal width) : void;
+    public member q_function setUndoRedoEnabled(bool enable) : void;
+    public member q_function setUseDesignMetrics(bool b) : void;
+    public const member q_function size() : QSizeF;
+    public const member q_function textWidth() : qreal;
+    public const member q_function toHtml(const QByteArray & encoding = QByteArray()) : QString;
+    public const member q_function toPlainText() : QString;
+    public member q_function undo(QTextCursor * cursor) : void;
+    public const member q_function useDesignMetrics() : bool;
+
+    protected virtual member q_function createObject(const QTextFormat & format) : QTextObject *;
+    protected virtual member q_function loadResource(int type, const QUrl & name) : QVariant;
+
+
+
+
+}
+

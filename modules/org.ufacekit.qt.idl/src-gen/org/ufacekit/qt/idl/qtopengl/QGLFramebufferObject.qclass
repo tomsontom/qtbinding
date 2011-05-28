@@ -1,0 +1,26 @@
+q_class QGLFramebufferObject extends QPaintDevice {
+    q_enumeration Attachment {
+        NoAttachment = 0
+        CombinedDepthStencil = 1
+        Depth = 2
+    }
+
+
+    public const member q_function attachment() : Attachment;
+    public member q_function bind() : bool;
+    public class q_function blitFramebuffer(QGLFramebufferObject * target, const QRect & targetRect, QGLFramebufferObject * source, const QRect & sourceRect, GLbitfield buffers = GL_COLOR_BUFFER_BIT, GLenum filter = GL_NEAREST) : void;
+    public member q_function drawTexture(const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D) : void;
+    public member q_function drawTexture(const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D) : void;
+    public const member q_function format() : QGLFramebufferObjectFormat;
+    public const member q_function handle() : GLuint;
+    public class q_function hasOpenGLFramebufferObjects() : bool;
+    public const member q_function isBound() : bool;
+    public const member q_function isValid() : bool;
+    public member q_function release() : bool;
+    public const member q_function size() : QSize;
+    public const member q_function texture() : GLuint;
+    public const member q_function toImage() : QImage;
+
+
+}
+

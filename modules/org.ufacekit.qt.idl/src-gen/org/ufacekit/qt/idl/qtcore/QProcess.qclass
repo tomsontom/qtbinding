@@ -1,0 +1,78 @@
+q_class QProcess extends QIODevice {
+    q_enumeration ExitStatus {
+        NormalExit = 0
+        CrashExit = 1
+    }
+
+    q_enumeration ProcessChannel {
+        StandardOutput = 0
+        StandardError = 1
+    }
+
+    q_enumeration ProcessChannelMode {
+        SeparateChannels = 0
+        MergedChannels = 1
+        ForwardedChannels = 2
+    }
+
+    q_enumeration ProcessError {
+        FailedToStart = 0
+        Crashed = 1
+        Timedout = 2
+        ReadError = 3
+        WriteError = 4
+        UnknownError = 5
+    }
+
+    q_enumeration ProcessState {
+        NotRunning = 0
+        Starting = 1
+        Running = 2
+    }
+
+
+    public virtual member q_function close() : void;
+    public member q_function closeReadChannel(ProcessChannel channel) : void;
+    public member q_function closeWriteChannel() : void;
+    public const member q_function environment() : QStringList;
+    public const member q_function error() : QProcess.ProcessError;
+    public class q_function execute(const QString & program, const QStringList & arguments) : int;
+    public class q_function execute(const QString & program) : int;
+    public const member q_function exitCode() : int;
+    public const member q_function exitStatus() : QProcess.ExitStatus;
+    public const member q_function pid() : Q_PID;
+    public const member q_function processChannelMode() : ProcessChannelMode;
+    public const member q_function processEnvironment() : QProcessEnvironment;
+    public member q_function readAllStandardError() : QByteArray;
+    public member q_function readAllStandardOutput() : QByteArray;
+    public const member q_function readChannel() : ProcessChannel;
+    public const member q_function readChannelMode() : ProcessChannelMode;
+    public member q_function setEnvironment(const QStringList & environment) : void;
+    public member q_function setNativeArguments(const QString & arguments) : void;
+    public member q_function setProcessChannelMode(ProcessChannelMode mode) : void;
+    public member q_function setProcessEnvironment(const QProcessEnvironment & environment) : void;
+    public member q_function setReadChannel(ProcessChannel channel) : void;
+    public member q_function setReadChannelMode(ProcessChannelMode mode) : void;
+    public member q_function setStandardErrorFile(const QString & fileName, OpenMode mode = Truncate) : void;
+    public member q_function setStandardInputFile(const QString & fileName) : void;
+    public member q_function setStandardOutputFile(const QString & fileName, OpenMode mode = Truncate) : void;
+    public member q_function setStandardOutputProcess(QProcess * destination) : void;
+    public member q_function setWorkingDirectory(const QString & dir) : void;
+    public member q_function start(const QString & program, const QStringList & arguments, OpenMode mode = ReadWrite) : void;
+    public member q_function start(const QString & program, OpenMode mode = ReadWrite) : void;
+    public class q_function startDetached(const QString & program, const QStringList & arguments, const QString & workingDirectory, qint64 * pid = 0) : bool;
+    public class q_function startDetached(const QString & program, const QStringList & arguments) : bool;
+    public class q_function startDetached(const QString & program) : bool;
+    public const member q_function state() : QProcess.ProcessState;
+    public class q_function systemEnvironment() : QStringList;
+    public member q_function waitForFinished(int msecs = 30000) : bool;
+    public member q_function waitForStarted(int msecs = 30000) : bool;
+
+    protected member q_function setProcessState(ProcessState state) : void;
+    protected virtual member q_function setupChildProcess() : void;
+
+
+
+
+}
+

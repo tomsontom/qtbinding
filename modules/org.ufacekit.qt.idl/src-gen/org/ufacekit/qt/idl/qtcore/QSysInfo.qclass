@@ -1,0 +1,85 @@
+q_class QSysInfo {
+    q_enumeration Endian {
+        BigEndian = 0
+        LittleEndian = 1
+        ByteOrder = <platform-dependent>
+        ByteOrder = LittleEndian
+    }
+
+    q_enumeration MacVersion {
+        MV_Unknown = 0
+        MV_9 = 1
+        MV_10_0 = 2
+        MV_10_1 = 3
+        MV_10_2 = 4
+        MV_10_3 = 5
+        MV_10_4 = 6
+        MV_10_5 = 7
+        MV_10_6 = 8
+        MV_CHEETAH = MV_10_0
+        MV_PUMA = MV_10_1
+        MV_JAGUAR = MV_10_2
+        MV_PANTHER = MV_10_3
+        MV_TIGER = MV_10_4
+        MV_LEOPARD = MV_10_5
+        MV_SNOWLEOPARD = MV_10_6
+    }
+
+    q_enumeration S60Version {
+        SV_S60_None = 0
+        SV_S60_Unknown = SV_Unknown
+        SV_S60_3_1 = SV_9_2
+        SV_S60_3_2 = SV_9_3
+        SV_S60_5_0 = SV_9_4
+        SV_S60_5_1 = SV_SF_2
+        SV_S60_5_2 = SV_SF_3
+    }
+
+    q_enumeration Sizes {
+        WordSize = ( sizeof( void * ) <<3 )
+    }
+
+    q_enumeration SymbianVersion {
+        SV_Unknown = 1000000
+        SV_9_2 = 10
+        SV_9_3 = 20
+        SV_9_4 = 30
+        SV_SF_1 = SV_9_4
+        SV_SF_2 = 40
+        SV_SF_3 = 50
+        SV_SF_4 = 60
+    }
+
+    q_enumeration WinVersion {
+        WV_32s = 1
+        WV_95 = 2
+        WV_98 = 3
+        WV_Me = 4
+        WV_DOS_based = 15
+        WV_NT = 16
+        WV_2000 = 32
+        WV_XP = 48
+        WV_2003 = 64
+        WV_VISTA = 128
+        WV_WINDOWS7 = 144
+        WV_NT_based = 240
+        WV_4_0 = WV_NT
+        WV_5_0 = WV_2000
+        WV_5_1 = WV_XP
+        WV_5_2 = WV_2003
+        WV_6_0 = WV_VISTA
+        WV_6_1 = WV_WINDOWS7
+        WV_CE = 256
+        WV_CENET = 512
+        WV_CE_5 = 768
+        WV_CE_6 = 1024
+        WV_CE_based = 3840
+    }
+
+
+    public class q_function symbianVersion() : SymbianVersion;
+    public class q_function windowsVersion() : WinVersion;
+
+
+}
+

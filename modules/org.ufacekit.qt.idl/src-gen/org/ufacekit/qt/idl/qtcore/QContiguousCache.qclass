@@ -1,0 +1,47 @@
+q_class QContiguousCache {
+    q_typedef Data : ___UNKNOWN___;
+
+    q_typedef const_pointer : ___UNKNOWN___;
+
+    q_typedef const_reference : ___UNKNOWN___;
+
+    q_typedef difference_type : ___UNKNOWN___;
+
+    q_typedef pointer : ___UNKNOWN___;
+
+    q_typedef reference : ___UNKNOWN___;
+
+    q_typedef size_type : ___UNKNOWN___;
+
+    q_typedef value_type : ___UNKNOWN___;
+
+
+    public member q_function append(const T & value) : void;
+    public const member q_function areIndexesValid() : bool;
+    public const member q_function at(int i) : const T &;
+    public const member q_function available() : int;
+    public const member q_function capacity() : int;
+    public member q_function clear() : void;
+    public const member q_function containsIndex(int i) : bool;
+    public const member q_function count() : int;
+    public const member q_function first() : const T &;
+    public member q_function first() : T &;
+    public const member q_function firstIndex() : int;
+    public member q_function insert(int i, const T & value) : void;
+    public const member q_function isEmpty() : bool;
+    public const member q_function isFull() : bool;
+    public const member q_function last() : const T &;
+    public member q_function last() : T &;
+    public const member q_function lastIndex() : int;
+    public member q_function normalizeIndexes() : void;
+    public member q_function prepend(const T & value) : void;
+    public member q_function removeFirst() : void;
+    public member q_function removeLast() : void;
+    public member q_function setCapacity(int size) : void;
+    public const member q_function size() : int;
+    public member q_function takeFirst() : T;
+    public member q_function takeLast() : T;
+
+
+}
+

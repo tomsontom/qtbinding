@@ -1,0 +1,44 @@
+q_class QDate {
+    q_enumeration MonthNameType {
+        DateFormat = 0
+        StandaloneFormat = 1
+    }
+
+
+    public const member q_function addDays(int ndays) : QDate;
+    public const member q_function addMonths(int nmonths) : QDate;
+    public const member q_function addYears(int nyears) : QDate;
+    public class q_function currentDate() : QDate;
+    public const member q_function day() : int;
+    public const member q_function dayOfWeek() : int;
+    public const member q_function dayOfYear() : int;
+    public const member q_function daysInMonth() : int; 
+    public const member q_function daysInYear() : int;
+    public const member q_function daysTo(const QDate & d) : int;
+    public class q_function fromString(const QString & string, const QString & format) : QDate;
+    public class q_function fromString(const QString & string, Qt.DateFormat format = Qt.TextDate) : QDate;
+    public member q_function getDate(int * year, int * month, int * day) : void;
+    public class q_function isLeapYear(int year) : bool;
+    public const member q_function isNull() : bool;
+    public class q_function isValid(int year, int month, int day) : bool;
+    public const member q_function isValid() : bool;
+    public class q_function longDayName(int weekday, MonthNameType type) : QString;
+    public class q_function longDayName(int weekday) : QString;
+    public class q_function longMonthName(int month, MonthNameType type) : QString;
+    public class q_function longMonthName(int month) : QString;
+    public const member q_function month() : int;
+    public member q_function setDate(int year, int month, int day) : bool;
+    public member q_function setYMD(int y, int m, int d) : bool;
+    public class q_function shortDayName(int weekday, MonthNameType type) : QString;
+    public class q_function shortDayName(int weekday) : QString;
+    public class q_function shortMonthName(int month, MonthNameType type) : QString;
+    public class q_function shortMonthName(int month) : QString;
+    public const member q_function toJulianDay() : int;
+    public const member q_function toString(const QString & format) : QString;
+    public const member q_function toString(Qt.DateFormat format = Qt.TextDate) : QString;
+    public const member q_function weekNumber(int * yearNumber = 0) : int;
+    public const member q_function year() : int;
+
+
+}
+

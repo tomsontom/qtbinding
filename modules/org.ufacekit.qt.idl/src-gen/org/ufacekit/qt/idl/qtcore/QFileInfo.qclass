@@ -1,0 +1,50 @@
+q_class QFileInfo {
+    public const member q_function absoluteDir() : QDir;
+    public const member q_function absoluteFilePath() : QString;
+    public const member q_function absolutePath() : QString;
+    public const member q_function baseName() : QString;
+    public const member q_function bundleName() : QString;
+    public const member q_function caching() : bool;
+    public const member q_function canonicalFilePath() : QString;
+    public const member q_function canonicalPath() : QString;
+    public const member q_function completeBaseName() : QString;
+    public const member q_function completeSuffix() : QString;
+    public const member q_function created() : QDateTime;
+    public const member q_function dir() : QDir;
+    public const member q_function exists() : bool;
+    public const member q_function fileName() : QString;
+    public const member q_function filePath() : QString;
+    public const member q_function group() : QString;
+    public const member q_function groupId() : uint;
+    public const member q_function isAbsolute() : bool;
+    public const member q_function isBundle() : bool;
+    public const member q_function isDir() : bool;
+    public const member q_function isExecutable() : bool;
+    public const member q_function isFile() : bool;
+    public const member q_function isHidden() : bool;
+    public const member q_function isReadable() : bool;
+    public const member q_function isRelative() : bool;
+    public const member q_function isRoot() : bool;
+    public const member q_function isSymLink() : bool;
+    public const member q_function isWritable() : bool;
+    public const member q_function lastModified() : QDateTime;
+    public const member q_function lastRead() : QDateTime;
+    public member q_function makeAbsolute() : bool;
+    public const member q_function owner() : QString;
+    public const member q_function ownerId() : uint;
+    public const member q_function path() : QString;
+    public const member q_function permission(QFile.Permissions permissions) : bool;
+    public const member q_function permissions() : QFile.Permissions;
+    public const member q_function readLink() : QString;
+    public member q_function refresh() : void;
+    public member q_function setCaching(bool enable) : void;
+    public member q_function setFile(const QDir & dir, const QString & file) : void;
+    public member q_function setFile(const QFile & file) : void;
+    public member q_function setFile(const QString & file) : void;
+    public const member q_function size() : qint64;
+    public const member q_function suffix() : QString;
+    public const member q_function symLinkTarget() : QString;
+
+
+}
+

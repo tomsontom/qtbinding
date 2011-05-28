@@ -1,0 +1,4 @@
+q_class QXmlDefaultHandler extends QXmlContentHandler, QXmlErrorHandler, QXmlDTDHandler, QXmlEntityResolver, QXmlLexicalHandler, QXmlDeclHandler {
+
+}
+

@@ -1,0 +1,20 @@
+q_class QStatusBar extends QWidget {
+    q_property bool sizeGripEnabled;
+
+    public member q_function addPermanentWidget(QWidget * widget, int stretch = 0) : void;
+    public member q_function addWidget(QWidget * widget, int stretch = 0) : void;
+    public const member q_function currentMessage() : QString;
+    public member q_function insertPermanentWidget(int index, QWidget * widget, int stretch = 0) : int;
+    public member q_function insertWidget(int index, QWidget * widget, int stretch = 0) : int;
+    public const member q_function isSizeGripEnabled() : bool;
+    public member q_function removeWidget(QWidget * widget) : void;
+    public member q_function setSizeGripEnabled(bool ) : void;
+
+    protected member q_function hideOrShow() : void;
+    protected member q_function reformat() : void;
+
+
+
+
+}
+

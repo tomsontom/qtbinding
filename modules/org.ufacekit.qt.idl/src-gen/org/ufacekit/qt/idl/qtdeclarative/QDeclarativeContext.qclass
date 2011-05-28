@@ -1,0 +1,15 @@
+q_class QDeclarativeContext extends QObject {
+    public const member q_function baseUrl() : QUrl;
+    public const member q_function contextObject() : QObject *;
+    public const member q_function contextProperty(const QString & name) : QVariant;
+    public const member q_function engine() : QDeclarativeEngine *;
+    public const member q_function parentContext() : QDeclarativeContext *;
+    public member q_function resolvedUrl(const QUrl & src) : QUrl;
+    public member q_function setBaseUrl(const QUrl & baseUrl) : void;
+    public member q_function setContextObject(QObject * object) : void;
+    public member q_function setContextProperty(const QString & name, QObject * value) : void;
+    public member q_function setContextProperty(const QString & name, const QVariant & value) : void;
+
+
+}
+

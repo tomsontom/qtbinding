@@ -1,0 +1,83 @@
+q_class QScriptEngine extends QObject {
+    q_enumeration QObjectWrapOption {
+        ExcludeChildObjects = 1
+        ExcludeSuperClassMethods = 2
+        ExcludeSuperClassProperties = 4
+        ExcludeSuperClassContents = 6
+        SkipMethodsInEnumeration = 8
+        ExcludeDeleteLater = 16
+        ExcludeSlots = 32
+        AutoCreateDynamicProperties = 256
+        PreferExistingWrapperObject = 512
+    }
+
+    q_flags QObjectWrapOptions : QObjectWrapOption;
+
+    q_enumeration ValueOwnership {
+        QtOwnership = 0
+        ScriptOwnership = 1
+        AutoOwnership = 2
+    }
+
+
+    q_typedef DemarshalFunction : ___UNKNOWN___;
+
+    q_typedef FunctionSignature : ___UNKNOWN___;
+
+    q_typedef FunctionWithArgSignature : ___UNKNOWN___;
+
+    q_typedef MarshalFunction : ___UNKNOWN___;
+
+
+    public member q_function abortEvaluation(const QScriptValue & result = QScriptValue()) : void;
+    public const member q_function agent() : QScriptEngineAgent *;
+    public const member q_function availableExtensions() : QStringList;
+    public const member q_function canEvaluate(const QString & program) : bool;
+    public class q_function checkSyntax(const QString & program) : QScriptSyntaxCheckResult;
+    public member q_function clearExceptions() : void;
+    public member q_function collectGarbage() : void;
+    public const member q_function currentContext() : QScriptContext *;
+    public member q_function evaluate(const QString & program, const QString & fileName = QString(), int lineNumber = 1) : QScriptValue;
+    public member q_function evaluate(const QScriptProgram & program) : QScriptValue;
+    public member q_function fromScriptValue(const QScriptValue & value) : T;
+    public const member q_function globalObject() : QScriptValue;
+    public const member q_function hasUncaughtException() : bool;
+    public member q_function importExtension(const QString & extension) : QScriptValue;
+    public const member q_function importedExtensions() : QStringList;
+    public member q_function installTranslatorFunctions(const QScriptValue & object = QScriptValue()) : void;
+    public const member q_function isEvaluating() : bool;
+    public member q_function newArray(uint length = 0) : QScriptValue;
+    public member q_function newDate(qsreal value) : QScriptValue;
+    public member q_function newDate(const QDateTime & value) : QScriptValue;
+    public member q_function newFunction(FunctionSignature fun, int length = 0) : QScriptValue;
+    public member q_function newFunction(FunctionSignature fun, const QScriptValue & prototype, int length = 0) : QScriptValue;
+    public member q_function newObject() : QScriptValue;
+    public member q_function newObject(QScriptClass * scriptClass, const QScriptValue & data = QScriptValue()) : QScriptValue;
+    public member q_function newQMetaObject(const QMetaObject * metaObject, const QScriptValue & ctor = QScriptValue()) : QScriptValue;
+    public member q_function newQObject(const QScriptValue & scriptObject, QObject * qtObject, ValueOwnership ownership = QtOwnership, const QObjectWrapOptions & options = 0) : QScriptValue;
+    public member q_function newRegExp(const QString & pattern, const QString & flags) : QScriptValue;
+    public member q_function newRegExp(const QRegExp & regexp) : QScriptValue;
+    public member q_function newVariant(const QVariant & value) : QScriptValue;
+    public member q_function newVariant(const QScriptValue & object, const QVariant & value) : QScriptValue;
+    public member q_function nullValue() : QScriptValue;
+    public member q_function popContext() : void;
+    public const member q_function processEventsInterval() : int;
+    public member q_function pushContext() : QScriptContext *;
+    public member q_function reportAdditionalMemoryCost(int size) : void;
+    public member q_function scriptValueFromQMetaObject() : QScriptValue;
+    public member q_function setAgent(QScriptEngineAgent * agent) : void;
+    public member q_function setDefaultPrototype(int metaTypeId, const QScriptValue & prototype) : void;
+    public member q_function setGlobalObject(const QScriptValue & object) : void;
+    public member q_function setProcessEventsInterval(int interval) : void;
+    public member q_function toObject(const QScriptValue & value) : QScriptValue;
+    public member q_function toScriptValue(const T & value) : QScriptValue;
+    public member q_function toStringHandle(const QString & str) : QScriptString;
+    public const member q_function uncaughtException() : QScriptValue;
+    public const member q_function uncaughtExceptionBacktrace() : QStringList;
+    public const member q_function uncaughtExceptionLineNumber() : int;
+    public member q_function undefinedValue() : QScriptValue;
+
+
+
+}
+

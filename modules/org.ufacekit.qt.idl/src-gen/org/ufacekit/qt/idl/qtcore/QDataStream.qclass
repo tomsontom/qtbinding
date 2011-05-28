@@ -1,0 +1,56 @@
+q_class QDataStream {
+    q_enumeration ByteOrder {
+        BigEndian = __UNKNOWN__
+        LittleEndian = __UNKNOWN__
+    }
+
+    q_enumeration FloatingPointPrecision {
+        SinglePrecision = 0
+        DoublePrecision = 1
+    }
+
+    q_enumeration Status {
+        Ok = 0
+        ReadPastEnd = 1
+        ReadCorruptData = 2
+    }
+
+    q_enumeration Version {
+        Qt_1_0 = 1
+        Qt_2_0 = 2
+        Qt_2_1 = 3
+        Qt_3_0 = 4
+        Qt_3_1 = 5
+        Qt_3_3 = 6
+        Qt_4_0 = 7
+        Qt_4_1 = Qt_4_0
+        Qt_4_2 = 8
+        Qt_4_3 = 9
+        Qt_4_4 = 10
+        Qt_4_5 = 11
+        Qt_4_6 = 12
+        Qt_4_7 = Qt_4_6 Qt_4_8 = Qt_4_7
+    }
+
+
+    public const member q_function atEnd() : bool;
+    public const member q_function byteOrder() : ByteOrder;
+    public const member q_function device() : QIODevice *;
+    public const member q_function floatingPointPrecision() : FloatingPointPrecision;
+    public member q_function readBytes(char *& s, uint & l) : QDataStream &;
+    public member q_function readRawData(char * s, int len) : int;
+    public member q_function resetStatus() : void;
+    public member q_function setByteOrder(ByteOrder bo) : void;
+    public member q_function setDevice(QIODevice * d) : void;
+    public member q_function setFloatingPointPrecision(FloatingPointPrecision precision) : void;
+    public member q_function setStatus(Status status) : void;
+    public member q_function setVersion(int v) : void;
+    public member q_function skipRawData(int len) : int;
+    public member q_function unsetDevice() : void;
+    public const member q_function version() : int;
+    public member q_function writeBytes(const char * s, uint len) : QDataStream &;
+    public member q_function writeRawData(const char * s, int len) : int;
+
+
+}
+

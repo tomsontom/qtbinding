@@ -1,0 +1,75 @@
+q_class QTextCharFormat extends QTextFormat {
+    q_enumeration UnderlineStyle {
+        NoUnderline = 0
+        SingleUnderline = 1
+        DashUnderline = 2
+        DotLine = 3
+        DashDotLine = 4
+        DashDotDotLine = 5
+        WaveUnderline = 6
+        SpellCheckUnderline = 7
+    }
+
+    q_enumeration VerticalAlignment {
+        AlignNormal = 0
+        AlignSuperScript = 1
+        AlignSubScript = 2
+        AlignMiddle = 3
+        AlignTop = 4
+        AlignBottom = 5
+    }
+
+
+    public const member q_function anchorHref() : QString;
+    public const member q_function anchorName() : QString;
+    public const member q_function anchorNames() : QStringList;
+    public const member q_function font() : QFont;
+    public const member q_function fontCapitalization() : QFont.Capitalization;
+    public const member q_function fontFamily() : QString;
+    public const member q_function fontFixedPitch() : bool;
+    public const member q_function fontItalic() : bool;
+    public const member q_function fontKerning() : bool;
+    public const member q_function fontLetterSpacing() : qreal;
+    public const member q_function fontOverline() : bool;
+    public const member q_function fontPointSize() : qreal;
+    public const member q_function fontStrikeOut() : bool;
+    public const member q_function fontStyleHint() : QFont.StyleHint;
+    public const member q_function fontStyleStrategy() : QFont.StyleStrategy;
+    public const member q_function fontUnderline() : bool;
+    public const member q_function fontWeight() : int;
+    public const member q_function fontWordSpacing() : qreal;
+    public const member q_function isAnchor() : bool;
+    public const member q_function isValid() : bool;
+    public member q_function setAnchor(bool anchor) : void;
+    public member q_function setAnchorHref(const QString & value) : void;
+    public member q_function setAnchorName(const QString & name) : void;
+    public member q_function setAnchorNames(const QStringList & names) : void;
+    public member q_function setFont(const QFont & font) : void;
+    public member q_function setFontCapitalization(QFont.Capitalization capitalization) : void;
+    public member q_function setFontFamily(const QString & family) : void;
+    public member q_function setFontFixedPitch(bool fixedPitch) : void;
+    public member q_function setFontItalic(bool italic) : void;
+    public member q_function setFontKerning(bool enable) : void;
+    public member q_function setFontLetterSpacing(qreal spacing) : void;
+    public member q_function setFontOverline(bool overline) : void;
+    public member q_function setFontPointSize(qreal size) : void;
+    public member q_function setFontStrikeOut(bool strikeOut) : void;
+    public member q_function setFontStyleHint(QFont.StyleHint hint, QFont.StyleStrategy strategy = QFont.PreferDefault) : void;
+    public member q_function setFontStyleStrategy(QFont.StyleStrategy strategy) : void;
+    public member q_function setFontUnderline(bool underline) : void;
+    public member q_function setFontWeight(int weight) : void;
+    public member q_function setFontWordSpacing(qreal spacing) : void;
+    public member q_function setTextOutline(const QPen & pen) : void;
+    public member q_function setToolTip(const QString & text) : void;
+    public member q_function setUnderlineColor(const QColor & color) : void;
+    public member q_function setUnderlineStyle(UnderlineStyle style) : void;
+    public member q_function setVerticalAlignment(VerticalAlignment alignment) : void;
+    public const member q_function textOutline() : QPen;
+    public const member q_function toolTip() : QString;
+    public const member q_function underlineColor() : QColor;
+    public const member q_function underlineStyle() : UnderlineStyle;
+    public const member q_function verticalAlignment() : VerticalAlignment;
+
+
+}
+

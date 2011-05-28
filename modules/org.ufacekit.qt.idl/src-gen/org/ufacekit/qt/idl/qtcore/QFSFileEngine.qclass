@@ -1,0 +1,17 @@
+q_class QFSFileEngine extends QAbstractFileEngine {
+    public const virtual member q_function caseSensitive() : bool;
+    public virtual member q_function copy(const QString & copyName) : bool;
+    public class q_function currentPath(const QString & fileName = QString()) : QString;
+    public class q_function drives() : QFileInfoList;
+    public class q_function homePath() : QString;
+    public virtual member q_function link(const QString & newName) : bool;
+    public member q_function open(QIODevice.OpenMode openMode, FILE * fh) : bool;
+    public member q_function open(QIODevice.OpenMode openMode, int fd) : bool;
+    public const virtual member q_function ownerId(FileOwner own) : uint;
+    public class q_function rootPath() : QString;
+    public class q_function setCurrentPath(const QString & path) : bool;
+    public class q_function tempPath() : QString;
+
+
+}
+

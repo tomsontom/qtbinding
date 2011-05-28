@@ -1,0 +1,195 @@
+q_class QAbstractItemView extends QAbstractScrollArea {
+    q_enumeration CursorAction {
+        MoveUp = 0
+        MoveDown = 1
+        MoveLeft = 2
+        MoveRight = 3
+        MoveHome = 4
+        MoveEnd = 5
+        MovePageUp = 6
+        MovePageDown = 7
+        MoveNext = 8
+        MovePrevious = 9
+    }
+
+    q_enumeration DragDropMode {
+        NoDragDrop = 0
+        DragOnly = 1
+        DropOnly = 2
+        DragDrop = 3
+        InternalMove = 4
+    }
+
+    q_enumeration DropIndicatorPosition {
+        OnItem = 0
+        AboveItem = 1
+        BelowItem = 2
+        OnViewport = 3
+    }
+
+    q_enumeration EditTrigger {
+        NoEditTriggers = 0
+        CurrentChanged = 1
+        DoubleClicked = 2
+        SelectedClicked = 4
+        EditKeyPressed = 8
+        AnyKeyPressed = 16
+        AllEditTriggers = 31
+    }
+
+    q_flags EditTriggers : EditTrigger;
+
+    q_enumeration ScrollHint {
+        EnsureVisible = 0
+        PositionAtTop = 1
+        PositionAtBottom = 2
+        PositionAtCenter = 3
+    }
+
+    q_enumeration ScrollMode {
+        ScrollPerItem = 0
+        ScrollPerPixel = 1
+    }
+
+    q_enumeration SelectionBehavior {
+        SelectItems = 0
+        SelectRows = 1
+        SelectColumns = 2
+    }
+
+    q_enumeration SelectionMode {
+        NoSelection = 0
+        SingleSelection = 1
+        MultiSelection = 2
+        ExtendedSelection = 3
+        ContiguousSelection = 4
+    }
+
+    q_enumeration State {
+        NoState = 0
+        DraggingState = 1
+        DragSelectingState = 2
+        EditingState = 3
+        ExpandingState = 4
+        CollapsingState = 5
+        AnimatingState = 6
+    }
+
+
+    q_property bool alternatingRowColors;
+    q_property bool autoScroll;
+    q_property int autoScrollMargin;
+    q_property Qt.DropAction defaultDropAction;
+    q_property DragDropMode dragDropMode;
+    q_property bool dragDropOverwriteMode;
+    q_property bool dragEnabled;
+    q_property EditTriggers editTriggers;
+    q_property ScrollMode horizontalScrollMode;
+    q_property QSize iconSize;
+    q_property SelectionBehavior selectionBehavior;
+    q_property SelectionMode selectionMode;
+    q_property bool showDropIndicator;
+    q_property bool tabKeyNavigation;
+    q_property Qt.TextElideMode textElideMode;
+    q_property ScrollMode verticalScrollMode;
+
+    public const member q_function alternatingRowColors() : bool;
+    public const member q_function autoScrollMargin() : int;
+    public member q_function closePersistentEditor(const QModelIndex & index) : void;
+    public const member q_function currentIndex() : QModelIndex;
+    public const member q_function defaultDropAction() : Qt.DropAction;
+    public const member q_function dragDropMode() : DragDropMode;
+    public const member q_function dragDropOverwriteMode() : bool;
+    public const member q_function dragEnabled() : bool;
+    public const member q_function editTriggers() : EditTriggers;
+    public const member q_function hasAutoScroll() : bool;
+    public const member q_function horizontalScrollMode() : ScrollMode;
+    public const member q_function iconSize() : QSize;
+    public const purevirtual member q_function indexAt(const QPoint & point) : QModelIndex;
+    public const member q_function indexWidget(const QModelIndex & index) : QWidget *;
+    public const member q_function itemDelegate(const QModelIndex & index) : QAbstractItemDelegate *;
+    public const member q_function itemDelegate() : QAbstractItemDelegate *;
+    public const member q_function itemDelegateForColumn(int column) : QAbstractItemDelegate *;
+    public const member q_function itemDelegateForRow(int row) : QAbstractItemDelegate *;
+    public virtual member q_function keyboardSearch(const QString & search) : void;
+    public const member q_function model() : QAbstractItemModel *;
+    public member q_function openPersistentEditor(const QModelIndex & index) : void;
+    public const member q_function rootIndex() : QModelIndex;
+    public purevirtual member q_function scrollTo(const QModelIndex & index, ScrollHint hint = EnsureVisible) : void;
+    public const member q_function selectionBehavior() : QAbstractItemView.SelectionBehavior;
+    public const member q_function selectionMode() : QAbstractItemView.SelectionMode;
+    public const member q_function selectionModel() : QItemSelectionModel *;
+    public member q_function setAlternatingRowColors(bool enable) : void;
+    public member q_function setAutoScroll(bool enable) : void;
+    public member q_function setAutoScrollMargin(int margin) : void;
+    public member q_function setDefaultDropAction(Qt.DropAction dropAction) : void;
+    public member q_function setDragDropMode(DragDropMode behavior) : void;
+    public member q_function setDragDropOverwriteMode(bool overwrite) : void;
+    public member q_function setDragEnabled(bool enable) : void;
+    public member q_function setDropIndicatorShown(bool enable) : void;
+    public member q_function setEditTriggers(EditTriggers triggers) : void;
+    public member q_function setHorizontalScrollMode(ScrollMode mode) : void;
+    public member q_function setIconSize(const QSize & size) : void;
+    public member q_function setIndexWidget(const QModelIndex & index, QWidget * widget) : void;
+    public member q_function setItemDelegate(QAbstractItemDelegate * delegate) : void;
+    public member q_function setItemDelegateForColumn(int column, QAbstractItemDelegate * delegate) : void;
+    public member q_function setItemDelegateForRow(int row, QAbstractItemDelegate * delegate) : void;
+    public virtual member q_function setModel(QAbstractItemModel * model) : void;
+    public member q_function setSelectionBehavior(QAbstractItemView.SelectionBehavior behavior) : void;
+    public member q_function setSelectionMode(QAbstractItemView.SelectionMode mode) : void;
+    public virtual member q_function setSelectionModel(QItemSelectionModel * selectionModel) : void;
+    public member q_function setTabKeyNavigation(bool enable) : void;
+    public member q_function setTextElideMode(Qt.TextElideMode mode) : void;
+    public member q_function setVerticalScrollMode(ScrollMode mode) : void;
+    public const member q_function showDropIndicator() : bool;
+    public const virtual member q_function sizeHintForColumn(int column) : int;
+    public const member q_function sizeHintForIndex(const QModelIndex & index) : QSize;
+    public const virtual member q_function sizeHintForRow(int row) : int;
+    public const member q_function tabKeyNavigation() : bool;
+    public const member q_function textElideMode() : Qt.TextElideMode;
+    public const member q_function verticalScrollMode() : ScrollMode;
+    public const purevirtual member q_function visualRect(const QModelIndex & index) : QRect;
+
+    protected const member q_function dirtyRegionOffset() : QPoint;
+    protected virtual member q_function dragEnterEvent(QDragEnterEvent * event) : void;
+    protected virtual member q_function dragLeaveEvent(QDragLeaveEvent * event) : void;
+    protected virtual member q_function dragMoveEvent(QDragMoveEvent * event) : void;
+    protected virtual member q_function dropEvent(QDropEvent * event) : void;
+    protected const member q_function dropIndicatorPosition() : DropIndicatorPosition;
+    protected virtual member q_function edit(const QModelIndex & index, EditTrigger trigger, QEvent * event) : bool;
+    protected member q_function executeDelayedItemsLayout() : void;
+    protected virtual member q_function focusInEvent(QFocusEvent * event) : void;
+    protected virtual member q_function focusOutEvent(QFocusEvent * event) : void;
+    protected const purevirtual member q_function horizontalOffset() : int;
+    protected const member q_function horizontalStepsPerItem() : int;
+    protected const purevirtual member q_function isIndexHidden(const QModelIndex & index) : bool;
+    protected virtual member q_function keyPressEvent(QKeyEvent * event) : void;
+    protected virtual member q_function mouseDoubleClickEvent(QMouseEvent * event) : void;
+    protected virtual member q_function mouseMoveEvent(QMouseEvent * event) : void;
+    protected virtual member q_function mousePressEvent(QMouseEvent * event) : void;
+    protected virtual member q_function mouseReleaseEvent(QMouseEvent * event) : void;
+    protected purevirtual member q_function moveCursor(CursorAction cursorAction, Qt.KeyboardModifiers modifiers) : QModelIndex;
+    protected virtual member q_function resizeEvent(QResizeEvent * event) : void;
+    protected member q_function scheduleDelayedItemsLayout() : void;
+    protected member q_function scrollDirtyRegion(int dx, int dy) : void;
+    protected const virtual member q_function selectedIndexes() : QModelIndexList;
+    protected const virtual member q_function selectionCommand(const QModelIndex & index, const QEvent * event = 0) : QItemSelectionModel.SelectionFlags;
+    protected member q_function setDirtyRegion(const QRegion & region) : void;
+    protected member q_function setHorizontalStepsPerItem(int steps) : void;
+    protected purevirtual member q_function setSelection(const QRect & rect, QItemSelectionModel.SelectionFlags flags) : void;
+    protected member q_function setState(State state) : void;
+    protected member q_function setVerticalStepsPerItem(int steps) : void;
+    protected virtual member q_function startDrag(Qt.DropActions supportedActions) : void;
+    protected const member q_function state() : State;
+    protected virtual member q_function timerEvent(QTimerEvent * event) : void;
+    protected const purevirtual member q_function verticalOffset() : int;
+    protected const member q_function verticalStepsPerItem() : int;
+    protected const virtual member q_function viewOptions() : QStyleOptionViewItem;
+    protected virtual member q_function viewportEvent(QEvent * event) : bool;
+    protected const purevirtual member q_function visualRegionForSelection(const QItemSelection & selection) : QRegion;
+
+
+
+
+}
+

@@ -1,0 +1,4 @@
+q_class QDragLeaveEvent extends QEvent {
+
+}
+

@@ -1,0 +1,21 @@
+q_class QGraphicsBlurEffect extends QGraphicsEffect {
+    q_enumeration BlurHint {
+        PerformanceHint = 0
+        QualityHint = 1
+        AnimationHint = 2
+    }
+
+    q_flags BlurHints : BlurHint;
+
+
+    q_property BlurHints blurHints;
+    q_property qreal blurRadius;
+
+    public const member q_function blurHints() : BlurHints;
+    public const member q_function blurRadius() : qreal;
+
+
+
+
+}
+

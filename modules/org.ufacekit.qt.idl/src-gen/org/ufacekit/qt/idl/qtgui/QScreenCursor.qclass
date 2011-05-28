@@ -1,0 +1,14 @@
+q_class QScreenCursor {
+    public const member q_function boundingRect() : QRect;
+    public virtual member q_function hide() : void;
+    public const member q_function image() : QImage;
+    public class q_function initSoftwareCursor() : void;
+    public class q_function instance() : QScreenCursor *;
+    public const member q_function isAccelerated() : bool;
+    public const member q_function isVisible() : bool;
+    public virtual member q_function move(int x, int y) : void;
+    public virtual member q_function show() : void;
+
+
+}
+

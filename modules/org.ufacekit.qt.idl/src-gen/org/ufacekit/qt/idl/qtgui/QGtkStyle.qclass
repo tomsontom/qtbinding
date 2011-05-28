@@ -1,0 +1,8 @@
+q_class QGtkStyle extends QCleanlooksStyle {
+    public class q_function getGConfBool(const QString & key, bool fallback = 0) : bool;
+    public class q_function getGConfString(const QString & value, const QString & fallback = QString()) : QString;
+
+
+
+}
+

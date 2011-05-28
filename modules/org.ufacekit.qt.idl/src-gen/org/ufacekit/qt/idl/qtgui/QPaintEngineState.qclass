@@ -1,0 +1,24 @@
+q_class QPaintEngineState {
+    public const member q_function backgroundBrush() : QBrush;
+    public const member q_function backgroundMode() : Qt.BGMode;
+    public const member q_function brush() : QBrush;
+    public const member q_function brushNeedsResolving() : bool;
+    public const member q_function brushOrigin() : QPointF;
+    public const member q_function clipOperation() : Qt.ClipOperation;
+    public const member q_function clipPath() : QPainterPath;
+    public const member q_function clipRegion() : QRegion;
+    public const member q_function compositionMode() : QPainter.CompositionMode;
+    public const member q_function font() : QFont;
+    public const member q_function isClipEnabled() : bool;
+    public const member q_function matrix() : QMatrix;
+    public const member q_function opacity() : qreal;
+    public const member q_function painter() : QPainter *;
+    public const member q_function pen() : QPen;
+    public const member q_function penNeedsResolving() : bool;
+    public const member q_function renderHints() : QPainter.RenderHints;
+    public const member q_function state() : QPaintEngine.DirtyFlags;
+    public const member q_function transform() : QTransform;
+
+
+}
+

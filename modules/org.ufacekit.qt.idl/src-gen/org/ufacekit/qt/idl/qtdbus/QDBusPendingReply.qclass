@@ -1,0 +1,22 @@
+q_class QDBusPendingReply extends QDBusPendingCall {
+    q_typedef ForEach : ___UNKNOWN___;
+
+
+    q_class Select {
+
+    }
+
+
+    public const member q_function argumentAt() : Type;
+    public const member q_function count() : int;
+    public const member q_function error() : QDBusError;
+    public const member q_function isError() : bool;
+    public const member q_function isFinished() : bool;
+    public const member q_function isValid() : bool;
+    public const member q_function reply() : QDBusMessage;
+    public const member q_function value() : T1;
+    public member q_function waitForFinished() : void;
+
+
+}
+

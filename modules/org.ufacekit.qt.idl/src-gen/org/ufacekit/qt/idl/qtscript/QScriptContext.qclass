@@ -1,0 +1,37 @@
+q_class QScriptContext {
+    q_enumeration Error {
+        UnknownError = 0
+        ReferenceError = 1
+        SyntaxError = 2
+        TypeError = 3
+        RangeError = 4
+        URIError = 5
+    }
+
+    q_enumeration ExecutionState {
+        NormalState = 0
+        ExceptionState = 1
+    }
+
+
+    public const member q_function activationObject() : QScriptValue;
+    public const member q_function argument(int index) : QScriptValue;
+    public const member q_function argumentCount() : int;
+    public const member q_function argumentsObject() : QScriptValue;
+    public const member q_function backtrace() : QStringList;
+    public const member q_function callee() : QScriptValue;
+    public const member q_function engine() : QScriptEngine *;
+    public const member q_function isCalledAsConstructor() : bool;
+    public const member q_function parentContext() : QScriptContext *;
+    public member q_function setActivationObject(const QScriptValue & activation) : void;
+    public member q_function setThisObject(const QScriptValue & thisObject) : void;
+    public const member q_function state() : ExecutionState;
+    public const member q_function thisObject() : QScriptValue;
+    public member q_function throwError(Error error, const QString & text) : QScriptValue;
+    public member q_function throwError(const QString & text) : QScriptValue;
+    public member q_function throwValue(const QScriptValue & value) : QScriptValue;
+    public const member q_function toString() : QString;
+
+
+}
+

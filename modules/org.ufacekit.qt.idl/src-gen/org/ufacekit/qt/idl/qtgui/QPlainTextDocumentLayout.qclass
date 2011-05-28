@@ -1,0 +1,11 @@
+q_class QPlainTextDocumentLayout extends QAbstractTextDocumentLayout {
+    q_property int cursorWidth;
+
+    public const member q_function cursorWidth() : int;
+    public const member q_function ensureBlockLayout(const QTextBlock & block) : void;
+    public member q_function requestUpdate() : void;
+    public member q_function setCursorWidth(int width) : void;
+
+
+}
+

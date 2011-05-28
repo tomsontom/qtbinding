@@ -1,0 +1,18 @@
+q_class QGraphicsScale extends QGraphicsTransform {
+    q_property QVector3D origin;
+    q_property qreal xScale;
+    q_property qreal yScale;
+    q_property qreal zScale;
+
+    public member q_function setOrigin(const QVector3D & point) : void;
+    public member q_function setXScale(qreal ) : void;
+    public member q_function setYScale(qreal ) : void;
+    public member q_function setZScale(qreal ) : void;
+    public const member q_function xScale() : qreal;
+    public const member q_function yScale() : qreal;
+    public const member q_function zScale() : qreal;
+
+
+
+}
+

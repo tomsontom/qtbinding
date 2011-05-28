@@ -1,0 +1,80 @@
+q_class QScreen {
+    q_enumeration ClassId {
+        LinuxFBClass = 0
+        TransformedClass = 1
+        VNCClass = 2
+        MultiClass = 3
+        VFbClass = 4
+        DirectFBClass = 5
+        SvgalibClass = 6
+        ProxyClass = 7
+        GLClass = 8
+        CustomClass = 1024
+    }
+
+    q_enumeration PixelType {
+        NormalPixel = 0
+        BGRPixel = 1
+    }
+
+
+    public virtual member q_function alloc(unsigned int red, unsigned int green, unsigned int blue) : int;
+    public const member q_function base() : uchar *;
+    public virtual member q_function blank(bool on) : void;
+    public virtual member q_function blit(const QImage & image, const QPoint & topLeft, const QRegion & region) : void;
+    public const member q_function classId() : ClassId;
+    public member q_function clut() : QRgb *;
+    public member q_function colorCount() : int;
+    public purevirtual member q_function connect(const QString & displaySpec) : bool;
+    public const virtual member q_function createSurface(const QString & key) : QWSWindowSurface *;
+    public const virtual member q_function createSurface(QWidget * widget) : QWSWindowSurface *;
+    public const member q_function depth() : int;
+    public const member q_function deviceHeight() : int;
+    public const member q_function deviceWidth() : int;
+    public purevirtual member q_function disconnect() : void;
+    public virtual member q_function exposeRegion(QRegion region, int windowIndex) : void;
+    public const member q_function height() : int;
+    public purevirtual member q_function initDevice() : bool;
+    public class q_function instance() : QScreen *;
+    public const virtual member q_function isInterlaced() : bool;
+    public const virtual member q_function isTransformed() : bool;
+    public const member q_function linestep() : int;
+    public const virtual member q_function mapFromDevice(const QImage & image) : QImage;
+    public const virtual member q_function mapFromDevice(const QRegion & region, const QSize & screenSize) : QRegion;
+    public const virtual member q_function mapFromDevice(const QPoint & point, const QSize & screenSize) : QPoint;
+    public const virtual member q_function mapFromDevice(const QSize & size) : QSize;
+    public const virtual member q_function mapFromDevice(const QRect & rectangle, const QSize & screenSize) : QRect;
+    public const virtual member q_function mapToDevice(const QPoint & point, const QSize & screenSize) : QPoint;
+    public const virtual member q_function mapToDevice(const QImage & image) : QImage;
+    public const virtual member q_function mapToDevice(const QSize & size) : QSize;
+    public const virtual member q_function mapToDevice(const QRect & rectangle, const QSize & screenSize) : QRect;
+    public const virtual member q_function mapToDevice(const QRegion & region, const QSize & screenSize) : QRegion;
+    public member q_function numCols() : int;
+    public const member q_function offset() : QPoint;
+    public const virtual member q_function onCard(const unsigned char * buffer) : bool;
+    public const virtual member q_function onCard(const unsigned char * buffer, ulong & offset) : bool;
+    public const member q_function physicalHeight() : int;
+    public const member q_function physicalWidth() : int;
+    public const member q_function pixelFormat() : QImage.Format;
+    public const member q_function pixelType() : PixelType;
+    public const virtual member q_function pixmapDepth() : int;
+    public virtual member q_function pixmapLinestepAlignment() : int;
+    public virtual member q_function pixmapOffsetAlignment() : int;
+    public const virtual member q_function region() : QRegion;
+    public virtual member q_function restore() : void;
+    public virtual member q_function save() : void;
+    public const member q_function screenSize() : int;
+    public virtual member q_function setDirty(const QRect & rectangle) : void;
+    public purevirtual member q_function setMode(int width, int height, int depth) : void;
+    public virtual member q_function shutdownDevice() : void;
+    public virtual member q_function solidFill(const QColor & color, const QRegion & region) : void;
+    public const member q_function subScreenIndexAt(const QPoint & position) : int;
+    public const virtual member q_function subScreens() : QList<QScreen *>;
+    public const virtual member q_function supportsDepth(int depth) : bool;
+    public const member q_function totalSize() : int;
+    public const virtual member q_function transformOrientation() : int;
+    public const member q_function width() : int;
+
+
+}
+

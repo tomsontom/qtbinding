@@ -1,0 +1,30 @@
+q_class QSvgGenerator extends QPaintDevice {
+    q_property QString description;
+    q_property QString fileName;
+    q_property QIODevice * outputDevice;
+    q_property int resolution;
+    q_property QSize size;
+    q_property QString title;
+    q_property QRectF viewBox;
+
+    public const member q_function description() : QString;
+    public const member q_function fileName() : QString;
+    public const member q_function outputDevice() : QIODevice *;
+    public const member q_function resolution() : int;
+    public member q_function setDescription(const QString & description) : void;
+    public member q_function setFileName(const QString & fileName) : void;
+    public member q_function setOutputDevice(QIODevice * outputDevice) : void;
+    public member q_function setResolution(int dpi) : void;
+    public member q_function setSize(const QSize & size) : void;
+    public member q_function setTitle(const QString & title) : void;
+    public member q_function setViewBox(const QRect & viewBox) : void;
+    public member q_function setViewBox(const QRectF & viewBox) : void;
+    public const member q_function size() : QSize;
+    public const member q_function viewBox() : QRect;
+    public const member q_function viewBoxF() : QRectF;
+
+    protected const virtual member q_function paintEngine() : QPaintEngine *;
+
+
+}
+

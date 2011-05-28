@@ -1,0 +1,15 @@
+q_class QXmlStreamAttributes extends QVector<QXmlStreamAttribute> {
+    public member q_function append(const QString & qualifiedName, const QString & value) : void;
+    public member q_function append(const QString & namespaceUri, const QString & name, const QString & value) : void;
+    public member q_function append(const QXmlStreamAttribute & attribute) : void;
+    public const member q_function hasAttribute(const QString & qualifiedName) : bool;
+    public const member q_function hasAttribute(const QLatin1String & qualifiedName) : bool;
+    public const member q_function hasAttribute(const QString & namespaceUri, const QString & name) : bool;
+    public const member q_function value(const QLatin1String & namespaceUri, const QLatin1String & name) : QStringRef;
+    public const member q_function value(const QString & namespaceUri, const QLatin1String & name) : QStringRef;
+    public const member q_function value(const QString & qualifiedName) : QStringRef;
+    public const member q_function value(const QLatin1String & qualifiedName) : QStringRef;
+
+
+}
+

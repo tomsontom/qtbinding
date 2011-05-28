@@ -1,0 +1,42 @@
+q_class QTextLine {
+    q_enumeration CursorPosition {
+        CursorBetweenCharacters = 0
+        CursorOnCharacter = 1
+    }
+
+    q_enumeration Edge {
+        Leading = 0
+        Trailing = 1
+    }
+
+
+    public const member q_function ascent() : qreal;
+    public const member q_function cursorToX(int cursorPos, Edge edge = Leading) : qreal;
+    public const member q_function cursorToX(int * cursorPos, Edge edge = Leading) : qreal;
+    public const member q_function descent() : qreal;
+    public const member q_function draw(QPainter * painter, const QPointF & position, const QTextLayout.FormatRange * selection = 0) : void;
+    public const member q_function height() : qreal;
+    public const member q_function horizontalAdvance() : qreal;
+    public const member q_function isValid() : bool;
+    public const member q_function leading() : qreal;
+    public const member q_function leadingIncluded() : bool;
+    public const member q_function lineNumber() : int;
+    public const member q_function naturalTextRect() : QRectF;
+    public const member q_function naturalTextWidth() : qreal;
+    public const member q_function position() : QPointF;
+    public const member q_function rect() : QRectF;
+    public member q_function setLeadingIncluded(bool included) : void;
+    public member q_function setLineWidth(qreal width) : void;
+    public member q_function setNumColumns(int numColumns) : void;
+    public member q_function setNumColumns(int numColumns, qreal alignmentWidth) : void;
+    public member q_function setPosition(const QPointF & pos) : void;
+    public const member q_function textLength() : int;
+    public const member q_function textStart() : int;
+    public const member q_function width() : qreal;
+    public const member q_function x() : qreal;
+    public const member q_function xToCursor(qreal x, CursorPosition cpos = CursorBetweenCharacters) : int;
+    public const member q_function y() : qreal;
+
+
+}
+

@@ -1,0 +1,10 @@
+q_class QDomNodeList {
+    public const member q_function at(int index) : QDomNode;
+    public const member q_function count() : int;
+    public const member q_function isEmpty() : bool;
+    public const member q_function length() : uint;
+    public const member q_function size() : int;
+
+
+}
+

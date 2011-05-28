@@ -1,0 +1,11 @@
+q_class QGraphicsOpacityEffect extends QGraphicsEffect {
+    q_property qreal opacity;
+    q_property QBrush opacityMask;
+
+    public const member q_function opacityMask() : QBrush;
+
+
+
+
+}
+

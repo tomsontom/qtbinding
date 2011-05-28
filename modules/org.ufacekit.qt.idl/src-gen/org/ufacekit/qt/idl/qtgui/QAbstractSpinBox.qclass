@@ -1,0 +1,68 @@
+q_class QAbstractSpinBox extends QWidget {
+    q_enumeration ButtonSymbols {
+        UpDownArrows = 0
+        PlusMinus = 1
+        NoButtons = 2
+    }
+
+    q_enumeration CorrectionMode {
+        CorrectToPreviousValue = 0
+        CorrectToNearestValue = 1
+    }
+
+    q_enumeration StepEnabledFlag {
+        StepNone = 0
+        StepUpEnabled = 1
+        StepDownEnabled = 2
+    }
+
+    q_flags StepEnabled : StepEnabledFlag;
+
+
+    q_property bool accelerated;
+    q_property const bool acceptableInput;
+    q_property Qt.Alignment alignment;
+    q_property ButtonSymbols buttonSymbols;
+    q_property CorrectionMode correctionMode;
+    q_property bool frame;
+    q_property bool keyboardTracking;
+    q_property bool readOnly;
+    q_property QString specialValueText;
+    q_property const QString text;
+    q_property bool wrapping;
+
+    public const member q_function alignment() : Qt.Alignment;
+    public const member q_function buttonSymbols() : ButtonSymbols;
+    public const member q_function correctionMode() : CorrectionMode;
+    public const virtual member q_function fixup(QString & input) : void;
+    public const member q_function hasAcceptableInput() : bool;
+    public const member q_function hasFrame() : bool;
+    public member q_function interpretText() : void;
+    public const member q_function isAccelerated() : bool;
+    public const member q_function isReadOnly() : bool;
+    public const member q_function keyboardTracking() : bool;
+    public member q_function setAccelerated(bool on) : void;
+    public member q_function setAlignment(Qt.Alignment flag) : void;
+    public member q_function setButtonSymbols(ButtonSymbols bs) : void;
+    public member q_function setCorrectionMode(CorrectionMode cm) : void;
+    public member q_function setFrame(bool ) : void;
+    public member q_function setKeyboardTracking(bool kt) : void;
+    public member q_function setReadOnly(bool r) : void;
+    public member q_function setSpecialValueText(const QString & txt) : void;
+    public member q_function setWrapping(bool w) : void;
+    public const member q_function specialValueText() : QString;
+    public virtual member q_function stepBy(int steps) : void;
+    public const member q_function text() : QString;
+    public const virtual member q_function validate(QString & input, int & pos) : QValidator.State;
+    public const member q_function wrapping() : bool;
+
+    protected const member q_function initStyleOption(QStyleOptionSpinBox * option) : void;
+    protected const member q_function lineEdit() : QLineEdit *;
+    protected member q_function setLineEdit(QLineEdit * lineEdit) : void;
+    protected const virtual member q_function stepEnabled() : StepEnabled;
+
+
+
+
+}
+

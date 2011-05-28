@@ -1,0 +1,64 @@
+q_class QAbstractItemModel extends QObject {
+    public const virtual member q_function buddy(const QModelIndex & index) : QModelIndex;
+    public const virtual member q_function canFetchMore(const QModelIndex & parent) : bool;
+    public const purevirtual member q_function columnCount(const QModelIndex & parent = QModelIndex()) : int;
+    public const purevirtual member q_function data(const QModelIndex & index, int role = Qt.DisplayRole) : QVariant;
+    public virtual member q_function dropMimeData(const QMimeData * data, Qt.DropAction action, int row, int column, const QModelIndex & parent) : bool;
+    public virtual member q_function fetchMore(const QModelIndex & parent) : void;
+    public const virtual member q_function flags(const QModelIndex & index) : Qt.ItemFlags;
+    public const virtual member q_function hasChildren(const QModelIndex & parent = QModelIndex()) : bool;
+    public const virtual member q_function headerData(int section, Qt.Orientation orientation, int role = Qt.DisplayRole) : QVariant;
+    public const purevirtual member q_function index(int row, int column, const QModelIndex & parent = QModelIndex()) : QModelIndex;
+    public member q_function insertColumn(int column, const QModelIndex & parent = QModelIndex()) : bool;
+    public virtual member q_function insertColumns(int column, int count, const QModelIndex & parent = QModelIndex()) : bool;
+    public member q_function insertRow(int row, const QModelIndex & parent = QModelIndex()) : bool;
+    public virtual member q_function insertRows(int row, int count, const QModelIndex & parent = QModelIndex()) : bool;
+    public const virtual member q_function itemData(const QModelIndex & index) : QMap<int, QVariant>;
+    public const virtual member q_function match(const QModelIndex & start, int role, const QVariant & value, int hits = 1, Qt.MatchFlags flags = Qt.MatchFlags( Qt.MatchStartsWith | Qt.MatchWrap )) : QModelIndexList;
+    public const virtual member q_function mimeData(const QModelIndexList & indexes) : QMimeData *;
+    public const virtual member q_function mimeTypes() : QStringList;
+    public const purevirtual member q_function parent(const QModelIndex & index) : QModelIndex;
+    public member q_function removeColumn(int column, const QModelIndex & parent = QModelIndex()) : bool;
+    public virtual member q_function removeColumns(int column, int count, const QModelIndex & parent = QModelIndex()) : bool;
+    public member q_function removeRow(int row, const QModelIndex & parent = QModelIndex()) : bool;
+    public virtual member q_function removeRows(int row, int count, const QModelIndex & parent = QModelIndex()) : bool;
+    public const member q_function roleNames() : const QHash<int, QByteArray> &;
+    public const purevirtual member q_function rowCount(const QModelIndex & parent = QModelIndex()) : int;
+    public virtual member q_function setData(const QModelIndex & index, const QVariant & value, int role = Qt.EditRole) : bool;
+    public virtual member q_function setHeaderData(int section, Qt.Orientation orientation, const QVariant & value, int role = Qt.EditRole) : bool;
+    public virtual member q_function setItemData(const QModelIndex & index, const QMap<int, QVariant> & roles) : bool;
+    public member q_function setSupportedDragActions(Qt.DropActions actions) : void;
+    public const member q_function sibling(int row, int column, const QModelIndex & index) : QModelIndex;
+    public virtual member q_function sort(int column, Qt.SortOrder order = Qt.AscendingOrder) : void;
+    public const virtual member q_function span(const QModelIndex & index) : QSize;
+    public const member q_function supportedDragActions() : Qt.DropActions;
+    public const virtual member q_function supportedDropActions() : Qt.DropActions;
+
+    protected member q_function beginInsertColumns(const QModelIndex & parent, int first, int last) : void;
+    protected member q_function beginInsertRows(const QModelIndex & parent, int first, int last) : void;
+    protected member q_function beginMoveColumns(const QModelIndex & sourceParent, int sourceFirst, int sourceLast, const QModelIndex & destinationParent, int destinationChild) : bool;
+    protected member q_function beginMoveRows(const QModelIndex & sourceParent, int sourceFirst, int sourceLast, const QModelIndex & destinationParent, int destinationChild) : bool;
+    protected member q_function beginRemoveColumns(const QModelIndex & parent, int first, int last) : void;
+    protected member q_function beginRemoveRows(const QModelIndex & parent, int first, int last) : void;
+    protected member q_function beginResetModel() : void;
+    protected member q_function changePersistentIndex(const QModelIndex & from, const QModelIndex & to) : void;
+    protected member q_function changePersistentIndexList(const QModelIndexList & from, const QModelIndexList & to) : void;
+    protected const member q_function createIndex(int row, int column, void * ptr = 0) : QModelIndex;
+    protected const member q_function createIndex(int row, int column, int id) : QModelIndex;
+    protected const member q_function createIndex(int row, int column, quint32 id) : QModelIndex;
+    protected member q_function endInsertColumns() : void;
+    protected member q_function endInsertRows() : void;
+    protected member q_function endMoveColumns() : void;
+    protected member q_function endMoveRows() : void;
+    protected member q_function endRemoveColumns() : void;
+    protected member q_function endRemoveRows() : void;
+    protected member q_function endResetModel() : void;
+    protected const member q_function persistentIndexList() : QModelIndexList;
+    protected member q_function reset() : void;
+    protected member q_function setRoleNames(const QHash<int, QByteArray> & roleNames) : void;
+
+
+
+
+}
+

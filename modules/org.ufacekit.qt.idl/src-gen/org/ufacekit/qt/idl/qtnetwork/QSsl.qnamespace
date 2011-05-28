@@ -1,0 +1,33 @@
+q_namespace QSsl {
+    q_enumeration AlternateNameEntryType {
+        EmailEntry = 0
+        DnsEntry = 1
+    }
+
+    q_enumeration EncodingFormat {
+        Pem = 0
+        Der = 1
+    }
+
+    q_enumeration KeyAlgorithm {
+        Rsa = 0
+        Dsa = 1
+    }
+
+    q_enumeration KeyType {
+        PrivateKey = 0
+        PublicKey = 1
+    }
+
+    q_enumeration SslProtocol {
+        SslV3 = 0
+        SslV2 = 1
+        TlsV1 = 2
+        AnyProtocol = 3
+        UnknownProtocol = -1
+    }
+
+
+
+}
+

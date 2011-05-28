@@ -1,0 +1,8 @@
+q_class QFontEnginePlugin extends QObject {
+    public const purevirtual member q_function availableFontEngines() : QList<QFontEngineInfo>;
+    public purevirtual member q_function create(const QFontEngineInfo & info) : QAbstractFontEngine *;
+    public const virtual member q_function keys() : QStringList;
+
+
+}
+

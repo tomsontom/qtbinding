@@ -1,0 +1,65 @@
+q_class QSqlDriver extends QObject {
+    q_enumeration DriverFeature {
+        Transactions = 0
+        QuerySize = 1
+        BLOB = 2
+        Unicode = 3
+        PreparedQueries = 4
+        NamedPlaceholders = 5
+        PositionalPlaceholders = 6
+        LastInsertId = 7
+        BatchOperations = 8
+        SimpleLocking = 9
+        LowPrecisionNumbers = 10
+        EventNotifications = 11
+        FinishQuery = 12
+        MultipleResultSets = 13
+    }
+
+    q_enumeration IdentifierType {
+        FieldName = 0
+        TableName = 1
+    }
+
+    q_enumeration StatementType {
+        WhereStatement = 0
+        SelectStatement = 1
+        UpdateStatement = 2
+        InsertStatement = 3
+        DeleteStatement = 4
+    }
+
+
+    public virtual member q_function beginTransaction() : bool;
+    public purevirtual member q_function close() : void;
+    public virtual member q_function commitTransaction() : bool;
+    public const purevirtual member q_function createResult() : QSqlResult *;
+    public const virtual member q_function escapeIdentifier(const QString & identifier, IdentifierType type) : QString;
+    public const virtual member q_function formatValue(const QSqlField & field, bool trimStrings = false) : QString;
+    public const virtual member q_function handle() : QVariant;
+    public const purevirtual member q_function hasFeature(DriverFeature feature) : bool;
+    public const member q_function isIdentifierEscaped(const QString & identifier, IdentifierType type) : bool;
+    public const member q_function isOpenError() : bool;
+    public const member q_function lastError() : QSqlError;
+    public const member q_function numericalPrecisionPolicy() : QSql.NumericalPrecisionPolicy;
+    public purevirtual member q_function open(const QString & db, const QString & user = QString(), const QString & password = QString(), const QString & host = QString(), int port = -1, const QString & options = QString()) : bool;
+    public const virtual member q_function primaryIndex(const QString & tableName) : QSqlIndex;
+    public const virtual member q_function record(const QString & tableName) : QSqlRecord;
+    public virtual member q_function rollbackTransaction() : bool;
+    public member q_function setNumericalPrecisionPolicy(QSql.NumericalPrecisionPolicy precisionPolicy) : void;
+    public const virtual member q_function sqlStatement(StatementType type, const QString & tableName, const QSqlRecord & rec, bool preparedStatement) : QString;
+    public const member q_function stripDelimiters(const QString & identifier, IdentifierType type) : QString;
+    public member q_function subscribeToNotification(const QString & name) : bool;
+    public const member q_function subscribedToNotifications() : QStringList;
+    public const virtual member q_function tables(QSql.TableType tableType) : QStringList;
+    public member q_function unsubscribeFromNotification(const QString & name) : bool;
+
+    protected virtual member q_function setLastError(const QSqlError & error) : void;
+    protected virtual member q_function setOpen(bool open) : void;
+    protected virtual member q_function setOpenError(bool error) : void;
+
+
+
+
+}
+

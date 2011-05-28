@@ -1,0 +1,8 @@
+q_class QMotifStyle extends QCommonStyle {
+    public member q_function setUseHighlightColors(bool arg) : void;
+    public const member q_function useHighlightColors() : bool;
+
+
+
+}
+

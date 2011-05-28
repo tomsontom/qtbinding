@@ -1,0 +1,10 @@
+q_class QGraphicsProxyWidget extends QGraphicsWidget {
+    public member q_function createProxyForChildWidget(QWidget * child) : QGraphicsProxyWidget *;
+    public member q_function setWidget(QWidget * widget) : void;
+    public const member q_function subWidgetRect(const QWidget * widget) : QRectF;
+    public const member q_function widget() : QWidget *;
+
+
+
+}
+

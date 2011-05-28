@@ -1,0 +1,10 @@
+q_class QItemSelection extends QList<QItemSelectionRange> {
+    public const member q_function contains(const QModelIndex & index) : bool;
+    public const member q_function indexes() : QModelIndexList;
+    public member q_function merge(const QItemSelection & other, QItemSelectionModel.SelectionFlags command) : void;
+    public member q_function select(const QModelIndex & topLeft, const QModelIndex & bottomRight) : void;
+    public class q_function split(const QItemSelectionRange & range, const QItemSelectionRange & other, QItemSelection * result) : void;
+
+
+}
+

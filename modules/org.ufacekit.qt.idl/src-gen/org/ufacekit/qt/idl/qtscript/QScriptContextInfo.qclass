@@ -1,0 +1,24 @@
+q_class QScriptContextInfo {
+    q_enumeration FunctionType {
+        ScriptFunction = 0
+        QtFunction = 1
+        QtPropertyFunction = 2
+        NativeFunction = 3
+    }
+
+
+    public const member q_function columnNumber() : int;
+    public const member q_function fileName() : QString;
+    public const member q_function functionEndLineNumber() : int;
+    public const member q_function functionMetaIndex() : int;
+    public const member q_function functionName() : QString;
+    public const member q_function functionParameterNames() : QStringList;
+    public const member q_function functionStartLineNumber() : int;
+    public const member q_function functionType() : FunctionType;
+    public const member q_function isNull() : bool;
+    public const member q_function lineNumber() : int;
+    public const member q_function scriptId() : qint64;
+
+
+}
+

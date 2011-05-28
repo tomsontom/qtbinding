@@ -1,0 +1,13 @@
+q_class QPoint {
+    public const member q_function isNull() : bool;
+    public const member q_function manhattanLength() : int;
+    public member q_function rx() : int &;
+    public member q_function ry() : int &;
+    public member q_function setX(int x) : void;
+    public member q_function setY(int y) : void;
+    public const member q_function x() : int; 
+    public const member q_function y() : int;
+
+
+}
+

@@ -1,0 +1,46 @@
+q_class QDecoration {
+    q_enumeration DecorationRegion {
+        None = 0
+        All = 2147483647
+        TopLeft = 1
+        Top = 2
+        TopRight = 4
+        Left = 8
+        Right = 16
+        BottomLeft = 32
+        Bottom = 64
+        BottomRight = 128
+        Borders = 255
+        Menu = 256
+        Title = 512
+        Help = 1024
+        Minimize = 2048
+        Maximize = 4096
+        Normalize = 8192
+        Close = 16384
+        Move = 32768
+        Resize = 65536
+    }
+
+    q_enumeration DecorationState {
+        Normal = 4
+        Disabled = 8
+        Hover = 1
+        Pressed = 2
+    }
+
+
+    public virtual member q_function buildSysMenu(QWidget * widget, QMenu * menu) : void;
+    public member q_function menuTriggered(QWidget * widget, QAction * action) : void;
+    public purevirtual member q_function paint(QPainter * painter, const QWidget * widget, int decorationRegion = All, DecorationState state = Normal) : bool;
+    public member q_function region(const QWidget * widget, int decorationRegion = All) : QRegion;
+    public purevirtual member q_function region(const QWidget * widget, const QRect & rectangle, int decorationRegion = All) : QRegion;
+    public virtual member q_function regionAt(const QWidget * widget, const QPoint & point) : int;
+    public virtual member q_function regionClicked(QWidget * widget, int region) : void;
+    public virtual member q_function regionDoubleClicked(QWidget * widget, int region) : void;
+    public class q_function startMove(QWidget * widget) : void;
+    public class q_function startResize(QWidget * widget) : void;
+
+
+}
+

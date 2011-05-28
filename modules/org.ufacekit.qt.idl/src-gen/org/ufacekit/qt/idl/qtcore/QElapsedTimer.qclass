@@ -1,0 +1,23 @@
+q_class QElapsedTimer {
+    q_enumeration ClockType {
+        SystemTime = 0
+        MonotonicClock = 1
+        TickCounter = 2
+        MachAbsoluteTime = 3
+    }
+
+
+    public class q_function clockType() : ClockType;
+    public const member q_function elapsed() : qint64;
+    public const member q_function hasExpired(qint64 timeout) : bool;
+    public member q_function invalidate() : void;
+    public class q_function isMonotonic() : bool;
+    public const member q_function isValid() : bool;
+    public const member q_function msecsSinceReference() : qint64;
+    public const member q_function msecsTo(const QElapsedTimer & other) : qint64;
+    public const member q_function secsTo(const QElapsedTimer & other) : qint64;
+    public member q_function start() : void;
+
+
+}
+

@@ -1,0 +1,38 @@
+q_class QNetworkSession extends QObject {
+    q_enumeration SessionError {
+        UnknownSessionError = 0
+        SessionAbortedError = 1
+        RoamingError = 2
+        OperationNotSupportedError = 3
+        InvalidConfigurationError = 4
+    }
+
+    q_enumeration State {
+        Invalid = 0
+        NotAvailable = 1
+        Connecting = 2
+        Connected = 3
+        Closing = 4
+        Disconnected = 5
+        Roaming = 6
+    }
+
+
+    public const member q_function activeTime() : quint64;
+    public const member q_function bytesReceived() : quint64;
+    public const member q_function bytesWritten() : quint64;
+    public const member q_function configuration() : QNetworkConfiguration;
+    public const member q_function error() : SessionError;
+    public const member q_function errorString() : QString;
+    public const member q_function interface() : QNetworkInterface;
+    public const member q_function isOpen() : bool;
+    public const member q_function sessionProperty(const QString & key) : QVariant;
+    public member q_function setSessionProperty(const QString & key, const QVariant & value) : void;
+    public const member q_function state() : State;
+    public member q_function waitForOpened(int msecs = 30000) : bool;
+
+
+
+
+}
+

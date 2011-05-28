@@ -1,0 +1,10 @@
+q_class QRegExpValidator extends QValidator {
+    q_property QRegExp regExp;
+
+    public const member q_function regExp() : const QRegExp &;
+    public member q_function setRegExp(const QRegExp & rx) : void;
+    public const virtual member q_function validate(QString & input, int & pos) : QValidator.State;
+
+
+}
+

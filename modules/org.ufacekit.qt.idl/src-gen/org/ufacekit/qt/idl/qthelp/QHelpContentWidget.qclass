@@ -1,0 +1,6 @@
+q_class QHelpContentWidget extends QTreeView {
+
+
+
+}
+

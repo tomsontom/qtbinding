@@ -1,0 +1,7 @@
+q_class QXmlLocator {
+    public const purevirtual member q_function columnNumber() : int;
+    public const purevirtual member q_function lineNumber() : int;
+
+
+}
+

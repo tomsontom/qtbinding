@@ -1,0 +1,33 @@
+q_class QGraphicsItemAnimation extends QObject {
+    public member q_function clear() : void;
+    public const member q_function horizontalScaleAt(qreal step) : qreal;
+    public const member q_function horizontalShearAt(qreal step) : qreal;
+    public const member q_function item() : QGraphicsItem *;
+    public const member q_function matrixAt(qreal step) : QMatrix;
+    public const member q_function posAt(qreal step) : QPointF;
+    public const member q_function posList() : QList<QPair<qreal, QPointF> >;
+    public const member q_function rotationAt(qreal step) : qreal;
+    public const member q_function rotationList() : QList<QPair<qreal, qreal> >;
+    public const member q_function scaleList() : QList<QPair<qreal, QPointF> >;
+    public member q_function setItem(QGraphicsItem * item) : void;
+    public member q_function setPosAt(qreal step, const QPointF & point) : void;
+    public member q_function setRotationAt(qreal step, qreal angle) : void;
+    public member q_function setScaleAt(qreal step, qreal sx, qreal sy) : void;
+    public member q_function setShearAt(qreal step, qreal sh, qreal sv) : void;
+    public member q_function setTimeLine(QTimeLine * timeLine) : void;
+    public member q_function setTranslationAt(qreal step, qreal dx, qreal dy) : void;
+    public const member q_function shearList() : QList<QPair<qreal, QPointF> >;
+    public const member q_function timeLine() : QTimeLine *;
+    public const member q_function translationList() : QList<QPair<qreal, QPointF> >;
+    public const member q_function verticalScaleAt(qreal step) : qreal;
+    public const member q_function verticalShearAt(qreal step) : qreal;
+    public const member q_function xTranslationAt(qreal step) : qreal;
+    public const member q_function yTranslationAt(qreal step) : qreal;
+
+    protected virtual member q_function afterAnimationStep(qreal step) : void;
+    protected virtual member q_function beforeAnimationStep(qreal step) : void;
+
+
+
+}
+

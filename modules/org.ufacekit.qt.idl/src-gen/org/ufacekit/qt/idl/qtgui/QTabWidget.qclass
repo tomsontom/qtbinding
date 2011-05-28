@@ -1,0 +1,75 @@
+q_class QTabWidget extends QWidget {
+    q_enumeration TabPosition {
+        North = 0
+        South = 1
+        West = 2
+        East = 3
+    }
+
+    q_enumeration TabShape {
+        Rounded = 0
+        Triangular = 1
+    }
+
+
+    q_property const int count;
+    q_property int currentIndex;
+    q_property bool documentMode;
+    q_property Qt.TextElideMode elideMode;
+    q_property QSize iconSize;
+    q_property bool movable;
+    q_property TabPosition tabPosition;
+    q_property TabShape tabShape;
+    q_property bool tabsClosable;
+    q_property bool usesScrollButtons;
+
+    public member q_function addTab(QWidget * page, const QIcon & icon, const QString & label) : int;
+    public member q_function clear() : void;
+    public const member q_function cornerWidget(Qt.Corner corner = Qt.TopRightCorner) : QWidget *;
+    public const member q_function count() : int;
+    public const member q_function currentIndex() : int;
+    public const member q_function currentWidget() : QWidget *;
+    public const member q_function documentMode() : bool;
+    public const member q_function elideMode() : Qt.TextElideMode;
+    public const member q_function iconSize() : QSize;
+    public const member q_function indexOf(QWidget * w) : int;
+    public member q_function insertTab(int index, QWidget * page, const QString & label) : int;
+    public member q_function insertTab(int index, QWidget * page, const QIcon & icon, const QString & label) : int;
+    public const member q_function isMovable() : bool;
+    public const member q_function isTabEnabled(int index) : bool;
+    public member q_function removeTab(int index) : void;
+    public member q_function setCornerWidget(QWidget * widget, Qt.Corner corner = Qt.TopRightCorner) : void;
+    public member q_function setDocumentMode(bool set) : void;
+    public member q_function setElideMode(Qt.TextElideMode ) : void;
+    public member q_function setIconSize(const QSize & size) : void;
+    public member q_function setMovable(bool movable) : void;
+    public member q_function setTabEnabled(int index, bool enable) : void;
+    public member q_function setTabIcon(int index, const QIcon & icon) : void;
+    public member q_function setTabPosition(TabPosition ) : void;
+    public member q_function setTabShape(TabShape s) : void;
+    public member q_function setTabText(int index, const QString & label) : void;
+    public member q_function setTabToolTip(int index, const QString & tip) : void;
+    public member q_function setTabWhatsThis(int index, const QString & text) : void;
+    public member q_function setTabsClosable(bool closeable) : void;
+    public member q_function setUsesScrollButtons(bool useButtons) : void;
+    public const member q_function tabIcon(int index) : QIcon;
+    public const member q_function tabShape() : TabShape;
+    public const member q_function tabText(int index) : QString;
+    public const member q_function tabToolTip(int index) : QString;
+    public const member q_function tabWhatsThis(int index) : QString;
+    public const member q_function tabsClosable() : bool;
+    public const member q_function usesScrollButtons() : bool;
+    public const member q_function widget(int index) : QWidget *;
+
+    protected const member q_function initStyleOption(QStyleOptionTabWidgetFrame * option) : void;
+    protected virtual member q_function paintEvent(QPaintEvent * event) : void;
+    protected member q_function setTabBar(QTabBar * tb) : void;
+    protected const member q_function tabBar() : QTabBar *;
+    protected virtual member q_function tabInserted(int index) : void;
+    protected virtual member q_function tabRemoved(int index) : void;
+
+
+
+
+}
+

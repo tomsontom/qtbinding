@@ -1,0 +1,154 @@
+q_class QFont {
+    q_enumeration Capitalization {
+        MixedCase = 0
+        AllUppercase = 1
+        AllLowercase = 2
+        SmallCaps = 3
+        Capitalize = 4
+    }
+
+    q_enumeration ResolveProperties {
+        FamilyResolved = 1
+        SizeResolved = 2
+        StyleHintResolved = 4
+        StyleStrategyResolved = 8
+        WeightResolved = 16
+        StyleResolved = 32
+        UnderlineResolved = 64
+        OverlineResolved = 128
+        StrikeOutResolved = 256
+        FixedPitchResolved = 512
+        StretchResolved = 1024
+        KerningResolved = 2048
+        CapitalizationResolved = 4096
+        LetterSpacingResolved = 8192
+        WordSpacingResolved = 16384
+        AllPropertiesResolved = 32767
+    }
+
+    q_enumeration SpacingType {
+        PercentageSpacing = 0
+        AbsoluteSpacing = 1
+    }
+
+    q_enumeration Stretch {
+        UltraCondensed = 50
+        ExtraCondensed = 62
+        Condensed = 75
+        SemiCondensed = 87
+        Unstretched = 100
+        SemiExpanded = 112
+        Expanded = 125
+        ExtraExpanded = 150
+        UltraExpanded = 200
+    }
+
+    q_enumeration Style {
+        StyleNormal = 0
+        StyleItalic = 1
+        StyleOblique = 2
+    }
+
+    q_enumeration StyleHint {
+        Helvetica = 0
+        SansSerif = Helvetica
+        Times = __UNKNOWN__
+        Serif = Times
+        Courier = __UNKNOWN__
+        TypeWriter = Courier
+        OldEnglish = __UNKNOWN__
+        Decorative = OldEnglish
+        System = __UNKNOWN__
+        AnyStyle = __UNKNOWN__
+        Cursive = __UNKNOWN__
+        Monospace = __UNKNOWN__
+        Fantasy = __UNKNOWN__
+    }
+
+    q_enumeration StyleStrategy {
+        PreferDefault = 1
+        PreferBitmap = 2
+        PreferDevice = 4
+        PreferOutline = 8
+        ForceOutline = 16
+        PreferMatch = 32
+        PreferQuality = 64
+        PreferAntialias = 128
+        NoAntialias = 256
+        OpenGLCompatible = 512
+        ForceIntegerMetrics = 1024
+        NoFontMerging = 32768
+    }
+
+    q_enumeration Weight {
+        Light = 25
+        Normal = 50
+        DemiBold = 63
+        Bold = 75
+        Black = 87
+    }
+
+
+    public const member q_function bold() : bool;
+    public const member q_function capitalization() : Capitalization;
+    public const member q_function defaultFamily() : QString;
+    public const member q_function exactMatch() : bool;
+    public const member q_function fixedPitch() : bool;
+    public member q_function fromString(const QString & descrip) : bool;
+    public const member q_function handle() : HFONT;
+    public class q_function insertSubstitution(const QString & familyName, const QString & substituteName) : void;
+    public class q_function insertSubstitutions(const QString & familyName, const QStringList & substituteNames) : void;
+    public const member q_function isCopyOf(const QFont & f) : bool;
+    public const member q_function italic() : bool;
+    public const member q_function kerning() : bool;
+    public const member q_function key() : QString;
+    public const member q_function lastResortFamily() : QString;
+    public const member q_function lastResortFont() : QString;
+    public const member q_function letterSpacing() : qreal;
+    public const member q_function letterSpacingType() : SpacingType;
+    public const member q_function macFontID() : quint32;
+    public const member q_function overline() : bool;
+    public const member q_function pixelSize() : int;
+    public const member q_function pointSize() : int;
+    public const member q_function pointSizeF() : qreal;
+    public const member q_function rawMode() : bool;
+    public const member q_function rawName() : QString;
+    public class q_function removeSubstitution(const QString & familyName) : void;
+    public const member q_function resolve(const QFont & other) : QFont;
+    public member q_function setBold(bool enable) : void;
+    public member q_function setCapitalization(Capitalization caps) : void;
+    public member q_function setFamily(const QString & family) : void;
+    public member q_function setFixedPitch(bool enable) : void;
+    public member q_function setItalic(bool enable) : void;
+    public member q_function setKerning(bool enable) : void;
+    public member q_function setLetterSpacing(SpacingType type, qreal spacing) : void;
+    public member q_function setOverline(bool enable) : void;
+    public member q_function setPixelSize(int pixelSize) : void;
+    public member q_function setPointSize(int pointSize) : void;
+    public member q_function setPointSizeF(qreal pointSize) : void;
+    public member q_function setRawMode(bool enable) : void;
+    public member q_function setRawName(const QString & name) : void;
+    public member q_function setStretch(int factor) : void;
+    public member q_function setStrikeOut(bool enable) : void;
+    public member q_function setStyle(Style style) : void;
+    public member q_function setStyleHint(StyleHint hint, StyleStrategy strategy = PreferDefault) : void;
+    public member q_function setStyleStrategy(StyleStrategy s) : void;
+    public member q_function setUnderline(bool enable) : void;
+    public member q_function setWeight(int weight) : void;
+    public member q_function setWordSpacing(qreal spacing) : void;
+    public const member q_function stretch() : int;
+    public const member q_function strikeOut() : bool;
+    public const member q_function style() : Style;
+    public const member q_function styleHint() : StyleHint;
+    public const member q_function styleStrategy() : StyleStrategy;
+    public class q_function substitute(const QString & familyName) : QString;
+    public class q_function substitutes(const QString & familyName) : QStringList;
+    public class q_function substitutions() : QStringList;
+    public const member q_function toString() : QString;
+    public const member q_function underline() : bool;
+    public const member q_function weight() : int;
+    public const member q_function wordSpacing() : qreal;
+
+
+}
+

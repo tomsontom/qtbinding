@@ -1,0 +1,23 @@
+q_class QDesktopServices {
+    q_enumeration StandardLocation {
+        DesktopLocation = 0
+        DocumentsLocation = 1
+        FontsLocation = 2
+        ApplicationsLocation = 3
+        MusicLocation = 4
+        MoviesLocation = 5
+        PicturesLocation = 6
+        TempLocation = 7
+        HomeLocation = 8
+        DataLocation = 9
+        CacheLocation = 10
+    }
+
+
+    public class q_function displayName(StandardLocation type) : QString;
+    public class q_function storageLocation(StandardLocation type) : QString;
+    public class q_function unsetUrlHandler(const QString & scheme) : void;
+
+
+}
+

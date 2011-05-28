@@ -1,0 +1,14 @@
+q_class QS60MainAppUi {
+    public virtual member q_function ConstructL() : void;
+    public virtual member q_function DynInitMenuBarL(TInt resourceId, CEikMenuBar * menuBar) : void;
+    public virtual member q_function DynInitMenuPaneL(TInt resourceId, CEikMenuPane * menuPane) : void;
+    public virtual member q_function HandleCommandL(TInt command) : void;
+    public virtual member q_function HandleResourceChangeL(TInt type) : void;
+    public virtual member q_function HandleStatusPaneSizeChange() : void;
+    public virtual member q_function RestoreMenuL(CCoeControl * menuWindow, TInt resourceId, TMenuType menuType) : void;
+
+    protected virtual member q_function HandleWsEventL(const TWsEvent & wsEvent, CCoeControl * destination) : void;
+
+
+}
+

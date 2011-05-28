@@ -1,0 +1,7 @@
+q_class QDomText extends QDomCharacterData {
+    public const member q_function nodeType() : QDomNode.NodeType;
+    public member q_function splitText(int offset) : QDomText;
+
+
+}
+

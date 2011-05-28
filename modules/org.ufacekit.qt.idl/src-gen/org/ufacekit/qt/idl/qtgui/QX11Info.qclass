@@ -1,0 +1,31 @@
+q_class QX11Info {
+    public class q_function appCells(int screen = -1) : int;
+    public class q_function appClass() : const char *;
+    public class q_function appColormap(int screen = -1) : Qt.HANDLE;
+    public class q_function appDefaultColormap(int screen = -1) : bool;
+    public class q_function appDefaultVisual(int screen = -1) : bool;
+    public class q_function appDepth(int screen = -1) : int;
+    public class q_function appDpiX(int screen = -1) : int;
+    public class q_function appDpiY(int screen = -1) : int;
+    public class q_function appRootWindow(int screen = -1) : Qt.HANDLE;
+    public class q_function appScreen() : int;
+    public class q_function appTime() : unsigned long;
+    public class q_function appUserTime() : unsigned long;
+    public class q_function appVisual(int screen = -1) : void *;
+    public const member q_function cells() : int;
+    public const member q_function colormap() : Qt.HANDLE;
+    public const member q_function defaultColormap() : bool;
+    public const member q_function defaultVisual() : bool;
+    public const member q_function depth() : int;
+    public class q_function display() : Display *;
+    public class q_function isCompositingManagerRunning() : bool;
+    public const member q_function screen() : int;
+    public class q_function setAppDpiX(int screen, int xdpi) : void;
+    public class q_function setAppDpiY(int screen, int ydpi) : void;
+    public class q_function setAppTime(unsigned long time) : void;
+    public class q_function setAppUserTime(unsigned long time) : void;
+    public const member q_function visual() : void *;
+
+
+}
+

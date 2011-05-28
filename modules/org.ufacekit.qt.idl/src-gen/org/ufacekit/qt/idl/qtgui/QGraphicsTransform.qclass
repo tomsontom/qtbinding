@@ -1,0 +1,7 @@
+q_class QGraphicsTransform extends QObject {
+    public const purevirtual member q_function applyTo(QMatrix4x4 * matrix) : void;
+
+
+
+}
+

@@ -1,0 +1,73 @@
+q_class QTextStream {
+    q_enumeration FieldAlignment {
+        AlignLeft = 0
+        AlignRight = 1
+        AlignCenter = 2
+        AlignAccountingStyle = 3
+    }
+
+    q_enumeration NumberFlag {
+        ShowBase = 1
+        ForcePoint = 2
+        ForceSign = 4
+        UppercaseBase = 8
+        UppercaseDigits = 16
+    }
+
+    q_flags NumberFlags : NumberFlag;
+
+    q_enumeration RealNumberNotation {
+        SmartNotation = 0
+        FixedNotation = 1
+        ScientificNotation = 2
+    }
+
+    q_enumeration Status {
+        Ok = 0
+        ReadPastEnd = 1
+        ReadCorruptData = 2
+    }
+
+
+    public const member q_function atEnd() : bool;
+    public const member q_function autoDetectUnicode() : bool;
+    public const member q_function codec() : QTextCodec *;
+    public const member q_function device() : QIODevice *;
+    public const member q_function fieldAlignment() : FieldAlignment;
+    public const member q_function fieldWidth() : int;
+    public member q_function flush() : void;
+    public const member q_function generateByteOrderMark() : bool;
+    public const member q_function integerBase() : int;
+    public const member q_function locale() : QLocale;
+    public const member q_function numberFlags() : NumberFlags;
+    public const member q_function padChar() : QChar;
+    public const member q_function pos() : qint64;
+    public member q_function read(qint64 maxlen) : QString;
+    public member q_function readAll() : QString;
+    public member q_function readLine(qint64 maxlen = 0) : QString;
+    public const member q_function realNumberNotation() : RealNumberNotation;
+    public const member q_function realNumberPrecision() : int;
+    public member q_function reset() : void;
+    public member q_function resetStatus() : void;
+    public member q_function seek(qint64 pos) : bool;
+    public member q_function setAutoDetectUnicode(bool enabled) : void;
+    public member q_function setCodec(const char * codecName) : void;
+    public member q_function setDevice(QIODevice * device) : void;
+    public member q_function setFieldAlignment(FieldAlignment mode) : void;
+    public member q_function setFieldWidth(int width) : void;
+    public member q_function setGenerateByteOrderMark(bool generate) : void;
+    public member q_function setIntegerBase(int base) : void;
+    public member q_function setLocale(const QLocale & locale) : void;
+    public member q_function setNumberFlags(NumberFlags flags) : void;
+    public member q_function setPadChar(QChar ch) : void;
+    public member q_function setRealNumberNotation(RealNumberNotation notation) : void;
+    public member q_function setRealNumberPrecision(int precision) : void;
+    public member q_function setStatus(Status status) : void;
+    public member q_function setString(QString * string, QIODevice.OpenMode openMode = QIODevice.ReadWrite) : void;
+    public member q_function skipWhiteSpace() : void;
+    public const member q_function status() : Status;
+    public const member q_function string() : QString *;
+
+
+}
+

@@ -1,0 +1,79 @@
+q_class QListView extends QAbstractItemView {
+    q_enumeration Flow {
+        LeftToRight = 0
+        TopToBottom = 1
+    }
+
+    q_enumeration LayoutMode {
+        SinglePass = 0
+        Batched = 1
+    }
+
+    q_enumeration Movement {
+        Static = 0
+        Free = 1
+        Snap = 2
+    }
+
+    q_enumeration ResizeMode {
+        Fixed = 0
+        Adjust = 1
+    }
+
+    q_enumeration ViewMode {
+        ListMode = 0
+        IconMode = 1
+    }
+
+
+    q_property int batchSize;
+    q_property Flow flow;
+    q_property QSize gridSize;
+    q_property bool isWrapping;
+    q_property LayoutMode layoutMode;
+    q_property int modelColumn;
+    q_property Movement movement;
+    q_property ResizeMode resizeMode;
+    q_property bool selectionRectVisible;
+    q_property int spacing;
+    q_property bool uniformItemSizes;
+    q_property ViewMode viewMode;
+    q_property bool wordWrap;
+
+    public const member q_function batchSize() : int;
+    public member q_function clearPropertyFlags() : void;
+    public const member q_function flow() : Flow;
+    public const member q_function gridSize() : QSize;
+    public const member q_function isRowHidden(int row) : bool;
+    public const member q_function isSelectionRectVisible() : bool;
+    public const member q_function isWrapping() : bool;
+    public const member q_function layoutMode() : LayoutMode;
+    public const member q_function modelColumn() : int;
+    public const member q_function movement() : Movement;
+    public const member q_function resizeMode() : ResizeMode;
+    public member q_function setBatchSize(int batchSize) : void;
+    public member q_function setFlow(Flow flow) : void;
+    public member q_function setGridSize(const QSize & size) : void;
+    public member q_function setLayoutMode(LayoutMode mode) : void;
+    public member q_function setModelColumn(int column) : void;
+    public member q_function setMovement(Movement movement) : void;
+    public member q_function setResizeMode(ResizeMode mode) : void;
+    public member q_function setRowHidden(int row, bool hide) : void;
+    public member q_function setSelectionRectVisible(bool show) : void;
+    public member q_function setSpacing(int space) : void;
+    public member q_function setUniformItemSizes(bool enable) : void;
+    public member q_function setViewMode(ViewMode mode) : void;
+    public member q_function setWordWrap(bool on) : void;
+    public member q_function setWrapping(bool enable) : void;
+    public const member q_function spacing() : int;
+    public const member q_function uniformItemSizes() : bool;
+    public const member q_function viewMode() : ViewMode;
+    public const member q_function wordWrap() : bool;
+
+    protected const member q_function rectForIndex(const QModelIndex & index) : QRect;
+    protected member q_function setPositionForIndex(const QPoint & position, const QModelIndex & index) : void;
+
+
+
+}
+

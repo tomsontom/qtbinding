@@ -1,0 +1,16 @@
+q_class QGraphicsSceneContextMenuEvent extends QGraphicsSceneEvent {
+    q_enumeration Reason {
+        Mouse = 0
+        Keyboard = 1
+        Other = 2
+    }
+
+
+    public const member q_function modifiers() : Qt.KeyboardModifiers;
+    public const member q_function reason() : Reason;
+    public const member q_function scenePos() : QPointF;
+    public const member q_function screenPos() : QPoint;
+
+
+}
+

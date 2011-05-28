@@ -1,0 +1,13 @@
+q_class QStyleOptionTabWidgetFrame extends QStyleOption {
+    q_enumeration StyleOptionType {
+        Type = SO_TabWidgetFrame
+    }
+
+    q_enumeration StyleOptionVersion {
+        Version = 1
+    }
+
+
+
+}
+

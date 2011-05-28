@@ -1,0 +1,13 @@
+q_class QGenericMatrix {
+    public const member q_function constData() : const T *;
+    public const member q_function copyDataTo(T * values) : void;
+    public const member q_function data() : const T *;
+    public member q_function data() : T *;
+    public member q_function fill(T value) : void;
+    public const member q_function isIdentity() : bool;
+    public member q_function setToIdentity() : void;
+    public const member q_function transposed() : QGenericMatrix<M, N, T>;
+
+
+}
+

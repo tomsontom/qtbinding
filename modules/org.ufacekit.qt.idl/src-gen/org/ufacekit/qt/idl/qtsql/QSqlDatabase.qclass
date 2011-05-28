@@ -1,0 +1,46 @@
+q_class QSqlDatabase {
+    public class q_function addDatabase(const QString & type, const QString & connectionName = QLatin1String( defaultConnection )) : QSqlDatabase;
+    public class q_function addDatabase(QSqlDriver * driver, const QString & connectionName = QLatin1String( defaultConnection )) : QSqlDatabase;
+    public class q_function cloneDatabase(const QSqlDatabase & other, const QString & connectionName) : QSqlDatabase;
+    public member q_function close() : void;
+    public member q_function commit() : bool;
+    public const member q_function connectOptions() : QString;
+    public const member q_function connectionName() : QString;
+    public class q_function connectionNames() : QStringList;
+    public class q_function contains(const QString & connectionName = QLatin1String( defaultConnection )) : bool;
+    public class q_function database(const QString & connectionName = QLatin1String( defaultConnection ), bool open = true) : QSqlDatabase;
+    public const member q_function databaseName() : QString;
+    public const member q_function driver() : QSqlDriver *;
+    public const member q_function driverName() : QString;
+    public class q_function drivers() : QStringList;
+    public const member q_function exec(const QString & query = QString()) : QSqlQuery;
+    public const member q_function hostName() : QString;
+    public class q_function isDriverAvailable(const QString & name) : bool;
+    public const member q_function isOpen() : bool;
+    public const member q_function isOpenError() : bool;
+    public const member q_function isValid() : bool;
+    public const member q_function lastError() : QSqlError;
+    public const member q_function numericalPrecisionPolicy() : QSql.NumericalPrecisionPolicy;
+    public member q_function open() : bool;
+    public member q_function open(const QString & user, const QString & password) : bool;
+    public const member q_function password() : QString;
+    public const member q_function port() : int;
+    public const member q_function primaryIndex(const QString & tablename) : QSqlIndex;
+    public const member q_function record(const QString & tablename) : QSqlRecord;
+    public class q_function registerSqlDriver(const QString & name, QSqlDriverCreatorBase * creator) : void;
+    public class q_function removeDatabase(const QString & connectionName) : void;
+    public member q_function rollback() : bool;
+    public member q_function setConnectOptions(const QString & options = QString()) : void;
+    public member q_function setDatabaseName(const QString & name) : void;
+    public member q_function setHostName(const QString & host) : void;
+    public member q_function setNumericalPrecisionPolicy(QSql.NumericalPrecisionPolicy precisionPolicy) : void;
+    public member q_function setPassword(const QString & password) : void;
+    public member q_function setPort(int port) : void;
+    public member q_function setUserName(const QString & name) : void;
+    public const member q_function tables(QSql.TableType type = QSql.Tables) : QStringList;
+    public member q_function transaction() : bool;
+    public const member q_function userName() : QString;
+
+
+}
+

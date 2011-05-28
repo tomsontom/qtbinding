@@ -1,0 +1,38 @@
+q_class QTouchEvent extends QInputEvent {
+    q_enumeration DeviceType {
+        TouchScreen = 0
+        TouchPad = 1
+    }
+
+
+    q_class TouchPoint {
+        public const member q_function isPrimary() : bool;
+        public const member q_function lastNormalizedPos() : QPointF;
+        public const member q_function lastPos() : QPointF;
+        public const member q_function lastScenePos() : QPointF;
+        public const member q_function lastScreenPos() : QPointF;
+        public const member q_function normalizedPos() : QPointF;
+        public const member q_function pos() : QPointF;
+        public const member q_function pressure() : qreal;
+        public const member q_function rect() : QRectF;
+        public const member q_function scenePos() : QPointF;
+        public const member q_function sceneRect() : QRectF;
+        public const member q_function screenPos() : QPointF;
+        public const member q_function screenRect() : QRectF;
+        public const member q_function startNormalizedPos() : QPointF;
+        public const member q_function startPos() : QPointF;
+        public const member q_function startScenePos() : QPointF;
+        public const member q_function startScreenPos() : QPointF;
+        public const member q_function state() : Qt.TouchPointState;
+
+
+    }
+
+
+    public const member q_function deviceType() : QTouchEvent.DeviceType;
+    public const member q_function touchPointStates() : Qt.TouchPointStates;
+    public const member q_function touchPoints() : const QList<QTouchEvent.TouchPoint> &;
+
+
+}
+

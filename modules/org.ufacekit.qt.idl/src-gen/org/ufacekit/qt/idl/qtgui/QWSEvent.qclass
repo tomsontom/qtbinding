@@ -1,0 +1,30 @@
+q_class QWSEvent {
+    q_enumeration Type {
+        NoEvent = 0
+        Connected = 1
+        Mouse = 2
+        Focus = 3
+        Key = 4
+        Region = 5
+        Creation = 6
+        PropertyNotify = 7
+        PropertyReply = 8
+        SelectionClear = 9
+        SelectionRequest = 10
+        SelectionNotify = 11
+        MaxWindowRect = 12
+        QCopMessage = 13
+        WindowOperation = 14
+        IMEvent = 15
+        IMQuery = 16
+        IMInit = 17
+        Embed = 18
+        Font = 19
+        ScreenTransformation = 20
+        NEvent = 21
+    }
+
+
+
+}
+

@@ -1,0 +1,40 @@
+q_class QDBusError {
+    q_enumeration ErrorType {
+        NoError = 0
+        Other = 1
+        Failed = 2
+        NoMemory = 3
+        ServiceUnknown = 4
+        NoReply = 5
+        BadAddress = 6
+        NotSupported = 7
+        LimitsExceeded = 8
+        AccessDenied = 9
+        NoServer = 10
+        Timeout = 11
+        NoNetwork = 12
+        AddressInUse = 13
+        Disconnected = 14
+        InvalidArgs = 15
+        UnknownMethod = 16
+        TimedOut = 17
+        InvalidSignature = 18
+        UnknownInterface = 19
+        InternalError = 20
+        UnknownObject = 21
+        InvalidService = 22
+        InvalidObjectPath = 23
+        InvalidInterface = 24
+        InvalidMember = 25
+    }
+
+
+    public class q_function errorString(ErrorType error) : QString;
+    public const member q_function isValid() : bool;
+    public const member q_function message() : QString;
+    public const member q_function name() : QString;
+    public const member q_function type() : ErrorType;
+
+
+}
+

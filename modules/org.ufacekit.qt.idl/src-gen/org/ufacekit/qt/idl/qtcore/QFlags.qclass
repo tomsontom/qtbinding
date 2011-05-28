@@ -1,0 +1,11 @@
+q_class QFlags {
+    q_typedef Zero : ___UNKNOWN___;
+
+    q_typedef enum_type : ___UNKNOWN___;
+
+
+    public const member q_function testFlag(Enum flag) : bool;
+
+
+}
+

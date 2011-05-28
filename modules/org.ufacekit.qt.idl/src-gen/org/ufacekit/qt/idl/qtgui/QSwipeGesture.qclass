@@ -1,0 +1,23 @@
+q_class QSwipeGesture extends QGesture {
+    q_enumeration SwipeDirection {
+        NoDirection = 0
+        Left = 1
+        Right = 2
+        Up = 3
+        Down = 4
+    }
+
+
+    q_property const SwipeDirection horizontalDirection;
+    q_property qreal swipeAngle;
+    q_property const qreal velocity;
+    q_property const SwipeDirection verticalDirection;
+
+    public const member q_function horizontalDirection() : SwipeDirection;
+    public member q_function setSwipeAngle(qreal value) : void;
+    public const member q_function swipeAngle() : qreal;
+    public const member q_function verticalDirection() : SwipeDirection;
+
+
+}
+

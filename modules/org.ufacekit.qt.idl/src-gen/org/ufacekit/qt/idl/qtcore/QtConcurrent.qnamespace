@@ -1,0 +1,69 @@
+q_namespace QtConcurrent {
+    q_namespace internal {
+        q_class ExceptionHolder {
+            public const member q_function exception() : Exception *;
+
+
+        }
+
+        q_class ExceptionStore {
+            public member q_function exception() : ExceptionHolder;
+            public const member q_function hasException() : bool;
+            public const member q_function hasThrown() : bool;
+            public member q_function setException(const Exception & e) : void;
+            public member q_function throwPossibleException() : void;
+
+
+        }
+
+
+
+    }
+
+
+    q_enumeration ReduceOption {
+        UnorderedReduce = 1
+        OrderedReduce = 2
+        SequentialReduce = 4
+    }
+
+    q_flags ReduceOptions : ReduceOption;
+
+
+    q_class Exception {
+        public const virtual member q_function raise() : void;
+
+
+    }
+
+    q_class UnhandledException extends Exception {
+
+    }
+
+
+    public class q_function blockingFilter(Sequence & sequence, FilterFunction filterFunction) : void;
+    public class q_function blockingFiltered(ConstIterator begin, ConstIterator end, FilterFunction filterFunction) : Sequence;
+    public class q_function blockingFiltered(const Sequence & sequence, FilterFunction filterFunction) : Sequence;
+    public class q_function blockingFilteredReduced(ConstIterator begin, ConstIterator end, FilterFunction filterFunction, ReduceFunction reduceFunction, QtConcurrent.ReduceOptions reduceOptions = UnorderedReduce | SequentialReduce) : T;
+    public class q_function blockingFilteredReduced(const Sequence & sequence, FilterFunction filterFunction, ReduceFunction reduceFunction, QtConcurrent.ReduceOptions reduceOptions = UnorderedReduce | SequentialReduce) : T;
+    public class q_function blockingMap(Iterator begin, Iterator end, MapFunction function) : void;
+    public class q_function blockingMap(Sequence & sequence, MapFunction function) : void;
+    public class q_function blockingMapped(ConstIterator begin, ConstIterator end, MapFunction function) : T;
+    public class q_function blockingMapped(const Sequence & sequence, MapFunction function) : T;
+    public class q_function blockingMappedReduced(const Sequence & sequence, MapFunction mapFunction, ReduceFunction reduceFunction, QtConcurrent.ReduceOptions reduceOptions = UnorderedReduce | SequentialReduce) : T;
+    public class q_function blockingMappedReduced(ConstIterator begin, ConstIterator end, MapFunction mapFunction, ReduceFunction reduceFunction, QtConcurrent.ReduceOptions reduceOptions = UnorderedReduce | SequentialReduce) : T;
+    public class q_function filtered(ConstIterator begin, ConstIterator end, FilterFunction filterFunction) : QFuture<T>;
+    public class q_function filtered(const Sequence & sequence, FilterFunction filterFunction) : QFuture<T>;
+    public class q_function filteredReduced(const Sequence & sequence, FilterFunction filterFunction, ReduceFunction reduceFunction, QtConcurrent.ReduceOptions reduceOptions = UnorderedReduce | SequentialReduce) : QFuture<T>;
+    public class q_function filteredReduced(ConstIterator begin, ConstIterator end, FilterFunction filterFunction, ReduceFunction reduceFunction, QtConcurrent.ReduceOptions reduceOptions = UnorderedReduce | SequentialReduce) : QFuture<T>;
+    public class q_function map(Sequence & sequence, MapFunction function) : QFuture<void>;
+    public class q_function map(Iterator begin, Iterator end, MapFunction function) : QFuture<void>;
+    public class q_function mapped(const Sequence & sequence, MapFunction function) : QFuture<T>;
+    public class q_function mapped(ConstIterator begin, ConstIterator end, MapFunction function) : QFuture<T>;
+    public class q_function mappedReduced(const Sequence & sequence, MapFunction mapFunction, ReduceFunction reduceFunction, QtConcurrent.ReduceOptions reduceOptions = UnorderedReduce | SequentialReduce) : QFuture<T>;
+    public class q_function mappedReduced(ConstIterator begin, ConstIterator end, MapFunction mapFunction, ReduceFunction reduceFunction, QtConcurrent.ReduceOptions reduceOptions = UnorderedReduce | SequentialReduce) : QFuture<T>;
+    public class q_function run(Function function, ... ) : QFuture<T>;
+
+
+}
+

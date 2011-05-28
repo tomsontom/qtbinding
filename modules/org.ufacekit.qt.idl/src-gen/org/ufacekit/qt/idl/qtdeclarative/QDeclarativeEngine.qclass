@@ -1,0 +1,39 @@
+q_class QDeclarativeEngine extends QObject {
+    q_enumeration ObjectOwnership {
+        CppOwnership = 0
+        JavaScriptOwnership = 1
+    }
+
+
+    q_property QString offlineStoragePath;
+
+    public member q_function addImageProvider(const QString & providerId, QDeclarativeImageProvider * provider) : void;
+    public member q_function addImportPath(const QString & path) : void;
+    public member q_function addPluginPath(const QString & path) : void;
+    public const member q_function baseUrl() : QUrl;
+    public member q_function clearComponentCache() : void;
+    public class q_function contextForObject(const QObject * object) : QDeclarativeContext *;
+    public const member q_function imageProvider(const QString & providerId) : QDeclarativeImageProvider *;
+    public const member q_function importPathList() : QStringList;
+    public member q_function importPlugin(const QString & filePath, const QString & uri, QString * errorString) : bool;
+    public const member q_function networkAccessManager() : QNetworkAccessManager *;
+    public const member q_function networkAccessManagerFactory() : QDeclarativeNetworkAccessManagerFactory *;
+    public class q_function objectOwnership(QObject * object) : ObjectOwnership;
+    public const member q_function offlineStoragePath() : QString;
+    public const member q_function outputWarningsToStandardError() : bool;
+    public const member q_function pluginPathList() : QStringList;
+    public member q_function removeImageProvider(const QString & providerId) : void;
+    public const member q_function rootContext() : QDeclarativeContext *;
+    public member q_function setBaseUrl(const QUrl & url) : void;
+    public class q_function setContextForObject(QObject * object, QDeclarativeContext * context) : void;
+    public member q_function setImportPathList(const QStringList & paths) : void;
+    public member q_function setNetworkAccessManagerFactory(QDeclarativeNetworkAccessManagerFactory * factory) : void;
+    public class q_function setObjectOwnership(QObject * object, ObjectOwnership ownership) : void;
+    public member q_function setOfflineStoragePath(const QString & dir) : void;
+    public member q_function setOutputWarningsToStandardError(bool enabled) : void;
+    public member q_function setPluginPathList(const QStringList & paths) : void;
+
+
+
+}
+

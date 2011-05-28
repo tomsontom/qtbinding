@@ -1,0 +1,137 @@
+q_namespace QTest {
+    q_enumeration AttributeIndex {
+        AI_Undefined = -1
+        AI_Name = 0
+        AI_Result = 1
+        AI_Tests = 2
+        AI_Failures = 3
+        AI_Errors = 4
+        AI_Type = 5
+        AI_Description = 6
+        AI_PropertyValue = 7
+        AI_QTestVersion = 8
+        AI_QtVersion = 9
+        AI_File = 10
+        AI_Line = 11
+        AI_Metric = 12
+        AI_Tag = 13
+        AI_Value = 14
+        AI_Iterations = 15
+    }
+
+    q_enumeration KeyAction {
+        Press = 0
+        Release = 1
+        Click = 2
+    }
+
+    q_enumeration LogElementType {
+        LET_Undefined = -1
+        LET_Property = 0
+        LET_Properties = 1
+        LET_Failure = 2
+        LET_Error = 3
+        LET_TestCase = 4
+        LET_TestSuite = 5
+        LET_Benchmark = 6
+        LET_SystemError = 7
+    }
+
+    q_enumeration MouseAction {
+        MousePress = 0
+        MouseRelease = 1
+        MouseClick = 2
+        MouseDClick = 3
+        MouseMove = 4
+    }
+
+    q_enumeration QBenchmarkMetric {
+        FramesPerSecond = 0
+        BitsPerSecond = 1
+        BytesPerSecond = 2
+        WalltimeMilliseconds = 3
+        CPUTicks = 4
+        InstructionReads = 5
+        Events = 6
+    }
+
+    q_enumeration SkipMode {
+        SkipSingle = 1
+        SkipAll = 2
+    }
+
+    q_enumeration TestFailMode {
+        Abort = 1
+        Continue = 2
+    }
+
+
+    q_class QBenchmarkIterationController {
+        q_enumeration RunMode {
+            RepeatUntilValidMeasurement = 0
+            RunOnce = 1
+        }
+
+
+
+    }
+
+    q_class QTouchEventSequence {
+        public member q_function move(int touchId, const QPoint & pt, QWidget * widget = 0) : QTouchEventSequence &;
+        public member q_function press(int touchId, const QPoint & pt, QWidget * widget = 0) : QTouchEventSequence &;
+        public member q_function release(int touchId, const QPoint & pt, QWidget * widget = 0) : QTouchEventSequence &;
+        public member q_function stationary(int touchId) : QTouchEventSequence &;
+
+
+    }
+
+
+    public class q_function addColumn(const char * name, T * dummy = 0) : void;
+    public class q_function benchmarkMetricName(QBenchmarkMetric metric) : const char *;
+    public class q_function benchmarkMetricUnit(QBenchmarkMetric metric) : const char *;
+    public class q_function currentDataTag() : const char *;
+    public class q_function currentTestFailed() : bool;
+    public class q_function currentTestFunction() : const char *;
+    public class q_function ignoreMessage(QtMsgType type, const char * message) : void;
+    public class q_function keyClick(QWidget * widget, Qt.Key key, Qt.KeyboardModifiers modifier = Qt.NoModifier, int delay = -1) : void;
+    public class q_function keyClick(QWidget * widget, char key, Qt.KeyboardModifiers modifier = Qt.NoModifier, int delay = -1) : void;
+    public class q_function keyClicks(QWidget * widget, const QString & sequence, Qt.KeyboardModifiers modifier = Qt.NoModifier, int delay = -1) : void;
+    public class q_function keyEvent(KeyAction action, QWidget * widget, char ascii, Qt.KeyboardModifiers modifier = Qt.NoModifier, int delay = -1) : void;
+    public class q_function keyEvent(KeyAction action, QWidget * widget, Qt.Key key, Qt.KeyboardModifiers modifier = Qt.NoModifier, int delay = -1) : void;
+    public class q_function keyPress(QWidget * widget, Qt.Key key, Qt.KeyboardModifiers modifier = Qt.NoModifier, int delay = -1) : void;
+    public class q_function keyPress(QWidget * widget, char key, Qt.KeyboardModifiers modifier = Qt.NoModifier, int delay = -1) : void;
+    public class q_function keyRelease(QWidget * widget, char key, Qt.KeyboardModifiers modifier = Qt.NoModifier, int delay = -1) : void;
+    public class q_function keyRelease(QWidget * widget, Qt.Key key, Qt.KeyboardModifiers modifier = Qt.NoModifier, int delay = -1) : void;
+    public class q_function mouseClick(QWidget * widget, Qt.MouseButton button, Qt.KeyboardModifiers modifier = 0, QPoint pos = QPoint(), int delay = -1) : void;
+    public class q_function mouseDClick(QWidget * widget, Qt.MouseButton button, Qt.KeyboardModifiers modifier = 0, QPoint pos = QPoint(), int delay = -1) : void;
+    public class q_function mouseMove(QWidget * widget, QPoint pos = QPoint(), int delay = -1) : void;
+    public class q_function mousePress(QWidget * widget, Qt.MouseButton button, Qt.KeyboardModifiers modifier = 0, QPoint pos = QPoint(), int delay = -1) : void;
+    public class q_function mouseRelease(QWidget * widget, Qt.MouseButton button, Qt.KeyboardModifiers modifier = 0, QPoint pos = QPoint(), int delay = -1) : void;
+    public class q_function newRow(const char * dataTag) : QTestData &;
+    public class q_function qExec(QObject * testObject, int argc = 0, char ** argv = 0) : int;
+    public class q_function qExec(QObject * testObject, const QStringList & arguments) : int;
+    public class q_function qSleep(int ms) : void;
+    public class q_function qWait(int ms) : void;
+    public class q_function qWaitForWindowShown(QWidget * window) : bool;
+    public class q_function setBenchmarkResult(qreal result, QBenchmarkMetric metric) : void;
+    public class q_function toHexRepresentation(const char * ba, int length) : char *;
+    public class q_function toString(const QVariant & variant) : char *;
+    public class q_function toString(const QDateTime & dateTime) : char *;
+    public class q_function toString(const QDate & date) : char *;
+    public class q_function toString(const QByteArray & ba) : char *;
+    public class q_function toString(const QString & string) : char *;
+    public class q_function toString(const QLatin1String & string) : char *;
+    public class q_function toString(const QChar & character) : char *;
+    public class q_function toString(const QPoint & point) : char *;
+    public class q_function toString(const QSizeF & size) : char *;
+    public class q_function toString(const QUrl & url) : char *;
+    public class q_function toString(const QRectF & rectangle) : char *;
+    public class q_function toString(const QPointF & point) : char *;
+    public class q_function toString(const QSize & size) : char *;
+    public class q_function toString(const QRect & rectangle) : char *;
+    public class q_function toString(const T & value) : char *;
+    public class q_function touchEvent(QWidget * widget = 0, QTouchEvent.DeviceType deviceType = QTouchEvent.TouchScreen) : QTouchEventSequence;
+
+
+}
+

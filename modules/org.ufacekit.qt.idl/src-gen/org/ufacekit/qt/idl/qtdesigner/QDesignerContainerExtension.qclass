@@ -1,0 +1,12 @@
+q_class QDesignerContainerExtension {
+    public purevirtual member q_function addWidget(QWidget * page) : void;
+    public const purevirtual member q_function count() : int;
+    public const purevirtual member q_function currentIndex() : int;
+    public purevirtual member q_function insertWidget(int index, QWidget * page) : void;
+    public purevirtual member q_function remove(int index) : void;
+    public purevirtual member q_function setCurrentIndex(int index) : void;
+    public const purevirtual member q_function widget(int index) : QWidget *;
+
+
+}
+

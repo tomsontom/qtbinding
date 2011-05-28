@@ -1,0 +1,31 @@
+q_class QWSWindow {
+    q_enumeration State {
+        NoState = 0
+        Hidden = 1
+        Showing = 2
+        Visible = 3
+        Hiding = 4
+        Raising = 5
+        Lowering = 6
+        Moving = 7
+        ChangingGeometry = 8
+        Destroyed = 9
+    }
+
+
+    public const member q_function caption() : const QString &;
+    public const member q_function client() : QWSClient *;
+    public const member q_function dirtyOnScreen() : QRegion;
+    public const member q_function isFullyObscured() : bool;
+    public const member q_function isOpaque() : bool;
+    public const member q_function isVisible() : bool;
+    public const member q_function name() : const QString &;
+    public const member q_function opacity() : uint;
+    public const member q_function requestedRegion() : const QRegion &;
+    public const member q_function state() : State;
+    public const member q_function winId() : int;
+    public const member q_function windowFlags() : Qt.WindowFlags;
+
+
+}
+

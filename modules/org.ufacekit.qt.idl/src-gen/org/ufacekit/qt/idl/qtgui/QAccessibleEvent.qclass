@@ -1,0 +1,8 @@
+q_class QAccessibleEvent extends QEvent {
+    public const member q_function child() : int;
+    public member q_function setValue(const QString & text) : void;
+    public const member q_function value() : QString;
+
+
+}
+

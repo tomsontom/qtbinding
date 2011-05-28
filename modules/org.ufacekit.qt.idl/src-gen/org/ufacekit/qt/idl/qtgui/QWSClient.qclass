@@ -1,0 +1,9 @@
+q_class QWSClient extends QObject {
+    public const member q_function clientId() : int;
+    public const member q_function identity() : QString;
+
+
+
+
+}
+

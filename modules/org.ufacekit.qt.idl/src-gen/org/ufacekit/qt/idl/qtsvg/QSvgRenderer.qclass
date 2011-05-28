@@ -1,0 +1,23 @@
+q_class QSvgRenderer extends QObject {
+    q_property int currentFrame;
+    q_property int framesPerSecond;
+    q_property QRectF viewBox;
+
+    public const member q_function animated() : bool;
+    public const member q_function boundsOnElement(const QString & id) : QRectF;
+    public const member q_function defaultSize() : QSize;
+    public const member q_function elementExists(const QString & id) : bool;
+    public const member q_function framesPerSecond() : int;
+    public const member q_function isValid() : bool;
+    public const member q_function matrixForElement(const QString & id) : QMatrix;
+    public member q_function setFramesPerSecond(int num) : void;
+    public member q_function setViewBox(const QRectF & viewbox) : void;
+    public member q_function setViewBox(const QRect & viewbox) : void;
+    public const member q_function viewBox() : QRect;
+    public const member q_function viewBoxF() : QRectF;
+
+
+
+
+}
+

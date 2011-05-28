@@ -1,0 +1,4 @@
+q_class QVBoxLayout extends QBoxLayout {
+
+}
+

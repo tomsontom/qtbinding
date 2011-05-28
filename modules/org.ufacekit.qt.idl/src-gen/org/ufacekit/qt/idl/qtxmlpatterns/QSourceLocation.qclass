@@ -1,0 +1,12 @@
+q_class QSourceLocation {
+    public const member q_function column() : qint64;
+    public const member q_function isNull() : bool;
+    public const member q_function line() : qint64;
+    public member q_function setColumn(qint64 newColumn) : void;
+    public member q_function setLine(qint64 newLine) : void;
+    public member q_function setUri(const QUrl & newUri) : void;
+    public const member q_function uri() : QUrl;
+
+
+}
+

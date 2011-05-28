@@ -1,0 +1,39 @@
+q_class QDBusMessage {
+    q_enumeration MessageType {
+        InvalidMessage = 0
+        MethodCallMessage = 1
+        ReplyMessage = 2
+        ErrorMessage = 3
+        SignalMessage = 4
+    }
+
+
+    public const member q_function arguments() : QList<QVariant>;
+    public const member q_function autoStartService() : bool;
+    public class q_function createError(QDBusError.ErrorType type, const QString & msg) : QDBusMessage;
+    public class q_function createError(const QString & name, const QString & msg) : QDBusMessage;
+    public class q_function createError(const QDBusError & error) : QDBusMessage;
+    public const member q_function createErrorReply(const QDBusError & error) : QDBusMessage;
+    public const member q_function createErrorReply(const QString name, const QString & msg) : QDBusMessage;
+    public const member q_function createErrorReply(QDBusError.ErrorType type, const QString & msg) : QDBusMessage;
+    public class q_function createMethodCall(const QString & service, const QString & path, const QString & interface, const QString & method) : QDBusMessage;
+    public const member q_function createReply(const QList<QVariant> & arguments = QList<QVariant> ()) : QDBusMessage;
+    public const member q_function createReply(const QVariant & argument) : QDBusMessage;
+    public class q_function createSignal(const QString & path, const QString & interface, const QString & name) : QDBusMessage;
+    public const member q_function errorMessage() : QString;
+    public const member q_function errorName() : QString;
+    public const member q_function interface() : QString;
+    public const member q_function isDelayedReply() : bool;
+    public const member q_function isReplyRequired() : bool;
+    public const member q_function member() : QString;
+    public const member q_function path() : QString;
+    public const member q_function service() : QString;
+    public member q_function setArguments(const QList<QVariant> & arguments) : void;
+    public member q_function setAutoStartService(bool enable) : void;
+    public const member q_function setDelayedReply(bool enable) : void;
+    public const member q_function signature() : QString;
+    public const member q_function type() : MessageType;
+
+
+}
+

@@ -1,0 +1,55 @@
+q_class QXmlNodeModelIndex {
+    q_enumeration Axis {
+        AxisChild = 1 | ForwardAxis
+        AxisDescendant = 2 | ForwardAxis
+        AxisAttribute = 4 | ForwardAxis
+        AxisSelf = 8 | ForwardAxis
+        AxisDescendantOrSelf = 16 | ForwardAxis
+        AxisFollowingSibling = 32 | ForwardAxis
+        AxisNamespace = 64 | ForwardAxis
+        AxisFollowing = 128 | ReverseAxis
+        AxisParent = 256 | ReverseAxis
+        AxisAncestor = 512 | ReverseAxis
+        AxisPrecedingSibling = 1024 | ReverseAxis
+        AxisPreceding = 2048 | ReverseAxis
+        AxisAncestorOrSelf = 4096 | ReverseAxis
+        AxisChildOrTop = 32768 | ForwardAxis
+        AxisAttributeOrTop = 65536 | ForwardAxis
+    }
+
+    q_enumeration Constants {
+        ForwardAxis = 8192
+        ReverseAxis = 16384
+    }
+
+    q_enumeration DocumentOrder {
+        Precedes = -1
+        Is = 0
+        Follows = 1
+    }
+
+    q_enumeration NodeKind {
+        Attribute = 1
+        Comment = 2
+        Document = 4
+        Element = 8
+        Namespace = 16
+        ProcessingInstruction = 32
+        Text = 64
+    }
+
+
+    q_typedef Iterator : ___UNKNOWN___;
+
+    q_typedef List : ___UNKNOWN___;
+
+
+    public const member q_function additionalData() : qint64;
+    public const member q_function data() : qint64;
+    public const member q_function internalPointer() : void *;
+    public const member q_function isNull() : bool;
+    public const member q_function model() : const QAbstractXmlNodeModel *;
+
+
+}
+

@@ -1,0 +1,46 @@
+q_class QGraphicsGridLayout extends QGraphicsLayout {
+    public member q_function addItem(QGraphicsLayoutItem * item, int row, int column, Qt.Alignment alignment = 0) : void;
+    public const member q_function alignment(QGraphicsLayoutItem * item) : Qt.Alignment;
+    public const member q_function columnAlignment(int column) : Qt.Alignment;
+    public const member q_function columnCount() : int;
+    public const member q_function columnMaximumWidth(int column) : qreal;
+    public const member q_function columnMinimumWidth(int column) : qreal;
+    public const member q_function columnPreferredWidth(int column) : qreal;
+    public const member q_function columnSpacing(int column) : qreal;
+    public const member q_function columnStretchFactor(int column) : int;
+    public const virtual member q_function count() : int;
+    public const member q_function horizontalSpacing() : qreal;
+    public const member q_function itemAt(int row, int column) : QGraphicsLayoutItem *;
+    public const virtual member q_function itemAt(int index) : QGraphicsLayoutItem *;
+    public virtual member q_function removeAt(int index) : void;
+    public const member q_function rowAlignment(int row) : Qt.Alignment;
+    public const member q_function rowCount() : int;
+    public const member q_function rowMaximumHeight(int row) : qreal;
+    public const member q_function rowMinimumHeight(int row) : qreal;
+    public const member q_function rowPreferredHeight(int row) : qreal;
+    public const member q_function rowSpacing(int row) : qreal;
+    public const member q_function rowStretchFactor(int row) : int;
+    public member q_function setAlignment(QGraphicsLayoutItem * item, Qt.Alignment alignment) : void;
+    public member q_function setColumnAlignment(int column, Qt.Alignment alignment) : void;
+    public member q_function setColumnFixedWidth(int column, qreal width) : void;
+    public member q_function setColumnMaximumWidth(int column, qreal width) : void;
+    public member q_function setColumnMinimumWidth(int column, qreal width) : void;
+    public member q_function setColumnPreferredWidth(int column, qreal width) : void;
+    public member q_function setColumnSpacing(int column, qreal spacing) : void;
+    public member q_function setColumnStretchFactor(int column, int stretch) : void;
+    public virtual member q_function setGeometry(const QRectF & rect) : void;
+    public member q_function setHorizontalSpacing(qreal spacing) : void;
+    public member q_function setRowAlignment(int row, Qt.Alignment alignment) : void;
+    public member q_function setRowFixedHeight(int row, qreal height) : void;
+    public member q_function setRowMaximumHeight(int row, qreal height) : void;
+    public member q_function setRowMinimumHeight(int row, qreal height) : void;
+    public member q_function setRowPreferredHeight(int row, qreal height) : void;
+    public member q_function setRowSpacing(int row, qreal spacing) : void;
+    public member q_function setRowStretchFactor(int row, int stretch) : void;
+    public member q_function setSpacing(qreal spacing) : void;
+    public member q_function setVerticalSpacing(qreal spacing) : void;
+    public const member q_function verticalSpacing() : qreal;
+
+
+}
+

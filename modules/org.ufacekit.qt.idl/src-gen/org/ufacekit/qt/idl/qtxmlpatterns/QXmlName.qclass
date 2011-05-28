@@ -1,0 +1,40 @@
+q_class QXmlName {
+    q_enumeration Constant {
+        LocalNameOffset = 0
+        LocalNameLength = 12
+        NamespaceOffset = LocalNameLength
+        NamespaceLength = 9
+        PrefixLength = 9
+        InvalidCode = 1<<31
+        NamespaceMask = ( ( 1<<( ( NamespaceOffset + NamespaceLength ) -NamespaceOffset ) ) -1 ) <<NamespaceOffset
+        LocalNameMask = ( ( 1<<( ( LocalNameOffset + LocalNameLength ) -LocalNameOffset ) ) -1 ) <<LocalNameOffset
+        PrefixOffset = LocalNameLength + NamespaceLength
+        PrefixMask = ( ( 1<<( ( PrefixOffset + PrefixLength ) -PrefixOffset ) ) -1 ) <<PrefixOffset
+        MaximumPrefixes = ( PrefixMask>> PrefixOffset ) -1
+        MaximumLocalNames = ( LocalNameMask>> LocalNameOffset ) -1
+        MaximumNamespaces = ( NamespaceMask>> NamespaceOffset ) -1
+        ExpandedNameMask = LocalNameMask  |  NamespaceMask
+        LexicalQNameMask = LocalNameMask  |  PrefixMask
+    }
+
+
+    q_typedef Code : ___UNKNOWN___;
+
+    q_typedef LocalNameCode : ___UNKNOWN___;
+
+    q_typedef NamespaceCode : ___UNKNOWN___;
+
+    q_typedef PrefixCode : ___UNKNOWN___;
+
+
+    public class q_function fromClarkName(const QString & clarkName, const QXmlNamePool & namePool) : QXmlName;
+    public class q_function isNCName(const QString & candidate) : bool;
+    public const member q_function isNull() : bool;
+    public const member q_function localName(const QXmlNamePool & namePool) : QString;
+    public const member q_function namespaceUri(const QXmlNamePool & namePool) : QString;
+    public const member q_function prefix(const QXmlNamePool & namePool) : QString;
+    public const member q_function toClarkName(const QXmlNamePool & namePool) : QString;
+
+
+}
+

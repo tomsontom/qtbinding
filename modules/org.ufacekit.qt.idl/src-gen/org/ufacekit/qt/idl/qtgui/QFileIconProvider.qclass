@@ -1,0 +1,19 @@
+q_class QFileIconProvider {
+    q_enumeration IconType {
+        Computer = 0
+        Desktop = 1
+        Trashcan = 2
+        Network = 3
+        Drive = 4
+        Folder = 5
+        File = 6
+    }
+
+
+    public const virtual member q_function icon(const QFileInfo & info) : QIcon;
+    public const virtual member q_function icon(IconType type) : QIcon;
+    public const virtual member q_function type(const QFileInfo & info) : QString;
+
+
+}
+

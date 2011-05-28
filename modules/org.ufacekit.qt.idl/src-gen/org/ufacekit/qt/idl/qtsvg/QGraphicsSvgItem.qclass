@@ -1,0 +1,17 @@
+q_class QGraphicsSvgItem extends QGraphicsObject {
+    q_property QString elementId;
+    q_property QSize maximumCacheSize;
+
+    public const virtual member q_function boundingRect() : QRectF;
+    public const member q_function elementId() : QString;
+    public const member q_function isCachingEnabled() : bool;
+    public const member q_function maximumCacheSize() : QSize;
+    public const member q_function renderer() : QSvgRenderer *;
+    public member q_function setCachingEnabled(bool caching) : void;
+    public member q_function setElementId(const QString & id) : void;
+    public member q_function setMaximumCacheSize(const QSize & size) : void;
+    public member q_function setSharedRenderer(QSvgRenderer * renderer) : void;
+
+
+}
+

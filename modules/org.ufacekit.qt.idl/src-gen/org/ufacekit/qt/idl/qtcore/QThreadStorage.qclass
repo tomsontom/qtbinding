@@ -1,0 +1,8 @@
+q_class QThreadStorage {
+    public const member q_function localData() : T;
+    public member q_function localData() : T &;
+    public member q_function setLocalData(T data) : void;
+
+
+}
+

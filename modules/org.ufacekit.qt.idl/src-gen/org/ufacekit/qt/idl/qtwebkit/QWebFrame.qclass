@@ -1,0 +1,73 @@
+q_class QWebFrame extends QObject {
+    q_enumeration RenderLayer {
+        ContentsLayer = 16
+        ScrollBarLayer = 32
+        PanIconLayer = 64
+        AllLayers = 255
+    }
+
+
+    q_property const QUrl baseUrl;
+    q_property const QSize contentsSize;
+    q_property const bool focus;
+    q_property const QIcon icon;
+    q_property const QUrl requestedUrl;
+    q_property QPoint scrollPosition;
+    q_property const qreal textSizeMultiplier;
+    q_property const QString title;
+    q_property QUrl url;
+    q_property qreal zoomFactor;
+
+    public member q_function addToJavaScriptWindowObject(const QString & name, QObject * object) : void;
+    public member q_function addToJavaScriptWindowObject(const QString & name, QObject * object, QScriptEngine.ValueOwnership own) : void;
+    public const member q_function baseUrl() : QUrl;
+    public const member q_function childFrames() : QList<QWebFrame *>;
+    public const member q_function contentsSize() : QSize;
+    public const member q_function documentElement() : QWebElement;
+    public const member q_function findAllElements(const QString & selectorQuery) : QWebElementCollection;
+    public const member q_function findFirstElement(const QString & selectorQuery) : QWebElement;
+    public const member q_function frameName() : QString;
+    public const member q_function geometry() : QRect;
+    public const member q_function hasFocus() : bool;
+    public const member q_function hitTestContent(const QPoint & pos) : QWebHitTestResult;
+    public const member q_function icon() : QIcon;
+    public member q_function load(const QNetworkRequest & req, QNetworkAccessManager.Operation operation = QNetworkAccessManager.GetOperation, const QByteArray & body = QByteArray()) : void;
+    public member q_function load(const QUrl & url) : void;
+    public const member q_function metaData() : QMultiMap<QString, QString>;
+    public const member q_function parentFrame() : QWebFrame *;
+    public const member q_function pos() : QPoint;
+    public member q_function render(QPainter * painter, RenderLayer layer, const QRegion & clip = QRegion()) : void;
+    public member q_function render(QPainter * painter) : void;
+    public member q_function render(QPainter * painter, const QRegion & clip) : void;
+    public const member q_function renderTreeDump() : QString;
+    public const member q_function requestedUrl() : QUrl;
+    public member q_function scroll(int dx, int dy) : void;
+    public const member q_function scrollBarGeometry(Qt.Orientation orientation) : QRect;
+    public const member q_function scrollBarMaximum(Qt.Orientation orientation) : int;
+    public const member q_function scrollBarMinimum(Qt.Orientation orientation) : int;
+    public const member q_function scrollBarPolicy(Qt.Orientation orientation) : Qt.ScrollBarPolicy;
+    public const member q_function scrollBarValue(Qt.Orientation orientation) : int;
+    public const member q_function scrollPosition() : QPoint;
+    public member q_function scrollToAnchor(const QString & anchor) : void;
+    public const member q_function securityOrigin() : QWebSecurityOrigin;
+    public member q_function setContent(const QByteArray & data, const QString & mimeType = QString(), const QUrl & baseUrl = QUrl()) : void;
+    public member q_function setFocus() : void;
+    public member q_function setHtml(const QString & html, const QUrl & baseUrl = QUrl()) : void;
+    public member q_function setScrollBarPolicy(Qt.Orientation orientation, Qt.ScrollBarPolicy policy) : void;
+    public member q_function setScrollBarValue(Qt.Orientation orientation, int value) : void;
+    public member q_function setScrollPosition(const QPoint & pos) : void;
+    public member q_function setTextSizeMultiplier(qreal factor) : void;
+    public member q_function setUrl(const QUrl & url) : void;
+    public member q_function setZoomFactor(qreal factor) : void;
+    public const member q_function textSizeMultiplier() : qreal;
+    public const member q_function title() : QString;
+    public const member q_function toHtml() : QString;
+    public const member q_function toPlainText() : QString;
+    public const member q_function url() : QUrl;
+    public const member q_function zoomFactor() : qreal;
+
+
+
+
+}
+

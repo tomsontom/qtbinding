@@ -1,0 +1,10 @@
+q_class QTextCodecPlugin extends QObject {
+    public const purevirtual member q_function aliases() : QList<QByteArray>;
+    public purevirtual member q_function createForMib(int mib) : QTextCodec *;
+    public purevirtual member q_function createForName(const QByteArray & name) : QTextCodec *;
+    public const purevirtual member q_function mibEnums() : QList<int>;
+    public const purevirtual member q_function names() : QList<QByteArray>;
+
+
+}
+

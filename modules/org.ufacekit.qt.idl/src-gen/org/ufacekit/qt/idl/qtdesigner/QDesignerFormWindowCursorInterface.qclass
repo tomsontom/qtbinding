@@ -1,0 +1,37 @@
+q_class QDesignerFormWindowCursorInterface {
+    q_enumeration MoveMode {
+        MoveAnchor = 0
+        KeepAnchor = 1
+    }
+
+    q_enumeration MoveOperation {
+        NoMove = 0
+        Start = 1
+        End = 2
+        Next = 3
+        Prev = 4
+        Left = 5
+        Right = 6
+        Up = 7
+        Down = 8
+    }
+
+
+    public const purevirtual member q_function current() : QWidget *;
+    public const purevirtual member q_function formWindow() : QDesignerFormWindowInterface *;
+    public const purevirtual member q_function hasSelection() : bool;
+    public const member q_function isWidgetSelected(QWidget * widget) : bool;
+    public purevirtual member q_function movePosition(MoveOperation operation, MoveMode mode = MoveAnchor) : bool;
+    public const purevirtual member q_function position() : int;
+    public purevirtual member q_function resetWidgetProperty(QWidget * widget, const QString & name) : void;
+    public const purevirtual member q_function selectedWidget(int index) : QWidget *;
+    public const purevirtual member q_function selectedWidgetCount() : int;
+    public purevirtual member q_function setPosition(int position, MoveMode mode = MoveAnchor) : void;
+    public purevirtual member q_function setProperty(const QString & name, const QVariant & value) : void;
+    public purevirtual member q_function setWidgetProperty(QWidget * widget, const QString & name, const QVariant & value) : void;
+    public const purevirtual member q_function widget(int index) : QWidget *;
+    public const purevirtual member q_function widgetCount() : int;
+
+
+}
+

@@ -1,0 +1,18 @@
+q_class QGraphicsDropShadowEffect extends QGraphicsEffect {
+    q_property qreal blurRadius;
+    q_property QColor color;
+    q_property QPointF offset;
+    q_property qreal xOffset;
+    q_property qreal yOffset;
+
+    public const member q_function blurRadius() : qreal;
+    public const member q_function color() : QColor;
+    public const member q_function offset() : QPointF;
+    public const member q_function xOffset() : qreal;
+    public const member q_function yOffset() : qreal;
+
+
+
+
+}
+

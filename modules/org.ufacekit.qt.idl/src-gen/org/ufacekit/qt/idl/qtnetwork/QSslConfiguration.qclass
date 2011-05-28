@@ -1,0 +1,25 @@
+q_class QSslConfiguration {
+    public const member q_function caCertificates() : QList<QSslCertificate>;
+    public const member q_function ciphers() : QList<QSslCipher>;
+    public class q_function defaultConfiguration() : QSslConfiguration;
+    public const member q_function isNull() : bool;
+    public const member q_function localCertificate() : QSslCertificate;
+    public const member q_function peerCertificate() : QSslCertificate;
+    public const member q_function peerCertificateChain() : QList<QSslCertificate>;
+    public const member q_function peerVerifyDepth() : int;
+    public const member q_function peerVerifyMode() : QSslSocket.PeerVerifyMode;
+    public const member q_function privateKey() : QSslKey;
+    public const member q_function protocol() : QSsl.SslProtocol;
+    public const member q_function sessionCipher() : QSslCipher;
+    public member q_function setCaCertificates(const QList<QSslCertificate> & certificates) : void;
+    public member q_function setCiphers(const QList<QSslCipher> & ciphers) : void;
+    public class q_function setDefaultConfiguration(const QSslConfiguration & configuration) : void;
+    public member q_function setLocalCertificate(const QSslCertificate & certificate) : void;
+    public member q_function setPeerVerifyDepth(int depth) : void;
+    public member q_function setPeerVerifyMode(QSslSocket.PeerVerifyMode mode) : void;
+    public member q_function setPrivateKey(const QSslKey & key) : void;
+    public member q_function setProtocol(QSsl.SslProtocol protocol) : void;
+
+
+}
+

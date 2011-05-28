@@ -1,0 +1,7 @@
+q_class QXmlFormatter extends QXmlSerializer {
+    public const member q_function indentationDepth() : int;
+    public member q_function setIndentationDepth(int depth) : void;
+
+
+}
+

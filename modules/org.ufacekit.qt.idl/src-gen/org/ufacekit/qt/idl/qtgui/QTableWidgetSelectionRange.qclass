@@ -1,0 +1,10 @@
+q_class QTableWidgetSelectionRange {
+    public const member q_function bottomRow() : int;
+    public const member q_function columnCount() : int;
+    public const member q_function leftColumn() : int;
+    public const member q_function rightColumn() : int;
+    public const member q_function rowCount() : int;
+
+
+}
+

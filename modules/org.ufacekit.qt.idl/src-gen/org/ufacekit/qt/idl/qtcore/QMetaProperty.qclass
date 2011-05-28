@@ -1,0 +1,29 @@
+q_class QMetaProperty {
+    public const member q_function enumerator() : QMetaEnum;
+    public const member q_function hasNotifySignal() : bool;
+    public const member q_function isConstant() : bool;
+    public const member q_function isDesignable(const QObject * object = 0) : bool;
+    public const member q_function isEditable(const QObject * object = 0) : bool;
+    public const member q_function isEnumType() : bool;
+    public const member q_function isFinal() : bool;
+    public const member q_function isFlagType() : bool;
+    public const member q_function isReadable() : bool;
+    public const member q_function isResettable() : bool;
+    public const member q_function isScriptable(const QObject * object = 0) : bool;
+    public const member q_function isStored(const QObject * object = 0) : bool;
+    public const member q_function isUser(const QObject * object = 0) : bool;
+    public const member q_function isValid() : bool;
+    public const member q_function isWritable() : bool;
+    public const member q_function notifySignal() : QMetaMethod;
+    public const member q_function notifySignalIndex() : int;
+    public const member q_function propertyIndex() : int;
+    public const member q_function read(const QObject * object) : QVariant;
+    public const member q_function reset(QObject * object) : bool;
+    public const member q_function type() : QVariant.Type;
+    public const member q_function typeName() : const char *;
+    public const member q_function userType() : int;
+    public const member q_function write(QObject * object, const QVariant & value) : bool;
+
+
+}
+

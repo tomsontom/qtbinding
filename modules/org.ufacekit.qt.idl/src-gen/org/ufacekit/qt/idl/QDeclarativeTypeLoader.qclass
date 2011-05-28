@@ -1,0 +1,25 @@
+q_class QDeclarativeTypeLoader extends QObject {
+    q_enumeration Option {
+        None = 0
+        PreserveParser = 1
+    }
+
+    q_flags Options : Option;
+
+
+    q_typedef QmldirCache : ___UNKNOWN___;
+
+    q_typedef ScriptCache : ___UNKNOWN___;
+
+    q_typedef TypeCache : ___UNKNOWN___;
+
+
+    public member q_function clearCache() : void;
+    public member q_function get(const QByteArray & data, const QUrl & url, Options options = None) : QDeclarativeTypeData *;
+    public member q_function get(const QUrl & url) : QDeclarativeTypeData *;
+    public member q_function getQmldir(const QUrl & url) : QDeclarativeQmldirData *;
+    public member q_function getScript(const QUrl & url) : QDeclarativeScriptData *;
+
+
+}
+

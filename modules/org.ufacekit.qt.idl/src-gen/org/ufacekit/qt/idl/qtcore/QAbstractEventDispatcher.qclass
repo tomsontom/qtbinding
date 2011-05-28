@@ -1,0 +1,26 @@
+q_class QAbstractEventDispatcher extends QObject {
+    q_typedef EventFilter : ___UNKNOWN___;
+
+    q_typedef TimerInfo : ___UNKNOWN___;
+
+
+    public member q_function filterEvent(void * message) : bool;
+    public purevirtual member q_function flush() : void;
+    public purevirtual member q_function hasPendingEvents() : bool;
+    public class q_function instance(QThread * thread = 0) : QAbstractEventDispatcher *;
+    public purevirtual member q_function interrupt() : void;
+    public purevirtual member q_function processEvents(QEventLoop.ProcessEventsFlags flags) : bool;
+    public purevirtual member q_function registerSocketNotifier(QSocketNotifier * notifier) : void;
+    public member q_function registerTimer(int interval, QObject * object) : int;
+    public purevirtual member q_function registerTimer(int timerId, int interval, QObject * object) : void;
+    public const purevirtual member q_function registeredTimers(QObject * object) : QList<TimerInfo>;
+    public member q_function setEventFilter(EventFilter filter) : EventFilter;
+    public purevirtual member q_function unregisterSocketNotifier(QSocketNotifier * notifier) : void;
+    public purevirtual member q_function unregisterTimer(int timerId) : bool;
+    public purevirtual member q_function unregisterTimers(QObject * object) : bool;
+    public purevirtual member q_function wakeUp() : void;
+
+
+
+}
+

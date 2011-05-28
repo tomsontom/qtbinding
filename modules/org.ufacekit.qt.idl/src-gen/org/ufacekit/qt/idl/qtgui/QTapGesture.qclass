@@ -1,0 +1,9 @@
+q_class QTapGesture extends QGesture {
+    q_property QPointF position;
+
+    public const member q_function position() : QPointF;
+    public member q_function setPosition(const QPointF & pos) : void;
+
+
+}
+

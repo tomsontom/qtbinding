@@ -1,0 +1,109 @@
+q_class QFileDialog extends QDialog {
+    q_enumeration AcceptMode {
+        AcceptOpen = 0
+        AcceptSave = 1
+    }
+
+    q_enumeration DialogLabel {
+        LookIn = 0
+        FileName = 1
+        FileType = 2
+        Accept = 3
+        Reject = 4
+    }
+
+    q_enumeration FileMode {
+        AnyFile = 0
+        ExistingFile = 1
+        Directory = 2
+        ExistingFiles = 3
+        DirectoryOnly = 4
+    }
+
+    q_enumeration Option {
+        ShowDirsOnly = 1
+        DontResolveSymlinks = 2
+        DontConfirmOverwrite = 4
+        DontUseSheet = 8
+        DontUseNativeDialog = 16
+        ReadOnly = 32
+        HideNameFilterDetails = 64
+    }
+
+    q_flags Options : Option;
+
+    q_enumeration ViewMode {
+        Detail = 0
+        List = 1
+    }
+
+
+    q_property AcceptMode acceptMode;
+    q_property bool confirmOverwrite;
+    q_property QString defaultSuffix;
+    q_property FileMode fileMode;
+    q_property bool nameFilterDetailsVisible;
+    q_property Options options;
+    q_property bool readOnly;
+    q_property bool resolveSymlinks;
+    q_property ViewMode viewMode;
+
+    public const member q_function acceptMode() : AcceptMode;
+    public const member q_function confirmOverwrite() : bool;
+    public const member q_function defaultSuffix() : QString;
+    public const member q_function directory() : QDir;
+    public const member q_function fileMode() : FileMode;
+    public const member q_function filter() : QDir.Filters;
+    public const member q_function filters() : QStringList;
+    public class q_function getExistingDirectory(QWidget * parent = 0, const QString & caption = QString(), const QString & dir = QString(), Options options = ShowDirsOnly) : QString;
+    public class q_function getOpenFileNames(QWidget * parent = 0, const QString & caption = QString(), const QString & dir = QString(), const QString & filter = QString(), QString * selectedFilter = 0, Options options = 0) : QStringList;
+    public class q_function getSaveFileName(QWidget * parent = 0, const QString & caption = QString(), const QString & dir = QString(), const QString & filter = QString(), QString * selectedFilter = 0, Options options = 0) : QString;
+    public const member q_function history() : QStringList;
+    public const member q_function iconProvider() : QFileIconProvider *;
+    public const member q_function isNameFilterDetailsVisible() : bool;
+    public const member q_function isReadOnly() : bool;
+    public const member q_function itemDelegate() : QAbstractItemDelegate *;
+    public const member q_function labelText(DialogLabel label) : QString;
+    public const member q_function nameFilters() : QStringList;
+    public member q_function open(QObject * receiver, const char * member) : void;
+    public const member q_function options() : Options;
+    public const member q_function proxyModel() : QAbstractProxyModel *;
+    public const member q_function resolveSymlinks() : bool;
+    public member q_function restoreState(const QByteArray & state) : bool;
+    public const member q_function saveState() : QByteArray;
+    public member q_function selectFile(const QString & filename) : void;
+    public member q_function selectFilter(const QString & filter) : void;
+    public member q_function selectNameFilter(const QString & filter) : void;
+    public const member q_function selectedFiles() : QStringList;
+    public const member q_function selectedFilter() : QString;
+    public const member q_function selectedNameFilter() : QString;
+    public member q_function setAcceptMode(AcceptMode mode) : void;
+    public member q_function setConfirmOverwrite(bool enabled) : void;
+    public member q_function setDefaultSuffix(const QString & suffix) : void;
+    public member q_function setDirectory(const QDir & directory) : void;
+    public member q_function setDirectory(const QString & directory) : void;
+    public member q_function setFileMode(FileMode mode) : void;
+    public member q_function setFilter(QDir.Filters filters) : void;
+    public member q_function setFilters(const QStringList & filters) : void;
+    public member q_function setHistory(const QStringList & paths) : void;
+    public member q_function setIconProvider(QFileIconProvider * provider) : void;
+    public member q_function setItemDelegate(QAbstractItemDelegate * delegate) : void;
+    public member q_function setLabelText(DialogLabel label, const QString & text) : void;
+    public member q_function setNameFilter(const QString & filter) : void;
+    public member q_function setNameFilterDetailsVisible(bool enabled) : void;
+    public member q_function setNameFilters(const QStringList & filters) : void;
+    public member q_function setOption(Option option, bool on = true) : void;
+    public member q_function setOptions(Options options) : void;
+    public member q_function setProxyModel(QAbstractProxyModel * proxyModel) : void;
+    public member q_function setReadOnly(bool enabled) : void;
+    public member q_function setResolveSymlinks(bool enabled) : void;
+    public member q_function setSidebarUrls(const QList<QUrl> & urls) : void;
+    public member q_function setViewMode(ViewMode mode) : void;
+    public const member q_function sidebarUrls() : QList<QUrl>;
+    public const member q_function testOption(Option option) : bool;
+    public const member q_function viewMode() : ViewMode;
+
+
+
+}
+

@@ -1,0 +1,8 @@
+q_class QXmlStreamNotationDeclaration {
+    public const member q_function name() : QStringRef;
+    public const member q_function publicId() : QStringRef;
+    public const member q_function systemId() : QStringRef;
+
+
+}
+

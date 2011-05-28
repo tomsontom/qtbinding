@@ -1,0 +1,22 @@
+q_class QMutableVectorIterator {
+    q_typedef const_iterator : ___UNKNOWN___;
+
+    q_typedef iterator : ___UNKNOWN___;
+
+
+    public member q_function findNext(const T & value) : bool;
+    public member q_function findPrevious(const T & value) : bool;
+    public const member q_function hasNext() : bool;
+    public const member q_function hasPrevious() : bool;
+    public member q_function insert(const T & value) : void;
+    public member q_function next() : T &;
+    public const member q_function peekNext() : T &;
+    public const member q_function peekPrevious() : T &;
+    public member q_function previous() : T &;
+    public const member q_function setValue(const T & value) : void;
+    public member q_function toFront() : void;
+    public const member q_function value() : const T &;
+
+
+}
+

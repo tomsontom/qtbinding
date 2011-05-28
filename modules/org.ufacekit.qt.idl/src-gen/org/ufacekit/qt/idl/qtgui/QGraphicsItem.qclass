@@ -1,0 +1,294 @@
+q_class QGraphicsItem {
+    q_enumeration CacheMode {
+        NoCache = 0
+        ItemCoordinateCache = 1
+        DeviceCoordinateCache = 2
+    }
+
+    q_enumeration Extension {
+        UserExtension = 2147483648
+    }
+
+    q_enumeration GraphicsItemChange {
+        ItemPositionChange = 0
+        ItemMatrixChange = 1
+        ItemVisibleChange = 2
+        ItemEnabledChange = 3
+        ItemSelectedChange = 4
+        ItemParentChange = 5
+        ItemChildAddedChange = 6
+        ItemChildRemovedChange = 7
+        ItemTransformChange = 8
+        ItemPositionHasChanged = 9
+        ItemTransformHasChanged = 10
+        ItemSceneChange = 11
+        ItemVisibleHasChanged = 12
+        ItemEnabledHasChanged = 13
+        ItemSelectedHasChanged = 14
+        ItemParentHasChanged = 15
+        ItemSceneHasChanged = 16
+        ItemCursorChange = 17
+        ItemCursorHasChanged = 18
+        ItemToolTipChange = 19
+        ItemToolTipHasChanged = 20
+        ItemFlagsChange = 21
+        ItemFlagsHaveChanged = 22
+        ItemZValueChange = 23
+        ItemZValueHasChanged = 24
+        ItemOpacityChange = 25
+        ItemOpacityHasChanged = 26
+        ItemScenePositionHasChanged = 27
+        ItemRotationChange = 28
+        ItemRotationHasChanged = 29
+        ItemScaleChange = 30
+        ItemScaleHasChanged = 31
+        ItemTransformOriginPointChange = 32
+        ItemTransformOriginPointHasChanged = 33
+    }
+
+    q_enumeration GraphicsItemFlag {
+        ItemIsMovable = 1
+        ItemIsSelectable = 2
+        ItemIsFocusable = 4
+        ItemClipsToShape = 8
+        ItemClipsChildrenToShape = 16
+        ItemIgnoresTransformations = 32
+        ItemIgnoresParentOpacity = 64
+        ItemDoesntPropagateOpacityToChildren = 128
+        ItemStacksBehindParent = 256
+        ItemUsesExtendedStyleOption = 512
+        ItemHasNoContents = 1024
+        ItemSendsGeometryChanges = 2048
+        ItemAcceptsInputMethod = 4096
+        ItemNegativeZStacksBehindParent = 8192
+        ItemIsPanel = 16384
+        ItemIsFocusScope = 32768
+        ItemSendsScenePositionChanges = 65536
+        ItemStopsClickFocusPropagation = 131072
+    }
+
+    q_flags GraphicsItemFlags : GraphicsItemFlag;
+
+    q_enumeration PanelModality {
+        NonModal = 0
+        PanelModal = 1
+        SceneModal = 2
+    }
+
+
+    public const member q_function acceptDrops() : bool;
+    public const member q_function acceptHoverEvents() : bool;
+    public const member q_function acceptTouchEvents() : bool;
+    public const member q_function acceptsHoverEvents() : bool;
+    public virtual member q_function advance(int phase) : void;
+    public const purevirtual member q_function boundingRect() : QRectF;
+    public const member q_function boundingRegion(const QTransform & itemToDeviceTransform) : QRegion;
+    public const member q_function boundingRegionGranularity() : qreal;
+    public const member q_function cacheMode() : CacheMode;
+    public const member q_function childItems() : QList<QGraphicsItem *>;
+    public const member q_function children() : QList<QGraphicsItem *>;
+    public const member q_function childrenBoundingRect() : QRectF;
+    public member q_function clearFocus() : void;
+    public const member q_function clipPath() : QPainterPath;
+    public const virtual member q_function collidesWithItem(const QGraphicsItem * other, Qt.ItemSelectionMode mode = Qt.IntersectsItemShape) : bool;
+    public const virtual member q_function collidesWithPath(const QPainterPath & path, Qt.ItemSelectionMode mode = Qt.IntersectsItemShape) : bool;
+    public const member q_function collidingItems(Qt.ItemSelectionMode mode = Qt.IntersectsItemShape) : QList<QGraphicsItem *>;
+    public const member q_function commonAncestorItem(const QGraphicsItem * other) : QGraphicsItem *;
+    public const virtual member q_function contains(const QPointF & point) : bool;
+    public const member q_function cursor() : QCursor;
+    public const member q_function data(int key) : QVariant;
+    public const member q_function deviceTransform(const QTransform & viewportTransform) : QTransform;
+    public const member q_function effectiveOpacity() : qreal;
+    public member q_function ensureVisible(const QRectF & rect = QRectF(), int xmargin = 50, int ymargin = 50) : void;
+    public member q_function ensureVisible(qreal x, qreal y, qreal w, qreal h, int xmargin = 50, int ymargin = 50) : void;
+    public const member q_function filtersChildEvents() : bool;
+    public const member q_function flags() : GraphicsItemFlags;
+    public const member q_function focusItem() : QGraphicsItem *;
+    public const member q_function focusProxy() : QGraphicsItem *;
+    public member q_function grabKeyboard() : void;
+    public member q_function grabMouse() : void;
+    public const member q_function group() : QGraphicsItemGroup *;
+    public const member q_function handlesChildEvents() : bool;
+    public const member q_function hasCursor() : bool;
+    public const member q_function hasFocus() : bool;
+    public member q_function hide() : void;
+    public const member q_function inputMethodHints() : Qt.InputMethodHints;
+    public member q_function installSceneEventFilter(QGraphicsItem * filterItem) : void;
+    public const member q_function isActive() : bool;
+    public const member q_function isAncestorOf(const QGraphicsItem * child) : bool;
+    public const member q_function isBlockedByModalPanel(QGraphicsItem ** blockingPanel = 0) : bool;
+    public const member q_function isClipped() : bool;
+    public const member q_function isEnabled() : bool;
+    public const member q_function isObscured(const QRectF & rect) : bool;
+    public const member q_function isObscured(qreal x, qreal y, qreal w, qreal h) : bool;
+    public const member q_function isObscured() : bool;
+    public const virtual member q_function isObscuredBy(const QGraphicsItem * item) : bool;
+    public const member q_function isPanel() : bool;
+    public const member q_function isSelected() : bool;
+    public const member q_function isUnderMouse() : bool;
+    public const member q_function isVisible() : bool;
+    public const member q_function isVisibleTo(const QGraphicsItem * parent) : bool;
+    public const member q_function isWidget() : bool;
+    public const member q_function isWindow() : bool;
+    public const member q_function itemTransform(const QGraphicsItem * other, bool * ok = 0) : QTransform;
+    public const member q_function mapFromItem(const QGraphicsItem * item, const QPainterPath & path) : QPainterPath;
+    public const member q_function mapFromItem(const QGraphicsItem * item, const QPolygonF & polygon) : QPolygonF;
+    public const member q_function mapFromItem(const QGraphicsItem * item, const QPointF & point) : QPointF;
+    public const member q_function mapFromItem(const QGraphicsItem * item, const QRectF & rect) : QPolygonF;
+    public const member q_function mapFromItem(const QGraphicsItem * item, qreal x, qreal y) : QPointF;
+    public const member q_function mapFromItem(const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h) : QPolygonF;
+    public const member q_function mapFromParent(qreal x, qreal y) : QPointF;
+    public const member q_function mapFromParent(const QPainterPath & path) : QPainterPath;
+    public const member q_function mapFromParent(const QRectF & rect) : QPolygonF;
+    public const member q_function mapFromParent(qreal x, qreal y, qreal w, qreal h) : QPolygonF;
+    public const member q_function mapFromParent(const QPolygonF & polygon) : QPolygonF;
+    public const member q_function mapFromParent(const QPointF & point) : QPointF;
+    public const member q_function mapFromScene(const QPolygonF & polygon) : QPolygonF;
+    public const member q_function mapFromScene(qreal x, qreal y) : QPointF;
+    public const member q_function mapFromScene(const QPainterPath & path) : QPainterPath;
+    public const member q_function mapFromScene(qreal x, qreal y, qreal w, qreal h) : QPolygonF;
+    public const member q_function mapFromScene(const QPointF & point) : QPointF;
+    public const member q_function mapFromScene(const QRectF & rect) : QPolygonF;
+    public const member q_function mapRectFromItem(const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h) : QRectF;
+    public const member q_function mapRectFromItem(const QGraphicsItem * item, const QRectF & rect) : QRectF;
+    public const member q_function mapRectFromParent(const QRectF & rect) : QRectF;
+    public const member q_function mapRectFromParent(qreal x, qreal y, qreal w, qreal h) : QRectF;
+    public const member q_function mapRectFromScene(qreal x, qreal y, qreal w, qreal h) : QRectF;
+    public const member q_function mapRectFromScene(const QRectF & rect) : QRectF;
+    public const member q_function mapRectToItem(const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h) : QRectF;
+    public const member q_function mapRectToItem(const QGraphicsItem * item, const QRectF & rect) : QRectF;
+    public const member q_function mapRectToParent(qreal x, qreal y, qreal w, qreal h) : QRectF;
+    public const member q_function mapRectToParent(const QRectF & rect) : QRectF;
+    public const member q_function mapRectToScene(qreal x, qreal y, qreal w, qreal h) : QRectF;
+    public const member q_function mapRectToScene(const QRectF & rect) : QRectF;
+    public const member q_function mapToItem(const QGraphicsItem * item, const QRectF & rect) : QPolygonF;
+    public const member q_function mapToItem(const QGraphicsItem * item, qreal x, qreal y) : QPointF;
+    public const member q_function mapToItem(const QGraphicsItem * item, const QPointF & point) : QPointF;
+    public const member q_function mapToItem(const QGraphicsItem * item, const QPolygonF & polygon) : QPolygonF;
+    public const member q_function mapToItem(const QGraphicsItem * item, const QPainterPath & path) : QPainterPath;
+    public const member q_function mapToItem(const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h) : QPolygonF;
+    public const member q_function mapToParent(const QPolygonF & polygon) : QPolygonF;
+    public const member q_function mapToParent(const QPointF & point) : QPointF;
+    public const member q_function mapToParent(const QRectF & rect) : QPolygonF;
+    public const member q_function mapToParent(qreal x, qreal y, qreal w, qreal h) : QPolygonF;
+    public const member q_function mapToParent(qreal x, qreal y) : QPointF;
+    public const member q_function mapToParent(const QPainterPath & path) : QPainterPath;
+    public const member q_function mapToScene(qreal x, qreal y, qreal w, qreal h) : QPolygonF;
+    public const member q_function mapToScene(const QPainterPath & path) : QPainterPath;
+    public const member q_function mapToScene(qreal x, qreal y) : QPointF;
+    public const member q_function mapToScene(const QRectF & rect) : QPolygonF;
+    public const member q_function mapToScene(const QPointF & point) : QPointF;
+    public const member q_function mapToScene(const QPolygonF & polygon) : QPolygonF;
+    public const member q_function matrix() : QMatrix;
+    public member q_function moveBy(qreal dx, qreal dy) : void;
+    public const member q_function opacity() : qreal;
+    public const virtual member q_function opaqueArea() : QPainterPath;
+    public purevirtual member q_function paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0) : void;
+    public const member q_function panel() : QGraphicsItem *;
+    public const member q_function panelModality() : PanelModality;
+    public const member q_function parentItem() : QGraphicsItem *;
+    public const member q_function parentObject() : QGraphicsObject *;
+    public const member q_function parentWidget() : QGraphicsWidget *;
+    public const member q_function pos() : QPointF;
+    public member q_function removeSceneEventFilter(QGraphicsItem * filterItem) : void;
+    public member q_function resetMatrix() : void;
+    public member q_function resetTransform() : void;
+    public member q_function rotate(qreal angle) : void;
+    public const member q_function rotation() : qreal;
+    public member q_function scale(qreal sx, qreal sy) : void;
+    public const member q_function scale() : qreal;
+    public const member q_function scene() : QGraphicsScene *;
+    public const member q_function sceneBoundingRect() : QRectF;
+    public const member q_function sceneMatrix() : QMatrix;
+    public const member q_function scenePos() : QPointF;
+    public const member q_function sceneTransform() : QTransform;
+    public member q_function scroll(qreal dx, qreal dy, const QRectF & rect = QRectF()) : void;
+    public member q_function setAcceptDrops(bool on) : void;
+    public member q_function setAcceptHoverEvents(bool enabled) : void;
+    public member q_function setAcceptTouchEvents(bool enabled) : void;
+    public member q_function setAcceptedMouseButtons(Qt.MouseButtons buttons) : void;
+    public member q_function setAcceptsHoverEvents(bool enabled) : void;
+    public member q_function setActive(bool active) : void;
+    public member q_function setBoundingRegionGranularity(qreal granularity) : void;
+    public member q_function setCacheMode(CacheMode mode, const QSize & logicalCacheSize = QSize()) : void;
+    public member q_function setCursor(const QCursor & cursor) : void;
+    public member q_function setData(int key, const QVariant & value) : void;
+    public member q_function setEnabled(bool enabled) : void;
+    public member q_function setFiltersChildEvents(bool enabled) : void;
+    public member q_function setFlag(GraphicsItemFlag flag, bool enabled = true) : void;
+    public member q_function setFlags(GraphicsItemFlags flags) : void;
+    public member q_function setFocus(Qt.FocusReason focusReason = Qt.OtherFocusReason) : void;
+    public member q_function setFocusProxy(QGraphicsItem * item) : void;
+    public member q_function setGraphicsEffect(QGraphicsEffect * effect) : void;
+    public member q_function setGroup(QGraphicsItemGroup * group) : void;
+    public member q_function setHandlesChildEvents(bool enabled) : void;
+    public member q_function setInputMethodHints(Qt.InputMethodHints hints) : void;
+    public member q_function setMatrix(const QMatrix & matrix, bool combine = false) : void;
+    public member q_function setOpacity(qreal opacity) : void;
+    public member q_function setPanelModality(PanelModality panelModality) : void;
+    public member q_function setParentItem(QGraphicsItem * newParent) : void;
+    public member q_function setPos(qreal x, qreal y) : void;
+    public member q_function setPos(const QPointF & pos) : void;
+    public member q_function setRotation(qreal angle) : void;
+    public member q_function setScale(qreal factor) : void;
+    public member q_function setSelected(bool selected) : void;
+    public member q_function setToolTip(const QString & toolTip) : void;
+    public member q_function setTransform(const QTransform & matrix, bool combine = false) : void;
+    public member q_function setTransformOriginPoint(const QPointF & origin) : void;
+    public member q_function setTransformOriginPoint(qreal x, qreal y) : void;
+    public member q_function setTransformations(const QList<QGraphicsTransform *> & transformations) : void;
+    public member q_function setVisible(bool visible) : void;
+    public member q_function setX(qreal x) : void;
+    public member q_function setY(qreal y) : void;
+    public member q_function setZValue(qreal z) : void;
+    public const virtual member q_function shape() : QPainterPath;
+    public member q_function shear(qreal sh, qreal sv) : void;
+    public member q_function show() : void;
+    public member q_function stackBefore(const QGraphicsItem * sibling) : void;
+    public member q_function toGraphicsObject() : QGraphicsObject *;
+    public const member q_function toGraphicsObject() : const QGraphicsObject *;
+    public const member q_function topLevelItem() : QGraphicsItem *;
+    public const member q_function topLevelWidget() : QGraphicsWidget *;
+    public const member q_function transform() : QTransform;
+    public const member q_function transformOriginPoint() : QPointF;
+    public const member q_function transformations() : QList<QGraphicsTransform *>;
+    public member q_function translate(qreal dx, qreal dy) : void;
+    public const virtual member q_function type() : int;
+    public member q_function ungrabKeyboard() : void;
+    public member q_function ungrabMouse() : void;
+    public member q_function unsetCursor() : void;
+    public member q_function update(qreal x, qreal y, qreal width, qreal height) : void;
+    public member q_function update(const QRectF & rect = QRectF()) : void;
+    public const member q_function window() : QGraphicsWidget *;
+    public const member q_function x() : qreal;
+    public const member q_function y() : qreal;
+    public const member q_function zValue() : qreal;
+
+    protected virtual member q_function contextMenuEvent(QGraphicsSceneContextMenuEvent * event) : void;
+    protected virtual member q_function dragEnterEvent(QGraphicsSceneDragDropEvent * event) : void;
+    protected virtual member q_function dragLeaveEvent(QGraphicsSceneDragDropEvent * event) : void;
+    protected virtual member q_function dragMoveEvent(QGraphicsSceneDragDropEvent * event) : void;
+    protected virtual member q_function dropEvent(QGraphicsSceneDragDropEvent * event) : void;
+    protected virtual member q_function focusInEvent(QFocusEvent * event) : void;
+    protected virtual member q_function focusOutEvent(QFocusEvent * event) : void;
+    protected virtual member q_function hoverEnterEvent(QGraphicsSceneHoverEvent * event) : void;
+    protected virtual member q_function hoverLeaveEvent(QGraphicsSceneHoverEvent * event) : void;
+    protected virtual member q_function hoverMoveEvent(QGraphicsSceneHoverEvent * event) : void;
+    protected virtual member q_function inputMethodEvent(QInputMethodEvent * event) : void;
+    protected const virtual member q_function inputMethodQuery(Qt.InputMethodQuery query) : QVariant;
+    protected virtual member q_function itemChange(GraphicsItemChange change, const QVariant & value) : QVariant;
+    protected virtual member q_function keyPressEvent(QKeyEvent * event) : void;
+    protected virtual member q_function keyReleaseEvent(QKeyEvent * event) : void;
+    protected virtual member q_function mouseDoubleClickEvent(QGraphicsSceneMouseEvent * event) : void;
+    protected virtual member q_function mouseMoveEvent(QGraphicsSceneMouseEvent * event) : void;
+    protected virtual member q_function mousePressEvent(QGraphicsSceneMouseEvent * event) : void;
+    protected virtual member q_function mouseReleaseEvent(QGraphicsSceneMouseEvent * event) : void;
+    protected member q_function prepareGeometryChange() : void;
+    protected virtual member q_function sceneEvent(QEvent * event) : bool;
+    protected virtual member q_function sceneEventFilter(QGraphicsItem * watched, QEvent * event) : bool;
+    protected member q_function updateMicroFocus() : void;
+    protected virtual member q_function wheelEvent(QGraphicsSceneWheelEvent * event) : void;
+
+
+}
+

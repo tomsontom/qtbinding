@@ -1,0 +1,38 @@
+q_class QSystemTrayIcon extends QObject {
+    q_enumeration ActivationReason {
+        Unknown = 0
+        Context = 1
+        DoubleClick = 2
+        Trigger = 3
+        MiddleClick = 4
+    }
+
+    q_enumeration MessageIcon {
+        NoIcon = 0
+        Information = 1
+        Warning = 2
+        Critical = 3
+    }
+
+
+    q_property QIcon icon;
+    q_property QString toolTip;
+    q_property bool visible;
+
+    public const member q_function contextMenu() : QMenu *;
+    public const member q_function geometry() : QRect;
+    public const member q_function icon() : QIcon;
+    public class q_function isSystemTrayAvailable() : bool;
+    public const member q_function isVisible() : bool;
+    public member q_function setContextMenu(QMenu * menu) : void;
+    public member q_function setIcon(const QIcon & icon) : void;
+    public member q_function setToolTip(const QString & tip) : void;
+    public member q_function showMessage(const QString & title, const QString & message, MessageIcon icon = Information, int millisecondsTimeoutHint = 10000) : void;
+    public class q_function supportsMessages() : bool;
+    public const member q_function toolTip() : QString;
+
+
+
+
+}
+

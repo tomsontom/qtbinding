@@ -1,0 +1,12 @@
+q_class QTextDocumentFragment {
+    public class q_function fromHtml(const QString & text) : QTextDocumentFragment;
+    public class q_function fromHtml(const QString & text, const QTextDocument * resourceProvider) : QTextDocumentFragment;
+    public class q_function fromPlainText(const QString & plainText) : QTextDocumentFragment;
+    public const member q_function isEmpty() : bool;
+    public const member q_function toHtml(const QByteArray & encoding) : QString;
+    public const member q_function toHtml() : QString;
+    public const member q_function toPlainText() : QString;
+
+
+}
+

@@ -1,0 +1,30 @@
+q_class QSpinBox extends QAbstractSpinBox {
+    q_property const QString cleanText;
+    q_property int maximum;
+    q_property int minimum;
+    q_property QString prefix;
+    q_property int singleStep;
+    q_property QString suffix;
+    q_property int value;
+
+    public const member q_function cleanText() : QString;
+    public const member q_function maximum() : int;
+    public const member q_function minimum() : int;
+    public const member q_function prefix() : QString;
+    public member q_function setMaximum(int max) : void;
+    public member q_function setMinimum(int min) : void;
+    public member q_function setPrefix(const QString & prefix) : void;
+    public member q_function setRange(int minimum, int maximum) : void;
+    public member q_function setSingleStep(int val) : void;
+    public member q_function setSuffix(const QString & suffix) : void;
+    public const member q_function singleStep() : int;
+    public const member q_function suffix() : QString;
+
+    protected const virtual member q_function textFromValue(int value) : QString;
+    protected const virtual member q_function valueFromText(const QString & text) : int;
+
+
+
+
+}
+

@@ -1,0 +1,12 @@
+q_class QTextFragment {
+    public const member q_function charFormat() : QTextCharFormat;
+    public const member q_function charFormatIndex() : int;
+    public const member q_function contains(int position) : bool;
+    public const member q_function isValid() : bool;
+    public const member q_function length() : int;
+    public const member q_function position() : int;
+    public const member q_function text() : QString;
+
+
+}
+

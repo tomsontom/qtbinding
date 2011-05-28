@@ -1,0 +1,23 @@
+q_class QMacPasteboardMime {
+    q_enumeration QMacPasteboardMimeType {
+        MIME_DND = 1
+        MIME_CLIP = 2
+        MIME_QT_CONVERTOR = 4
+        MIME_QT3_CONVERTOR = 8
+        MIME_ALL = MIME_DND  |  MIME_CLIP
+    }
+
+
+    public class q_function all(uchar t) : QList<QMacPasteboardMime *>;
+    public purevirtual member q_function canConvert(const QString & mime, QString flav) : bool;
+    public purevirtual member q_function convertFromMime(const QString & mime, QVariant data, QString flav) : QList<QByteArray>;
+    public purevirtual member q_function convertToMime(const QString & mime, QList<QByteArray> data, QString flav) : QVariant;
+    public class q_function convertor(uchar t, const QString & mime, QString flav) : QMacPasteboardMime *;
+    public purevirtual member q_function convertorName() : QString;
+    public purevirtual member q_function flavorFor(const QString & mime) : QString;
+    public class q_function flavorToMime(uchar t, QString flav) : QString;
+    public purevirtual member q_function mimeFor(QString flav) : QString;
+
+
+}
+

@@ -1,0 +1,18 @@
+q_class QPluginLoader extends QObject {
+    q_property QString fileName;
+    q_property QLibrary.LoadHints loadHints;
+
+    public const member q_function errorString() : QString;
+    public const member q_function fileName() : QString;
+    public member q_function instance() : QObject *;
+    public const member q_function isLoaded() : bool;
+    public member q_function load() : bool;
+    public const member q_function loadHints() : QLibrary.LoadHints;
+    public member q_function setFileName(const QString & fileName) : void;
+    public member q_function setLoadHints(QLibrary.LoadHints loadHints) : void;
+    public class q_function staticInstances() : QObjectList;
+    public member q_function unload() : bool;
+
+
+}
+

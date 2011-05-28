@@ -1,0 +1,113 @@
+q_class QImage extends QPaintDevice {
+    q_enumeration Format {
+        Format_Invalid = 0
+        Format_Mono = 1
+        Format_MonoLSB = 2
+        Format_Indexed8 = 3
+        Format_RGB32 = 4
+        Format_ARGB32 = 5
+        Format_ARGB32_Premultiplied = 6
+        Format_RGB16 = 7
+        Format_ARGB8565_Premultiplied = 8
+        Format_RGB666 = 9
+        Format_ARGB6666_Premultiplied = 10
+        Format_RGB555 = 11
+        Format_ARGB8555_Premultiplied = 12
+        Format_RGB888 = 13
+        Format_RGB444 = 14
+        Format_ARGB4444_Premultiplied = 15
+    }
+
+    q_enumeration InvertMode {
+        InvertRgb = 0
+        InvertRgba = 1
+    }
+
+
+    q_typedef DataPtr : ___UNKNOWN___;
+
+
+    public const member q_function allGray() : bool;
+    public const member q_function alphaChannel() : QImage;
+    public const member q_function bitPlaneCount() : int;
+    public const member q_function bits() : const uchar *;
+    public member q_function bits() : uchar *;
+    public const member q_function byteCount() : int;
+    public const member q_function bytesPerLine() : int;
+    public const member q_function cacheKey() : qint64;
+    public const member q_function color(int i) : QRgb;
+    public const member q_function colorCount() : int;
+    public const member q_function colorTable() : QVector<QRgb>;
+    public const member q_function constBits() : const uchar *;
+    public const member q_function constScanLine(int i) : const uchar *;
+    public const member q_function convertToFormat(Format format, Qt.ImageConversionFlags flags = Qt.AutoColor) : QImage;
+    public const member q_function convertToFormat(Format format, const QVector<QRgb> & colorTable, Qt.ImageConversionFlags flags = Qt.AutoColor) : QImage;
+    public const member q_function copy(const QRect & rectangle = QRect()) : QImage;
+    public const member q_function copy(int x, int y, int width, int height) : QImage;
+    public const member q_function createAlphaMask(Qt.ImageConversionFlags flags = Qt.AutoColor) : QImage;
+    public const member q_function createHeuristicMask(bool clipTight = true) : QImage;
+    public const member q_function createMaskFromColor(QRgb color, Qt.MaskMode mode = Qt.MaskInColor) : QImage;
+    public const member q_function depth() : int;
+    public const member q_function dotsPerMeterX() : int;
+    public const member q_function dotsPerMeterY() : int;
+    public member q_function fill(uint pixelValue) : void;
+    public const member q_function format() : Format;
+    public class q_function fromData(const QByteArray & data, const char * format = 0) : QImage;
+    public class q_function fromData(const uchar * data, int size, const char * format = 0) : QImage;
+    public const member q_function hasAlphaChannel() : bool;
+    public const member q_function height() : int;
+    public member q_function invertPixels(InvertMode mode = InvertRgb) : void;
+    public const member q_function isGrayscale() : bool;
+    public const member q_function isNull() : bool;
+    public member q_function load(QIODevice * device, const char * format) : bool;
+    public member q_function load(const QString & fileName, const char * format = 0) : bool;
+    public member q_function loadFromData(const uchar * data, int len, const char * format = 0) : bool;
+    public member q_function loadFromData(const QByteArray & data, const char * format = 0) : bool;
+    public const member q_function mirrored(bool horizontal = false, bool vertical = true) : QImage;
+    public const member q_function numBytes() : int;
+    public const member q_function numColors() : int;
+    public const member q_function offset() : QPoint;
+    public const member q_function pixel(int x, int y) : QRgb;
+    public const member q_function pixel(const QPoint & position) : QRgb;
+    public const member q_function pixelIndex(int x, int y) : int;
+    public const member q_function pixelIndex(const QPoint & position) : int;
+    public const member q_function rect() : QRect;
+    public const member q_function rgbSwapped() : QImage;
+    public const member q_function save(QIODevice * device, const char * format = 0, int quality = -1) : bool;
+    public const member q_function save(const QString & fileName, const char * format = 0, int quality = -1) : bool;
+    public const member q_function scaled(int width, int height, Qt.AspectRatioMode aspectRatioMode = Qt.IgnoreAspectRatio, Qt.TransformationMode transformMode = Qt.FastTransformation) : QImage;
+    public const member q_function scaled(const QSize & size, Qt.AspectRatioMode aspectRatioMode = Qt.IgnoreAspectRatio, Qt.TransformationMode transformMode = Qt.FastTransformation) : QImage;
+    public const member q_function scaledToHeight(int height, Qt.TransformationMode mode = Qt.FastTransformation) : QImage;
+    public const member q_function scaledToWidth(int width, Qt.TransformationMode mode = Qt.FastTransformation) : QImage;
+    public member q_function scanLine(int i) : uchar *;
+    public const member q_function scanLine(int i) : const uchar *;
+    public const member q_function serialNumber() : int;
+    public member q_function setAlphaChannel(const QImage & alphaChannel) : void;
+    public member q_function setColor(int index, QRgb colorValue) : void;
+    public member q_function setColorCount(int colorCount) : void;
+    public member q_function setColorTable(const QVector<QRgb> colors) : void;
+    public member q_function setDotsPerMeterX(int x) : void;
+    public member q_function setDotsPerMeterY(int y) : void;
+    public member q_function setOffset(const QPoint & offset) : void;
+    public member q_function setPixel(int x, int y, uint index_or_rgb) : void;
+    public member q_function setPixel(const QPoint & position, uint index_or_rgb) : void;
+    public member q_function setText(const char * key, const char * language, const QString & text) : void;
+    public member q_function setText(const QString & key, const QString & text) : void;
+    public const member q_function size() : QSize;
+    public const member q_function text(const QImageTextKeyLang & keywordAndLanguage) : QString;
+    public const member q_function text(const char * key, const char * language = 0) : QString;
+    public const member q_function text(const QString & key = QString()) : QString;
+    public const member q_function textKeys() : QStringList;
+    public const member q_function textLanguages() : QStringList;
+    public const member q_function textList() : QList<QImageTextKeyLang>;
+    public const member q_function transformed(const QMatrix & matrix, Qt.TransformationMode mode = Qt.FastTransformation) : QImage;
+    public const member q_function transformed(const QTransform & matrix, Qt.TransformationMode mode = Qt.FastTransformation) : QImage;
+    public class q_function trueMatrix(const QTransform & matrix, int width, int height) : QTransform;
+    public class q_function trueMatrix(const QMatrix & matrix, int width, int height) : QMatrix;
+    public const member q_function valid(int x, int y) : bool;
+    public const member q_function valid(const QPoint & pos) : bool;
+    public const member q_function width() : int;
+
+
+}
+

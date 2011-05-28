@@ -1,0 +1,33 @@
+q_class QDoubleSpinBox extends QAbstractSpinBox {
+    q_property const QString cleanText;
+    q_property int decimals;
+    q_property double maximum;
+    q_property double minimum;
+    q_property QString prefix;
+    q_property double singleStep;
+    q_property QString suffix;
+    q_property double value;
+
+    public const member q_function cleanText() : QString;
+    public const member q_function decimals() : int;
+    public const member q_function maximum() : double;
+    public const member q_function minimum() : double;
+    public const member q_function prefix() : QString;
+    public member q_function setDecimals(int prec) : void;
+    public member q_function setMaximum(double max) : void;
+    public member q_function setMinimum(double min) : void;
+    public member q_function setPrefix(const QString & prefix) : void;
+    public member q_function setRange(double minimum, double maximum) : void;
+    public member q_function setSingleStep(double val) : void;
+    public member q_function setSuffix(const QString & suffix) : void;
+    public const member q_function singleStep() : double;
+    public const member q_function suffix() : QString;
+    public const virtual member q_function textFromValue(double value) : QString;
+    public const member q_function value() : double;
+    public const virtual member q_function valueFromText(const QString & text) : double;
+
+
+
+
+}
+

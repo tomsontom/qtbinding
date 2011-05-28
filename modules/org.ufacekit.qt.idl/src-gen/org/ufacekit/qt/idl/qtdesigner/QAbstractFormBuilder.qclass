@@ -1,0 +1,13 @@
+q_class QAbstractFormBuilder {
+    q_typedef DomPropertyHash : ___UNKNOWN___;
+
+    q_typedef IconPaths : ___UNKNOWN___;
+
+
+    public virtual member q_function load(QIODevice * device, QWidget * parent = 0) : QWidget *;
+    public virtual member q_function save(QIODevice * device, QWidget * widget) : void;
+    public member q_function setWorkingDirectory(const QDir & directory) : void;
+
+
+}
+

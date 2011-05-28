@@ -1,0 +1,12 @@
+q_class QNetworkDiskCache extends QAbstractNetworkCache {
+    public const member q_function cacheDirectory() : QString;
+    public const member q_function fileMetaData(const QString & fileName) : QNetworkCacheMetaData;
+    public const member q_function maximumCacheSize() : qint64;
+    public member q_function setCacheDirectory(const QString & cacheDir) : void;
+    public member q_function setMaximumCacheSize(qint64 size) : void;
+
+    protected virtual member q_function expire() : qint64;
+
+
+}
+

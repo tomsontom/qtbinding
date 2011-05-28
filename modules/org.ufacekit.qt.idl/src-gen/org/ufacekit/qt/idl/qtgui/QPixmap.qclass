@@ -1,0 +1,85 @@
+q_class QPixmap extends QPaintDevice {
+    q_enumeration HBitmapFormat {
+        NoAlpha = 0
+        PremultipliedAlpha = 1
+        Alpha = 2
+    }
+
+    q_enumeration ShareMode {
+        ImplicitlyShared = 0
+        ExplicitlyShared = 1
+    }
+
+    q_enumeration Type {
+        PixmapType = 0
+        BitmapType = 1
+    }
+
+
+    q_typedef DataPtr : ___UNKNOWN___;
+
+
+    public const member q_function alphaChannel() : QPixmap;
+    public const member q_function cacheKey() : qint64;
+    public member q_function convertFromImage(const QImage & image, Qt.ImageConversionFlags flags = Qt.AutoColor) : bool;
+    public const member q_function copy(const QRect & rectangle = QRect()) : QPixmap;
+    public const member q_function copy(int x, int y, int width, int height) : QPixmap;
+    public const member q_function createMaskFromColor(const QColor & maskColor, Qt.MaskMode mode) : QBitmap;
+    public const member q_function createMaskFromColor(const QColor & maskColor) : QBitmap;
+    public class q_function defaultDepth() : int;
+    public const member q_function depth() : int;
+    public member q_function detach() : void;
+    public member q_function fill(const QWidget * widget, int x, int y) : void;
+    public member q_function fill(const QColor & color = Qt.white) : void;
+    public member q_function fill(const QWidget * widget, const QPoint & offset) : void;
+    public class q_function fromImage(const QImage & image, Qt.ImageConversionFlags flags = Qt.AutoColor) : QPixmap;
+    public class q_function fromImageReader(QImageReader * imageReader, Qt.ImageConversionFlags flags = Qt.AutoColor) : QPixmap;
+    public class q_function fromMacCGImageRef(CGImageRef image) : QPixmap;
+    public class q_function fromSymbianCFbsBitmap(CFbsBitmap * bitmap) : QPixmap;
+    public class q_function fromSymbianRSgImage(RSgImage * sgImage) : QPixmap;
+    public class q_function fromWinHBITMAP(HBITMAP bitmap, HBitmapFormat format = NoAlpha) : QPixmap;
+    public class q_function fromWinHICON(HICON icon) : QPixmap;
+    public class q_function fromX11Pixmap(Qt.HANDLE pixmap, ShareMode mode = ImplicitlyShared) : QPixmap;
+    public class q_function grabWidget(QWidget * widget, int x = 0, int y = 0, int width = -1, int height = -1) : QPixmap;
+    public class q_function grabWidget(QWidget * widget, const QRect & rectangle) : QPixmap;
+    public class q_function grabWindow(WId window, int x = 0, int y = 0, int width = -1, int height = -1) : QPixmap;
+    public const member q_function handle() : Qt.HANDLE;
+    public const member q_function hasAlpha() : bool;
+    public const member q_function hasAlphaChannel() : bool;
+    public const member q_function height() : int;
+    public const member q_function isNull() : bool;
+    public const member q_function isQBitmap() : bool;
+    public member q_function load(const QString & fileName, const char * format = 0, Qt.ImageConversionFlags flags = Qt.AutoColor) : bool;
+    public member q_function loadFromData(const uchar * data, uint len, const char * format = 0, Qt.ImageConversionFlags flags = Qt.AutoColor) : bool;
+    public member q_function loadFromData(const QByteArray & data, const char * format = 0, Qt.ImageConversionFlags flags = Qt.AutoColor) : bool;
+    public const member q_function mask() : QBitmap;
+    public const member q_function rect() : QRect;
+    public const member q_function save(QIODevice * device, const char * format = 0, int quality = -1) : bool;
+    public const member q_function save(const QString & fileName, const char * format = 0, int quality = -1) : bool;
+    public const member q_function scaled(int width, int height, Qt.AspectRatioMode aspectRatioMode = Qt.IgnoreAspectRatio, Qt.TransformationMode transformMode = Qt.FastTransformation) : QPixmap;
+    public const member q_function scaled(const QSize & size, Qt.AspectRatioMode aspectRatioMode = Qt.IgnoreAspectRatio, Qt.TransformationMode transformMode = Qt.FastTransformation) : QPixmap;
+    public const member q_function scaledToHeight(int height, Qt.TransformationMode mode = Qt.FastTransformation) : QPixmap;
+    public const member q_function scaledToWidth(int width, Qt.TransformationMode mode = Qt.FastTransformation) : QPixmap;
+    public member q_function scroll(int dx, int dy, int x, int y, int width, int height, QRegion * exposed = 0) : void;
+    public member q_function scroll(int dx, int dy, const QRect & rect, QRegion * exposed = 0) : void;
+    public const member q_function serialNumber() : int;
+    public member q_function setAlphaChannel(const QPixmap & alphaChannel) : void;
+    public member q_function setMask(const QBitmap & mask) : void;
+    public const member q_function size() : QSize;
+    public const member q_function toImage() : QImage;
+    public const member q_function toMacCGImageRef() : CGImageRef;
+    public const member q_function toSymbianCFbsBitmap() : CFbsBitmap *;
+    public const member q_function toSymbianRSgImage() : RSgImage *;
+    public const member q_function toWinHBITMAP(HBitmapFormat format = NoAlpha) : HBITMAP;
+    public const member q_function toWinHICON() : HICON;
+    public const member q_function transformed(const QTransform & transform, Qt.TransformationMode mode = Qt.FastTransformation) : QPixmap;
+    public const member q_function transformed(const QMatrix & matrix, Qt.TransformationMode mode = Qt.FastTransformation) : QPixmap;
+    public class q_function trueMatrix(const QMatrix & m, int w, int h) : QMatrix;
+    public class q_function trueMatrix(const QTransform & matrix, int width, int height) : QTransform;
+    public const member q_function width() : int;
+    public const member q_function x11Info() : const QX11Info &;
+    public const member q_function x11PictureHandle() : Qt.HANDLE;
+
+
+}
+

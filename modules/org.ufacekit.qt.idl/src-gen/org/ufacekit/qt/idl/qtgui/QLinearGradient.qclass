@@ -1,0 +1,11 @@
+q_class QLinearGradient extends QGradient {
+    public const member q_function finalStop() : QPointF;
+    public member q_function setFinalStop(const QPointF & stop) : void;
+    public member q_function setFinalStop(qreal x, qreal y) : void;
+    public member q_function setStart(const QPointF & start) : void;
+    public member q_function setStart(qreal x, qreal y) : void;
+    public const member q_function start() : QPointF;
+
+
+}
+

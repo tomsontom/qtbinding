@@ -1,0 +1,27 @@
+q_class QAbstractVideoBuffer {
+    q_enumeration HandleType {
+        NoHandle = 0
+        GLTextureHandle = 1
+        XvShmImageHandle = 2
+        CoreImageHandle = 3
+        QPixmapHandle = 4
+        UserHandle = 1000
+    }
+
+    q_enumeration MapMode {
+        NotMapped = 0
+        ReadOnly = 1
+        WriteOnly = 2
+        ReadWrite = ReadOnly  |  WriteOnly
+    }
+
+
+    public const virtual member q_function handle() : QVariant;
+    public const member q_function handleType() : HandleType;
+    public purevirtual member q_function map(MapMode mode, int * numBytes, int * bytesPerLine) : uchar *;
+    public const purevirtual member q_function mapMode() : MapMode;
+    public purevirtual member q_function unmap() : void;
+
+
+}
+

@@ -1,0 +1,16 @@
+q_class QStyleOptionFrameV2 extends QStyleOptionFrame {
+    q_enumeration FrameFeature {
+        None = 0
+        Flat = 1
+    }
+
+    q_flags FrameFeatures : FrameFeature;
+
+    q_enumeration StyleOptionVersion {
+        Version = 2
+    }
+
+
+
+}
+

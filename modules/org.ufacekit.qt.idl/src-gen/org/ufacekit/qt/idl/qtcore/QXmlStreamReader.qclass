@@ -1,0 +1,90 @@
+q_class QXmlStreamReader {
+    q_enumeration Error {
+        NoError = 0
+        UnexpectedElementError = 1
+        CustomError = 2
+        NotWellFormedError = 3
+        PrematureEndOfDocumentError = 4
+    }
+
+    q_enumeration ReadElementTextBehaviour {
+        ErrorOnUnexpectedElement = 0
+        IncludeChildElements = 1
+        SkipChildElements = 2
+    }
+
+    q_enumeration TokenType {
+        NoToken = 0
+        Invalid = 1
+        StartDocument = 2
+        EndDocument = 3
+        StartElement = 4
+        EndElement = 5
+        Characters = 6
+        Comment = 7
+        DTD = 8
+        EntityReference = 9
+        ProcessingInstruction = 10
+    }
+
+
+    q_property bool namespaceProcessing;
+
+    public member q_function addData(const QByteArray & data) : void;
+    public member q_function addData(const QString & data) : void;
+    public member q_function addData(const char * data) : void;
+    public member q_function addExtraNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & extraNamespaceDeclaration) : void;
+    public member q_function addExtraNamespaceDeclarations(const QXmlStreamNamespaceDeclarations & extraNamespaceDeclarations) : void;
+    public const member q_function atEnd() : bool;
+    public const member q_function attributes() : QXmlStreamAttributes;
+    public const member q_function characterOffset() : qint64;
+    public member q_function clear() : void;
+    public const member q_function columnNumber() : qint64;
+    public const member q_function device() : QIODevice *;
+    public const member q_function documentEncoding() : QStringRef;
+    public const member q_function documentVersion() : QStringRef;
+    public const member q_function dtdName() : QStringRef;
+    public const member q_function dtdPublicId() : QStringRef;
+    public const member q_function dtdSystemId() : QStringRef;
+    public const member q_function entityDeclarations() : QXmlStreamEntityDeclarations;
+    public const member q_function entityResolver() : QXmlStreamEntityResolver *;
+    public const member q_function error() : Error;
+    public const member q_function errorString() : QString;
+    public const member q_function isCDATA() : bool;
+    public const member q_function isCharacters() : bool;
+    public const member q_function isComment() : bool;
+    public const member q_function isDTD() : bool;
+    public const member q_function isEndDocument() : bool;
+    public const member q_function isEndElement() : bool;
+    public const member q_function isEntityReference() : bool;
+    public const member q_function isProcessingInstruction() : bool;
+    public const member q_function isStandaloneDocument() : bool;
+    public const member q_function isStartDocument() : bool;
+    public const member q_function isStartElement() : bool;
+    public const member q_function isWhitespace() : bool;
+    public const member q_function lineNumber() : qint64;
+    public const member q_function name() : QStringRef;
+    public const member q_function namespaceDeclarations() : QXmlStreamNamespaceDeclarations;
+    public const member q_function namespaceProcessing() : bool;
+    public const member q_function namespaceUri() : QStringRef;
+    public const member q_function notationDeclarations() : QXmlStreamNotationDeclarations;
+    public const member q_function prefix() : QStringRef;
+    public const member q_function processingInstructionData() : QStringRef;
+    public const member q_function processingInstructionTarget() : QStringRef;
+    public const member q_function qualifiedName() : QStringRef;
+    public member q_function raiseError(const QString & message = QString()) : void;
+    public member q_function readElementText() : QString;
+    public member q_function readElementText(ReadElementTextBehaviour behaviour) : QString;
+    public member q_function readNext() : TokenType;
+    public member q_function readNextStartElement() : bool;
+    public member q_function setDevice(QIODevice * device) : void;
+    public member q_function setEntityResolver(QXmlStreamEntityResolver * resolver) : void;
+    public member q_function setNamespaceProcessing(bool ) : void;
+    public member q_function skipCurrentElement() : void;
+    public const member q_function text() : QStringRef;
+    public const member q_function tokenString() : QString;
+    public const member q_function tokenType() : TokenType;
+
+
+}
+

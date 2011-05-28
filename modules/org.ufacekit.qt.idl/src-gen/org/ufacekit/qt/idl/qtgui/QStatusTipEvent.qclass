@@ -1,0 +1,6 @@
+q_class QStatusTipEvent extends QEvent {
+    public const member q_function tip() : QString;
+
+
+}
+

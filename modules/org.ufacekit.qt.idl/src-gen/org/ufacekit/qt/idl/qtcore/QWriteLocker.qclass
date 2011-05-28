@@ -1,0 +1,7 @@
+q_class QWriteLocker {
+    public const member q_function readWriteLock() : QReadWriteLock *;
+    public member q_function relock() : void;
+
+
+}
+

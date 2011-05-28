@@ -1,0 +1,9 @@
+q_class QScriptable {
+    public const member q_function argument(int index) : QScriptValue;
+    public const member q_function argumentCount() : int;
+    public const member q_function context() : QScriptContext *;
+    public const member q_function thisObject() : QScriptValue;
+
+
+}
+

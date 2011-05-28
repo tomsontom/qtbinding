@@ -1,0 +1,11 @@
+q_class QWhatsThis {
+    public class q_function createAction(QObject * parent = 0) : QAction *;
+    public class q_function enterWhatsThisMode() : void;
+    public class q_function hideText() : void;
+    public class q_function inWhatsThisMode() : bool;
+    public class q_function leaveWhatsThisMode() : void;
+    public class q_function showText(const QPoint & pos, const QString & text, QWidget * w = 0) : void;
+
+
+}
+

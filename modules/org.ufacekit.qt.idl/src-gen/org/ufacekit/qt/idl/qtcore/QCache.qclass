@@ -1,0 +1,23 @@
+q_class QCache {
+    q_class Node {
+
+    }
+
+
+    public member q_function clear() : void;
+    public const member q_function contains(const Key & key) : bool;
+    public const member q_function count() : int;
+    public member q_function insert(const Key & key, T * object, int cost = 1) : bool;
+    public const member q_function isEmpty() : bool;
+    public const member q_function keys() : QList<Key>;
+    public const member q_function maxCost() : int;
+    public const member q_function object(const Key & key) : T *;
+    public member q_function remove(const Key & key) : bool;
+    public member q_function setMaxCost(int cost) : void;
+    public const member q_function size() : int;
+    public member q_function take(const Key & key) : T *;
+    public const member q_function totalCost() : int;
+
+
+}
+

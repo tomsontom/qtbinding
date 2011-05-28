@@ -1,0 +1,118 @@
+q_class QList {
+    q_typedef ConstIterator : ___UNKNOWN___;
+
+    q_typedef Iterator : ___UNKNOWN___;
+
+    q_typedef const_pointer : ___UNKNOWN___;
+
+    q_typedef const_reference : ___UNKNOWN___;
+
+    q_typedef difference_type : ___UNKNOWN___;
+
+    q_typedef pointer : ___UNKNOWN___;
+
+    q_typedef reference : ___UNKNOWN___;
+
+    q_typedef size_type : ___UNKNOWN___;
+
+    q_typedef value_type : ___UNKNOWN___;
+
+
+    q_class Node {
+
+    }
+
+    q_class const_iterator {
+        q_typedef difference_type : ___UNKNOWN___;
+
+        q_typedef iterator_category : ___UNKNOWN___;
+
+        q_typedef pointer : ___UNKNOWN___;
+
+        q_typedef reference : ___UNKNOWN___;
+
+        q_typedef value_type : ___UNKNOWN___;
+
+
+
+    }
+
+    q_class iterator {
+        q_typedef difference_type : ___UNKNOWN___;
+
+        q_typedef iterator_category : ___UNKNOWN___;
+
+        q_typedef pointer : ___UNKNOWN___;
+
+        q_typedef reference : ___UNKNOWN___;
+
+        q_typedef value_type : ___UNKNOWN___;
+
+
+
+    }
+
+
+    public member q_function append(const QList<T> & value) : void;
+    public member q_function append(const T & value) : void;
+    public const member q_function at(int i) : const T &;
+    public const member q_function back() : const T &;
+    public member q_function back() : T &;
+    public member q_function begin() : iterator;
+    public const member q_function begin() : const_iterator;
+    public member q_function clear() : void;
+    public const member q_function constBegin() : const_iterator;
+    public const member q_function constEnd() : const_iterator;
+    public const member q_function contains(const T & value) : bool;
+    public const member q_function count() : int;
+    public const member q_function count(const T & value) : int;
+    public const member q_function empty() : bool;
+    public const member q_function end() : const_iterator;
+    public member q_function end() : iterator;
+    public const member q_function endsWith(const T & value) : bool;
+    public member q_function erase(iterator pos) : iterator;
+    public member q_function erase(iterator begin, iterator end) : iterator;
+    public const member q_function first() : const T &;
+    public member q_function first() : T &;
+    public class q_function fromSet(const QSet<T> & set) : QList<T>;
+    public class q_function fromStdList(const std.list<T> & list) : QList<T>;
+    public class q_function fromVector(const QVector<T> & vector) : QList<T>;
+    public member q_function front() : T &;
+    public const member q_function front() : const T &;
+    public const member q_function indexOf(const T & value, int from = 0) : int;
+    public member q_function insert(iterator before, const T & value) : iterator;
+    public member q_function insert(int i, const T & value) : void;
+    public const member q_function isEmpty() : bool;
+    public const member q_function last() : const T &;
+    public member q_function last() : T &;
+    public const member q_function lastIndexOf(const T & value, int from = -1) : int;
+    public const member q_function length() : int;
+    public const member q_function mid(int pos, int length = -1) : QList<T>;
+    public member q_function move(int from, int to) : void;
+    public member q_function pop_back() : void;
+    public member q_function pop_front() : void;
+    public member q_function prepend(const T & value) : void;
+    public member q_function push_back(const T & value) : void;
+    public member q_function push_front(const T & value) : void;
+    public member q_function removeAll(const T & value) : int;
+    public member q_function removeAt(int i) : void;
+    public member q_function removeFirst() : void;
+    public member q_function removeLast() : void;
+    public member q_function removeOne(const T & value) : bool;
+    public member q_function replace(int i, const T & value) : void;
+    public member q_function reserve(int alloc) : void;
+    public const member q_function size() : int;
+    public const member q_function startsWith(const T & value) : bool;
+    public member q_function swap(int i, int j) : void;
+    public member q_function takeAt(int i) : T;
+    public member q_function takeFirst() : T;
+    public member q_function takeLast() : T;
+    public const member q_function toSet() : QSet<T>;
+    public const member q_function toStdList() : std.list<T>;
+    public const member q_function toVector() : QVector<T>;
+    public const member q_function value(int i) : T;
+    public const member q_function value(int i, const T & defaultValue) : T;
+
+
+}
+

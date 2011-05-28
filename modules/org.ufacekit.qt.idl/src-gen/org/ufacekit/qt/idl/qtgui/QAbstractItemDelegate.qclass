@@ -1,0 +1,23 @@
+q_class QAbstractItemDelegate extends QObject {
+    q_enumeration EndEditHint {
+        NoHint = 0
+        EditNextItem = 1
+        EditPreviousItem = 2
+        SubmitModelCache = 3
+        RevertModelCache = 4
+    }
+
+
+    public const virtual member q_function createEditor(QWidget * parent, const QStyleOptionViewItem & option, const QModelIndex & index) : QWidget *;
+    public virtual member q_function editorEvent(QEvent * event, QAbstractItemModel * model, const QStyleOptionViewItem & option, const QModelIndex & index) : bool;
+    public class q_function elidedText(const QFontMetrics & fontMetrics, int width, Qt.TextElideMode mode, const QString & text) : QString;
+    public const virtual member q_function setEditorData(QWidget * editor, const QModelIndex & index) : void;
+    public const virtual member q_function setModelData(QWidget * editor, QAbstractItemModel * model, const QModelIndex & index) : void;
+    public const purevirtual member q_function sizeHint(const QStyleOptionViewItem & option, const QModelIndex & index) : QSize;
+    public const virtual member q_function updateEditorGeometry(QWidget * editor, const QStyleOptionViewItem & option, const QModelIndex & index) : void;
+
+
+
+
+}
+

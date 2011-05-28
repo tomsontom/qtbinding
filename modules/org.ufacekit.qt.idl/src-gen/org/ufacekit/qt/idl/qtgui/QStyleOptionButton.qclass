@@ -1,0 +1,24 @@
+q_class QStyleOptionButton extends QStyleOption {
+    q_enumeration ButtonFeature {
+        None = 0
+        Flat = 1
+        HasMenu = 2
+        DefaultButton = 4
+        AutoDefaultButton = 8
+        CommandLinkButton = 16
+    }
+
+    q_flags ButtonFeatures : ButtonFeature;
+
+    q_enumeration StyleOptionType {
+        Type = SO_Button
+    }
+
+    q_enumeration StyleOptionVersion {
+        Version = 1
+    }
+
+
+
+}
+

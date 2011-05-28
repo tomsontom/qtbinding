@@ -1,0 +1,42 @@
+q_class QLocalSocket extends QIODevice {
+    q_enumeration LocalSocketError {
+        ConnectionRefusedError = __UNKNOWN__
+        PeerClosedError = __UNKNOWN__
+        ServerNotFoundError = __UNKNOWN__
+        SocketAccessError = __UNKNOWN__
+        SocketResourceError = __UNKNOWN__
+        SocketTimeoutError = __UNKNOWN__
+        DatagramTooLargeError = __UNKNOWN__
+        ConnectionError = __UNKNOWN__
+        UnsupportedSocketOperationError = __UNKNOWN__
+        UnknownSocketError = __UNKNOWN__
+    }
+
+    q_enumeration LocalSocketState {
+        UnconnectedState = __UNKNOWN__
+        ConnectingState = __UNKNOWN__
+        ConnectedState = __UNKNOWN__
+        ClosingState = __UNKNOWN__
+    }
+
+
+    public member q_function abort() : void;
+    public member q_function disconnectFromServer() : void;
+    public const member q_function error() : LocalSocketError;
+    public member q_function flush() : bool;
+    public const member q_function fullServerName() : QString;
+    public const member q_function isValid() : bool;
+    public const member q_function readBufferSize() : qint64;
+    public const member q_function serverName() : QString;
+    public member q_function setReadBufferSize(qint64 size) : void;
+    public member q_function setSocketDescriptor(quintptr socketDescriptor, LocalSocketState socketState = ConnectedState, OpenMode openMode = ReadWrite) : bool;
+    public const member q_function socketDescriptor() : quintptr;
+    public const member q_function state() : LocalSocketState;
+    public member q_function waitForConnected(int msecs = 30000) : bool;
+    public member q_function waitForDisconnected(int msecs = 30000) : bool;
+    public virtual member q_function waitForReadyRead(int msecs = 30000) : bool;
+
+
+
+}
+

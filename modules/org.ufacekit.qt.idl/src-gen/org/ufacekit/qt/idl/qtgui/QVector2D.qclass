@@ -1,0 +1,17 @@
+q_class QVector2D {
+    public class q_function dotProduct(const QVector2D & v1, const QVector2D & v2) : qreal;
+    public const member q_function length() : qreal;
+    public const member q_function lengthSquared() : qreal;
+    public member q_function normalize() : void;
+    public const member q_function normalized() : QVector2D;
+    public member q_function setX(qreal x) : void;
+    public member q_function setY(qreal y) : void;
+    public const member q_function toPoint() : QPoint;
+    public const member q_function toPointF() : QPointF;
+    public const member q_function toVector4D() : QVector4D;
+    public const member q_function x() : qreal;
+    public const member q_function y() : qreal;
+
+
+}
+

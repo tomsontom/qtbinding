@@ -1,0 +1,7 @@
+q_class QStyleFactory {
+    public class q_function create(const QString & key) : QStyle *;
+    public class q_function keys() : QStringList;
+
+
+}
+

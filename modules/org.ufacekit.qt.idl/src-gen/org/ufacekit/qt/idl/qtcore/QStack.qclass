@@ -1,0 +1,8 @@
+q_class QStack extends QVector<T> {
+    public member q_function pop() : T;
+    public member q_function top() : T &;
+    public const member q_function top() : const T &;
+
+
+}
+

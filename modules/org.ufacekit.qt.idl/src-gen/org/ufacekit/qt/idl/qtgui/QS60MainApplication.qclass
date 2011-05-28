@@ -1,0 +1,9 @@
+q_class QS60MainApplication {
+    public const virtual member q_function AppDllUid() : TUid;
+    public const virtual member q_function ResourceFileName() : TFileName;
+
+    protected virtual member q_function CreateDocumentL() : CApaDocument *;
+
+
+}
+

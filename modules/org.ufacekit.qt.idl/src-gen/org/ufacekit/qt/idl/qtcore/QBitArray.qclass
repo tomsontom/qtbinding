@@ -1,0 +1,24 @@
+q_class QBitArray {
+    q_typedef DataPtr : ___UNKNOWN___;
+
+
+    public const member q_function at(int i) : bool;
+    public member q_function clear() : void;
+    public member q_function clearBit(int i) : void;
+    public const member q_function count() : int;
+    public const member q_function count(bool on) : int;
+    public member q_function fill(bool value, int begin, int end) : void;
+    public member q_function fill(bool value, int size = -1) : bool;
+    public const member q_function isEmpty() : bool;
+    public const member q_function isNull() : bool;
+    public member q_function resize(int size) : void;
+    public member q_function setBit(int i) : void;
+    public member q_function setBit(int i, bool value) : void;
+    public const member q_function size() : int;
+    public const member q_function testBit(int i) : bool;
+    public member q_function toggleBit(int i) : bool;
+    public member q_function truncate(int pos) : void;
+
+
+}
+

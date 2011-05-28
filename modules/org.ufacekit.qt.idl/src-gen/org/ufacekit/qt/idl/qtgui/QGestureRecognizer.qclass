@@ -1,0 +1,24 @@
+q_class QGestureRecognizer {
+    q_enumeration ResultFlag {
+        Ignore = 1
+        MayBeGesture = 2
+        TriggerGesture = 4
+        FinishGesture = 8
+        CancelGesture = 16
+        ResultState_Mask = 255
+        ConsumeEventHint = 256
+        ResultHint_Mask = 65280
+    }
+
+    q_flags Result : ResultFlag;
+
+
+    public virtual member q_function create(QObject * target) : QGesture *;
+    public purevirtual member q_function recognize(QGesture * gesture, QObject * watched, QEvent * event) : Result;
+    public class q_function registerRecognizer(QGestureRecognizer * recognizer) : Qt.GestureType;
+    public virtual member q_function reset(QGesture * gesture) : void;
+    public class q_function unregisterRecognizer(Qt.GestureType type) : void;
+
+
+}
+

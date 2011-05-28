@@ -1,0 +1,7 @@
+q_class QDeclarativeExtensionPlugin extends QObject {
+    public virtual member q_function initializeEngine(QDeclarativeEngine * engine, const char * uri) : void;
+    public purevirtual member q_function registerTypes(const char * uri) : void;
+
+
+}
+

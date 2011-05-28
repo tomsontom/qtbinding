@@ -1,0 +1,37 @@
+q_class QSharedMemory extends QObject {
+    q_enumeration AccessMode {
+        ReadOnly = 0
+        ReadWrite = 1
+    }
+
+    q_enumeration SharedMemoryError {
+        NoError = 0
+        PermissionDenied = 1
+        InvalidSize = 2
+        KeyError = 3
+        AlreadyExists = 4
+        NotFound = 5
+        LockError = 6
+        OutOfResources = 7
+        UnknownError = 8
+    }
+
+
+    public member q_function attach(AccessMode mode = ReadWrite) : bool;
+    public const member q_function constData() : const void *;
+    public member q_function create(int size, AccessMode mode = ReadWrite) : bool;
+    public const member q_function data() : const void *;
+    public member q_function data() : void *;
+    public member q_function detach() : bool;
+    public const member q_function error() : SharedMemoryError;
+    public const member q_function errorString() : QString;
+    public const member q_function isAttached() : bool;
+    public const member q_function key() : QString;
+    public member q_function lock() : bool;
+    public member q_function setKey(const QString & key) : void;
+    public const member q_function size() : int;
+    public member q_function unlock() : bool;
+
+
+}
+

@@ -1,0 +1,35 @@
+q_class QAudioFormat {
+    q_enumeration Endian {
+        BigEndian = __UNKNOWN__
+        LittleEndian = __UNKNOWN__
+    }
+
+    q_enumeration SampleType {
+        Unknown = 0
+        SignedInt = 1
+        UnSignedInt = 2
+        Float = 3
+    }
+
+
+    public const member q_function byteOrder() : QAudioFormat.Endian;
+    public const member q_function channelCount() : int;
+    public const member q_function channels() : int;
+    public const member q_function codec() : QString;
+    public const member q_function frequency() : int;
+    public const member q_function isValid() : bool;
+    public const member q_function sampleRate() : int;
+    public const member q_function sampleSize() : int;
+    public const member q_function sampleType() : QAudioFormat.SampleType;
+    public member q_function setByteOrder(QAudioFormat.Endian byteOrder) : void;
+    public member q_function setChannelCount(int channels) : void;
+    public member q_function setChannels(int channels) : void;
+    public member q_function setCodec(const QString & codec) : void;
+    public member q_function setFrequency(int frequency) : void;
+    public member q_function setSampleRate(int samplerate) : void;
+    public member q_function setSampleSize(int sampleSize) : void;
+    public member q_function setSampleType(QAudioFormat.SampleType sampleType) : void;
+
+
+}
+

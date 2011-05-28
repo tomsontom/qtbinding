@@ -1,0 +1,11 @@
+q_class QDomAttr extends QDomNode {
+    public const member q_function name() : QString;
+    public const member q_function nodeType() : QDomNode.NodeType;
+    public const member q_function ownerElement() : QDomElement;
+    public member q_function setValue(const QString & v) : void;
+    public const member q_function specified() : bool;
+    public const member q_function value() : QString;
+
+
+}
+

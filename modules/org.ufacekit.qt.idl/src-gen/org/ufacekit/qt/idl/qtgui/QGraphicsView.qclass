@@ -1,0 +1,136 @@
+q_class QGraphicsView extends QAbstractScrollArea {
+    q_enumeration CacheModeFlag {
+        CacheNone = 0
+        CacheBackground = 1
+    }
+
+    q_flags CacheMode : CacheModeFlag;
+
+    q_enumeration DragMode {
+        NoDrag = 0
+        ScrollHandDrag = 1
+        RubberBandDrag = 2
+    }
+
+    q_enumeration OptimizationFlag {
+        DontClipPainter = 1
+        DontSavePainterState = 2
+        DontAdjustForAntialiasing = 4
+        IndirectPainting = 8
+    }
+
+    q_flags OptimizationFlags : OptimizationFlag;
+
+    q_enumeration ViewportAnchor {
+        NoAnchor = 0
+        AnchorViewCenter = 1
+        AnchorUnderMouse = 2
+    }
+
+    q_enumeration ViewportUpdateMode {
+        FullViewportUpdate = 0
+        MinimalViewportUpdate = 1
+        SmartViewportUpdate = 2
+        NoViewportUpdate = 3
+        BoundingRectViewportUpdate = 4
+    }
+
+
+    q_property Qt.Alignment alignment;
+    q_property QBrush backgroundBrush;
+    q_property CacheMode cacheMode;
+    q_property DragMode dragMode;
+    q_property QBrush foregroundBrush;
+    q_property bool interactive;
+    q_property OptimizationFlags optimizationFlags;
+    q_property QPainter.RenderHints renderHints;
+    q_property ViewportAnchor resizeAnchor;
+    q_property Qt.ItemSelectionMode rubberBandSelectionMode;
+    q_property QRectF sceneRect;
+    q_property ViewportAnchor transformationAnchor;
+    q_property ViewportUpdateMode viewportUpdateMode;
+
+    public const member q_function alignment() : Qt.Alignment;
+    public const member q_function backgroundBrush() : QBrush;
+    public const member q_function cacheMode() : CacheMode;
+    public member q_function centerOn(qreal x, qreal y) : void;
+    public member q_function centerOn(const QGraphicsItem * item) : void;
+    public member q_function centerOn(const QPointF & pos) : void;
+    public const member q_function dragMode() : DragMode;
+    public member q_function ensureVisible(qreal x, qreal y, qreal w, qreal h, int xmargin = 50, int ymargin = 50) : void;
+    public member q_function ensureVisible(const QRectF & rect, int xmargin = 50, int ymargin = 50) : void;
+    public member q_function ensureVisible(const QGraphicsItem * item, int xmargin = 50, int ymargin = 50) : void;
+    public member q_function fitInView(qreal x, qreal y, qreal w, qreal h, Qt.AspectRatioMode aspectRatioMode = Qt.IgnoreAspectRatio) : void;
+    public member q_function fitInView(const QGraphicsItem * item, Qt.AspectRatioMode aspectRatioMode = Qt.IgnoreAspectRatio) : void;
+    public member q_function fitInView(const QRectF & rect, Qt.AspectRatioMode aspectRatioMode = Qt.IgnoreAspectRatio) : void;
+    public const member q_function foregroundBrush() : QBrush;
+    public const member q_function isInteractive() : bool;
+    public const member q_function isTransformed() : bool;
+    public const member q_function itemAt(const QPoint & pos) : QGraphicsItem *;
+    public const member q_function itemAt(int x, int y) : QGraphicsItem *;
+    public const member q_function items(const QRect & rect, Qt.ItemSelectionMode mode = Qt.IntersectsItemShape) : QList<QGraphicsItem *>;
+    public const member q_function items(int x, int y) : QList<QGraphicsItem *>;
+    public const member q_function items(const QPainterPath & path, Qt.ItemSelectionMode mode = Qt.IntersectsItemShape) : QList<QGraphicsItem *>;
+    public const member q_function items(const QPoint & pos) : QList<QGraphicsItem *>;
+    public const member q_function items() : QList<QGraphicsItem *>;
+    public const member q_function items(const QPolygon & polygon, Qt.ItemSelectionMode mode = Qt.IntersectsItemShape) : QList<QGraphicsItem *>;
+    public const member q_function items(int x, int y, int w, int h, Qt.ItemSelectionMode mode = Qt.IntersectsItemShape) : QList<QGraphicsItem *>;
+    public const member q_function mapFromScene(qreal x, qreal y, qreal w, qreal h) : QPolygon;
+    public const member q_function mapFromScene(const QPolygonF & polygon) : QPolygon;
+    public const member q_function mapFromScene(const QRectF & rect) : QPolygon;
+    public const member q_function mapFromScene(const QPainterPath & path) : QPainterPath;
+    public const member q_function mapFromScene(const QPointF & point) : QPoint;
+    public const member q_function mapFromScene(qreal x, qreal y) : QPoint;
+    public const member q_function mapToScene(const QRect & rect) : QPolygonF;
+    public const member q_function mapToScene(int x, int y) : QPointF;
+    public const member q_function mapToScene(int x, int y, int w, int h) : QPolygonF;
+    public const member q_function mapToScene(const QPainterPath & path) : QPainterPath;
+    public const member q_function mapToScene(const QPolygon & polygon) : QPolygonF;
+    public const member q_function mapToScene(const QPoint & point) : QPointF;
+    public const member q_function matrix() : QMatrix;
+    public const member q_function optimizationFlags() : OptimizationFlags;
+    public member q_function render(QPainter * painter, const QRectF & target = QRectF(), const QRect & source = QRect(), Qt.AspectRatioMode aspectRatioMode = Qt.KeepAspectRatio) : void;
+    public const member q_function renderHints() : QPainter.RenderHints;
+    public member q_function resetCachedContent() : void;
+    public member q_function resetMatrix() : void;
+    public member q_function resetTransform() : void;
+    public const member q_function resizeAnchor() : ViewportAnchor;
+    public member q_function rotate(qreal angle) : void;
+    public const member q_function rubberBandSelectionMode() : Qt.ItemSelectionMode;
+    public member q_function scale(qreal sx, qreal sy) : void;
+    public const member q_function scene() : QGraphicsScene *;
+    public const member q_function sceneRect() : QRectF;
+    public member q_function setAlignment(Qt.Alignment alignment) : void;
+    public member q_function setBackgroundBrush(const QBrush & brush) : void;
+    public member q_function setCacheMode(CacheMode mode) : void;
+    public member q_function setDragMode(DragMode mode) : void;
+    public member q_function setForegroundBrush(const QBrush & brush) : void;
+    public member q_function setInteractive(bool allowed) : void;
+    public member q_function setMatrix(const QMatrix & matrix, bool combine = false) : void;
+    public member q_function setOptimizationFlag(OptimizationFlag flag, bool enabled = true) : void;
+    public member q_function setOptimizationFlags(OptimizationFlags flags) : void;
+    public member q_function setRenderHint(QPainter.RenderHint hint, bool enabled = true) : void;
+    public member q_function setRenderHints(QPainter.RenderHints hints) : void;
+    public member q_function setResizeAnchor(ViewportAnchor anchor) : void;
+    public member q_function setRubberBandSelectionMode(Qt.ItemSelectionMode mode) : void;
+    public member q_function setScene(QGraphicsScene * scene) : void;
+    public member q_function setSceneRect(qreal x, qreal y, qreal w, qreal h) : void;
+    public member q_function setSceneRect(const QRectF & rect) : void;
+    public member q_function setTransform(const QTransform & matrix, bool combine = false) : void;
+    public member q_function setTransformationAnchor(ViewportAnchor anchor) : void;
+    public member q_function setViewportUpdateMode(ViewportUpdateMode mode) : void;
+    public member q_function shear(qreal sh, qreal sv) : void;
+    public const member q_function transform() : QTransform;
+    public const member q_function transformationAnchor() : ViewportAnchor;
+    public member q_function translate(qreal dx, qreal dy) : void;
+    public const member q_function viewportTransform() : QTransform;
+    public const member q_function viewportUpdateMode() : ViewportUpdateMode;
+
+    protected virtual member q_function drawBackground(QPainter * painter, const QRectF & rect) : void;
+    protected virtual member q_function drawForeground(QPainter * painter, const QRectF & rect) : void;
+    protected virtual member q_function drawItems(QPainter * painter, int numItems, QGraphicsItem *[] items, const QStyleOptionGraphicsItem[] options) : void;
+
+
+
+}
+

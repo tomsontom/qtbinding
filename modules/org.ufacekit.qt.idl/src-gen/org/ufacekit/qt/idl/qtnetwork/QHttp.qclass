@@ -1,0 +1,62 @@
+q_class QHttp extends QObject {
+    q_enumeration ConnectionMode {
+        ConnectionModeHttp = 0
+        ConnectionModeHttps = 1
+    }
+
+    q_enumeration Error {
+        NoError = 0
+        UnknownError = 1
+        HostNotFound = 2
+        ConnectionRefused = 3
+        UnexpectedClose = 4
+        InvalidResponseHeader = 5
+        WrongContentLength = 6
+        Aborted = 7
+        AuthenticationRequiredError = 8
+        ProxyAuthenticationRequiredError = 9
+    }
+
+    q_enumeration State {
+        Unconnected = 0
+        HostLookup = 1
+        Connecting = 2
+        Sending = 3
+        Reading = 4
+        Connected = 5
+        Closing = 6
+    }
+
+
+    public const member q_function bytesAvailable() : qint64;
+    public member q_function clearPendingRequests() : void;
+    public member q_function close() : int;
+    public member q_function closeConnection() : int;
+    public const member q_function currentDestinationDevice() : QIODevice *;
+    public const member q_function currentId() : int;
+    public const member q_function currentRequest() : QHttpRequestHeader;
+    public const member q_function currentSourceDevice() : QIODevice *;
+    public const member q_function error() : Error;
+    public const member q_function errorString() : QString;
+    public member q_function get(const QString & path, QIODevice * to = 0) : int;
+    public const member q_function hasPendingRequests() : bool;
+    public member q_function head(const QString & path) : int;
+    public const member q_function lastResponse() : QHttpResponseHeader;
+    public member q_function post(const QString & path, const QByteArray & data, QIODevice * to = 0) : int;
+    public member q_function post(const QString & path, QIODevice * data, QIODevice * to = 0) : int;
+    public member q_function read(char * data, qint64 maxlen) : qint64;
+    public member q_function request(const QHttpRequestHeader & header, const QByteArray & data, QIODevice * to = 0) : int;
+    public member q_function request(const QHttpRequestHeader & header, QIODevice * data = 0, QIODevice * to = 0) : int;
+    public member q_function setHost(const QString & hostName, ConnectionMode mode, quint16 port = 0) : int;
+    public member q_function setHost(const QString & hostName, quint16 port = 80) : int;
+    public member q_function setProxy(const QString & host, int port, const QString & username = QString(), const QString & password = QString()) : int;
+    public member q_function setProxy(const QNetworkProxy & proxy) : int;
+    public member q_function setSocket(QTcpSocket * socket) : int;
+    public member q_function setUser(const QString & userName, const QString & password = QString()) : int;
+    public const member q_function state() : State;
+
+
+
+
+}
+

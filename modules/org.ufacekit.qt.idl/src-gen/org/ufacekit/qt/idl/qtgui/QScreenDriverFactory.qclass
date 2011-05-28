@@ -1,0 +1,7 @@
+q_class QScreenDriverFactory {
+    public class q_function create(const QString & key, int displayId) : QScreen *;
+    public class q_function keys() : QStringList;
+
+
+}
+

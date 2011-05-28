@@ -1,0 +1,13 @@
+q_class QWebDatabase {
+    public const member q_function displayName() : QString;
+    public const member q_function expectedSize() : qint64;
+    public const member q_function fileName() : QString;
+    public const member q_function name() : QString;
+    public const member q_function origin() : QWebSecurityOrigin;
+    public class q_function removeAllDatabases() : void;
+    public class q_function removeDatabase(const QWebDatabase & db) : void;
+    public const member q_function size() : qint64;
+
+
+}
+

@@ -1,0 +1,7 @@
+q_class QDBusVariant extends QVariant {
+    public member q_function setVariant(const QVariant & variant) : void;
+    public const member q_function variant() : QVariant;
+
+
+}
+

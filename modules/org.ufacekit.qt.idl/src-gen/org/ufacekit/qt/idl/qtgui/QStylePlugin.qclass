@@ -1,0 +1,7 @@
+q_class QStylePlugin extends QObject {
+    public purevirtual member q_function create(const QString & key) : QStyle *;
+    public const purevirtual member q_function keys() : QStringList;
+
+
+}
+

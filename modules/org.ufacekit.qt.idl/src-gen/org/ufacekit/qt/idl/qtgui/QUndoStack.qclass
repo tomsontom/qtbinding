@@ -1,0 +1,28 @@
+q_class QUndoStack extends QObject {
+    q_property bool active;
+    q_property int undoLimit;
+
+    public member q_function beginMacro(const QString & text) : void;
+    public const member q_function canRedo() : bool;
+    public const member q_function canUndo() : bool;
+    public const member q_function cleanIndex() : int;
+    public const member q_function command(int index) : const QUndoCommand *;
+    public const member q_function count() : int;
+    public const member q_function createRedoAction(QObject * parent, const QString & prefix = QString()) : QAction *;
+    public const member q_function createUndoAction(QObject * parent, const QString & prefix = QString()) : QAction *;
+    public member q_function endMacro() : void;
+    public const member q_function index() : int;
+    public const member q_function isActive() : bool;
+    public const member q_function isClean() : bool;
+    public member q_function push(QUndoCommand * cmd) : void;
+    public const member q_function redoText() : QString;
+    public member q_function setUndoLimit(int limit) : void;
+    public const member q_function text(int idx) : QString;
+    public const member q_function undoLimit() : int;
+    public const member q_function undoText() : QString;
+
+
+
+
+}
+

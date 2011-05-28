@@ -1,0 +1,20 @@
+q_class QDesignerPropertySheetExtension {
+    public const purevirtual member q_function count() : int;
+    public const purevirtual member q_function hasReset(int index) : bool;
+    public const purevirtual member q_function indexOf(const QString & name) : int;
+    public const purevirtual member q_function isAttribute(int index) : bool;
+    public const purevirtual member q_function isChanged(int index) : bool;
+    public const purevirtual member q_function isVisible(int index) : bool;
+    public const purevirtual member q_function property(int index) : QVariant;
+    public const purevirtual member q_function propertyGroup(int index) : QString;
+    public const purevirtual member q_function propertyName(int index) : QString;
+    public purevirtual member q_function reset(int index) : bool;
+    public purevirtual member q_function setAttribute(int index, bool attribute) : void;
+    public purevirtual member q_function setChanged(int index, bool changed) : void;
+    public purevirtual member q_function setProperty(int index, const QVariant & value) : void;
+    public purevirtual member q_function setPropertyGroup(int index, const QString & group) : void;
+    public purevirtual member q_function setVisible(int index, bool visible) : void;
+
+
+}
+

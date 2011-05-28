@@ -1,0 +1,19 @@
+q_class QTestEventList extends QList<QTestEvent *> {
+    public member q_function addKeyClick(char ascii, Qt.KeyboardModifiers modifiers = Qt.NoModifier, int msecs = -1) : void;
+    public member q_function addKeyClick(Qt.Key qtKey, Qt.KeyboardModifiers modifiers = Qt.NoModifier, int msecs = -1) : void;
+    public member q_function addKeyClicks(const QString & keys, Qt.KeyboardModifiers modifiers = Qt.NoModifier, int msecs = -1) : void;
+    public member q_function addKeyPress(Qt.Key qtKey, Qt.KeyboardModifiers modifiers = Qt.NoModifier, int msecs = -1) : void;
+    public member q_function addKeyPress(char ascii, Qt.KeyboardModifiers modifiers = Qt.NoModifier, int msecs = -1) : void;
+    public member q_function addKeyRelease(char ascii, Qt.KeyboardModifiers modifiers = Qt.NoModifier, int msecs = -1) : void;
+    public member q_function addKeyRelease(Qt.Key qtKey, Qt.KeyboardModifiers modifiers = Qt.NoModifier, int msecs = -1) : void;
+    public member q_function addMouseClick(Qt.MouseButton button, Qt.KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay = -1) : void;
+    public member q_function addMouseDClick(Qt.MouseButton button, Qt.KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay = -1) : void;
+    public member q_function addMouseMove(QPoint pos = QPoint(), int delay = -1) : void;
+    public member q_function addMousePress(Qt.MouseButton button, Qt.KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay = -1) : void;
+    public member q_function addMouseRelease(Qt.MouseButton button, Qt.KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay = -1) : void;
+    public member q_function clear() : void;
+    public member q_function simulate(QWidget * w) : void;
+
+
+}
+

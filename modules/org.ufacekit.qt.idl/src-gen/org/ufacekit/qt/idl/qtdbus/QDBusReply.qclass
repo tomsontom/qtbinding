@@ -1,0 +1,11 @@
+q_class QDBusReply {
+    q_typedef Type : ___UNKNOWN___;
+
+
+    public member q_function error() : const QDBusError &;
+    public const member q_function isValid() : bool;
+    public const member q_function value() : Type;
+
+
+}
+

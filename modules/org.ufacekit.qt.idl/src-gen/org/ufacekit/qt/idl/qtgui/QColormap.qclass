@@ -1,0 +1,19 @@
+q_class QColormap {
+    q_enumeration Mode {
+        Direct = 0
+        Indexed = 1
+        Gray = 2
+    }
+
+
+    public const member q_function colorAt(uint pixel) : const QColor;
+    public const member q_function colormap() : const QVector<QColor>;
+    public const member q_function depth() : int;
+    public class q_function instance(int screen = -1) : QColormap;
+    public const member q_function mode() : Mode;
+    public const member q_function pixel(const QColor & color) : uint;
+    public const member q_function size() : int;
+
+
+}
+

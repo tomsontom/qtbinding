@@ -1,0 +1,7 @@
+q_class QFocusEvent extends QEvent {
+    public const member q_function lostFocus() : bool;
+    public const member q_function reason() : Qt.FocusReason;
+
+
+}
+

@@ -1,0 +1,25 @@
+q_class QInputMethodEvent extends QEvent {
+    q_enumeration AttributeType {
+        TextFormat = 0
+        Cursor = 1
+        Language = 2
+        Ruby = 3
+        Selection = 4
+    }
+
+
+    q_class Attribute {
+
+    }
+
+
+    public const member q_function attributes() : const QList<Attribute> &;
+    public const member q_function commitString() : const QString &;
+    public const member q_function preeditString() : const QString &;
+    public const member q_function replacementLength() : int;
+    public const member q_function replacementStart() : int;
+    public member q_function setCommitString(const QString & commitString, int replaceFrom = 0, int replaceLength = 0) : void;
+
+
+}
+

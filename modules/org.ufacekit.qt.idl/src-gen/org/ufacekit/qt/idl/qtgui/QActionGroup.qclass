@@ -1,0 +1,20 @@
+q_class QActionGroup extends QObject {
+    q_property bool enabled;
+    q_property bool exclusive;
+    q_property bool visible;
+
+    public const member q_function actions() : QList<QAction *>;
+    public member q_function addAction(QAction * action) : QAction *;
+    public member q_function addAction(const QIcon & icon, const QString & text) : QAction *;
+    public member q_function addAction(const QString & text) : QAction *;
+    public const member q_function checkedAction() : QAction *;
+    public const member q_function isEnabled() : bool;
+    public const member q_function isExclusive() : bool;
+    public const member q_function isVisible() : bool;
+    public member q_function removeAction(QAction * action) : void;
+
+
+
+
+}
+

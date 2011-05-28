@@ -1,0 +1,7 @@
+q_class QProxyScreenCursor extends QScreenCursor {
+    public const member q_function screenCursor() : QScreenCursor *;
+    public member q_function setScreenCursor(QScreenCursor * cursor) : void;
+
+
+}
+

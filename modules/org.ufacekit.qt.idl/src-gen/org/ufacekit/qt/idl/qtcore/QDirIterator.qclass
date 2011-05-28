@@ -1,0 +1,19 @@
+q_class QDirIterator {
+    q_enumeration IteratorFlag {
+        NoIteratorFlags = 0
+        FollowSymlinks = 1
+        Subdirectories = 2
+    }
+
+    q_flags IteratorFlags : IteratorFlag;
+
+
+    public const member q_function fileInfo() : QFileInfo;
+    public const member q_function fileName() : QString;
+    public const member q_function filePath() : QString;
+    public const member q_function hasNext() : bool;
+    public const member q_function path() : QString;
+
+
+}
+

@@ -1,0 +1,19 @@
+q_class QStyleHintReturn {
+    q_enumeration HintReturnType {
+        SH_Default = 61440
+        SH_Mask = __UNKNOWN__
+        SH_Variant = __UNKNOWN__
+    }
+
+    q_enumeration StyleOptionType {
+        Type = SH_Default
+    }
+
+    q_enumeration StyleOptionVersion {
+        Version = 1
+    }
+
+
+
+}
+

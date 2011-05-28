@@ -1,0 +1,28 @@
+q_class QStringRef {
+    public const member q_function appendTo(QString * string) : QStringRef;
+    public const member q_function at(int position) : const QChar;
+    public member q_function clear() : void;
+    public const member q_function compare(const QString & other, Qt.CaseSensitivity cs = Qt.CaseSensitive) : int;
+    public const member q_function compare(const QStringRef & other, Qt.CaseSensitivity cs = Qt.CaseSensitive) : int;
+    public class q_function compare(const QStringRef & s1, const QString & s2, Qt.CaseSensitivity cs = Qt.CaseSensitive) : int;
+    public const member q_function compare(QLatin1String other, Qt.CaseSensitivity cs = Qt.CaseSensitive) : int;
+    public class q_function compare(const QStringRef & s1, const QStringRef & s2, Qt.CaseSensitivity cs = Qt.CaseSensitive) : int;
+    public class q_function compare(const QStringRef & s1, QLatin1String s2, Qt.CaseSensitivity cs = Qt.CaseSensitive) : int;
+    public const member q_function constData() : const QChar *;
+    public const member q_function count() : int;
+    public const member q_function data() : const QChar *;
+    public const member q_function isEmpty() : bool;
+    public const member q_function isNull() : bool;
+    public const member q_function length() : int;
+    public const member q_function localeAwareCompare(const QStringRef & other) : int;
+    public class q_function localeAwareCompare(const QStringRef & s1, const QStringRef & s2) : int;
+    public class q_function localeAwareCompare(const QStringRef & s1, const QString & s2) : int;
+    public const member q_function localeAwareCompare(const QString & other) : int;
+    public const member q_function position() : int;
+    public const member q_function size() : int;
+    public const member q_function toString() : QString;
+    public const member q_function unicode() : const QChar *;
+
+
+}
+

@@ -1,0 +1,105 @@
+q_class QWizard extends QDialog {
+    q_enumeration WizardButton {
+        BackButton = 0
+        NextButton = 1
+        CommitButton = 2
+        FinishButton = 3
+        CancelButton = 4
+        HelpButton = 5
+        CustomButton1 = 6
+        CustomButton2 = 7
+        CustomButton3 = 8
+        Stretch = 9
+        NoButton = -1
+        NStandardButtons = 6
+        NButtons = 9
+    }
+
+    q_enumeration WizardOption {
+        IndependentPages = 1
+        IgnoreSubTitles = 2
+        ExtendedWatermarkPixmap = 4
+        NoDefaultButton = 8
+        NoBackButtonOnStartPage = 16
+        NoBackButtonOnLastPage = 32
+        DisabledBackButtonOnLastPage = 64
+        HaveNextButtonOnLastPage = 128
+        HaveFinishButtonOnEarlyPages = 256
+        NoCancelButton = 512
+        CancelButtonOnLeft = 1024
+        HaveHelpButton = 2048
+        HelpButtonOnRight = 4096
+        HaveCustomButton1 = 8192
+        HaveCustomButton2 = 16384
+        HaveCustomButton3 = 32768
+    }
+
+    q_flags WizardOptions : WizardOption;
+
+    q_enumeration WizardPixmap {
+        WatermarkPixmap = 0
+        LogoPixmap = 1
+        BannerPixmap = 2
+        BackgroundPixmap = 3
+        NPixmaps = 4
+    }
+
+    q_enumeration WizardStyle {
+        ClassicStyle = 0
+        ModernStyle = 1
+        MacStyle = 2
+        AeroStyle = 3
+        NStyles = 4
+    }
+
+
+    q_property const int currentId;
+    q_property WizardOptions options;
+    q_property int startId;
+    q_property Qt.TextFormat subTitleFormat;
+    q_property Qt.TextFormat titleFormat;
+    q_property WizardStyle wizardStyle;
+
+    public const member q_function button(WizardButton which) : QAbstractButton *;
+    public const member q_function buttonText(WizardButton which) : QString;
+    public const member q_function currentId() : int;
+    public const member q_function currentPage() : QWizardPage *;
+    public const member q_function field(const QString & name) : QVariant;
+    public const member q_function hasVisitedPage(int id) : bool;
+    public const virtual member q_function nextId() : int;
+    public const member q_function options() : WizardOptions;
+    public const member q_function page(int id) : QWizardPage *;
+    public const member q_function pageIds() : QList<int>;
+    public const member q_function pixmap(WizardPixmap which) : QPixmap;
+    public member q_function removePage(int id) : void;
+    public member q_function setButton(WizardButton which, QAbstractButton * button) : void;
+    public member q_function setButtonLayout(const QList<WizardButton> & layout) : void;
+    public member q_function setButtonText(WizardButton which, const QString & text) : void;
+    public member q_function setDefaultProperty(const char * className, const char * property, const char * changedSignal) : void;
+    public member q_function setField(const QString & name, const QVariant & value) : void;
+    public member q_function setOption(WizardOption option, bool on = true) : void;
+    public member q_function setOptions(WizardOptions options) : void;
+    public member q_function setPage(int id, QWizardPage * page) : void;
+    public member q_function setPixmap(WizardPixmap which, const QPixmap & pixmap) : void;
+    public member q_function setSideWidget(QWidget * widget) : void;
+    public member q_function setStartId(int id) : void;
+    public member q_function setSubTitleFormat(Qt.TextFormat format) : void;
+    public member q_function setTitleFormat(Qt.TextFormat format) : void;
+    public member q_function setWizardStyle(WizardStyle style) : void;
+    public const member q_function sideWidget() : QWidget *;
+    public const member q_function startId() : int;
+    public const member q_function subTitleFormat() : Qt.TextFormat;
+    public const member q_function testOption(WizardOption option) : bool;
+    public const member q_function titleFormat() : Qt.TextFormat;
+    public virtual member q_function validateCurrentPage() : bool;
+    public const member q_function visitedPages() : QList<int>;
+    public const member q_function wizardStyle() : WizardStyle;
+
+    protected virtual member q_function cleanupPage(int id) : void;
+    protected virtual member q_function initializePage(int id) : void;
+
+
+
+
+}
+

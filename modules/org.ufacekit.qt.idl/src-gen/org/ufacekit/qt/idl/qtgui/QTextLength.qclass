@@ -1,0 +1,15 @@
+q_class QTextLength {
+    q_enumeration Type {
+        VariableLength = 0
+        FixedLength = 1
+        PercentageLength = 2
+    }
+
+
+    public const member q_function rawValue() : qreal;
+    public const member q_function type() : Type;
+    public const member q_function value(qreal maximumLength) : qreal;
+
+
+}
+

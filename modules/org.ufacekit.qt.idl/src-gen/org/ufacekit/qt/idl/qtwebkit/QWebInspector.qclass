@@ -1,0 +1,7 @@
+q_class QWebInspector extends QWidget {
+    public const member q_function page() : QWebPage *;
+    public member q_function setPage(QWebPage * page) : void;
+
+
+}
+

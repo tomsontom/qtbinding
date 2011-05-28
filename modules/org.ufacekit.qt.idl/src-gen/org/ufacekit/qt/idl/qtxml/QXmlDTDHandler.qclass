@@ -1,0 +1,8 @@
+q_class QXmlDTDHandler {
+    public const purevirtual member q_function errorString() : QString;
+    public purevirtual member q_function notationDecl(const QString & name, const QString & publicId, const QString & systemId) : bool;
+    public purevirtual member q_function unparsedEntityDecl(const QString & name, const QString & publicId, const QString & systemId, const QString & notationName) : bool;
+
+
+}
+

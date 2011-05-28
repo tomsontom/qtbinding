@@ -1,0 +1,7 @@
+q_class QGraphicsPathItem extends QAbstractGraphicsShapeItem {
+    public const member q_function path() : QPainterPath;
+    public member q_function setPath(const QPainterPath & path) : void;
+
+
+}
+

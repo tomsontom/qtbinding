@@ -1,0 +1,24 @@
+q_class QGLShader extends QObject {
+    q_enumeration ShaderTypeBit {
+        Vertex = 1
+        Fragment = 2
+        Geometry = 4
+    }
+
+    q_flags ShaderType : ShaderTypeBit;
+
+
+    public member q_function compileSourceCode(const QString & source) : bool;
+    public member q_function compileSourceCode(const char * source) : bool;
+    public member q_function compileSourceCode(const QByteArray & source) : bool;
+    public member q_function compileSourceFile(const QString & fileName) : bool;
+    public class q_function hasOpenGLShaders(ShaderType type, const QGLContext * context = 0) : bool;
+    public const member q_function isCompiled() : bool;
+    public const member q_function log() : QString;
+    public const member q_function shaderId() : GLuint;
+    public const member q_function shaderType() : QGLShader.ShaderType;
+    public const member q_function sourceCode() : QByteArray;
+
+
+}
+

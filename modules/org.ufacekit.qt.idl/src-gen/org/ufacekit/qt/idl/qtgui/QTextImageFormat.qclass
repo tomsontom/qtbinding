@@ -1,0 +1,12 @@
+q_class QTextImageFormat extends QTextCharFormat {
+    public const member q_function height() : qreal;
+    public const member q_function isValid() : bool;
+    public const member q_function name() : QString;
+    public member q_function setHeight(qreal height) : void;
+    public member q_function setName(const QString & name) : void;
+    public member q_function setWidth(qreal width) : void;
+    public const member q_function width() : qreal;
+
+
+}
+

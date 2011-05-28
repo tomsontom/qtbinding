@@ -1,0 +1,66 @@
+q_class QDBusConnection {
+    q_enumeration BusType {
+        SessionBus = 0
+        SystemBus = 1
+        ActivationBus = 2
+    }
+
+    q_enumeration RegisterOption {
+        ExportAdaptors = 1
+        ExportScriptableSlots = 16
+        ExportScriptableSignals = 32
+        ExportScriptableProperties = 64
+        ExportScriptableInvokables = 128
+        ExportScriptableContents = 240
+        ExportNonScriptableSlots = 256
+        ExportNonScriptableSignals = 512
+        ExportNonScriptableProperties = 1024
+        ExportNonScriptableInvokables = 2048
+        ExportNonScriptableContents = 3840
+        ExportAllSlots = ExportScriptableSlots  |  ExportNonScriptableSlots
+        ExportAllSignals = ExportScriptableSignals  |  ExportNonScriptableSignals
+        ExportAllProperties = ExportScriptableProperties  |  ExportNonScriptableProperties
+        ExportAllInvokables = ExportScriptableInvokables  |  ExportNonScriptableInvokables
+        ExportAllContents = ExportScriptableContents  |  ExportNonScriptableContents
+        ExportChildObjects = 4096
+    }
+
+    q_flags RegisterOptions : RegisterOption;
+
+    q_enumeration UnregisterMode {
+        UnregisterNode = 0
+        UnregisterTree = 1
+    }
+
+
+    public const member q_function asyncCall(const QDBusMessage & message, int timeout = -1) : QDBusPendingCall;
+    public const member q_function baseService() : QString;
+    public const member q_function call(const QDBusMessage & message, QDBus.CallMode mode = QDBus.Block, int timeout = -1) : QDBusMessage;
+    public const member q_function callWithCallback(const QDBusMessage & message, QObject * receiver, const char * returnMethod, int timeout = -1) : bool;
+    public const member q_function callWithCallback(const QDBusMessage & message, QObject * receiver, const char * returnMethod, const char * errorMethod, int timeout = -1) : bool;
+    public member q_function connect(const QString & service, const QString & path, const QString & interface, const QString & name, QObject * receiver, const char * slot) : bool;
+    public member q_function connect(const QString & service, const QString & path, const QString & interface, const QString & name, const QString & signature, QObject * receiver, const char * slot) : bool;
+    public member q_function connect(const QString & service, const QString & path, const QString & interface, const QString & name, const QStringList & argumentMatch, const QString & signature, QObject * receiver, const char * slot) : bool;
+    public class q_function connectToBus(BusType type, const QString & name) : QDBusConnection;
+    public class q_function connectToBus(const QString & address, const QString & name) : QDBusConnection;
+    public member q_function disconnect(const QString & service, const QString & path, const QString & interface, const QString & name, const QStringList & argumentMatch, const QString & signature, QObject * receiver, const char * slot) : bool;
+    public member q_function disconnect(const QString & service, const QString & path, const QString & interface, const QString & name, QObject * receiver, const char * slot) : bool;
+    public member q_function disconnect(const QString & service, const QString & path, const QString & interface, const QString & name, const QString & signature, QObject * receiver, const char * slot) : bool;
+    public class q_function disconnectFromBus(const QString & name) : void;
+    public const member q_function interface() : QDBusConnectionInterface *;
+    public const member q_function isConnected() : bool;
+    public const member q_function lastError() : QDBusError;
+    public const member q_function name() : QString;
+    public const member q_function objectRegisteredAt(const QString & path) : QObject *;
+    public member q_function registerObject(const QString & path, QObject * object, RegisterOptions options = ExportAdaptors) : bool;
+    public member q_function registerService(const QString & serviceName) : bool;
+    public const member q_function send(const QDBusMessage & message) : bool;
+    public class q_function sender() : QDBusConnection;
+    public class q_function sessionBus() : QDBusConnection;
+    public class q_function systemBus() : QDBusConnection;
+    public member q_function unregisterObject(const QString & path, UnregisterMode mode = UnregisterNode) : void;
+    public member q_function unregisterService(const QString & serviceName) : bool;
+
+
+}
+

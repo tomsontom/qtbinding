@@ -1,0 +1,9 @@
+q_class QSqlRelationalTableModel extends QSqlTableModel {
+    public const member q_function relation(int column) : QSqlRelation;
+    public const virtual member q_function relationModel(int column) : QSqlTableModel *;
+    public virtual member q_function setData(const QModelIndex & index, const QVariant & value, int role = Qt.EditRole) : bool;
+    public virtual member q_function setRelation(int column, const QSqlRelation & relation) : void;
+
+
+}
+

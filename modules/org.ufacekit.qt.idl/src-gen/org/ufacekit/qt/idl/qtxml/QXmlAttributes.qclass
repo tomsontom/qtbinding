@@ -1,0 +1,29 @@
+q_class QXmlAttributes {
+    q_typedef AttributeList : ___UNKNOWN___;
+
+
+    q_class Attribute {
+
+    }
+
+
+    public member q_function append(const QString & qName, const QString & uri, const QString & localPart, const QString & value) : void;
+    public member q_function clear() : void;
+    public const member q_function count() : int;
+    public const member q_function index(const QString & uri, const QString & localPart) : int;
+    public const member q_function index(const QLatin1String & qName) : int;
+    public const member q_function length() : int;
+    public const member q_function localName(int index) : QString;
+    public const member q_function qName(int index) : QString;
+    public const member q_function type(int index) : QString;
+    public const member q_function type(const QString & uri, const QString & localName) : QString;
+    public const member q_function type(const QString & qName) : QString;
+    public const member q_function uri(int index) : QString;
+    public const member q_function value(const QLatin1String & qName) : QString;
+    public const member q_function value(const QString & qName) : QString;
+    public const member q_function value(const QString & uri, const QString & localName) : QString;
+    public const member q_function value(int index) : QString;
+
+
+}
+

@@ -1,0 +1,9 @@
+q_class QPictureFormatPlugin extends QObject {
+    public purevirtual member q_function installIOHandler(const QString & format) : bool;
+    public const purevirtual member q_function keys() : QStringList;
+    public virtual member q_function loadPicture(const QString & format, const QString & fileName, QPicture * picture) : bool;
+    public virtual member q_function savePicture(const QString & format, const QString & fileName, const QPicture & picture) : bool;
+
+
+}
+

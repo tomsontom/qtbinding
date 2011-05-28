@@ -1,0 +1,26 @@
+q_class QDBusConnectionInterface extends QDBusAbstractInterface {
+    q_enumeration RegisterServiceReply {
+        ServiceNotRegistered = 0
+        ServiceRegistered = 1
+        ServiceQueued = 2
+    }
+
+    q_enumeration ServiceQueueOptions {
+        DontQueueService = 0
+        QueueService = 1
+        ReplaceExistingService = 2
+    }
+
+    q_enumeration ServiceReplacementOptions {
+        DontAllowReplacement = 0
+        AllowReplacement = 1
+    }
+
+
+    q_property const QDBusReply<QStringList> registeredServiceNames;
+
+
+
+
+}
+

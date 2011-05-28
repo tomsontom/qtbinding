@@ -1,0 +1,13 @@
+q_class QStyleOptionTabBarBase extends QStyleOption {
+    q_enumeration StyleOptionType {
+        Type = SO_TabBarBase
+    }
+
+    q_enumeration StyleOptionVersion {
+        Version = 1
+    }
+
+
+
+}
+

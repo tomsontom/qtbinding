@@ -1,0 +1,7 @@
+q_class QDeclarativeParserStatus {
+    public purevirtual member q_function classBegin() : void;
+    public purevirtual member q_function componentComplete() : void;
+
+
+}
+

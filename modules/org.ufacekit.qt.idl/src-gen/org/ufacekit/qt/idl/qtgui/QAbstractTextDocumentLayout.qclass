@@ -1,0 +1,33 @@
+q_class QAbstractTextDocumentLayout extends QObject {
+    q_class PaintContext {
+
+    }
+
+    q_class Selection {
+
+    }
+
+
+    public const member q_function anchorAt(const QPointF & position) : QString;
+    public const purevirtual member q_function blockBoundingRect(const QTextBlock & block) : QRectF;
+    public const member q_function document() : QTextDocument *;
+    public const purevirtual member q_function documentSize() : QSizeF;
+    public purevirtual member q_function draw(QPainter * painter, const PaintContext & context) : void;
+    public const purevirtual member q_function frameBoundingRect(QTextFrame * frame) : QRectF;
+    public const member q_function handlerForObject(int objectType) : QTextObjectInterface *;
+    public const purevirtual member q_function hitTest(const QPointF & point, Qt.HitTestAccuracy accuracy) : int;
+    public const purevirtual member q_function pageCount() : int;
+    public const member q_function paintDevice() : QPaintDevice *;
+    public member q_function registerHandler(int objectType, QObject * component) : void;
+    public member q_function setPaintDevice(QPaintDevice * device) : void;
+
+    protected purevirtual member q_function documentChanged(int position, int charsRemoved, int charsAdded) : void;
+    protected virtual member q_function drawInlineObject(QPainter * painter, const QRectF & rect, QTextInlineObject object, int posInDocument, const QTextFormat & format) : void;
+    protected member q_function format(int position) : QTextCharFormat;
+    protected virtual member q_function positionInlineObject(QTextInlineObject item, int posInDocument, const QTextFormat & format) : void;
+    protected virtual member q_function resizeInlineObject(QTextInlineObject item, int posInDocument, const QTextFormat & format) : void;
+
+
+
+}
+

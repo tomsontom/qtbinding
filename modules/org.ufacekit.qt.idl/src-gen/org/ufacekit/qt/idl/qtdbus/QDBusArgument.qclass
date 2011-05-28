@@ -1,0 +1,35 @@
+q_class QDBusArgument {
+    q_enumeration ElementType {
+        BasicType = 0
+        VariantType = 1
+        ArrayType = 2
+        StructureType = 3
+        MapType = 4
+        MapEntryType = 5
+        UnknownType = -1
+    }
+
+
+    public const member q_function asVariant() : QVariant;
+    public const member q_function atEnd() : bool;
+    public member q_function beginArray(int id) : void;
+    public const member q_function beginArray() : void;
+    public const member q_function beginMap() : void;
+    public member q_function beginMap(int kid, int vid) : void;
+    public const member q_function beginMapEntry() : void;
+    public member q_function beginMapEntry() : void;
+    public const member q_function beginStructure() : void;
+    public member q_function beginStructure() : void;
+    public const member q_function currentType() : ElementType;
+    public member q_function endArray() : void;
+    public const member q_function endArray() : void;
+    public const member q_function endMap() : void;
+    public member q_function endMap() : void;
+    public const member q_function endMapEntry() : void;
+    public member q_function endMapEntry() : void;
+    public const member q_function endStructure() : void;
+    public member q_function endStructure() : void;
+
+
+}
+

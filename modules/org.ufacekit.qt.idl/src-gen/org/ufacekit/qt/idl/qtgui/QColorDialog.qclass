@@ -1,0 +1,37 @@
+q_class QColorDialog extends QDialog {
+    q_enumeration ColorDialogOption {
+        ShowAlphaChannel = 1
+        NoButtons = 2
+        DontUseNativeDialog = 4
+    }
+
+    q_flags ColorDialogOptions : ColorDialogOption;
+
+
+    q_property QColor currentColor;
+    q_property ColorDialogOptions options;
+
+    public const member q_function currentColor() : QColor;
+    public class q_function customColor(int index) : QRgb;
+    public class q_function customCount() : int;
+    public class q_function getColor(const QColor & initial, QWidget * parent, const QString & title, ColorDialogOptions options = 0) : QColor;
+    public class q_function getColor(const QColor & initial = Qt.white, QWidget * parent = 0) : QColor;
+    public class q_function getRgba(QRgb initial = 0xffffffff, bool * ok = 0, QWidget * parent = 0) : QRgb;
+    public member q_function open(QObject * receiver, const char * member) : void;
+    public member q_function open() : void;
+    public const member q_function options() : ColorDialogOptions;
+    public const member q_function selectedColor() : QColor;
+    public member q_function setCurrentColor(const QColor & color) : void;
+    public class q_function setCustomColor(int index, QRgb color) : void;
+    public member q_function setOption(ColorDialogOption option, bool on = true) : void;
+    public member q_function setOptions(ColorDialogOptions options) : void;
+    public class q_function setStandardColor(int index, QRgb color) : void;
+    public virtual member q_function setVisible(bool visible) : void;
+    public const member q_function testOption(ColorDialogOption option) : bool;
+
+    protected virtual member q_function done(int result) : void;
+
+
+
+}
+

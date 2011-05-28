@@ -1,0 +1,8 @@
+q_class QBasicTimer {
+    public member q_function start(int msec, QObject * object) : void;
+    public member q_function stop() : void;
+    public const member q_function timerId() : int;
+
+
+}
+

@@ -1,0 +1,101 @@
+q_class QAction extends QObject {
+    q_enumeration ActionEvent {
+        Trigger = 0
+        Hover = 1
+    }
+
+    q_enumeration MenuRole {
+        NoRole = 0
+        TextHeuristicRole = 1
+        ApplicationSpecificRole = 2
+        AboutQtRole = 3
+        AboutRole = 4
+        PreferencesRole = 5
+        QuitRole = 6
+    }
+
+    q_enumeration Priority {
+        LowPriority = 0
+        NormalPriority = 128
+        HighPriority = 256
+    }
+
+    q_enumeration SoftKeyRole {
+        NoSoftKey = 0
+        PositiveSoftKey = 1
+        NegativeSoftKey = 2
+        SelectSoftKey = 3
+    }
+
+
+    q_property bool autoRepeat;
+    q_property bool checkable;
+    q_property bool checked;
+    q_property bool enabled;
+    q_property QFont font;
+    q_property QIcon icon;
+    q_property QString iconText;
+    q_property bool iconVisibleInMenu;
+    q_property MenuRole menuRole;
+    q_property Priority priority;
+    q_property QKeySequence shortcut;
+    q_property Qt.ShortcutContext shortcutContext;
+    q_property SoftKeyRole softKeyRole;
+    q_property QString statusTip;
+    q_property QString text;
+    q_property QString toolTip;
+    q_property bool visible;
+    q_property QString whatsThis;
+
+    public const member q_function actionGroup() : QActionGroup *;
+    public member q_function activate(ActionEvent event) : void;
+    public const member q_function associatedGraphicsWidgets() : QList<QGraphicsWidget *>;
+    public const member q_function associatedWidgets() : QList<QWidget *>;
+    public const member q_function autoRepeat() : bool;
+    public const member q_function data() : QVariant;
+    public const member q_function font() : QFont;
+    public const member q_function icon() : QIcon;
+    public const member q_function iconText() : QString;
+    public const member q_function isCheckable() : bool;
+    public const member q_function isChecked() : bool;
+    public const member q_function isEnabled() : bool;
+    public const member q_function isIconVisibleInMenu() : bool;
+    public const member q_function isSeparator() : bool;
+    public const member q_function menu() : QMenu *;
+    public const member q_function menuRole() : MenuRole;
+    public const member q_function parentWidget() : QWidget *;
+    public const member q_function priority() : Priority;
+    public member q_function setAutoRepeat(bool ) : void;
+    public member q_function setCheckable(bool ) : void;
+    public member q_function setData(const QVariant & userData) : void;
+    public member q_function setFont(const QFont & font) : void;
+    public member q_function setIcon(const QIcon & icon) : void;
+    public member q_function setIconText(const QString & text) : void;
+    public member q_function setIconVisibleInMenu(bool visible) : void;
+    public member q_function setMenu(QMenu * menu) : void;
+    public member q_function setMenuRole(MenuRole menuRole) : void;
+    public member q_function setPriority(Priority priority) : void;
+    public member q_function setSeparator(bool b) : void;
+    public member q_function setShortcutContext(Qt.ShortcutContext context) : void;
+    public member q_function setShortcuts(QKeySequence.StandardKey key) : void;
+    public member q_function setShortcuts(const QList<QKeySequence> & shortcuts) : void;
+    public member q_function setSoftKeyRole(SoftKeyRole softKeyRole) : void;
+    public member q_function setStatusTip(const QString & statusTip) : void;
+    public member q_function setText(const QString & text) : void;
+    public member q_function setToolTip(const QString & tip) : void;
+    public member q_function setWhatsThis(const QString & what) : void;
+    public const member q_function shortcut() : QKeySequence;
+    public const member q_function shortcutContext() : Qt.ShortcutContext;
+    public const member q_function shortcuts() : QList<QKeySequence>;
+    public member q_function showStatusText(QWidget * widget = 0) : bool;
+    public const member q_function softKeyRole() : SoftKeyRole;
+    public const member q_function statusTip() : QString;
+    public const member q_function text() : QString;
+    public const member q_function toolTip() : QString;
+    public const member q_function whatsThis() : QString;
+
+
+
+
+}
+

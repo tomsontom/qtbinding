@@ -1,0 +1,11 @@
+q_class QSequentialAnimationGroup extends QAnimationGroup {
+    q_property const QAbstractAnimation * currentAnimation;
+
+    public member q_function addPause(int msecs) : QPauseAnimation *;
+    public const member q_function currentAnimation() : QAbstractAnimation *;
+    public member q_function insertPause(int index, int msecs) : QPauseAnimation *;
+
+
+
+}
+

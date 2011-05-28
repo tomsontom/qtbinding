@@ -1,0 +1,10 @@
+q_class QCommandLinkButton extends QPushButton {
+    q_property QString description;
+    q_property bool flat;
+
+    public const member q_function description() : QString;
+    public member q_function setDescription(const QString & description) : void;
+
+
+}
+

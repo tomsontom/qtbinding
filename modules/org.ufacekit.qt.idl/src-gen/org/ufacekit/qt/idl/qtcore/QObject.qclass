@@ -1,0 +1,45 @@
+q_class QObject {
+    q_property QString objectName;
+
+    public member q_function blockSignals(bool block) : bool;
+    public class q_function connect(const QObject * sender, const char * signal, const QObject * receiver, const char * method, Qt.ConnectionType type = Qt.AutoConnection) : bool;
+    public const member q_function connect(const QObject * sender, const char * signal, const char * method, Qt.ConnectionType type = Qt.AutoConnection) : bool;
+    public member q_function disconnect(const QObject * receiver, const char * method = 0) : bool;
+    public member q_function disconnect(const char * signal = 0, const QObject * receiver = 0, const char * method = 0) : bool;
+    public member q_function dumpObjectInfo() : void;
+    public member q_function dumpObjectTree() : void;
+    public const member q_function dynamicPropertyNames() : QList<QByteArray>;
+    public virtual member q_function event(QEvent * e) : bool;
+    public virtual member q_function eventFilter(QObject * watched, QEvent * event) : bool;
+    public const member q_function findChild(const QString & name = QString()) : T;
+    public const member q_function findChildren(const QString & name = QString()) : QList<T>;
+    public const member q_function inherits(const char * className) : bool;
+    public member q_function installEventFilter(QObject * filterObj) : void;
+    public const member q_function isWidgetType() : bool;
+    public member q_function killTimer(int id) : void;
+    public const virtual member q_function metaObject() : const QMetaObject *;
+    public member q_function moveToThread(QThread * targetThread) : void;
+    public const member q_function objectName() : QString;
+    public const member q_function parent() : QObject *;
+    public const member q_function property(const char * name) : QVariant;
+    public member q_function removeEventFilter(QObject * obj) : void;
+    public member q_function setObjectName(const QString & name) : void;
+    public member q_function setProperty(const char * name, const QVariant & value) : bool;
+    public const member q_function signalsBlocked() : bool;
+    public member q_function startTimer(int interval) : int;
+    public const member q_function thread() : QThread *;
+    public class q_function trUtf8(const char * sourceText, const char * disambiguation = 0, int n = -1) : QString;
+
+    protected virtual member q_function childEvent(QChildEvent * event) : void;
+    protected virtual member q_function connectNotify(const char * signal) : void;
+    protected virtual member q_function customEvent(QEvent * event) : void;
+    protected virtual member q_function disconnectNotify(const char * signal) : void;
+    protected const member q_function receivers(const char * signal) : int;
+    protected const member q_function sender() : QObject *;
+    protected virtual member q_function timerEvent(QTimerEvent * event) : void;
+
+
+
+
+}
+

@@ -1,0 +1,17 @@
+q_class QDial extends QAbstractSlider {
+    q_property const int notchSize;
+    q_property qreal notchTarget;
+    q_property bool notchesVisible;
+    q_property bool wrapping;
+
+    public const member q_function notchSize() : int;
+    public const member q_function notchTarget() : qreal;
+    public const member q_function notchesVisible() : bool;
+    public member q_function setNotchTarget(double target) : void;
+
+    protected const member q_function initStyleOption(QStyleOptionSlider * option) : void;
+
+
+
+}
+

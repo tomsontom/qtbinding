@@ -1,0 +1,7 @@
+q_class QIconEnginePlugin extends QObject {
+    public purevirtual member q_function create(const QString & filename) : QIconEngine *;
+    public const purevirtual member q_function keys() : QStringList;
+
+
+}
+

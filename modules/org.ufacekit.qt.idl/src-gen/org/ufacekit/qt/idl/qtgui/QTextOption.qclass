@@ -1,0 +1,52 @@
+q_class QTextOption {
+    q_enumeration Flag {
+        ShowTabsAndSpaces = 1
+        ShowLineAndParagraphSeparators = 2
+        AddSpaceForLineAndParagraphSeparators = 4
+        SuppressColors = 8
+        IncludeTrailingSpaces = 2147483648
+    }
+
+    q_flags Flags : Flag;
+
+    q_enumeration TabType {
+        LeftTab = 0
+        RightTab = 1
+        CenterTab = 2
+        DelimiterTab = 3
+    }
+
+    q_enumeration WrapMode {
+        NoWrap = 0
+        WordWrap = 1
+        ManualWrap = 2
+        WrapAnywhere = 3
+        WrapAtWordBoundaryOrAnywhere = 4
+    }
+
+
+    q_class Tab {
+
+    }
+
+
+    public const member q_function alignment() : Qt.Alignment;
+    public const member q_function flags() : Flags;
+    public member q_function setAlignment(Qt.Alignment alignment) : void;
+    public member q_function setFlags(Flags flags) : void;
+    public member q_function setTabArray(QList<qreal> tabStops) : void;
+    public member q_function setTabStop(qreal tabStop) : void;
+    public member q_function setTabs(QList<Tab> tabStops) : void;
+    public member q_function setTextDirection(Qt.LayoutDirection direction) : void;
+    public member q_function setUseDesignMetrics(bool enable) : void;
+    public member q_function setWrapMode(WrapMode mode) : void;
+    public const member q_function tabArray() : QList<qreal>;
+    public const member q_function tabStop() : qreal;
+    public const member q_function tabs() : QList<Tab>;
+    public const member q_function textDirection() : Qt.LayoutDirection;
+    public const member q_function useDesignMetrics() : bool;
+    public const member q_function wrapMode() : WrapMode;
+
+
+}
+

@@ -1,0 +1,65 @@
+q_class QCoreApplication extends QObject {
+    q_enumeration Encoding {
+        CodecForTr = 0
+        UnicodeUTF8 = 1
+        DefaultCodec = CodecForTr
+    }
+
+
+    q_typedef EventFilter : ___UNKNOWN___;
+
+
+    q_property QString applicationName;
+    q_property QString applicationVersion;
+    q_property QString organizationDomain;
+    q_property QString organizationName;
+
+    public class q_function addLibraryPath(const QString & path) : void;
+    public class q_function applicationDirPath() : QString;
+    public class q_function applicationFilePath() : QString;
+    public class q_function applicationName() : QString;
+    public class q_function applicationPid() : qint64;
+    public class q_function applicationVersion() : QString;
+    public class q_function arguments() : QStringList;
+    public class q_function argv() : char **;
+    public class q_function closingDown() : bool;
+    public class q_function exec() : int;
+    public class q_function exit(int returnCode = 0) : void;
+    public member q_function filterEvent(void * message, long * result) : bool;
+    public class q_function flush() : void;
+    public class q_function hasPendingEvents() : bool;
+    public class q_function installTranslator(QTranslator * translationFile) : void;
+    public class q_function instance() : QCoreApplication *;
+    public class q_function libraryPaths() : QStringList;
+    public virtual member q_function notify(QObject * receiver, QEvent * event) : bool;
+    public class q_function organizationDomain() : QString;
+    public class q_function organizationName() : QString;
+    public class q_function postEvent(QObject * receiver, QEvent * event) : void;
+    public class q_function postEvent(QObject * receiver, QEvent * event, int priority) : void;
+    public class q_function processEvents(QEventLoop.ProcessEventsFlags flags = QEventLoop.AllEvents) : void;
+    public class q_function processEvents(QEventLoop.ProcessEventsFlags flags, int maxtime) : void;
+    public class q_function removeLibraryPath(const QString & path) : void;
+    public class q_function removePostedEvents(QObject * receiver, int eventType) : void;
+    public class q_function removePostedEvents(QObject * receiver) : void;
+    public class q_function removeTranslator(QTranslator * translationFile) : void;
+    public class q_function sendEvent(QObject * receiver, QEvent * event) : bool;
+    public class q_function sendPostedEvents(QObject * receiver, int event_type) : void;
+    public class q_function sendPostedEvents() : void;
+    public class q_function setApplicationName(const QString & application) : void;
+    public class q_function setApplicationVersion(const QString & version) : void;
+    public class q_function setAttribute(Qt.ApplicationAttribute attribute, bool on = true) : void;
+    public member q_function setEventFilter(EventFilter filter) : EventFilter;
+    public class q_function setLibraryPaths(const QStringList & paths) : void;
+    public class q_function setOrganizationDomain(const QString & orgDomain) : void;
+    public class q_function setOrganizationName(const QString & orgName) : void;
+    public class q_function startingUp() : bool;
+    public class q_function testAttribute(Qt.ApplicationAttribute attribute) : bool;
+    public class q_function translate(const char * context, const char * sourceText, const char * disambiguation, Encoding encoding, int n) : QString;
+    public class q_function translate(const char * context, const char * sourceText, const char * disambiguation = 0, Encoding encoding = CodecForTr) : QString;
+    public virtual member q_function winEventFilter(MSG * msg, long * result) : bool;
+
+
+
+
+}
+

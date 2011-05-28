@@ -1,0 +1,5 @@
+q_class QCommonStyle extends QStyle {
+
+
+}
+

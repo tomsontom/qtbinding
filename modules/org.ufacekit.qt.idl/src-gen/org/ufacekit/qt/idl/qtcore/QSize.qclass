@@ -1,0 +1,19 @@
+q_class QSize {
+    public const member q_function boundedTo(const QSize & otherSize) : QSize;
+    public const member q_function expandedTo(const QSize & otherSize) : QSize;
+    public const member q_function height() : int;
+    public const member q_function isEmpty() : bool;
+    public const member q_function isNull() : bool;
+    public const member q_function isValid() : bool;
+    public member q_function rheight() : int &;
+    public member q_function rwidth() : int &;
+    public member q_function scale(const QSize & size, Qt.AspectRatioMode mode) : void;
+    public member q_function scale(int width, int height, Qt.AspectRatioMode mode) : void;
+    public member q_function setHeight(int height) : void;
+    public member q_function setWidth(int width) : void;
+    public member q_function transpose() : void;
+    public const member q_function width() : int;
+
+
+}
+

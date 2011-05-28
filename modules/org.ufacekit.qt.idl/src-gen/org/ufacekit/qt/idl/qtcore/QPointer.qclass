@@ -1,0 +1,7 @@
+q_class QPointer {
+    public const member q_function data() : T *;
+    public const member q_function isNull() : bool;
+
+
+}
+

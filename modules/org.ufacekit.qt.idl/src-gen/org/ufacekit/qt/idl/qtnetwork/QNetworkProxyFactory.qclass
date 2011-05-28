@@ -1,0 +1,10 @@
+q_class QNetworkProxyFactory {
+    public class q_function proxyForQuery(const QNetworkProxyQuery & query) : QList<QNetworkProxy>;
+    public purevirtual member q_function queryProxy(const QNetworkProxyQuery & query = QNetworkProxyQuery()) : QList<QNetworkProxy>;
+    public class q_function setApplicationProxyFactory(QNetworkProxyFactory * factory) : void;
+    public class q_function setUseSystemConfiguration(bool enable) : void;
+    public class q_function systemProxyForQuery(const QNetworkProxyQuery & query = QNetworkProxyQuery()) : QList<QNetworkProxy>;
+
+
+}
+

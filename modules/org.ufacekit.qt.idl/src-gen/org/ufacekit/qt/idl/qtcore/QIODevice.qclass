@@ -1,0 +1,59 @@
+q_class QIODevice extends QObject {
+    q_enumeration OpenModeFlag {
+        NotOpen = 0
+        ReadOnly = 1
+        WriteOnly = 2
+        ReadWrite = ReadOnly  |  WriteOnly
+        Append = 4
+        Truncate = 8
+        Text = 16
+        Unbuffered = 32
+    }
+
+    q_flags OpenMode : OpenModeFlag;
+
+
+    public const virtual member q_function atEnd() : bool;
+    public const virtual member q_function bytesAvailable() : qint64;
+    public const virtual member q_function bytesToWrite() : qint64;
+    public const virtual member q_function canReadLine() : bool;
+    public virtual member q_function close() : void;
+    public const member q_function errorString() : QString;
+    public member q_function getChar(char * c) : bool;
+    public const member q_function isOpen() : bool;
+    public const member q_function isReadable() : bool;
+    public const virtual member q_function isSequential() : bool;
+    public const member q_function isTextModeEnabled() : bool;
+    public const member q_function isWritable() : bool;
+    public virtual member q_function open(OpenMode mode) : bool;
+    public const member q_function openMode() : OpenMode;
+    public member q_function peek(qint64 maxSize) : QByteArray;
+    public member q_function peek(char * data, qint64 maxSize) : qint64;
+    public const virtual member q_function pos() : qint64;
+    public member q_function putChar(char c) : bool;
+    public member q_function read(qint64 maxSize) : QByteArray;
+    public member q_function read(char * data, qint64 maxSize) : qint64;
+    public member q_function readAll() : QByteArray;
+    public member q_function readLine(char * data, qint64 maxSize) : qint64;
+    public member q_function readLine(qint64 maxSize = 0) : QByteArray;
+    public virtual member q_function reset() : bool;
+    public virtual member q_function seek(qint64 pos) : bool;
+    public member q_function setTextModeEnabled(bool enabled) : void;
+    public const virtual member q_function size() : qint64;
+    public member q_function ungetChar(char c) : void;
+    public virtual member q_function waitForBytesWritten(int msecs) : bool;
+    public virtual member q_function waitForReadyRead(int msecs) : bool;
+    public member q_function write(const char * data) : qint64;
+    public member q_function write(const char * data, qint64 maxSize) : qint64;
+    public member q_function write(const QByteArray & byteArray) : qint64;
+
+    protected purevirtual member q_function readData(char * data, qint64 maxSize) : qint64;
+    protected virtual member q_function readLineData(char * data, qint64 maxSize) : qint64;
+    protected member q_function setErrorString(const QString & str) : void;
+    protected member q_function setOpenMode(OpenMode openMode) : void;
+    protected purevirtual member q_function writeData(const char * data, qint64 maxSize) : qint64;
+
+
+
+}
+

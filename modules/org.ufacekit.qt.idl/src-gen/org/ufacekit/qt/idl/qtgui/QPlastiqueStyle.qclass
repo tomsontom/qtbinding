@@ -1,0 +1,5 @@
+q_class QPlastiqueStyle extends QWindowsStyle {
+
+
+}
+

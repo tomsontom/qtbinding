@@ -1,0 +1,13 @@
+q_class QStyleOptionFocusRect extends QStyleOption {
+    q_enumeration StyleOptionType {
+        Type = SO_FocusRect
+    }
+
+    q_enumeration StyleOptionVersion {
+        Version = 1
+    }
+
+
+
+}
+

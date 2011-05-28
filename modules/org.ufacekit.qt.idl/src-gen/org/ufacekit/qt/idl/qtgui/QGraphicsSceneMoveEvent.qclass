@@ -1,0 +1,7 @@
+q_class QGraphicsSceneMoveEvent extends QGraphicsSceneEvent {
+    public const member q_function newPos() : QPointF;
+    public const member q_function oldPos() : QPointF;
+
+
+}
+

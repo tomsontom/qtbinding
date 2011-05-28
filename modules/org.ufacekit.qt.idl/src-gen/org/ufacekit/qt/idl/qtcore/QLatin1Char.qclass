@@ -1,0 +1,7 @@
+q_class QLatin1Char {
+    public const member q_function toLatin1() : char;
+    public const member q_function unicode() : ushort;
+
+
+}
+ 

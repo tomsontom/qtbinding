@@ -1,0 +1,94 @@
+q_class QTabBar extends QWidget {
+    q_enumeration ButtonPosition {
+        LeftSide = 0
+        RightSide = 1
+    }
+
+    q_enumeration SelectionBehavior {
+        SelectLeftTab = 0
+        SelectRightTab = 1
+        SelectPreviousTab = 2
+    }
+
+    q_enumeration Shape {
+        RoundedNorth = 0
+        RoundedSouth = 1
+        RoundedWest = 2
+        RoundedEast = 3
+        TriangularNorth = 4
+        TriangularSouth = 5
+        TriangularWest = 6
+        TriangularEast = 7
+    }
+
+
+    q_property const int count;
+    q_property int currentIndex;
+    q_property bool documentMode;
+    q_property bool drawBase;
+    q_property Qt.TextElideMode elideMode;
+    q_property bool expanding;
+    q_property QSize iconSize;
+    q_property bool movable;
+    q_property SelectionBehavior selectionBehaviorOnRemove;
+    q_property Shape shape;
+    q_property bool tabsClosable;
+    q_property bool usesScrollButtons;
+
+    public member q_function addTab(const QString & text) : int;
+    public member q_function addTab(const QIcon & icon, const QString & text) : int;
+    public const member q_function count() : int;
+    public const member q_function currentIndex() : int;
+    public const member q_function documentMode() : bool;
+    public const member q_function drawBase() : bool;
+    public const member q_function elideMode() : Qt.TextElideMode;
+    public const member q_function expanding() : bool;
+    public const member q_function iconSize() : QSize;
+    public member q_function insertTab(int index, const QString & text) : int;
+    public member q_function insertTab(int index, const QIcon & icon, const QString & text) : int;
+    public const member q_function isMovable() : bool;
+    public const member q_function isTabEnabled(int index) : bool;
+    public member q_function moveTab(int from, int to) : void;
+    public member q_function removeTab(int index) : void;
+    public const member q_function selectionBehaviorOnRemove() : SelectionBehavior;
+    public member q_function setDocumentMode(bool set) : void;
+    public member q_function setDrawBase(bool drawTheBase) : void;
+    public member q_function setElideMode(Qt.TextElideMode ) : void;
+    public member q_function setExpanding(bool enabled) : void;
+    public member q_function setIconSize(const QSize & size) : void;
+    public member q_function setSelectionBehaviorOnRemove(SelectionBehavior behavior) : void;
+    public member q_function setShape(Shape shape) : void;
+    public member q_function setTabButton(int index, ButtonPosition position, QWidget * widget) : void;
+    public member q_function setTabData(int index, const QVariant & data) : void;
+    public member q_function setTabEnabled(int index, bool enabled) : void;
+    public member q_function setTabIcon(int index, const QIcon & icon) : void;
+    public member q_function setTabText(int index, const QString & text) : void;
+    public member q_function setTabTextColor(int index, const QColor & color) : void;
+    public member q_function setTabToolTip(int index, const QString & tip) : void;
+    public member q_function setTabWhatsThis(int index, const QString & text) : void;
+    public member q_function setTabsClosable(bool closable) : void;
+    public member q_function setUsesScrollButtons(bool useButtons) : void;
+    public const member q_function shape() : Shape;
+    public const member q_function tabAt(const QPoint & position) : int;
+    public const member q_function tabButton(int index, ButtonPosition position) : QWidget *;
+    public const member q_function tabData(int index) : QVariant;
+    public const member q_function tabIcon(int index) : QIcon;
+    public const member q_function tabRect(int index) : QRect;
+    public const member q_function tabText(int index) : QString;
+    public const member q_function tabTextColor(int index) : QColor;
+    public const member q_function tabToolTip(int index) : QString;
+    public const member q_function tabWhatsThis(int index) : QString;
+    public const member q_function tabsClosable() : bool;
+    public const member q_function usesScrollButtons() : bool;
+
+    protected const member q_function initStyleOption(QStyleOptionTab * option, int tabIndex) : void;
+    protected virtual member q_function tabInserted(int index) : void;
+    protected virtual member q_function tabLayoutChange() : void;
+    protected virtual member q_function tabRemoved(int index) : void;
+    protected const virtual member q_function tabSizeHint(int index) : QSize;
+
+
+
+
+}
+

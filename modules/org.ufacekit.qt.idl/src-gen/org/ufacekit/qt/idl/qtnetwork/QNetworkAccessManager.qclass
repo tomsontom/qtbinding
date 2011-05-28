@@ -1,0 +1,47 @@
+q_class QNetworkAccessManager extends QObject {
+    q_enumeration NetworkAccessibility {
+        UnknownAccessibility = -1
+        NotAccessible = 0
+        Accessible = 1
+    }
+
+    q_enumeration Operation {
+        HeadOperation = 1
+        GetOperation = 2
+        PutOperation = 3
+        PostOperation = 4
+        DeleteOperation = 5
+        CustomOperation = 6
+        UnknownOperation = 0
+    }
+
+
+    q_property NetworkAccessibility networkAccessible;
+
+    public const member q_function activeConfiguration() : QNetworkConfiguration;
+    public const member q_function cache() : QAbstractNetworkCache *;
+    public const member q_function configuration() : QNetworkConfiguration;
+    public const member q_function cookieJar() : QNetworkCookieJar *;
+    public member q_function deleteResource(const QNetworkRequest & request) : QNetworkReply *;
+    public member q_function get(const QNetworkRequest & request) : QNetworkReply *;
+    public member q_function head(const QNetworkRequest & request) : QNetworkReply *;
+    public const member q_function networkAccessible() : NetworkAccessibility;
+    public member q_function post(const QNetworkRequest & request, QIODevice * data) : QNetworkReply *;
+    public member q_function post(const QNetworkRequest & request, const QByteArray & data) : QNetworkReply *;
+    public const member q_function proxy() : QNetworkProxy;
+    public const member q_function proxyFactory() : QNetworkProxyFactory *;
+    public member q_function put(const QNetworkRequest & request, QIODevice * data) : QNetworkReply *;
+    public member q_function put(const QNetworkRequest & request, const QByteArray & data) : QNetworkReply *;
+    public member q_function sendCustomRequest(const QNetworkRequest & request, const QByteArray & verb, QIODevice * data = 0) : QNetworkReply *;
+    public member q_function setCache(QAbstractNetworkCache * cache) : void;
+    public member q_function setConfiguration(const QNetworkConfiguration & config) : void;
+    public member q_function setCookieJar(QNetworkCookieJar * cookieJar) : void;
+    public member q_function setProxy(const QNetworkProxy & proxy) : void;
+    public member q_function setProxyFactory(QNetworkProxyFactory * factory) : void;
+
+    protected virtual member q_function createRequest(Operation op, const QNetworkRequest & req, QIODevice * outgoingData = 0) : QNetworkReply *;
+
+
+
+}
+

@@ -1,0 +1,22 @@
+q_class QStyleOptionToolBoxV2 extends QStyleOptionToolBox {
+    q_enumeration SelectedPosition {
+        NotAdjacent = 0
+        NextIsSelected = 1
+        PreviousIsSelected = 2
+    }
+
+    q_enumeration StyleOptionVersion {
+        Version = 2
+    }
+
+    q_enumeration TabPosition {
+        Beginning = 0
+        Middle = 1
+        End = 2
+        OnlyOneTab = 3
+    }
+
+
+
+}
+

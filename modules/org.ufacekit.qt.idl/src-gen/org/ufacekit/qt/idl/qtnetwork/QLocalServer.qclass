@@ -1,0 +1,20 @@
+q_class QLocalServer extends QObject {
+    public member q_function close() : void;
+    public const member q_function errorString() : QString;
+    public const member q_function fullServerName() : QString;
+    public const virtual member q_function hasPendingConnections() : bool;
+    public const member q_function isListening() : bool;
+    public member q_function listen(const QString & name) : bool;
+    public const member q_function maxPendingConnections() : int;
+    public virtual member q_function nextPendingConnection() : QLocalSocket *;
+    public class q_function removeServer(const QString & name) : bool;
+    public const member q_function serverError() : QAbstractSocket.SocketError;
+    public const member q_function serverName() : QString;
+    public member q_function setMaxPendingConnections(int numConnections) : void;
+    public member q_function waitForNewConnection(int msec = 0, bool * timedOut = 0) : bool;
+
+    protected virtual member q_function incomingConnection(quintptr socketDescriptor) : void;
+
+
+}
+

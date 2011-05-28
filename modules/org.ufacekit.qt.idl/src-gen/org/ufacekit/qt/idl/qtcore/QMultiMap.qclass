@@ -1,0 +1,20 @@
+q_class QMultiMap extends QMap<Key, T> {
+    public const member q_function constFind(const Key & key) : QMap<Key, T>.const_iterator;
+    public const member q_function constFind(const Key & key, const T & value) : QMap<Key, T>.const_iterator;
+    public const member q_function contains(const Key & key) : bool;
+    public const member q_function contains(const Key & key, const T & value) : bool;
+    public const member q_function count() : int;
+    public const member q_function count(const Key & key) : int;
+    public const member q_function count(const Key & key, const T & value) : int;
+    public member q_function find(const Key & key, const T & value) : QMap<Key, T>.iterator;
+    public const member q_function find(const Key & key, const T & value) : QMap<Key, T>.const_iterator;
+    public member q_function find(const Key & key) : QMap<Key, T>.iterator;
+    public const member q_function find(const Key & key) : QMap<Key, T>.const_iterator;
+    public member q_function insert(const Key & key, const T & value) : QMap<Key, T>.iterator;
+    public member q_function remove(const Key & key, const T & value) : int;
+    public member q_function remove(const Key & key) : int;
+    public member q_function replace(const Key & key, const T & value) : QMap<Key, T>.iterator;
+
+
+}
+

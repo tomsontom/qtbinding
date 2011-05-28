@@ -1,0 +1,41 @@
+q_class QRegExp {
+    q_enumeration CaretMode {
+        CaretAtZero = 0
+        CaretAtOffset = 1
+        CaretWontMatch = 2
+    }
+
+    q_enumeration PatternSyntax {
+        RegExp = 0
+        Wildcard = 1
+        FixedString = 2
+        RegExp2 = 3
+        WildcardUnix = 4
+        W3CXmlSchema11 = 5
+    }
+
+
+    public const member q_function cap(int nth = 0) : QString;
+    public const member q_function captureCount() : int;
+    public const member q_function capturedTexts() : QStringList;
+    public const member q_function caseSensitivity() : Qt.CaseSensitivity;
+    public const member q_function errorString() : QString;
+    public class q_function escape(const QString & str) : QString;
+    public const member q_function exactMatch(const QString & str) : bool;
+    public const member q_function indexIn(const QString & str, int offset = 0, CaretMode caretMode = CaretAtZero) : int;
+    public const member q_function isEmpty() : bool;
+    public const member q_function isMinimal() : bool;
+    public const member q_function isValid() : bool;
+    public const member q_function lastIndexIn(const QString & str, int offset = -1, CaretMode caretMode = CaretAtZero) : int;
+    public const member q_function numCaptures() : int;
+    public const member q_function pattern() : QString;
+    public const member q_function patternSyntax() : PatternSyntax;
+    public const member q_function pos(int nth = 0) : int;
+    public member q_function setCaseSensitivity(Qt.CaseSensitivity cs) : void;
+    public member q_function setMinimal(bool minimal) : void;
+    public member q_function setPattern(const QString & pattern) : void;
+    public member q_function setPatternSyntax(PatternSyntax syntax) : void;
+
+
+}
+

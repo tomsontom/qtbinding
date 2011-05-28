@@ -1,0 +1,14 @@
+q_class QSslCipher {
+    public const member q_function authenticationMethod() : QString;
+    public const member q_function encryptionMethod() : QString;
+    public const member q_function isNull() : bool;
+    public const member q_function keyExchangeMethod() : QString;
+    public const member q_function name() : QString;
+    public const member q_function protocol() : QSsl.SslProtocol;
+    public const member q_function protocolString() : QString;
+    public const member q_function supportedBits() : int;
+    public const member q_function usedBits() : int;
+
+
+}
+

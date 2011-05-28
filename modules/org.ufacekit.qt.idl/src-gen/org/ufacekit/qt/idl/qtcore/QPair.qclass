@@ -1,0 +1,9 @@
+q_class QPair {
+    q_typedef first_type : ___UNKNOWN___;
+
+    q_typedef second_type : ___UNKNOWN___;
+
+
+
+}
+

@@ -1,0 +1,54 @@
+q_class QDirModel extends QAbstractItemModel {
+    q_enumeration Roles {
+        FileIconRole = __UNKNOWN__
+        FilePathRole = __UNKNOWN__
+        FileNameRole = __UNKNOWN__
+    }
+
+
+    q_property bool lazyChildCount;
+    q_property bool readOnly;
+    q_property bool resolveSymlinks;
+
+    public const virtual member q_function columnCount(const QModelIndex & parent = QModelIndex()) : int;
+    public const virtual member q_function data(const QModelIndex & index, int role = Qt.DisplayRole) : QVariant;
+    public virtual member q_function dropMimeData(const QMimeData * data, Qt.DropAction action, int row, int column, const QModelIndex & parent) : bool;
+    public const member q_function fileIcon(const QModelIndex & index) : QIcon;
+    public const member q_function fileInfo(const QModelIndex & index) : QFileInfo;
+    public const member q_function fileName(const QModelIndex & index) : QString;
+    public const member q_function filePath(const QModelIndex & index) : QString;
+    public const member q_function filter() : QDir.Filters;
+    public const virtual member q_function flags(const QModelIndex & index) : Qt.ItemFlags;
+    public const virtual member q_function hasChildren(const QModelIndex & parent = QModelIndex()) : bool;
+    public const virtual member q_function headerData(int section, Qt.Orientation orientation, int role = Qt.DisplayRole) : QVariant;
+    public const member q_function iconProvider() : QFileIconProvider *;
+    public const member q_function index(const QString & path, int column = 0) : QModelIndex;
+    public const virtual member q_function index(int row, int column, const QModelIndex & parent = QModelIndex()) : QModelIndex;
+    public const member q_function isDir(const QModelIndex & index) : bool;
+    public const member q_function isReadOnly() : bool;
+    public const member q_function lazyChildCount() : bool;
+    public const virtual member q_function mimeData(const QModelIndexList & indexes) : QMimeData *;
+    public const virtual member q_function mimeTypes() : QStringList;
+    public member q_function mkdir(const QModelIndex & parent, const QString & name) : QModelIndex;
+    public const member q_function nameFilters() : QStringList;
+    public const virtual member q_function parent(const QModelIndex & child) : QModelIndex;
+    public member q_function remove(const QModelIndex & index) : bool;
+    public const member q_function resolveSymlinks() : bool;
+    public member q_function rmdir(const QModelIndex & index) : bool;
+    public const virtual member q_function rowCount(const QModelIndex & parent = QModelIndex()) : int;
+    public virtual member q_function setData(const QModelIndex & index, const QVariant & value, int role = Qt.EditRole) : bool;
+    public member q_function setFilter(QDir.Filters filters) : void;
+    public member q_function setIconProvider(QFileIconProvider * provider) : void;
+    public member q_function setLazyChildCount(bool enable) : void;
+    public member q_function setNameFilters(const QStringList & filters) : void;
+    public member q_function setReadOnly(bool enable) : void;
+    public member q_function setResolveSymlinks(bool enable) : void;
+    public member q_function setSorting(QDir.SortFlags sort) : void;
+    public virtual member q_function sort(int column, Qt.SortOrder order = Qt.AscendingOrder) : void;
+    public const member q_function sorting() : QDir.SortFlags;
+    public const virtual member q_function supportedDropActions() : Qt.DropActions;
+
+
+
+}
+

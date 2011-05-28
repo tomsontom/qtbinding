@@ -1,0 +1,13 @@
+q_class QDebug {
+    q_class Stream {
+
+    }
+
+
+    public member q_function maybeSpace() : QDebug &;
+    public member q_function nospace() : QDebug &;
+    public member q_function space() : QDebug &;
+
+
+}
+

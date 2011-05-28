@@ -1,0 +1,12 @@
+q_class QAxWidget extends QWidget, QAxBase {
+    public virtual member q_function createAggregate() : QAxAggregated *;
+    public member q_function doVerb(const QString & verb) : bool;
+
+    protected virtual member q_function createHostWindow(bool initialized) : bool;
+    protected member q_function createHostWindow(bool initialized, const QByteArray & data) : bool;
+    protected virtual member q_function initialize(IUnknown ** ptr) : bool;
+    protected const virtual member q_function translateKeyEvent(int message, int keycode) : bool;
+
+
+}
+

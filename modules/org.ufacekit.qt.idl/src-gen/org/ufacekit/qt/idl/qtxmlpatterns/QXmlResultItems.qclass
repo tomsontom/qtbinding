@@ -1,0 +1,8 @@
+q_class QXmlResultItems {
+    public const member q_function current() : QXmlItem;
+    public const member q_function hasError() : bool;
+    public member q_function next() : QXmlItem;
+
+
+}
+

@@ -1,0 +1,41 @@
+q_class QStandardItemModel extends QAbstractItemModel {
+    q_property int sortRole;
+
+    public member q_function appendColumn(const QList<QStandardItem *> & items) : void;
+    public member q_function appendRow(const QList<QStandardItem *> & items) : void;
+    public member q_function appendRow(QStandardItem * item) : void;
+    public member q_function clear() : void;
+    public const member q_function findItems(const QString & text, Qt.MatchFlags flags = Qt.MatchExactly, int column = 0) : QList<QStandardItem *>;
+    public const member q_function horizontalHeaderItem(int column) : QStandardItem *;
+    public const member q_function indexFromItem(const QStandardItem * item) : QModelIndex;
+    public member q_function insertColumn(int column, const QModelIndex & parent = QModelIndex()) : bool;
+    public member q_function insertColumn(int column, const QList<QStandardItem *> & items) : void;
+    public member q_function insertRow(int row, QStandardItem * item) : void;
+    public member q_function insertRow(int row, const QModelIndex & parent = QModelIndex()) : bool;
+    public member q_function insertRow(int row, const QList<QStandardItem *> & items) : void;
+    public const member q_function invisibleRootItem() : QStandardItem *;
+    public const member q_function item(int row, int column = 0) : QStandardItem *;
+    public const member q_function itemFromIndex(const QModelIndex & index) : QStandardItem *;
+    public const member q_function itemPrototype() : const QStandardItem *;
+    public member q_function setColumnCount(int columns) : void;
+    public member q_function setHorizontalHeaderItem(int column, QStandardItem * item) : void;
+    public member q_function setHorizontalHeaderLabels(const QStringList & labels) : void;
+    public member q_function setItem(int row, QStandardItem * item) : void;
+    public member q_function setItem(int row, int column, QStandardItem * item) : void;
+    public member q_function setItemPrototype(const QStandardItem * item) : void;
+    public member q_function setRowCount(int rows) : void;
+    public member q_function setSortRole(int role) : void;
+    public member q_function setVerticalHeaderItem(int row, QStandardItem * item) : void;
+    public member q_function setVerticalHeaderLabels(const QStringList & labels) : void;
+    public const member q_function sortRole() : int;
+    public member q_function takeColumn(int column) : QList<QStandardItem *>;
+    public member q_function takeHorizontalHeaderItem(int column) : QStandardItem *;
+    public member q_function takeItem(int row, int column = 0) : QStandardItem *;
+    public member q_function takeRow(int row) : QList<QStandardItem *>;
+    public member q_function takeVerticalHeaderItem(int row) : QStandardItem *;
+    public const member q_function verticalHeaderItem(int row) : QStandardItem *;
+
+
+
+}
+

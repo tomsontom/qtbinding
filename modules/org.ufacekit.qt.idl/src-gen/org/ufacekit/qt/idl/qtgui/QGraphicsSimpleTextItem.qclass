@@ -1,0 +1,8 @@
+q_class QGraphicsSimpleTextItem extends QAbstractGraphicsShapeItem {
+    public const member q_function font() : QFont;
+    public member q_function setFont(const QFont & font) : void;
+    public const member q_function text() : QString;
+
+
+}
+

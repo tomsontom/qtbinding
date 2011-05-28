@@ -1,0 +1,50 @@
+q_class QScriptEngineDebugger extends QObject {
+    q_enumeration DebuggerAction {
+        InterruptAction = 0
+        ContinueAction = 1
+        StepIntoAction = 2
+        StepOverAction = 3
+        StepOutAction = 4
+        RunToCursorAction = 5
+        RunToNewScriptAction = 6
+        ToggleBreakpointAction = 7
+        ClearDebugOutputAction = 8
+        ClearErrorLogAction = 9
+        ClearConsoleAction = 10
+        FindInScriptAction = 11
+        FindNextInScriptAction = 12
+        FindPreviousInScriptAction = 13
+        GoToLineAction = 14
+    }
+
+    q_enumeration DebuggerState {
+        RunningState = 0
+        SuspendedState = 1
+    }
+
+    q_enumeration DebuggerWidget {
+        ConsoleWidget = 0
+        StackWidget = 1
+        ScriptsWidget = 2
+        LocalsWidget = 3
+        CodeWidget = 4
+        CodeFinderWidget = 5
+        BreakpointsWidget = 6
+        DebugOutputWidget = 7
+        ErrorLogWidget = 8
+    }
+
+
+    public const member q_function action(DebuggerAction action) : QAction *;
+    public member q_function attachTo(QScriptEngine * engine) : void;
+    public const member q_function autoShowStandardWindow() : bool;
+    public member q_function createStandardMenu(QWidget * parent = 0) : QMenu *;
+    public member q_function detach() : void;
+    public member q_function setAutoShowStandardWindow(bool autoShow) : void;
+    public const member q_function state() : DebuggerState;
+    public const member q_function widget(DebuggerWidget widget) : QWidget *;
+
+
+
+}
+

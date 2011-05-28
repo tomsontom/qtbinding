@@ -1,0 +1,17 @@
+q_class QDomNamedNodeMap {
+    public const member q_function contains(const QString & name) : bool;
+    public const member q_function count() : int;
+    public const member q_function isEmpty() : bool;
+    public const member q_function item(int index) : QDomNode;
+    public const member q_function length() : uint;
+    public const member q_function namedItem(const QString & name) : QDomNode;
+    public const member q_function namedItemNS(const QString & nsURI, const QString & localName) : QDomNode;
+    public member q_function removeNamedItem(const QString & name) : QDomNode;
+    public member q_function removeNamedItemNS(const QString & nsURI, const QString & localName) : QDomNode;
+    public member q_function setNamedItem(const QDomNode & newNode) : QDomNode;
+    public member q_function setNamedItemNS(const QDomNode & newNode) : QDomNode;
+    public const member q_function size() : int;
+
+
+}
+

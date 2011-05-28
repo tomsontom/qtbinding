@@ -1,0 +1,89 @@
+q_class QStandardItem {
+    q_enumeration ItemType {
+        Type = 0
+        UserType = 1000
+    }
+
+
+    public const member q_function accessibleDescription() : QString;
+    public const member q_function accessibleText() : QString;
+    public member q_function appendColumn(const QList<QStandardItem *> & items) : void;
+    public member q_function appendRow(const QList<QStandardItem *> & items) : void;
+    public member q_function appendRow(QStandardItem * item) : void;
+    public member q_function appendRows(const QList<QStandardItem *> & items) : void;
+    public const member q_function background() : QBrush;
+    public const member q_function checkState() : Qt.CheckState;
+    public const member q_function child(int row, int column = 0) : QStandardItem *;
+    public const virtual member q_function clone() : QStandardItem *;
+    public const member q_function column() : int;
+    public const member q_function columnCount() : int;
+    public const member q_function flags() : Qt.ItemFlags;
+    public const member q_function font() : QFont;
+    public const member q_function foreground() : QBrush;
+    public const member q_function hasChildren() : bool;
+    public const member q_function icon() : QIcon;
+    public const member q_function index() : QModelIndex;
+    public member q_function insertColumn(int column, const QList<QStandardItem *> & items) : void;
+    public member q_function insertColumns(int column, int count) : void;
+    public member q_function insertRow(int row, QStandardItem * item) : void;
+    public member q_function insertRow(int row, const QList<QStandardItem *> & items) : void;
+    public member q_function insertRows(int row, int count) : void;
+    public member q_function insertRows(int row, const QList<QStandardItem *> & items) : void;
+    public const member q_function isCheckable() : bool;
+    public const member q_function isDragEnabled() : bool;
+    public const member q_function isDropEnabled() : bool;
+    public const member q_function isEditable() : bool;
+    public const member q_function isEnabled() : bool;
+    public const member q_function isSelectable() : bool;
+    public const member q_function isTristate() : bool;
+    public const member q_function model() : QStandardItemModel *;
+    public const member q_function parent() : QStandardItem *;
+    public virtual member q_function read(QDataStream & in) : void;
+    public member q_function removeColumn(int column) : void;
+    public member q_function removeColumns(int column, int count) : void;
+    public member q_function removeRow(int row) : void;
+    public member q_function removeRows(int row, int count) : void;
+    public const member q_function row() : int;
+    public const member q_function rowCount() : int;
+    public member q_function setAccessibleDescription(const QString & accessibleDescription) : void;
+    public member q_function setAccessibleText(const QString & accessibleText) : void;
+    public member q_function setBackground(const QBrush & brush) : void;
+    public member q_function setCheckState(Qt.CheckState state) : void;
+    public member q_function setCheckable(bool checkable) : void;
+    public member q_function setChild(int row, QStandardItem * item) : void;
+    public member q_function setChild(int row, int column, QStandardItem * item) : void;
+    public member q_function setColumnCount(int columns) : void;
+    public virtual member q_function setData(const QVariant & value, int role = Qt.UserRole + 1) : void;
+    public member q_function setDragEnabled(bool dragEnabled) : void;
+    public member q_function setDropEnabled(bool dropEnabled) : void;
+    public member q_function setEditable(bool editable) : void;
+    public member q_function setEnabled(bool enabled) : void;
+    public member q_function setFlags(Qt.ItemFlags flags) : void;
+    public member q_function setFont(const QFont & font) : void;
+    public member q_function setForeground(const QBrush & brush) : void;
+    public member q_function setIcon(const QIcon & icon) : void;
+    public member q_function setRowCount(int rows) : void;
+    public member q_function setSelectable(bool selectable) : void;
+    public member q_function setSizeHint(const QSize & size) : void;
+    public member q_function setStatusTip(const QString & statusTip) : void;
+    public member q_function setText(const QString & text) : void;
+    public member q_function setTextAlignment(Qt.Alignment alignment) : void;
+    public member q_function setToolTip(const QString & toolTip) : void;
+    public member q_function setTristate(bool tristate) : void;
+    public const member q_function sizeHint() : QSize;
+    public member q_function sortChildren(int column, Qt.SortOrder order = Qt.AscendingOrder) : void;
+    public const member q_function statusTip() : QString;
+    public member q_function takeChild(int row, int column = 0) : QStandardItem *;
+    public member q_function takeColumn(int column) : QList<QStandardItem *>;
+    public member q_function takeRow(int row) : QList<QStandardItem *>;
+    public const member q_function text() : QString;
+    public const member q_function textAlignment() : Qt.Alignment;
+    public const virtual member q_function type() : int;
+    public const member q_function whatsThis() : QString;
+    public const virtual member q_function write(QDataStream & out) : void;
+
+    protected member q_function emitDataChanged() : void;
+
+
+}
+

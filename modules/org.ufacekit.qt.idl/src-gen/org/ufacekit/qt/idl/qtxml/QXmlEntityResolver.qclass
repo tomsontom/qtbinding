@@ -1,0 +1,7 @@
+q_class QXmlEntityResolver {
+    public const purevirtual member q_function errorString() : QString;
+    public purevirtual member q_function resolveEntity(const QString & publicId, const QString & systemId, QXmlInputSource *& ret) : bool;
+
+
+}
+

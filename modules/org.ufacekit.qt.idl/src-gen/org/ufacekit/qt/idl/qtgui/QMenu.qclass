@@ -1,0 +1,50 @@
+q_class QMenu extends QWidget {
+    q_property QIcon icon;
+    q_property bool separatorsCollapsible;
+    q_property bool tearOffEnabled;
+    q_property QString title;
+
+    public const member q_function actionAt(const QPoint & pt) : QAction *;
+    public const member q_function actionGeometry(QAction * act) : QRect;
+    public const member q_function activeAction() : QAction *;
+    public member q_function addAction(const QIcon & icon, const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut = 0) : QAction *;
+    public member q_function addAction(QAction * action) : void;
+    public member q_function addAction(const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut = 0) : QAction *;
+    public member q_function addAction(const QString & text) : QAction *;
+    public member q_function addAction(const QIcon & icon, const QString & text) : QAction *;
+    public member q_function addMenu(QMenu * menu) : QAction *;
+    public member q_function addMenu(const QIcon & icon, const QString & title) : QMenu *;
+    public member q_function addMenu(const QString & title) : QMenu *;
+    public member q_function addSeparator() : QAction *;
+    public member q_function clear() : void;
+    public const member q_function defaultAction() : QAction *;
+    public member q_function exec() : QAction *;
+    public member q_function exec(const QPoint & p, QAction * action = 0) : QAction *;
+    public class q_function exec(QList<QAction *> actions, const QPoint & pos, QAction * at = 0) : QAction *;
+    public class q_function exec(QList<QAction *> actions, const QPoint & pos, QAction * at, QWidget * parent) : QAction *;
+    public member q_function hideTearOffMenu() : void;
+    public const member q_function icon() : QIcon;
+    public member q_function insertMenu(QAction * before, QMenu * menu) : QAction *;
+    public member q_function insertSeparator(QAction * before) : QAction *;
+    public const member q_function isEmpty() : bool;
+    public const member q_function isTearOffEnabled() : bool;
+    public const member q_function isTearOffMenuVisible() : bool;
+    public const member q_function menuAction() : QAction *;
+    public member q_function popup(const QPoint & p, QAction * atAction = 0) : void;
+    public const member q_function separatorsCollapsible() : bool;
+    public member q_function setActiveAction(QAction * act) : void;
+    public member q_function setDefaultAction(QAction * act) : void;
+    public member q_function setIcon(const QIcon & icon) : void;
+    public member q_function setSeparatorsCollapsible(bool collapse) : void;
+    public member q_function setTearOffEnabled(bool ) : void;
+    public member q_function setTitle(const QString & title) : void;
+    public const member q_function title() : QString;
+
+    protected const member q_function columnCount() : int;
+    protected const member q_function initStyleOption(QStyleOptionMenuItem * option, const QAction * action) : void;
+
+
+
+
+}
+

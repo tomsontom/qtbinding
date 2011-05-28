@@ -1,0 +1,55 @@
+q_class QGLContext {
+    q_enumeration BindOption {
+        NoBindOption = 0
+        InvertedYBindOption = 1
+        MipmapBindOption = 2
+        PremultipliedAlphaBindOption = 4
+        LinearFilteringBindOption = 8
+        MemoryManagedBindOption = 16
+        CanFlipNativePixmapBindOption = 32
+        DefaultBindOption = LinearFilteringBindOption  |  InvertedYBindOption  |  MipmapBindOption
+        InternalBindOption = MemoryManagedBindOption  |  PremultipliedAlphaBindOption
+    }
+
+    q_flags BindOptions : BindOption;
+
+
+    public class q_function areSharing(const QGLContext * context1, const QGLContext * context2) : bool;
+    public member q_function bindTexture(const QPixmap & pixmap, GLenum target, GLint format, BindOptions options) : GLuint;
+    public member q_function bindTexture(const QImage & image, GLenum target, GLint format, BindOptions options) : GLuint;
+    public member q_function bindTexture(const QString & fileName) : GLuint;
+    public member q_function bindTexture(const QImage & image, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA) : GLuint;
+    public member q_function bindTexture(const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA) : GLuint;
+    public virtual member q_function create(const QGLContext * shareContext = 0) : bool;
+    public class q_function currentContext() : const QGLContext *;
+    public member q_function deleteTexture(GLuint id) : void;
+    public const member q_function device() : QPaintDevice *;
+    public virtual member q_function doneCurrent() : void;
+    public member q_function drawTexture(const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D) : void;
+    public member q_function drawTexture(const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D) : void;
+    public const member q_function format() : QGLFormat;
+    public const member q_function getProcAddress(const QString & proc) : void *;
+    public const member q_function isSharing() : bool;
+    public const member q_function isValid() : bool;
+    public virtual member q_function makeCurrent() : void;
+    public const member q_function overlayTransparentColor() : QColor;
+    public const member q_function requestedFormat() : QGLFormat;
+    public member q_function reset() : void;
+    public member q_function setFormat(const QGLFormat & format) : void;
+    public const virtual member q_function swapBuffers() : void;
+    public class q_function textureCacheLimit() : int;
+
+    protected virtual member q_function chooseContext(const QGLContext * shareContext = 0) : bool;
+    protected virtual member q_function chooseMacVisual(GDHandle handle) : void *;
+    protected virtual member q_function choosePixelFormat(void * dummyPfd, HDC pdc) : int;
+    protected virtual member q_function chooseVisual() : void *;
+    protected const member q_function deviceIsPixmap() : bool;
+    protected member q_function generateFontDisplayLists(const QFont & font, int listBase) : void;
+    protected const member q_function initialized() : bool;
+    protected member q_function setInitialized(bool on) : void;
+    protected member q_function setWindowCreated(bool on) : void;
+    protected const member q_function windowCreated() : bool;
+
+
+}
+

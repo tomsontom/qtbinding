@@ -1,0 +1,14 @@
+q_class QPropertyAnimation extends QVariantAnimation {
+    q_property QByteArray propertyName;
+    q_property QObject * targetObject;
+
+    public const member q_function propertyName() : QByteArray;
+    public member q_function setPropertyName(const QByteArray & propertyName) : void;
+    public member q_function setTargetObject(QObject * target) : void;
+    public const member q_function targetObject() : QObject *;
+
+    protected virtual member q_function updateCurrentValue(const QVariant & value) : void;
+
+
+}
+

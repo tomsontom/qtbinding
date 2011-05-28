@@ -1,0 +1,24 @@
+q_class QSqlError {
+    q_enumeration ErrorType {
+        NoError = 0
+        ConnectionError = 1
+        StatementError = 2
+        TransactionError = 3
+        UnknownError = 4
+    }
+
+
+    public const member q_function databaseText() : QString;
+    public const member q_function driverText() : QString;
+    public const member q_function isValid() : bool;
+    public const member q_function number() : int;
+    public member q_function setDatabaseText(const QString & databaseText) : void;
+    public member q_function setDriverText(const QString & driverText) : void;
+    public member q_function setNumber(int number) : void;
+    public member q_function setType(ErrorType type) : void;
+    public const member q_function text() : QString;
+    public const member q_function type() : ErrorType;
+
+
+}
+

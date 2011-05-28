@@ -1,0 +1,918 @@
+q_namespace Phonon {
+    q_namespace BackendCapabilities {
+        q_class Notifier extends QObject, QObject {
+
+
+        }
+
+
+        public class q_function availableAudioEffects() : QList<EffectDescription>;
+        public class q_function availableAudioOutputDevices() : QList<AudioOutputDevice>;
+        public class q_function availableMimeTypes() : QStringList;
+        public class q_function isMimeTypeAvailable(const QString & mimeType) : bool;
+
+
+    }
+
+    q_namespace Experimental {
+
+    }
+
+    q_namespace Factory {
+        q_class Sender extends QObject, QObject {
+
+
+        }
+
+
+        public class q_function backend(bool createWhenNull = true) : QObject *;
+        public class q_function backendComment() : QString;
+        public class q_function backendIcon() : QString;
+        public class q_function backendName() : QString;
+        public class q_function backendVersion() : QString;
+        public class q_function backendWebsite() : QString;
+        public class q_function createEffect(int effectId, QObject * parent = 0) : QObject *;
+        public class q_function createMediaObject(QObject * parent = 0) : QObject *;
+        public class q_function createVideoWidget(QObject * parent = 0) : QObject *;
+        public class q_function createVolumeFaderEffect(QObject * parent = 0) : QObject *;
+        public class q_function identifier() : QString;
+        public class q_function isMimeTypeAvailable(const QString & mimeType) : bool;
+        public class q_function platformPlugin() : PlatformPlugin *;
+        public class q_function registerQObject(QObject * object) : QObject *;
+        public class q_function sender() : Sender *;
+        public class q_function setBackend(QObject * ) : void;
+
+
+    }
+
+    q_namespace Platform {
+        public class q_function applicationName() : QString;
+        public class q_function createMediaStream(const QUrl & url, QObject * parent) : AbstractMediaStream *;
+        public class q_function deviceAccessListFor(const Phonon.AudioOutputDevice & deviceDesc) : QList<QPair<QByteArray, QString> >;
+        public class q_function icon(const QString & name, QStyle * style = 0) : QIcon;
+        public class q_function loadVolume(const QString & outputName) : qreal;
+        public class q_function notification(const char * notificationName, const QString & text, const QStringList & actions = QStringList(), QObject * receiver = 0, const char * actionSlot = 0) : void;
+        public class q_function saveVolume(const QString & outputName, qreal volume) : void;
+
+
+    }
+
+
+    q_enumeration Category {
+        NoCategory = -1
+        NotificationCategory = 0
+        MusicCategory = 1
+        VideoCategory = 2
+        CommunicationCategory = 3
+        GameCategory = 4
+        AccessibilityCategory = 5
+        LastCategory = AccessibilityCategory
+    }
+
+    q_enumeration DiscType {
+        NoDisc = -1
+        Cd = 0
+        Dvd = 1
+        Vcd = 2
+    }
+
+    q_enumeration ErrorType {
+        NoError = 0
+        NormalError = 1
+        FatalError = 2
+    }
+
+    q_enumeration MetaData {
+        ArtistMetaData = 0
+        AlbumMetaData = 1
+        TitleMetaData = 2
+        DateMetaData = 3
+        GenreMetaData = 4
+        TracknumberMetaData = 5
+        DescriptionMetaData = 6
+        MusicBrainzDiscIdMetaData = 7
+    }
+
+    q_enumeration ObjectDescriptionType {
+        AudioOutputDeviceType = 0
+        EffectType = 1
+        AudioChannelType = 2
+        SubtitleType = 3
+        AudioCaptureDeviceType = 4
+    }
+
+    q_enumeration State {
+        LoadingState = 0
+        StoppedState = 1
+        PlayingState = 2
+        BufferingState = 3
+        PausedState = 4
+        ErrorState = 5
+    }
+
+
+    q_typedef AudioCaptureDevice : ___UNKNOWN___;
+
+    q_typedef AudioCaptureDeviceModel : ___UNKNOWN___;
+
+    q_typedef AudioChannelDescription : ___UNKNOWN___;
+
+    q_typedef AudioChannelDescriptionModel : ___UNKNOWN___;
+
+    q_typedef AudioOutputDevice : ___UNKNOWN___;
+
+    q_typedef AudioOutputDeviceModel : ___UNKNOWN___;
+
+    q_typedef AudioOutputInterface : ___UNKNOWN___;
+
+    q_typedef CleanUpFunction : ___UNKNOWN___;
+
+    q_typedef EffectDescription : ___UNKNOWN___;
+
+    q_typedef EffectDescriptionModel : ___UNKNOWN___;
+
+    q_typedef QObjectPair : ___UNKNOWN___;
+
+    q_typedef SubtitleDescription : ___UNKNOWN___;
+
+    q_typedef SubtitleDescriptionModel : ___UNKNOWN___;
+
+    q_typedef VideoWidgetInterfaceLatest : ___UNKNOWN___;
+
+
+    q_class AbstractAudioOutput extends QObject, MediaNode {
+
+    }
+
+    q_class AbstractAudioOutputPrivate {
+        public virtual member q_function qObject() : QObject *;
+
+
+    }
+
+    q_class AbstractMediaStream extends QObject {
+        protected member q_function endOfData() : void;
+        protected virtual member q_function enoughData() : void;
+        protected member q_function error(Phonon.ErrorType errorType, const QString & errorString) : void;
+        protected purevirtual member q_function needData() : void;
+        protected purevirtual member q_function reset() : void;
+        protected virtual member q_function seekStream(qint64 offset) : void;
+        protected member q_function setStreamSeekable(bool s) : void;
+        protected member q_function setStreamSize(qint64 size) : void;
+        protected const member q_function streamSeekable() : bool;
+        protected const member q_function streamSize() : qint64;
+        protected member q_function writeData(const QByteArray & data) : void;
+
+
+    }
+
+    q_class AbstractMediaStreamPrivate {
+        public member q_function setMediaObjectPrivate(MediaObjectPrivate * ) : void;
+        public member q_function setStreamInterface(StreamInterface * ) : void;
+
+        protected virtual member q_function endOfData() : void;
+        protected virtual member q_function phononObjectDestroyed(MediaNodePrivate * ) : void;
+        protected virtual member q_function setStreamSeekable(bool s) : void;
+        protected virtual member q_function setStreamSize(qint64 newSize) : void;
+        protected virtual member q_function writeData(const QByteArray & data) : void;
+
+
+    }
+
+    q_class AbstractVideoOutput extends MediaNode {
+
+    }
+
+    q_class AbstractVideoOutputPrivate {
+
+    }
+
+    q_class AddonInterface {
+        q_enumeration AngleCommand {
+            availableAngles = 0
+            angle = 1
+            setAngle = 2
+        }
+
+        q_enumeration AudioChannelCommand {
+            availableAudioChannels = 0
+            currentAudioChannel = 1
+            setCurrentAudioChannel = 2
+        }
+
+        q_enumeration ChapterCommand {
+            availableChapters = 0
+            chapter = 1
+            setChapter = 2
+        }
+
+        q_enumeration Interface {
+            NavigationInterface = 1
+            ChapterInterface = 2
+            AngleInterface = 3
+            TitleInterface = 4
+            SubtitleInterface = 5
+            AudioChannelInterface = 6
+        }
+
+        q_enumeration NavigationCommand {
+            Menu1Button = 0
+        }
+
+        q_enumeration SubtitleCommand {
+            availableSubtitles = 0
+            currentSubtitle = 1
+            setCurrentSubtitle = 2
+        }
+
+        q_enumeration TitleCommand {
+            availableTitles = 0
+            title = 1
+            setTitle = 2
+            autoplayTitles = 3
+            setAutoplayTitles = 4
+        }
+
+
+
+    }
+
+    q_class AudioDataOutput extends QObject, MediaNode {
+        q_enumeration Channel {
+            LeftChannel = 0
+            RightChannel = 1
+            CenterChannel = 2
+            LeftSurroundChannel = 3
+            RightSurroundChannel = 4
+            SubwooferChannel = 5
+        }
+
+
+        q_property int dataSize;
+
+        public const member q_function dataSize() : int;
+        public const member q_function sampleRate() : int;
+
+
+
+
+    }
+
+    q_class AudioDataOutputInterface {
+
+    }
+
+    q_class AudioDataOutputPrivate {
+
+    }
+
+    q_class AudioOutput extends QObject, MediaNode {
+        q_property bool muted;
+        q_property QString name;
+        q_property AudioOutputDevice outputDevice;
+        q_property qreal volume;
+        q_property qreal volumeDecibel;
+
+        public const member q_function category() : Phonon.Category;
+        public const member q_function isMuted() : bool;
+        public const member q_function name() : QString;
+        public const member q_function outputDevice() : AudioOutputDevice;
+        public const member q_function volume() : qreal;
+        public const member q_function volumeDecibel() : qreal;
+
+
+
+
+    }
+
+    q_class AudioOutputAdaptor extends QDBusAbstractAdaptor {
+        q_property bool muted;
+        q_property int outputDeviceIndex;
+        q_property double volume;
+
+        public const member q_function muted() : bool;
+        public const member q_function outputDeviceIndex() : int;
+        public member q_function setMuted(bool value) : void;
+        public member q_function setOutputDeviceIndex(int value) : void;
+        public member q_function setVolume(double value) : void;
+        public const member q_function volume() : double;
+
+
+
+
+    }
+
+    q_class AudioOutputInterface40 {
+
+    }
+
+    q_class AudioOutputInterface42 {
+        public const member q_function deviceAccessListFor(const Phonon.AudioOutputDevice & ) : QList<QPair<QByteArray, QString> >;
+
+
+    }
+
+    q_class AudioOutputPrivate {
+        q_enumeration DeviceChangeType {
+            FallbackChange = 0
+            HigherPreferenceChange = 1
+            SoundSystemChange = 2
+        }
+
+
+        public member q_function getStreamUuid() : QString;
+        public member q_function init(Phonon.Category c) : void;
+
+        protected member q_function _k_audioDeviceFailed() : void;
+        protected member q_function _k_deviceChanged(QString streamUuid, int deviceIndex) : void;
+        protected member q_function _k_deviceListChanged() : void;
+        protected member q_function _k_revertFallback() : void;
+        protected member q_function _k_volumeChanged(qreal ) : void;
+        protected member q_function handleAutomaticDeviceChange(const AudioOutputDevice & newDev, DeviceChangeType type) : void;
+
+
+    }
+
+    q_class BackendCapabilitiesPrivate extends BackendCapabilities::Notifier {
+
+    }
+
+    q_class BackendInterface {
+        q_enumeration Class {
+            MediaObjectClass = 0
+            VolumeFaderEffectClass = 1
+            AudioOutputClass = 2
+            AudioDataOutputClass = 3
+            VisualizationClass = 4
+            VideoDataOutputClass = 5
+            EffectClass = 6
+            VideoWidgetClass = 7
+        }
+
+
+
+    }
+
+    q_class CleanUpGlobalStatic {
+
+    }
+
+    q_class ConstIface {
+
+    }
+
+    q_class Effect extends QObject, MediaNode {
+        public const member q_function description() : EffectDescription;
+        public const member q_function parameterValue(const EffectParameter & parameter) : QVariant;
+        public const member q_function parameters() : QList<EffectParameter>;
+        public member q_function setParameterValue(const EffectParameter & parameter, const QVariant & value) : void;
+
+
+    }
+
+    q_class EffectInterface {
+        public const purevirtual member q_function parameterValue(const EffectParameter & ) : QVariant;
+        public const purevirtual member q_function parameters() : QList<EffectParameter>;
+        public purevirtual member q_function setParameterValue(const EffectParameter & , const QVariant & newValue) : void;
+
+
+    }
+
+    q_class EffectParameter {
+        q_enumeration Hint {
+            ToggledHint = 4
+            LogarithmicHint = 16
+            IntegerHint = 32
+        }
+
+        q_flags Hints : Hint;
+
+
+        public const member q_function defaultValue() : QVariant;
+        public const member q_function description() : const QString &;
+        public const member q_function isLogarithmicControl() : bool;
+        public const member q_function maximumValue() : QVariant;
+        public const member q_function minimumValue() : QVariant;
+        public const member q_function possibleValues() : QVariantList;
+        public const member q_function type() : QVariant.Type;
+
+
+    }
+
+    q_class EffectParameterPrivate extends QSharedData {
+
+    }
+
+    q_class EffectPrivate {
+        public virtual member q_function qObject() : QObject *;
+
+
+    }
+
+    q_class EffectWidget extends QWidget {
+
+    }
+
+    q_class EffectWidgetPrivate {
+
+    }
+
+    q_class FrontendInterfacePrivate {
+        public member q_function _backendObjectChanged() : void;
+        public purevirtual member q_function backendObjectChanged(QObject * iface) : void;
+        public member q_function iface() : AddonInterface *;
+
+
+    }
+
+    q_class GlobalConfig {
+        q_enumeration DevicesToHideFlag {
+            ShowUnavailableDevices = 0
+            ShowAdvancedDevices = 0
+            HideAdvancedDevices = 1
+            AdvancedDevicesFromSettings = 2
+            HideUnavailableDevices = 4
+        }
+
+
+        public const member q_function audioCaptureDeviceFor(Phonon.Category category, int override = AdvancedDevicesFromSettings) : int;
+        public const member q_function audioCaptureDeviceListFor(Phonon.Category category, int override = AdvancedDevicesFromSettings) : QList<int>;
+        public const member q_function hideAdvancedDevices() : bool;
+        public member q_function setAudioCaptureDeviceListFor(Phonon.Category category, QList<int> order) : void;
+        public member q_function setAudioOutputDeviceListFor(Phonon.Category category, QList<int> order) : void;
+        public member q_function setHideAdvancedDevices(bool hide = true) : void;
+
+
+    }
+
+    q_class GlobalConfigPrivate {
+
+    }
+
+    q_class IODeviceStream extends QObject {
+
+    }
+
+    q_class ListModelHelper extends QAbstractListModel {
+
+    }
+
+    q_class MediaController extends QObject {
+        q_enumeration Feature {
+            Angles = 1
+            Chapters = 2
+            Titles = 4
+        }
+
+        q_flags Features : Feature;
+
+
+        public const member q_function autoplayTitles() : bool;
+        public const member q_function availableAngles() : int;
+        public const member q_function availableChapters() : int;
+        public const member q_function availableTitles() : int;
+        public const member q_function currentAngle() : int;
+        public const member q_function currentChapter() : int;
+        public const member q_function currentTitle() : int;
+        public const member q_function supportedFeatures() : Features;
+
+
+
+
+    }
+
+    q_class MediaNode {
+        public const member q_function inputPaths() : QList<Path>;
+        public const member q_function isValid() : bool;
+        public const member q_function outputPaths() : QList<Path>;
+
+
+    }
+
+    q_class MediaNodeDestructionHandler {
+
+    }
+
+    q_class MediaNodePrivate {
+        q_enumeration CastId {
+            MediaNodePrivateType = 0
+            AbstractAudioOutputPrivateType = 1
+            AudioOutputType = 2
+        }
+
+
+        public member q_function addDestructionHandler(MediaNodeDestructionHandler * handler) : void;
+        public member q_function addInputPath(const Path & ) : void;
+        public member q_function addOutputPath(const Path & ) : void;
+        public member q_function backendObject() : QObject *;
+        public virtual member q_function qObject() : QObject *;
+        public const member q_function qObject() : const QObject *;
+        public member q_function removeDestructionHandler(MediaNodeDestructionHandler * handler) : void;
+        public member q_function removeInputPath(const Path & ) : void;
+        public member q_function removeOutputPath(const Path & ) : void;
+
+        protected purevirtual member q_function aboutToDeleteBackendObject() : bool;
+        protected purevirtual member q_function createBackendObject() : void;
+        protected member q_function deleteBackendObject() : void;
+
+
+    }
+
+    q_class MediaObject extends QObject, MediaNode {
+        q_property qint32 prefinishMark;
+        q_property qint32 tickInterval;
+        q_property qint32 transitionTime;
+
+        public member q_function clearQueue() : void;
+        public const member q_function currentSource() : MediaSource;
+        public const member q_function currentTime() : qint64;
+        public member q_function enqueue(const QList<QUrl> & urls) : void;
+        public member q_function enqueue(const MediaSource & source) : void;
+        public member q_function enqueue(const QList<MediaSource> & sources) : void;
+        public const member q_function errorString() : QString;
+        public const member q_function errorType() : ErrorType;
+        public const member q_function hasVideo() : bool;
+        public const member q_function isSeekable() : bool;
+        public const member q_function metaData(const QString & key) : QStringList;
+        public const member q_function metaData() : QMultiMap<QString, QString>;
+        public const member q_function metaData(Phonon.MetaData key) : QStringList;
+        public const member q_function prefinishMark() : qint32;
+        public const member q_function queue() : QList<MediaSource>;
+        public const member q_function remainingTime() : qint64;
+        public member q_function setCurrentSource(const MediaSource & source) : void;
+        public member q_function setPrefinishMark(qint32 msecToEnd) : void;
+        public member q_function setQueue(const QList<MediaSource> & sources) : void;
+        public member q_function setQueue(const QList<QUrl> & urls) : void;
+        public member q_function setTransitionTime(qint32 msec) : void;
+        public const member q_function state() : State;
+        public const member q_function tickInterval() : qint32;
+        public const member q_function totalTime() : qint64;
+        public const member q_function transitionTime() : qint32;
+
+
+
+
+    }
+
+    q_class MediaObjectInterface {
+
+    }
+
+    q_class MediaObjectPrivate {
+        protected member q_function _k_aboutToFinish() : void;
+        protected member q_function _k_currentSourceChanged(const MediaSource & ) : void;
+        protected member q_function _k_metaDataChanged(const QMultiMap<QString, QString> & ) : void;
+        protected member q_function _k_resumePause() : void;
+        protected member q_function _k_resumePlay() : void;
+        protected member q_function _k_stateChanged(Phonon.State , Phonon.State ) : void;
+        protected virtual member q_function aboutToDeleteBackendObject() : bool;
+        protected virtual member q_function createBackendObject() : void;
+        protected virtual member q_function phononObjectDestroyed(MediaNodePrivate * ) : void;
+        protected member q_function setupBackendObject() : void;
+        protected member q_function streamError(Phonon.ErrorType , const QString & ) : void;
+
+
+    }
+
+    q_class MediaSource {
+        q_enumeration Type {
+            Invalid = -1
+            LocalFile = 0
+            Url = 1
+            Disc = 2
+            Stream = 3
+            Empty = 4
+        }
+
+
+        public const member q_function autoDelete() : bool;
+        public const member q_function deviceName() : QString;
+        public const member q_function discType() : Phonon.DiscType;
+        public const member q_function fileName() : QString;
+        public member q_function setAutoDelete(bool enable) : void;
+        public const member q_function type() : Type;
+        public const member q_function url() : QUrl;
+
+
+    }
+
+    q_class MediaSourcePrivate extends QSharedData {
+        public member q_function setStream(AbstractMediaStream * s) : void;
+
+
+    }
+
+    q_class ObjectDescription {
+        public const member q_function description() : QString;
+        public const member q_function index() : int;
+        public const member q_function isValid() : bool;
+        public const member q_function name() : QString;
+        public const member q_function property(const char * name) : QVariant;
+        public const member q_function propertyNames() : QList<QByteArray>;
+
+
+    }
+
+    q_class ObjectDescriptionData extends QSharedData {
+        public const member q_function description() : QString;
+        public const member q_function index() : int;
+        public const member q_function isValid() : bool;
+        public const member q_function name() : QString;
+        public const member q_function property(const char * name) : QVariant;
+        public const member q_function propertyNames() : QList<QByteArray>;
+
+
+    }
+
+    q_class ObjectDescriptionModel extends QAbstractListModel {
+        public const virtual member q_function data(const QModelIndex & index, int role = Qt.DisplayRole) : QVariant;
+        public virtual member q_function dropMimeData(const QMimeData * data, Qt.DropAction action, int row, int column, const QModelIndex & parent) : bool;
+        public const virtual member q_function mimeTypes() : QStringList;
+        public const member q_function modelData() : QList<ObjectDescription<type> >;
+        public const member q_function modelData(const QModelIndex & index) : ObjectDescription<type>;
+        public member q_function moveDown(const QModelIndex & index) : void;
+        public member q_function moveUp(const QModelIndex & index) : void;
+        public virtual member q_function removeRows(int row, int count, const QModelIndex & parent = QModelIndex()) : bool;
+        public const virtual member q_function rowCount(const QModelIndex & parent = QModelIndex()) : int;
+        public member q_function setModelData(const QList<ObjectDescription<type> > & data) : void;
+        public const virtual member q_function supportedDropActions() : Qt.DropActions;
+        public const member q_function tupleIndexAtPositionIndex(int positionIndex) : int;
+        public const member q_function tupleIndexOrder() : QList<int>;
+
+
+    }
+
+    q_class ObjectDescriptionModelData {
+        public member q_function dropMimeData(ObjectDescriptionType type, const QMimeData * data, Qt.DropAction action, int row, int column, const QModelIndex & parent) : bool;
+        public const member q_function flags(const QModelIndex & index) : Qt.ItemFlags;
+        public const member q_function mimeData(ObjectDescriptionType type, const QModelIndexList & indexes) : QMimeData *;
+        public const member q_function mimeTypes(ObjectDescriptionType type) : QStringList;
+        public const member q_function modelData(const QModelIndex & index) : QExplicitlySharedDataPointer<ObjectDescriptionData>;
+        public const member q_function modelData() : QList<QExplicitlySharedDataPointer<ObjectDescriptionData> >;
+        public member q_function moveDown(const QModelIndex & index) : void;
+        public member q_function moveUp(const QModelIndex & index) : void;
+        public member q_function removeRows(int row, int count, const QModelIndex & parent = QModelIndex()) : bool;
+        public const member q_function rowCount(const QModelIndex & parent = QModelIndex()) : int;
+        public member q_function setModelData(const QList<QExplicitlySharedDataPointer<ObjectDescriptionData> > & data) : void;
+        public const member q_function supportedDropActions() : Qt.DropActions;
+        public const member q_function tupleIndexAtPositionIndex(int positionIndex) : int;
+        public const member q_function tupleIndexOrder() : QList<int>;
+
+
+    }
+
+    q_class ObjectDescriptionModelDataPrivate {
+
+    }
+
+    q_class ObjectDescriptionPrivate {
+
+    }
+
+    q_class Path {
+        public member q_function disconnect() : bool;
+        public const member q_function effects() : QList<Effect *>;
+        public member q_function insertEffect(Effect * effect, Effect * insertBefore = 0) : bool;
+        public const member q_function isValid() : bool;
+        public member q_function reconnect(MediaNode * source, MediaNode * sink) : bool;
+        public member q_function removeEffect(Effect * effect) : bool;
+        public const member q_function sink() : MediaNode *;
+        public const member q_function source() : MediaNode *;
+
+
+    }
+
+    q_class PathPrivate extends QSharedData {
+        protected virtual member q_function phononObjectDestroyed(MediaNodePrivate * ) : void;
+
+
+    }
+
+    q_class PlatformPlugin {
+        public const purevirtual member q_function applicationName() : QString;
+        public purevirtual member q_function createBackend(const QString & library, const QString & version) : QObject *;
+        public purevirtual member q_function createBackend() : QObject *;
+        public purevirtual member q_function createMediaStream(const QUrl & url, QObject * parent) : AbstractMediaStream *;
+        public const virtual member q_function deviceAccessListFor(const Phonon.AudioOutputDevice & ) : QList<QPair<QByteArray, QString> >;
+        public const purevirtual member q_function icon(const QString & name) : QIcon;
+        public const purevirtual member q_function isMimeTypeAvailable(const QString & mimeType) : bool;
+        public const purevirtual member q_function loadVolume(const QString & outputName) : qreal;
+        public const purevirtual member q_function notification(const char * notificationName, const QString & text, const QStringList & actions = QStringList(), QObject * receiver = 0, const char * actionSlot = 0) : void;
+        public const purevirtual member q_function objectDescriptionIndexes(ObjectDescriptionType type) : QList<int>;
+        public const purevirtual member q_function objectDescriptionProperties(ObjectDescriptionType type, int index) : QHash<QByteArray, QVariant>;
+        public purevirtual member q_function saveVolume(const QString & outputName, qreal volume) : void;
+
+
+    }
+
+    q_class PulseSupport extends QObject {
+        public member q_function clearStreamCache(QString streamUuid) : void;
+        public member q_function emitObjectDescriptionChanged(ObjectDescriptionType ) : void;
+        public member q_function emitUsingDevice(QString streamUuid, int device) : void;
+        public member q_function enable(bool enabled = true) : void;
+        public class q_function getInstance() : PulseSupport *;
+        public member q_function isActive() : bool;
+        public const member q_function objectDescriptionIndexes(ObjectDescriptionType type) : QList<int>;
+        public const member q_function objectDescriptionProperties(ObjectDescriptionType type, int index) : QHash<QByteArray, QVariant>;
+        public const member q_function objectIndexesByCategory(ObjectDescriptionType type, Category category) : QList<int>;
+        public member q_function setCaptureDevice(QString streamUuid, int device) : bool;
+        public member q_function setCaptureDevicePriorityForCategory(Category category, QList<int> order) : void;
+        public member q_function setOutputDevice(QString streamUuid, int device) : bool;
+        public member q_function setOutputDevicePriorityForCategory(Category category, QList<int> order) : void;
+        public member q_function setStreamPropList(Category category, QString streamUuid) : void;
+        public class q_function shutdown() : void;
+
+
+
+    }
+
+    q_class QSettingsGroup {
+        public const member q_function hasKey(const QString & key) : bool;
+        public member q_function removeEntry(const QString & key) : void;
+        public member q_function setValue(const QString & key, const T & value) : void;
+        public const member q_function value(const QString & key, const QVariant & def) : QVariant;
+        public const member q_function value(const QString & key, const T & def) : T;
+
+
+    }
+
+    q_class SeekSlider extends QWidget {
+        q_property QSize iconSize;
+        q_property bool iconVisible;
+        q_property Qt.Orientation orientation;
+        q_property int pageStep;
+        q_property int singleStep;
+        q_property bool tracking;
+
+        public const member q_function hasTracking() : bool;
+        public const member q_function iconSize() : QSize;
+        public const member q_function isIconVisible() : bool;
+        public const member q_function mediaObject() : MediaObject *;
+        public const member q_function orientation() : Qt.Orientation;
+        public const member q_function pageStep() : int;
+        public member q_function setPageStep(int milliseconds) : void;
+        public member q_function setSingleStep(int milliseconds) : void;
+        public member q_function setTracking(bool tracking) : void;
+        public const member q_function singleStep() : int;
+
+
+
+    }
+
+    q_class SeekSliderPrivate {
+
+    }
+
+    q_class StreamInterface {
+
+    }
+
+    q_class StreamInterfacePrivate {
+        public member q_function disconnectMediaStream() : void;
+
+
+    }
+
+    q_class SwiftSlider extends QSlider {
+
+    }
+
+    q_class VideoPlayer extends QWidget {
+        public const member q_function audioOutput() : AudioOutput *;
+        public const member q_function currentTime() : qint64;
+        public const member q_function isPaused() : bool;
+        public const member q_function isPlaying() : bool;
+        public const member q_function mediaObject() : MediaObject *;
+        public const member q_function totalTime() : qint64;
+        public const member q_function videoWidget() : VideoWidget *;
+        public const member q_function volume() : float;
+
+
+
+
+    }
+
+    q_class VideoWidget extends QWidget, MediaNode {
+        q_enumeration AspectRatio {
+            AspectRatioAuto = 0
+            AspectRatioWidget = 1
+            AspectRatio4_3 = 2
+            AspectRatio16_9 = 3
+        }
+
+        q_enumeration ScaleMode {
+            FitInView = 0
+            ScaleAndCrop = 1
+        }
+
+
+        q_property AspectRatio aspectRatio;
+        q_property qreal brightness;
+        q_property qreal contrast;
+        q_property bool fullScreen;
+        q_property qreal hue;
+        q_property qreal saturation;
+        q_property ScaleMode scaleMode;
+
+        public const member q_function aspectRatio() : AspectRatio;
+        public const member q_function brightness() : qreal;
+        public const member q_function contrast() : qreal;
+        public const member q_function hue() : qreal;
+        public const member q_function saturation() : qreal;
+        public const member q_function scaleMode() : ScaleMode;
+        public const member q_function snapshot() : QImage;
+
+
+
+    }
+
+    q_class VideoWidgetInterface {
+
+    }
+
+    q_class VideoWidgetInterface44 {
+        public const purevirtual member q_function snapshot() : QImage;
+
+
+    }
+
+    q_class VideoWidgetPrivate {
+        public virtual member q_function qObject() : QObject *;
+
+        protected virtual member q_function createBackendObject() : void;
+        protected member q_function setupBackendObject() : void;
+
+
+    }
+
+    q_class VolumeFaderEffect extends Effect {
+        q_enumeration FadeCurve {
+            Fade3Decibel = 0
+            Fade6Decibel = 1
+            Fade9Decibel = 2
+            Fade12Decibel = 3
+        }
+
+
+        q_property FadeCurve fadeCurve;
+        q_property float volume;
+        q_property double volumeDecibel;
+
+        public const member q_function fadeCurve() : FadeCurve;
+        public const member q_function volume() : float;
+        public const member q_function volumeDecibel() : double;
+
+
+
+    }
+
+    q_class VolumeFaderEffectPrivate {
+
+    }
+
+    q_class VolumeFaderInterface {
+
+    }
+
+    q_class VolumeSlider extends QWidget {
+        q_property QSize iconSize;
+        q_property qreal maximumVolume;
+        q_property bool muteVisible;
+        q_property Qt.Orientation orientation;
+        q_property int pageStep;
+        q_property int singleStep;
+        q_property bool tracking;
+
+        public const member q_function audioOutput() : AudioOutput *;
+        public const member q_function hasTracking() : bool;
+        public const member q_function iconSize() : QSize;
+        public const member q_function isMuteVisible() : bool;
+        public const member q_function maximumVolume() : qreal;
+        public const member q_function orientation() : Qt.Orientation;
+        public const member q_function pageStep() : int;
+        public member q_function setPageStep(int milliseconds) : void;
+        public member q_function setSingleStep(int milliseconds) : void;
+        public member q_function setTracking(bool tracking) : void;
+        public const member q_function singleStep() : int;
+
+
+
+    }
+
+    q_class VolumeSliderPrivate {
+        protected member q_function _k_buttonClicked() : void;
+        protected member q_function _k_mutedChanged(bool ) : void;
+        protected member q_function _k_sliderChanged(int ) : void;
+        protected member q_function _k_volumeChanged(qreal ) : void;
+
+
+    }
+
+
+    public class q_function categoryToString(Category c) : QString;
+    public class q_function createPath(MediaNode * source, MediaNode * sink) : Path;
+    public class q_function phononVersion() : const char *;
+
+
+}
+

@@ -1,0 +1,13 @@
+q_class QStyleOptionComboBox extends QStyleOptionComplex {
+    q_enumeration StyleOptionType {
+        Type = SO_ComboBox
+    }
+
+    q_enumeration StyleOptionVersion {
+        Version = 1
+    }
+
+
+
+}
+

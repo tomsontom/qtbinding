@@ -1,0 +1,22 @@
+q_class QWebHistory {
+    public member q_function back() : void;
+    public const member q_function backItem() : QWebHistoryItem;
+    public const member q_function backItems(int maxItems) : QList<QWebHistoryItem>;
+    public const member q_function canGoBack() : bool;
+    public const member q_function canGoForward() : bool;
+    public member q_function clear() : void;
+    public const member q_function count() : int;
+    public const member q_function currentItem() : QWebHistoryItem;
+    public const member q_function currentItemIndex() : int;
+    public member q_function forward() : void;
+    public const member q_function forwardItem() : QWebHistoryItem;
+    public const member q_function forwardItems(int maxItems) : QList<QWebHistoryItem>;
+    public member q_function goToItem(const QWebHistoryItem & item) : void;
+    public const member q_function itemAt(int i) : QWebHistoryItem;
+    public const member q_function items() : QList<QWebHistoryItem>;
+    public const member q_function maximumItemCount() : int;
+    public member q_function setMaximumItemCount(int count) : void;
+
+
+}
+

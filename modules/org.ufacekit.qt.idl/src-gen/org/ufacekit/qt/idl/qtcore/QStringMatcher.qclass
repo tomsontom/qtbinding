@@ -1,0 +1,16 @@
+q_class QStringMatcher {
+    q_class Data {
+
+    }
+
+
+    public const member q_function caseSensitivity() : Qt.CaseSensitivity;
+    public const member q_function indexIn(const QChar * str, int length, int from = 0) : int;
+    public const member q_function indexIn(const QString & str, int from = 0) : int;
+    public const member q_function pattern() : QString;
+    public member q_function setCaseSensitivity(Qt.CaseSensitivity cs) : void;
+    public member q_function setPattern(const QString & pattern) : void;
+
+
+}
+

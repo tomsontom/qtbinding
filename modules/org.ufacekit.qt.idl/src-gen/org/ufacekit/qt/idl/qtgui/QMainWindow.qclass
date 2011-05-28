@@ -1,0 +1,72 @@
+q_class QMainWindow extends QWidget {
+    q_enumeration DockOption {
+        AnimatedDocks = 1
+        AllowNestedDocks = 2
+        AllowTabbedDocks = 4
+        ForceTabbedDocks = 8
+        VerticalTabs = 16
+    }
+
+    q_flags DockOptions : DockOption;
+
+
+    q_property bool animated;
+    q_property bool dockNestingEnabled;
+    q_property DockOptions dockOptions;
+    q_property bool documentMode;
+    q_property QSize iconSize;
+    q_property QTabWidget.TabShape tabShape;
+    q_property Qt.ToolButtonStyle toolButtonStyle;
+    q_property bool unifiedTitleAndToolBarOnMac;
+
+    public member q_function addDockWidget(Qt.DockWidgetArea area, QDockWidget * dockwidget) : void;
+    public member q_function addDockWidget(Qt.DockWidgetArea area, QDockWidget * dockwidget, Qt.Orientation orientation) : void;
+    public member q_function addToolBar(Qt.ToolBarArea area, QToolBar * toolbar) : void;
+    public member q_function addToolBar(const QString & title) : QToolBar *;
+    public member q_function addToolBar(QToolBar * toolbar) : void;
+    public member q_function addToolBarBreak(Qt.ToolBarArea area = Qt.TopToolBarArea) : void;
+    public const member q_function centralWidget() : QWidget *;
+    public const member q_function corner(Qt.Corner corner) : Qt.DockWidgetArea;
+    public virtual member q_function createPopupMenu() : QMenu *;
+    public const member q_function dockOptions() : DockOptions;
+    public const member q_function dockWidgetArea(QDockWidget * dockwidget) : Qt.DockWidgetArea;
+    public const member q_function documentMode() : bool;
+    public const member q_function iconSize() : QSize;
+    public member q_function insertToolBar(QToolBar * before, QToolBar * toolbar) : void;
+    public member q_function insertToolBarBreak(QToolBar * before) : void;
+    public const member q_function isAnimated() : bool;
+    public const member q_function isDockNestingEnabled() : bool;
+    public const member q_function menuWidget() : QWidget *;
+    public member q_function removeDockWidget(QDockWidget * dockwidget) : void;
+    public member q_function removeToolBar(QToolBar * toolbar) : void;
+    public member q_function removeToolBarBreak(QToolBar * before) : void;
+    public member q_function restoreDockWidget(QDockWidget * dockwidget) : bool;
+    public member q_function restoreState(const QByteArray & state, int version = 0) : bool;
+    public member q_function setCentralWidget(QWidget * widget) : void;
+    public member q_function setCorner(Qt.Corner corner, Qt.DockWidgetArea area) : void;
+    public member q_function setDockOptions(DockOptions options) : void;
+    public member q_function setDocumentMode(bool enabled) : void;
+    public member q_function setIconSize(const QSize & iconSize) : void;
+    public member q_function setMenuBar(QMenuBar * menuBar) : void;
+    public member q_function setMenuWidget(QWidget * menuBar) : void;
+    public member q_function setStatusBar(QStatusBar * statusbar) : void;
+    public member q_function setTabPosition(Qt.DockWidgetAreas areas, QTabWidget.TabPosition tabPosition) : void;
+    public member q_function setTabShape(QTabWidget.TabShape tabShape) : void;
+    public member q_function setToolButtonStyle(Qt.ToolButtonStyle toolButtonStyle) : void;
+    public member q_function setUnifiedTitleAndToolBarOnMac(bool set) : void;
+    public member q_function splitDockWidget(QDockWidget * first, QDockWidget * second, Qt.Orientation orientation) : void;
+    public const member q_function statusBar() : QStatusBar *;
+    public const member q_function tabPosition(Qt.DockWidgetArea area) : QTabWidget.TabPosition;
+    public const member q_function tabShape() : QTabWidget.TabShape;
+    public const member q_function tabifiedDockWidgets(QDockWidget * dockwidget) : QList<QDockWidget *>;
+    public member q_function tabifyDockWidget(QDockWidget * first, QDockWidget * second) : void;
+    public const member q_function toolBarArea(QToolBar * toolbar) : Qt.ToolBarArea;
+    public const member q_function toolBarBreak(QToolBar * toolbar) : bool;
+    public const member q_function toolButtonStyle() : Qt.ToolButtonStyle;
+    public const member q_function unifiedTitleAndToolBarOnMac() : bool;
+
+
+
+
+}
+

@@ -1,0 +1,29 @@
+q_class QSessionManager extends QObject {
+    q_enumeration RestartHint {
+        RestartIfRunning = 0
+        RestartAnyway = 1
+        RestartImmediately = 2
+        RestartNever = 3
+    }
+
+
+    public member q_function allowsErrorInteraction() : bool;
+    public member q_function allowsInteraction() : bool;
+    public member q_function cancel() : void;
+    public const member q_function discardCommand() : QStringList;
+    public const member q_function isPhase2() : bool;
+    public member q_function release() : void;
+    public member q_function requestPhase2() : void;
+    public const member q_function restartCommand() : QStringList;
+    public const member q_function restartHint() : RestartHint;
+    public const member q_function sessionId() : QString;
+    public const member q_function sessionKey() : QString;
+    public member q_function setDiscardCommand(const QStringList & list) : void;
+    public member q_function setManagerProperty(const QString & name, const QString & value) : void;
+    public member q_function setManagerProperty(const QString & name, const QStringList & value) : void;
+    public member q_function setRestartCommand(const QStringList & command) : void;
+    public member q_function setRestartHint(RestartHint hint) : void;
+
+
+}
+

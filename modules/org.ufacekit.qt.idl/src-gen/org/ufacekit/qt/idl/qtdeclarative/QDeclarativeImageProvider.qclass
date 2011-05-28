@@ -1,0 +1,14 @@
+q_class QDeclarativeImageProvider {
+    q_enumeration ImageType {
+        Image = 0
+        Pixmap = 1
+    }
+
+
+    public const member q_function imageType() : ImageType;
+    public virtual member q_function requestImage(const QString & id, QSize * size, const QSize & requestedSize) : QImage;
+    public virtual member q_function requestPixmap(const QString & id, QSize * size, const QSize & requestedSize) : QPixmap;
+
+
+}
+

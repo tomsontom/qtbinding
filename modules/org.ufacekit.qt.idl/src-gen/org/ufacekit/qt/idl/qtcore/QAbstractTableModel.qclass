@@ -1,0 +1,6 @@
+q_class QAbstractTableModel extends QAbstractItemModel {
+    public const virtual member q_function index(int row, int column, const QModelIndex & parent = QModelIndex()) : QModelIndex;
+
+
+}
+

@@ -1,0 +1,11 @@
+q_class QPrinterInfo {
+    public class q_function availablePrinters() : QList<QPrinterInfo>;
+    public class q_function defaultPrinter() : QPrinterInfo;
+    public const member q_function isDefault() : bool;
+    public const member q_function isNull() : bool;
+    public const member q_function printerName() : QString;
+    public const member q_function supportedPaperSizes() : QList<QPrinter.PaperSize>;
+
+
+}
+

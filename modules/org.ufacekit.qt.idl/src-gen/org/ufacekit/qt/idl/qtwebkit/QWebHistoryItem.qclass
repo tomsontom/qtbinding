@@ -1,0 +1,13 @@
+q_class QWebHistoryItem {
+    public const member q_function icon() : QIcon;
+    public const member q_function isValid() : bool;
+    public const member q_function lastVisited() : QDateTime;
+    public const member q_function originalUrl() : QUrl;
+    public member q_function setUserData(const QVariant & userData) : void;
+    public const member q_function title() : QString;
+    public const member q_function url() : QUrl;
+    public const member q_function userData() : QVariant;
+
+
+}
+

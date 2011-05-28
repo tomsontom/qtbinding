@@ -1,0 +1,25 @@
+q_class QNetworkCacheMetaData {
+    q_typedef AttributesMap : ___UNKNOWN___;
+
+    q_typedef RawHeader : ___UNKNOWN___;
+
+    q_typedef RawHeaderList : ___UNKNOWN___;
+
+
+    public const member q_function attributes() : AttributesMap;
+    public const member q_function expirationDate() : QDateTime;
+    public const member q_function isValid() : bool;
+    public const member q_function lastModified() : QDateTime;
+    public const member q_function rawHeaders() : RawHeaderList;
+    public const member q_function saveToDisk() : bool;
+    public member q_function setAttributes(const AttributesMap & attributes) : void;
+    public member q_function setExpirationDate(const QDateTime & dateTime) : void;
+    public member q_function setLastModified(const QDateTime & dateTime) : void;
+    public member q_function setRawHeaders(const RawHeaderList & list) : void;
+    public member q_function setSaveToDisk(bool allow) : void;
+    public member q_function setUrl(const QUrl & url) : void;
+    public const member q_function url() : QUrl;
+
+
+}
+

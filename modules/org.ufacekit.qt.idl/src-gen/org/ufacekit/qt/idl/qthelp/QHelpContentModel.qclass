@@ -1,0 +1,15 @@
+q_class QHelpContentModel extends QAbstractItemModel {
+    public const virtual member q_function columnCount(const QModelIndex & parent = QModelIndex()) : int;
+    public const member q_function contentItemAt(const QModelIndex & index) : QHelpContentItem *;
+    public member q_function createContents(const QString & customFilterName) : void;
+    public const virtual member q_function data(const QModelIndex & index, int role) : QVariant;
+    public const virtual member q_function index(int row, int column, const QModelIndex & parent = QModelIndex()) : QModelIndex;
+    public const member q_function isCreatingContents() : bool;
+    public const virtual member q_function parent(const QModelIndex & index) : QModelIndex;
+    public const virtual member q_function rowCount(const QModelIndex & parent = QModelIndex()) : int;
+
+
+
+
+}
+

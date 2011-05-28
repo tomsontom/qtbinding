@@ -1,0 +1,13 @@
+q_class QStyleOptionGroupBox extends QStyleOptionComplex {
+    q_enumeration StyleOptionType {
+        Type = SO_GroupBox
+    }
+
+    q_enumeration StyleOptionVersion {
+        Version = 1
+    }
+
+
+
+}
+

@@ -1,0 +1,25 @@
+q_class QPageSetupDialog extends QDialog {
+    q_enumeration PageSetupDialogOption {
+        None = 0
+        DontUseSheet = 1
+        OwnsPrinter = 2147483648
+    }
+
+    q_flags PageSetupDialogOptions : PageSetupDialogOption;
+
+
+    q_property PageSetupDialogOptions options;
+
+    public member q_function addEnabledOption(PageSetupDialogOption option) : void;
+    public const member q_function enabledOptions() : PageSetupDialogOptions;
+    public const member q_function isOptionEnabled(PageSetupDialogOption option) : bool;
+    public member q_function open(QObject * receiver, const char * member) : void;
+    public const member q_function options() : PageSetupDialogOptions;
+    public member q_function setEnabledOptions(PageSetupDialogOptions options) : void;
+    public member q_function setOption(PageSetupDialogOption option, bool on = true) : void;
+    public member q_function setOptions(PageSetupDialogOptions options) : void;
+    public const member q_function testOption(PageSetupDialogOption option) : bool;
+
+
+}
+

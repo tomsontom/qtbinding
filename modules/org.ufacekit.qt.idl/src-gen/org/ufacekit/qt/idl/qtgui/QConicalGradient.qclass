@@ -1,0 +1,10 @@
+q_class QConicalGradient extends QGradient {
+    public const member q_function angle() : qreal;
+    public const member q_function center() : QPointF;
+    public member q_function setAngle(qreal angle) : void;
+    public member q_function setCenter(const QPointF & center) : void;
+    public member q_function setCenter(qreal x, qreal y) : void;
+
+
+}
+

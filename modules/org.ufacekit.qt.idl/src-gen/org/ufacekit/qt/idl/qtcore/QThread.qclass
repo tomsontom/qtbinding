@@ -1,0 +1,38 @@
+q_class QThread extends QObject {
+    q_enumeration Priority {
+        IdlePriority = 0
+        LowestPriority = 1
+        LowPriority = 2
+        NormalPriority = 3
+        HighPriority = 4
+        HighestPriority = 5
+        TimeCriticalPriority = 6
+        InheritPriority = 7
+    }
+
+
+    public class q_function currentThread() : QThread *;
+    public class q_function currentThreadId() : Qt.HANDLE;
+    public member q_function exit(int returnCode = 0) : void;
+    public class q_function idealThreadCount() : int;
+    public const member q_function isFinished() : bool;
+    public const member q_function isRunning() : bool;
+    public const member q_function priority() : Priority;
+    public member q_function setPriority(Priority priority) : void;
+    public member q_function setStackSize(uint stackSize) : void;
+    public const member q_function stackSize() : uint;
+    public member q_function wait(unsigned long time = ULONG_MAX) : bool;
+    public class q_function yieldCurrentThread() : void;
+
+    protected member q_function exec() : int;
+    protected class q_function msleep(unsigned long msecs) : void;
+    protected virtual member q_function run() : void;
+    protected class q_function setTerminationEnabled(bool enabled = true) : void;
+    protected class q_function sleep(unsigned long secs) : void;
+    protected class q_function usleep(unsigned long usecs) : void;
+
+
+
+
+}
+

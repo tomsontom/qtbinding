@@ -1,0 +1,83 @@
+q_class QInputDialog extends QDialog {
+    q_enumeration InputDialogOption {
+        NoButtons = 1
+        UseListViewForComboBoxItems = 2
+    }
+
+    q_flags InputDialogOptions : InputDialogOption;
+
+    q_enumeration InputMode {
+        TextInput = 0
+        IntInput = 1
+        DoubleInput = 2
+    }
+
+
+    q_property QString cancelButtonText;
+    q_property bool comboBoxEditable;
+    q_property QStringList comboBoxItems;
+    q_property int doubleDecimals;
+    q_property double doubleMaximum;
+    q_property double doubleMinimum;
+    q_property int doubleValue;
+    q_property InputMode inputMode;
+    q_property int intMaximum;
+    q_property int intMinimum;
+    q_property int intStep;
+    q_property int intValue;
+    q_property QString labelText;
+    q_property QString okButtonText;
+    q_property InputDialogOptions options;
+    q_property QLineEdit.EchoMode textEchoMode;
+    q_property QString textValue;
+
+    public const member q_function cancelButtonText() : QString;
+    public const member q_function comboBoxItems() : QStringList;
+    public virtual member q_function done(int result) : void;
+    public const member q_function doubleDecimals() : int;
+    public const member q_function doubleMaximum() : double;
+    public const member q_function doubleMinimum() : double;
+    public const member q_function doubleValue() : double;
+    public class q_function getDouble(QWidget * parent, const QString & title, const QString & label, double value = 0, double min = -2147483647, double max = 2147483647, int decimals = 1, bool * ok = 0, Qt.WindowFlags flags = 0) : double;
+    public class q_function getInt(QWidget * parent, const QString & title, const QString & label, int value = 0, int min = -2147483647, int max = 2147483647, int step = 1, bool * ok = 0, Qt.WindowFlags flags = 0) : int;
+    public class q_function getInteger(QWidget * parent, const QString & title, const QString & label, int value = 0, int min = -2147483647, int max = 2147483647, int step = 1, bool * ok = 0, Qt.WindowFlags flags = 0) : int;
+    public class q_function getItem(QWidget * parent, const QString & title, const QString & label, const QStringList & items, int current = 0, bool editable = true, bool * ok = 0, Qt.WindowFlags flags = 0) : QString;
+    public class q_function getText(QWidget * parent, const QString & title, const QString & label, QLineEdit.EchoMode mode = QLineEdit.Normal, const QString & text = QString(), bool * ok = 0, Qt.WindowFlags flags = 0) : QString;
+    public const member q_function inputMode() : InputMode;
+    public const member q_function intMaximum() : int;
+    public const member q_function intMinimum() : int;
+    public const member q_function intStep() : int;
+    public const member q_function intValue() : int;
+    public const member q_function isComboBoxEditable() : bool;
+    public const member q_function labelText() : QString;
+    public const member q_function okButtonText() : QString;
+    public member q_function open(QObject * receiver, const char * member) : void;
+    public const member q_function options() : InputDialogOptions;
+    public member q_function setCancelButtonText(const QString & text) : void;
+    public member q_function setComboBoxEditable(bool editable) : void;
+    public member q_function setComboBoxItems(const QStringList & items) : void;
+    public member q_function setDoubleDecimals(int decimals) : void;
+    public member q_function setDoubleMaximum(double max) : void;
+    public member q_function setDoubleMinimum(double min) : void;
+    public member q_function setDoubleRange(double min, double max) : void;
+    public member q_function setDoubleValue(double value) : void;
+    public member q_function setInputMode(InputMode mode) : void;
+    public member q_function setIntMaximum(int max) : void;
+    public member q_function setIntMinimum(int min) : void;
+    public member q_function setIntRange(int min, int max) : void;
+    public member q_function setIntStep(int step) : void;
+    public member q_function setIntValue(int value) : void;
+    public member q_function setLabelText(const QString & text) : void;
+    public member q_function setOkButtonText(const QString & text) : void;
+    public member q_function setOption(InputDialogOption option, bool on = true) : void;
+    public member q_function setOptions(InputDialogOptions options) : void;
+    public member q_function setTextEchoMode(QLineEdit.EchoMode mode) : void;
+    public member q_function setTextValue(const QString & text) : void;
+    public const member q_function testOption(InputDialogOption option) : bool;
+    public const member q_function textEchoMode() : QLineEdit.EchoMode;
+    public const member q_function textValue() : QString;
+
+
+
+}
+

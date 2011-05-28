@@ -1,0 +1,27 @@
+q_class QNetworkInterface {
+    q_enumeration InterfaceFlag {
+        IsUp = 1
+        IsRunning = 2
+        CanBroadcast = 4
+        IsLoopBack = 8
+        IsPointToPoint = 16
+        CanMulticast = 32
+    }
+
+    q_flags InterfaceFlags : InterfaceFlag;
+
+
+    public const member q_function addressEntries() : QList<QNetworkAddressEntry>;
+    public class q_function allAddresses() : QList<QHostAddress>;
+    public class q_function allInterfaces() : QList<QNetworkInterface>;
+    public const member q_function flags() : InterfaceFlags;
+    public const member q_function hardwareAddress() : QString;
+    public const member q_function humanReadableName() : QString;
+    public const member q_function index() : int;
+    public class q_function interfaceFromIndex(int index) : QNetworkInterface;
+    public class q_function interfaceFromName(const QString & name) : QNetworkInterface;
+    public const member q_function name() : QString;
+
+
+}
+

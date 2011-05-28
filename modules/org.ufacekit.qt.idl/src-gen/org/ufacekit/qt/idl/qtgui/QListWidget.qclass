@@ -1,0 +1,53 @@
+q_class QListWidget extends QListView {
+    q_property const int count;
+    q_property int currentRow;
+    q_property bool sortingEnabled;
+
+    public member q_function addItem(QListWidgetItem * item) : void;
+    public member q_function addItem(const QString & label) : void;
+    public member q_function addItems(const QStringList & labels) : void;
+    public member q_function closePersistentEditor(QListWidgetItem * item) : void;
+    public const member q_function count() : int;
+    public const member q_function currentItem() : QListWidgetItem *;
+    public const member q_function currentRow() : int;
+    public member q_function editItem(QListWidgetItem * item) : void;
+    public const member q_function findItems(const QString & text, Qt.MatchFlags flags) : QList<QListWidgetItem *>;
+    public member q_function insertItem(int row, const QString & label) : void;
+    public member q_function insertItem(int row, QListWidgetItem * item) : void;
+    public member q_function insertItems(int row, const QStringList & labels) : void;
+    public const member q_function isItemHidden(const QListWidgetItem * item) : bool;
+    public const member q_function isItemSelected(const QListWidgetItem * item) : bool;
+    public const member q_function isSortingEnabled() : bool;
+    public const member q_function item(int row) : QListWidgetItem *;
+    public const member q_function itemAt(const QPoint & p) : QListWidgetItem *;
+    public const member q_function itemAt(int x, int y) : QListWidgetItem *;
+    public const member q_function itemWidget(QListWidgetItem * item) : QWidget *;
+    public member q_function openPersistentEditor(QListWidgetItem * item) : void;
+    public member q_function removeItemWidget(QListWidgetItem * item) : void;
+    public const member q_function row(const QListWidgetItem * item) : int;
+    public const member q_function selectedItems() : QList<QListWidgetItem *>;
+    public member q_function setCurrentItem(QListWidgetItem * item, QItemSelectionModel.SelectionFlags command) : void;
+    public member q_function setCurrentItem(QListWidgetItem * item) : void;
+    public member q_function setCurrentRow(int row) : void;
+    public member q_function setCurrentRow(int row, QItemSelectionModel.SelectionFlags command) : void;
+    public member q_function setItemHidden(const QListWidgetItem * item, bool hide) : void;
+    public member q_function setItemSelected(const QListWidgetItem * item, bool select) : void;
+    public member q_function setItemWidget(QListWidgetItem * item, QWidget * widget) : void;
+    public member q_function setSortingEnabled(bool enable) : void;
+    public member q_function sortItems(Qt.SortOrder order = Qt.AscendingOrder) : void;
+    public member q_function takeItem(int row) : QListWidgetItem *;
+    public const member q_function visualItemRect(const QListWidgetItem * item) : QRect;
+
+    protected virtual member q_function dropMimeData(int index, const QMimeData * data, Qt.DropAction action) : bool;
+    protected const member q_function indexFromItem(QListWidgetItem * item) : QModelIndex;
+    protected const member q_function itemFromIndex(const QModelIndex & index) : QListWidgetItem *;
+    protected const member q_function items(const QMimeData * data) : QList<QListWidgetItem *>;
+    protected const virtual member q_function mimeData(const QList<QListWidgetItem *> items) : QMimeData *;
+    protected const virtual member q_function mimeTypes() : QStringList;
+    protected const virtual member q_function supportedDropActions() : Qt.DropActions;
+
+
+
+
+}
+

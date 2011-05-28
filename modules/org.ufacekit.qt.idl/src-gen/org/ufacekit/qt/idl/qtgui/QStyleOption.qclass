@@ -1,0 +1,48 @@
+q_class QStyleOption {
+    q_enumeration OptionType {
+        SO_Default = 0
+        SO_FocusRect = 1
+        SO_Button = 2
+        SO_Tab = 3
+        SO_MenuItem = 4
+        SO_Frame = 5
+        SO_ProgressBar = 6
+        SO_ToolBox = 7
+        SO_Header = 8
+        SO_Q3DockWindow = 9
+        SO_DockWidget = 10
+        SO_Q3ListViewItem = 11
+        SO_ViewItem = 12
+        SO_TabWidgetFrame = 13
+        SO_TabBarBase = 14
+        SO_RubberBand = 15
+        SO_ToolBar = 16
+        SO_GraphicsItem = 17
+        SO_Complex = 983040
+        SO_Slider = __UNKNOWN__
+        SO_SpinBox = __UNKNOWN__
+        SO_ToolButton = __UNKNOWN__
+        SO_ComboBox = __UNKNOWN__
+        SO_Q3ListView = __UNKNOWN__
+        SO_TitleBar = __UNKNOWN__
+        SO_GroupBox = __UNKNOWN__
+        SO_SizeGrip = __UNKNOWN__
+        SO_CustomBase = 3840
+        SO_ComplexCustomBase = 251658240
+    }
+
+    q_enumeration StyleOptionType {
+        Type = SO_Default
+    }
+
+    q_enumeration StyleOptionVersion {
+        Version = 1
+    }
+
+
+    public member q_function init(const QWidget * widget) : void;
+    public member q_function initFrom(const QWidget * widget) : void;
+
+
+}
+

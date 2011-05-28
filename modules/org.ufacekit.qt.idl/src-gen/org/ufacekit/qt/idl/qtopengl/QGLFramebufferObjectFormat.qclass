@@ -1,0 +1,13 @@
+q_class QGLFramebufferObjectFormat {
+    public const member q_function attachment() : QGLFramebufferObject.Attachment;
+    public const member q_function internalTextureFormat() : GLenum;
+    public const member q_function samples() : int;
+    public member q_function setAttachment(QGLFramebufferObject.Attachment attachment) : void;
+    public member q_function setInternalTextureFormat(GLenum internalTextureFormat) : void;
+    public member q_function setSamples(int samples) : void;
+    public member q_function setTextureTarget(GLenum target) : void;
+    public const member q_function textureTarget() : GLenum;
+
+
+}
+

@@ -1,0 +1,18 @@
+q_class QSymbianEvent {
+    q_enumeration Type {
+        InvalidEvent = 0
+        WindowServerEvent = 1
+        CommandEvent = 2
+        ResourceChangeEvent = 3
+    }
+
+
+    public const member q_function command() : int;
+    public const member q_function isValid() : bool;
+    public const member q_function resourceChangeType() : int;
+    public const member q_function type() : Type;
+    public const member q_function windowServerEvent() : const TWsEvent *;
+
+
+}
+

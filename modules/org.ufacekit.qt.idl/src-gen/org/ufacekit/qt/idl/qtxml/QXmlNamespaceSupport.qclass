@@ -1,0 +1,15 @@
+q_class QXmlNamespaceSupport {
+    public member q_function popContext() : void;
+    public const member q_function prefix(const QString & uri) : QString;
+    public const member q_function prefixes(const QString & uri) : QStringList;
+    public const member q_function prefixes() : QStringList;
+    public const member q_function processName(const QString & qname, bool isAttribute, QString & nsuri, QString & localname) : void;
+    public member q_function pushContext() : void;
+    public member q_function reset() : void;
+    public member q_function setPrefix(const QString & pre, const QString & uri) : void;
+    public const member q_function splitName(const QString & qname, QString & prefix, QString & localname) : void;
+    public const member q_function uri(const QString & prefix) : QString;
+
+
+}
+

@@ -1,0 +1,32 @@
+q_class QFontMetrics {
+    public const member q_function ascent() : int;
+    public const member q_function averageCharWidth() : int;
+    public const member q_function boundingRect(const QString & text) : QRect;
+    public const member q_function boundingRect(int x, int y, int width, int height, int flags, const QString & text, int tabStops = 0, int * tabArray = 0) : QRect;
+    public const member q_function boundingRect(QChar ch) : QRect;
+    public const member q_function boundingRect(const QRect & rect, int flags, const QString & text, int tabStops = 0, int * tabArray = 0) : QRect;
+    public const member q_function charWidth(const QString & text, int pos) : int;
+    public const member q_function descent() : int;
+    public const member q_function elidedText(const QString & text, Qt.TextElideMode mode, int width, int flags = 0) : QString;
+    public const member q_function height() : int;
+    public const member q_function inFont(QChar ch) : bool;
+    public const member q_function leading() : int;
+    public const member q_function leftBearing(QChar ch) : int;
+    public const member q_function lineSpacing() : int;
+    public const member q_function lineWidth() : int;
+    public const member q_function maxWidth() : int;
+    public const member q_function minLeftBearing() : int;
+    public const member q_function minRightBearing() : int;
+    public const member q_function overlinePos() : int;
+    public const member q_function rightBearing(QChar ch) : int;
+    public const member q_function size(int flags, const QString & text, int tabStops = 0, int * tabArray = 0) : QSize;
+    public const member q_function strikeOutPos() : int;
+    public const member q_function tightBoundingRect(const QString & text) : QRect;
+    public const member q_function underlinePos() : int;
+    public const member q_function width(QChar ch) : int;
+    public const member q_function width(const QString & text, int len = -1) : int;
+    public const member q_function xHeight() : int;
+
+
+}
+

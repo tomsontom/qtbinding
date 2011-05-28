@@ -1,0 +1,33 @@
+q_class QStyleOptionHeader extends QStyleOption {
+    q_enumeration SectionPosition {
+        Beginning = 0
+        Middle = 1
+        End = 2
+        OnlyOneSection = 3
+    }
+
+    q_enumeration SelectedPosition {
+        NotAdjacent = 0
+        NextIsSelected = 1
+        PreviousIsSelected = 2
+        NextAndPreviousAreSelected = 3
+    }
+
+    q_enumeration SortIndicator {
+        None = 0
+        SortUp = 1
+        SortDown = 2
+    }
+
+    q_enumeration StyleOptionType {
+        Type = SO_Header
+    }
+
+    q_enumeration StyleOptionVersion {
+        Version = 1
+    }
+
+
+
+}
+

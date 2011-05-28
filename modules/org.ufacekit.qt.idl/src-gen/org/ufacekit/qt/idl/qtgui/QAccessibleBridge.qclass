@@ -1,0 +1,7 @@
+q_class QAccessibleBridge {
+    public purevirtual member q_function notifyAccessibilityUpdate(int reason, QAccessibleInterface * interface, int child) : void;
+    public purevirtual member q_function setRootObject(QAccessibleInterface * object) : void;
+
+
+}
+

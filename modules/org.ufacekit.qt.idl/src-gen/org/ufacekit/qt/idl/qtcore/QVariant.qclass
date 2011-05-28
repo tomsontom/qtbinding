@@ -1,0 +1,111 @@
+q_class QVariant {
+    q_enumeration Type {
+        Invalid = 0
+        Bool = 1
+        Int = 2
+        UInt = 3
+        LongLong = 4
+        ULongLong = 5
+        Double = 6
+        Char = 7
+        Map = 8
+        List = 9
+        String = 10
+        StringList = 11
+        ByteArray = 12
+        BitArray = 13
+        Date = 14
+        Time = 15
+        DateTime = 16
+        Url = 17
+        Locale = 18
+        Rect = 19
+        RectF = 20
+        Size = 21
+        SizeF = 22
+        Line = 23
+        LineF = 24
+        Point = 25
+        PointF = 26
+        RegExp = 27
+        Hash = 28
+        EasingCurve = 29
+        LastCoreType = EasingCurve
+        Font = 64
+        Pixmap = 65
+        Brush = 66
+        Color = 67
+        Palette = 68
+        Icon = 69
+        Image = 70
+        Polygon = 71
+        Region = 72
+        Bitmap = 73
+        Cursor = 74
+        SizePolicy = 75
+        KeySequence = 76
+        Pen = 77
+        TextLength = 78
+        TextFormat = 79
+        Matrix = 80
+        Transform = 81
+        Matrix4x4 = 82
+        Vector2D = 83
+        Vector3D = 84
+        Vector4D = 85
+        Quaternion = 86
+        LastGuiType = Quaternion
+        UserType = 127
+        LastType = 4294967295
+    }
+
+
+    q_typedef DataPtr : ___UNKNOWN___;
+
+
+    public const member q_function canConvert() : bool;
+    public const member q_function canConvert(Type t) : bool;
+    public member q_function clear() : void;
+    public member q_function convert(Type t) : bool;
+    public class q_function fromValue(const T & value) : QVariant;
+    public class q_function nameToType(const char * name) : Type;
+    public member q_function setValue(const T & value) : void;
+    public const member q_function toBitArray() : QBitArray;
+    public const member q_function toBool() : bool;
+    public const member q_function toByteArray() : QByteArray;
+    public const member q_function toChar() : QChar;
+    public const member q_function toDate() : QDate;
+    public const member q_function toDateTime() : QDateTime;
+    public const member q_function toDouble(bool * ok = 0) : double;
+    public const member q_function toEasingCurve() : QEasingCurve;
+    public const member q_function toFloat(bool * ok = 0) : float;
+    public const member q_function toHash() : QHash<QString, QVariant>;
+    public const member q_function toInt(bool * ok = 0) : int;
+    public const member q_function toLine() : QLine;
+    public const member q_function toLineF() : QLineF;
+    public const member q_function toList() : QList<QVariant>;
+    public const member q_function toLocale() : QLocale;
+    public const member q_function toLongLong(bool * ok = 0) : qlonglong;
+    public const member q_function toMap() : QMap<QString, QVariant>;
+    public const member q_function toPoint() : QPoint;
+    public const member q_function toPointF() : QPointF;
+    public const member q_function toReal(bool * ok = 0) : qreal;
+    public const member q_function toRect() : QRect;
+    public const member q_function toRectF() : QRectF;
+    public const member q_function toSize() : QSize;
+    public const member q_function toSizeF() : QSizeF;
+    public const member q_function toString() : QString;
+    public const member q_function toStringList() : QStringList;
+    public const member q_function toTime() : QTime;
+    public const member q_function toUInt(bool * ok = 0) : uint;
+    public const member q_function toULongLong(bool * ok = 0) : qulonglong;
+    public const member q_function toUrl() : QUrl;
+    public const member q_function type() : Type;
+    public const member q_function typeName() : const char *;
+    public class q_function typeToName(Type typ) : const char *;
+    public const member q_function userType() : int;
+    public const member q_function value() : T;
+
+
+}
+

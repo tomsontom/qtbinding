@@ -1,0 +1,15 @@
+q_class QTextList extends QTextBlockGroup {
+    public member q_function add(const QTextBlock & block) : void;
+    public const member q_function count() : int;
+    public const member q_function format() : QTextListFormat;
+    public const member q_function isEmpty() : bool;
+    public const member q_function item(int i) : QTextBlock;
+    public const member q_function itemNumber(const QTextBlock & block) : int;
+    public const member q_function itemText(const QTextBlock & block) : QString;
+    public member q_function remove(const QTextBlock & block) : void;
+    public member q_function removeItem(int i) : void;
+    public member q_function setFormat(const QTextListFormat & format) : void;
+
+
+}
+

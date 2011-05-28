@@ -1,0 +1,17 @@
+q_class QGraphicsSceneDragDropEvent extends QGraphicsSceneEvent {
+    public member q_function acceptProposedAction() : void;
+    public const member q_function buttons() : Qt.MouseButtons;
+    public const member q_function dropAction() : Qt.DropAction;
+    public const member q_function mimeData() : const QMimeData *;
+    public const member q_function modifiers() : Qt.KeyboardModifiers;
+    public const member q_function pos() : QPointF;
+    public const member q_function possibleActions() : Qt.DropActions;
+    public const member q_function proposedAction() : Qt.DropAction;
+    public const member q_function scenePos() : QPointF;
+    public const member q_function screenPos() : QPoint;
+    public member q_function setDropAction(Qt.DropAction action) : void;
+    public const member q_function source() : QWidget *;
+
+
+}
+

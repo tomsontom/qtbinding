@@ -1,0 +1,36 @@
+q_class QDomElement extends QDomNode {
+    public const member q_function attribute(const QString & name, const QString & defValue = QString()) : QString;
+    public const member q_function attributeNS(const QString nsURI, const QString & localName, const QString & defValue = QString()) : QString;
+    public member q_function attributeNode(const QString & name) : QDomAttr;
+    public member q_function attributeNodeNS(const QString & nsURI, const QString & localName) : QDomAttr;
+    public const member q_function attributes() : QDomNamedNodeMap;
+    public const member q_function elementsByTagName(const QString & tagname) : QDomNodeList;
+    public const member q_function elementsByTagNameNS(const QString & nsURI, const QString & localName) : QDomNodeList;
+    public const member q_function hasAttribute(const QString & name) : bool;
+    public const member q_function hasAttributeNS(const QString & nsURI, const QString & localName) : bool;
+    public const member q_function nodeType() : QDomNode.NodeType;
+    public member q_function removeAttribute(const QString & name) : void;
+    public member q_function removeAttributeNS(const QString & nsURI, const QString & localName) : void;
+    public member q_function removeAttributeNode(const QDomAttr & oldAttr) : QDomAttr;
+    public member q_function setAttribute(const QString & name, int value) : void;
+    public member q_function setAttribute(const QString & name, uint value) : void;
+    public member q_function setAttribute(const QString & name, qulonglong value) : void;
+    public member q_function setAttribute(const QString & name, const QString & value) : void;
+    public member q_function setAttribute(const QString & name, qlonglong value) : void;
+    public member q_function setAttribute(const QString & name, double value) : void;
+    public member q_function setAttribute(const QString & name, float value) : void;
+    public member q_function setAttributeNS(const QString nsURI, const QString & qName, uint value) : void;
+    public member q_function setAttributeNS(const QString nsURI, const QString & qName, int value) : void;
+    public member q_function setAttributeNS(const QString nsURI, const QString & qName, const QString & value) : void;
+    public member q_function setAttributeNS(const QString nsURI, const QString & qName, qulonglong value) : void;
+    public member q_function setAttributeNS(const QString nsURI, const QString & qName, qlonglong value) : void;
+    public member q_function setAttributeNS(const QString nsURI, const QString & qName, double value) : void;
+    public member q_function setAttributeNode(const QDomAttr & newAttr) : QDomAttr;
+    public member q_function setAttributeNodeNS(const QDomAttr & newAttr) : QDomAttr;
+    public member q_function setTagName(const QString & name) : void;
+    public const member q_function tagName() : QString;
+    public const member q_function text() : QString;
+
+
+}
+

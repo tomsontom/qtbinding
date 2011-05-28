@@ -1,0 +1,9 @@
+q_class QScriptProgram {
+    public const member q_function fileName() : QString;
+    public const member q_function firstLineNumber() : int;
+    public const member q_function isNull() : bool;
+    public const member q_function sourceCode() : QString;
+
+
+}
+

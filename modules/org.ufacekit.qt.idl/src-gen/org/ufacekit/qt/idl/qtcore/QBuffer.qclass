@@ -1,0 +1,11 @@
+q_class QBuffer extends QIODevice {
+    public member q_function buffer() : QByteArray &;
+    public const member q_function buffer() : const QByteArray &;
+    public const member q_function data() : const QByteArray &;
+    public member q_function setBuffer(QByteArray * byteArray) : void;
+    public member q_function setData(const char * data, int size) : void;
+    public member q_function setData(const QByteArray & data) : void;
+
+
+}
+

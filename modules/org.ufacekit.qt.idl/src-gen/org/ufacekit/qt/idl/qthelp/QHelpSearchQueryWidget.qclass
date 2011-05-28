@@ -1,0 +1,7 @@
+q_class QHelpSearchQueryWidget extends QWidget {
+    public const member q_function query() : QList<QHelpSearchQuery>;
+
+
+
+}
+

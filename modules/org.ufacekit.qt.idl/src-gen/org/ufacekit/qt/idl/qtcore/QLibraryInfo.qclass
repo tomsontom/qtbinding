@@ -1,0 +1,26 @@
+q_class QLibraryInfo {
+    q_enumeration LibraryLocation {
+        PrefixPath = 0
+        DocumentationPath = 1
+        HeadersPath = 2
+        LibrariesPath = 3
+        BinariesPath = 4
+        PluginsPath = 5
+        DataPath = 6
+        TranslationsPath = 7
+        SettingsPath = 8
+        DemosPath = 9
+        ExamplesPath = 10
+        ImportsPath = 11
+    }
+
+
+    public class q_function buildDate() : QDate;
+    public class q_function buildKey() : QString;
+    public class q_function licensedProducts() : QString;
+    public class q_function licensee() : QString;
+    public class q_function location(LibraryLocation loc) : QString;
+
+
+}
+

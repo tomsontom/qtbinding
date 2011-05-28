@@ -1,0 +1,9 @@
+q_class QTextBlockGroup extends QTextObject {
+    protected virtual member q_function blockFormatChanged(const QTextBlock & block) : void;
+    protected virtual member q_function blockInserted(const QTextBlock & block) : void;
+    protected const member q_function blockList() : QList<QTextBlock>;
+    protected virtual member q_function blockRemoved(const QTextBlock & block) : void;
+
+
+}
+

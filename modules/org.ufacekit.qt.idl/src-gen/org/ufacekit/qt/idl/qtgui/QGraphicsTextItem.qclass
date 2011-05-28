@@ -1,0 +1,29 @@
+q_class QGraphicsTextItem extends QGraphicsObject {
+    q_property bool openExternalLinks;
+    q_property QTextCursor textCursor;
+
+    public member q_function adjustSize() : void;
+    public const member q_function defaultTextColor() : QColor;
+    public const member q_function document() : QTextDocument *;
+    public const member q_function font() : QFont;
+    public const member q_function openExternalLinks() : bool;
+    public member q_function setDefaultTextColor(const QColor & col) : void;
+    public member q_function setDocument(QTextDocument * document) : void;
+    public member q_function setFont(const QFont & font) : void;
+    public member q_function setHtml(const QString & text) : void;
+    public member q_function setOpenExternalLinks(bool open) : void;
+    public member q_function setPlainText(const QString & text) : void;
+    public member q_function setTabChangesFocus(bool b) : void;
+    public member q_function setTextCursor(const QTextCursor & cursor) : void;
+    public member q_function setTextInteractionFlags(Qt.TextInteractionFlags flags) : void;
+    public member q_function setTextWidth(qreal width) : void;
+    public const member q_function tabChangesFocus() : bool;
+    public const member q_function textCursor() : QTextCursor;
+    public const member q_function textInteractionFlags() : Qt.TextInteractionFlags;
+    public const member q_function textWidth() : qreal;
+    public const member q_function toPlainText() : QString;
+
+
+
+}
+

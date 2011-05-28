@@ -1,0 +1,23 @@
+q_class QItemSelectionRange {
+    public const member q_function bottom() : int;
+    public const member q_function bottomRight() : QModelIndex;
+    public const member q_function contains(int row, int column, const QModelIndex & parentIndex) : bool;
+    public const member q_function contains(const QModelIndex & index) : bool;
+    public const member q_function height() : int;
+    public const member q_function indexes() : QModelIndexList;
+    public const member q_function intersect(const QItemSelectionRange & other) : QItemSelectionRange;
+    public const member q_function intersected(const QItemSelectionRange & other) : QItemSelectionRange;
+    public const member q_function intersects(const QItemSelectionRange & other) : bool;
+    public const member q_function isEmpty() : bool;
+    public const member q_function isValid() : bool;
+    public const member q_function left() : int;
+    public const member q_function model() : const QAbstractItemModel *;
+    public const member q_function parent() : QModelIndex;
+    public const member q_function right() : int;
+    public const member q_function top() : int;
+    public const member q_function topLeft() : QModelIndex;
+    public const member q_function width() : int;
+
+
+}
+

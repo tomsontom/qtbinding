@@ -1,0 +1,34 @@
+q_class QStyleOptionTab extends QStyleOption {
+    q_enumeration CornerWidget {
+        NoCornerWidgets = 0
+        LeftCornerWidget = 1
+        RightCornerWidget = 2
+    }
+
+    q_flags CornerWidgets : CornerWidget;
+
+    q_enumeration SelectedPosition {
+        NotAdjacent = 0
+        NextIsSelected = 1
+        PreviousIsSelected = 2
+    }
+
+    q_enumeration StyleOptionType {
+        Type = SO_Tab
+    }
+
+    q_enumeration StyleOptionVersion {
+        Version = 1
+    }
+
+    q_enumeration TabPosition {
+        Beginning = 0
+        Middle = 1
+        End = 2
+        OnlyOneTab = 3
+    }
+
+
+
+}
+

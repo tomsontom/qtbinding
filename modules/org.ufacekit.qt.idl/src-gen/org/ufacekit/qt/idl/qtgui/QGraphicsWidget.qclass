@@ -1,0 +1,89 @@
+q_class QGraphicsWidget extends QGraphicsObject, QGraphicsLayoutItem {
+    q_property bool autoFillBackground;
+    q_property Qt.FocusPolicy focusPolicy;
+    q_property QFont font;
+    q_property QRectF geometry;
+    q_property QGraphicsLayout * layout;
+    q_property Qt.LayoutDirection layoutDirection;
+    q_property const QSizeF maximumSize;
+    q_property const QSizeF minimumSize;
+    q_property QPalette palette;
+    q_property const QSizeF preferredSize;
+    q_property QSizeF size;
+    q_property const QSizePolicy sizePolicy;
+    q_property Qt.WindowFlags windowFlags;
+    q_property QString windowTitle;
+
+    public const member q_function actions() : QList<QAction *>;
+    public member q_function addAction(QAction * action) : void;
+    public member q_function addActions(QList<QAction *> actions) : void;
+    public member q_function adjustSize() : void;
+    public const member q_function autoFillBackground() : bool;
+    public const member q_function focusPolicy() : Qt.FocusPolicy;
+    public const member q_function focusWidget() : QGraphicsWidget *;
+    public const member q_function font() : QFont;
+    public const virtual member q_function getContentsMargins(qreal * left, qreal * top, qreal * right, qreal * bottom) : void;
+    public const member q_function getWindowFrameMargins(qreal * left, qreal * top, qreal * right, qreal * bottom) : void;
+    public member q_function grabShortcut(const QKeySequence & sequence, Qt.ShortcutContext context = Qt.WindowShortcut) : int;
+    public member q_function insertAction(QAction * before, QAction * action) : void;
+    public member q_function insertActions(QAction * before, QList<QAction *> actions) : void;
+    public const member q_function isActiveWindow() : bool;
+    public const member q_function layout() : QGraphicsLayout *;
+    public const member q_function layoutDirection() : Qt.LayoutDirection;
+    public virtual member q_function paintWindowFrame(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0) : void;
+    public const member q_function palette() : QPalette;
+    public const member q_function rect() : QRectF;
+    public member q_function releaseShortcut(int id) : void;
+    public member q_function removeAction(QAction * action) : void;
+    public member q_function resize(const QSizeF & size) : void;
+    public member q_function resize(qreal w, qreal h) : void;
+    public member q_function setAutoFillBackground(bool enabled) : void;
+    public member q_function setContentsMargins(qreal left, qreal top, qreal right, qreal bottom) : void;
+    public member q_function setFocusPolicy(Qt.FocusPolicy policy) : void;
+    public member q_function setFont(const QFont & font) : void;
+    public member q_function setGeometry(qreal x, qreal y, qreal w, qreal h) : void;
+    public virtual member q_function setGeometry(const QRectF & rect) : void;
+    public member q_function setLayout(QGraphicsLayout * layout) : void;
+    public member q_function setLayoutDirection(Qt.LayoutDirection direction) : void;
+    public member q_function setPalette(const QPalette & palette) : void;
+    public member q_function setShortcutAutoRepeat(int id, bool enabled = true) : void;
+    public member q_function setShortcutEnabled(int id, bool enabled = true) : void;
+    public member q_function setStyle(QStyle * style) : void;
+    public class q_function setTabOrder(QGraphicsWidget * first, QGraphicsWidget * second) : void;
+    public member q_function setWindowFlags(Qt.WindowFlags wFlags) : void;
+    public member q_function setWindowFrameMargins(qreal left, qreal top, qreal right, qreal bottom) : void;
+    public member q_function setWindowTitle(const QString & title) : void;
+    public const member q_function size() : QSizeF;
+    public const member q_function style() : QStyle *;
+    public const member q_function testAttribute(Qt.WidgetAttribute attribute) : bool;
+    public member q_function unsetLayoutDirection() : void;
+    public member q_function unsetWindowFrameMargins() : void;
+    public const member q_function windowFlags() : Qt.WindowFlags;
+    public const member q_function windowFrameGeometry() : QRectF;
+    public const member q_function windowFrameRect() : QRectF;
+    public const member q_function windowTitle() : QString;
+    public const member q_function windowType() : Qt.WindowType;
+
+    protected virtual member q_function changeEvent(QEvent * event) : void;
+    protected virtual member q_function closeEvent(QCloseEvent * event) : void;
+    protected virtual member q_function focusNextPrevChild(bool next) : bool;
+    protected virtual member q_function grabKeyboardEvent(QEvent * event) : void;
+    protected virtual member q_function grabMouseEvent(QEvent * event) : void;
+    protected virtual member q_function hideEvent(QHideEvent * event) : void;
+    protected const virtual member q_function initStyleOption(QStyleOption * option) : void;
+    protected virtual member q_function moveEvent(QGraphicsSceneMoveEvent * event) : void;
+    protected virtual member q_function polishEvent() : void;
+    protected virtual member q_function resizeEvent(QGraphicsSceneResizeEvent * event) : void;
+    protected virtual member q_function sceneEvent(QEvent * event) : bool;
+    protected virtual member q_function showEvent(QShowEvent * event) : void;
+    protected virtual member q_function ungrabKeyboardEvent(QEvent * event) : void;
+    protected virtual member q_function ungrabMouseEvent(QEvent * event) : void;
+    protected virtual member q_function updateGeometry() : void;
+    protected virtual member q_function windowFrameEvent(QEvent * event) : bool;
+    protected const virtual member q_function windowFrameSectionAt(const QPointF & pos) : Qt.WindowFrameSection;
+
+
+
+
+}
+

@@ -1,0 +1,8 @@
+q_class QMimeSource {
+    public const purevirtual member q_function encodedData(const char * format) : QByteArray;
+    public const purevirtual member q_function format(int i = 0) : const char *;
+    public const virtual member q_function provides(const char * mimeType) : bool;
+
+
+}
+

@@ -1,0 +1,17 @@
+q_class QSharedDataPointer {
+    q_typedef Type : ___UNKNOWN___;
+
+    q_typedef pointer : ___UNKNOWN___;
+
+
+    public const member q_function constData() : const T *;
+    public const member q_function data() : const T *;
+    public member q_function data() : T *;
+    public member q_function detach() : void;
+    public member q_function swap(QSharedDataPointer & other) : void;
+
+    protected member q_function clone() : T *;
+
+
+}
+

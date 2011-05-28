@@ -1,0 +1,13 @@
+q_class QAxBindable {
+    public virtual member q_function createAggregate() : QAxAggregated *;
+    public virtual member q_function readData(QIODevice * source, const QString & format) : bool;
+    public member q_function reportError(int code, const QString & src, const QString & desc, const QString & context = QString()) : void;
+    public virtual member q_function writeData(QIODevice * sink) : bool;
+
+    protected const member q_function clientSite() : IUnknown *;
+    protected member q_function propertyChanged(const char * property) : void;
+    protected member q_function requestPropertyChange(const char * property) : bool;
+
+
+}
+

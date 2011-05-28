@@ -1,0 +1,13 @@
+q_class QStyleHintReturnMask extends QStyleHintReturn {
+    q_enumeration StyleOptionType {
+        Type = SH_Mask
+    }
+
+    q_enumeration StyleOptionVersion {
+        Version = 1
+    }
+
+
+
+}
+

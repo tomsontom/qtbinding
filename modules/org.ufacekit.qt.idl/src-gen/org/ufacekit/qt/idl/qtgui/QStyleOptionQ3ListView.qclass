@@ -1,0 +1,13 @@
+q_class QStyleOptionQ3ListView extends QStyleOptionComplex {
+    q_enumeration StyleOptionType {
+        Type = SO_Q3ListView
+    }
+
+    q_enumeration StyleOptionVersion {
+        Version = 1
+    }
+
+
+
+}
+

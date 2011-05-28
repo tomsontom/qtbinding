@@ -1,0 +1,43 @@
+q_class QAbstractXmlNodeModel extends QSharedData {
+    q_enumeration NodeCopySetting {
+        InheritNamespaces = 1
+        PreserveNamespaces = 2
+    }
+
+    q_enumeration SimpleAxis {
+        Parent = 0
+        FirstChild = 1
+        PreviousSibling = 2
+        NextSibling = 3
+    }
+
+
+    q_typedef List : ___UNKNOWN___;
+
+    q_typedef NodeCopySettings : ___UNKNOWN___;
+
+    q_typedef Ptr : ___UNKNOWN___;
+
+
+    public const purevirtual member q_function baseUri(const QXmlNodeModelIndex & n) : QUrl;
+    public const purevirtual member q_function compareOrder(const QXmlNodeModelIndex & ni1, const QXmlNodeModelIndex & ni2) : QXmlNodeModelIndex.DocumentOrder;
+    public const purevirtual member q_function documentUri(const QXmlNodeModelIndex & n) : QUrl;
+    public const purevirtual member q_function elementById(const QXmlName & id) : QXmlNodeModelIndex;
+    public const purevirtual member q_function kind(const QXmlNodeModelIndex & ni) : QXmlNodeModelIndex.NodeKind;
+    public const purevirtual member q_function name(const QXmlNodeModelIndex & ni) : QXmlName;
+    public const purevirtual member q_function namespaceBindings(const QXmlNodeModelIndex & n) : QVector<QXmlName>;
+    public const purevirtual member q_function nodesByIdref(const QXmlName & idref) : QVector<QXmlNodeModelIndex>;
+    public const purevirtual member q_function root(const QXmlNodeModelIndex & n) : QXmlNodeModelIndex;
+    public const member q_function sourceLocation(const QXmlNodeModelIndex & index) : QSourceLocation;
+    public const purevirtual member q_function stringValue(const QXmlNodeModelIndex & n) : QString;
+    public const purevirtual member q_function typedValue(const QXmlNodeModelIndex & node) : QVariant;
+
+    protected const purevirtual member q_function attributes(const QXmlNodeModelIndex & element) : QVector<QXmlNodeModelIndex>;
+    protected const member q_function createIndex(void * pointer, qint64 additionalData = 0) : QXmlNodeModelIndex;
+    protected const member q_function createIndex(qint64 data) : QXmlNodeModelIndex;
+    protected const member q_function createIndex(qint64 data, qint64 additionalData) : QXmlNodeModelIndex;
+    protected const purevirtual member q_function nextFromSimpleAxis(SimpleAxis axis, const QXmlNodeModelIndex & origin) : QXmlNodeModelIndex;
+
+
+}
+

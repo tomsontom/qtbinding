@@ -1,0 +1,23 @@
+q_class QAudioInput extends QObject {
+    public const member q_function bufferSize() : int;
+    public const member q_function bytesReady() : int;
+    public const member q_function elapsedUSecs() : qint64;
+    public const member q_function error() : QAudio.Error;
+    public const member q_function format() : QAudioFormat;
+    public const member q_function notifyInterval() : int;
+    public const member q_function periodSize() : int;
+    public const member q_function processedUSecs() : qint64;
+    public member q_function reset() : void;
+    public member q_function resume() : void;
+    public member q_function setBufferSize(int value) : void;
+    public member q_function setNotifyInterval(int ms) : void;
+    public member q_function start() : QIODevice *;
+    public member q_function start(QIODevice * device) : void;
+    public const member q_function state() : QAudio.State;
+    public member q_function stop() : void;
+    public member q_function suspend() : void;
+
+
+
+}
+

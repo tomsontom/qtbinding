@@ -1,0 +1,11 @@
+q_class QGraphicsEllipseItem extends QAbstractGraphicsShapeItem {
+    public member q_function setRect(qreal x, qreal y, qreal width, qreal height) : void;
+    public member q_function setRect(const QRectF & rect) : void;
+    public member q_function setSpanAngle(int angle) : void;
+    public member q_function setStartAngle(int angle) : void;
+    public const member q_function spanAngle() : int;
+    public const member q_function startAngle() : int;
+
+
+}
+

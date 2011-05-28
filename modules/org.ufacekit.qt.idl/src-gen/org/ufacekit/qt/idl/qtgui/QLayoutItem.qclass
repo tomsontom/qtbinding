@@ -1,0 +1,22 @@
+q_class QLayoutItem {
+    public const member q_function alignment() : Qt.Alignment;
+    public const member q_function controlTypes() : QSizePolicy.ControlTypes;
+    public const purevirtual member q_function expandingDirections() : Qt.Orientations;
+    public const purevirtual member q_function geometry() : QRect;
+    public const virtual member q_function hasHeightForWidth() : bool;
+    public const virtual member q_function heightForWidth(int w) : int;
+    public virtual member q_function invalidate() : void;
+    public const purevirtual member q_function isEmpty() : bool;
+    public virtual member q_function layout() : QLayout *;
+    public const purevirtual member q_function maximumSize() : QSize;
+    public const virtual member q_function minimumHeightForWidth(int w) : int;
+    public const purevirtual member q_function minimumSize() : QSize;
+    public member q_function setAlignment(Qt.Alignment alignment) : void;
+    public purevirtual member q_function setGeometry(const QRect & r) : void;
+    public const purevirtual member q_function sizeHint() : QSize;
+    public virtual member q_function spacerItem() : QSpacerItem *;
+    public virtual member q_function widget() : QWidget *;
+
+
+}
+

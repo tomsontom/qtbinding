@@ -1,0 +1,38 @@
+q_class QDockWidget extends QWidget {
+    q_enumeration DockWidgetFeature {
+        DockWidgetClosable = 1
+        DockWidgetMovable = 2
+        DockWidgetFloatable = 4
+        DockWidgetVerticalTitleBar = 8
+        DockWidgetFeatureMask = 15
+        AllDockWidgetFeatures = DockWidgetClosable  |  DockWidgetMovable  |  DockWidgetFloatable
+        NoDockWidgetFeatures = 0
+        Reserved = 255
+    }
+
+    q_flags DockWidgetFeatures : DockWidgetFeature;
+
+
+    q_property Qt.DockWidgetAreas allowedAreas;
+    q_property DockWidgetFeatures features;
+    q_property bool floating;
+    q_property QString windowTitle;
+
+    public const member q_function allowedAreas() : Qt.DockWidgetAreas;
+    public const member q_function features() : DockWidgetFeatures;
+    public const member q_function isAreaAllowed(Qt.DockWidgetArea area) : bool;
+    public const member q_function isFloating() : bool;
+    public member q_function setAllowedAreas(Qt.DockWidgetAreas areas) : void;
+    public member q_function setFeatures(DockWidgetFeatures features) : void;
+    public member q_function setFloating(bool floating) : void;
+    public member q_function setTitleBarWidget(QWidget * widget) : void;
+    public member q_function setWidget(QWidget * widget) : void;
+    public const member q_function titleBarWidget() : QWidget *;
+    public const member q_function toggleViewAction() : QAction *;
+
+    protected const member q_function initStyleOption(QStyleOptionDockWidget * option) : void;
+
+
+
+}
+

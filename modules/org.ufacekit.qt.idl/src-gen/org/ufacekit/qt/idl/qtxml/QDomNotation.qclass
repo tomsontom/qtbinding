@@ -1,0 +1,8 @@
+q_class QDomNotation extends QDomNode {
+    public const member q_function nodeType() : QDomNode.NodeType;
+    public const member q_function publicId() : QString;
+    public const member q_function systemId() : QString;
+
+
+}
+

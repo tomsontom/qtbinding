@@ -1,0 +1,7 @@
+q_class QActionEvent extends QEvent {
+    public const member q_function action() : QAction *;
+    public const member q_function before() : QAction *;
+
+
+}
+

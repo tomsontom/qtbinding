@@ -1,0 +1,12 @@
+q_class QFutureSynchronizer {
+    public member q_function addFuture(const QFuture<T> & future) : void;
+    public const member q_function cancelOnWait() : bool;
+    public member q_function clearFutures() : void;
+    public const member q_function futures() : QList<QFuture<T> >;
+    public member q_function setCancelOnWait(bool enabled) : void;
+    public member q_function setFuture(const QFuture<T> & future) : void;
+    public member q_function waitForFinished() : void;
+
+
+}
+

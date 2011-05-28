@@ -1,0 +1,12 @@
+q_class QSplitterHandle extends QWidget {
+    public const member q_function opaqueResize() : bool;
+    public const member q_function orientation() : Qt.Orientation;
+    public member q_function setOrientation(Qt.Orientation orientation) : void;
+    public const member q_function splitter() : QSplitter *;
+
+    protected member q_function closestLegalPosition(int pos) : int;
+    protected member q_function moveSplitter(int pos) : void;
+
+
+}
+

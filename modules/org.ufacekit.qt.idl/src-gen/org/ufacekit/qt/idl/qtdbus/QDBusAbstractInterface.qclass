@@ -1,0 +1,18 @@
+q_class QDBusAbstractInterface extends QObject {
+    public member q_function asyncCall(const QString & method, const QVariant & arg1 = QVariant(), const QVariant & arg2 = QVariant(), const QVariant & arg3 = QVariant(), const QVariant & arg4 = QVariant(), const QVariant & arg5 = QVariant(), const QVariant & arg6 = QVariant(), const QVariant & arg7 = QVariant(), const QVariant & arg8 = QVariant()) : QDBusPendingCall;
+    public member q_function asyncCallWithArgumentList(const QString & method, const QList<QVariant> & args) : QDBusPendingCall;
+    public member q_function call(const QString & method, const QVariant & arg1 = QVariant(), const QVariant & arg2 = QVariant(), const QVariant & arg3 = QVariant(), const QVariant & arg4 = QVariant(), const QVariant & arg5 = QVariant(), const QVariant & arg6 = QVariant(), const QVariant & arg7 = QVariant(), const QVariant & arg8 = QVariant()) : QDBusMessage;
+    public member q_function call(QDBus.CallMode mode, const QString & method, const QVariant & arg1 = QVariant(), const QVariant & arg2 = QVariant(), const QVariant & arg3 = QVariant(), const QVariant & arg4 = QVariant(), const QVariant & arg5 = QVariant(), const QVariant & arg6 = QVariant(), const QVariant & arg7 = QVariant(), const QVariant & arg8 = QVariant()) : QDBusMessage;
+    public member q_function callWithArgumentList(QDBus.CallMode mode, const QString & method, const QList<QVariant> & args) : QDBusMessage;
+    public member q_function callWithCallback(const QString & method, const QList<QVariant> & args, QObject * receiver, const char * returnMethod, const char * errorMethod) : bool;
+    public member q_function callWithCallback(const QString & method, const QList<QVariant> & args, QObject * receiver, const char * slot) : bool;
+    public const member q_function connection() : QDBusConnection;
+    public const member q_function interface() : QString;
+    public const member q_function isValid() : bool;
+    public const member q_function lastError() : QDBusError;
+    public const member q_function path() : QString;
+    public const member q_function service() : QString;
+
+
+}
+

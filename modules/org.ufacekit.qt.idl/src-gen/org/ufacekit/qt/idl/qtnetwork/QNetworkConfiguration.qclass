@@ -1,0 +1,52 @@
+q_class QNetworkConfiguration {
+    q_enumeration BearerType {
+        BearerUnknown = 0
+        BearerEthernet = 1
+        BearerWLAN = 2
+        Bearer2G = 3
+        BearerCDMA2000 = 4
+        BearerWCDMA = 5
+        BearerHSPA = 6
+        BearerBluetooth = 7
+        BearerWiMAX = 8
+    }
+
+    q_enumeration Purpose {
+        UnknownPurpose = 0
+        PublicPurpose = 1
+        PrivatePurpose = 2
+        ServiceSpecificPurpose = 3
+    }
+
+    q_enumeration StateFlag {
+        Undefined = 1
+        Defined = 2
+        Discovered = 6
+        Active = 14
+    }
+
+    q_flags StateFlags : StateFlag;
+
+    q_enumeration Type {
+        InternetAccessPoint = 0
+        ServiceNetwork = 1
+        UserChoice = 2
+        Invalid = 3
+    }
+
+
+    public const member q_function bearerName() : QString;
+    public const member q_function bearerType() : BearerType;
+    public const member q_function bearerTypeName() : QString;
+    public const member q_function children() : QList<QNetworkConfiguration>;
+    public const member q_function identifier() : QString;
+    public const member q_function isRoamingAvailable() : bool;
+    public const member q_function isValid() : bool;
+    public const member q_function name() : QString;
+    public const member q_function purpose() : Purpose;
+    public const member q_function state() : StateFlags;
+    public const member q_function type() : Type;
+
+
+}
+

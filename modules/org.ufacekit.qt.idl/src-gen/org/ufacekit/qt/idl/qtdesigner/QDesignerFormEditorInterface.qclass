@@ -1,0 +1,16 @@
+q_class QDesignerFormEditorInterface extends QObject {
+    public const member q_function actionEditor() : QDesignerActionEditorInterface *;
+    public const member q_function extensionManager() : QExtensionManager *;
+    public const member q_function formWindowManager() : QDesignerFormWindowManagerInterface *;
+    public const member q_function objectInspector() : QDesignerObjectInspectorInterface *;
+    public const member q_function propertyEditor() : QDesignerPropertyEditorInterface *;
+    public member q_function setActionEditor(QDesignerActionEditorInterface * actionEditor) : void;
+    public member q_function setObjectInspector(QDesignerObjectInspectorInterface * objectInspector) : void;
+    public member q_function setPropertyEditor(QDesignerPropertyEditorInterface * propertyEditor) : void;
+    public member q_function setWidgetBox(QDesignerWidgetBoxInterface * widgetBox) : void;
+    public const member q_function topLevel() : QWidget *;
+    public const member q_function widgetBox() : QDesignerWidgetBoxInterface *;
+
+
+}
+

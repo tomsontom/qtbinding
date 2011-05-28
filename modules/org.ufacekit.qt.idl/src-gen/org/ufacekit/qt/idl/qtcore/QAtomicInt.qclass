@@ -1,0 +1,27 @@
+q_class QAtomicInt {
+    public member q_function deref() : bool;
+    public member q_function fetchAndAddAcquire(int valueToAdd) : int;
+    public member q_function fetchAndAddOrdered(int valueToAdd) : int;
+    public member q_function fetchAndAddRelaxed(int valueToAdd) : int;
+    public member q_function fetchAndAddRelease(int valueToAdd) : int;
+    public member q_function fetchAndStoreAcquire(int newValue) : int;
+    public member q_function fetchAndStoreOrdered(int newValue) : int;
+    public member q_function fetchAndStoreRelaxed(int newValue) : int;
+    public member q_function fetchAndStoreRelease(int newValue) : int;
+    public class q_function isFetchAndAddNative() : bool;
+    public class q_function isFetchAndAddWaitFree() : bool;
+    public class q_function isFetchAndStoreNative() : bool;
+    public class q_function isFetchAndStoreWaitFree() : bool;
+    public class q_function isReferenceCountingNative() : bool;
+    public class q_function isReferenceCountingWaitFree() : bool;
+    public class q_function isTestAndSetNative() : bool;
+    public class q_function isTestAndSetWaitFree() : bool;
+    public member q_function ref() : bool;
+    public member q_function testAndSetAcquire(int expectedValue, int newValue) : bool;
+    public member q_function testAndSetOrdered(int expectedValue, int newValue) : bool;
+    public member q_function testAndSetRelaxed(int expectedValue, int newValue) : bool;
+    public member q_function testAndSetRelease(int expectedValue, int newValue) : bool;
+
+
+}
+

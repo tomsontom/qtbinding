@@ -1,0 +1,15 @@
+q_class QGraphicsLayout extends QGraphicsLayoutItem {
+    public member q_function activate() : void;
+    public const purevirtual member q_function count() : int;
+    public virtual member q_function invalidate() : void;
+    public const member q_function isActivated() : bool;
+    public const purevirtual member q_function itemAt(int i) : QGraphicsLayoutItem *;
+    public purevirtual member q_function removeAt(int index) : void;
+    public member q_function setContentsMargins(qreal left, qreal top, qreal right, qreal bottom) : void;
+    public virtual member q_function widgetEvent(QEvent * e) : void;
+
+    protected member q_function addChildLayoutItem(QGraphicsLayoutItem * layoutItem) : void;
+
+
+}
+

@@ -1,0 +1,45 @@
+q_class QAbstractAnimation extends QObject {
+    q_enumeration DeletionPolicy {
+        KeepWhenStopped = 0
+        DeleteWhenStopped = 1
+    }
+
+    q_enumeration Direction {
+        Forward = 0
+        Backward = 1
+    }
+
+    q_enumeration State {
+        Stopped = 0
+        Paused = 1
+        Running = 2
+    }
+
+
+    q_property const int currentLoop;
+    q_property int currentTime;
+    q_property Direction direction;
+    q_property const int duration;
+    q_property int loopCount;
+    q_property const State state;
+
+    public const member q_function currentLoop() : int;
+    public const member q_function currentLoopTime() : int;
+    public const member q_function currentTime() : int;
+    public const member q_function direction() : Direction;
+    public const purevirtual member q_function duration() : int;
+    public const member q_function group() : QAnimationGroup *;
+    public const member q_function loopCount() : int;
+    public member q_function setDirection(Direction direction) : void;
+    public member q_function setLoopCount(int loopCount) : void;
+    public const member q_function totalDuration() : int;
+
+    protected purevirtual member q_function updateCurrentTime(int currentTime) : void;
+    protected virtual member q_function updateDirection(QAbstractAnimation.Direction direction) : void;
+    protected virtual member q_function updateState(QAbstractAnimation.State newState, QAbstractAnimation.State oldState) : void;
+
+
+
+
+}
+

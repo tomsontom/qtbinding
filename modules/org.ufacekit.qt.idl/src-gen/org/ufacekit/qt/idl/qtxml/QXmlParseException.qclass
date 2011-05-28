@@ -1,0 +1,9 @@
+q_class QXmlParseException {
+    public const member q_function lineNumber() : int;
+    public const member q_function message() : QString;
+    public const member q_function publicId() : QString;
+    public const member q_function systemId() : QString;
+
+
+}
+

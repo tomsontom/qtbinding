@@ -1,0 +1,72 @@
+q_class QWebElement {
+    q_enumeration StyleResolveStrategy {
+        InlineStyle = 0
+        CascadedStyle = 1
+        ComputedStyle = 2
+    }
+
+
+    public member q_function addClass(const QString & name) : void;
+    public member q_function appendInside(const QWebElement & element) : void;
+    public member q_function appendInside(const QString & markup) : void;
+    public member q_function appendOutside(const QString & markup) : void;
+    public member q_function appendOutside(const QWebElement & element) : void;
+    public const member q_function attribute(const QString & name, const QString & defaultValue = QString()) : QString;
+    public const member q_function attributeNS(const QString & namespaceUri, const QString & name, const QString & defaultValue = QString()) : QString;
+    public const member q_function attributeNames(const QString & namespaceUri = QString()) : QStringList;
+    public const member q_function classes() : QStringList;
+    public const member q_function clone() : QWebElement;
+    public const member q_function document() : QWebElement;
+    public member q_function encloseContentsWith(const QString & markup) : void;
+    public member q_function encloseContentsWith(const QWebElement & element) : void;
+    public member q_function encloseWith(const QWebElement & element) : void;
+    public member q_function encloseWith(const QString & markup) : void;
+    public member q_function evaluateJavaScript(const QString & scriptSource) : QVariant;
+    public const member q_function findAll(const QString & selectorQuery) : QWebElementCollection;
+    public const member q_function findFirst(const QString & selectorQuery) : QWebElement;
+    public const member q_function firstChild() : QWebElement;
+    public const member q_function geometry() : QRect;
+    public const member q_function hasAttribute(const QString & name) : bool;
+    public const member q_function hasAttributeNS(const QString & namespaceUri, const QString & name) : bool;
+    public const member q_function hasAttributes() : bool;
+    public const member q_function hasClass(const QString & name) : bool;
+    public const member q_function hasFocus() : bool;
+    public const member q_function isNull() : bool;
+    public const member q_function lastChild() : QWebElement;
+    public const member q_function localName() : QString;
+    public const member q_function namespaceUri() : QString;
+    public const member q_function nextSibling() : QWebElement;
+    public const member q_function parent() : QWebElement;
+    public const member q_function prefix() : QString;
+    public member q_function prependInside(const QString & markup) : void;
+    public member q_function prependInside(const QWebElement & element) : void;
+    public member q_function prependOutside(const QString & markup) : void;
+    public member q_function prependOutside(const QWebElement & element) : void;
+    public const member q_function previousSibling() : QWebElement;
+    public member q_function removeAllChildren() : void;
+    public member q_function removeAttribute(const QString & name) : void;
+    public member q_function removeAttributeNS(const QString & namespaceUri, const QString & name) : void;
+    public member q_function removeClass(const QString & name) : void;
+    public member q_function removeFromDocument() : void;
+    public member q_function render(QPainter * painter) : void;
+    public member q_function replace(const QWebElement & element) : void;
+    public member q_function replace(const QString & markup) : void;
+    public member q_function setAttribute(const QString & name, const QString & value) : void;
+    public member q_function setAttributeNS(const QString & namespaceUri, const QString & name, const QString & value) : void;
+    public member q_function setFocus() : void;
+    public member q_function setInnerXml(const QString & markup) : void;
+    public member q_function setOuterXml(const QString & markup) : void;
+    public member q_function setPlainText(const QString & text) : void;
+    public member q_function setStyleProperty(const QString & name, const QString & value) : void;
+    public const member q_function styleProperty(const QString & name, StyleResolveStrategy strategy) : QString;
+    public const member q_function tagName() : QString;
+    public member q_function takeFromDocument() : QWebElement &;
+    public const member q_function toInnerXml() : QString;
+    public const member q_function toOuterXml() : QString;
+    public const member q_function toPlainText() : QString;
+    public member q_function toggleClass(const QString & name) : void;
+    public const member q_function webFrame() : QWebFrame *;
+
+
+}
+

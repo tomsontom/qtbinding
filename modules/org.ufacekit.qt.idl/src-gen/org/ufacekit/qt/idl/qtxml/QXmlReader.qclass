@@ -1,0 +1,25 @@
+q_class QXmlReader {
+    public const purevirtual member q_function DTDHandler() : QXmlDTDHandler *;
+    public const purevirtual member q_function contentHandler() : QXmlContentHandler *;
+    public const purevirtual member q_function declHandler() : QXmlDeclHandler *;
+    public const purevirtual member q_function entityResolver() : QXmlEntityResolver *;
+    public const purevirtual member q_function errorHandler() : QXmlErrorHandler *;
+    public const purevirtual member q_function feature(const QString & name, bool * ok = 0) : bool;
+    public const purevirtual member q_function hasFeature(const QString & name) : bool;
+    public const purevirtual member q_function hasProperty(const QString & name) : bool;
+    public const purevirtual member q_function lexicalHandler() : QXmlLexicalHandler *;
+    public purevirtual member q_function parse(const QXmlInputSource & input) : bool;
+    public purevirtual member q_function parse(const QXmlInputSource * input) : bool;
+    public const purevirtual member q_function property(const QString & name, bool * ok = 0) : void *;
+    public purevirtual member q_function setContentHandler(QXmlContentHandler * handler) : void;
+    public purevirtual member q_function setDTDHandler(QXmlDTDHandler * handler) : void;
+    public purevirtual member q_function setDeclHandler(QXmlDeclHandler * handler) : void;
+    public purevirtual member q_function setEntityResolver(QXmlEntityResolver * handler) : void;
+    public purevirtual member q_function setErrorHandler(QXmlErrorHandler * handler) : void;
+    public purevirtual member q_function setFeature(const QString & name, bool value) : void;
+    public purevirtual member q_function setLexicalHandler(QXmlLexicalHandler * handler) : void;
+    public purevirtual member q_function setProperty(const QString & name, void * value) : void;
+
+
+}
+

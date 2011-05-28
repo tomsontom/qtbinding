@@ -1,0 +1,7 @@
+q_class QDBusPendingCall {
+    public class q_function fromCompletedCall(const QDBusMessage & msg) : QDBusPendingCall;
+    public class q_function fromError(const QDBusError & error) : QDBusPendingCall;
+
+
+}
+

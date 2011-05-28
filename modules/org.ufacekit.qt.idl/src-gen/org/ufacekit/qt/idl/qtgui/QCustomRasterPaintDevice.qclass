@@ -1,0 +1,8 @@
+q_class QCustomRasterPaintDevice extends QPaintDevice {
+    public const virtual member q_function bytesPerLine() : int;
+    public const virtual member q_function format() : QImage.Format;
+    public const virtual member q_function memory() : void *;
+
+
+}
+

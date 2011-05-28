@@ -1,0 +1,28 @@
+q_class QNetworkCookie {
+    q_enumeration RawForm {
+        NameAndValueOnly = 0
+        Full = 1
+    }
+
+
+    public const member q_function domain() : QString;
+    public const member q_function expirationDate() : QDateTime;
+    public const member q_function isHttpOnly() : bool;
+    public const member q_function isSecure() : bool;
+    public const member q_function isSessionCookie() : bool;
+    public const member q_function name() : QByteArray;
+    public class q_function parseCookies(const QByteArray & cookieString) : QList<QNetworkCookie>;
+    public const member q_function path() : QString;
+    public member q_function setDomain(const QString & domain) : void;
+    public member q_function setExpirationDate(const QDateTime & date) : void;
+    public member q_function setHttpOnly(bool enable) : void;
+    public member q_function setName(const QByteArray & cookieName) : void;
+    public member q_function setPath(const QString & path) : void;
+    public member q_function setSecure(bool enable) : void;
+    public member q_function setValue(const QByteArray & value) : void;
+    public const member q_function toRawForm(RawForm form = Full) : QByteArray;
+    public const member q_function value() : QByteArray;
+
+
+}
+

@@ -1,0 +1,11 @@
+q_class QHelpIndexModel extends QStringListModel {
+    public member q_function createIndex(const QString & customFilterName) : void;
+    public member q_function filter(const QString & filter, const QString & wildcard = QString()) : QModelIndex;
+    public const member q_function isCreatingIndex() : bool;
+    public const member q_function linksForKeyword(const QString & keyword) : QMap<QString, QUrl>;
+
+
+
+
+}
+

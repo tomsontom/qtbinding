@@ -1,0 +1,7 @@
+q_class QDBusSignature extends QString {
+    public member q_function setSignature(const QString & signature) : void;
+    public const member q_function signature() : QString;
+
+
+}
+

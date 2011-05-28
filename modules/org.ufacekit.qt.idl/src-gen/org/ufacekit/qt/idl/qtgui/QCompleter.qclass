@@ -1,0 +1,57 @@
+q_class QCompleter extends QObject {
+    q_enumeration CompletionMode {
+        PopupCompletion = 0
+        UnfilteredPopupCompletion = 1
+        InlineCompletion = 2
+    }
+
+    q_enumeration ModelSorting {
+        UnsortedModel = 0
+        CaseSensitivelySortedModel = 1
+        CaseInsensitivelySortedModel = 2
+    }
+
+
+    q_property Qt.CaseSensitivity caseSensitivity;
+    q_property int completionColumn;
+    q_property CompletionMode completionMode;
+    q_property QString completionPrefix;
+    q_property int completionRole;
+    q_property int maxVisibleItems;
+    q_property ModelSorting modelSorting;
+    q_property bool wrapAround;
+
+    public const member q_function caseSensitivity() : Qt.CaseSensitivity;
+    public const member q_function completionColumn() : int;
+    public const member q_function completionCount() : int;
+    public const member q_function completionMode() : CompletionMode;
+    public const member q_function completionModel() : QAbstractItemModel *;
+    public const member q_function completionPrefix() : QString;
+    public const member q_function completionRole() : int;
+    public const member q_function currentCompletion() : QString;
+    public const member q_function currentIndex() : QModelIndex;
+    public const member q_function currentRow() : int;
+    public const member q_function maxVisibleItems() : int;
+    public const member q_function model() : QAbstractItemModel *;
+    public const member q_function modelSorting() : ModelSorting;
+    public const virtual member q_function pathFromIndex(const QModelIndex & index) : QString;
+    public const member q_function popup() : QAbstractItemView *;
+    public member q_function setCaseSensitivity(Qt.CaseSensitivity caseSensitivity) : void;
+    public member q_function setCompletionColumn(int column) : void;
+    public member q_function setCompletionMode(CompletionMode mode) : void;
+    public member q_function setCompletionRole(int role) : void;
+    public member q_function setCurrentRow(int row) : bool;
+    public member q_function setMaxVisibleItems(int maxItems) : void;
+    public member q_function setModel(QAbstractItemModel * model) : void;
+    public member q_function setModelSorting(ModelSorting sorting) : void;
+    public member q_function setPopup(QAbstractItemView * popup) : void;
+    public member q_function setWidget(QWidget * widget) : void;
+    public const virtual member q_function splitPath(const QString & path) : QStringList;
+    public const member q_function widget() : QWidget *;
+    public const member q_function wrapAround() : bool;
+
+
+
+
+}
+

@@ -1,0 +1,10 @@
+q_class QTranslator extends QObject {
+    public const virtual member q_function isEmpty() : bool;
+    public member q_function load(const QString & filename, const QString & directory = QString(), const QString & search_delimiters = QString(), const QString & suffix = QString()) : bool;
+    public member q_function load(const uchar * data, int len) : bool;
+    public const virtual member q_function translate(const char * context, const char * sourceText, const char * disambiguation = 0) : QString;
+    public const member q_function translate(const char * context, const char * sourceText, const char * disambiguation, int n) : QString;
+
+
+}
+

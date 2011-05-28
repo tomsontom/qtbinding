@@ -1,0 +1,35 @@
+q_class QDirectPainter extends QObject {
+    q_enumeration SurfaceFlag {
+        NonReserved = 0
+        Reserved = 1
+        ReservedSynchronous = 3
+    }
+
+
+    public const member q_function allocatedRegion() : QRegion;
+    public member q_function endPainting() : void;
+    public member q_function endPainting(const QRegion & region) : void;
+    public member q_function flush(const QRegion & region) : void;
+    public class q_function frameBuffer() : uchar *;
+    public const member q_function geometry() : QRect;
+    public class q_function linestep() : int;
+    public class q_function lock() : void;
+    public member q_function lower() : void;
+    public member q_function raise() : void;
+    public class q_function region() : QRegion;
+    public virtual member q_function regionChanged(const QRegion & newRegion) : void;
+    public const member q_function requestedRegion() : QRegion;
+    public class q_function reserveRegion(const QRegion & region) : QRegion;
+    public class q_function reservedRegion() : QRegion;
+    public class q_function screenDepth() : int;
+    public class q_function screenHeight() : int;
+    public class q_function screenWidth() : int;
+    public member q_function setGeometry(const QRect & rectangle) : void;
+    public member q_function setRegion(const QRegion & region) : void;
+    public member q_function startPainting(bool lockDisplay = true) : void;
+    public class q_function unlock() : void;
+    public const member q_function winId() : WId;
+
+
+}
+

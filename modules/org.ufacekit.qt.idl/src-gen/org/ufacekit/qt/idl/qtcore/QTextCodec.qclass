@@ -1,0 +1,52 @@
+q_class QTextCodec {
+    q_enumeration ConversionFlag {
+        DefaultConversion = 0
+        ConvertInvalidToNull = 2147483648
+        IgnoreHeader = 1
+        FreeFunction = 2
+    }
+
+    q_flags ConversionFlags : ConversionFlag;
+
+
+    q_class ConverterState {
+
+    }
+
+
+    public const virtual member q_function aliases() : QList<QByteArray>;
+    public class q_function availableCodecs() : QList<QByteArray>;
+    public class q_function availableMibs() : QList<int>;
+    public const member q_function canEncode(const QString & s) : bool;
+    public const member q_function canEncode(QChar ch) : bool;
+    public class q_function codecForCStrings() : QTextCodec *;
+    public class q_function codecForHtml(const QByteArray & ba, QTextCodec * defaultCodec) : QTextCodec *;
+    public class q_function codecForHtml(const QByteArray & ba) : QTextCodec *;
+    public class q_function codecForLocale() : QTextCodec *;
+    public class q_function codecForMib(int mib) : QTextCodec *;
+    public class q_function codecForName(const QByteArray & name) : QTextCodec *;
+    public class q_function codecForName(const char * name) : QTextCodec *;
+    public class q_function codecForTr() : QTextCodec *;
+    public class q_function codecForUtfText(const QByteArray & ba, QTextCodec * defaultCodec) : QTextCodec *;
+    public class q_function codecForUtfText(const QByteArray & ba) : QTextCodec *;
+    public const member q_function fromUnicode(const QString & str) : QByteArray;
+    public const member q_function fromUnicode(const QChar * input, int number, ConverterState * state = 0) : QByteArray;
+    public const member q_function makeDecoder(ConversionFlags flags) : QTextDecoder *;
+    public const member q_function makeDecoder() : QTextDecoder *;
+    public const member q_function makeEncoder() : QTextEncoder *;
+    public const member q_function makeEncoder(ConversionFlags flags) : QTextEncoder *;
+    public const purevirtual member q_function mibEnum() : int;
+    public const purevirtual member q_function name() : QByteArray;
+    public class q_function setCodecForCStrings(QTextCodec * codec) : void;
+    public class q_function setCodecForLocale(QTextCodec * c) : void;
+    public class q_function setCodecForTr(QTextCodec * c) : void;
+    public const member q_function toUnicode(const char * chars) : QString;
+    public const member q_function toUnicode(const char * input, int size, ConverterState * state = 0) : QString;
+    public const member q_function toUnicode(const QByteArray & a) : QString;
+
+    protected const purevirtual member q_function convertFromUnicode(const QChar * input, int number, ConverterState * state) : QByteArray;
+    protected const purevirtual member q_function convertToUnicode(const char * chars, int len, ConverterState * state) : QString;
+
+
+}
+

@@ -1,0 +1,46 @@
+q_class QSqlQuery {
+    q_enumeration BatchExecutionMode {
+        ValuesAsRows = 0
+        ValuesAsColumns = 1
+    }
+
+
+    public member q_function addBindValue(const QVariant & val, QSql.ParamType paramType = QSql.In) : void;
+    public const member q_function at() : int;
+    public member q_function bindValue(int pos, const QVariant & val, QSql.ParamType paramType = QSql.In) : void;
+    public member q_function bindValue(const QString & placeholder, const QVariant & val, QSql.ParamType paramType = QSql.In) : void;
+    public const member q_function boundValue(int pos) : QVariant;
+    public const member q_function boundValue(const QString & placeholder) : QVariant;
+    public const member q_function boundValues() : QMap<QString, QVariant>;
+    public member q_function clear() : void;
+    public const member q_function driver() : const QSqlDriver *;
+    public member q_function exec(const QString & query) : bool;
+    public member q_function exec() : bool;
+    public member q_function execBatch(BatchExecutionMode mode = ValuesAsRows) : bool;
+    public const member q_function executedQuery() : QString;
+    public member q_function finish() : void;
+    public const member q_function isActive() : bool;
+    public const member q_function isForwardOnly() : bool;
+    public const member q_function isNull(int field) : bool;
+    public const member q_function isSelect() : bool;
+    public const member q_function isValid() : bool;
+    public const member q_function lastError() : QSqlError;
+    public const member q_function lastInsertId() : QVariant;
+    public const member q_function lastQuery() : QString;
+    public member q_function next() : bool;
+    public member q_function nextResult() : bool;
+    public const member q_function numRowsAffected() : int;
+    public const member q_function numericalPrecisionPolicy() : QSql.NumericalPrecisionPolicy;
+    public member q_function prepare(const QString & query) : bool;
+    public member q_function previous() : bool;
+    public const member q_function record() : QSqlRecord;
+    public const member q_function result() : const QSqlResult *;
+    public member q_function seek(int index, bool relative = false) : bool;
+    public member q_function setForwardOnly(bool forward) : void;
+    public member q_function setNumericalPrecisionPolicy(QSql.NumericalPrecisionPolicy precisionPolicy) : void;
+    public const member q_function size() : int;
+    public const member q_function value(int index) : QVariant;
+
+
+}
+

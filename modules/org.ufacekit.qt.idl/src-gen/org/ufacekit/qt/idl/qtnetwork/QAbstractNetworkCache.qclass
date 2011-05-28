@@ -1,0 +1,13 @@
+q_class QAbstractNetworkCache extends QObject {
+    public const purevirtual member q_function cacheSize() : qint64;
+    public purevirtual member q_function data(const QUrl & url) : QIODevice *;
+    public purevirtual member q_function insert(QIODevice * device) : void;
+    public purevirtual member q_function metaData(const QUrl & url) : QNetworkCacheMetaData;
+    public purevirtual member q_function prepare(const QNetworkCacheMetaData & metaData) : QIODevice *;
+    public purevirtual member q_function remove(const QUrl & url) : bool;
+    public purevirtual member q_function updateMetaData(const QNetworkCacheMetaData & metaData) : void;
+
+
+
+}
+

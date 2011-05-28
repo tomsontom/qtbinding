@@ -1,0 +1,33 @@
+q_class QDomDocument extends QDomNode {
+    public member q_function createAttribute(const QString & name) : QDomAttr;
+    public member q_function createAttributeNS(const QString & nsURI, const QString & qName) : QDomAttr;
+    public member q_function createCDATASection(const QString & value) : QDomCDATASection;
+    public member q_function createComment(const QString & value) : QDomComment;
+    public member q_function createDocumentFragment() : QDomDocumentFragment;
+    public member q_function createElement(const QString & tagName) : QDomElement;
+    public member q_function createElementNS(const QString & nsURI, const QString & qName) : QDomElement;
+    public member q_function createEntityReference(const QString & name) : QDomEntityReference;
+    public member q_function createProcessingInstruction(const QString & target, const QString & data) : QDomProcessingInstruction;
+    public member q_function createTextNode(const QString & value) : QDomText;
+    public const member q_function doctype() : QDomDocumentType;
+    public const member q_function documentElement() : QDomElement;
+    public member q_function elementById(const QString & elementId) : QDomElement;
+    public const member q_function elementsByTagName(const QString & tagname) : QDomNodeList;
+    public member q_function elementsByTagNameNS(const QString & nsURI, const QString & localName) : QDomNodeList;
+    public const member q_function implementation() : QDomImplementation;
+    public member q_function importNode(const QDomNode & importedNode, bool deep) : QDomNode;
+    public const member q_function nodeType() : QDomNode.NodeType;
+    public member q_function setContent(QIODevice * dev, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0) : bool;
+    public member q_function setContent(QXmlInputSource * source, QXmlReader * reader, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0) : bool;
+    public member q_function setContent(const QString & text, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0) : bool;
+    public member q_function setContent(const QByteArray & buffer, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0) : bool;
+    public member q_function setContent(const QString & text, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0) : bool;
+    public member q_function setContent(const QByteArray & data, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0) : bool;
+    public member q_function setContent(QIODevice * dev, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0) : bool;
+    public member q_function setContent(QXmlInputSource * source, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0) : bool;
+    public const member q_function toByteArray(int indent = 1) : QByteArray;
+    public const member q_function toString(int indent = 1) : QString;
+
+
+}
+

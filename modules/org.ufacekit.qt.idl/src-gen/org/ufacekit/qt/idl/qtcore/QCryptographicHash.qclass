@@ -1,0 +1,16 @@
+q_class QCryptographicHash {
+    q_enumeration Algorithm {
+        Md4 = 0
+        Md5 = 1
+        Sha1 = 2
+    }
+
+
+    public member q_function addData(const QByteArray & data) : void;
+    public member q_function addData(const char * data, int length) : void;
+    public class q_function hash(const QByteArray & data, Algorithm method) : QByteArray;
+    public const member q_function result() : QByteArray;
+
+
+}
+

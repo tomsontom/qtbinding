@@ -1,0 +1,13 @@
+q_class QBitmap extends QPixmap {
+    q_typedef DataPtr : ___UNKNOWN___;
+
+
+    public member q_function clear() : void;
+    public class q_function fromData(const QSize & size, const uchar * bits, QImage.Format monoFormat = QImage.Format_MonoLSB) : QBitmap;
+    public class q_function fromImage(const QImage & image, Qt.ImageConversionFlags flags = Qt.AutoColor) : QBitmap;
+    public const member q_function transformed(const QTransform & matrix) : QBitmap;
+    public const member q_function transformed(const QMatrix & matrix) : QBitmap;
+
+
+}
+

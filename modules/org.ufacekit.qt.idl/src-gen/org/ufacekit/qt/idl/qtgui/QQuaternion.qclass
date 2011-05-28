@@ -1,0 +1,29 @@
+q_class QQuaternion {
+    public const member q_function conjugate() : QQuaternion;
+    public class q_function fromAxisAndAngle(const QVector3D & axis, qreal angle) : QQuaternion;
+    public class q_function fromAxisAndAngle(qreal x, qreal y, qreal z, qreal angle) : QQuaternion;
+    public const member q_function isIdentity() : bool;
+    public const member q_function isNull() : bool;
+    public const member q_function length() : qreal;
+    public const member q_function lengthSquared() : qreal;
+    public class q_function nlerp(const QQuaternion & q1, const QQuaternion & q2, qreal t) : QQuaternion;
+    public member q_function normalize() : void;
+    public const member q_function normalized() : QQuaternion;
+    public const member q_function rotatedVector(const QVector3D & vector) : QVector3D;
+    public const member q_function scalar() : qreal;
+    public member q_function setScalar(qreal scalar) : void;
+    public member q_function setVector(const QVector3D & vector) : void;
+    public member q_function setVector(qreal x, qreal y, qreal z) : void;
+    public member q_function setX(qreal x) : void;
+    public member q_function setY(qreal y) : void;
+    public member q_function setZ(qreal z) : void;
+    public class q_function slerp(const QQuaternion & q1, const QQuaternion & q2, qreal t) : QQuaternion;
+    public const member q_function toVector4D() : QVector4D;
+    public const member q_function vector() : QVector3D;
+    public const member q_function x() : qreal;
+    public const member q_function y() : qreal;
+    public const member q_function z() : qreal;
+
+
+}
+

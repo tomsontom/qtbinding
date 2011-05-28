@@ -1,0 +1,11 @@
+q_class QFileSystemWatcher extends QObject {
+    public member q_function addPaths(const QStringList & paths) : void;
+    public const member q_function directories() : QStringList;
+    public const member q_function files() : QStringList;
+    public member q_function removePath(const QString & path) : void;
+    public member q_function removePaths(const QStringList & paths) : void;
+
+
+
+}
+

@@ -1,0 +1,29 @@
+q_class QWebPluginFactory extends QObject {
+    q_enumeration Extension {
+    }
+
+
+    q_class ExtensionOption {
+
+    }
+
+    q_class ExtensionReturn {
+
+    }
+
+    q_class MimeType {
+
+    }
+
+    q_class Plugin {
+
+    }
+
+
+    public const purevirtual member q_function create(const QString & mimeType, const QUrl & url, const QStringList & argumentNames, const QStringList & argumentValues) : QObject *;
+    public const purevirtual member q_function plugins() : QList<Plugin>;
+    public virtual member q_function refreshPlugins() : void;
+
+
+}
+

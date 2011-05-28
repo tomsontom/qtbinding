@@ -1,0 +1,9 @@
+q_class QStyleOptionTabV3 extends QStyleOptionTabV2 {
+    q_enumeration StyleOptionVersion {
+        Version = 3
+    }
+
+
+
+}
+

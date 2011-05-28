@@ -1,0 +1,12 @@
+q_class QCopChannel extends QObject {
+    public const member q_function channel() : QString;
+    public class q_function flush() : bool;
+    public class q_function isRegistered(const QString & channel) : bool;
+    public virtual member q_function receive(const QString & message, const QByteArray & data) : void;
+    public class q_function send(const QString & channel, const QString & message) : bool;
+    public class q_function send(const QString & channel, const QString & message, const QByteArray & data) : bool;
+
+
+
+}
+

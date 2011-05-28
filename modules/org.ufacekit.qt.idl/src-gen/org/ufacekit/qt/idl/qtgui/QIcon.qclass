@@ -1,0 +1,40 @@
+q_class QIcon {
+    q_enumeration Mode {
+        Normal = 0
+        Disabled = 1
+        Active = 2
+        Selected = 3
+    }
+
+    q_enumeration State {
+        On = 0
+        Off = 1
+    }
+
+
+    q_typedef DataPtr : ___UNKNOWN___;
+
+
+    public const member q_function actualSize(const QSize & size, Mode mode = Normal, State state = Off) : QSize;
+    public member q_function addFile(const QString & fileName, const QSize & size = QSize(), Mode mode = Normal, State state = Off) : void;
+    public member q_function addPixmap(const QPixmap & pixmap, Mode mode = Normal, State state = Off) : void;
+    public const member q_function availableSizes(Mode mode = Normal, State state = Off) : QList<QSize>;
+    public const member q_function cacheKey() : qint64;
+    public class q_function fromTheme(const QString & name, const QIcon & fallback = QIcon()) : QIcon;
+    public class q_function hasThemeIcon(const QString & name) : bool;
+    public const member q_function isNull() : bool;
+    public const member q_function name() : QString;
+    public const member q_function paint(QPainter * painter, int x, int y, int w, int h, Qt.Alignment alignment = Qt.AlignCenter, Mode mode = Normal, State state = Off) : void;
+    public const member q_function paint(QPainter * painter, const QRect & rect, Qt.Alignment alignment = Qt.AlignCenter, Mode mode = Normal, State state = Off) : void;
+    public const member q_function pixmap(int w, int h, Mode mode = Normal, State state = Off) : QPixmap;
+    public const member q_function pixmap(const QSize & size, Mode mode = Normal, State state = Off) : QPixmap;
+    public const member q_function pixmap(int extent, Mode mode = Normal, State state = Off) : QPixmap;
+    public const member q_function serialNumber() : int;
+    public class q_function setThemeName(const QString & name) : void;
+    public class q_function setThemeSearchPaths(const QStringList & paths) : void;
+    public class q_function themeName() : QString;
+    public class q_function themeSearchPaths() : QStringList;
+
+
+}
+

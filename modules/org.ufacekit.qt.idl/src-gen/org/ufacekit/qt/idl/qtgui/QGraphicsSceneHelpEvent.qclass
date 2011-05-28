@@ -1,0 +1,6 @@
+q_class QGraphicsSceneHelpEvent extends QGraphicsSceneEvent {
+    public const member q_function screenPos() : QPoint;
+
+
+}
+

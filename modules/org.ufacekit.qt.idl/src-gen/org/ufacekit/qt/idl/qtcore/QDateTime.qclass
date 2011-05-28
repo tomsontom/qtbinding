@@ -1,0 +1,37 @@
+q_class QDateTime {
+    public const member q_function addDays(int ndays) : QDateTime;
+    public const member q_function addMSecs(qint64 msecs) : QDateTime;
+    public const member q_function addMonths(int nmonths) : QDateTime;
+    public const member q_function addSecs(int s) : QDateTime;
+    public const member q_function addYears(int nyears) : QDateTime;
+    public class q_function currentDateTime() : QDateTime;
+    public class q_function currentDateTimeUtc() : QDateTime;
+    public class q_function currentMSecsSinceEpoch() : qint64;
+    public const member q_function date() : QDate;
+    public const member q_function daysTo(const QDateTime & other) : int;
+    public class q_function fromMSecsSinceEpoch(qint64 msecs) : QDateTime;
+    public class q_function fromString(const QString & string, Qt.DateFormat format = Qt.TextDate) : QDateTime;
+    public class q_function fromString(const QString & string, const QString & format) : QDateTime;
+    public class q_function fromTime_t(uint seconds) : QDateTime;
+    public const member q_function isNull() : bool;
+    public const member q_function isValid() : bool;
+    public const member q_function msecsTo(const QDateTime & other) : qint64;
+    public const member q_function secsTo(const QDateTime & other) : int;
+    public member q_function setDate(const QDate & date) : void;
+    public member q_function setMSecsSinceEpoch(qint64 msecs) : void;
+    public member q_function setTime(const QTime & time) : void;
+    public member q_function setTimeSpec(Qt.TimeSpec spec) : void;
+    public member q_function setTime_t(uint seconds) : void;
+    public const member q_function time() : QTime;
+    public const member q_function timeSpec() : Qt.TimeSpec;
+    public const member q_function toLocalTime() : QDateTime;
+    public const member q_function toMSecsSinceEpoch() : qint64;
+    public const member q_function toString(const QString & format) : QString;
+    public const member q_function toString(Qt.DateFormat format = Qt.TextDate) : QString;
+    public const member q_function toTimeSpec(Qt.TimeSpec specification) : QDateTime;
+    public const member q_function toTime_t() : uint;
+    public const member q_function toUTC() : QDateTime;
+
+
+}
+

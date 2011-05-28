@@ -1,0 +1,17 @@
+q_class QStyleOptionViewItemV4 extends QStyleOptionViewItemV3 {
+    q_enumeration StyleOptionVersion {
+        Version = 4
+    }
+
+    q_enumeration ViewItemPosition {
+        Invalid = 0
+        Beginning = 1
+        Middle = 2
+        End = 3
+        OnlyOne = 4
+    }
+
+
+
+}
+

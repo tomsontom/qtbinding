@@ -1,0 +1,13 @@
+q_class QScopedPointer {
+    q_typedef pointer : ___UNKNOWN___;
+
+
+    public const member q_function data() : T *;
+    public const member q_function isNull() : bool;
+    public member q_function reset(T * other = 0) : void;
+    public member q_function swap(QScopedPointer<T, Cleanup> & other) : void;
+    public member q_function take() : T *;
+
+
+}
+

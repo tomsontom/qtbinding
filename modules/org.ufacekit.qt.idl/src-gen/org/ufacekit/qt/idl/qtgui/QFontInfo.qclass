@@ -1,0 +1,17 @@
+q_class QFontInfo {
+    public const member q_function bold() : bool;
+    public const member q_function exactMatch() : bool;
+    public const member q_function family() : QString;
+    public const member q_function fixedPitch() : bool;
+    public const member q_function italic() : bool;
+    public const member q_function pixelSize() : int;
+    public const member q_function pointSize() : int;
+    public const member q_function pointSizeF() : qreal;
+    public const member q_function rawMode() : bool;
+    public const member q_function style() : QFont.Style;
+    public const member q_function styleHint() : QFont.StyleHint;
+    public const member q_function weight() : int;
+
+
+}
+

@@ -1,0 +1,48 @@
+q_class QGLWidget extends QWidget {
+    public member q_function bindTexture(const QImage & image, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA) : GLuint;
+    public member q_function bindTexture(const QString & fileName) : GLuint;
+    public member q_function bindTexture(const QPixmap & pixmap, GLenum target, GLint format, QGLContext.BindOptions options) : GLuint;
+    public member q_function bindTexture(const QImage & image, GLenum target, GLint format, QGLContext.BindOptions options) : GLuint;
+    public member q_function bindTexture(const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA) : GLuint;
+    public const member q_function colormap() : const QGLColormap &;
+    public const member q_function context() : const QGLContext *;
+    public class q_function convertToGLFormat(const QImage & img) : QImage;
+    public member q_function deleteTexture(GLuint id) : void;
+    public member q_function doneCurrent() : void;
+    public const member q_function doubleBuffer() : bool;
+    public member q_function drawTexture(const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D) : void;
+    public member q_function drawTexture(const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D) : void;
+    public const member q_function format() : QGLFormat;
+    public member q_function grabFrameBuffer(bool withAlpha = false) : QImage;
+    public const member q_function isSharing() : bool;
+    public const member q_function isValid() : bool;
+    public member q_function makeCurrent() : void;
+    public member q_function makeOverlayCurrent() : void;
+    public const member q_function overlayContext() : const QGLContext *;
+    public const member q_function qglClearColor(const QColor & c) : void;
+    public member q_function renderPixmap(int w = 0, int h = 0, bool useContext = false) : QPixmap;
+    public member q_function renderText(int x, int y, const QString & str, const QFont & font = QFont(), int listBase = 2000) : void;
+    public member q_function renderText(double x, double y, double z, const QString & str, const QFont & font = QFont(), int listBase = 2000) : void;
+    public member q_function setColormap(const QGLColormap & cmap) : void;
+    public member q_function setFormat(const QGLFormat & format) : void;
+    public member q_function setMouseTracking(bool enable) : void;
+    public member q_function swapBuffers() : void;
+
+    protected const member q_function autoBufferSwap() : bool;
+    protected member q_function fontDisplayListBase(const QFont & font, int listBase = 2000) : int;
+    protected virtual member q_function glDraw() : void;
+    protected virtual member q_function glInit() : void;
+    protected virtual member q_function initializeGL() : void;
+    protected virtual member q_function initializeOverlayGL() : void;
+    protected virtual member q_function paintEvent(QPaintEvent * event) : void;
+    protected virtual member q_function paintGL() : void;
+    protected virtual member q_function paintOverlayGL() : void;
+    protected virtual member q_function resizeEvent(QResizeEvent * event) : void;
+    protected virtual member q_function resizeGL(int width, int height) : void;
+    protected virtual member q_function resizeOverlayGL(int width, int height) : void;
+    protected member q_function setAutoBufferSwap(bool on) : void;
+
+
+
+}
+

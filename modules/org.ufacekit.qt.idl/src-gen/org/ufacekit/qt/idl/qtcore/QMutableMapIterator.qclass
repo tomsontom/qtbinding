@@ -1,0 +1,22 @@
+q_class QMutableMapIterator {
+    q_typedef Item : ___UNKNOWN___;
+
+    q_typedef const_iterator : ___UNKNOWN___;
+
+    q_typedef iterator : ___UNKNOWN___;
+
+
+    public member q_function findNext(const T & value) : bool;
+    public member q_function findPrevious(const T & value) : bool;
+    public const member q_function hasPrevious() : bool;
+    public member q_function next() : Item;
+    public const member q_function peekNext() : Item;
+    public member q_function previous() : Item;
+    public member q_function remove() : void;
+    public member q_function setValue(const T & value) : void;
+    public member q_function toBack() : void;
+    public member q_function toFront() : void;
+
+
+}
+

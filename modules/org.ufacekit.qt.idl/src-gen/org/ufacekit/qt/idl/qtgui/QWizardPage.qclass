@@ -1,0 +1,31 @@
+q_class QWizardPage extends QWidget {
+    q_property QString subTitle;
+    q_property QString title;
+
+    public const member q_function buttonText(QWizard.WizardButton which) : QString;
+    public virtual member q_function cleanupPage() : void;
+    public virtual member q_function initializePage() : void;
+    public const member q_function isCommitPage() : bool;
+    public const virtual member q_function isComplete() : bool;
+    public const member q_function isFinalPage() : bool;
+    public const virtual member q_function nextId() : int;
+    public const member q_function pixmap(QWizard.WizardPixmap which) : QPixmap;
+    public member q_function setButtonText(QWizard.WizardButton which, const QString & text) : void;
+    public member q_function setCommitPage(bool commitPage) : void;
+    public member q_function setFinalPage(bool finalPage) : void;
+    public member q_function setPixmap(QWizard.WizardPixmap which, const QPixmap & pixmap) : void;
+    public member q_function setSubTitle(const QString & subTitle) : void;
+    public member q_function setTitle(const QString & title) : void;
+    public const member q_function subTitle() : QString;
+    public const member q_function title() : QString;
+    public virtual member q_function validatePage() : bool;
+
+    protected const member q_function field(const QString & name) : QVariant;
+    protected member q_function registerField(const QString & name, QWidget * widget, const char * property = 0, const char * changedSignal = 0) : void;
+    protected member q_function setField(const QString & name, const QVariant & value) : void;
+    protected const member q_function wizard() : QWizard *;
+
+
+
+}
+

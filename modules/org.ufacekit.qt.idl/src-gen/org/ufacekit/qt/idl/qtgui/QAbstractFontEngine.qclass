@@ -1,0 +1,57 @@
+q_class QAbstractFontEngine extends QObject {
+    q_enumeration Capability {
+        CanOutlineGlyphs = 1
+        CanRenderGlyphs_Mono = 2
+        CanRenderGlyphs_Gray = 4
+        CanRenderGlyphs = CanRenderGlyphs_Mono  |  CanRenderGlyphs_Gray
+    }
+
+    q_flags Capabilities : Capability;
+
+    q_enumeration FontProperty {
+        Ascent = 0
+        Descent = 1
+        Leading = 2
+        XHeight = 3
+        AverageCharWidth = 4
+        LineThickness = 5
+        UnderlinePosition = 6
+        MaxCharWidth = 7
+        MinLeftBearing = 8
+        MinRightBearing = 9
+        GlyphCount = 10
+        CacheGlyphsHint = 11
+        OutlineGlyphsHint = 12
+    }
+
+    q_enumeration TextShapingFlag {
+        RightToLeft = 1
+        ReturnDesignMetrics = 2
+    }
+
+    q_flags TextShapingFlags : TextShapingFlag;
+
+
+    q_typedef Fixed : ___UNKNOWN___;
+
+
+    q_class FixedPoint {
+
+    }
+
+    q_class GlyphMetrics {
+
+    }
+
+
+    public virtual member q_function addGlyphOutlinesToPath(uint * glyphs, int numGlyphs, FixedPoint * positions, QPainterPath * path) : void;
+    public const purevirtual member q_function capabilities() : Capabilities;
+    public const purevirtual member q_function convertStringToGlyphIndices(const QChar * string, int length, uint * glyphs, int * numGlyphs, TextShapingFlags flags) : bool;
+    public const purevirtual member q_function fontProperty(FontProperty property) : QVariant;
+    public const purevirtual member q_function getGlyphAdvances(const uint * glyphs, int numGlyphs, Fixed * advances, TextShapingFlags flags) : void;
+    public const purevirtual member q_function glyphMetrics(uint glyph) : GlyphMetrics;
+    public virtual member q_function renderGlyph(uint glyph, int depth, int bytesPerLine, int height, uchar * buffer) : bool;
+
+
+}
+

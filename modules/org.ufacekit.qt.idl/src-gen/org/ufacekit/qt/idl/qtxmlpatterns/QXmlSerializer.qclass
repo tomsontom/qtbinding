@@ -1,0 +1,14 @@
+q_class QXmlSerializer extends QAbstractXmlReceiver {
+    q_enumeration State {
+        BeforeDocumentElement = 0
+        InsideDocumentElement = 1
+    }
+
+
+    public const member q_function codec() : const QTextCodec *;
+    public const member q_function outputDevice() : QIODevice *;
+    public member q_function setCodec(const QTextCodec * outputCodec) : void;
+
+
+}
+

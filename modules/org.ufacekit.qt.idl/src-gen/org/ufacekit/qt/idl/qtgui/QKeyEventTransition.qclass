@@ -1,0 +1,11 @@
+q_class QKeyEventTransition extends QEventTransition {
+    q_property int key;
+    q_property Qt.KeyboardModifiers modifierMask;
+
+    public const member q_function modifierMask() : Qt.KeyboardModifiers;
+    public member q_function setKey(int key) : void;
+    public member q_function setModifierMask(Qt.KeyboardModifiers modifierMask) : void;
+
+
+}
+

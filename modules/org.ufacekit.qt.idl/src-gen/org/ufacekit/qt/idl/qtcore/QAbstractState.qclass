@@ -1,0 +1,11 @@
+q_class QAbstractState extends QObject {
+    public const member q_function machine() : QStateMachine *;
+    public const member q_function parentState() : QState *;
+
+    protected purevirtual member q_function onEntry(QEvent * event) : void;
+    protected purevirtual member q_function onExit(QEvent * event) : void;
+
+
+
+}
+

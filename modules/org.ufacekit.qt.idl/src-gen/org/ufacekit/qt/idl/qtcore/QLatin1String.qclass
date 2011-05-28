@@ -1,0 +1,6 @@
+q_class QLatin1String {
+    public const member q_function latin1() : const char *; 
+
+
+}
+

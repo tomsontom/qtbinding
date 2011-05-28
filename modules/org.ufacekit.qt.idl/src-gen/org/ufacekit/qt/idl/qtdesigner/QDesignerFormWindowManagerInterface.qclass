@@ -1,0 +1,30 @@
+q_class QDesignerFormWindowManagerInterface extends QObject {
+    public const virtual member q_function actionAdjustSize() : QAction *;
+    public const virtual member q_function actionBreakLayout() : QAction *;
+    public const virtual member q_function actionCopy() : QAction *;
+    public const virtual member q_function actionCut() : QAction *;
+    public const virtual member q_function actionDelete() : QAction *;
+    public const member q_function actionFormLayout() : QAction *;
+    public const virtual member q_function actionGridLayout() : QAction *;
+    public const virtual member q_function actionHorizontalLayout() : QAction *;
+    public const virtual member q_function actionLower() : QAction *;
+    public const virtual member q_function actionPaste() : QAction *;
+    public const virtual member q_function actionRaise() : QAction *;
+    public const virtual member q_function actionRedo() : QAction *;
+    public const virtual member q_function actionSelectAll() : QAction *;
+    public const member q_function actionSimplifyLayout() : QAction *;
+    public const virtual member q_function actionSplitHorizontal() : QAction *;
+    public const virtual member q_function actionSplitVertical() : QAction *;
+    public const virtual member q_function actionUndo() : QAction *;
+    public const virtual member q_function actionVerticalLayout() : QAction *;
+    public const virtual member q_function activeFormWindow() : QDesignerFormWindowInterface *;
+    public const virtual member q_function core() : QDesignerFormEditorInterface *;
+    public virtual member q_function createFormWindow(QWidget * parent = 0, Qt.WindowFlags flags = 0) : QDesignerFormWindowInterface *;
+    public const virtual member q_function formWindow(int index) : QDesignerFormWindowInterface *;
+    public const virtual member q_function formWindowCount() : int;
+
+
+
+
+}
+

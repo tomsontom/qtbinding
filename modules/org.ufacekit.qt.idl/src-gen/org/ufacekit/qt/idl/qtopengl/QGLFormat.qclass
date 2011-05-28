@@ -1,0 +1,88 @@
+q_class QGLFormat {
+    q_enumeration OpenGLContextProfile {
+        NoProfile = 0
+        CoreProfile = 1
+        CompatibilityProfile = 2
+    }
+
+    q_enumeration OpenGLVersionFlag {
+        OpenGL_Version_None = 0
+        OpenGL_Version_1_1 = 1
+        OpenGL_Version_1_2 = 2
+        OpenGL_Version_1_3 = 4
+        OpenGL_Version_1_4 = 8
+        OpenGL_Version_1_5 = 16
+        OpenGL_Version_2_0 = 32
+        OpenGL_Version_2_1 = 64
+        OpenGL_ES_Common_Version_1_0 = 128
+        OpenGL_ES_CommonLite_Version_1_0 = 256
+        OpenGL_ES_Common_Version_1_1 = 512
+        OpenGL_ES_CommonLite_Version_1_1 = 1024
+        OpenGL_ES_Version_2_0 = 2048
+        OpenGL_Version_3_0 = 4096
+        OpenGL_Version_3_1 = 8192
+        OpenGL_Version_3_2 = 16384
+        OpenGL_Version_3_3 = 32768
+        OpenGL_Version_4_0 = 65536
+    }
+
+    q_flags OpenGLVersionFlags : OpenGLVersionFlag;
+
+
+    public const member q_function accum() : bool;
+    public const member q_function accumBufferSize() : int;
+    public const member q_function alpha() : bool;
+    public const member q_function alphaBufferSize() : int;
+    public const member q_function blueBufferSize() : int;
+    public class q_function defaultFormat() : QGLFormat;
+    public class q_function defaultOverlayFormat() : QGLFormat;
+    public const member q_function depth() : bool;
+    public const member q_function depthBufferSize() : int;
+    public const member q_function directRendering() : bool;
+    public const member q_function doubleBuffer() : bool;
+    public const member q_function greenBufferSize() : int;
+    public class q_function hasOpenGL() : bool;
+    public class q_function hasOpenGLOverlays() : bool;
+    public const member q_function hasOverlay() : bool;
+    public const member q_function majorVersion() : int;
+    public const member q_function minorVersion() : int;
+    public class q_function openGLVersionFlags() : OpenGLVersionFlags;
+    public const member q_function plane() : int;
+    public const member q_function profile() : OpenGLContextProfile;
+    public const member q_function redBufferSize() : int;
+    public const member q_function rgba() : bool;
+    public const member q_function sampleBuffers() : bool;
+    public const member q_function samples() : int;
+    public member q_function setAccum(bool enable) : void;
+    public member q_function setAccumBufferSize(int size) : void;
+    public member q_function setAlpha(bool enable) : void;
+    public member q_function setAlphaBufferSize(int size) : void;
+    public member q_function setBlueBufferSize(int size) : void;
+    public class q_function setDefaultFormat(const QGLFormat & f) : void;
+    public class q_function setDefaultOverlayFormat(const QGLFormat & f) : void;
+    public member q_function setDepth(bool enable) : void;
+    public member q_function setDirectRendering(bool enable) : void;
+    public member q_function setDoubleBuffer(bool enable) : void;
+    public member q_function setGreenBufferSize(int size) : void;
+    public member q_function setOption(QGL.FormatOptions opt) : void;
+    public member q_function setOverlay(bool enable) : void;
+    public member q_function setPlane(int plane) : void;
+    public member q_function setProfile(OpenGLContextProfile profile) : void;
+    public member q_function setRedBufferSize(int size) : void;
+    public member q_function setRgba(bool enable) : void;
+    public member q_function setSampleBuffers(bool enable) : void;
+    public member q_function setSamples(int numSamples) : void;
+    public member q_function setStencil(bool enable) : void;
+    public member q_function setStencilBufferSize(int size) : void;
+    public member q_function setStereo(bool enable) : void;
+    public member q_function setSwapInterval(int interval) : void;
+    public member q_function setVersion(int major, int minor) : void;
+    public const member q_function stencil() : bool;
+    public const member q_function stencilBufferSize() : int;
+    public const member q_function stereo() : bool;
+    public const member q_function swapInterval() : int;
+    public const member q_function testOption(QGL.FormatOptions opt) : bool;
+
+
+}
+

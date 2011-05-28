@@ -1,0 +1,7 @@
+q_class QMouseDriverFactory {
+    public class q_function create(const QString & key, const QString & device) : QWSMouseHandler *;
+    public class q_function keys() : QStringList;
+
+
+}
+

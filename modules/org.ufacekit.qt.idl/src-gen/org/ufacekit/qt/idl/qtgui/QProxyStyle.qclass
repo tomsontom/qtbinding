@@ -1,0 +1,8 @@
+q_class QProxyStyle extends QCommonStyle {
+    public const member q_function baseStyle() : QStyle *;
+    public member q_function setBaseStyle(QStyle * style) : void;
+
+
+
+}
+

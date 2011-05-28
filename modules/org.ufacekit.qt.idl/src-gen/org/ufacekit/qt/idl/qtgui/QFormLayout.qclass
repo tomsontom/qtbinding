@@ -1,0 +1,67 @@
+q_class QFormLayout extends QLayout {
+    q_enumeration FieldGrowthPolicy {
+        FieldsStayAtSizeHint = 0
+        ExpandingFieldsGrow = 1
+        AllNonFixedFieldsGrow = 2
+    }
+
+    q_enumeration ItemRole {
+        LabelRole = 0
+        FieldRole = 1
+        SpanningRole = 2
+    }
+
+    q_enumeration RowWrapPolicy {
+        DontWrapRows = 0
+        WrapLongRows = 1
+        WrapAllRows = 2
+    }
+
+
+    q_property FieldGrowthPolicy fieldGrowthPolicy;
+    q_property Qt.Alignment formAlignment;
+    q_property int horizontalSpacing;
+    q_property Qt.Alignment labelAlignment;
+    q_property RowWrapPolicy rowWrapPolicy;
+    q_property int verticalSpacing;
+
+    public member q_function addRow(QWidget * widget) : void;
+    public member q_function addRow(const QString & labelText, QLayout * field) : void;
+    public member q_function addRow(const QString & labelText, QWidget * field) : void;
+    public member q_function addRow(QLayout * layout) : void;
+    public member q_function addRow(QWidget * label, QLayout * field) : void;
+    public member q_function addRow(QWidget * label, QWidget * field) : void;
+    public const member q_function fieldGrowthPolicy() : FieldGrowthPolicy;
+    public const member q_function formAlignment() : Qt.Alignment;
+    public const member q_function getItemPosition(int index, int * rowPtr, ItemRole * rolePtr) : void;
+    public const member q_function getLayoutPosition(QLayout * layout, int * rowPtr, ItemRole * rolePtr) : void;
+    public const member q_function getWidgetPosition(QWidget * widget, int * rowPtr, ItemRole * rolePtr) : void;
+    public const member q_function horizontalSpacing() : int;
+    public member q_function insertRow(int row, QLayout * layout) : void;
+    public member q_function insertRow(int row, QWidget * widget) : void;
+    public member q_function insertRow(int row, const QString & labelText, QWidget * field) : void;
+    public member q_function insertRow(int row, const QString & labelText, QLayout * field) : void;
+    public member q_function insertRow(int row, QWidget * label, QLayout * field) : void;
+    public member q_function insertRow(int row, QWidget * label, QWidget * field) : void;
+    public const member q_function itemAt(int row, ItemRole role) : QLayoutItem *;
+    public const member q_function labelAlignment() : Qt.Alignment;
+    public const member q_function labelForField(QLayout * field) : QWidget *;
+    public const member q_function labelForField(QWidget * field) : QWidget *;
+    public const member q_function rowCount() : int;
+    public const member q_function rowWrapPolicy() : RowWrapPolicy;
+    public member q_function setFieldGrowthPolicy(FieldGrowthPolicy policy) : void;
+    public member q_function setFormAlignment(Qt.Alignment alignment) : void;
+    public member q_function setHorizontalSpacing(int spacing) : void;
+    public member q_function setItem(int row, ItemRole role, QLayoutItem * item) : void;
+    public member q_function setLabelAlignment(Qt.Alignment alignment) : void;
+    public member q_function setLayout(int row, ItemRole role, QLayout * layout) : void;
+    public member q_function setRowWrapPolicy(RowWrapPolicy policy) : void;
+    public member q_function setSpacing(int spacing) : void;
+    public member q_function setVerticalSpacing(int spacing) : void;
+    public member q_function setWidget(int row, ItemRole role, QWidget * widget) : void;
+    public const member q_function spacing() : int;
+    public const member q_function verticalSpacing() : int;
+
+
+}
+

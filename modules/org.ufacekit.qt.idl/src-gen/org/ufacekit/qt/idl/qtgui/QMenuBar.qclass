@@ -1,0 +1,31 @@
+q_class QMenuBar extends QWidget {
+    q_property bool defaultUp;
+    q_property bool nativeMenuBar;
+
+    public const member q_function actionAt(const QPoint & pt) : QAction *;
+    public const member q_function actionGeometry(QAction * act) : QRect;
+    public const member q_function activeAction() : QAction *;
+    public member q_function addAction(const QString & text, const QObject * receiver, const char * member) : QAction *;
+    public member q_function addAction(const QString & text) : QAction *;
+    public member q_function addMenu(QMenu * menu) : QAction *;
+    public member q_function addMenu(const QIcon & icon, const QString & title) : QMenu *;
+    public member q_function addMenu(const QString & title) : QMenu *;
+    public member q_function addSeparator() : QAction *;
+    public member q_function clear() : void;
+    public const member q_function cornerWidget(Qt.Corner corner = Qt.TopRightCorner) : QWidget *;
+    public const member q_function defaultAction() : QAction *;
+    public member q_function insertMenu(QAction * before, QMenu * menu) : QAction *;
+    public member q_function insertSeparator(QAction * before) : QAction *;
+    public const member q_function isDefaultUp() : bool;
+    public const member q_function isNativeMenuBar() : bool;
+    public member q_function setActiveAction(QAction * act) : void;
+    public member q_function setCornerWidget(QWidget * widget, Qt.Corner corner = Qt.TopRightCorner) : void;
+    public member q_function setDefaultUp(bool ) : void;
+    public member q_function setNativeMenuBar(bool nativeMenuBar) : void;
+
+    protected const member q_function initStyleOption(QStyleOptionMenuItem * option, const QAction * action) : void;
+
+
+
+}
+

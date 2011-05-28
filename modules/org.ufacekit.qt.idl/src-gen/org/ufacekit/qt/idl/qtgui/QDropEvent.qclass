@@ -1,0 +1,18 @@
+q_class QDropEvent extends QEvent, QMimeSource {
+    public member q_function acceptProposedAction() : void;
+    public const member q_function dropAction() : Qt.DropAction;
+    public const virtual member q_function encodedData(const char * format) : QByteArray;
+    public const virtual member q_function format(int n = 0) : const char *;
+    public const member q_function keyboardModifiers() : Qt.KeyboardModifiers;
+    public const member q_function mimeData() : const QMimeData *;
+    public const member q_function mouseButtons() : Qt.MouseButtons;
+    public const member q_function pos() : const QPoint &;
+    public const member q_function possibleActions() : Qt.DropActions;
+    public const member q_function proposedAction() : Qt.DropAction;
+    public const virtual member q_function provides(const char * mimeType) : bool;
+    public member q_function setDropAction(Qt.DropAction action) : void;
+    public const member q_function source() : QWidget *;
+
+
+}
+

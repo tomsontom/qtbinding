@@ -1,0 +1,14 @@
+q_class QUndoView extends QListView {
+    q_property QIcon cleanIcon;
+    q_property QString emptyLabel;
+
+    public const member q_function cleanIcon() : QIcon;
+    public const member q_function emptyLabel() : QString;
+    public const member q_function group() : QUndoGroup *;
+    public member q_function setCleanIcon(const QIcon & icon) : void;
+    public member q_function setEmptyLabel(const QString & label) : void;
+
+
+
+}
+

@@ -1,0 +1,7 @@
+q_class QDBusObjectPath extends QString {
+    public const member q_function path() : QString;
+    public member q_function setPath(const QString & path) : void;
+
+
+}
+

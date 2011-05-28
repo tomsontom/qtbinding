@@ -1,0 +1,13 @@
+q_class QStylePainter extends QPainter {
+    public member q_function begin(QPaintDevice * pd, QWidget * widget) : bool;
+    public member q_function begin(QWidget * widget) : bool;
+    public member q_function drawComplexControl(QStyle.ComplexControl cc, const QStyleOptionComplex & option) : void;
+    public member q_function drawControl(QStyle.ControlElement ce, const QStyleOption & option) : void;
+    public member q_function drawItemPixmap(const QRect & rect, int flags, const QPixmap & pixmap) : void;
+    public member q_function drawItemText(const QRect & rect, int flags, const QPalette & pal, bool enabled, const QString & text, QPalette.ColorRole textRole = QPalette.NoRole) : void;
+    public member q_function drawPrimitive(QStyle.PrimitiveElement pe, const QStyleOption & option) : void;
+    public const member q_function style() : QStyle *;
+
+
+}
+

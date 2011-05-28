@@ -1,0 +1,10 @@
+q_class QInputContextFactory {
+    public class q_function create(const QString & key, QObject * parent) : QInputContext *;
+    public class q_function description(const QString & key) : QString;
+    public class q_function displayName(const QString & key) : QString;
+    public class q_function keys() : QStringList;
+    public class q_function languages(const QString & key) : QStringList;
+
+
+}
+

@@ -1,0 +1,12 @@
+q_class QAnimationGroup extends QAbstractAnimation {
+    public member q_function addAnimation(QAbstractAnimation * animation) : void;
+    public const member q_function animationCount() : int;
+    public member q_function clear() : void;
+    public const member q_function indexOfAnimation(QAbstractAnimation * animation) : int;
+    public member q_function insertAnimation(int index, QAbstractAnimation * animation) : void;
+    public member q_function removeAnimation(QAbstractAnimation * animation) : void;
+    public member q_function takeAnimation(int index) : QAbstractAnimation *;
+
+
+}
+

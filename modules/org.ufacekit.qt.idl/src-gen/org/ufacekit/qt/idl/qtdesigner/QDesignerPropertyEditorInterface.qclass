@@ -1,0 +1,11 @@
+q_class QDesignerPropertyEditorInterface extends QWidget {
+    public const virtual member q_function core() : QDesignerFormEditorInterface *;
+    public const purevirtual member q_function currentPropertyName() : QString;
+    public const purevirtual member q_function isReadOnly() : bool;
+    public const purevirtual member q_function object() : QObject *;
+
+
+
+
+}
+

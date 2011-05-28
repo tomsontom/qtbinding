@@ -1,0 +1,14 @@
+q_class QHelpSearchQuery {
+    q_enumeration FieldName {
+        DEFAULT = 0
+        FUZZY = 1
+        WITHOUT = 2
+        PHRASE = 3
+        ALL = 4
+        ATLEAST = 5
+    }
+
+
+
+}
+

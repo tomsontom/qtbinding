@@ -1,0 +1,20 @@
+q_class QDeclarativeExpression extends QObject {
+    public member q_function clearError() : void;
+    public const member q_function context() : QDeclarativeContext *;
+    public const member q_function engine() : QDeclarativeEngine *;
+    public const member q_function error() : QDeclarativeError;
+    public member q_function evaluate(bool * valueIsUndefined = 0) : QVariant;
+    public const member q_function expression() : QString;
+    public const member q_function hasError() : bool;
+    public const member q_function lineNumber() : int;
+    public const member q_function notifyOnValueChanged() : bool;
+    public const member q_function scopeObject() : QObject *;
+    public member q_function setExpression(const QString & expression) : void;
+    public member q_function setNotifyOnValueChanged(bool notifyOnChange) : void;
+    public member q_function setSourceLocation(const QString & url, int line) : void;
+    public const member q_function sourceFile() : QString;
+
+
+
+}
+

@@ -1,0 +1,7 @@
+q_class QKbdDriverPlugin extends QObject {
+    public purevirtual member q_function create(const QString & key, const QString & device) : QWSKeyboardHandler *;
+    public const purevirtual member q_function keys() : QStringList;
+
+
+}
+

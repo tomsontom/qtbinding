@@ -1,0 +1,9 @@
+q_class QWeakPointer {
+    public member q_function clear() : void;
+    public const member q_function data() : T *;
+    public const member q_function isNull() : bool;
+    public const member q_function toStrongRef() : QSharedPointer<T>;
+
+
+}
+

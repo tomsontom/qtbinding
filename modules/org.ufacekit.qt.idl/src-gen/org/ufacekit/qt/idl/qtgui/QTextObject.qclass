@@ -1,0 +1,11 @@
+q_class QTextObject extends QObject {
+    public const member q_function document() : QTextDocument *;
+    public const member q_function format() : QTextFormat;
+    public const member q_function formatIndex() : int;
+    public const member q_function objectIndex() : int;
+
+    protected member q_function setFormat(const QTextFormat & format) : void;
+
+
+}
+

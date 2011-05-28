@@ -1,0 +1,7 @@
+q_class QResizeEvent extends QEvent {
+    public const member q_function oldSize() : const QSize &;
+    public const member q_function size() : const QSize &;
+
+
+}
+

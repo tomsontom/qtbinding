@@ -1,0 +1,87 @@
+q_class QPainterPath {
+    q_enumeration ElementType {
+        MoveToElement = 0
+        LineToElement = 1
+        CurveToElement = 2
+        CurveToDataElement = 3
+    }
+
+
+    q_class Element {
+        public const member q_function isCurveTo() : bool;
+        public const member q_function isLineTo() : bool;
+        public const member q_function isMoveTo() : bool;
+
+
+    }
+
+
+    public member q_function addEllipse(qreal x, qreal y, qreal width, qreal height) : void;
+    public member q_function addEllipse(const QRectF & boundingRectangle) : void;
+    public member q_function addEllipse(const QPointF & center, qreal rx, qreal ry) : void;
+    public member q_function addPath(const QPainterPath & path) : void;
+    public member q_function addPolygon(const QPolygonF & polygon) : void;
+    public member q_function addRect(const QRectF & rectangle) : void;
+    public member q_function addRect(qreal x, qreal y, qreal width, qreal height) : void;
+    public member q_function addRegion(const QRegion & region) : void;
+    public member q_function addRoundRect(const QRectF & rect, int roundness) : void;
+    public member q_function addRoundRect(qreal x, qreal y, qreal width, qreal height, int roundness) : void;
+    public member q_function addRoundRect(qreal x, qreal y, qreal w, qreal h, int xRnd, int yRnd) : void;
+    public member q_function addRoundRect(const QRectF & r, int xRnd, int yRnd) : void;
+    public member q_function addRoundedRect(qreal x, qreal y, qreal w, qreal h, qreal xRadius, qreal yRadius, Qt.SizeMode mode = Qt.AbsoluteSize) : void;
+    public member q_function addRoundedRect(const QRectF & rect, qreal xRadius, qreal yRadius, Qt.SizeMode mode = Qt.AbsoluteSize) : void;
+    public member q_function addText(qreal x, qreal y, const QFont & font, const QString & text) : void;
+    public member q_function addText(const QPointF & point, const QFont & font, const QString & text) : void;
+    public const member q_function angleAtPercent(qreal t) : qreal;
+    public member q_function arcMoveTo(qreal x, qreal y, qreal width, qreal height, qreal angle) : void;
+    public member q_function arcMoveTo(const QRectF & rectangle, qreal angle) : void;
+    public member q_function arcTo(const QRectF & rectangle, qreal startAngle, qreal sweepLength) : void;
+    public member q_function arcTo(qreal x, qreal y, qreal width, qreal height, qreal startAngle, qreal sweepLength) : void;
+    public const member q_function boundingRect() : QRectF;
+    public member q_function closeSubpath() : void;
+    public member q_function connectPath(const QPainterPath & path) : void;
+    public const member q_function contains(const QPointF & point) : bool;
+    public const member q_function contains(const QRectF & rectangle) : bool;
+    public const member q_function contains(const QPainterPath & p) : bool;
+    public const member q_function controlPointRect() : QRectF;
+    public member q_function cubicTo(const QPointF & c1, const QPointF & c2, const QPointF & endPoint) : void;
+    public member q_function cubicTo(qreal c1X, qreal c1Y, qreal c2X, qreal c2Y, qreal endPointX, qreal endPointY) : void;
+    public const member q_function currentPosition() : QPointF;
+    public const member q_function elementAt(int index) : const QPainterPath.Element &;
+    public const member q_function elementCount() : int;
+    public const member q_function fillRule() : Qt.FillRule;
+    public const member q_function intersected(const QPainterPath & p) : QPainterPath;
+    public const member q_function intersects(const QRectF & rectangle) : bool;
+    public const member q_function intersects(const QPainterPath & p) : bool;
+    public const member q_function isEmpty() : bool;
+    public const member q_function length() : qreal;
+    public member q_function lineTo(qreal x, qreal y) : void;
+    public member q_function lineTo(const QPointF & endPoint) : void;
+    public member q_function moveTo(qreal x, qreal y) : void;
+    public member q_function moveTo(const QPointF & point) : void;
+    public const member q_function percentAtLength(qreal len) : qreal;
+    public const member q_function pointAtPercent(qreal t) : QPointF;
+    public member q_function quadTo(qreal cx, qreal cy, qreal endPointX, qreal endPointY) : void;
+    public member q_function quadTo(const QPointF & c, const QPointF & endPoint) : void;
+    public member q_function setElementPositionAt(int index, qreal x, qreal y) : void;
+    public member q_function setFillRule(Qt.FillRule fillRule) : void;
+    public const member q_function simplified() : QPainterPath;
+    public const member q_function slopeAtPercent(qreal t) : qreal;
+    public const member q_function subtracted(const QPainterPath & p) : QPainterPath;
+    public const member q_function subtractedInverted(const QPainterPath & p) : QPainterPath;
+    public const member q_function toFillPolygon(const QTransform & matrix) : QPolygonF;
+    public const member q_function toFillPolygon(const QMatrix & matrix = QMatrix()) : QPolygonF;
+    public const member q_function toFillPolygons(const QTransform & matrix) : QList<QPolygonF>;
+    public const member q_function toFillPolygons(const QMatrix & matrix = QMatrix()) : QList<QPolygonF>;
+    public const member q_function toReversed() : QPainterPath;
+    public const member q_function toSubpathPolygons(const QTransform & matrix) : QList<QPolygonF>;
+    public const member q_function toSubpathPolygons(const QMatrix & matrix = QMatrix()) : QList<QPolygonF>;
+    public member q_function translate(const QPointF & offset) : void;
+    public member q_function translate(qreal dx, qreal dy) : void;
+    public const member q_function translated(qreal dx, qreal dy) : QPainterPath;
+    public const member q_function translated(const QPointF & offset) : QPainterPath;
+    public const member q_function united(const QPainterPath & p) : QPainterPath;
+
+
+}
+

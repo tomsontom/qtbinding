@@ -1,0 +1,21 @@
+q_class QGraphicsLinearLayout extends QGraphicsLayout {
+    public member q_function addItem(QGraphicsLayoutItem * item) : void;
+    public member q_function addStretch(int stretch = 1) : void;
+    public const member q_function alignment(QGraphicsLayoutItem * item) : Qt.Alignment;
+    public member q_function insertItem(int index, QGraphicsLayoutItem * item) : void;
+    public member q_function insertStretch(int index, int stretch = 1) : void;
+    public const member q_function itemSpacing(int index) : qreal;
+    public const member q_function orientation() : Qt.Orientation;
+    public virtual member q_function removeAt(int index) : void;
+    public member q_function removeItem(QGraphicsLayoutItem * item) : void;
+    public member q_function setAlignment(QGraphicsLayoutItem * item, Qt.Alignment alignment) : void;
+    public member q_function setItemSpacing(int index, qreal spacing) : void;
+    public member q_function setOrientation(Qt.Orientation orientation) : void;
+    public member q_function setSpacing(qreal spacing) : void;
+    public member q_function setStretchFactor(QGraphicsLayoutItem * item, int stretch) : void;
+    public const member q_function spacing() : qreal;
+    public const member q_function stretchFactor(QGraphicsLayoutItem * item) : int;
+
+
+}
+

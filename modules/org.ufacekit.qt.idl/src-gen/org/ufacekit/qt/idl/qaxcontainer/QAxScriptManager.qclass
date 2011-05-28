@@ -1,0 +1,17 @@
+q_class QAxScriptManager extends QObject {
+    public member q_function addObject(QObject * object) : void;
+    public member q_function call(const QString & function, QList<QVariant> & arguments) : QVariant;
+    public member q_function call(const QString & function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant()) : QVariant;
+    public const member q_function functions(QAxScript.FunctionFlags flags = QAxScript.FunctionNames) : QStringList;
+    public member q_function load(const QString & code, const QString & name, const QString & language) : QAxScript *;
+    public member q_function load(const QString & file, const QString & name) : QAxScript *;
+    public class q_function registerEngine(const QString & name, const QString & extension, const QString & code = QString()) : bool;
+    public const member q_function script(const QString & name) : QAxScript *;
+    public class q_function scriptFileFilter() : QString;
+    public const member q_function scriptNames() : QStringList;
+
+
+
+
+}
+

@@ -1,0 +1,64 @@
+q_class QTransform {
+    q_enumeration TransformationType {
+        TxNone = 0
+        TxTranslate = 1
+        TxScale = 2
+        TxRotate = 4
+        TxShear = 8
+        TxProject = 16
+    }
+
+
+    public const member q_function adjoint() : QTransform;
+    public const member q_function det() : qreal;
+    public const member q_function determinant() : qreal;
+    public const member q_function dx() : qreal;
+    public const member q_function dy() : qreal;
+    public class q_function fromScale(qreal sx, qreal sy) : QTransform;
+    public class q_function fromTranslate(qreal dx, qreal dy) : QTransform;
+    public const member q_function inverted(bool * invertible = 0) : QTransform;
+    public const member q_function isAffine() : bool;
+    public const member q_function isIdentity() : bool;
+    public const member q_function isInvertible() : bool;
+    public const member q_function isRotating() : bool;
+    public const member q_function isScaling() : bool;
+    public const member q_function isTranslating() : bool;
+    public const member q_function m11() : qreal;
+    public const member q_function m12() : qreal;
+    public const member q_function m13() : qreal;
+    public const member q_function m21() : qreal;
+    public const member q_function m22() : qreal;
+    public const member q_function m23() : qreal;
+    public const member q_function m31() : qreal;
+    public const member q_function m32() : qreal;
+    public const member q_function m33() : qreal;
+    public const member q_function map(const QPolygon & polygon) : QPolygon;
+    public const member q_function map(const QPolygonF & polygon) : QPolygonF;
+    public const member q_function map(const QLine & l) : QLine;
+    public const member q_function map(const QLineF & line) : QLineF;
+    public const member q_function map(int x, int y, int * tx, int * ty) : void;
+    public const member q_function map(const QRegion & region) : QRegion;
+    public const member q_function map(qreal x, qreal y, qreal * tx, qreal * ty) : void;
+    public const member q_function map(const QPainterPath & path) : QPainterPath;
+    public const member q_function map(const QPoint & point) : QPoint;
+    public const member q_function map(const QPointF & p) : QPointF;
+    public const member q_function mapRect(const QRect & rectangle) : QRect;
+    public const member q_function mapRect(const QRectF & rectangle) : QRectF;
+    public const member q_function mapToPolygon(const QRect & rectangle) : QPolygon;
+    public class q_function quadToQuad(const QPolygonF & one, const QPolygonF & two, QTransform & trans) : bool;
+    public class q_function quadToSquare(const QPolygonF & quad, QTransform & trans) : bool;
+    public member q_function reset() : void;
+    public member q_function rotate(qreal angle, Qt.Axis axis = Qt.ZAxis) : QTransform &;
+    public member q_function rotateRadians(qreal angle, Qt.Axis axis = Qt.ZAxis) : QTransform &;
+    public member q_function scale(qreal sx, qreal sy) : QTransform &;
+    public member q_function setMatrix(qreal m11, qreal m12, qreal m13, qreal m21, qreal m22, qreal m23, qreal m31, qreal m32, qreal m33) : void;
+    public member q_function shear(qreal sh, qreal sv) : QTransform &;
+    public class q_function squareToQuad(const QPolygonF & quad, QTransform & trans) : bool;
+    public const member q_function toAffine() : const QMatrix &;
+    public member q_function translate(qreal dx, qreal dy) : QTransform &;
+    public const member q_function transposed() : QTransform;
+    public const member q_function type() : TransformationType;
+
+
+}
+

@@ -1,0 +1,10 @@
+q_class QHelpEngine extends QHelpEngineCore {
+    public const member q_function contentModel() : QHelpContentModel *;
+    public member q_function contentWidget() : QHelpContentWidget *;
+    public const member q_function indexModel() : QHelpIndexModel *;
+    public member q_function indexWidget() : QHelpIndexWidget *;
+    public member q_function searchEngine() : QHelpSearchEngine *;
+
+
+}
+

@@ -1,0 +1,101 @@
+q_class QColor {
+    q_enumeration Spec {
+        Invalid = 0
+        Rgb = 1
+        Hsv = 2
+        Cmyk = 3
+        Hsl = 4
+    }
+
+
+    public class q_function allowX11ColorNames() : bool;
+    public const member q_function alpha() : int;
+    public const member q_function alphaF() : qreal;
+    public const member q_function black() : int;
+    public const member q_function blackF() : qreal;
+    public const member q_function blue() : int;
+    public const member q_function blueF() : qreal;
+    public class q_function colorNames() : QStringList;
+    public const member q_function convertTo(Spec colorSpec) : QColor;
+    public const member q_function cyan() : int;
+    public const member q_function cyanF() : qreal;
+    public const member q_function dark(int factor = 200) : QColor;
+    public const member q_function darker(int factor = 200) : QColor;
+    public class q_function fromCmyk(int c, int m, int y, int k, int a = 255) : QColor;
+    public class q_function fromCmykF(qreal c, qreal m, qreal y, qreal k, qreal a = 1.0) : QColor;
+    public class q_function fromHsl(int h, int s, int l, int a = 255) : QColor;
+    public class q_function fromHslF(qreal h, qreal s, qreal l, qreal a = 1.0) : QColor;
+    public class q_function fromHsv(int h, int s, int v, int a = 255) : QColor;
+    public class q_function fromHsvF(qreal h, qreal s, qreal v, qreal a = 1.0) : QColor;
+    public class q_function fromRgb(int r, int g, int b, int a = 255) : QColor;
+    public class q_function fromRgb(QRgb rgb) : QColor;
+    public class q_function fromRgbF(qreal r, qreal g, qreal b, qreal a = 1.0) : QColor;
+    public class q_function fromRgba(QRgb rgba) : QColor;
+    public member q_function getCmyk(int * c, int * m, int * y, int * k, int * a = 0) : void;
+    public member q_function getCmykF(qreal * c, qreal * m, qreal * y, qreal * k, qreal * a = 0) : void;
+    public const member q_function getHsl(int * h, int * s, int * l, int * a = 0) : void;
+    public const member q_function getHslF(qreal * h, qreal * s, qreal * l, qreal * a = 0) : void;
+    public const member q_function getHsv(int * h, int * s, int * v, int * a = 0) : void;
+    public const member q_function getHsvF(qreal * h, qreal * s, qreal * v, qreal * a = 0) : void;
+    public const member q_function getRgb(int * r, int * g, int * b, int * a = 0) : void;
+    public const member q_function getRgbF(qreal * r, qreal * g, qreal * b, qreal * a = 0) : void;
+    public const member q_function green() : int;
+    public const member q_function greenF() : qreal;
+    public const member q_function hslHue() : int;
+    public const member q_function hslHueF() : qreal;
+    public const member q_function hslSaturation() : int;
+    public const member q_function hslSaturationF() : qreal;
+    public const member q_function hsvHue() : int;
+    public const member q_function hsvHueF() : qreal;
+    public const member q_function hsvSaturation() : int;
+    public const member q_function hsvSaturationF() : qreal;
+    public const member q_function hue() : int;
+    public const member q_function hueF() : qreal;
+    public const member q_function isValid() : bool;
+    public class q_function isValidColor(const QString & name) : bool;
+    public const member q_function light(int factor = 150) : QColor;
+    public const member q_function lighter(int factor = 150) : QColor;
+    public const member q_function lightness() : int;
+    public const member q_function lightnessF() : qreal;
+    public const member q_function magenta() : int;
+    public const member q_function magentaF() : qreal;
+    public const member q_function name() : QString;
+    public const member q_function red() : int;
+    public const member q_function redF() : qreal;
+    public const member q_function rgb() : QRgb;
+    public const member q_function rgba() : QRgb;
+    public const member q_function saturation() : int;
+    public const member q_function saturationF() : qreal;
+    public class q_function setAllowX11ColorNames(bool enabled) : void;
+    public member q_function setAlpha(int alpha) : void;
+    public member q_function setAlphaF(qreal alpha) : void;
+    public member q_function setBlue(int blue) : void;
+    public member q_function setBlueF(qreal blue) : void;
+    public member q_function setCmyk(int c, int m, int y, int k, int a = 255) : void;
+    public member q_function setCmykF(qreal c, qreal m, qreal y, qreal k, qreal a = 1.0) : void;
+    public member q_function setGreen(int green) : void;
+    public member q_function setGreenF(qreal green) : void;
+    public member q_function setHsl(int h, int s, int l, int a = 255) : void;
+    public member q_function setHslF(qreal h, qreal s, qreal l, qreal a = 1.0) : void;
+    public member q_function setHsv(int h, int s, int v, int a = 255) : void;
+    public member q_function setHsvF(qreal h, qreal s, qreal v, qreal a = 1.0) : void;
+    public member q_function setNamedColor(const QString & name) : void;
+    public member q_function setRed(int red) : void;
+    public member q_function setRedF(qreal red) : void;
+    public member q_function setRgb(QRgb rgb) : void;
+    public member q_function setRgb(int r, int g, int b, int a = 255) : void;
+    public member q_function setRgbF(qreal r, qreal g, qreal b, qreal a = 1.0) : void;
+    public member q_function setRgba(QRgb rgba) : void;
+    public const member q_function spec() : Spec;
+    public const member q_function toCmyk() : QColor;
+    public const member q_function toHsl() : QColor;
+    public const member q_function toHsv() : QColor;
+    public const member q_function toRgb() : QColor;
+    public const member q_function value() : int;
+    public const member q_function valueF() : qreal;
+    public const member q_function yellow() : int;
+    public const member q_function yellowF() : qreal;
+
+
+}
+

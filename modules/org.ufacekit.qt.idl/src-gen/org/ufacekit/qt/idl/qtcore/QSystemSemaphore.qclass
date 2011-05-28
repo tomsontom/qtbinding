@@ -1,0 +1,26 @@
+q_class QSystemSemaphore {
+    q_enumeration AccessMode {
+        Open = 0
+        Create = 1
+    }
+
+    q_enumeration SystemSemaphoreError {
+        NoError = 0
+        PermissionDenied = 1
+        KeyError = 2
+        AlreadyExists = 3
+        NotFound = 4
+        OutOfResources = 5
+        UnknownError = 6
+    }
+
+
+    public member q_function acquire() : bool;
+    public const member q_function error() : SystemSemaphoreError;
+    public const member q_function errorString() : QString;
+    public const member q_function key() : QString;
+    public member q_function release(int n = 1) : bool;
+
+
+}
+

@@ -1,0 +1,9 @@
+q_class QGraphicsPolygonItem extends QAbstractGraphicsShapeItem {
+    public const member q_function fillRule() : Qt.FillRule;
+    public const member q_function polygon() : QPolygonF;
+    public member q_function setFillRule(Qt.FillRule rule) : void;
+    public member q_function setPolygon(const QPolygonF & polygon) : void;
+
+
+}
+

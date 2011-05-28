@@ -1,0 +1,11 @@
+q_class QSimpleXmlNodeModel extends QAbstractXmlNodeModel {
+    public const virtual member q_function baseUri(const QXmlNodeModelIndex & node) : QUrl;
+    public const virtual member q_function elementById(const QXmlName & id) : QXmlNodeModelIndex;
+    public const member q_function namePool() : QXmlNamePool &;
+    public const virtual member q_function namespaceBindings(const QXmlNodeModelIndex & node) : QVector<QXmlName>;
+    public const virtual member q_function nodesByIdref(const QXmlName & idref) : QVector<QXmlNodeModelIndex>;
+    public const virtual member q_function stringValue(const QXmlNodeModelIndex & node) : QString;
+
+
+}
+

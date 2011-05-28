@@ -1,0 +1,31 @@
+q_class QProgressDialog extends QDialog {
+    q_property bool autoClose;
+    q_property bool autoReset;
+    q_property QString labelText;
+    q_property int maximum;
+    q_property int minimum;
+    q_property int minimumDuration;
+    q_property int value;
+    q_property const bool wasCanceled;
+
+    public const member q_function autoClose() : bool;
+    public const member q_function autoReset() : bool;
+    public const member q_function labelText() : QString;
+    public const member q_function maximum() : int;
+    public const member q_function minimum() : int;
+    public const member q_function minimumDuration() : int;
+    public member q_function open(QObject * receiver, const char * member) : void;
+    public member q_function setAutoClose(bool close) : void;
+    public member q_function setAutoReset(bool reset) : void;
+    public member q_function setBar(QProgressBar * bar) : void;
+    public member q_function setCancelButton(QPushButton * cancelButton) : void;
+    public member q_function setLabel(QLabel * label) : void;
+    public const virtual member q_function sizeHint() : QSize;
+    public const member q_function value() : int;
+    public const member q_function wasCanceled() : bool;
+
+
+
+
+}
+

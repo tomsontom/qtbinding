@@ -1,0 +1,220 @@
+q_class QPrinter extends QPaintDevice {
+    q_enumeration ColorMode {
+        GrayScale = 0
+        Color = 1
+    }
+
+    q_enumeration DuplexMode {
+        DuplexNone = 0
+        DuplexAuto = 1
+        DuplexLongSide = 2
+        DuplexShortSide = 3
+    }
+
+    q_enumeration Orientation {
+        Portrait = 0
+        Landscape = 1
+    }
+
+    q_enumeration OutputFormat {
+        NativeFormat = 0
+        PdfFormat = 1
+        PostScriptFormat = 2
+    }
+
+    q_enumeration PageOrder {
+        FirstPageFirst = 0
+        LastPageFirst = 1
+    }
+
+    q_enumeration PageSize {
+        A4 = 0
+        B5 = 1
+        Letter = 2
+        Legal = 3
+        Executive = 4
+        A0 = 5
+        A1 = 6
+        A2 = 7
+        A3 = 8
+        A5 = 9
+        A6 = 10
+        A7 = 11
+        A8 = 12
+        A9 = 13
+        B0 = 14
+        B1 = 15
+        B10 = 16
+        B2 = 17
+        B3 = 18
+        B4 = 19
+        B6 = 20
+        B7 = 21
+        B8 = 22
+        B9 = 23
+        C5E = 24
+        Comm10E = 25
+        DLE = 26
+        Folio = 27
+        Ledger = 28
+        Tabloid = 29
+        Custom = 30
+        NPageSize = Custom
+    }
+
+    q_enumeration PaperSize {
+        A4 = 0
+        B5 = 1
+        Letter = 2
+        Legal = 3
+        Executive = 4
+        A0 = 5
+        A1 = 6
+        A2 = 7
+        A3 = 8
+        A5 = 9
+        A6 = 10
+        A7 = 11
+        A8 = 12
+        A9 = 13
+        B0 = 14
+        B1 = 15
+        B10 = 16
+        B2 = 17
+        B3 = 18
+        B4 = 19
+        B6 = 20
+        B7 = 21
+        B8 = 22
+        B9 = 23
+        C5E = 24
+        Comm10E = 25
+        DLE = 26
+        Folio = 27
+        Ledger = 28
+        Tabloid = 29
+        Custom = 30
+        NPageSize = Custom
+        NPaperSize = Custom
+    }
+
+    q_enumeration PaperSource {
+        OnlyOne = 0
+        Lower = 1
+        Middle = 2
+        Manual = 3
+        Envelope = 4
+        EnvelopeManual = 5
+        Auto = 6
+        Tractor = 7
+        SmallFormat = 8
+        LargeFormat = 9
+        LargeCapacity = 10
+        Cassette = 11
+        FormSource = 12
+        MaxPageSource = 13
+    }
+
+    q_enumeration PrintRange {
+        AllPages = 0
+        Selection = 1
+        PageRange = 2
+        CurrentPage = 3
+    }
+
+    q_enumeration PrinterMode {
+        ScreenResolution = 0
+        PrinterResolution = 1
+        HighResolution = 2
+    }
+
+    q_enumeration PrinterState {
+        Idle = 0
+        Active = 1
+        Aborted = 2
+        Error = 3
+    }
+
+    q_enumeration Unit {
+        Millimeter = 0
+        Point = 1
+        Inch = 2
+        Pica = 3
+        Didot = 4
+        Cicero = 5
+        DevicePixel = 6
+    }
+
+
+    public member q_function abort() : bool;
+    public const member q_function actualNumCopies() : int;
+    public const member q_function collateCopies() : bool;
+    public const member q_function colorMode() : ColorMode;
+    public const member q_function copyCount() : int;
+    public const member q_function creator() : QString;
+    public const member q_function docName() : QString;
+    public const member q_function doubleSidedPrinting() : bool;
+    public const member q_function duplex() : DuplexMode;
+    public const member q_function fontEmbeddingEnabled() : bool;
+    public const member q_function fromPage() : int;
+    public const member q_function fullPage() : bool;
+    public const member q_function getPageMargins(qreal * left, qreal * top, qreal * right, qreal * bottom, Unit unit) : void;
+    public const member q_function isValid() : bool;
+    public member q_function newPage() : bool;
+    public const member q_function numCopies() : int;
+    public const member q_function orientation() : Orientation;
+    public const member q_function outputFileName() : QString;
+    public const member q_function outputFormat() : OutputFormat;
+    public const member q_function pageOrder() : PageOrder;
+    public const member q_function pageRect() : QRect;
+    public const member q_function pageRect(Unit unit) : QRectF;
+    public const member q_function pageSize() : PageSize;
+    public const virtual member q_function paintEngine() : QPaintEngine *;
+    public const member q_function paperRect(Unit unit) : QRectF;
+    public const member q_function paperRect() : QRect;
+    public const member q_function paperSize(Unit unit) : QSizeF;
+    public const member q_function paperSize() : PaperSize;
+    public const member q_function paperSource() : PaperSource;
+    public const member q_function printEngine() : QPrintEngine *;
+    public const member q_function printProgram() : QString;
+    public const member q_function printRange() : PrintRange;
+    public const member q_function printerName() : QString;
+    public const member q_function printerSelectionOption() : QString;
+    public const member q_function printerState() : PrinterState;
+    public const member q_function resolution() : int;
+    public member q_function setCollateCopies(bool collate) : void;
+    public member q_function setColorMode(ColorMode newColorMode) : void;
+    public member q_function setCopyCount(int count) : void;
+    public member q_function setCreator(const QString & creator) : void;
+    public member q_function setDocName(const QString & name) : void;
+    public member q_function setDoubleSidedPrinting(bool doubleSided) : void;
+    public member q_function setDuplex(DuplexMode duplex) : void;
+    public member q_function setFontEmbeddingEnabled(bool enable) : void;
+    public member q_function setFromTo(int from, int to) : void;
+    public member q_function setFullPage(bool fp) : void;
+    public member q_function setNumCopies(int numCopies) : void;
+    public member q_function setOrientation(Orientation orientation) : void;
+    public member q_function setOutputFileName(const QString & fileName) : void;
+    public member q_function setOutputFormat(OutputFormat format) : void;
+    public member q_function setPageMargins(qreal left, qreal top, qreal right, qreal bottom, Unit unit) : void;
+    public member q_function setPageOrder(PageOrder pageOrder) : void;
+    public member q_function setPageSize(PageSize newPageSize) : void;
+    public member q_function setPaperSize(const QSizeF & paperSize, Unit unit) : void;
+    public member q_function setPaperSize(PaperSize newPaperSize) : void;
+    public member q_function setPaperSource(PaperSource source) : void;
+    public member q_function setPrintProgram(const QString & printProg) : void;
+    public member q_function setPrintRange(PrintRange range) : void;
+    public member q_function setPrinterName(const QString & name) : void;
+    public member q_function setPrinterSelectionOption(const QString & option) : void;
+    public member q_function setResolution(int dpi) : void;
+    public const member q_function supportedPaperSources() : QList<PaperSource>;
+    public const member q_function supportedResolutions() : QList<int>;
+    public const member q_function supportsMultipleCopies() : bool;
+    public const member q_function toPage() : int;
+    public const member q_function winPageSize() : int;
+
+    protected member q_function setEngines(QPrintEngine * printEngine, QPaintEngine * paintEngine) : void;
+
+
+}
+

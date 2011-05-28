@@ -1,0 +1,12 @@
+q_class QXmlInputSource {
+    public const virtual member q_function data() : QString;
+    public virtual member q_function fetchData() : void;
+    public virtual member q_function next() : QChar;
+    public virtual member q_function reset() : void;
+    public virtual member q_function setData(const QByteArray & dat) : void;
+
+    protected virtual member q_function fromRawData(const QByteArray & data, bool beginning = false) : QString;
+
+
+}
+

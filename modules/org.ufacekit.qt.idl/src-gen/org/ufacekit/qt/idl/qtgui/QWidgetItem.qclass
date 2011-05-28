@@ -1,0 +1,7 @@
+q_class QWidgetItem extends QLayoutItem {
+    public const virtual member q_function isEmpty() : bool;
+    public virtual member q_function widget() : QWidget *;
+
+
+}
+

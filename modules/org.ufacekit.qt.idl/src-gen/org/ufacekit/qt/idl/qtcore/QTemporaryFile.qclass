@@ -1,0 +1,13 @@
+q_class QTemporaryFile extends QFile {
+    public const member q_function autoRemove() : bool;
+    public class q_function createLocalFile(const QString & fileName) : QTemporaryFile *;
+    public class q_function createLocalFile(QFile & file) : QTemporaryFile *;
+    public const member q_function fileName() : QString;
+    public const member q_function fileTemplate() : QString;
+    public member q_function open() : bool;
+    public member q_function setAutoRemove(bool b) : void;
+    public member q_function setFileTemplate(const QString & name) : void;
+
+
+}
+

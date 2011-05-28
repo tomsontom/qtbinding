@@ -1,0 +1,6 @@
+q_class QAbstractFileEngineHandler {
+    public const purevirtual member q_function create(const QString & fileName) : QAbstractFileEngine *;
+
+
+}
+

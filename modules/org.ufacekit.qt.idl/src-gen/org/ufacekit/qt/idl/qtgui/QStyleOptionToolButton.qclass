@@ -1,0 +1,24 @@
+q_class QStyleOptionToolButton extends QStyleOptionComplex {
+    q_enumeration StyleOptionType {
+        Type = SO_ToolButton
+    }
+
+    q_enumeration StyleOptionVersion {
+        Version = 1
+    }
+
+    q_enumeration ToolButtonFeature {
+        None = 0
+        Arrow = 1
+        Menu = 4
+        MenuButtonPopup = Menu
+        PopupDelay = 8
+        HasMenu = 16
+    }
+
+    q_flags ToolButtonFeatures : ToolButtonFeature;
+
+
+
+}
+

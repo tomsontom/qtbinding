@@ -1,0 +1,15 @@
+q_class QRasterPaintEngine extends QPaintEngine {
+    q_enumeration ClipType {
+        RectClip = 0
+        ComplexClip = 1
+    }
+
+
+    public virtual member q_function drawBufferSpan(const uint * buffer, int size, int x, int y, int length, uint alpha) : void;
+    public virtual member q_function drawColorSpans(const QSpan * spans, int count, uint color) : void;
+    public virtual member q_function drawEllipse(const QRect & rect) : void;
+    public virtual member q_function drawPoints(const QPoint * points, int pointCount) : void;
+
+
+}
+

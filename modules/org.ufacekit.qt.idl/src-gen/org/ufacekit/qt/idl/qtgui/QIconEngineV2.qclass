@@ -1,0 +1,23 @@
+q_class QIconEngineV2 extends QIconEngine {
+    q_enumeration IconEngineHook {
+        AvailableSizesHook = 1
+        IconNameHook = 2
+    }
+
+
+    q_class AvailableSizesArgument {
+
+    }
+
+
+    public member q_function availableSizes(QIcon.Mode mode = QIcon.Normal, QIcon.State state = QIcon.Off) : QList<QSize>;
+    public const virtual member q_function clone() : QIconEngineV2 *;
+    public member q_function iconName() : QString;
+    public const virtual member q_function key() : QString;
+    public virtual member q_function read(QDataStream & in) : bool;
+    public virtual member q_function virtual_hook(int id, void * data) : void;
+    public const virtual member q_function write(QDataStream & out) : bool;
+
+
+}
+

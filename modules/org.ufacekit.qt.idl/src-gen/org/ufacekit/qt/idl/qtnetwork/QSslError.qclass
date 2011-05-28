@@ -1,0 +1,37 @@
+q_class QSslError {
+    q_enumeration SslError {
+        NoError = 0
+        UnableToGetIssuerCertificate = 1
+        UnableToDecryptCertificateSignature = 2
+        UnableToDecodeIssuerPublicKey = 3
+        CertificateSignatureFailed = 4
+        CertificateNotYetValid = 5
+        CertificateExpired = 6
+        InvalidNotBeforeField = 7
+        InvalidNotAfterField = 8
+        SelfSignedCertificate = 9
+        SelfSignedCertificateInChain = 10
+        UnableToGetLocalIssuerCertificate = 11
+        UnableToVerifyFirstCertificate = 12
+        CertificateRevoked = 13
+        InvalidCaCertificate = 14
+        PathLengthExceeded = 15
+        InvalidPurpose = 16
+        CertificateUntrusted = 17
+        CertificateRejected = 18
+        SubjectIssuerMismatch = 19
+        AuthorityIssuerSerialNumberMismatch = 20
+        NoPeerCertificate = 21
+        HostNameMismatch = 22
+        NoSslSupport = 23
+        UnspecifiedError = -1
+    }
+
+
+    public const member q_function certificate() : QSslCertificate;
+    public const member q_function error() : SslError;
+    public const member q_function errorString() : QString;
+
+
+}
+

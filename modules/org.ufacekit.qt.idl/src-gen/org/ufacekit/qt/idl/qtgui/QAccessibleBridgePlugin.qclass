@@ -1,0 +1,7 @@
+q_class QAccessibleBridgePlugin extends QObject {
+    public purevirtual member q_function create(const QString & key) : QAccessibleBridge *;
+    public const purevirtual member q_function keys() : QStringList;
+
+
+}
+

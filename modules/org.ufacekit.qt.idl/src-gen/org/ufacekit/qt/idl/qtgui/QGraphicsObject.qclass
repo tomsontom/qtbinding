@@ -1,0 +1,24 @@
+q_class QGraphicsObject extends QObject, QGraphicsItem {
+    q_property const QDeclarativeListProperty<QGraphicsObject> children;
+    q_property const QGraphicsEffect * effect;
+    q_property const bool enabled;
+    q_property const qreal height;
+    q_property const qreal opacity;
+    q_property const QGraphicsObject * parent;
+    q_property const QPointF pos;
+    q_property const qreal rotation;
+    q_property const qreal scale;
+    q_property const QPointF transformOriginPoint;
+    q_property const bool visible;
+    q_property const qreal width;
+    q_property const qreal x;
+    q_property const qreal y;
+    q_property const qreal z;
+
+    public member q_function ungrabGesture(Qt.GestureType gesture) : void;
+
+
+
+
+}
+

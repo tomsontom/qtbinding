@@ -1,0 +1,15 @@
+q_class QCursor {
+    public const member q_function bitmap() : const QBitmap *;
+    public const member q_function handle() : HCURSOR_or_HANDLE;
+    public const member q_function hotSpot() : QPoint;
+    public const member q_function mask() : const QBitmap *;
+    public const member q_function pixmap() : QPixmap;
+    public class q_function pos() : QPoint;
+    public class q_function setPos(const QPoint & p) : void;
+    public class q_function setPos(int x, int y) : void;
+    public member q_function setShape(Qt.CursorShape shape) : void;
+    public const member q_function shape() : Qt.CursorShape;
+
+
+}
+

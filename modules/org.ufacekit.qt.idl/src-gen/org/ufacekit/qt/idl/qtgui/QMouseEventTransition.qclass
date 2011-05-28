@@ -1,0 +1,14 @@
+q_class QMouseEventTransition extends QEventTransition {
+    q_property Qt.MouseButton button;
+    q_property Qt.KeyboardModifiers modifierMask;
+
+    public const member q_function button() : Qt.MouseButton;
+    public const member q_function hitTestPath() : QPainterPath;
+    public const member q_function modifierMask() : Qt.KeyboardModifiers;
+    public member q_function setButton(Qt.MouseButton button) : void;
+    public member q_function setHitTestPath(const QPainterPath & path) : void;
+    public member q_function setModifierMask(Qt.KeyboardModifiers modifierMask) : void;
+
+
+}
+

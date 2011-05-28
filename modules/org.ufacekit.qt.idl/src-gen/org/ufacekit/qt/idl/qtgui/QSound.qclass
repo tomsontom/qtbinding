@@ -1,0 +1,12 @@
+q_class QSound extends QObject {
+    public const member q_function fileName() : QString;
+    public class q_function isAvailable() : bool;
+    public const member q_function isFinished() : bool;
+    public const member q_function loopsRemaining() : int;
+    public class q_function play(const QString & filename) : void;
+    public member q_function setLoops(int number) : void;
+
+
+
+}
+

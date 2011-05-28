@@ -1,0 +1,13 @@
+q_class QProcessEnvironment {
+    public member q_function clear() : void;
+    public const member q_function contains(const QString & name) : bool;
+    public member q_function insert(const QString & name, const QString & value) : void;
+    public const member q_function isEmpty() : bool;
+    public member q_function remove(const QString & name) : void;
+    public class q_function systemEnvironment() : QProcessEnvironment;
+    public const member q_function toStringList() : QStringList;
+    public const member q_function value(const QString & name, const QString & defaultValue = QString()) : QString;
+
+
+}
+

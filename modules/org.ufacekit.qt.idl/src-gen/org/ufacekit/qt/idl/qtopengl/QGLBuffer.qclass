@@ -1,0 +1,48 @@
+q_class QGLBuffer {
+    q_enumeration Access {
+        ReadOnly = 35000
+        WriteOnly = 35001
+        ReadWrite = 35002
+    }
+
+    q_enumeration Type {
+        VertexBuffer = 34962
+        IndexBuffer = 34963
+        PixelPackBuffer = 35051
+        PixelUnpackBuffer = 35052
+    }
+
+    q_enumeration UsagePattern {
+        StreamDraw = 35040
+        StreamRead = 35041
+        StreamCopy = 35042
+        StaticDraw = 35044
+        StaticRead = 35045
+        StaticCopy = 35046
+        DynamicDraw = 35048
+        DynamicRead = 35049
+        DynamicCopy = 35050
+    }
+
+
+    public member q_function allocate(const void * data, int count) : void;
+    public member q_function allocate(int count) : void;
+    public member q_function bind() : bool;
+    public const member q_function bufferId() : GLuint;
+    public member q_function create() : bool;
+    public member q_function destroy() : void;
+    public const member q_function isCreated() : bool;
+    public member q_function map(QGLBuffer.Access access) : void *;
+    public member q_function read(int offset, void * data, int count) : bool;
+    public class q_function release(QGLBuffer.Type type) : void;
+    public member q_function release() : void;
+    public member q_function setUsagePattern(QGLBuffer.UsagePattern value) : void;
+    public const member q_function size() : int;
+    public const member q_function type() : QGLBuffer.Type;
+    public member q_function unmap() : bool;
+    public const member q_function usagePattern() : QGLBuffer.UsagePattern;
+    public member q_function write(int offset, const void * data, int count) : void;
+
+
+}
+

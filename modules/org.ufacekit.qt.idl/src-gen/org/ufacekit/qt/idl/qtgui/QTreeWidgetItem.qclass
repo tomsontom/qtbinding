@@ -1,0 +1,77 @@
+q_class QTreeWidgetItem {
+    q_enumeration ChildIndicatorPolicy {
+        ShowIndicator = 0
+        DontShowIndicator = 1
+        DontShowIndicatorWhenChildless = 2
+    }
+
+    q_enumeration ItemType {
+        Type = 0
+        UserType = 1000
+    }
+
+
+    public member q_function addChild(QTreeWidgetItem * child) : void;
+    public member q_function addChildren(const QList<QTreeWidgetItem *> & children) : void;
+    public const member q_function background(int column) : QBrush;
+    public const member q_function backgroundColor(int column) : QColor;
+    public const member q_function checkState(int column) : Qt.CheckState;
+    public const member q_function child(int index) : QTreeWidgetItem *;
+    public const member q_function childIndicatorPolicy() : QTreeWidgetItem.ChildIndicatorPolicy;
+    public const virtual member q_function clone() : QTreeWidgetItem *;
+    public const member q_function columnCount() : int;
+    public const virtual member q_function data(int column, int role) : QVariant;
+    public const member q_function flags() : Qt.ItemFlags;
+    public const member q_function font(int column) : QFont;
+    public const member q_function foreground(int column) : QBrush;
+    public const member q_function icon(int column) : QIcon;
+    public const member q_function indexOfChild(QTreeWidgetItem * child) : int;
+    public member q_function insertChild(int index, QTreeWidgetItem * child) : void;
+    public member q_function insertChildren(int index, const QList<QTreeWidgetItem *> & children) : void;
+    public const member q_function isDisabled() : bool;
+    public const member q_function isExpanded() : bool;
+    public const member q_function isFirstColumnSpanned() : bool;
+    public const member q_function isHidden() : bool;
+    public const member q_function isSelected() : bool;
+    public const member q_function parent() : QTreeWidgetItem *;
+    public virtual member q_function read(QDataStream & in) : void;
+    public member q_function removeChild(QTreeWidgetItem * child) : void;
+    public member q_function setBackground(int column, const QBrush & brush) : void;
+    public member q_function setBackgroundColor(int column, const QColor & color) : void;
+    public member q_function setCheckState(int column, Qt.CheckState state) : void;
+    public member q_function setChildIndicatorPolicy(QTreeWidgetItem.ChildIndicatorPolicy policy) : void;
+    public virtual member q_function setData(int column, int role, const QVariant & value) : void;
+    public member q_function setDisabled(bool disabled) : void;
+    public member q_function setExpanded(bool expand) : void;
+    public member q_function setFirstColumnSpanned(bool span) : void;
+    public member q_function setFlags(Qt.ItemFlags flags) : void;
+    public member q_function setFont(int column, const QFont & font) : void;
+    public member q_function setForeground(int column, const QBrush & brush) : void;
+    public member q_function setHidden(bool hide) : void;
+    public member q_function setIcon(int column, const QIcon & icon) : void;
+    public member q_function setSelected(bool select) : void;
+    public member q_function setSizeHint(int column, const QSize & size) : void;
+    public member q_function setStatusTip(int column, const QString & statusTip) : void;
+    public member q_function setText(int column, const QString & text) : void;
+    public member q_function setTextAlignment(int column, int alignment) : void;
+    public member q_function setTextColor(int column, const QColor & color) : void;
+    public member q_function setToolTip(int column, const QString & toolTip) : void;
+    public member q_function setWhatsThis(int column, const QString & whatsThis) : void;
+    public const member q_function sizeHint(int column) : QSize;
+    public member q_function sortChildren(int column, Qt.SortOrder order) : void;
+    public const member q_function statusTip(int column) : QString;
+    public member q_function takeChild(int index) : QTreeWidgetItem *;
+    public member q_function takeChildren() : QList<QTreeWidgetItem *>;
+    public const member q_function text(int column) : QString;
+    public const member q_function textAlignment(int column) : int;
+    public const member q_function textColor(int column) : QColor;
+    public const member q_function treeWidget() : QTreeWidget *;
+    public const member q_function type() : int;
+    public const member q_function whatsThis(int column) : QString;
+    public const virtual member q_function write(QDataStream & out) : void;
+
+    protected member q_function emitDataChanged() : void;
+
+
+}
+

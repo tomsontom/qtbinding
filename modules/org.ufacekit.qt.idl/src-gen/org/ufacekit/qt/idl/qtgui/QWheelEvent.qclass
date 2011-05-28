@@ -1,0 +1,14 @@
+q_class QWheelEvent extends QInputEvent {
+    public const member q_function buttons() : Qt.MouseButtons;
+    public const member q_function delta() : int;
+    public const member q_function globalPos() : const QPoint &;
+    public const member q_function globalX() : int;
+    public const member q_function globalY() : int;
+    public const member q_function orientation() : Qt.Orientation;
+    public const member q_function pos() : const QPoint &;
+    public const member q_function x() : int;
+    public const member q_function y() : int;
+
+
+}
+

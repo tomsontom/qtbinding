@@ -1,0 +1,46 @@
+q_class QUrlInfo {
+    q_enumeration PermissionSpec {
+        ReadOwner = 00400
+        WriteOwner = 00200
+        ExeOwner = 00100
+        ReadGroup = 00040
+        WriteGroup = 00020
+        ExeGroup = 00010
+        ReadOther = 00004
+        WriteOther = 00002
+        ExeOther = 00001
+    }
+
+
+    public class q_function equal(const QUrlInfo & i1, const QUrlInfo & i2, int sortBy) : bool;
+    public class q_function greaterThan(const QUrlInfo & i1, const QUrlInfo & i2, int sortBy) : bool;
+    public const member q_function group() : QString;
+    public const member q_function isDir() : bool;
+    public const member q_function isExecutable() : bool;
+    public const member q_function isFile() : bool;
+    public const member q_function isReadable() : bool;
+    public const member q_function isSymLink() : bool;
+    public const member q_function isValid() : bool;
+    public const member q_function isWritable() : bool;
+    public const member q_function lastModified() : QDateTime;
+    public const member q_function lastRead() : QDateTime;
+    public class q_function lessThan(const QUrlInfo & i1, const QUrlInfo & i2, int sortBy) : bool;
+    public const member q_function name() : QString;
+    public const member q_function owner() : QString;
+    public const member q_function permissions() : int;
+    public virtual member q_function setDir(bool b) : void;
+    public virtual member q_function setFile(bool b) : void;
+    public virtual member q_function setGroup(const QString & s) : void;
+    public virtual member q_function setLastModified(const QDateTime & dt) : void;
+    public member q_function setLastRead(const QDateTime & dt) : void;
+    public virtual member q_function setOwner(const QString & s) : void;
+    public virtual member q_function setPermissions(int p) : void;
+    public virtual member q_function setReadable(bool b) : void;
+    public virtual member q_function setSize(qint64 size) : void;
+    public virtual member q_function setSymLink(bool b) : void;
+    public virtual member q_function setWritable(bool b) : void;
+    public const member q_function size() : qint64;
+
+
+}
+

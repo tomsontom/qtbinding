@@ -1,0 +1,154 @@
+q_class QTextFormat {
+    q_enumeration FormatType {
+        InvalidFormat = -1
+        BlockFormat = 1
+        CharFormat = 2
+        ListFormat = 3
+        TableFormat = 4
+        FrameFormat = 5
+        UserFormat = 100
+    }
+
+    q_enumeration ObjectTypes {
+        NoObject = 0
+        ImageObject = 1
+        TableObject = 2
+        TableCellObject = 3
+        UserObject = 4096
+    }
+
+    q_enumeration PageBreakFlag {
+        PageBreak_Auto = 0
+        PageBreak_AlwaysBefore = 1
+        PageBreak_AlwaysAfter = 16
+    }
+
+    q_flags PageBreakFlags : PageBreakFlag;
+
+    q_enumeration Property {
+        ObjectIndex = 0
+        CssFloat = 2048
+        LayoutDirection = 2049
+        OutlinePen = 2064
+        BackgroundBrush = 2080
+        ForegroundBrush = 2081
+        BackgroundImageUrl = 2083
+        BlockAlignment = 4112
+        BlockTopMargin = 4144
+        BlockBottomMargin = 4145
+        BlockLeftMargin = 4146
+        BlockRightMargin = 4147
+        TextIndent = 4148
+        TabPositions = 4149
+        BlockIndent = 4160
+        BlockNonBreakableLines = 4176
+        BlockTrailingHorizontalRulerWidth = 4192
+        FirstFontProperty = 8160
+        FontCapitalization = FirstFontProperty
+        FontLetterSpacing = 8161
+        FontWordSpacing = 8162
+        FontStyleHint = 8163
+        FontStyleStrategy = 8164
+        FontKerning = 8165
+        FontFamily = 8192
+        FontPointSize = 8193
+        FontSizeAdjustment = 8194
+        FontSizeIncrement = FontSizeAdjustment
+        FontWeight = 8195
+        FontItalic = 8196
+        FontUnderline = 8197
+        FontOverline = 8198
+        FontStrikeOut = 8199
+        FontFixedPitch = 8200
+        FontPixelSize = 8201
+        LastFontProperty = FontPixelSize
+        TextUnderlineColor = 8208
+        TextVerticalAlignment = 8225
+        TextOutline = 8226
+        TextUnderlineStyle = 8227
+        TextToolTip = 8228
+        IsAnchor = 8240
+        AnchorHref = 8241
+        AnchorName = 8242
+        ObjectType = 12032
+        ListStyle = 12288
+        ListIndent = 12289
+        FrameBorder = 16384
+        FrameMargin = 16385
+        FramePadding = 16386
+        FrameWidth = 16387
+        FrameHeight = 16388
+        FrameTopMargin = 16389
+        FrameBottomMargin = 16390
+        FrameLeftMargin = 16391
+        FrameRightMargin = 16392
+        FrameBorderBrush = 16393
+        FrameBorderStyle = 16400
+        TableColumns = 16640
+        TableColumnWidthConstraints = 16641
+        TableCellSpacing = 16642
+        TableCellPadding = 16643
+        TableHeaderRowCount = 16644
+        TableCellRowSpan = 18448
+        TableCellColumnSpan = 18449
+        TableCellTopPadding = 18450
+        TableCellBottomPadding = 18451
+        TableCellLeftPadding = 18452
+        TableCellRightPadding = 18453
+        ImageName = 20480
+        ImageWidth = 20496
+        ImageHeight = 20497
+        FullWidthSelection = 24576
+        PageBreakPolicy = 28672
+        UserProperty = 1048576
+    }
+
+
+    public const member q_function background() : QBrush;
+    public const member q_function boolProperty(int propertyId) : bool;
+    public const member q_function brushProperty(int propertyId) : QBrush;
+    public member q_function clearBackground() : void;
+    public member q_function clearForeground() : void;
+    public member q_function clearProperty(int propertyId) : void;
+    public const member q_function colorProperty(int propertyId) : QColor;
+    public const member q_function doubleProperty(int propertyId) : qreal;
+    public const member q_function foreground() : QBrush;
+    public const member q_function hasProperty(int propertyId) : bool;
+    public const member q_function intProperty(int propertyId) : int;
+    public const member q_function isBlockFormat() : bool;
+    public const member q_function isCharFormat() : bool;
+    public const member q_function isFrameFormat() : bool;
+    public const member q_function isImageFormat() : bool;
+    public const member q_function isListFormat() : bool;
+    public const member q_function isTableCellFormat() : bool;
+    public const member q_function isTableFormat() : bool;
+    public const member q_function isValid() : bool;
+    public const member q_function layoutDirection() : Qt.LayoutDirection;
+    public const member q_function lengthProperty(int propertyId) : QTextLength;
+    public const member q_function lengthVectorProperty(int propertyId) : QVector<QTextLength>;
+    public const member q_function objectIndex() : int;
+    public const member q_function objectType() : int;
+    public const member q_function penProperty(int propertyId) : QPen;
+    public const member q_function properties() : QMap<int, QVariant>;
+    public const member q_function property(int propertyId) : QVariant;
+    public const member q_function propertyCount() : int;
+    public member q_function setBackground(const QBrush & brush) : void;
+    public member q_function setForeground(const QBrush & brush) : void;
+    public member q_function setLayoutDirection(Qt.LayoutDirection direction) : void;
+    public member q_function setObjectIndex(int index) : void;
+    public member q_function setObjectType(int type) : void;
+    public member q_function setProperty(int propertyId, const QVariant & value) : void;
+    public member q_function setProperty(int propertyId, const QVector<QTextLength> & value) : void;
+    public const member q_function stringProperty(int propertyId) : QString;
+    public const member q_function toBlockFormat() : QTextBlockFormat;
+    public const member q_function toCharFormat() : QTextCharFormat;
+    public const member q_function toFrameFormat() : QTextFrameFormat;
+    public const member q_function toImageFormat() : QTextImageFormat;
+    public const member q_function toListFormat() : QTextListFormat;
+    public const member q_function toTableCellFormat() : QTextTableCellFormat;
+    public const member q_function toTableFormat() : QTextTableFormat;
+    public const member q_function type() : int;
+
+
+}
+

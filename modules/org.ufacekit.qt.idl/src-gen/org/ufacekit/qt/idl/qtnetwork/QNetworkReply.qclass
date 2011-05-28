@@ -1,0 +1,66 @@
+q_class QNetworkReply extends QIODevice {
+    q_enumeration NetworkError {
+        NoError = 0
+        ConnectionRefusedError = 1
+        RemoteHostClosedError = 2
+        HostNotFoundError = 3
+        TimeoutError = 4
+        OperationCanceledError = 5
+        SslHandshakeFailedError = 6
+        TemporaryNetworkFailureError = 7
+        UnknownNetworkError = 99
+        ProxyConnectionRefusedError = 101
+        ProxyConnectionClosedError = 102
+        ProxyNotFoundError = 103
+        ProxyTimeoutError = 104
+        ProxyAuthenticationRequiredError = 105
+        UnknownProxyError = 199
+        ContentAccessDenied = 201
+        ContentOperationNotPermittedError = 202
+        ContentNotFoundError = 203
+        AuthenticationRequiredError = 204
+        ContentReSendError = 205
+        UnknownContentError = 299
+        ProtocolUnknownError = 301
+        ProtocolInvalidOperationError = 302
+        ProtocolFailure = 399
+    }
+
+
+    q_typedef RawHeaderPair : ___UNKNOWN___;
+
+
+    public purevirtual member q_function abort() : void;
+    public const member q_function attribute(QNetworkRequest.Attribute code) : QVariant;
+    public virtual member q_function close() : void;
+    public const member q_function error() : NetworkError;
+    public const member q_function hasRawHeader(const QByteArray & headerName) : bool;
+    public const member q_function header(QNetworkRequest.KnownHeaders header) : QVariant;
+    public member q_function ignoreSslErrors(const QList<QSslError> & errors) : void;
+    public const member q_function isFinished() : bool;
+    public const member q_function isRunning() : bool;
+    public const member q_function manager() : QNetworkAccessManager *;
+    public const member q_function operation() : QNetworkAccessManager.Operation;
+    public const member q_function rawHeader(const QByteArray & headerName) : QByteArray;
+    public const member q_function rawHeaderList() : QList<QByteArray>;
+    public const member q_function rawHeaderPairs() : const QList<RawHeaderPair> &;
+    public const member q_function readBufferSize() : qint64;
+    public const member q_function request() : QNetworkRequest;
+    public virtual member q_function setReadBufferSize(qint64 size) : void;
+    public member q_function setSslConfiguration(const QSslConfiguration & config) : void;
+    public const member q_function sslConfiguration() : QSslConfiguration;
+    public const member q_function url() : QUrl;
+
+    protected member q_function setAttribute(QNetworkRequest.Attribute code, const QVariant & value) : void;
+    protected member q_function setError(NetworkError errorCode, const QString & errorString) : void;
+    protected member q_function setHeader(QNetworkRequest.KnownHeaders header, const QVariant & value) : void;
+    protected member q_function setOperation(QNetworkAccessManager.Operation operation) : void;
+    protected member q_function setRawHeader(const QByteArray & headerName, const QByteArray & value) : void;
+    protected member q_function setRequest(const QNetworkRequest & request) : void;
+    protected member q_function setUrl(const QUrl & url) : void;
+
+
+
+
+}
+

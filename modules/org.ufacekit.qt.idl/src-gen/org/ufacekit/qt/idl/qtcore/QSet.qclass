@@ -1,0 +1,91 @@
+q_class QSet {
+    q_typedef ConstIterator : ___UNKNOWN___;
+
+    q_typedef Hash : ___UNKNOWN___;
+
+    q_typedef Iterator : ___UNKNOWN___;
+
+    q_typedef const_pointer : ___UNKNOWN___;
+
+    q_typedef const_reference : ___UNKNOWN___;
+
+    q_typedef difference_type : ___UNKNOWN___;
+
+    q_typedef key_type : ___UNKNOWN___;
+
+    q_typedef pointer : ___UNKNOWN___;
+
+    q_typedef reference : ___UNKNOWN___;
+
+    q_typedef size_type : ___UNKNOWN___;
+
+    q_typedef value_type : ___UNKNOWN___;
+
+
+    q_class const_iterator {
+        q_typedef Hash : ___UNKNOWN___;
+
+        q_typedef difference_type : ___UNKNOWN___;
+
+        q_typedef iterator_category : ___UNKNOWN___;
+
+        q_typedef pointer : ___UNKNOWN___;
+
+        q_typedef reference : ___UNKNOWN___;
+
+        q_typedef value_type : ___UNKNOWN___;
+
+
+
+    }
+
+    q_class iterator {
+        q_typedef Hash : ___UNKNOWN___;
+
+        q_typedef difference_type : ___UNKNOWN___;
+
+        q_typedef iterator_category : ___UNKNOWN___;
+
+        q_typedef pointer : ___UNKNOWN___;
+
+        q_typedef reference : ___UNKNOWN___;
+
+        q_typedef value_type : ___UNKNOWN___;
+
+
+
+    }
+
+
+    public const member q_function begin() : const_iterator;
+    public member q_function begin() : iterator;
+    public const member q_function capacity() : int;
+    public member q_function clear() : void;
+    public const member q_function constBegin() : const_iterator;
+    public const member q_function constEnd() : const_iterator;
+    public const member q_function constFind(const T & value) : const_iterator;
+    public const member q_function contains(const T & value) : bool;
+    public const member q_function contains(const QSet<T> & other) : bool;
+    public const member q_function count() : int;
+    public const member q_function empty() : bool;
+    public member q_function end() : iterator;
+    public const member q_function end() : const_iterator;
+    public member q_function erase(iterator pos) : iterator;
+    public const member q_function find(const T & value) : const_iterator;
+    public member q_function find(const T & value) : iterator;
+    public class q_function fromList(const QList<T> & list) : QSet<T>;
+    public member q_function insert(const T & value) : const_iterator;
+    public member q_function intersect(const QSet<T> & other) : QSet<T> &;
+    public const member q_function isEmpty() : bool;
+    public member q_function remove(const T & value) : bool;
+    public member q_function reserve(int size) : void;
+    public const member q_function size() : int;
+    public member q_function squeeze() : void;
+    public member q_function subtract(const QSet<T> & other) : QSet<T> &;
+    public const member q_function toList() : QList<T>;
+    public member q_function unite(const QSet<T> & other) : QSet<T> &;
+    public const member q_function values() : QList<T>;
+
+
+}
+

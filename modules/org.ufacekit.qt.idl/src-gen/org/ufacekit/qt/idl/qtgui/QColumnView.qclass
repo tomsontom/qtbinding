@@ -1,0 +1,17 @@
+q_class QColumnView extends QAbstractItemView {
+    q_property bool resizeGripsVisible;
+
+    public const member q_function columnWidths() : QList<int>;
+    public const member q_function previewWidget() : QWidget *;
+    public const member q_function resizeGripsVisible() : bool;
+    public member q_function setColumnWidths(const QList<int> & list) : void;
+    public member q_function setPreviewWidget(QWidget * widget) : void;
+    public member q_function setResizeGripsVisible(bool visible) : void;
+
+    protected virtual member q_function createColumn(const QModelIndex & index) : QAbstractItemView *;
+    protected const member q_function initializeColumn(QAbstractItemView * column) : void;
+
+
+
+}
+

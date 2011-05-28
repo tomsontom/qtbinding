@@ -1,0 +1,22 @@
+q_class QStaticText {
+    q_enumeration PerformanceHint {
+        ModerateCaching = 0
+        AggressiveCaching = 1
+    }
+
+
+    public const member q_function performanceHint() : PerformanceHint;
+    public member q_function prepare(const QTransform & matrix = QTransform(), const QFont & font = QFont()) : void;
+    public member q_function setPerformanceHint(PerformanceHint performanceHint) : void;
+    public member q_function setTextFormat(Qt.TextFormat textFormat) : void;
+    public member q_function setTextOption(const QTextOption & textOption) : void;
+    public member q_function setTextWidth(qreal textWidth) : void;
+    public const member q_function size() : QSizeF;
+    public const member q_function text() : QString;
+    public const member q_function textFormat() : Qt.TextFormat;
+    public const member q_function textOption() : QTextOption;
+    public const member q_function textWidth() : qreal;
+
+
+}
+

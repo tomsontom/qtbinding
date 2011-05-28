@@ -1,0 +1,99 @@
+q_class QComboBox extends QWidget {
+    q_enumeration InsertPolicy {
+        NoInsert = 0
+        InsertAtTop = 1
+        InsertAtCurrent = 2
+        InsertAtBottom = 3
+        InsertAfterCurrent = 4
+        InsertBeforeCurrent = 5
+        InsertAlphabetically = 6
+    }
+
+    q_enumeration SizeAdjustPolicy {
+        AdjustToContents = 0
+        AdjustToContentsOnFirstShow = 1
+        AdjustToMinimumContentsLength = 2
+        AdjustToMinimumContentsLengthWithIcon = 3
+    }
+
+
+    q_property bool autoCompletion;
+    q_property Qt.CaseSensitivity autoCompletionCaseSensitivity;
+    q_property const int count;
+    q_property int currentIndex;
+    q_property const QString currentText;
+    q_property bool duplicatesEnabled;
+    q_property bool editable;
+    q_property bool frame;
+    q_property QSize iconSize;
+    q_property InsertPolicy insertPolicy;
+    q_property int maxCount;
+    q_property int maxVisibleItems;
+    q_property int minimumContentsLength;
+    q_property int modelColumn;
+    q_property SizeAdjustPolicy sizeAdjustPolicy;
+
+    public member q_function addItem(const QString & text, const QVariant & userData = QVariant()) : void;
+    public member q_function addItem(const QIcon & icon, const QString & text, const QVariant & userData = QVariant()) : void;
+    public member q_function addItems(const QStringList & texts) : void;
+    public const member q_function autoCompletionCaseSensitivity() : Qt.CaseSensitivity;
+    public const member q_function completer() : QCompleter *;
+    public const member q_function count() : int;
+    public const member q_function currentIndex() : int;
+    public const member q_function currentText() : QString;
+    public const member q_function findData(const QVariant & data, int role = Qt.UserRole, Qt.MatchFlags flags = static_cast<Qt.MatchFlags> ( Qt.MatchExactly | Qt.MatchCaseSensitive )) : int;
+    public const member q_function findText(const QString & text, Qt.MatchFlags flags = static_cast<Qt.MatchFlags> ( Qt.MatchExactly | Qt.MatchCaseSensitive )) : int;
+    public const member q_function hasFrame() : bool;
+    public virtual member q_function hidePopup() : void;
+    public const member q_function iconSize() : QSize;
+    public member q_function insertItem(int index, const QIcon & icon, const QString & text, const QVariant & userData = QVariant()) : void;
+    public member q_function insertItem(int index, const QString & text, const QVariant & userData = QVariant()) : void;
+    public member q_function insertItems(int index, const QStringList & list) : void;
+    public const member q_function insertPolicy() : InsertPolicy;
+    public member q_function insertSeparator(int index) : void;
+    public const member q_function isEditable() : bool;
+    public const member q_function itemData(int index, int role = Qt.UserRole) : QVariant;
+    public const member q_function itemDelegate() : QAbstractItemDelegate *;
+    public const member q_function itemIcon(int index) : QIcon;
+    public const member q_function itemText(int index) : QString;
+    public const member q_function lineEdit() : QLineEdit *;
+    public const member q_function maxCount() : int;
+    public const member q_function maxVisibleItems() : int;
+    public const member q_function minimumContentsLength() : int;
+    public const member q_function model() : QAbstractItemModel *;
+    public const member q_function modelColumn() : int;
+    public member q_function removeItem(int index) : void;
+    public const member q_function rootModelIndex() : QModelIndex;
+    public member q_function setAutoCompletion(bool enable) : void;
+    public member q_function setAutoCompletionCaseSensitivity(Qt.CaseSensitivity sensitivity) : void;
+    public member q_function setCompleter(QCompleter * completer) : void;
+    public member q_function setDuplicatesEnabled(bool enable) : void;
+    public member q_function setEditable(bool editable) : void;
+    public member q_function setFrame(bool ) : void;
+    public member q_function setIconSize(const QSize & size) : void;
+    public member q_function setInsertPolicy(InsertPolicy policy) : void;
+    public member q_function setItemData(int index, const QVariant & value, int role = Qt.UserRole) : void;
+    public member q_function setItemDelegate(QAbstractItemDelegate * delegate) : void;
+    public member q_function setItemIcon(int index, const QIcon & icon) : void;
+    public member q_function setItemText(int index, const QString & text) : void;
+    public member q_function setLineEdit(QLineEdit * edit) : void;
+    public member q_function setMaxCount(int max) : void;
+    public member q_function setMaxVisibleItems(int maxItems) : void;
+    public member q_function setMinimumContentsLength(int characters) : void;
+    public member q_function setModel(QAbstractItemModel * model) : void;
+    public member q_function setModelColumn(int visibleColumn) : void;
+    public member q_function setRootModelIndex(const QModelIndex & index) : void;
+    public member q_function setSizeAdjustPolicy(SizeAdjustPolicy policy) : void;
+    public member q_function setView(QAbstractItemView * itemView) : void;
+    public virtual member q_function showPopup() : void;
+    public const member q_function sizeAdjustPolicy() : SizeAdjustPolicy;
+    public const member q_function validator() : const QValidator *;
+    public const member q_function view() : QAbstractItemView *;
+
+    protected const member q_function initStyleOption(QStyleOptionComboBox * option) : void;
+
+
+
+
+}
+

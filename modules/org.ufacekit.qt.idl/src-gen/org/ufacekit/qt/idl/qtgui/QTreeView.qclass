@@ -1,0 +1,75 @@
+q_class QTreeView extends QAbstractItemView {
+    q_property bool allColumnsShowFocus;
+    q_property bool animated;
+    q_property int autoExpandDelay;
+    q_property bool expandsOnDoubleClick;
+    q_property bool headerHidden;
+    q_property int indentation;
+    q_property bool itemsExpandable;
+    q_property bool rootIsDecorated;
+    q_property bool sortingEnabled;
+    q_property bool uniformRowHeights;
+    q_property bool wordWrap;
+
+    public const member q_function allColumnsShowFocus() : bool;
+    public const member q_function autoExpandDelay() : int;
+    public const member q_function columnAt(int x) : int;
+    public const member q_function columnViewportPosition(int column) : int;
+    public const member q_function columnWidth(int column) : int;
+    public const member q_function expandsOnDoubleClick() : bool;
+    public const member q_function header() : QHeaderView *;
+    public const member q_function indentation() : int;
+    public const member q_function indexAbove(const QModelIndex & index) : QModelIndex;
+    public const member q_function indexBelow(const QModelIndex & index) : QModelIndex;
+    public const member q_function isAnimated() : bool;
+    public const member q_function isColumnHidden(int column) : bool;
+    public const member q_function isExpanded(const QModelIndex & index) : bool;
+    public const member q_function isFirstColumnSpanned(int row, const QModelIndex & parent) : bool;
+    public const member q_function isHeaderHidden() : bool;
+    public const member q_function isRowHidden(int row, const QModelIndex & parent) : bool;
+    public const member q_function isSortingEnabled() : bool;
+    public const member q_function itemsExpandable() : bool;
+    public const member q_function rootIsDecorated() : bool;
+    public virtual member q_function scrollTo(const QModelIndex & index, ScrollHint hint = EnsureVisible) : void;
+    public member q_function setAllColumnsShowFocus(bool enable) : void;
+    public member q_function setAnimated(bool enable) : void;
+    public member q_function setAutoExpandDelay(int delay) : void;
+    public member q_function setColumnHidden(int column, bool hide) : void;
+    public member q_function setColumnWidth(int column, int width) : void;
+    public member q_function setExpanded(const QModelIndex & index, bool expanded) : void;
+    public member q_function setExpandsOnDoubleClick(bool enable) : void;
+    public member q_function setFirstColumnSpanned(int row, const QModelIndex & parent, bool span) : void;
+    public member q_function setHeader(QHeaderView * header) : void;
+    public member q_function setHeaderHidden(bool hide) : void;
+    public member q_function setIndentation(int i) : void;
+    public member q_function setItemsExpandable(bool enable) : void;
+    public member q_function setRootIsDecorated(bool show) : void;
+    public member q_function setRowHidden(int row, const QModelIndex & parent, bool hide) : void;
+    public member q_function setSortingEnabled(bool enable) : void;
+    public member q_function setUniformRowHeights(bool uniform) : void;
+    public member q_function setWordWrap(bool on) : void;
+    public member q_function sortByColumn(int column, Qt.SortOrder order) : void;
+    public const member q_function uniformRowHeights() : bool;
+    public const virtual member q_function visualRect(const QModelIndex & index) : QRect;
+    public const member q_function wordWrap() : bool;
+
+    protected const virtual member q_function drawBranches(QPainter * painter, const QRect & rect, const QModelIndex & index) : void;
+    protected const virtual member q_function drawRow(QPainter * painter, const QStyleOptionViewItem & option, const QModelIndex & index) : void;
+    protected const member q_function drawTree(QPainter * painter, const QRegion & region) : void;
+    protected const virtual member q_function horizontalOffset() : int;
+    protected const member q_function indexRowSizeHint(const QModelIndex & index) : int;
+    protected virtual member q_function moveCursor(CursorAction cursorAction, Qt.KeyboardModifiers modifiers) : QModelIndex;
+    protected const member q_function rowHeight(const QModelIndex & index) : int;
+    protected virtual member q_function rowsAboutToBeRemoved(const QModelIndex & parent, int start, int end) : void;
+    protected virtual member q_function rowsInserted(const QModelIndex & parent, int start, int end) : void;
+    protected virtual member q_function scrollContentsBy(int dx, int dy) : void;
+    protected virtual member q_function setSelection(const QRect & rect, QItemSelectionModel.SelectionFlags command) : void;
+    protected const virtual member q_function sizeHintForColumn(int column) : int;
+    protected const virtual member q_function verticalOffset() : int;
+    protected const virtual member q_function visualRegionForSelection(const QItemSelection & selection) : QRegion;
+
+
+
+
+}
+

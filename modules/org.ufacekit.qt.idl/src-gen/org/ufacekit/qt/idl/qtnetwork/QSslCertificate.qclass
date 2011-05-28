@@ -1,0 +1,35 @@
+q_class QSslCertificate {
+    q_enumeration SubjectInfo {
+        Organization = 0
+        CommonName = 1
+        LocalityName = 2
+        OrganizationalUnitName = 3
+        CountryName = 4
+        StateOrProvinceName = 5
+    }
+
+
+    public const member q_function alternateSubjectNames() : QMultiMap<QSsl.AlternateNameEntryType, QString>;
+    public member q_function clear() : void;
+    public const member q_function digest(QCryptographicHash.Algorithm algorithm = QCryptographicHash.Md5) : QByteArray;
+    public const member q_function effectiveDate() : QDateTime;
+    public const member q_function expiryDate() : QDateTime;
+    public class q_function fromData(const QByteArray & data, QSsl.EncodingFormat format = QSsl.Pem) : QList<QSslCertificate>;
+    public class q_function fromDevice(QIODevice * device, QSsl.EncodingFormat format = QSsl.Pem) : QList<QSslCertificate>;
+    public class q_function fromPath(const QString & path, QSsl.EncodingFormat format = QSsl.Pem, QRegExp.PatternSyntax syntax = QRegExp.FixedString) : QList<QSslCertificate>;
+    public const member q_function handle() : Qt.HANDLE;
+    public const member q_function isNull() : bool;
+    public const member q_function isValid() : bool;
+    public const member q_function issuerInfo(const QByteArray & tag) : QString;
+    public const member q_function issuerInfo(SubjectInfo subject) : QString;
+    public const member q_function publicKey() : QSslKey;
+    public const member q_function serialNumber() : QByteArray;
+    public const member q_function subjectInfo(SubjectInfo subject) : QString;
+    public const member q_function subjectInfo(const QByteArray & tag) : QString;
+    public const member q_function toDer() : QByteArray;
+    public const member q_function toPem() : QByteArray;
+    public const member q_function version() : QByteArray;
+
+
+}
+

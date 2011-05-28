@@ -1,0 +1,15 @@
+q_class QTextDocumentWriter {
+    public const member q_function codec() : QTextCodec *;
+    public const member q_function device() : QIODevice *;
+    public const member q_function fileName() : QString;
+    public const member q_function format() : QByteArray;
+    public member q_function setDevice(QIODevice * device) : void;
+    public member q_function setFileName(const QString & fileName) : void;
+    public member q_function setFormat(const QByteArray & format) : void;
+    public class q_function supportedDocumentFormats() : QList<QByteArray>;
+    public member q_function write(const QTextDocument * document) : bool;
+    public member q_function write(const QTextDocumentFragment & fragment) : bool;
+
+
+}
+

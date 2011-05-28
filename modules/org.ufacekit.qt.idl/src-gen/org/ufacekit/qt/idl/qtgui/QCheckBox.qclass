@@ -1,0 +1,14 @@
+q_class QCheckBox extends QAbstractButton {
+    q_property bool tristate;
+
+    public const member q_function checkState() : Qt.CheckState;
+    public const member q_function isTristate() : bool;
+    public member q_function setCheckState(Qt.CheckState state) : void;
+    public member q_function setTristate(bool y = true) : void;
+
+    protected const member q_function initStyleOption(QStyleOptionButton * option) : void;
+
+
+
+}
+

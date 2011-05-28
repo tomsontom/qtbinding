@@ -1,0 +1,13 @@
+q_class QStyleOptionRubberBand extends QStyleOption {
+    q_enumeration StyleOptionType {
+        Type = SO_RubberBand
+    }
+
+    q_enumeration StyleOptionVersion {
+        Version = 1
+    }
+
+
+
+}
+

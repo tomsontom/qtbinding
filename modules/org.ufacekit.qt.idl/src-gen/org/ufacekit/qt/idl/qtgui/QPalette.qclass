@@ -1,0 +1,80 @@
+q_class QPalette {
+    q_enumeration ColorGroup {
+        Active = 0
+        Disabled = 1
+        Inactive = 2
+        NColorGroups = 3
+        Current = 4
+        All = 5
+        Normal = Active
+    }
+
+    q_enumeration ColorRole {
+        WindowText = 0
+        Button = 1
+        Light = 2
+        Midlight = 3
+        Dark = 4
+        Mid = 5
+        Text = 6
+        BrightText = 7
+        ButtonText = 8
+        Base = 9
+        Window = 10
+        Shadow = 11
+        Highlight = 12
+        HighlightedText = 13
+        Link = 14
+        LinkVisited = 15
+        AlternateBase = 16
+        NoRole = 17
+        ToolTipBase = 18
+        ToolTipText = 19
+        NColorRoles = ToolTipText + 1
+        Foreground = WindowText
+        Background = Window
+    }
+
+
+    public const member q_function alternateBase() : const QBrush &;
+    public const member q_function background() : const QBrush &;
+    public const member q_function base() : const QBrush &;
+    public const member q_function brightText() : const QBrush &;
+    public const member q_function brush(ColorGroup group, ColorRole role) : const QBrush &;
+    public const member q_function brush(ColorRole role) : const QBrush &;
+    public const member q_function button() : const QBrush &;
+    public const member q_function buttonText() : const QBrush &;
+    public const member q_function cacheKey() : qint64;
+    public const member q_function color(ColorGroup group, ColorRole role) : const QColor &;
+    public const member q_function color(ColorRole role) : const QColor &;
+    public const member q_function currentColorGroup() : ColorGroup;
+    public const member q_function dark() : const QBrush &;
+    public const member q_function foreground() : const QBrush &;
+    public const member q_function highlight() : const QBrush &;
+    public const member q_function highlightedText() : const QBrush &;
+    public const member q_function isBrushSet(ColorGroup cg, ColorRole cr) : bool;
+    public const member q_function isCopyOf(const QPalette & p) : bool;
+    public const member q_function isEqual(ColorGroup cg1, ColorGroup cg2) : bool;
+    public const member q_function light() : const QBrush &;
+    public const member q_function link() : const QBrush &;
+    public const member q_function linkVisited() : const QBrush &;
+    public const member q_function mid() : const QBrush &;
+    public const member q_function midlight() : const QBrush &;
+    public const member q_function resolve(const QPalette & other) : QPalette;
+    public const member q_function serialNumber() : int;
+    public member q_function setBrush(ColorGroup group, ColorRole role, const QBrush & brush) : void;
+    public member q_function setBrush(ColorRole role, const QBrush & brush) : void;
+    public member q_function setColor(ColorGroup group, ColorRole role, const QColor & color) : void;
+    public member q_function setColor(ColorRole role, const QColor & color) : void;
+    public member q_function setColorGroup(ColorGroup cg, const QBrush & windowText, const QBrush & button, const QBrush & light, const QBrush & dark, const QBrush & mid, const QBrush & text, const QBrush & bright_text, const QBrush & base, const QBrush & window) : void;
+    public member q_function setCurrentColorGroup(ColorGroup cg) : void;
+    public const member q_function shadow() : const QBrush &;
+    public const member q_function text() : const QBrush &;
+    public const member q_function toolTipBase() : const QBrush &;
+    public const member q_function toolTipText() : const QBrush &;
+    public const member q_function window() : const QBrush &;
+    public const member q_function windowText() : const QBrush &;
+
+
+}
+

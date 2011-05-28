@@ -1,0 +1,7 @@
+q_class QWSScreenSaver {
+    public purevirtual member q_function restore() : void;
+    public purevirtual member q_function save(int level) : bool;
+
+
+}
+

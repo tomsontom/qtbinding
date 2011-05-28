@@ -1,0 +1,130 @@
+q_class QAbstractFileEngine {
+    q_enumeration Extension {
+        AtEndExtension = 0
+        FastReadLineExtension = 1
+        MapExtension = 2
+        UnMapExtension = 3
+    }
+
+    q_enumeration FileFlag {
+        ReadOwnerPerm = 16384
+        WriteOwnerPerm = 8192
+        ExeOwnerPerm = 4096
+        ReadUserPerm = 1024
+        WriteUserPerm = 512
+        ExeUserPerm = 256
+        ReadGroupPerm = 64
+        WriteGroupPerm = 32
+        ExeGroupPerm = 16
+        ReadOtherPerm = 4
+        WriteOtherPerm = 2
+        ExeOtherPerm = 1
+        LinkType = 65536
+        FileType = 131072
+        DirectoryType = 262144
+        BundleType = 524288
+        HiddenFlag = 1048576
+        LocalDiskFlag = 2097152
+        ExistsFlag = 4194304
+        RootFlag = 8388608
+        Refresh = 16777216
+        PermsMask = 65535
+        TypesMask = 983040
+        FlagsMask = 267386880
+        FileInfoAll = FlagsMask  |  PermsMask  |  TypesMask
+    }
+
+    q_flags FileFlags : FileFlag;
+
+    q_enumeration FileName {
+        DefaultName = 0
+        BaseName = 1
+        PathName = 2
+        AbsoluteName = 3
+        AbsolutePathName = 4
+        LinkName = 5
+        CanonicalName = 6
+        CanonicalPathName = 7
+        BundleName = 8
+        NFileNames = 9
+    }
+
+    q_enumeration FileOwner {
+        OwnerUser = 0
+        OwnerGroup = 1
+    }
+
+    q_enumeration FileTime {
+        CreationTime = 0
+        ModificationTime = 1
+        AccessTime = 2
+    }
+
+
+    q_typedef Iterator : ___UNKNOWN___;
+
+
+    q_class ExtensionOption {
+
+    }
+
+    q_class ExtensionReturn {
+
+    }
+
+    q_class MapExtensionOption {
+
+    }
+
+    q_class MapExtensionReturn {
+
+    }
+
+    q_class UnMapExtensionOption {
+
+    }
+
+
+    public const member q_function atEnd() : bool;
+    public virtual member q_function beginEntryList(QDir.Filters filters, const QStringList & filterNames) : Iterator *;
+    public const virtual member q_function caseSensitive() : bool;
+    public virtual member q_function close() : bool;
+    public virtual member q_function copy(const QString & newName) : bool;
+    public class q_function create(const QString & fileName) : QAbstractFileEngine *;
+    public const virtual member q_function entryList(QDir.Filters filters, const QStringList & filterNames) : QStringList;
+    public const member q_function error() : QFile.FileError;
+    public const member q_function errorString() : QString;
+    public virtual member q_function extension(Extension extension, const ExtensionOption * option = 0, ExtensionReturn * output = 0) : bool;
+    public const virtual member q_function fileFlags(FileFlags type = FileInfoAll) : FileFlags;
+    public const virtual member q_function fileName(FileName file = DefaultName) : QString;
+    public const virtual member q_function fileTime(FileTime time) : QDateTime;
+    public virtual member q_function flush() : bool;
+    public const virtual member q_function handle() : int;
+    public const virtual member q_function isRelativePath() : bool;
+    public const virtual member q_function isSequential() : bool;
+    public virtual member q_function link(const QString & newName) : bool;
+    public member q_function map(qint64 offset, qint64 size, QFile.MemoryMapFlags flags) : uchar *; 
+    public const virtual member q_function mkdir(const QString & dirName, bool createParentDirectories) : bool;
+    public virtual member q_function open(QIODevice.OpenMode mode) : bool;
+    public const virtual member q_function owner(FileOwner owner) : QString;
+    public const virtual member q_function ownerId(FileOwner owner) : uint; 
+    public const virtual member q_function pos() : qint64;
+    public virtual member q_function read(char * data, qint64 maxlen) : qint64;
+    public virtual member q_function readLine(char * data, qint64 maxlen) : qint64;
+    public virtual member q_function remove() : bool;
+    public virtual member q_function rename(const QString & newName) : bool;
+    public const virtual member q_function rmdir(const QString & dirName, bool recurseParentDirectories) : bool;
+    public virtual member q_function seek(qint64 offset) : bool;
+    public virtual member q_function setFileName(const QString & file) : void;
+    public virtual member q_function setPermissions(uint perms) : bool;
+    public virtual member q_function setSize(qint64 size) : bool;
+    public const virtual member q_function size() : qint64;
+    public const virtual member q_function supportsExtension(Extension extension) : bool;
+    public member q_function unmap(uchar * address) : bool;
+    public virtual member q_function write(const char * data, qint64 len) : qint64;
+
+    protected member q_function setError(QFile.FileError error, const QString & errorString) : void;
+
+
+}
+

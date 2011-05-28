@@ -1,0 +1,13 @@
+q_class QStyleOptionProgressBar extends QStyleOption {
+    q_enumeration StyleOptionType {
+        Type = SO_ProgressBar
+    }
+
+    q_enumeration StyleOptionVersion {
+        Version = 1
+    }
+
+
+
+}
+

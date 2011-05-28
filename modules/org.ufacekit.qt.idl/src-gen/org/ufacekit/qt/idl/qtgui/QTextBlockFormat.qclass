@@ -1,0 +1,26 @@
+q_class QTextBlockFormat extends QTextFormat {
+    public const member q_function alignment() : Qt.Alignment;
+    public const member q_function bottomMargin() : qreal;
+    public const member q_function indent() : int;
+    public const member q_function isValid() : bool;
+    public const member q_function leftMargin() : qreal;
+    public const member q_function nonBreakableLines() : bool;
+    public const member q_function pageBreakPolicy() : PageBreakFlags;
+    public const member q_function rightMargin() : qreal;
+    public member q_function setAlignment(Qt.Alignment alignment) : void;
+    public member q_function setBottomMargin(qreal margin) : void;
+    public member q_function setIndent(int indentation) : void;
+    public member q_function setLeftMargin(qreal margin) : void;
+    public member q_function setNonBreakableLines(bool b) : void;
+    public member q_function setPageBreakPolicy(PageBreakFlags policy) : void;
+    public member q_function setRightMargin(qreal margin) : void;
+    public member q_function setTabPositions(const QList<QTextOption.Tab> & tabs) : void;
+    public member q_function setTextIndent(qreal indent) : void;
+    public member q_function setTopMargin(qreal margin) : void;
+    public const member q_function tabPositions() : QList<QTextOption.Tab>;
+    public const member q_function textIndent() : qreal;
+    public const member q_function topMargin() : qreal;
+
+
+}
+

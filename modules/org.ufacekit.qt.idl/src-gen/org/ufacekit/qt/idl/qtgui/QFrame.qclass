@@ -1,0 +1,46 @@
+q_class QFrame extends QWidget {
+    q_enumeration Shadow {
+        Plain = 16
+        Raised = 32
+        Sunken = 48
+    }
+
+    q_enumeration Shape {
+        NoFrame = 0
+        Box = 1
+        Panel = 2
+        WinPanel = 3
+        HLine = 4
+        VLine = 5
+        StyledPanel = 6
+    }
+
+    q_enumeration StyleMask {
+        Shadow_Mask = 240
+        Shape_Mask = 15
+    }
+
+
+    q_property QRect frameRect;
+    q_property Shadow frameShadow;
+    q_property Shape frameShape;
+    q_property const int frameWidth;
+    q_property int lineWidth;
+    q_property int midLineWidth;
+
+    public const member q_function frameRect() : QRect;
+    public const member q_function frameShadow() : Shadow;
+    public const member q_function frameShape() : Shape;
+    public const member q_function frameWidth() : int;
+    public const member q_function lineWidth() : int;
+    public const member q_function midLineWidth() : int;
+    public member q_function setFrameRect(const QRect & ) : void;
+    public member q_function setFrameShadow(Shadow ) : void;
+    public member q_function setFrameShape(Shape ) : void;
+    public member q_function setFrameStyle(int style) : void;
+    public member q_function setLineWidth(int ) : void;
+    public member q_function setMidLineWidth(int ) : void;
+
+
+}
+

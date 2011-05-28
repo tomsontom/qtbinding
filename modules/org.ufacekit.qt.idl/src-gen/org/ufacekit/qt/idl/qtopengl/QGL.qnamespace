@@ -1,0 +1,32 @@
+q_namespace QGL {
+    q_enumeration FormatOption {
+        DoubleBuffer = 1
+        DepthBuffer = 2
+        Rgba = 4
+        AlphaChannel = 8
+        AccumBuffer = 16
+        StencilBuffer = 32
+        StereoBuffers = 64
+        DirectRendering = 128
+        HasOverlay = 256
+        SampleBuffers = 512
+        DeprecatedFunctions = 1024
+        SingleBuffer = DoubleBuffer<<16
+        NoDepthBuffer = DepthBuffer<<16
+        ColorIndex = Rgba<<16
+        NoAlphaChannel = AlphaChannel<<16
+        NoAccumBuffer = AccumBuffer<<16
+        NoStencilBuffer = StencilBuffer<<16
+        NoStereoBuffers = StereoBuffers<<16
+        IndirectRendering = DirectRendering<<16
+        NoOverlay = HasOverlay<<16
+        NoSampleBuffers = SampleBuffers<<16
+        NoDeprecatedFunctions = DeprecatedFunctions<<16
+    }
+
+    q_flags FormatOptions : FormatOption;
+
+
+
+}
+

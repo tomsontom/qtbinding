@@ -1,0 +1,14 @@
+q_class QAuthenticator {
+    public const member q_function isNull() : bool;
+    public const member q_function option(const QString & opt) : QVariant;
+    public const member q_function options() : QVariantHash;
+    public const member q_function password() : QString;
+    public const member q_function realm() : QString;
+    public member q_function setOption(const QString & opt, const QVariant & value) : void;
+    public member q_function setPassword(const QString & password) : void;
+    public member q_function setUser(const QString & user) : void;
+    public const member q_function user() : QString;
+
+
+}
+

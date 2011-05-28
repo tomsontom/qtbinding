@@ -1,0 +1,12 @@
+q_class QSignalTransition extends QAbstractTransition {
+    q_property QObject * senderObject;
+    q_property QByteArray signal;
+
+    public const member q_function senderObject() : QObject *;
+    public member q_function setSenderObject(QObject * sender) : void;
+    public member q_function setSignal(const QByteArray & signal) : void;
+    public const member q_function signal() : QByteArray;
+
+
+}
+

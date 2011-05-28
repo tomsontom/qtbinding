@@ -1,0 +1,30 @@
+q_class QPictureIO {
+    public class q_function defineIOHandler(const char * format, const char * header, const char * flags, picture_io_handler readPicture, picture_io_handler writePicture) : void;
+    public const member q_function description() : QString;
+    public const member q_function fileName() : QString;
+    public const member q_function format() : const char *;
+    public const member q_function gamma() : float;
+    public class q_function inputFormats() : QList<QByteArray>;
+    public const member q_function ioDevice() : QIODevice *;
+    public class q_function outputFormats() : QList<QByteArray>;
+    public const member q_function parameters() : const char *;
+    public const member q_function picture() : const QPicture &;
+    public class q_function pictureFormat(QIODevice * d) : QByteArray;
+    public class q_function pictureFormat(const QString & fileName) : QByteArray;
+    public const member q_function quality() : int;
+    public member q_function read() : bool;
+    public member q_function setDescription(const QString & description) : void;
+    public member q_function setFileName(const QString & fileName) : void;
+    public member q_function setFormat(const char * format) : void;
+    public member q_function setGamma(float gamma) : void;
+    public member q_function setIODevice(QIODevice * ioDevice) : void;
+    public member q_function setParameters(const char * parameters) : void;
+    public member q_function setPicture(const QPicture & picture) : void;
+    public member q_function setQuality(int q) : void;
+    public member q_function setStatus(int status) : void;
+    public const member q_function status() : int;
+    public member q_function write() : bool;
+
+
+}
+

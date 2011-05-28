@@ -1,0 +1,13 @@
+q_class QDeclarativeListProperty {
+    q_typedef AppendFunction : ___UNKNOWN___;
+
+    q_typedef AtFunction : ___UNKNOWN___;
+
+    q_typedef ClearFunction : ___UNKNOWN___;
+
+    q_typedef CountFunction : ___UNKNOWN___;
+
+
+
+}
+

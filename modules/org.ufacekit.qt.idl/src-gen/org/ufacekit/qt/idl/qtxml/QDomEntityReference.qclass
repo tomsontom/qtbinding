@@ -1,0 +1,6 @@
+q_class QDomEntityReference extends QDomNode {
+    public const member q_function nodeType() : QDomNode.NodeType;
+
+
+}
+

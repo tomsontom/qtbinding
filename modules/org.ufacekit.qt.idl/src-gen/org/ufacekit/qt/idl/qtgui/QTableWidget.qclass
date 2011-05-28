@@ -1,0 +1,61 @@
+q_class QTableWidget extends QTableView {
+    q_property int columnCount;
+    q_property int rowCount;
+
+    public const member q_function cellWidget(int row, int column) : QWidget *;
+    public member q_function closePersistentEditor(QTableWidgetItem * item) : void;
+    public const member q_function column(const QTableWidgetItem * item) : int;
+    public const member q_function columnCount() : int;
+    public const member q_function currentColumn() : int;
+    public const member q_function currentItem() : QTableWidgetItem *;
+    public const member q_function currentRow() : int;
+    public member q_function editItem(QTableWidgetItem * item) : void;
+    public const member q_function findItems(const QString & text, Qt.MatchFlags flags) : QList<QTableWidgetItem *>;
+    public const member q_function horizontalHeaderItem(int column) : QTableWidgetItem *;
+    public const member q_function isItemSelected(const QTableWidgetItem * item) : bool;
+    public const member q_function item(int row, int column) : QTableWidgetItem *;
+    public const member q_function itemAt(const QPoint & point) : QTableWidgetItem *;
+    public const member q_function itemAt(int ax, int ay) : QTableWidgetItem *;
+    public const member q_function itemPrototype() : const QTableWidgetItem *;
+    public member q_function openPersistentEditor(QTableWidgetItem * item) : void;
+    public member q_function removeCellWidget(int row, int column) : void;
+    public const member q_function row(const QTableWidgetItem * item) : int;
+    public const member q_function rowCount() : int;
+    public member q_function selectedItems() : QList<QTableWidgetItem *>;
+    public const member q_function selectedRanges() : QList<QTableWidgetSelectionRange>;
+    public member q_function setCellWidget(int row, int column, QWidget * widget) : void;
+    public member q_function setColumnCount(int columns) : void;
+    public member q_function setCurrentCell(int row, int column) : void;
+    public member q_function setCurrentCell(int row, int column, QItemSelectionModel.SelectionFlags command) : void;
+    public member q_function setCurrentItem(QTableWidgetItem * item, QItemSelectionModel.SelectionFlags command) : void;
+    public member q_function setCurrentItem(QTableWidgetItem * item) : void;
+    public member q_function setHorizontalHeaderItem(int column, QTableWidgetItem * item) : void;
+    public member q_function setHorizontalHeaderLabels(const QStringList & labels) : void;
+    public member q_function setItem(int row, int column, QTableWidgetItem * item) : void;
+    public member q_function setItemPrototype(const QTableWidgetItem * item) : void;
+    public member q_function setItemSelected(const QTableWidgetItem * item, bool select) : void;
+    public member q_function setRangeSelected(const QTableWidgetSelectionRange & range, bool select) : void;
+    public member q_function setVerticalHeaderItem(int row, QTableWidgetItem * item) : void;
+    public member q_function setVerticalHeaderLabels(const QStringList & labels) : void;
+    public member q_function sortItems(int column, Qt.SortOrder order = Qt.AscendingOrder) : void;
+    public member q_function takeHorizontalHeaderItem(int column) : QTableWidgetItem *;
+    public member q_function takeItem(int row, int column) : QTableWidgetItem *;
+    public member q_function takeVerticalHeaderItem(int row) : QTableWidgetItem *;
+    public const member q_function verticalHeaderItem(int row) : QTableWidgetItem *;
+    public const member q_function visualColumn(int logicalColumn) : int;
+    public const member q_function visualItemRect(const QTableWidgetItem * item) : QRect;
+    public const member q_function visualRow(int logicalRow) : int;
+
+    protected virtual member q_function dropMimeData(int row, int column, const QMimeData * data, Qt.DropAction action) : bool;
+    protected const member q_function indexFromItem(QTableWidgetItem * item) : QModelIndex;
+    protected const member q_function itemFromIndex(const QModelIndex & index) : QTableWidgetItem *;
+    protected const member q_function items(const QMimeData * data) : QList<QTableWidgetItem *>;
+    protected const virtual member q_function mimeData(const QList<QTableWidgetItem *> items) : QMimeData *;
+    protected const virtual member q_function mimeTypes() : QStringList;
+    protected const virtual member q_function supportedDropActions() : Qt.DropActions;
+
+
+
+
+}
+

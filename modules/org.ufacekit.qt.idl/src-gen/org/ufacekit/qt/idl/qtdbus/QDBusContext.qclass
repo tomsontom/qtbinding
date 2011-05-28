@@ -1,0 +1,12 @@
+q_class QDBusContext {
+    public const member q_function calledFromDBus() : bool;
+    public const member q_function connection() : QDBusConnection;
+    public const member q_function isDelayedReply() : bool;
+    public const member q_function message() : const QDBusMessage &;
+    public const member q_function sendErrorReply(const QString & name, const QString & msg = QString()) : void;
+    public const member q_function sendErrorReply(QDBusError.ErrorType type, const QString & msg = QString()) : void;
+    public const member q_function setDelayedReply(bool enable) : void;
+
+
+}
+

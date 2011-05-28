@@ -1,0 +1,21 @@
+q_class QFontEngineInfo {
+    q_property QString family;
+    q_property qreal pixelSize;
+    q_property QFont.Style style;
+    q_property int weight;
+    q_property QList<QFontDatabase.WritingSystem> writingSystems;
+
+    public const member q_function family() : QString;
+    public const member q_function pixelSize() : qreal;
+    public member q_function setFamily(const QString & name) : void;
+    public member q_function setPixelSize(qreal size) : void;
+    public member q_function setStyle(QFont.Style style) : void;
+    public member q_function setWeight(int weight) : void;
+    public member q_function setWritingSystems(const QList<QFontDatabase.WritingSystem> & writingSystems) : void;
+    public const member q_function style() : QFont.Style;
+    public const member q_function weight() : int;
+    public const member q_function writingSystems() : QList<QFontDatabase.WritingSystem>;
+
+
+}
+

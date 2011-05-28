@@ -1,0 +1,13 @@
+q_class QXmlItem {
+    q_typedef Iterator : ___UNKNOWN___;
+
+
+    public const member q_function isAtomicValue() : bool;
+    public const member q_function isNode() : bool;
+    public const member q_function isNull() : bool;
+    public const member q_function toAtomicValue() : QVariant;
+    public const member q_function toNodeModelIndex() : QXmlNodeModelIndex;
+
+
+}
+

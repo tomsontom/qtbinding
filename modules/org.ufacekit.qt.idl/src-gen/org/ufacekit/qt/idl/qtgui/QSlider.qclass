@@ -1,0 +1,24 @@
+q_class QSlider extends QAbstractSlider {
+    q_enumeration TickPosition {
+        NoTicks = 0
+        TicksAbove = 1
+        TicksLeft = TicksAbove
+        TicksBelow = 2
+        TicksRight = TicksBelow
+        TicksBothSides = 3
+    }
+
+
+    q_property int tickInterval;
+    q_property TickPosition tickPosition;
+
+    public member q_function setTickInterval(int ti) : void;
+    public member q_function setTickPosition(TickPosition position) : void;
+    public const member q_function tickInterval() : int;
+    public const member q_function tickPosition() : TickPosition;
+
+    protected const member q_function initStyleOption(QStyleOptionSlider * option) : void;
+
+
+}
+

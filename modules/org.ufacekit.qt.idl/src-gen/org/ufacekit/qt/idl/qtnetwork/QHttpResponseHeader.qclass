@@ -1,0 +1,10 @@
+q_class QHttpResponseHeader extends QHttpHeader {
+    public const virtual member q_function majorVersion() : int;
+    public const virtual member q_function minorVersion() : int;
+    public const member q_function reasonPhrase() : QString;
+    public member q_function setStatusLine(int code, const QString & text = QString(), int majorVer = 1, int minorVer = 1) : void;
+    public const member q_function statusCode() : int;
+
+
+}
+

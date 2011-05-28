@@ -1,0 +1,12 @@
+q_class QSplashScreen extends QWidget {
+    public member q_function finish(QWidget * mainWin) : void;
+    public const member q_function pixmap() : const QPixmap;
+    public member q_function repaint() : void;
+    public member q_function setPixmap(const QPixmap & pixmap) : void;
+
+    protected virtual member q_function drawContents(QPainter * painter) : void;
+
+
+
+}
+

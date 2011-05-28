@@ -1,0 +1,17 @@
+q_class QReadWriteLock {
+    q_enumeration RecursionMode {
+        NonRecursive = 0
+        Recursive = 1
+    }
+
+
+    public member q_function lockForWrite() : void;
+    public member q_function tryLockForRead(int timeout) : bool;
+    public member q_function tryLockForRead() : bool;
+    public member q_function tryLockForWrite(int timeout) : bool;
+    public member q_function tryLockForWrite() : bool;
+    public member q_function unlock() : void; 
+
+
+}
+

@@ -1,0 +1,59 @@
+q_class QTimeLine extends QObject {
+    q_enumeration CurveShape {
+        EaseInCurve = 0
+        EaseOutCurve = 1
+        EaseInOutCurve = 2
+        LinearCurve = 3
+        SineCurve = 4
+        CosineCurve = 5
+    }
+
+    q_enumeration Direction {
+        Forward = 0
+        Backward = 1
+    }
+
+    q_enumeration State {
+        NotRunning = 0
+        Paused = 1
+        Running = 2
+    }
+
+
+    q_property int currentTime;
+    q_property CurveShape curveShape;
+    q_property Direction direction;
+    q_property int duration;
+    q_property QEasingCurve easingCurve;
+    q_property int loopCount;
+    q_property int updateInterval;
+
+    public const member q_function currentFrame() : int;
+    public const member q_function currentTime() : int;
+    public const member q_function currentValue() : qreal;
+    public const member q_function curveShape() : CurveShape;
+    public const member q_function direction() : Direction;
+    public const member q_function duration() : int;
+    public const member q_function easingCurve() : QEasingCurve;
+    public const member q_function endFrame() : int;
+    public const member q_function frameForTime(int msec) : int;
+    public const member q_function loopCount() : int;
+    public member q_function setCurveShape(CurveShape shape) : void;
+    public member q_function setDirection(Direction direction) : void;
+    public member q_function setDuration(int duration) : void;
+    public member q_function setEasingCurve(const QEasingCurve & curve) : void;
+    public member q_function setEndFrame(int frame) : void;
+    public member q_function setFrameRange(int startFrame, int endFrame) : void;
+    public member q_function setLoopCount(int count) : void;
+    public member q_function setStartFrame(int frame) : void;
+    public member q_function setUpdateInterval(int interval) : void;
+    public const member q_function startFrame() : int;
+    public const member q_function state() : State;
+    public const member q_function updateInterval() : int;
+    public const virtual member q_function valueForTime(int msec) : qreal;
+
+
+
+
+}
+

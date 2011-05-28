@@ -1,0 +1,13 @@
+q_class QSqlIndex extends QSqlRecord {
+    public member q_function append(const QSqlField & field, bool desc) : void;
+    public member q_function append(const QSqlField & field) : void;
+    public const member q_function cursorName() : QString;
+    public const member q_function isDescending(int i) : bool;
+    public const member q_function name() : QString;
+    public member q_function setCursorName(const QString & cursorName) : void;
+    public member q_function setDescending(int i, bool desc) : void;
+    public member q_function setName(const QString & name) : void;
+
+
+}
+

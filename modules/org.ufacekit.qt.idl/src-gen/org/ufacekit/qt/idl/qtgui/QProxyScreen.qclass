@@ -1,0 +1,7 @@
+q_class QProxyScreen extends QScreen {
+    public virtual member q_function initDevice() : bool;
+    public const member q_function screen() : QScreen *;
+
+
+}
+

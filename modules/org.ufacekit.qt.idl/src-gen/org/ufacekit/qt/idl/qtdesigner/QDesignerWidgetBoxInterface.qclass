@@ -1,0 +1,55 @@
+q_class QDesignerWidgetBoxInterface extends QWidget {
+    q_typedef CategoryList : ___UNKNOWN___;
+
+    q_typedef WidgetList : ___UNKNOWN___;
+
+
+    q_class Category {
+        q_enumeration Type {
+            Default = 0
+            Scratchpad = 1
+        }
+
+
+        public member q_function addWidget(const Widget & awidget) : void;
+        public const member q_function isNull() : bool;
+        public const member q_function name() : QString;
+        public member q_function removeWidget(int idx) : void;
+        public member q_function setName(const QString & aname) : void;
+        public member q_function setType(Type atype) : void;
+        public const member q_function type() : Type;
+        public const member q_function widget(int idx) : Widget;
+        public const member q_function widgetCount() : int;
+
+
+    }
+
+    q_class Widget {
+        q_enumeration Type {
+            Default = 0
+            Custom = 1
+        }
+
+
+        public const member q_function domXml() : QString;
+        public const member q_function iconName() : QString;
+        public const member q_function isNull() : bool;
+        public const member q_function name() : QString;
+        public member q_function setDomXml(const QString & xml) : void;
+        public member q_function setIconName(const QString & icon_name) : void;
+        public member q_function setName(const QString & aname) : void;
+        public member q_function setType(Type atype) : void;
+        public const member q_function type() : Type;
+
+
+    }
+
+
+    public const purevirtual member q_function fileName() : QString;
+    public purevirtual member q_function load() : bool;
+    public purevirtual member q_function save() : bool;
+    public purevirtual member q_function setFileName(const QString & fileName) : void;
+
+
+}
+

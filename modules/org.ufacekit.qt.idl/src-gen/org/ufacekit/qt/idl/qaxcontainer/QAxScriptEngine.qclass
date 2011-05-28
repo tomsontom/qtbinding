@@ -1,0 +1,22 @@
+q_class QAxScriptEngine extends QAxObject {
+    q_enumeration State {
+        Uninitialized = 0
+        Initialized = 5
+        Started = 1
+        Connected = 2
+        Disconnected = 3
+        Closed = 4
+    }
+
+
+    public member q_function addItem(const QString & name) : void;
+    public const member q_function hasIntrospection() : bool;
+    public const member q_function isValid() : bool;
+    public const member q_function queryInterface(const QUuid & uuid, void ** iface) : long;
+    public const member q_function scriptLanguage() : QString;
+    public member q_function setState(State st) : void;
+    public const member q_function state() : State;
+
+
+}
+

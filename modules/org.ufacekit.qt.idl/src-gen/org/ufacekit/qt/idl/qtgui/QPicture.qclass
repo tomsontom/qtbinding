@@ -1,0 +1,24 @@
+q_class QPicture extends QPaintDevice {
+    q_typedef DataPtr : ___UNKNOWN___;
+
+
+    public const member q_function boundingRect() : QRect;
+    public const member q_function data() : const char *;
+    public class q_function inputFormatList() : QStringList;
+    public class q_function inputFormats() : QList<QByteArray>;
+    public const member q_function isNull() : bool;
+    public member q_function load(const QString & fileName, const char * format = 0) : bool;
+    public member q_function load(QIODevice * dev, const char * format = 0) : bool;
+    public class q_function outputFormatList() : QStringList;
+    public class q_function outputFormats() : QList<QByteArray>;
+    public class q_function pictureFormat(const QString & fileName) : const char *;
+    public member q_function play(QPainter * painter) : bool;
+    public member q_function save(const QString & fileName, const char * format = 0) : bool;
+    public member q_function save(QIODevice * dev, const char * format = 0) : bool;
+    public member q_function setBoundingRect(const QRect & r) : void;
+    public virtual member q_function setData(const char * data, uint size) : void;
+    public const member q_function size() : uint;
+
+
+}
+

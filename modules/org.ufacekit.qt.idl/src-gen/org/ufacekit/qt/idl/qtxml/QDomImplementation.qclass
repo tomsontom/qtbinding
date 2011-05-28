@@ -1,0 +1,18 @@
+q_class QDomImplementation {
+    q_enumeration InvalidDataPolicy {
+        AcceptInvalidChars = 0
+        DropInvalidChars = 1
+        ReturnNullNode = 2
+    }
+
+
+    public member q_function createDocument(const QString & nsURI, const QString & qName, const QDomDocumentType & doctype) : QDomDocument;
+    public member q_function createDocumentType(const QString & qName, const QString & publicId, const QString & systemId) : QDomDocumentType;
+    public const member q_function hasFeature(const QString & feature, const QString & version) : bool;
+    public class q_function invalidDataPolicy() : InvalidDataPolicy;
+    public member q_function isNull() : bool;
+    public class q_function setInvalidDataPolicy(InvalidDataPolicy policy) : void;
+
+
+}
+

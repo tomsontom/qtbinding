@@ -1,0 +1,6 @@
+q_class QSignalSpy extends QObject, QList<QList<QVariant> > {
+    public const member q_function signal() : QByteArray;
+
+
+}
+

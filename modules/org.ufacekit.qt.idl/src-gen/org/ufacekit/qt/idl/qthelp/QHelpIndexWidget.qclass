@@ -1,0 +1,6 @@
+q_class QHelpIndexWidget extends QListView {
+
+
+
+}
+

@@ -1,0 +1,28 @@
+q_class QState extends QAbstractState {
+    q_enumeration ChildMode {
+        ExclusiveStates = 0
+        ParallelStates = 1
+    }
+
+
+    q_property ChildMode childMode;
+    q_property QAbstractState * errorState;
+    q_property QAbstractState * initialState;
+
+    public member q_function addTransition(QObject * sender, const char * signal, QAbstractState * target) : QSignalTransition *;
+    public member q_function addTransition(QAbstractState * target) : QAbstractTransition *;
+    public member q_function addTransition(QAbstractTransition * transition) : void;
+    public member q_function assignProperty(QObject * object, const char * name, const QVariant & value) : void;
+    public const member q_function childMode() : ChildMode;
+    public const member q_function errorState() : QAbstractState *;
+    public const member q_function initialState() : QAbstractState *;
+    public member q_function removeTransition(QAbstractTransition * transition) : void;
+    public member q_function setChildMode(ChildMode mode) : void;
+    public member q_function setErrorState(QAbstractState * state) : void;
+    public member q_function setInitialState(QAbstractState * state) : void;
+    public const member q_function transitions() : QList<QAbstractTransition *>;
+
+
+
+}
+

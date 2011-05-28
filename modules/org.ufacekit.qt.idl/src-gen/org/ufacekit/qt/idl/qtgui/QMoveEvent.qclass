@@ -1,0 +1,7 @@
+q_class QMoveEvent extends QEvent {
+    public const member q_function oldPos() : const QPoint &;
+    public const member q_function pos() : const QPoint &;
+
+
+}
+

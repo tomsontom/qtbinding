@@ -1,0 +1,15 @@
+q_class QScriptSyntaxCheckResult {
+    q_enumeration State {
+        Error = 0
+        Intermediate = 1
+        Valid = 2
+    }
+
+
+    public const member q_function errorColumnNumber() : int;
+    public const member q_function errorLineNumber() : int;
+    public const member q_function errorMessage() : QString;
+
+
+}
+

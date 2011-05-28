@@ -1,0 +1,13 @@
+q_class QWidgetAction extends QAction {
+    public const member q_function defaultWidget() : QWidget *;
+    public member q_function releaseWidget(QWidget * widget) : void;
+    public member q_function requestWidget(QWidget * parent) : QWidget *;
+    public member q_function setDefaultWidget(QWidget * widget) : void;
+
+    protected virtual member q_function createWidget(QWidget * parent) : QWidget *;
+    protected const member q_function createdWidgets() : QList<QWidget *>;
+    protected virtual member q_function deleteWidget(QWidget * widget) : void;
+
+
+}
+

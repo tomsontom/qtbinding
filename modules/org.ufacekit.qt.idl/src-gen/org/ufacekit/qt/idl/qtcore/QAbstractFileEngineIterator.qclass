@@ -1,0 +1,16 @@
+q_class QAbstractFileEngineIterator {
+    q_enumeration EntryInfoType {
+    }
+
+
+    public const virtual member q_function currentFileInfo() : QFileInfo;
+    public const purevirtual member q_function currentFileName() : QString;
+    public const member q_function currentFilePath() : QString;
+    public const member q_function filters() : QDir.Filters;
+    public const purevirtual member q_function hasNext() : bool;
+    public const member q_function nameFilters() : QStringList;
+    public const member q_function path() : QString;
+
+
+}
+

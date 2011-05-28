@@ -1,0 +1,119 @@
+q_class QMessageBox extends QDialog {
+    q_enumeration ButtonRole {
+        InvalidRole = -1
+        AcceptRole = 0
+        RejectRole = 1
+        DestructiveRole = 2
+        ActionRole = 3
+        HelpRole = 4
+        YesRole = 5
+        NoRole = 6
+        ResetRole = 7
+        ApplyRole = 8
+        NRoles = 9
+    }
+
+    q_enumeration Icon {
+        NoIcon = 0
+        Information = 1
+        Warning = 2
+        Critical = 3
+        Question = 4
+    }
+
+    q_enumeration StandardButton {
+        NoButton = 0
+        Ok = 1024
+        Save = 2048
+        SaveAll = 4096
+        Open = 8192
+        Yes = 16384
+        YesToAll = 32768
+        No = 65536
+        NoToAll = 131072
+        Abort = 262144
+        Retry = 524288
+        Ignore = 1048576
+        Close = 2097152
+        Cancel = 4194304
+        Discard = 8388608
+        Help = 16777216
+        Apply = 33554432
+        Reset = 67108864
+        RestoreDefaults = 134217728
+        FirstButton = Ok
+        LastButton = RestoreDefaults
+        YesAll = YesToAll
+        NoAll = NoToAll
+        Default = 256
+        Escape = 512
+        FlagMask = 768
+        ButtonMask = ~FlagMask
+    }
+
+    q_flags StandardButtons : StandardButton;
+
+
+    q_typedef Button : ___UNKNOWN___;
+
+
+    q_property QString detailedText;
+    q_property Icon icon;
+    q_property QPixmap iconPixmap;
+    q_property QString informativeText;
+    q_property StandardButtons standardButtons;
+    q_property QString text;
+    q_property Qt.TextFormat textFormat;
+
+    public class q_function about(QWidget * parent, const QString & title, const QString & text) : void;
+    public class q_function aboutQt(QWidget * parent, const QString & title = QString()) : void;
+    public member q_function addButton(QAbstractButton * button, ButtonRole role) : void;
+    public member q_function addButton(StandardButton button) : QPushButton *;
+    public member q_function addButton(const QString & text, ButtonRole role) : QPushButton *;
+    public const member q_function button(StandardButton which) : QAbstractButton *;
+    public const member q_function buttonRole(QAbstractButton * button) : ButtonRole;
+    public const member q_function buttonText(int button) : QString;
+    public const member q_function buttons() : QList<QAbstractButton *>;
+    public const member q_function clickedButton() : QAbstractButton *;
+    public class q_function critical(QWidget * parent, const QString & title, const QString & text, StandardButtons buttons = Ok, StandardButton defaultButton = NoButton) : StandardButton;
+    public class q_function critical(QWidget * parent, const QString & title, const QString & text, const QString & button0Text, const QString & button1Text = QString(), const QString & button2Text = QString(), int defaultButtonNumber = 0, int escapeButtonNumber = -1) : int;
+    public class q_function critical(QWidget * parent, const QString & title, const QString & text, int button0, int button1, int button2 = 0) : int;
+    public const member q_function defaultButton() : QPushButton *;
+    public const member q_function escapeButton() : QAbstractButton *;
+    public const member q_function icon() : Icon;
+    public const member q_function iconPixmap() : QPixmap;
+    public class q_function information(QWidget * parent, const QString & title, const QString & text, int button0, int button1 = 0, int button2 = 0) : int;
+    public class q_function information(QWidget * parent, const QString & title, const QString & text, const QString & button0Text, const QString & button1Text = QString(), const QString & button2Text = QString(), int defaultButtonNumber = 0, int escapeButtonNumber = -1) : int;
+    public class q_function information(QWidget * parent, const QString & title, const QString & text, StandardButtons buttons = Ok, StandardButton defaultButton = NoButton) : StandardButton;
+    public const member q_function informativeText() : QString;
+    public member q_function open(QObject * receiver, const char * member) : void;
+    public class q_function question(QWidget * parent, const QString & title, const QString & text, const QString & button0Text, const QString & button1Text = QString(), const QString & button2Text = QString(), int defaultButtonNumber = 0, int escapeButtonNumber = -1) : int;
+    public class q_function question(QWidget * parent, const QString & title, const QString & text, int button0, int button1 = 0, int button2 = 0) : int;
+    public class q_function question(QWidget * parent, const QString & title, const QString & text, StandardButtons buttons = Ok, StandardButton defaultButton = NoButton) : StandardButton;
+    public member q_function removeButton(QAbstractButton * button) : void;
+    public member q_function setButtonText(int button, const QString & text) : void;
+    public member q_function setDefaultButton(StandardButton button) : void;
+    public member q_function setDefaultButton(QPushButton * button) : void;
+    public member q_function setDetailedText(const QString & text) : void;
+    public member q_function setEscapeButton(QAbstractButton * button) : void;
+    public member q_function setEscapeButton(StandardButton button) : void;
+    public member q_function setIcon(Icon ) : void;
+    public member q_function setIconPixmap(const QPixmap & pixmap) : void;
+    public member q_function setInformativeText(const QString & text) : void;
+    public member q_function setStandardButtons(StandardButtons buttons) : void;
+    public member q_function setText(const QString & text) : void;
+    public member q_function setTextFormat(Qt.TextFormat format) : void;
+    public member q_function setWindowModality(Qt.WindowModality windowModality) : void;
+    public member q_function setWindowTitle(const QString & title) : void;
+    public const member q_function standardButton(QAbstractButton * button) : StandardButton;
+    public const member q_function standardButtons() : StandardButtons;
+    public const member q_function text() : QString;
+    public const member q_function textFormat() : Qt.TextFormat;
+    public class q_function warning(QWidget * parent, const QString & title, const QString & text, const QString & button0Text, const QString & button1Text = QString(), const QString & button2Text = QString(), int defaultButtonNumber = 0, int escapeButtonNumber = -1) : int;
+    public class q_function warning(QWidget * parent, const QString & title, const QString & text, StandardButtons buttons = Ok, StandardButton defaultButton = NoButton) : StandardButton;
+    public class q_function warning(QWidget * parent, const QString & title, const QString & text, int button0, int button1, int button2 = 0) : int;
+
+
+
+}
+

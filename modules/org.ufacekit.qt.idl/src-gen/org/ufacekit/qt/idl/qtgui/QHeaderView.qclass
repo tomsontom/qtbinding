@@ -1,0 +1,81 @@
+q_class QHeaderView extends QAbstractItemView {
+    q_enumeration ResizeMode {
+        Interactive = 0
+        Stretch = 1
+        Fixed = 2
+        ResizeToContents = 3
+        Custom = Fixed
+    }
+
+
+    q_property bool cascadingSectionResizes;
+    q_property Qt.Alignment defaultAlignment;
+    q_property int defaultSectionSize;
+    q_property bool highlightSections;
+    q_property int minimumSectionSize;
+    q_property bool showSortIndicator;
+    q_property bool stretchLastSection;
+
+    public const member q_function cascadingSectionResizes() : bool;
+    public const member q_function count() : int;
+    public const member q_function defaultAlignment() : Qt.Alignment;
+    public const member q_function defaultSectionSize() : int;
+    public const member q_function hiddenSectionCount() : int;
+    public member q_function hideSection(int logicalIndex) : void;
+    public const member q_function highlightSections() : bool;
+    public const member q_function isClickable() : bool;
+    public const member q_function isMovable() : bool;
+    public const member q_function isSectionHidden(int logicalIndex) : bool;
+    public const member q_function isSortIndicatorShown() : bool;
+    public const member q_function length() : int;
+    public const member q_function logicalIndex(int visualIndex) : int;
+    public const member q_function logicalIndexAt(const QPoint & pos) : int;
+    public const member q_function logicalIndexAt(int x, int y) : int;
+    public const member q_function logicalIndexAt(int position) : int;
+    public const member q_function minimumSectionSize() : int;
+    public member q_function moveSection(int from, int to) : void;
+    public const member q_function offset() : int;
+    public const member q_function orientation() : Qt.Orientation;
+    public const member q_function resizeMode(int logicalIndex) : ResizeMode;
+    public member q_function resizeSection(int logicalIndex, int size) : void;
+    public member q_function resizeSections(QHeaderView.ResizeMode mode) : void;
+    public member q_function restoreState(const QByteArray & state) : bool;
+    public const member q_function sectionPosition(int logicalIndex) : int;
+    public const member q_function sectionSize(int logicalIndex) : int;
+    public const member q_function sectionSizeHint(int logicalIndex) : int;
+    public const member q_function sectionViewportPosition(int logicalIndex) : int;
+    public const member q_function sectionsMoved() : bool;
+    public member q_function setCascadingSectionResizes(bool enable) : void;
+    public member q_function setClickable(bool clickable) : void;
+    public member q_function setDefaultAlignment(Qt.Alignment alignment) : void;
+    public member q_function setDefaultSectionSize(int size) : void;
+    public member q_function setHighlightSections(bool highlight) : void;
+    public member q_function setMinimumSectionSize(int size) : void;
+    public member q_function setMovable(bool movable) : void;
+    public member q_function setResizeMode(int logicalIndex, ResizeMode mode) : void;
+    public member q_function setResizeMode(ResizeMode mode) : void;
+    public member q_function setSectionHidden(int logicalIndex, bool hide) : void;
+    public member q_function setSortIndicator(int logicalIndex, Qt.SortOrder order) : void;
+    public member q_function setSortIndicatorShown(bool show) : void;
+    public member q_function setStretchLastSection(bool stretch) : void;
+    public member q_function showSection(int logicalIndex) : void;
+    public const virtual member q_function sizeHint() : QSize;
+    public const member q_function sortIndicatorOrder() : Qt.SortOrder;
+    public const member q_function sortIndicatorSection() : int;
+    public const member q_function stretchLastSection() : bool;
+    public const member q_function stretchSectionCount() : int;
+    public member q_function swapSections(int first, int second) : void;
+    public const member q_function visualIndex(int logicalIndex) : int;
+    public const member q_function visualIndexAt(int position) : int;
+
+    protected const virtual member q_function horizontalOffset() : int;
+    protected const member q_function initStyleOption(QStyleOptionHeader * option) : void;
+    protected const virtual member q_function paintSection(QPainter * painter, const QRect & rect, int logicalIndex) : void;
+    protected const virtual member q_function sectionSizeFromContents(int logicalIndex) : QSize;
+    protected const virtual member q_function verticalOffset() : int;
+
+
+
+
+}
+

@@ -1,0 +1,14 @@
+q_class QToolTip {
+    public class q_function font() : QFont;
+    public class q_function hideText() : void;
+    public class q_function isVisible() : bool;
+    public class q_function palette() : QPalette;
+    public class q_function setFont(const QFont & font) : void;
+    public class q_function setPalette(const QPalette & palette) : void;
+    public class q_function showText(const QPoint & pos, const QString & text, QWidget * w = 0) : void;
+    public class q_function showText(const QPoint & pos, const QString & text, QWidget * w, const QRect & rect) : void;
+    public class q_function text() : QString;
+
+
+}
+

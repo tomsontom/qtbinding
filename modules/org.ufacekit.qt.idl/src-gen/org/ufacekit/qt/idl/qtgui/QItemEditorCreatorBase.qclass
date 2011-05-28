@@ -1,0 +1,7 @@
+q_class QItemEditorCreatorBase {
+    public const purevirtual member q_function createWidget(QWidget * parent) : QWidget *;
+    public const purevirtual member q_function valuePropertyName() : QByteArray;
+
+
+}
+

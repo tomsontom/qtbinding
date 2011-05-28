@@ -1,0 +1,6 @@
+q_class QAxObject extends QObject, QAxBase {
+    public member q_function doVerb(const QString & verb) : bool;
+
+
+}
+

@@ -1,0 +1,26 @@
+q_class QWebElementCollection {
+    q_class const_iterator {
+
+    }
+
+    q_class iterator {
+
+    }
+
+
+    public member q_function append(const QWebElementCollection & other) : void;
+    public const member q_function at(int i) : QWebElement;
+    public member q_function begin() : iterator;
+    public const member q_function begin() : const_iterator;
+    public const member q_function constBegin() : const_iterator;
+    public const member q_function constEnd() : const_iterator;
+    public const member q_function count() : int;
+    public const member q_function end() : const_iterator;
+    public member q_function end() : iterator;
+    public const member q_function first() : QWebElement;
+    public const member q_function last() : QWebElement;
+    public const member q_function toList() : QList<QWebElement>;
+
+
+}
+

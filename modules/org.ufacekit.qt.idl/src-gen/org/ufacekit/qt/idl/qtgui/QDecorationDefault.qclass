@@ -1,0 +1,12 @@
+q_class QDecorationDefault extends QDecoration {
+    public virtual member q_function paint(QPainter * painter, const QWidget * widget, int decorationRegion = All, DecorationState state = Normal) : bool;
+    public virtual member q_function region(const QWidget * widget, const QRect & rect, int decorationRegion = All) : QRegion;
+
+    protected virtual member q_function paintButton(QPainter * painter, const QWidget * widget, int buttonRegion, DecorationState state, const QPalette & palette) : void;
+    protected virtual member q_function pixmapFor(const QWidget * widget, int decorationRegion, int & xoff, int & yoff) : QPixmap;
+    protected virtual member q_function titleBarHeight(const QWidget * widget) : int;
+    protected virtual member q_function xpmForRegion(int region) : const char **;
+
+
+}
+

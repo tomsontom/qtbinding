@@ -1,0 +1,36 @@
+q_class QGraphicsEffect extends QObject {
+    q_enumeration ChangeFlag {
+        SourceAttached = 1
+        SourceDetached = 2
+        SourceBoundingRectChanged = 4
+        SourceInvalidated = 8
+    }
+
+    q_flags ChangeFlags : ChangeFlag;
+
+    q_enumeration PixmapPadMode {
+        NoPad = 0
+        PadToTransparentBorder = 1
+        PadToEffectiveBoundingRect = 2
+    }
+
+
+    q_property bool enabled;
+
+    public const member q_function boundingRect() : QRectF;
+    public const virtual member q_function boundingRectFor(const QRectF & rect) : QRectF;
+    public const member q_function isEnabled() : bool;
+
+    protected purevirtual member q_function draw(QPainter * painter) : void;
+    protected member q_function drawSource(QPainter * painter) : void;
+    protected const member q_function sourceBoundingRect(Qt.CoordinateSystem system = Qt.LogicalCoordinates) : QRectF;
+    protected virtual member q_function sourceChanged(ChangeFlags flags) : void;
+    protected const member q_function sourceIsPixmap() : bool;
+    protected const member q_function sourcePixmap(Qt.CoordinateSystem system = Qt.LogicalCoordinates, QPoint * offset = 0, PixmapPadMode mode = PadToEffectiveBoundingRect) : QPixmap;
+    protected member q_function updateBoundingRect() : void;
+
+
+
+
+}
+

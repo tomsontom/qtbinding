@@ -1,0 +1,38 @@
+q_class QGradient {
+    q_enumeration CoordinateMode {
+        LogicalMode = 0
+        StretchToDeviceMode = 1
+        ObjectBoundingMode = 2
+    }
+
+    q_enumeration InterpolationMode {
+        ColorInterpolation = 0
+        ComponentInterpolation = 1
+    }
+
+    q_enumeration Spread {
+        PadSpread = 0
+        ReflectSpread = 1
+        RepeatSpread = 2
+    }
+
+    q_enumeration Type {
+        LinearGradient = 0
+        RadialGradient = 1
+        ConicalGradient = 2
+        NoGradient = 3
+    }
+
+
+    public const member q_function coordinateMode() : CoordinateMode;
+    public member q_function setColorAt(qreal position, const QColor & color) : void;
+    public member q_function setCoordinateMode(CoordinateMode mode) : void;
+    public member q_function setSpread(Spread method) : void;
+    public member q_function setStops(const QGradientStops & stopPoints) : void;
+    public const member q_function spread() : Spread;
+    public const member q_function stops() : QGradientStops;
+    public const member q_function type() : Type;
+
+
+}
+

@@ -1,0 +1,20 @@
+q_class QThreadPool extends QObject {
+    q_property const int activeThreadCount;
+    q_property int expiryTimeout;
+    q_property int maxThreadCount;
+
+    public const member q_function activeThreadCount() : int;
+    public const member q_function expiryTimeout() : int;
+    public class q_function globalInstance() : QThreadPool *;
+    public const member q_function maxThreadCount() : int;
+    public member q_function releaseThread() : void;
+    public member q_function reserveThread() : void;
+    public member q_function setExpiryTimeout(int expiryTimeout) : void;
+    public member q_function setMaxThreadCount(int maxThreadCount) : void;
+    public member q_function start(QRunnable * runnable, int priority = 0) : void;
+    public member q_function tryStart(QRunnable * runnable) : bool;
+    public member q_function waitForDone() : void;
+
+
+}
+

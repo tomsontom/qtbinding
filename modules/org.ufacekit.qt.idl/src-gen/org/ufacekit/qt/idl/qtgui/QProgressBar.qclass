@@ -1,0 +1,43 @@
+q_class QProgressBar extends QWidget {
+    q_enumeration Direction {
+        TopToBottom = 0
+        BottomToTop = 1
+    }
+
+
+    q_property Qt.Alignment alignment;
+    q_property QString format;
+    q_property bool invertedAppearance;
+    q_property int maximum;
+    q_property int minimum;
+    q_property Qt.Orientation orientation;
+    q_property const QString text;
+    q_property Direction textDirection;
+    q_property bool textVisible;
+    q_property int value;
+
+    public const member q_function alignment() : Qt.Alignment;
+    public const member q_function format() : QString;
+    public member q_function invertedAppearance() : bool;
+    public const member q_function invertedAppearance() : bool;
+    public const member q_function isTextVisible() : bool;
+    public const member q_function maximum() : int;
+    public const member q_function minimum() : int;
+    public const member q_function orientation() : Qt.Orientation;
+    public member q_function setAlignment(Qt.Alignment alignment) : void;
+    public member q_function setFormat(const QString & format) : void;
+    public member q_function setInvertedAppearance(bool invert) : void;
+    public member q_function setTextDirection(QProgressBar.Direction textDirection) : void;
+    public member q_function setTextVisible(bool visible) : void;
+    public const virtual member q_function text() : QString;
+    public const member q_function textDirection() : QProgressBar.Direction;
+    public member q_function textDirection() : QProgressBar.Direction;
+    public const member q_function value() : int;
+
+    protected const member q_function initStyleOption(QStyleOptionProgressBar * option) : void;
+
+
+
+
+}
+

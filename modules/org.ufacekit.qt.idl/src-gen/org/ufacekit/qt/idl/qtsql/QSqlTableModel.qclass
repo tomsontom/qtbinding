@@ -1,0 +1,43 @@
+q_class QSqlTableModel extends QSqlQueryModel {
+    q_enumeration EditStrategy {
+        OnFieldChange = 0
+        OnRowChange = 1
+        OnManualSubmit = 2
+    }
+
+
+    public const member q_function database() : QSqlDatabase;
+    public const member q_function editStrategy() : EditStrategy;
+    public const member q_function fieldIndex(const QString & fieldName) : int;
+    public const member q_function filter() : QString;
+    public member q_function insertRecord(int row, const QSqlRecord & record) : bool;
+    public virtual member q_function insertRows(int row, int count, const QModelIndex & parent = QModelIndex()) : bool;
+    public const member q_function isDirty(const QModelIndex & index) : bool;
+    public const member q_function primaryKey() : QSqlIndex;
+    public virtual member q_function removeColumns(int column, int count, const QModelIndex & parent = QModelIndex()) : bool;
+    public virtual member q_function removeRows(int row, int count, const QModelIndex & parent = QModelIndex()) : bool;
+    public virtual member q_function revertRow(int row) : void;
+    public virtual member q_function select() : bool;
+    public virtual member q_function setData(const QModelIndex & index, const QVariant & value, int role = Qt.EditRole) : bool;
+    public virtual member q_function setEditStrategy(EditStrategy strategy) : void;
+    public virtual member q_function setFilter(const QString & filter) : void;
+    public member q_function setRecord(int row, const QSqlRecord & record) : bool;
+    public virtual member q_function setSort(int column, Qt.SortOrder order) : void;
+    public virtual member q_function setTable(const QString & tableName) : void;
+    public virtual member q_function sort(int column, Qt.SortOrder order) : void;
+    public const member q_function tableName() : QString;
+
+    protected virtual member q_function deleteRowFromTable(int row) : bool;
+    protected const member q_function indexInQuery(const QModelIndex & item) : QModelIndex;
+    protected virtual member q_function insertRowIntoTable(const QSqlRecord & values) : bool;
+    protected const virtual member q_function orderByClause() : QString;
+    protected const virtual member q_function selectStatement() : QString;
+    protected member q_function setPrimaryKey(const QSqlIndex & key) : void;
+    protected member q_function setQuery(const QSqlQuery & query) : void;
+    protected virtual member q_function updateRowInTable(int row, const QSqlRecord & values) : bool;
+
+
+
+
+}
+

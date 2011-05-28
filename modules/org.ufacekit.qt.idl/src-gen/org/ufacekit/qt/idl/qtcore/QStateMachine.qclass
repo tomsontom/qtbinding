@@ -1,0 +1,62 @@
+q_class QStateMachine extends QState {
+    q_enumeration Error {
+        NoError = 0
+        NoInitialStateError = 1
+        NoDefaultStateInHistoryStateError = 2
+        NoCommonAncestorForTransitionError = 3
+    }
+
+    q_enumeration EventPriority {
+        NormalPriority = 0
+        HighPriority = 1
+    }
+
+    q_enumeration RestorePolicy {
+        DontRestoreProperties = 0
+        RestoreProperties = 1
+    }
+
+
+    q_class SignalEvent {
+        public const member q_function arguments() : QList<QVariant>;
+        public const member q_function sender() : QObject *;
+        public const member q_function signalIndex() : int;
+
+
+    }
+
+    q_class WrappedEvent {
+        public const member q_function event() : QEvent *;
+        public const member q_function object() : QObject *;
+
+
+    }
+
+
+    q_property bool animated;
+    q_property const QString errorString;
+    q_property RestorePolicy globalRestorePolicy;
+
+    public member q_function addDefaultAnimation(QAbstractAnimation * animation) : void;
+    public member q_function addState(QAbstractState * state) : void;
+    public member q_function cancelDelayedEvent(int id) : bool;
+    public member q_function clearError() : void;
+    public const member q_function configuration() : QSet<QAbstractState *>;
+    public const member q_function defaultAnimations() : QList<QAbstractAnimation *>;
+    public const member q_function error() : Error;
+    public const member q_function errorString() : QString;
+    public const member q_function globalRestorePolicy() : QStateMachine.RestorePolicy;
+    public const member q_function isAnimated() : bool;
+    public const member q_function isRunning() : bool;
+    public member q_function postDelayedEvent(QEvent * event, int delay) : int;
+    public member q_function postEvent(QEvent * event, EventPriority priority = NormalPriority) : void;
+    public member q_function removeDefaultAnimation(QAbstractAnimation * animation) : void;
+    public member q_function removeState(QAbstractState * state) : void;
+    public member q_function setAnimated(bool enabled) : void;
+    public member q_function setGlobalRestorePolicy(QStateMachine.RestorePolicy restorePolicy) : void;
+
+
+
+
+}
+

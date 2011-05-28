@@ -1,0 +1,47 @@
+q_class QFuture {
+    q_typedef ConstIterator : ___UNKNOWN___;
+
+
+    q_class const_iterator {
+        q_typedef difference_type : ___UNKNOWN___;
+
+        q_typedef iterator_category : ___UNKNOWN___;
+
+        q_typedef pointer : ___UNKNOWN___;
+
+        q_typedef reference : ___UNKNOWN___;
+
+        q_typedef value_type : ___UNKNOWN___;
+
+
+
+    }
+
+
+    public member q_function cancel() : void;
+    public const member q_function constBegin() : const_iterator;
+    public const member q_function constEnd() : const_iterator;
+    public const member q_function end() : const_iterator;
+    public const member q_function isCanceled() : bool;
+    public const member q_function isFinished() : bool;
+    public const member q_function isPaused() : bool;
+    public const member q_function isResultReadyAt(int index) : bool;
+    public const member q_function isRunning() : bool;
+    public const member q_function isStarted() : bool;
+    public member q_function pause() : void;
+    public const member q_function progressMaximum() : int;
+    public const member q_function progressMinimum() : int;
+    public const member q_function progressText() : QString;
+    public const member q_function progressValue() : int;
+    public const member q_function result() : T; 
+    public const member q_function resultAt(int index) : T;
+    public const member q_function resultCount() : int;
+    public const member q_function results() : QList<T>;
+    public member q_function resume() : void;
+    public member q_function setPaused(bool paused) : void;
+    public member q_function togglePaused() : void;
+    public member q_function waitForFinished() : void;
+
+
+}
+

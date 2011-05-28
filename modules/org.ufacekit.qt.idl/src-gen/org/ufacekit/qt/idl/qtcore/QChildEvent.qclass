@@ -1,0 +1,7 @@
+q_class QChildEvent extends QEvent {
+    public const member q_function added() : bool;
+    public const member q_function child() : QObject *;
+    public const member q_function polished() : bool;
+
+
+}

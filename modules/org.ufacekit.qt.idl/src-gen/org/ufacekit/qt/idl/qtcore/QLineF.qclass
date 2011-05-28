@@ -1,0 +1,41 @@
+q_class QLineF {
+    q_enumeration IntersectType {
+        NoIntersection = 0
+        BoundedIntersection = 1
+        UnboundedIntersection = 2
+    }
+
+
+    public const member q_function angle() : qreal;
+    public const member q_function angle(const QLineF & line) : qreal;
+    public const member q_function angleTo(const QLineF & line) : qreal; 
+    public const member q_function dx() : qreal;
+    public const member q_function dy() : qreal;
+    public class q_function fromPolar(qreal length, qreal angle) : QLineF;
+    public const member q_function intersect(const QLineF & line, QPointF * intersectionPoint) : IntersectType;
+    public const member q_function isNull() : bool;
+    public const member q_function length() : qreal;
+    public const member q_function normalVector() : QLineF;
+    public const member q_function p1() : QPointF;
+    public const member q_function p2() : QPointF;
+    public const member q_function pointAt(qreal t) : QPointF;
+    public member q_function setAngle(qreal angle) : void;
+    public member q_function setLength(qreal length) : void;
+    public member q_function setLine(qreal x1, qreal y1, qreal x2, qreal y2) : void;
+    public member q_function setP1(const QPointF & p1) : void;
+    public member q_function setP2(const QPointF & p2) : void;
+    public member q_function setPoints(const QPointF & p1, const QPointF & p2) : void;
+    public const member q_function toLine() : QLine;
+    public member q_function translate(const QPointF & offset) : void;
+    public member q_function translate(qreal dx, qreal dy) : void;
+    public const member q_function translated(qreal dx, qreal dy) : QLineF;
+    public const member q_function translated(const QPointF & offset) : QLineF;
+    public const member q_function unitVector() : QLineF;
+    public const member q_function x1() : qreal;
+    public const member q_function x2() : qreal;
+    public const member q_function y1() : qreal;
+    public const member q_function y2() : qreal;
+
+
+}
+

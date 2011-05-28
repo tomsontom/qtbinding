@@ -1,0 +1,16 @@
+q_class QAbstractXmlReceiver {
+    public purevirtual member q_function atomicValue(const QVariant & value) : void;
+    public purevirtual member q_function attribute(const QXmlName & name, const QStringRef & value) : void;
+    public purevirtual member q_function characters(const QStringRef & value) : void;
+    public purevirtual member q_function comment(const QString & value) : void;
+    public purevirtual member q_function endDocument() : void;
+    public purevirtual member q_function endElement() : void;
+    public purevirtual member q_function endOfSequence() : void;
+    public purevirtual member q_function namespaceBinding(const QXmlName & name) : void;
+    public purevirtual member q_function processingInstruction(const QXmlName & target, const QString & value) : void;
+    public purevirtual member q_function startDocument() : void;
+    public purevirtual member q_function startOfSequence() : void;
+
+
+}
+

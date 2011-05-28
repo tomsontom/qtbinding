@@ -1,0 +1,31 @@
+q_class QLibrary extends QObject {
+    q_enumeration LoadHint {
+        ResolveAllSymbolsHint = 1
+        ExportExternalSymbolsHint = 2
+        LoadArchiveMemberHint = 4
+    }
+
+    q_flags LoadHints : LoadHint;
+
+
+    q_property QString fileName;
+    q_property LoadHints loadHints;
+
+    public const member q_function errorString() : QString;
+    public const member q_function fileName() : QString;
+    public class q_function isLibrary(const QString & fileName) : bool;
+    public const member q_function isLoaded() : bool;
+    public member q_function load() : bool;
+    public const member q_function loadHints() : LoadHints;
+    public class q_function resolve(const QString & fileName, const QString & version, const char * symbol) : void *;
+    public class q_function resolve(const QString & fileName, const char * symbol) : void *;
+    public class q_function resolve(const QString & fileName, int verNum, const char * symbol) : void *;
+    public member q_function setFileName(const QString & fileName) : void;
+    public member q_function setFileNameAndVersion(const QString & fileName, const QString & version) : void;
+    public member q_function setFileNameAndVersion(const QString & fileName, int versionNumber) : void;
+    public member q_function setLoadHints(LoadHints hints) : void;
+    public member q_function unload() : bool;
+
+
+}
+

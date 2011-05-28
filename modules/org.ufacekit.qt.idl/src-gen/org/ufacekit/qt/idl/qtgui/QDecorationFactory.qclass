@@ -1,0 +1,6 @@
+q_class QDecorationFactory {
+    public class q_function create(const QString & key) : QDecoration *;
+
+
+}
+

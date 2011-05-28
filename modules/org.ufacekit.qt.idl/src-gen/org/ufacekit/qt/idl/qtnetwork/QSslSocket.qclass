@@ -1,0 +1,72 @@
+q_class QSslSocket extends QTcpSocket {
+    q_enumeration PeerVerifyMode {
+        VerifyNone = 0
+        QueryPeer = 1
+        VerifyPeer = 2
+        AutoVerifyPeer = 3
+    }
+
+    q_enumeration SslMode {
+        UnencryptedMode = 0
+        SslClientMode = 1
+        SslServerMode = 2
+    }
+
+
+    public member q_function abort() : void;
+    public member q_function addCaCertificate(const QSslCertificate & certificate) : void;
+    public member q_function addCaCertificates(const QList<QSslCertificate> & certificates) : void;
+    public member q_function addCaCertificates(const QString & path, QSsl.EncodingFormat format = QSsl.Pem, QRegExp.PatternSyntax syntax = QRegExp.FixedString) : bool;
+    public class q_function addDefaultCaCertificate(const QSslCertificate & certificate) : void;
+    public class q_function addDefaultCaCertificates(const QList<QSslCertificate> & certificates) : void;
+    public class q_function addDefaultCaCertificates(const QString & path, QSsl.EncodingFormat encoding = QSsl.Pem, QRegExp.PatternSyntax syntax = QRegExp.FixedString) : bool;
+    public const member q_function caCertificates() : QList<QSslCertificate>;
+    public const member q_function ciphers() : QList<QSslCipher>;
+    public member q_function connectToHostEncrypted(const QString & hostName, quint16 port, OpenMode mode = ReadWrite) : void;
+    public member q_function connectToHostEncrypted(const QString & hostName, quint16 port, const QString & sslPeerName, OpenMode mode = ReadWrite) : void;
+    public class q_function defaultCaCertificates() : QList<QSslCertificate>;
+    public class q_function defaultCiphers() : QList<QSslCipher>;
+    public const member q_function encryptedBytesAvailable() : qint64;
+    public const member q_function encryptedBytesToWrite() : qint64;
+    public member q_function flush() : bool;
+    public const member q_function isEncrypted() : bool;
+    public const member q_function localCertificate() : QSslCertificate;
+    public const member q_function mode() : SslMode;
+    public const member q_function peerCertificate() : QSslCertificate;
+    public const member q_function peerCertificateChain() : QList<QSslCertificate>;
+    public const member q_function peerVerifyDepth() : int;
+    public const member q_function peerVerifyMode() : QSslSocket.PeerVerifyMode;
+    public const member q_function privateKey() : QSslKey;
+    public const member q_function protocol() : QSsl.SslProtocol;
+    public const member q_function sessionCipher() : QSslCipher;
+    public member q_function setCaCertificates(const QList<QSslCertificate> & certificates) : void;
+    public member q_function setCiphers(const QString & ciphers) : void;
+    public member q_function setCiphers(const QList<QSslCipher> & ciphers) : void;
+    public class q_function setDefaultCaCertificates(const QList<QSslCertificate> & certificates) : void;
+    public class q_function setDefaultCiphers(const QList<QSslCipher> & ciphers) : void;
+    public member q_function setLocalCertificate(const QSslCertificate & certificate) : void;
+    public member q_function setLocalCertificate(const QString & path, QSsl.EncodingFormat format = QSsl.Pem) : void;
+    public member q_function setPeerVerifyDepth(int depth) : void;
+    public member q_function setPeerVerifyMode(QSslSocket.PeerVerifyMode mode) : void;
+    public member q_function setPrivateKey(const QString & fileName, QSsl.KeyAlgorithm algorithm = QSsl.Rsa, QSsl.EncodingFormat format = QSsl.Pem, const QByteArray & passPhrase = QByteArray()) : void;
+    public member q_function setPrivateKey(const QSslKey & key) : void;
+    public member q_function setProtocol(QSsl.SslProtocol protocol) : void;
+    public member q_function setReadBufferSize(qint64 size) : void;
+    public member q_function setSocketDescriptor(int socketDescriptor, SocketState state = ConnectedState, OpenMode openMode = ReadWrite) : bool;
+    public member q_function setSocketOption(QAbstractSocket.SocketOption option, const QVariant & value) : void;
+    public member q_function setSslConfiguration(const QSslConfiguration & configuration) : void;
+    public member q_function socketOption(QAbstractSocket.SocketOption option) : QVariant;
+    public const member q_function sslConfiguration() : QSslConfiguration;
+    public const member q_function sslErrors() : QList<QSslError>;
+    public class q_function supportedCiphers() : QList<QSslCipher>;
+    public class q_function supportsSsl() : bool;
+    public class q_function systemCaCertificates() : QList<QSslCertificate>;
+    public member q_function waitForConnected(int msecs = 30000) : bool;
+    public member q_function waitForDisconnected(int msecs = 30000) : bool;
+    public member q_function waitForEncrypted(int msecs = 30000) : bool;
+
+
+
+
+}
+

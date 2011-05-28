@@ -1,0 +1,39 @@
+q_class QXmlStreamWriter {
+    q_property bool autoFormatting;
+    q_property int autoFormattingIndent;
+
+    public const member q_function autoFormatting() : bool;
+    public const member q_function autoFormattingIndent() : int;
+    public const member q_function codec() : QTextCodec *;
+    public const member q_function device() : QIODevice *;
+    public member q_function setAutoFormattingIndent(int spacesOrTabs) : void;
+    public member q_function setCodec(const char * codecName) : void;
+    public member q_function setDevice(QIODevice * device) : void;
+    public member q_function writeAttribute(const QString & namespaceUri, const QString & name, const QString & value) : void;
+    public member q_function writeAttribute(const QString & qualifiedName, const QString & value) : void;
+    public member q_function writeAttribute(const QXmlStreamAttribute & attribute) : void;
+    public member q_function writeAttributes(const QXmlStreamAttributes & attributes) : void;
+    public member q_function writeCDATA(const QString & text) : void;
+    public member q_function writeCharacters(const QString & text) : void;
+    public member q_function writeComment(const QString & text) : void;
+    public member q_function writeCurrentToken(const QXmlStreamReader & reader) : void;
+    public member q_function writeDTD(const QString & dtd) : void;
+    public member q_function writeDefaultNamespace(const QString & namespaceUri) : void;
+    public member q_function writeEmptyElement(const QString & qualifiedName) : void;
+    public member q_function writeEmptyElement(const QString & namespaceUri, const QString & name) : void;
+    public member q_function writeEndDocument() : void;
+    public member q_function writeEndElement() : void;
+    public member q_function writeEntityReference(const QString & name) : void;
+    public member q_function writeNamespace(const QString & namespaceUri, const QString & prefix = QString()) : void;
+    public member q_function writeProcessingInstruction(const QString & target, const QString & data = QString()) : void;
+    public member q_function writeStartDocument() : void;
+    public member q_function writeStartDocument(const QString & version) : void;
+    public member q_function writeStartDocument(const QString & version, bool standalone) : void;
+    public member q_function writeStartElement(const QString & qualifiedName) : void;
+    public member q_function writeStartElement(const QString & namespaceUri, const QString & name) : void;
+    public member q_function writeTextElement(const QString & namespaceUri, const QString & name, const QString & text) : void;
+    public member q_function writeTextElement(const QString & qualifiedName, const QString & text) : void;
+
+
+}
+

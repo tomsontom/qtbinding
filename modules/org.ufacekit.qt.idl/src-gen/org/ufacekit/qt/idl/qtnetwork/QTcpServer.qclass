@@ -1,0 +1,24 @@
+q_class QTcpServer extends QObject {
+    public member q_function close() : void;
+    public const member q_function errorString() : QString;
+    public const virtual member q_function hasPendingConnections() : bool;
+    public const member q_function isListening() : bool;
+    public member q_function listen(const QHostAddress & address = QHostAddress.Any, quint16 port = 0) : bool;
+    public const member q_function maxPendingConnections() : int;
+    public virtual member q_function nextPendingConnection() : QTcpSocket *;
+    public const member q_function proxy() : QNetworkProxy;
+    public const member q_function serverAddress() : QHostAddress;
+    public const member q_function serverError() : QAbstractSocket.SocketError;
+    public const member q_function serverPort() : quint16;
+    public member q_function setMaxPendingConnections(int numConnections) : void;
+    public member q_function setProxy(const QNetworkProxy & networkProxy) : void;
+    public member q_function setSocketDescriptor(int socketDescriptor) : bool;
+    public const member q_function socketDescriptor() : int;
+    public member q_function waitForNewConnection(int msec = 0, bool * timedOut = 0) : bool;
+
+    protected member q_function addPendingConnection(QTcpSocket * socket) : void;
+
+
+
+}
+

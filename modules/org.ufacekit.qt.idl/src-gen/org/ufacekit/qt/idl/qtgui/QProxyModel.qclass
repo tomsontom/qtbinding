@@ -1,0 +1,29 @@
+q_class QProxyModel extends QAbstractItemModel {
+    public const virtual member q_function columnCount(const QModelIndex & parent = QModelIndex()) : int;
+    public const virtual member q_function data(const QModelIndex & index, int role = Qt.DisplayRole) : QVariant;
+    public virtual member q_function dropMimeData(const QMimeData * data, Qt.DropAction action, int row, int column, const QModelIndex & parent) : bool;
+    public virtual member q_function fetchMore(const QModelIndex & parent) : void;
+    public const virtual member q_function flags(const QModelIndex & index) : Qt.ItemFlags;
+    public const virtual member q_function hasChildren(const QModelIndex & parent = QModelIndex()) : bool;
+    public const virtual member q_function headerData(int section, Qt.Orientation orientation, int role = Qt.DisplayRole) : QVariant;
+    public const virtual member q_function index(int row, int column, const QModelIndex & parent = QModelIndex()) : QModelIndex;
+    public virtual member q_function insertColumns(int column, int count, const QModelIndex & parent = QModelIndex()) : bool;
+    public virtual member q_function insertRows(int row, int count, const QModelIndex & parent = QModelIndex()) : bool;
+    public const virtual member q_function match(const QModelIndex & start, int role, const QVariant & value, int hits = 1, Qt.MatchFlags flags = Qt.MatchFlags( Qt.MatchStartsWith | Qt.MatchWrap )) : QModelIndexList;
+    public const virtual member q_function mimeData(const QModelIndexList & indexes) : QMimeData *;
+    public const virtual member q_function mimeTypes() : QStringList;
+    public const member q_function model() : QAbstractItemModel *;
+    public const virtual member q_function parent(const QModelIndex & child) : QModelIndex;
+    public virtual member q_function revert() : void;
+    public const virtual member q_function rowCount(const QModelIndex & parent = QModelIndex()) : int;
+    public virtual member q_function setData(const QModelIndex & index, const QVariant & value, int role = Qt.EditRole) : bool;
+    public virtual member q_function setHeaderData(int section, Qt.Orientation orientation, const QVariant & value, int role = Qt.EditRole) : bool;
+    public virtual member q_function setModel(QAbstractItemModel * model) : void;
+    public virtual member q_function sort(int column, Qt.SortOrder order = Qt.AscendingOrder) : void;
+    public const virtual member q_function span(const QModelIndex & index) : QSize;
+    public virtual member q_function submit() : bool;
+    public const virtual member q_function supportedDropActions() : Qt.DropActions;
+
+
+}
+

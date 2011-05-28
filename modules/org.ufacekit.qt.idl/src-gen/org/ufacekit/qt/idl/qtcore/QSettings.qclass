@@ -1,0 +1,79 @@
+q_class QSettings extends QObject {
+    q_enumeration Format {
+        NativeFormat = 0
+        IniFormat = 1
+        InvalidFormat = 16
+        CustomFormat1 = 17
+        CustomFormat2 = 18
+        CustomFormat3 = 19
+        CustomFormat4 = 20
+        CustomFormat5 = 21
+        CustomFormat6 = 22
+        CustomFormat7 = 23
+        CustomFormat8 = 24
+        CustomFormat9 = 25
+        CustomFormat10 = 26
+        CustomFormat11 = 27
+        CustomFormat12 = 28
+        CustomFormat13 = 29
+        CustomFormat14 = 30
+        CustomFormat15 = 31
+        CustomFormat16 = 32
+    }
+
+    q_enumeration Scope {
+        UserScope = 0
+        SystemScope = 1
+    }
+
+    q_enumeration Status {
+        NoError = 0
+        AccessError = 1
+        FormatError = 2
+    }
+
+
+    q_typedef ReadFunc : ___UNKNOWN___;
+
+    q_typedef SettingsMap : ___UNKNOWN___;
+
+    q_typedef WriteFunc : ___UNKNOWN___;
+
+
+    public const member q_function allKeys() : QStringList;
+    public const member q_function applicationName() : QString;
+    public member q_function beginGroup(const QString & prefix) : void;
+    public member q_function beginReadArray(const QString & prefix) : int;
+    public member q_function beginWriteArray(const QString & prefix, int size = -1) : void;
+    public const member q_function childGroups() : QStringList;
+    public const member q_function childKeys() : QStringList;
+    public const member q_function contains(const QString & key) : bool;
+    public class q_function defaultFormat() : Format;
+    public member q_function endArray() : void;
+    public member q_function endGroup() : void;
+    public const member q_function fallbacksEnabled() : bool;
+    public const member q_function fileName() : QString;
+    public const member q_function format() : Format;
+    public const member q_function group() : QString;
+    public const member q_function iniCodec() : QTextCodec *;
+    public const member q_function isWritable() : bool;
+    public const member q_function organizationName() : QString;
+    public class q_function registerFormat(const QString & extension, ReadFunc readFunc, WriteFunc writeFunc, Qt.CaseSensitivity caseSensitivity = Qt.CaseSensitive) : Format;
+    public member q_function remove(const QString & key) : void;
+    public const member q_function scope() : Scope;
+    public member q_function setArrayIndex(int i) : void;
+    public class q_function setDefaultFormat(Format format) : void;
+    public member q_function setFallbacksEnabled(bool b) : void;
+    public member q_function setIniCodec(const char * codecName) : void;
+    public member q_function setIniCodec(QTextCodec * codec) : void;
+    public class q_function setPath(Format format, Scope scope, const QString & path) : void;
+    public class q_function setSystemIniPath(const QString & dir) : void;
+    public class q_function setUserIniPath(const QString & dir) : void;
+    public member q_function setValue(const QString & key, const QVariant & value) : void;
+    public const member q_function status() : Status;
+    public member q_function sync() : void;
+    public const member q_function value(const QString & key, const QVariant & defaultValue = QVariant()) : QVariant;
+
+
+}
+

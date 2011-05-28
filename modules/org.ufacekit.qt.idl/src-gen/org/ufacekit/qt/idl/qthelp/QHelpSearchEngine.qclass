@@ -1,0 +1,15 @@
+q_class QHelpSearchEngine extends QObject {
+    q_typedef SearchHit : ___UNKNOWN___;
+
+
+    public const member q_function hitCount() : int;
+    public const member q_function hits(int start, int end) : QList<SearchHit>;
+    public const member q_function query() : QList<QHelpSearchQuery>;
+    public member q_function queryWidget() : QHelpSearchQueryWidget *;
+    public member q_function resultWidget() : QHelpSearchResultWidget *;
+
+
+
+
+}
+

@@ -1,0 +1,12 @@
+q_class QDomDocumentType extends QDomNode {
+    public const member q_function entities() : QDomNamedNodeMap;
+    public const member q_function internalSubset() : QString;
+    public const member q_function name() : QString;
+    public const member q_function nodeType() : QDomNode.NodeType;
+    public const member q_function notations() : QDomNamedNodeMap;
+    public const member q_function publicId() : QString;
+    public const member q_function systemId() : QString;
+
+
+}
+

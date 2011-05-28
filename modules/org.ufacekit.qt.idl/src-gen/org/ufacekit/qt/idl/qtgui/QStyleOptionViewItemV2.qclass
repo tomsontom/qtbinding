@@ -1,0 +1,20 @@
+q_class QStyleOptionViewItemV2 extends QStyleOptionViewItem {
+    q_enumeration StyleOptionVersion {
+        Version = 2
+    }
+
+    q_enumeration ViewItemFeature {
+        None = 0
+        WrapText = 1
+        Alternate = 2
+        HasCheckIndicator = 4
+        HasDisplay = 8
+        HasDecoration = 16
+    }
+
+    q_flags ViewItemFeatures : ViewItemFeature;
+
+
+
+}
+

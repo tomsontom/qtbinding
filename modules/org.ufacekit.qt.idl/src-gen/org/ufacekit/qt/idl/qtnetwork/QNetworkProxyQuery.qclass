@@ -1,0 +1,25 @@
+q_class QNetworkProxyQuery {
+    q_enumeration QueryType {
+        TcpSocket = 0
+        UdpSocket = 1
+        TcpServer = 100
+        UrlRequest = 101
+    }
+
+
+    public const member q_function localPort() : int;
+    public const member q_function peerHostName() : QString;
+    public const member q_function peerPort() : int;
+    public const member q_function protocolTag() : QString;
+    public const member q_function queryType() : QueryType;
+    public member q_function setLocalPort(int port) : void;
+    public member q_function setPeerHostName(const QString & hostname) : void;
+    public member q_function setPeerPort(int port) : void;
+    public member q_function setProtocolTag(const QString & protocolTag) : void;
+    public member q_function setQueryType(QueryType type) : void;
+    public member q_function setUrl(const QUrl & url) : void;
+    public const member q_function url() : QUrl;
+
+
+}
+

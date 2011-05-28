@@ -1,0 +1,7 @@
+q_class QFileOpenEvent extends QEvent {
+    public const member q_function file() : QString;
+    public const member q_function url() : QUrl;
+
+
+}
+

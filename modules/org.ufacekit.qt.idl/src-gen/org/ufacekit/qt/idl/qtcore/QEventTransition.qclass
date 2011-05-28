@@ -1,0 +1,12 @@
+q_class QEventTransition extends QAbstractTransition {
+    q_property QObject * eventSource;
+    q_property QEvent.Type eventType;
+
+    public const member q_function eventSource() : QObject *;
+    public const member q_function eventType() : QEvent.Type;
+    public member q_function setEventSource(QObject * object) : void;
+    public member q_function setEventType(QEvent.Type type) : void;
+
+
+}
+

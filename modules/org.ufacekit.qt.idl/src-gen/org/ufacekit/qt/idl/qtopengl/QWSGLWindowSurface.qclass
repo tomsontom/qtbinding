@@ -1,0 +1,7 @@
+q_class QWSGLWindowSurface {
+    public const member q_function context() : QGLContext *;
+    public member q_function setContext(QGLContext * context) : void;
+
+
+}
+

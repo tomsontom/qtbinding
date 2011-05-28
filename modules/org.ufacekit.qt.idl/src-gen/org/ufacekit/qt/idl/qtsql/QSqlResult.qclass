@@ -1,0 +1,62 @@
+q_class QSqlResult {
+    q_enumeration BindingSyntax {
+        PositionalBinding = 0
+        NamedBinding = 1
+    }
+
+    q_enumeration VirtualHookOperation {
+        BatchOperation = 0
+        DetachFromResultSet = 1
+        SetNumericalPrecision = 2
+        NextResult = 3
+    }
+
+
+    public const virtual member q_function handle() : QVariant;
+
+    protected member q_function addBindValue(const QVariant & val, QSql.ParamType paramType) : void;
+    protected const member q_function at() : int;
+    protected virtual member q_function bindValue(int index, const QVariant & val, QSql.ParamType paramType) : void;
+    protected virtual member q_function bindValue(const QString & placeholder, const QVariant & val, QSql.ParamType paramType) : void;
+    protected const member q_function bindValueType(const QString & placeholder) : QSql.ParamType;
+    protected const member q_function bindValueType(int index) : QSql.ParamType;
+    protected const member q_function bindingSyntax() : BindingSyntax;
+    protected const member q_function boundValue(int index) : QVariant;
+    protected const member q_function boundValue(const QString & placeholder) : QVariant;
+    protected const member q_function boundValueCount() : int;
+    protected const member q_function boundValueName(int index) : QString;
+    protected const member q_function boundValues() : QVector<QVariant> &;
+    protected member q_function clear() : void;
+    protected purevirtual member q_function data(int index) : QVariant;
+    protected const member q_function driver() : const QSqlDriver *;
+    protected virtual member q_function exec() : bool;
+    protected purevirtual member q_function fetch(int index) : bool;
+    protected purevirtual member q_function fetchFirst() : bool;
+    protected purevirtual member q_function fetchLast() : bool;
+    protected virtual member q_function fetchNext() : bool;
+    protected virtual member q_function fetchPrevious() : bool;
+    protected const member q_function hasOutValues() : bool;
+    protected const member q_function isActive() : bool;
+    protected const member q_function isForwardOnly() : bool;
+    protected purevirtual member q_function isNull(int index) : bool;
+    protected const member q_function isSelect() : bool;
+    protected const member q_function isValid() : bool;
+    protected const member q_function lastError() : QSqlError;
+    protected const virtual member q_function lastInsertId() : QVariant;
+    protected const member q_function lastQuery() : QString;
+    protected purevirtual member q_function numRowsAffected() : int;
+    protected virtual member q_function prepare(const QString & query) : bool;
+    protected const virtual member q_function record() : QSqlRecord;
+    protected purevirtual member q_function reset(const QString & query) : bool;
+    protected virtual member q_function savePrepare(const QString & query) : bool;
+    protected virtual member q_function setActive(bool active) : void;
+    protected virtual member q_function setAt(int index) : void;
+    protected virtual member q_function setForwardOnly(bool forward) : void;
+    protected virtual member q_function setLastError(const QSqlError & error) : void;
+    protected virtual member q_function setQuery(const QString & query) : void;
+    protected virtual member q_function setSelect(bool select) : void;
+    protected purevirtual member q_function size() : int;
+
+
+}
+

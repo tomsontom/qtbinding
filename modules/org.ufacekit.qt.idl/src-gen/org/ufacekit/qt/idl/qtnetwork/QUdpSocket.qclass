@@ -1,0 +1,24 @@
+q_class QUdpSocket extends QAbstractSocket {
+    q_enumeration BindFlag {
+        DefaultForPlatform = 0
+        ShareAddress = 1
+        DontShareAddress = 2
+        ReuseAddressHint = 4
+    }
+
+    q_flags BindMode : BindFlag;
+
+
+    public member q_function bind(quint16 port, BindMode mode) : bool;
+    public member q_function bind(quint16 port = 0) : bool;
+    public member q_function bind(const QHostAddress & address, quint16 port, BindMode mode) : bool;
+    public member q_function bind(const QHostAddress & address, quint16 port) : bool;
+    public const member q_function hasPendingDatagrams() : bool;
+    public const member q_function pendingDatagramSize() : qint64;
+    public member q_function readDatagram(char * data, qint64 maxSize, QHostAddress * address = 0, quint16 * port = 0) : qint64;
+    public member q_function writeDatagram(const char * data, qint64 size, const QHostAddress & address, quint16 port) : qint64;
+    public member q_function writeDatagram(const QByteArray & datagram, const QHostAddress & host, quint16 port) : qint64;
+
+
+}
+

@@ -1,0 +1,36 @@
+q_class QVarLengthArray {
+    q_typedef const_pointer : ___UNKNOWN___;
+
+    q_typedef const_reference : ___UNKNOWN___;
+
+    q_typedef difference_type : ___UNKNOWN___;
+
+    q_typedef pointer : ___UNKNOWN___;
+
+    q_typedef reference : ___UNKNOWN___;
+
+    q_typedef size_type : ___UNKNOWN___;
+
+    q_typedef value_type : ___UNKNOWN___;
+
+
+    public member q_function append(const T & t) : void;
+    public member q_function append(const T * buf, int size) : void;
+    public const member q_function at(int i) : const T &;
+    public const member q_function capacity() : int;
+    public member q_function clear() : void;
+    public const member q_function constData() : const T *;
+    public const member q_function count() : int;
+    public const member q_function data() : const T *;
+    public member q_function data() : T *;
+    public const member q_function isEmpty() : bool;
+    public member q_function removeLast() : void;
+    public member q_function reserve(int size) : void;
+    public member q_function resize(int size) : void;
+    public const member q_function size() : int;
+    public const member q_function value(int i) : T;
+    public const member q_function value(int i, const T & defaultValue) : T;
+
+
+}
+

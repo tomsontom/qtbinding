@@ -1,0 +1,54 @@
+q_class QLayout extends QObject, QLayoutItem {
+    q_enumeration SizeConstraint {
+        SetDefaultConstraint = 0
+        SetNoConstraint = 1
+        SetMinimumSize = 2
+        SetFixedSize = 3
+        SetMaximumSize = 4
+        SetMinAndMaxSize = 5
+    }
+
+
+    q_property int margin;
+    q_property SizeConstraint sizeConstraint;
+    q_property int spacing;
+
+    public member q_function activate() : bool;
+    public purevirtual member q_function addItem(QLayoutItem * item) : void;
+    public member q_function addWidget(QWidget * w) : void;
+    public class q_function closestAcceptableSize(const QWidget * widget, const QSize & size) : QSize;
+    public const member q_function contentsMargins() : QMargins;
+    public const member q_function contentsRect() : QRect;
+    public const purevirtual member q_function count() : int;
+    public const virtual member q_function expandingDirections() : Qt.Orientations;
+    public const member q_function getContentsMargins(int * left, int * top, int * right, int * bottom) : void;
+    public const virtual member q_function indexOf(QWidget * widget) : int;
+    public const member q_function isEnabled() : bool;
+    public const purevirtual member q_function itemAt(int index) : QLayoutItem *;
+    public const virtual member q_function maximumSize() : QSize;
+    public const member q_function menuBar() : QWidget *;
+    public const virtual member q_function minimumSize() : QSize;
+    public const member q_function parentWidget() : QWidget *;
+    public member q_function removeItem(QLayoutItem * item) : void;
+    public member q_function removeWidget(QWidget * widget) : void;
+    public member q_function setAlignment(Qt.Alignment alignment) : void;
+    public member q_function setAlignment(QLayout * l, Qt.Alignment alignment) : bool;
+    public member q_function setAlignment(QWidget * w, Qt.Alignment alignment) : bool;
+    public member q_function setContentsMargins(int left, int top, int right, int bottom) : void;
+    public member q_function setContentsMargins(const QMargins & margins) : void;
+    public member q_function setEnabled(bool enable) : void;
+    public member q_function setMargin(int margin) : void;
+    public member q_function setSizeConstraint(SizeConstraint ) : void;
+    public member q_function setSpacing(int ) : void;
+    public const member q_function sizeConstraint() : SizeConstraint;
+    public const member q_function spacing() : int;
+    public purevirtual member q_function takeAt(int index) : QLayoutItem *;
+    public member q_function update() : void;
+
+    protected member q_function addChildLayout(QLayout * l) : void;
+    protected member q_function addChildWidget(QWidget * w) : void;
+    protected const member q_function alignmentRect(const QRect & r) : QRect;
+
+
+}
+

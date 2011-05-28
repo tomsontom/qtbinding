@@ -1,0 +1,25 @@
+q_class QGesture extends QObject {
+    q_enumeration GestureCancelPolicy {
+        CancelNone = 0
+        CancelAllInContext = 1
+    }
+
+
+    q_property QGesture.GestureCancelPolicy gestureCancelPolicy;
+    q_property const Qt.GestureType gestureType;
+    q_property const bool hasHotSpot;
+    q_property QPointF hotSpot;
+    q_property const Qt.GestureState state;
+
+    public const member q_function gestureCancelPolicy() : GestureCancelPolicy;
+    public const member q_function gestureType() : Qt.GestureType;
+    public const member q_function hasHotSpot() : bool;
+    public const member q_function hotSpot() : QPointF;
+    public member q_function setGestureCancelPolicy(GestureCancelPolicy policy) : void;
+    public member q_function setHotSpot(const QPointF & value) : void;
+    public const member q_function state() : Qt.GestureState;
+    public member q_function unsetHotSpot() : void;
+
+
+}
+

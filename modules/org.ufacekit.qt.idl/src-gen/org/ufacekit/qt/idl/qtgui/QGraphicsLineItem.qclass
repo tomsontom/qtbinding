@@ -1,0 +1,9 @@
+q_class QGraphicsLineItem extends QGraphicsItem {
+    public const member q_function line() : QLineF;
+    public member q_function setLine(qreal x1, qreal y1, qreal x2, qreal y2) : void;
+    public member q_function setLine(const QLineF & line) : void;
+    public member q_function setPen(const QPen & pen) : void;
+
+
+}
+

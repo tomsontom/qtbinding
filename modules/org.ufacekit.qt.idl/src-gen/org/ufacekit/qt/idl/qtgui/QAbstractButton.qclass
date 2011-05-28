@@ -1,0 +1,43 @@
+q_class QAbstractButton extends QWidget {
+    q_property bool autoExclusive;
+    q_property bool autoRepeat;
+    q_property int autoRepeatDelay;
+    q_property int autoRepeatInterval;
+    q_property bool checkable;
+    q_property bool checked;
+    q_property bool down;
+    q_property QIcon icon;
+    q_property QSize iconSize;
+    q_property QKeySequence shortcut;
+    q_property QString text;
+
+    public const member q_function autoExclusive() : bool;
+    public const member q_function autoRepeat() : bool;
+    public const member q_function autoRepeatDelay() : int;
+    public const member q_function autoRepeatInterval() : int;
+    public const member q_function group() : QButtonGroup *;
+    public const member q_function icon() : QIcon;
+    public const member q_function iconSize() : QSize;
+    public const member q_function isCheckable() : bool;
+    public const member q_function isChecked() : bool;
+    public const member q_function isDown() : bool;
+    public member q_function setAutoExclusive(bool ) : void;
+    public member q_function setAutoRepeat(bool ) : void;
+    public member q_function setAutoRepeatDelay(int ) : void;
+    public member q_function setAutoRepeatInterval(int ) : void;
+    public member q_function setCheckable(bool ) : void;
+    public member q_function setDown(bool ) : void;
+    public member q_function setIcon(const QIcon & icon) : void;
+    public member q_function setShortcut(const QKeySequence & key) : void;
+    public const member q_function shortcut() : QKeySequence;
+    public const member q_function text() : QString;
+
+    protected virtual member q_function checkStateSet() : void;
+    protected const virtual member q_function hitButton(const QPoint & pos) : bool;
+    protected virtual member q_function nextCheckState() : void;
+
+
+
+
+}
+

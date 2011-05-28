@@ -1,0 +1,8 @@
+q_class QShortcutEvent extends QEvent {
+    public const member q_function isAmbiguous() : bool;
+    public const member q_function key() : const QKeySequence &;
+    public const member q_function shortcutId() : int;
+
+
+}
+

@@ -1,0 +1,7 @@
+q_class QDesignerObjectInspectorInterface extends QWidget {
+    public const virtual member q_function core() : QDesignerFormEditorInterface *;
+
+
+
+}
+

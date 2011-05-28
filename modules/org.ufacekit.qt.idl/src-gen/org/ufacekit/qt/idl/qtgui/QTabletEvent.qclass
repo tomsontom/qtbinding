@@ -1,0 +1,41 @@
+q_class QTabletEvent extends QInputEvent {
+    q_enumeration PointerType {
+        UnknownPointer = 0
+        Pen = 1
+        Cursor = 2
+        Eraser = 3
+    }
+
+    q_enumeration TabletDevice {
+        NoDevice = 0
+        Puck = 1
+        Stylus = 2
+        Airbrush = 3
+        FourDMouse = 4
+        XFreeEraser = 5
+        RotationStylus = 6
+    }
+
+
+    public const member q_function device() : TabletDevice;
+    public const member q_function globalPos() : const QPoint &;
+    public const member q_function globalX() : int;
+    public const member q_function globalY() : int;
+    public const member q_function hiResGlobalPos() : const QPointF &;
+    public const member q_function hiResGlobalX() : qreal;
+    public const member q_function hiResGlobalY() : qreal;
+    public const member q_function pointerType() : PointerType;
+    public const member q_function pos() : const QPoint &;
+    public const member q_function pressure() : qreal;
+    public const member q_function rotation() : qreal;
+    public const member q_function tangentialPressure() : qreal;
+    public const member q_function uniqueId() : qint64;
+    public const member q_function x() : int;
+    public const member q_function xTilt() : int;
+    public const member q_function y() : int;
+    public const member q_function yTilt() : int;
+    public const member q_function z() : int;
+
+
+}
+

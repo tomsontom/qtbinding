@@ -1,0 +1,14 @@
+q_class QDomCharacterData extends QDomNode {
+    public member q_function appendData(const QString & arg) : void;
+    public const member q_function data() : QString;
+    public member q_function deleteData(unsigned long offset, unsigned long count) : void;
+    public member q_function insertData(unsigned long offset, const QString & arg) : void;
+    public const member q_function length() : uint;
+    public const member q_function nodeType() : QDomNode.NodeType;
+    public member q_function replaceData(unsigned long offset, unsigned long count, const QString & arg) : void;
+    public member q_function setData(const QString & v) : void;
+    public member q_function substringData(unsigned long offset, unsigned long count) : QString;
+
+
+}
+

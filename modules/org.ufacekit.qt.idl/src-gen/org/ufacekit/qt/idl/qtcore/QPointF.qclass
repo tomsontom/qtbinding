@@ -1,0 +1,14 @@
+q_class QPointF {
+    public const member q_function isNull() : bool;
+    public const member q_function manhattanLength() : qreal;
+    public member q_function rx() : qreal &;
+    public member q_function ry() : qreal &;
+    public member q_function setX(qreal x) : void;
+    public member q_function setY(qreal y) : void;
+    public const member q_function toPoint() : QPoint;
+    public const member q_function x() : qreal;
+    public const member q_function y() : qreal; 
+
+
+}
+

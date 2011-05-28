@@ -1,0 +1,18 @@
+q_class QDrag extends QObject {
+    public member q_function exec(Qt.DropActions supportedActions, Qt.DropAction defaultDropAction) : Qt.DropAction;
+    public member q_function exec(Qt.DropActions supportedActions = Qt.MoveAction) : Qt.DropAction;
+    public const member q_function hotSpot() : QPoint;
+    public const member q_function mimeData() : QMimeData *;
+    public const member q_function pixmap() : QPixmap;
+    public member q_function setDragCursor(const QPixmap & cursor, Qt.DropAction action) : void;
+    public member q_function setHotSpot(const QPoint & hotspot) : void;
+    public member q_function setMimeData(QMimeData * data) : void;
+    public member q_function setPixmap(const QPixmap & pixmap) : void;
+    public const member q_function source() : QWidget *;
+    public member q_function start(Qt.DropActions request = Qt.CopyAction) : Qt.DropAction;
+    public const member q_function target() : QWidget *;
+
+
+
+}
+

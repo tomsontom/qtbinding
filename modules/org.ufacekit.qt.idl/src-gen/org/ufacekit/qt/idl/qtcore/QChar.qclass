@@ -1,0 +1,204 @@
+q_class QChar {
+    q_enumeration Category {
+        NoCategory = 0
+        Mark_NonSpacing = 1
+        Mark_SpacingCombining = 2
+        Mark_Enclosing = 3
+        Number_DecimalDigit = 4
+        Number_Letter = 5
+        Number_Other = 6
+        Separator_Space = 7
+        Separator_Line = 8
+        Separator_Paragraph = 9
+        Other_Control = 10
+        Other_Format = 11
+        Other_Surrogate = 12
+        Other_PrivateUse = 13
+        Other_NotAssigned = 14
+        Letter_Uppercase = 15
+        Letter_Lowercase = 16
+        Letter_Titlecase = 17
+        Letter_Modifier = 18
+        Letter_Other = 19
+        Punctuation_Connector = 20
+        Punctuation_Dash = 21
+        Punctuation_Open = 22
+        Punctuation_Close = 23
+        Punctuation_InitialQuote = 24
+        Punctuation_FinalQuote = 25
+        Punctuation_Other = 26
+        Symbol_Math = 27
+        Symbol_Currency = 28
+        Symbol_Modifier = 29
+        Symbol_Other = 30
+        Punctuation_Dask = Punctuation_Dash
+    }
+
+    q_enumeration CombiningClass {
+        Combining_BelowLeftAttached = 200
+        Combining_BelowAttached = 202
+        Combining_BelowRightAttached = 204
+        Combining_LeftAttached = 208
+        Combining_RightAttached = 210
+        Combining_AboveLeftAttached = 212
+        Combining_AboveAttached = 214
+        Combining_AboveRightAttached = 216
+        Combining_BelowLeft = 218
+        Combining_Below = 220
+        Combining_BelowRight = 222
+        Combining_Left = 224
+        Combining_Right = 226
+        Combining_AboveLeft = 228
+        Combining_Above = 230
+        Combining_AboveRight = 232
+        Combining_DoubleBelow = 233
+        Combining_DoubleAbove = 234
+        Combining_IotaSubscript = 240
+    }
+
+    q_enumeration Decomposition {
+        NoDecomposition = 0
+        Canonical = 1
+        Font = 2
+        NoBreak = 3
+        Initial = 4
+        Medial = 5
+        Final = 6
+        Isolated = 7
+        Circle = 8
+        Super = 9
+        Sub = 10
+        Vertical = 11
+        Wide = 12
+        Narrow = 13
+        Small = 14
+        Square = 15
+        Compat = 16
+        Fraction = 17
+    }
+
+    q_enumeration Direction {
+        DirL = 0
+        DirR = 1
+        DirEN = 2
+        DirES = 3
+        DirET = 4
+        DirAN = 5
+        DirCS = 6
+        DirB = 7
+        DirS = 8
+        DirWS = 9
+        DirON = 10
+        DirLRE = 11
+        DirLRO = 12
+        DirAL = 13
+        DirRLE = 14
+        DirRLO = 15
+        DirPDF = 16
+        DirNSM = 17
+        DirBN = 18
+    }
+
+    q_enumeration Joining {
+        OtherJoining = 0
+        Dual = 1
+        Right = 2
+        Center = 3
+    }
+
+    q_enumeration SpecialCharacter {
+        Null = 0
+        Nbsp = 160
+        ReplacementCharacter = 65533
+        ObjectReplacementCharacter = 65532
+        ByteOrderMark = 65279
+        ByteOrderSwapped = 65534
+        ParagraphSeparator = 8233
+        LineSeparator = 8232
+    }
+
+    q_enumeration UnicodeVersion {
+        Unicode_Unassigned = 0
+        Unicode_1_1 = 1
+        Unicode_2_0 = 2
+        Unicode_2_1_2 = 3
+        Unicode_3_0 = 4
+        Unicode_3_1 = 5
+        Unicode_3_2 = 6
+        Unicode_4_0 = 7
+        Unicode_4_1 = 8
+        Unicode_5_0 = 9
+    }
+
+
+    public const member q_function category() : Category;
+    public class q_function category(uint ucs4) : Category;
+    public class q_function category(ushort ucs2) : Category;
+    public const member q_function cell() : uchar;
+    public const member q_function combiningClass() : unsigned char;
+    public class q_function combiningClass(ushort ucs2) : unsigned char;
+    public class q_function combiningClass(uint ucs4) : unsigned char;
+    public class q_function decomposition(uint ucs4) : QString;
+    public const member q_function decomposition() : QString;
+    public class q_function decompositionTag(uint ucs4) : Decomposition;
+    public const member q_function decompositionTag() : Decomposition;
+    public class q_function digitValue(ushort ucs2) : int;
+    public class q_function digitValue(uint ucs4) : int;
+    public const member q_function digitValue() : int;
+    public const member q_function direction() : Direction;
+    public class q_function direction(ushort ucs2) : Direction;
+    public class q_function direction(uint ucs4) : Direction;
+    public class q_function fromAscii(char c) : QChar;
+    public class q_function fromLatin1(char c) : QChar;
+    public const member q_function hasMirrored() : bool;
+    public class q_function highSurrogate(uint ucs4) : ushort;
+    public const member q_function isDigit() : bool;
+    public const member q_function isHighSurrogate() : bool;
+    public class q_function isHighSurrogate(uint ucs4) : bool;
+    public const member q_function isLetter() : bool;
+    public const member q_function isLetterOrNumber() : bool;
+    public class q_function isLowSurrogate(uint ucs4) : bool;
+    public const member q_function isLowSurrogate() : bool;
+    public const member q_function isLower() : bool;
+    public const member q_function isMark() : bool;
+    public const member q_function isNull() : bool;
+    public const member q_function isNumber() : bool;
+    public const member q_function isPrint() : bool;
+    public const member q_function isPunct() : bool;
+    public const member q_function isSpace() : bool;
+    public const member q_function isSymbol() : bool;
+    public const member q_function isTitleCase() : bool;
+    public const member q_function isUpper() : bool;
+    public class q_function joining(ushort ucs2) : Joining;
+    public class q_function joining(uint ucs4) : Joining;
+    public const member q_function joining() : Joining;
+    public class q_function lowSurrogate(uint ucs4) : ushort;
+    public class q_function mirroredChar(uint ucs4) : uint;
+    public class q_function mirroredChar(ushort ucs2) : ushort;
+    public const member q_function mirroredChar() : QChar;
+    public class q_function requiresSurrogates(uint ucs4) : bool;
+    public const member q_function row() : uchar;
+    public class q_function surrogateToUcs4(QChar high, QChar low) : uint;
+    public class q_function surrogateToUcs4(ushort high, ushort low) : uint;
+    public const member q_function toCaseFolded() : QChar;
+    public class q_function toCaseFolded(ushort ucs2) : ushort;
+    public class q_function toCaseFolded(uint ucs4) : uint;
+    public const member q_function toLatin1() : char;
+    public class q_function toLower(ushort ucs2) : ushort;
+    public class q_function toLower(uint ucs4) : uint;
+    public const member q_function toLower() : QChar;
+    public class q_function toTitleCase(ushort ucs2) : ushort;
+    public const member q_function toTitleCase() : QChar;
+    public class q_function toTitleCase(uint ucs4) : uint;
+    public class q_function toUpper(uint ucs4) : uint;
+    public class q_function toUpper(ushort ucs2) : ushort;
+    public const member q_function toUpper() : QChar;
+    public member q_function unicode() : ushort &;
+    public const member q_function unicode() : ushort;
+    public const member q_function unicodeVersion() : UnicodeVersion;
+    public class q_function unicodeVersion(ushort ucs2) : UnicodeVersion;
+    public class q_function unicodeVersion(uint ucs4) : UnicodeVersion;
+
+
+}
+

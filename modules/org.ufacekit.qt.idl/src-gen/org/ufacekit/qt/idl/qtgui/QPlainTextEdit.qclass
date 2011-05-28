@@ -1,0 +1,84 @@
+q_class QPlainTextEdit extends QAbstractScrollArea {
+    q_enumeration LineWrapMode {
+        NoWrap = 0
+        WidgetWidth = 1
+    }
+
+
+    q_property bool backgroundVisible;
+    q_property const int blockCount;
+    q_property bool centerOnScroll;
+    q_property int cursorWidth;
+    q_property QString documentTitle;
+    q_property LineWrapMode lineWrapMode;
+    q_property int maximumBlockCount;
+    q_property bool overwriteMode;
+    q_property QString plainText;
+    q_property bool readOnly;
+    q_property bool tabChangesFocus;
+    q_property int tabStopWidth;
+    q_property Qt.TextInteractionFlags textInteractionFlags;
+    q_property bool undoRedoEnabled;
+    q_property QTextOption.WrapMode wordWrapMode;
+
+    public const member q_function anchorAt(const QPoint & pos) : QString;
+    public const member q_function backgroundVisible() : bool;
+    public const member q_function blockCount() : int;
+    public const member q_function canPaste() : bool;
+    public const member q_function centerOnScroll() : bool;
+    public const member q_function currentCharFormat() : QTextCharFormat;
+    public const member q_function cursorRect() : QRect;
+    public const member q_function cursorRect(const QTextCursor & cursor) : QRect;
+    public const member q_function cursorWidth() : int;
+    public const member q_function document() : QTextDocument *;
+    public const member q_function documentTitle() : QString;
+    public member q_function ensureCursorVisible() : void;
+    public const member q_function extraSelections() : QList<QTextEdit.ExtraSelection>;
+    public member q_function find(const QString & exp, QTextDocument.FindFlags options = 0) : bool;
+    public const member q_function isReadOnly() : bool;
+    public const member q_function isUndoRedoEnabled() : bool;
+    public const member q_function lineWrapMode() : LineWrapMode;
+    public virtual member q_function loadResource(int type, const QUrl & name) : QVariant;
+    public const member q_function maximumBlockCount() : int;
+    public member q_function mergeCurrentCharFormat(const QTextCharFormat & modifier) : void;
+    public member q_function moveCursor(QTextCursor.MoveOperation operation, QTextCursor.MoveMode mode = QTextCursor.MoveAnchor) : void;
+    public const member q_function overwriteMode() : bool;
+    public const member q_function print(QPrinter * printer) : void;
+    public member q_function setBackgroundVisible(bool visible) : void;
+    public member q_function setCenterOnScroll(bool enabled) : void;
+    public member q_function setCurrentCharFormat(const QTextCharFormat & format) : void;
+    public member q_function setCursorWidth(int width) : void;
+    public member q_function setDocument(QTextDocument * document) : void;
+    public member q_function setDocumentTitle(const QString & title) : void;
+    public member q_function setExtraSelections(const QList<QTextEdit.ExtraSelection> & selections) : void;
+    public member q_function setLineWrapMode(LineWrapMode mode) : void;
+    public member q_function setMaximumBlockCount(int maximum) : void;
+    public member q_function setOverwriteMode(bool overwrite) : void;
+    public member q_function setReadOnly(bool ro) : void;
+    public member q_function setTabChangesFocus(bool b) : void;
+    public member q_function setTabStopWidth(int width) : void;
+    public member q_function setTextCursor(const QTextCursor & cursor) : void;
+    public member q_function setTextInteractionFlags(Qt.TextInteractionFlags flags) : void;
+    public member q_function setUndoRedoEnabled(bool enable) : void;
+    public member q_function setWordWrapMode(QTextOption.WrapMode policy) : void;
+    public const member q_function tabChangesFocus() : bool;
+    public const member q_function tabStopWidth() : int;
+    public const member q_function textCursor() : QTextCursor;
+    public const member q_function textInteractionFlags() : Qt.TextInteractionFlags;
+    public const member q_function toPlainText() : QString;
+    public const member q_function wordWrapMode() : QTextOption.WrapMode;
+
+    protected const member q_function blockBoundingGeometry(const QTextBlock & block) : QRectF;
+    protected const member q_function blockBoundingRect(const QTextBlock & block) : QRectF;
+    protected const virtual member q_function canInsertFromMimeData(const QMimeData * source) : bool;
+    protected const member q_function contentOffset() : QPointF;
+    protected const virtual member q_function createMimeDataFromSelection() : QMimeData *;
+    protected const member q_function firstVisibleBlock() : QTextBlock;
+    protected const member q_function getPaintContext() : QAbstractTextDocumentLayout.PaintContext;
+    protected virtual member q_function insertFromMimeData(const QMimeData * source) : void;
+
+
+
+
+}
+

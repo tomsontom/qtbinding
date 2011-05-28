@@ -1,0 +1,63 @@
+q_class QRect {
+    public member q_function adjust(int dx1, int dy1, int dx2, int dy2) : void;
+    public const member q_function adjusted(int dx1, int dy1, int dx2, int dy2) : QRect;
+    public const member q_function bottom() : int;
+    public const member q_function bottomLeft() : QPoint;
+    public const member q_function bottomRight() : QPoint;
+    public const member q_function center() : QPoint;
+    public const member q_function contains(const QRect & rectangle, bool proper = false) : bool;
+    public const member q_function contains(int x, int y) : bool;
+    public const member q_function contains(int x, int y, bool proper) : bool;
+    public const member q_function contains(const QPoint & point, bool proper = false) : bool; 
+    public const member q_function getRect(int * x, int * y, int * width, int * height) : void;
+    public const member q_function height() : int;
+    public const member q_function intersect(const QRect & rectangle) : QRect;
+    public const member q_function intersected(const QRect & rectangle) : QRect;
+    public const member q_function intersects(const QRect & rectangle) : bool;
+    public const member q_function isEmpty() : bool;
+    public const member q_function isNull() : bool;
+    public const member q_function isValid() : bool;
+    public const member q_function left() : int;
+    public member q_function moveBottom(int y) : void;
+    public member q_function moveBottomLeft(const QPoint & position) : void;
+    public member q_function moveBottomRight(const QPoint & position) : void;
+    public member q_function moveCenter(const QPoint & position) : void;
+    public member q_function moveLeft(int x) : void;
+    public member q_function moveRight(int x) : void;
+    public member q_function moveTo(const QPoint & position) : void;
+    public member q_function moveTo(int x, int y) : void;
+    public member q_function moveTop(int y) : void;
+    public member q_function moveTopLeft(const QPoint & position) : void;
+    public member q_function moveTopRight(const QPoint & position) : void;
+    public const member q_function normalized() : QRect;
+    public const member q_function right() : int;
+    public member q_function setBottom(int y) : void;
+    public member q_function setBottomLeft(const QPoint & position) : void;
+    public member q_function setBottomRight(const QPoint & position) : void;
+    public member q_function setCoords(int x1, int y1, int x2, int y2) : void;
+    public member q_function setHeight(int height) : void;
+    public member q_function setLeft(int x) : void;
+    public member q_function setRect(int x, int y, int width, int height) : void;
+    public member q_function setRight(int x) : void;
+    public member q_function setSize(const QSize & size) : void;
+    public member q_function setTop(int y) : void;
+    public member q_function setTopLeft(const QPoint & position) : void;
+    public member q_function setTopRight(const QPoint & position) : void;
+    public member q_function setWidth(int width) : void;
+    public member q_function setX(int x) : void;
+    public member q_function setY(int y) : void;
+    public const member q_function size() : QSize;
+    public const member q_function top() : int;
+    public const member q_function topLeft() : QPoint;
+    public const member q_function topRight() : QPoint;
+    public member q_function translate(int dx, int dy) : void;
+    public member q_function translate(const QPoint & offset) : void;
+    public const member q_function translated(const QPoint & offset) : QRect;
+    public const member q_function translated(int dx, int dy) : QRect;
+    public const member q_function unite(const QRect & rectangle) : QRect;
+    public const member q_function united(const QRect & rectangle) : QRect;
+    public const member q_function width() : int;
+
+
+}
+

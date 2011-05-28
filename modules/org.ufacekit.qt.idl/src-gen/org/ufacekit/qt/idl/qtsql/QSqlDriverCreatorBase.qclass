@@ -1,0 +1,6 @@
+q_class QSqlDriverCreatorBase {
+    public const purevirtual member q_function createObject() : QSqlDriver *;
+
+
+}
+

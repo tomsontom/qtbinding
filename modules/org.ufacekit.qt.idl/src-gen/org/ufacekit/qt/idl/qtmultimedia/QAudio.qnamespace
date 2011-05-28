@@ -1,0 +1,25 @@
+q_namespace QAudio {
+    q_enumeration Error {
+        NoError = 0
+        OpenError = 1
+        IOError = 2
+        UnderrunError = 3
+        FatalError = 4
+    }
+
+    q_enumeration Mode {
+        AudioInput = 0
+        AudioOutput = 1
+    }
+
+    q_enumeration State {
+        ActiveState = 0
+        SuspendedState = 1
+        StoppedState = 2
+        IdleState = 3
+    }
+
+
+
+}
+

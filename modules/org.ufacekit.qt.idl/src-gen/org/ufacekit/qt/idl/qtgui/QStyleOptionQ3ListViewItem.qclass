@@ -1,0 +1,23 @@
+q_class QStyleOptionQ3ListViewItem extends QStyleOption {
+    q_enumeration Q3ListViewItemFeature {
+        None = 0
+        Expandable = 1
+        MultiLine = 2
+        Visible = 4
+        ParentControl = 8
+    }
+
+    q_flags Q3ListViewItemFeatures : Q3ListViewItemFeature;
+
+    q_enumeration StyleOptionType {
+        Type = SO_Q3ListViewItem
+    }
+
+    q_enumeration StyleOptionVersion {
+        Version = 1
+    }
+
+
+
+}
+

@@ -1,0 +1,202 @@
+q_class QWebPage extends QObject {
+    q_enumeration ErrorDomain {
+        QtNetwork = 0
+        Http = 1
+        WebKit = 2
+    }
+
+    q_enumeration Extension {
+        ChooseMultipleFilesExtension = 0
+        ErrorPageExtension = 1
+    }
+
+    q_enumeration FindFlag {
+        FindBackward = 1
+        FindCaseSensitively = 2
+        FindWrapsAroundDocument = 4
+        HighlightAllOccurrences = 8
+    }
+
+    q_flags FindFlags : FindFlag;
+
+    q_enumeration LinkDelegationPolicy {
+        DontDelegateLinks = 0
+        DelegateExternalLinks = 1
+        DelegateAllLinks = 2
+    }
+
+    q_enumeration NavigationType {
+        NavigationTypeLinkClicked = 0
+        NavigationTypeFormSubmitted = 1
+        NavigationTypeBackOrForward = 2
+        NavigationTypeReload = 3
+        NavigationTypeFormResubmitted = 4
+        NavigationTypeOther = 5
+    }
+
+    q_enumeration WebAction {
+        NoWebAction = -1
+        OpenLink = 0
+        OpenLinkInNewWindow = 1
+        OpenFrameInNewWindow = 2
+        DownloadLinkToDisk = 3
+        CopyLinkToClipboard = 4
+        OpenImageInNewWindow = 5
+        DownloadImageToDisk = 6
+        CopyImageToClipboard = 7
+        Back = 8
+        Forward = 9
+        Stop = 10
+        Reload = 11
+        Cut = 12
+        Copy = 13
+        Paste = 14
+        Undo = 15
+        Redo = 16
+        MoveToNextChar = 17
+        MoveToPreviousChar = 18
+        MoveToNextWord = 19
+        MoveToPreviousWord = 20
+        MoveToNextLine = 21
+        MoveToPreviousLine = 22
+        MoveToStartOfLine = 23
+        MoveToEndOfLine = 24
+        MoveToStartOfBlock = 25
+        MoveToEndOfBlock = 26
+        MoveToStartOfDocument = 27
+        MoveToEndOfDocument = 28
+        SelectNextChar = 29
+        SelectPreviousChar = 30
+        SelectNextWord = 31
+        SelectPreviousWord = 32
+        SelectNextLine = 33
+        SelectPreviousLine = 34
+        SelectStartOfLine = 35
+        SelectEndOfLine = 36
+        SelectStartOfBlock = 37
+        SelectEndOfBlock = 38
+        SelectStartOfDocument = 39
+        SelectEndOfDocument = 40
+        DeleteStartOfWord = 41
+        DeleteEndOfWord = 42
+        SetTextDirectionDefault = 43
+        SetTextDirectionLeftToRight = 44
+        SetTextDirectionRightToLeft = 45
+        ToggleBold = 46
+        ToggleItalic = 47
+        ToggleUnderline = 48
+        InspectElement = 49
+        InsertParagraphSeparator = 50
+        InsertLineSeparator = 51
+        SelectAll = 52
+        ReloadAndBypassCache = 53
+        PasteAndMatchStyle = 54
+        RemoveFormat = 55
+        ToggleStrikethrough = 56
+        ToggleSubscript = 57
+        ToggleSuperscript = 58
+        InsertUnorderedList = 59
+        InsertOrderedList = 60
+        Indent = 61
+        Outdent = 62
+        AlignCenter = 63
+        AlignJustified = 64
+        AlignLeft = 65
+        AlignRight = 66
+        StopScheduledPageRefresh = 67
+        WebActionCount = 68
+    }
+
+    q_enumeration WebWindowType {
+        WebBrowserWindow = 0
+        WebModalDialog = 1
+    }
+
+
+    q_class ChooseMultipleFilesExtensionOption {
+
+    }
+
+    q_class ChooseMultipleFilesExtensionReturn {
+
+    }
+
+    q_class ErrorPageExtensionOption {
+
+    }
+
+    q_class ErrorPageExtensionReturn {
+
+    }
+
+    q_class ExtensionOption {
+
+    }
+
+    q_class ExtensionReturn {
+
+    }
+
+
+    q_property bool contentEditable;
+    q_property bool forwardUnsupportedContent;
+    q_property LinkDelegationPolicy linkDelegationPolicy;
+    q_property const bool modified;
+    q_property QPalette palette;
+    q_property QSize preferredContentsSize;
+    q_property const QString selectedText;
+    q_property QSize viewportSize;
+
+    public const member q_function action(WebAction action) : QAction *;
+    public const member q_function bytesReceived() : quint64;
+    public member q_function createStandardContextMenu() : QMenu *;
+    public const member q_function currentFrame() : QWebFrame *;
+    public virtual member q_function extension(Extension extension, const ExtensionOption * option = 0, ExtensionReturn * output = 0) : bool;
+    public member q_function findText(const QString & subString, FindFlags options = 0) : bool;
+    public member q_function focusNextPrevChild(bool next) : bool;
+    public const member q_function forwardUnsupportedContent() : bool;
+    public const member q_function frameAt(const QPoint & pos) : QWebFrame *;
+    public const member q_function history() : QWebHistory *;
+    public const member q_function inputMethodQuery(Qt.InputMethodQuery property) : QVariant;
+    public const member q_function isContentEditable() : bool;
+    public const member q_function isModified() : bool;
+    public const member q_function linkDelegationPolicy() : LinkDelegationPolicy;
+    public const member q_function mainFrame() : QWebFrame *;
+    public const member q_function networkAccessManager() : QNetworkAccessManager *;
+    public const member q_function palette() : QPalette;
+    public const member q_function pluginFactory() : QWebPluginFactory *;
+    public const member q_function preferredContentsSize() : QSize;
+    public const member q_function selectedText() : QString;
+    public member q_function setContentEditable(bool editable) : void;
+    public member q_function setForwardUnsupportedContent(bool forward) : void;
+    public member q_function setLinkDelegationPolicy(LinkDelegationPolicy policy) : void;
+    public member q_function setNetworkAccessManager(QNetworkAccessManager * manager) : void;
+    public member q_function setPalette(const QPalette & palette) : void;
+    public member q_function setPluginFactory(QWebPluginFactory * factory) : void;
+    public const member q_function setPreferredContentsSize(const QSize & size) : void;
+    public member q_function setView(QWidget * view) : void;
+    public const member q_function setViewportSize(const QSize & size) : void;
+    public const member q_function settings() : QWebSettings *;
+    public const virtual member q_function supportsExtension(Extension extension) : bool;
+    public const member q_function totalBytes() : quint64;
+    public virtual member q_function triggerAction(WebAction action, bool checked = false) : void;
+    public const member q_function undoStack() : QUndoStack *;
+    public member q_function updatePositionDependentActions(const QPoint & pos) : void;
+    public const member q_function view() : QWidget *;
+    public const member q_function viewportSize() : QSize;
+
+    protected virtual member q_function acceptNavigationRequest(QWebFrame * frame, const QNetworkRequest & request, NavigationType type) : bool;
+    protected virtual member q_function chooseFile(QWebFrame * parentFrame, const QString & suggestedFile) : QString;
+    protected virtual member q_function createPlugin(const QString & classid, const QUrl & url, const QStringList & paramNames, const QStringList & paramValues) : QObject *;
+    protected virtual member q_function createWindow(WebWindowType type) : QWebPage *;
+    protected virtual member q_function javaScriptAlert(QWebFrame * frame, const QString & msg) : void;
+    protected virtual member q_function javaScriptConfirm(QWebFrame * frame, const QString & msg) : bool;
+    protected virtual member q_function javaScriptConsoleMessage(const QString & message, int lineNumber, const QString & sourceID) : void;
+    protected virtual member q_function javaScriptPrompt(QWebFrame * frame, const QString & msg, const QString & defaultValue, QString * result) : bool;
+    protected const virtual member q_function userAgentForUrl(const QUrl & url) : QString;
+
+
+
+
+}
+

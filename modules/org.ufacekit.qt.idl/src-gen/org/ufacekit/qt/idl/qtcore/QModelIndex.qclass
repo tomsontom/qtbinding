@@ -1,0 +1,15 @@
+q_class QModelIndex {
+    public const member q_function child(int row, int column) : QModelIndex;
+    public const member q_function column() : int;
+    public const member q_function data(int role = Qt.DisplayRole) : QVariant;
+    public const member q_function flags() : Qt.ItemFlags;
+    public const member q_function internalId() : qint64;
+    public const member q_function internalPointer() : void *;
+    public const member q_function isValid() : bool;
+    public const member q_function model() : const QAbstractItemModel *;
+    public const member q_function parent() : QModelIndex;
+    public const member q_function sibling(int row, int column) : QModelIndex;
+
+
+}
+

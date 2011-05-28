@@ -1,0 +1,26 @@
+q_class QEventLoop extends QObject {
+    q_enumeration ProcessEventsFlag {
+        AllEvents = 0
+        ExcludeUserInputEvents = 1
+        ExcludeSocketNotifiers = 2
+        WaitForMoreEvents = 4
+        X11ExcludeTimers = 8
+        DeferredDeletion = 16
+        EventLoopExec = 32
+        DialogExec = 64
+    }
+
+    q_flags ProcessEventsFlags : ProcessEventsFlag;
+
+
+    public member q_function exec(ProcessEventsFlags flags = AllEvents) : int;
+    public member q_function exit(int returnCode = 0) : void;
+    public const member q_function isRunning() : bool;
+    public member q_function processEvents(ProcessEventsFlags flags, int maxTime) : void;
+    public member q_function processEvents(ProcessEventsFlags flags = AllEvents) : bool;
+    public member q_function wakeUp() : void;
+
+
+
+}
+

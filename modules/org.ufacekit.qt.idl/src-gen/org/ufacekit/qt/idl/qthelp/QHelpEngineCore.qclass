@@ -1,0 +1,38 @@
+q_class QHelpEngineCore extends QObject {
+    q_property bool autoSaveFilter;
+    q_property QString collectionFile;
+    q_property QString currentFilter;
+
+    public member q_function addCustomFilter(const QString & filterName, const QStringList & attributes) : bool;
+    public const member q_function autoSaveFilter() : bool;
+    public const member q_function collectionFile() : QString;
+    public member q_function copyCollectionFile(const QString & fileName) : bool;
+    public const member q_function currentFilter() : QString;
+    public const member q_function customFilters() : QStringList;
+    public const member q_function customValue(const QString & key, const QVariant & defaultValue = QVariant()) : QVariant;
+    public member q_function documentationFileName(const QString & namespaceName) : QString;
+    public const member q_function error() : QString;
+    public const member q_function fileData(const QUrl & url) : QByteArray;
+    public member q_function files(const QString namespaceName, const QStringList & filterAttributes, const QString & extensionFilter = QString()) : QList<QUrl>;
+    public const member q_function filterAttributeSets(const QString & namespaceName) : QList<QStringList>;
+    public const member q_function filterAttributes(const QString & filterName) : QStringList;
+    public const member q_function filterAttributes() : QStringList;
+    public const member q_function findFile(const QUrl & url) : QUrl;
+    public const member q_function linksForIdentifier(const QString & id) : QMap<QString, QUrl>;
+    public class q_function metaData(const QString & documentationFileName, const QString & name) : QVariant;
+    public class q_function namespaceName(const QString & documentationFileName) : QString;
+    public member q_function registerDocumentation(const QString & documentationFileName) : bool;
+    public const member q_function registeredDocumentations() : QStringList;
+    public member q_function removeCustomFilter(const QString & filterName) : bool;
+    public member q_function removeCustomValue(const QString & key) : bool;
+    public member q_function setAutoSaveFilter(bool save) : void;
+    public member q_function setCollectionFile(const QString & fileName) : void;
+    public member q_function setCurrentFilter(const QString & filterName) : void;
+    public member q_function setCustomValue(const QString & key, const QVariant & value) : bool;
+    public member q_function setupData() : bool;
+    public member q_function unregisterDocumentation(const QString & namespaceName) : bool;
+
+
+
+}
+

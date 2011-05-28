@@ -1,0 +1,51 @@
+q_class QMdiArea extends QAbstractScrollArea {
+    q_enumeration AreaOption {
+        DontMaximizeSubWindowOnActivation = 1
+    }
+
+    q_flags AreaOptions : AreaOption;
+
+    q_enumeration ViewMode {
+        SubWindowView = 0
+        TabbedView = 1
+    }
+
+    q_enumeration WindowOrder {
+        CreationOrder = 0
+        StackingOrder = 1
+        ActivationHistoryOrder = 2
+    }
+
+
+    q_property WindowOrder activationOrder;
+    q_property QBrush background;
+    q_property bool documentMode;
+    q_property QTabWidget.TabPosition tabPosition;
+    q_property QTabWidget.TabShape tabShape;
+    q_property ViewMode viewMode;
+
+    public const member q_function activationOrder() : WindowOrder;
+    public const member q_function activeSubWindow() : QMdiSubWindow *;
+    public member q_function addSubWindow(QWidget * widget, Qt.WindowFlags windowFlags = 0) : QMdiSubWindow *;
+    public const member q_function background() : QBrush;
+    public const member q_function currentSubWindow() : QMdiSubWindow *;
+    public const member q_function documentMode() : bool;
+    public member q_function removeSubWindow(QWidget * widget) : void;
+    public member q_function setActivationOrder(WindowOrder order) : void;
+    public member q_function setBackground(const QBrush & background) : void;
+    public member q_function setDocumentMode(bool enabled) : void;
+    public member q_function setOption(AreaOption option, bool on = true) : void;
+    public member q_function setTabPosition(QTabWidget.TabPosition position) : void;
+    public member q_function setTabShape(QTabWidget.TabShape shape) : void;
+    public member q_function setViewMode(ViewMode mode) : void;
+    public const member q_function subWindowList(WindowOrder order = CreationOrder) : QList<QMdiSubWindow *>;
+    public const member q_function tabPosition() : QTabWidget.TabPosition;
+    public const member q_function tabShape() : QTabWidget.TabShape;
+    public const member q_function testOption(AreaOption option) : bool;
+    public const member q_function viewMode() : ViewMode;
+
+
+
+
+}
+

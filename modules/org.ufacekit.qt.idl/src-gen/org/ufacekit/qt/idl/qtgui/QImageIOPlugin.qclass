@@ -1,0 +1,17 @@
+q_class QImageIOPlugin extends QObject {
+    q_enumeration Capability {
+        CanRead = 1
+        CanWrite = 2
+        CanReadIncremental = 4
+    }
+
+    q_flags Capabilities : Capability;
+
+
+    public const purevirtual member q_function capabilities(QIODevice * device, const QByteArray & format) : Capabilities;
+    public const purevirtual member q_function create(QIODevice * device, const QByteArray & format = QByteArray()) : QImageIOHandler *;
+    public const purevirtual member q_function keys() : QStringList;
+
+
+}
+

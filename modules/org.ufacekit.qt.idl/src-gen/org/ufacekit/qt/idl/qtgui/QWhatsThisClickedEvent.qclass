@@ -1,0 +1,6 @@
+q_class QWhatsThisClickedEvent extends QEvent {
+    public const member q_function href() : QString;
+
+
+}
+

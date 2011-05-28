@@ -1,0 +1,12 @@
+q_namespace QDBus {
+    q_enumeration CallMode {
+        NoBlock = 0
+        Block = 1
+        BlockWithGui = 2
+        AutoDetect = 3
+    }
+
+
+
+}
+

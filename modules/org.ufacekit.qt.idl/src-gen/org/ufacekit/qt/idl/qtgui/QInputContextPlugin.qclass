@@ -1,0 +1,10 @@
+q_class QInputContextPlugin extends QObject {
+    public purevirtual member q_function create(const QString & key) : QInputContext *;
+    public purevirtual member q_function description(const QString & key) : QString;
+    public purevirtual member q_function displayName(const QString & key) : QString;
+    public const purevirtual member q_function keys() : QStringList;
+    public purevirtual member q_function languages(const QString & key) : QStringList;
+
+
+}
+

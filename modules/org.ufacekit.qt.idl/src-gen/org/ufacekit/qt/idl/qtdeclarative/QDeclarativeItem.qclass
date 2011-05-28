@@ -1,0 +1,69 @@
+q_class QDeclarativeItem extends QGraphicsObject, QDeclarativeParserStatus {
+    q_enumeration TransformOrigin {
+        TopLeft = 0
+        Top = 1
+        TopRight = 2
+        Left = 3
+        Center = 4
+        Right = 5
+        BottomLeft = 6
+        Bottom = 7
+        BottomRight = 8
+    }
+
+
+    q_property const bool activeFocus;
+    q_property const QDeclarativeAnchors * anchors;
+    q_property const QDeclarativeAnchorLine baseline;
+    q_property qreal baselineOffset;
+    q_property const QDeclarativeAnchorLine bottom;
+    q_property const QRectF childrenRect;
+    q_property bool clip;
+    q_property const QDeclarativeListProperty<QObject> data;
+    q_property bool focus;
+    q_property const QDeclarativeAnchorLine horizontalCenter;
+    q_property const QDeclarativeAnchorLine left;
+    q_property QDeclarativeItem * parent;
+    q_property const QDeclarativeListProperty<QObject> resources;
+    q_property const QDeclarativeAnchorLine right;
+    q_property bool smooth;
+    q_property const QString state;
+    q_property const QDeclarativeListProperty<QDeclarativeState> states;
+    q_property const QDeclarativeAnchorLine top;
+    q_property const QDeclarativeListProperty<QGraphicsTransform> transform;
+    q_property const TransformOrigin transformOrigin;
+    q_property const QPointF transformOriginPoint;
+    q_property const QDeclarativeListProperty<QDeclarativeTransition> transitions;
+    q_property const QDeclarativeAnchorLine verticalCenter;
+
+    public const member q_function baselineOffset() : qreal;
+    public const member q_function childAt(qreal x, qreal y) : QDeclarativeItem *;
+    public member q_function childrenRect() : QRectF;
+    public const member q_function clip() : bool;
+    public member q_function forceActiveFocus() : void;
+    public const member q_function implicitHeight() : qreal;
+    public const member q_function implicitWidth() : qreal;
+    public const member q_function keepMouseGrab() : bool;
+    public const member q_function mapFromItem(const QScriptValue & item, qreal x, qreal y) : QScriptValue;
+    public const member q_function mapToItem(const QScriptValue & item, qreal x, qreal y) : QScriptValue;
+    public const member q_function parentItem() : QDeclarativeItem *;
+    public member q_function setBaselineOffset(qreal ) : void;
+    public member q_function setClip(bool ) : void;
+    public member q_function setKeepMouseGrab(bool keep) : void;
+    public member q_function setParentItem(QDeclarativeItem * parent) : void;
+    public member q_function setSmooth(bool smooth) : void;
+    public member q_function setTransformOrigin(TransformOrigin origin) : void;
+    public const member q_function smooth() : bool;
+    public const member q_function transformOrigin() : TransformOrigin;
+
+    protected virtual member q_function geometryChanged(const QRectF & newGeometry, const QRectF & oldGeometry) : void;
+    protected const member q_function heightValid() : bool;
+    protected const member q_function isComponentComplete() : bool;
+    protected member q_function setImplicitHeight(qreal h) : void;
+    protected member q_function setImplicitWidth(qreal w) : void;
+    protected const member q_function widthValid() : bool;
+
+
+
+}
+

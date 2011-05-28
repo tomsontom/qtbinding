@@ -1,0 +1,6 @@
+q_class QInputEvent extends QEvent {
+    public const member q_function modifiers() : Qt.KeyboardModifiers;
+
+
+}
+

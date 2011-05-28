@@ -1,0 +1,12 @@
+q_class QGraphicsSceneHoverEvent extends QGraphicsSceneEvent {
+    public const member q_function lastPos() : QPointF;
+    public const member q_function lastScenePos() : QPointF;
+    public const member q_function lastScreenPos() : QPoint;
+    public const member q_function modifiers() : Qt.KeyboardModifiers;
+    public const member q_function pos() : QPointF;
+    public const member q_function scenePos() : QPointF;
+    public const member q_function screenPos() : QPoint;
+
+
+}
+
